@@ -1,0 +1,160 @@
+name: Run pinned Borg
+on:
+  workflow_dispatch:
+    inputs:
+      program:
+        description: Borg project
+        type: choice
+        options: [borg-rs, borg-reborn-rs]
+        required: true
+      ref:
+        description: 'Version: full commit SHA recommended (tag/branch resolved once)'
+        required: true
+        type: string
+      seeds:
+        description: '1..20 explicit seeds, comma separated (0..4294967295)'
+        required: true
+        type: string
+      race:
+        description: Birth menu race index
+        default: '0'
+        type: string
+      class:
+        description: Birth menu class index
+        default: '0'
+        type: string
+      turns:
+        description: Game turn cap per seed
+        default: '100000'
+        type: string
+      wall_seconds:
+        description: Wall time per seed (1..120 seconds)
+        default: '120'
+        type: string
+      profile:
+        description: 'Optional reborn parameter file in this checkout (e.g. profiles/candidate.txt)'
+        default: ''
+        type: string
+      checkpoint_every:
+        description: Engine-turn save cadence for scenario extraction (0 disables)
+        default: '100'
+        type: string
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Record requested seeds before toolchain setup
+        env:
+          REQUEST: ${{ toJSON(inputs) }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          request = dict(schema='borg-cemetery/request@1', status='not_started',
+                         inputs=json.loads(os.environ['REQUEST']),
+                         workflow_run=os.environ['GITHUB_RUN_ID'],
+                         workflow_attempt=os.environ['GITHUB_RUN_ATTEMPT'])
+          (Path(os.environ['RUNNER_TEMP']) / 'request.json').write_text(json.dumps(request, indent=2) + '\n')
+          PY
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install native build dependencies
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq build-essential cmake libx11-dev
+      - name: Build and run explicit seeds
+        env:
+          PROGRAM: ${{ inputs.program }}
+          REF: ${{ inputs.ref }}
+          SEEDS: ${{ inputs.seeds }}
+          RACE: ${{ inputs.race }}
+          CLASS: ${{ inputs.class }}
+          TURNS: ${{ inputs.turns }}
+          WALL: ${{ inputs.wall_seconds }}
+          PROFILE: ${{ inputs.profile }}
+          CHECKPOINT: ${{ inputs.checkpoint_every }}
+        run: |
+          profile_args=()
+          if [ -n "$PROFILE" ]; then
+            profile_args=(--profile "$GITHUB_WORKSPACE/$PROFILE")
+          fi
+          python3 scripts/run_batch.py --program "$PROGRAM" --ref "$REF" \
+            --seeds "$SEEDS" --race "$RACE" --class "$CLASS" \
+            --turns "$TURNS" --wall-seconds "$WALL" --checkpoint-every "$CHECKPOINT" \
+            --out "$RUNNER_TEMP/batch" "${profile_args[@]}"
+      - name: Keep request even when setup or argument validation fails
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/batch/records"
+          cp "$RUNNER_TEMP/request.json" "$RUNNER_TEMP/batch/records/request.json"
+          if [ ! -f "$RUNNER_TEMP/batch/records/batch.json" ]; then
+            cp "$RUNNER_TEMP/request.json" "$RUNNER_TEMP/batch/records/batch.json"
+          fi
+      - name: Upload permanent records for the archive job
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: records
+          path: ${{ runner.temp }}/batch/records
+          if-no-files-found: error
+          retention-days: 90
+      - name: Upload original evidence (temporary)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/batch/evidence
+            !${{ runner.temp }}/batch/evidence/**/save/**
+            !${{ runner.temp }}/batch/evidence/**/panic/**
+            !${{ runner.temp }}/batch/evidence/**/archive/**
+            !${{ runner.temp }}/batch/evidence/**/scores/**
+          if-no-files-found: warn
+          retention-days: 90
+  analyze:
+    needs: run
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: records
+          path: batch/records
+      - uses: actions/download-artifact@v4
+        with:
+          name: evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: batch/evidence
+      - name: Reconstruct adverse episodes and curate scenario saves
+        run: python3 scripts/extract_scenarios.py batch
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: analyzed-records
+          path: batch/records
+          if-no-files-found: error
+          retention-days: 90
+  archive:
+    needs: [run, analyze]
+    if: always()
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: analyzed-records
+          path: downloaded-records
+      # The write credential is available only here, after Borg execution ends.
+      - name: Append records to results branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/archive_records.py downloaded-records

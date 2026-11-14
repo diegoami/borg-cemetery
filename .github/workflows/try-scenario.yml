@@ -1,0 +1,169 @@
+name: Compare Borgs on a saved scenario
+on:
+  workflow_dispatch:
+    inputs:
+      scenario_ref:
+        description: Cemetery branch or commit containing the scenario
+        default: results
+        required: true
+        type: string
+      scenario:
+        description: Directory containing scenario.json and start.save.gz
+        required: true
+        type: string
+      candidate_program:
+        description: Alternative Borg project
+        type: choice
+        options: [borg-rs, borg-reborn-rs]
+        required: true
+      candidate_ref:
+        description: Alternative Borg commit or tag
+        required: true
+        type: string
+      candidate_profile:
+        description: Optional alternative reborn profile in the main cemetery checkout
+        default: ''
+        type: string
+      turns:
+        description: Engine turns after the saved starting turn
+        default: '1000'
+        type: string
+permissions:
+  contents: read
+jobs:
+  trial:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        role: [baseline, candidate]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.scenario_ref }}
+          path: scenario-store
+          persist-credentials: false
+      - name: Resolve version to test
+        id: version
+        env:
+          SCENARIO: ${{ inputs.scenario }}
+          ROLE: ${{ matrix.role }}
+          CANDIDATE_PROGRAM: ${{ inputs.candidate_program }}
+          CANDIDATE_REF: ${{ inputs.candidate_ref }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          root = Path('scenario-store').resolve()
+          scenario = (root / os.environ['SCENARIO']).resolve()
+          if not scenario.is_relative_to(root):
+              raise ValueError('scenario must be inside the selected cemetery checkout')
+          data = json.loads((scenario / 'scenario.json').read_text())
+          program, ref = (data['origin']['program'], data['origin']['source_commit'])
+          if os.environ['ROLE'] == 'candidate':
+              program, ref = os.environ['CANDIDATE_PROGRAM'], os.environ['CANDIDATE_REF']
+          if program not in ('borg-rs', 'borg-reborn-rs') or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._/+-]{0,199}', ref):
+              raise ValueError('invalid program or ref')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
+              stream.write(f'program={program}\nref={ref}\nscenario={scenario}\n')
+          PY
+      - uses: actions/checkout@v4
+        with:
+          repository: diegoami/${{ steps.version.outputs.program }}
+          ref: ${{ steps.version.outputs.ref }}
+          path: target-borg
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@stable
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq build-essential cmake libx11-dev
+      - name: Build pinned target
+        working-directory: target-borg
+        run: BORG_IMPL=rust harness/build.sh
+      - name: Run from the same saved game
+        env:
+          SCENARIO: ${{ steps.version.outputs.scenario }}
+          TURNS: ${{ inputs.turns }}
+          ROLE: ${{ matrix.role }}
+          PROFILE: ${{ inputs.candidate_profile }}
+        run: |
+          profile_args=()
+          if [ "$ROLE" = candidate ] && [ -n "$PROFILE" ]; then
+            profile_args=(--profile "$GITHUB_WORKSPACE/$PROFILE")
+          fi
+          python3 scripts/run_scenario.py run --source target-borg --scenario "$SCENARIO" \
+            --turns "$TURNS" --out "$RUNNER_TEMP/trial" "${profile_args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trial-${{ matrix.role }}
+          path: |
+            ${{ runner.temp }}/trial
+            !${{ runner.temp }}/trial/input.save
+            !${{ runner.temp }}/trial/**/save/**
+            !${{ runner.temp }}/trial/**/panic/**
+            !${{ runner.temp }}/trial/**/archive/**
+          if-no-files-found: error
+          retention-days: 90
+  compare:
+    needs: trial
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: trial-*
+          path: trials
+      - name: Retain compact trial results and compare
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          from pathlib import Path
+          sys.path.insert(0, 'scripts')
+          from run_batch import read_json, write_json
+          from run_scenario import compare_trials
+          output = Path('compact')
+          write_json(output / 'batch.json', dict(schema='borg-cemetery/scenario-trials@1',
+                     workflow_run=os.environ['GITHUB_RUN_ID'], workflow_attempt=os.environ['GITHUB_RUN_ATTEMPT']))
+          trials = {}
+          for role in ('baseline', 'candidate'):
+              trial = read_json(Path('trials') / f'trial-{role}' / 'trial.json')
+              trials[role] = trial
+              write_json(output / f'{role}.json', trial)
+          try:
+              result = compare_trials(trials['baseline'], trials['candidate'])
+          except (ValueError, KeyError) as error:
+              result = dict(result='inconclusive', reason=str(error))
+          write_json(output / 'comparison.json', result)
+          print(json.dumps(result.get('result')))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scenario-comparison
+          path: compact
+          if-no-files-found: error
+          retention-days: 90
+  archive:
+    needs: compare
+    if: always()
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: scenario-comparison
+          path: compact
+      - name: Append trial results
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/archive_records.py compact
