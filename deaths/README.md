@@ -6,7 +6,7 @@ Each case below opens its landing page, with the seed, version, original report
 and available evidence. Historical cases explicitly show when an animation or
 replay save was not retained.
 
-Dossiers: 6; distinct starting conditions: 6; retained process attempts: 14 (including repeats). This registry is not a survival-rate estimate.
+The six imported historical cases retain their original registry statistics: six distinct starting conditions and 14 retained attempts. D0007 adds one selected validation birth. Neither collection is a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -16,6 +16,7 @@ Dossiers: 6; distinct starting conditions: 6; retained process attempts: 14 (inc
 | [D0004](D0004-seed8408-blackguard/README.md) | unassigned | `f772eb6dcb93` | 8408 | a wild cat | 6231 | C/Rust parity observed; defect not established |
 | [D0005](D0005-recorded/README.md) | [Discuss](https://github.com/diegoami/borg-rs/issues/3) | `9881301ceaad` | 1532917772 | Fang, Farmer Maggot's Dog | 36289 | Fang death assessed; recovery/retreat gates and spell-confidence causality unresolved |
 | [D0006](D0006-recorded/README.md) | [Discuss](https://github.com/diegoami/borg-rs/issues/3) | `aa4ad6cfeea2` | 2647001198 | a grey mold | 22841 | Grey-mold stair/exploration loop assessed; qualified private trace shows emergency movement and danger-cache reuse |
+| [D0007](D0007/README.md) | unassigned | `e9a6a521f3ac` | 102 | Fang, Farmer Maggot's Dog | 3640 | Written report, GIF and three playable scenarios; one saved-position comparison |
 
 ## Aggregated actions
 
@@ -33,3 +34,5 @@ Dossiers: 6; distinct starting conditions: 6; retained process attempts: 14 (inc
 [Earlier nine-class cohort and assessments](cohort-2026-11-07.md) · [Feedback process](FEEDBACK.md).
 
 Export with tools/record-death.py, curate assessment.json/report.md, regenerate with tools/aggregate-deaths.py. Original-C defect leads go to neo-angband-tracker under the repository policy; no automatic issues or gameplay changes are made by the logger.
+
+[Download and replay the original D0005 and D0006 recordings](https://github.com/diegoami/borg-cemetery/releases/tag/recordings-2026-11-15). Each case has written download and playback instructions.

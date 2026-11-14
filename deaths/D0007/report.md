@@ -1,0 +1,60 @@
+# D0007 — Elf Mage killed by Fang
+
+**Seed 102.** An Elf Mage at character level 1 died to Fang, Farmer Maggot's
+Dog on dungeon level 1 at engine turn 3640. The original player was
+borg-reborn-rs at commit `e9a6a521f3ac2fc631aed2c2e3d6c595dde9ab71`.
+
+## Sequence leading to death
+
+At turn 3432 the character still had 9/9 HP and 2/2 mana. It had been trying
+to open a locked door. Fang bit it at 3440, reducing it to 5 HP. The Borg
+used a Phase Door scroll at 3442, then tried to recover. Fang approached
+again; recovery decisions alternated between resting and movement.
+
+The last Phase Door scroll was used at 3532. The Borg later cast at Fang
+at 3612 and hit it, but Fang kept attacking. At 3622 the Borg drank a Cure
+Light Wounds potion; another remained. At 3632 it attempted another aimed
+spell and failed to concentrate. Further bites killed it at 3640.
+
+The final observed inventory contained one Cure Light Wounds potion, two
+unidentified Light Violet Potions, a Word of Recall scroll, food, two spare
+torches and the First Spells book. Both Phase Door scrolls had been spent.
+The character wielded a rapier and carried a torch.
+
+[Watch the death sequence and read the detailed account](../../scenarios/S0003/README.md).
+[Read the inventory and learned-spell tables](../../scenarios/S0003/inventory.md).
+
+## What can be investigated
+
+Recovery after the first escape, repeated contact with Fang, healing timing
+and the final spell attempt are observable leads. They are examples of
+questions raised by this particular sequence, not a fixed investigation
+checklist. No particular tuning change has been proved to prevent this death.
+The report distinguishes the Borg's threat estimates from actual outcomes.
+
+## Saved-position comparison already performed
+
+Both versions loaded the exact same engine save at turn 3402 with its saved
+RNG and fresh Borg memory, then had a target budget of 1000 engine turns.
+
+| Version | Result |
+| --- | --- |
+| Original reborn, `e9a6a521f3ac` | Died to Fang at turn 3640 |
+| Alternative borg-rs, `122185ba36c3` | Survived to turn 4411; the requested cap was 4402 and the frontend stopped at its next boundary |
+
+This is one saved-position comparison of complete versions. It does not
+isolate a particular Borg policy, and it does not establish a general
+survival improvement. The two earlier risk candidates also have saved
+scenarios; they have not received comparison trials.
+
+## Watch and replay
+
+- [Death scenario: animation, written decisions and tested starting save](../../scenarios/S0003/README.md)
+- [Earlier risk candidate that recovered](../../scenarios/S0001/README.md)
+- [Second risk candidate that recovered](../../scenarios/S0002/README.md)
+- [Copyable build, saved-game trial and seed-rerun instructions](../../scenarios/S0003/REPLAY.md)
+
+No complete angband-recorder input recording was captured for this birth.
+The GIF consists of genuine terminal screenshots obtained from verified
+input/state prefixes. The saved-game comparison above is a working engine
+save trial; it does not restore the original Borg's private memory.

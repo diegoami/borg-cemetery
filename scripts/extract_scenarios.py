@@ -10,6 +10,7 @@ import shutil
 from run_batch import digest, read_json, write_json
 from episode_inventory import extract_inventory
 from death_pages import episode_page, analysis_page, run_page
+from human_readable import action, threat
 
 STATE = re.compile(r'^(\d+) (-?\d+),(-?\d+) d(\d+)/(\d+) hp(-?\d+)/(\d+)(?: sp(-?\d+)/(\d+))?')
 
@@ -180,19 +181,23 @@ def report_event(path, event, timeline, scenario):
             if not modes or modes[-1] != mode:
                 modes.append(mode)
         summary.append('Observed Borg mode sequence: ' + ' → '.join(modes) + '.')
-    text = [f"# {event['kind']}: observed sequence", '',
-            f"Boundary: {event['start_basis']}; start turn {start['turn'] if start else 'unknown'}; "
-            f"endpoint {event['turn']}; resolution {event['resolution']}.", '',
+    title = 'Death' if event['kind'] == 'death' else 'Near-death candidate'
+    resolution = {'death': 'The character died.', 'recovered_to_stable': 'The character returned to sustained stability.',
+                  'unresolved': 'The run ended before sustained recovery was established.'}.get(event['resolution'], 'Outcome not established.')
+    text = [f"# {title}: observed sequence", '',
+            f"The inferred reasonably stable starting point is turn {start['turn'] if start else 'unknown'}. "
+            f"The {'death' if event['kind'] == 'death' else 'worst recorded risk point'} is at turn {event['turn']}. "
+            f"The account follows observations through turn {(event['end'] or {}).get('turn', event['turn'])}. {resolution}", '',
             'The start is inferred from sustained HP and available Borg threat estimates, '
             'not proof of safety. Missing threat, inventory or perception evidence stays unknown. '
             'Follow earlier causes beyond this boundary when needed.', '',
-            f"Save scenario: {scenario['status']}; startup: fresh Borg, saved engine RNG. "
-            'Alternative Borgs share a game state; original Borg memory is not restored.', '',
+            ('A playable starting save is retained. ' if scenario.get('save') else 'No playable starting save was retained. ') +
+            'Saved-position trials start a fresh Borg with the saved engine RNG; original private Borg memory is not restored.', '',
             f"Retained save turn: {scenario.get('start_turn', 'unavailable')}; "
             f"inferred stable boundary: {start['turn'] if start else 'unknown'}.", '',
             ' '.join(summary), '',
-            'Chronology is ordered by engine turn. Cross-stream ordering at the same turn '
-            'is unresolved. Full observations are in sequence.json.', '',
+            'Chronology is ordered by engine turn. Ordering between different evidence streams at the same turn '
+            'is unresolved. The table shows state changes, game messages and recorded Borg decisions.', '',
             '| Turn | Evidence | Observation |', '| --- | --- | --- |']
     previous = None
     for entry in timeline:
@@ -205,10 +210,12 @@ def report_event(path, event, timeline, scenario):
             observation = f"HP {r['hp']}/{r['max_hp']}; SP {r['sp']}/{r['max_sp']}; depth {r['depth']}; position {r['x']},{r['y']}"
         elif 'decision' in entry:
             d = entry['decision']
-            observation = f"Borg mode {d.get('mode')}; goal {d.get('goal')}; choice {d.get('choice')}; threat {d.get('threat')}"
+            observation = (f"Strategy: {d.get('mode', 'not recorded')}; goal: {d.get('goal', 'not recorded')}. "
+                           f"{action(d.get('choice'))}. {threat(d.get('threat'))}.")
         else:
             observation = entry['message']
-        text.append(f"| {entry['turn']} | {entry['stream']}:{entry['line']} | {escaped(observation)} |")
+        label = {'state.log': 'State observation', 'trace.jsonl': 'Borg decision', 'messages.log': 'Game message'}.get(entry['stream'], 'Observation')
+        text.append(f"| {entry['turn']} | {label} {entry['line']} | {escaped(observation)} |")
     text += ['', f"Terminal observation: {escaped(event.get('cause', event['resolution']))}.", '',
              'Investigate any evidence-backed survival improvement. Separate facts, hypotheses '
              'and missing observations; propose a mechanism, intervention, prediction and experiment. '

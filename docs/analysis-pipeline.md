@@ -1,5 +1,19 @@
 # Death analysis and tuning pipeline
 
+Human entry points are the death and scenario README pages, written reports,
+inventory/spell tables, animations and REPLAY guides. Serialized observations
+remain tool inputs; human pages must not print their object/array syntax or
+require readers to inspect those files to understand an event or launch replay.
+
+The selected seed-102 evidence is consolidated as death D0007, scenarios
+S0001–S0003 and run 2026-11-14-seed102. The former local-validation tree and
+duplicate generated versions have been removed after byte-preservation checks
+of native records, saved games, inventory observations and terminal captures.
+Historical D0005/D0006 recordings are available as release downloads, with
+their frozen player/runtime and written instructions; both were verified after
+relocation. The seed-102 case has screenshots and engine saves but no complete
+standalone-recorder input bundle. Pages must state that distinction explicitly.
+
 The first implementation lives in this repository: pinned seeded runs, original
 evidence, adaptive episode reports, curated save-game scenarios, version trials,
 parameter-profile inputs, and paired fresh-birth comparison. Automatic causal

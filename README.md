@@ -1,6 +1,6 @@
 # borg-cemetery
 
-Where the runs of the Angband Borgs are kept: the death records, and (to come) the recordings.
+Recorded Angband Borg runs, written death investigations and playable saved scenarios.
 
 The code lives elsewhere:
 - [borg-rs](https://github.com/diegoami/borg-rs): the Rust Borg and its toolkit, which write these records;
@@ -12,12 +12,21 @@ them. Borg and engine implementation code stays in the source repositories.
 ## Browse deaths
 
 - [Historical death registry](deaths/README.md): every case has its own landing page.
-- [Fang, seed 102](runs/local-validation-2026-11-14-reborn-seed102/episode-media-v3/event-3/README.md):
+- [Fang, seed 102](scenarios/S0003/README.md):
   report, inventory, animation and saved scenario together.
 
 Each death directory opens a `README.md` landing page on GitHub. CI generates
 these for new deaths and their episodes, including explicit unavailable states
 for evidence that was not retained. Original reports and records stay intact.
+
+## Read and replay
+
+- [Deaths](deaths/README.md): written accounts, character details, inventory and playback instructions.
+- [Saved scenarios](scenarios/README.md): written situation reports and commands for trying alternative Borgs.
+- [Original recordings of D0005 and D0006](https://github.com/diegoami/borg-cemetery/releases/tag/recordings-2026-11-15): downloadable bundles with the matching executable and recorder/player.
+- [Run records](runs/): batch provenance and outcomes.
+
+The human pages use prose, tables, pictures and executable commands. Machine-readable files are retained for tools; they are not required reading.
 
 ## Pinned seeded runs in CI
 
@@ -53,7 +62,7 @@ it is a calibratable heuristic, not a fixed turn window or proof of safety.
 Each episode retains a compressed save from at or before that boundary, plus
 its seed, source version, save hashes and starting turn. If no suitable checkpoint
 exists, the report explicitly marks the scenario as unavailable. See a
-[real sequence report](runs/local-validation-2026-11-14-reborn-seed102/sequence-analysis-v2/event-1/report.md).
+[real sequence report](scenarios/S0003/report.md).
 
 Choose **Actions → Compare Borgs on a saved scenario → Run workflow** to test an
 alternative version. Enter the cemetery branch/commit containing the scenario,
@@ -76,8 +85,8 @@ each replay's input and state prefix must match the original. Diagnostic replays
 are not additional independent lives. Missing screenshots or inventory stay
 explicitly unavailable, and a time budget can produce a partial preview.
 
-See the [Fang landing page with inventory and animation](runs/local-validation-2026-11-14-reborn-seed102/episode-media-v3/event-3/README.md)
-or open its [GIF](runs/local-validation-2026-11-14-reborn-seed102/episode-media-v3/event-3/media/episode.gif).
+See the [Fang landing page with inventory and animation](scenarios/S0003/README.md)
+or open its [GIF](scenarios/S0003/media/episode.gif).
 
 For a reborn parameter experiment, commit a candidate profile to this checkout
 and supply its path in the optional `profile` input. Unknown or invalid keys
@@ -112,8 +121,9 @@ Python standard library and the selected project's native tools.
 
 ```
 deaths/        death dossiers: one directory per case, plus the registry
-runs/          curated local validation reports and scenario evidence
-recordings/    recordings of games (not yet: see below)
+runs/          batch provenance and outcomes
+scenarios/     written situation reports, starting saves and trial results
+recordings/    recording download index and playback guide
 ```
 
 ### `deaths/`
@@ -138,13 +148,20 @@ The registry files sit next to the cases: `README.md`, `index.json`, `owner-revi
 
   Then review what was written and commit it here. The registry lock (`deaths/.registry.lock`) is ignored.
 
-### `recordings/` (not yet)
+### `recordings/`
 
-**Decided (owner, 2026-11-14):**
-- **Slim recordings, committed here.** A recording holds only what cannot be recomputed: the input streams, the start save, the save points (compressed) and a small digest per frame. The screens and logs are rebuilt on replay. It names the build it needs and does not carry the executable (borg-rs#67, borg-rs#66).
-- **Release assets only if necessary.** A recording that is still too large goes into a GitHub release of this repository, with an entry under `recordings/` that points at the asset.
+[The recording guide](recordings/README.md) lists the complete original D0005
+and D0006 recordings. Each download includes the matching frozen Linux
+executable, game data and recorder/player, with a written guide inside. They
+were copied to a new location and fully replay-verified before packaging.
+The archives are release assets so frozen game binaries do not enter Git.
 
-Why: a full recording bundle today is 100–180 MB, with the frozen executable about 14 MB and the run's checkpoint saves and frames most of the rest. GitHub refuses files over 100 MB, and a repository of such runs grows without bound. Recordings come here once borg-rs#67 has slimmed them.
+Other cases may retain screenshot animations and playable engine saves without
+having a complete recorder input recording. Each case says exactly which is
+available. A GIF is a visual account; an engine save starts a new Borg; a full
+recorder replay verifies the original recorded run. These capabilities are not
+interchangeable. Future slim recorder integrations should retain the minimal
+supported replay inputs and identify the exact runtime they require.
 
 ## Rules
 

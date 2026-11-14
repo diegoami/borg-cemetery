@@ -3,6 +3,7 @@ import gzip
 import json
 
 from run_batch import write_json
+from human_readable import spells
 
 
 def lines(path):
@@ -78,17 +79,23 @@ def extract_inventory(raw, dest, start, end):
                   start_turn=start, end_turn=end, snapshots=selected,
                   terminal_inventory='last available observation; not asserted to be post-death')
     write_json(dest / 'inventory.json', result)
+    render_inventory(result, dest / 'inventory.md')
+    return result
+
+
+def render_inventory(result, path):
+    selected = result.get('snapshots', [])
     text = ['# Inventory, equipment and spells', '', result['scope'], '',
             'The final entry is the last observed inventory, not an invented post-death snapshot. '
-            'Reborn spell flags: learned=1, worked=2, forgotten=4; an unlearned spell is not an available action.', '']
+            'Only learned spells are listed; casting also requires enough mana, the book and a legal target.', '']
     if not selected:
         text += ['Inventory was not recorded by this build/run.', '']
     for row in selected:
-        text += [f"## Turn {row['turn']} ({row['source']}:{row['line']})", '']
+        text += [f"## Turn {row['turn']} (recorded observation {row['line']})", '']
         for key in ('pack', 'equipment', 'quiver'):
             text += [key.capitalize() + ':', '']
-            text += ['- ' + description(item) for item in row[key]] or ['- (none)']
+            present = [item for item in row[key] if item.get('item', True) is not None]
+            text += ['- ' + description(item) for item in present] or ['- (none)']
             text += ['']
-        text += [f"Spell availability: {json.dumps(row['spells'], ensure_ascii=False)}", '']
-    (dest / 'inventory.md').write_text('\n'.join(text))
-    return result
+        text += ['Learned spells:', '', *spells(row['spells']), '']
+    path.write_text('\n'.join(text))

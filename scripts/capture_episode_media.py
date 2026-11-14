@@ -9,6 +9,7 @@ import time
 from episode_inventory import description, observations
 from extract_scenarios import events, jsonlines, states
 from run_batch import command, digest, git, kv, read_json, write_json
+from human_readable import action
 
 
 def screen(stderr):
@@ -54,7 +55,7 @@ def render_gif(frames, target, inventory, decisions, seed):
         else:
             draw.text((724, 108), 'Not recorded in this run', font=font, fill='#a8b4c3')
         draw.text((724, 437), f"Mode: {decision.get('mode', 'not recorded')}", font=font, fill='#71d9ff')
-        choice = str(decision.get('choice', 'not recorded'))
+        choice = action(decision.get('choice'))
         for i in range(2):
             draw.text((724, 461 + i * 19), choice[i * 53:(i + 1) * 53], font=font, fill='#e0e7ef')
         draw.text((16, 532), 'Screens are sampled; timing is for viewing. Inventory and thoughts may precede the screenshot.',
