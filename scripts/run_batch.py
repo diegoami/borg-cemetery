@@ -13,6 +13,7 @@ import signal
 import subprocess
 import sys
 from datetime import datetime, timezone
+from death_pages import run_page
 
 PROGRAMS = ('borg-rs', 'borg-reborn-rs')
 
@@ -201,6 +202,7 @@ def run_batch(a):
                     "Assessment: unassessed. A death does not establish a defect.\n")
             write_json(dest / 'run.json', rec)
             failed |= rec['status'] not in ('death', 'turn_cap', 'stopped')
+            run_page(dest)
         manifest['status'] = 'failed' if failed else 'complete'
         return int(failed)
     except Exception as exc:

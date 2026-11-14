@@ -9,6 +9,16 @@ The code lives elsewhere:
 This repository holds run outputs and the CI scripts that collect and analyze
 them. Borg and engine implementation code stays in the source repositories.
 
+## Browse deaths
+
+- [Historical death registry](deaths/README.md): every case has its own landing page.
+- [Fang, seed 102](runs/local-validation-2026-11-14-reborn-seed102/episode-media-v3/event-3/README.md):
+  report, inventory, animation and saved scenario together.
+
+Each death directory opens a `README.md` landing page on GitHub. CI generates
+these for new deaths and their episodes, including explicit unavailable states
+for evidence that was not retained. Original reports and records stay intact.
+
 ## Pinned seeded runs in CI
 
 Choose **Actions → Run pinned Borg → Run workflow**. Select `borg-rs` or
@@ -66,7 +76,7 @@ each replay's input and state prefix must match the original. Diagnostic replays
 are not additional independent lives. Missing screenshots or inventory stay
 explicitly unavailable, and a time budget can produce a partial preview.
 
-See the [Fang episode with inventory and animation](runs/local-validation-2026-11-14-reborn-seed102/episode-media-v3/event-3/report.md)
+See the [Fang landing page with inventory and animation](runs/local-validation-2026-11-14-reborn-seed102/episode-media-v3/event-3/README.md)
 or open its [GIF](runs/local-validation-2026-11-14-reborn-seed102/episode-media-v3/event-3/media/episode.gif).
 
 For a reborn parameter experiment, commit a candidate profile to this checkout

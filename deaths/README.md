@@ -2,16 +2,20 @@
 
 Every confirmed natural death gets an immutable source/build/input identity, original observations, an assessment and linked actions. Full raw runs/saves/builds stay outside Git. Death alone does not establish a bug.
 
+Each case below opens its landing page, with the seed, version, original report
+and available evidence. Historical cases explicitly show when an animation or
+replay save was not retained.
+
 Dossiers: 6; distinct starting conditions: 6; retained process attempts: 14 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
-| [D0001](D0001-seed8400-warrior/report.md) | unassigned | `f772eb6dcb93` | 8400 | a pseudo-dragon | 37680 | C/Rust parity observed; defect not established |
-| [D0002](D0002-seed8402-druid/report.md) | unassigned | `f772eb6dcb93` | 8402 | a cutpurse | 5590 | C/Rust parity observed; defect not established |
-| [D0003](D0003-seed8406-rogue/report.md) | unassigned | `f772eb6dcb93` | 8406 | a giant yellow centipede | 5600 | C/Rust parity observed; defect not established |
-| [D0004](D0004-seed8408-blackguard/report.md) | unassigned | `f772eb6dcb93` | 8408 | a wild cat | 6231 | C/Rust parity observed; defect not established |
-| [D0005](D0005-recorded/report.md) | [Discuss](https://github.com/diegoami/borg-rs/issues/3) | `9881301ceaad` | 1532917772 | Fang, Farmer Maggot's Dog | 36289 | Fang death assessed; recovery/retreat gates and spell-confidence causality unresolved |
-| [D0006](D0006-recorded/report.md) | [Discuss](https://github.com/diegoami/borg-rs/issues/3) | `aa4ad6cfeea2` | 2647001198 | a grey mold | 22841 | Grey-mold stair/exploration loop assessed; qualified private trace shows emergency movement and danger-cache reuse |
+| [D0001](D0001-seed8400-warrior/README.md) | unassigned | `f772eb6dcb93` | 8400 | a pseudo-dragon | 37680 | C/Rust parity observed; defect not established |
+| [D0002](D0002-seed8402-druid/README.md) | unassigned | `f772eb6dcb93` | 8402 | a cutpurse | 5590 | C/Rust parity observed; defect not established |
+| [D0003](D0003-seed8406-rogue/README.md) | unassigned | `f772eb6dcb93` | 8406 | a giant yellow centipede | 5600 | C/Rust parity observed; defect not established |
+| [D0004](D0004-seed8408-blackguard/README.md) | unassigned | `f772eb6dcb93` | 8408 | a wild cat | 6231 | C/Rust parity observed; defect not established |
+| [D0005](D0005-recorded/README.md) | [Discuss](https://github.com/diegoami/borg-rs/issues/3) | `9881301ceaad` | 1532917772 | Fang, Farmer Maggot's Dog | 36289 | Fang death assessed; recovery/retreat gates and spell-confidence causality unresolved |
+| [D0006](D0006-recorded/README.md) | [Discuss](https://github.com/diegoami/borg-rs/issues/3) | `aa4ad6cfeea2` | 2647001198 | a grey mold | 22841 | Grey-mold stair/exploration loop assessed; qualified private trace shows emergency movement and danger-cache reuse |
 
 ## Aggregated actions
 

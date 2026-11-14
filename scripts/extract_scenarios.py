@@ -9,6 +9,7 @@ import shutil
 
 from run_batch import digest, read_json, write_json
 from episode_inventory import extract_inventory
+from death_pages import episode_page, analysis_page, run_page
 
 STATE = re.compile(r'^(\d+) (-?\d+),(-?\d+) d(\d+)/(\d+) hp(-?\d+)/(\d+)(?: sp(-?\d+)/(\d+))?')
 
@@ -248,6 +249,7 @@ def extract(raw, record, out, stable_hp=0.7, stable_samples=3):
                     report.write('\n![Episode: actual terminal screenshots](media/episode.gif)\n')
                 report.write(f"\nAnimation capture: {status.get('status', 'unavailable')}; provenance in media/media.json.\n")
         event.update(scenario=scenario, sequence=f"{event['id']}/sequence.json", report=f"{event['id']}/report.md")
+        episode_page(dest, event, identity)
     result = dict(schema='borg-cemetery/scenarios@2', identity=identity, events=selected,
                   boundary_rule=dict(stable_hp_ratio=stable_hp, stable_distinct_turns=stable_samples,
                                      threat='zero estimated death chance; worst damage below HP; disabling <=5% when available'),
@@ -263,6 +265,8 @@ def extract(raw, record, out, stable_hp=0.7, stable_samples=3):
         'Episodes follow the observed sequence from the last inferred stable state through '
         'deterioration, death or recovery. They do not use fixed-duration windows.\n\n' +
         ''.join(f"- [{e['id']}: {e['kind']}]({e['report']}); save: {e['scenario']['status']}.\n" for e in selected))
+    analysis_page(out)
+    run_page(record)
     return result
 
 

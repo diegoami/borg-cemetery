@@ -113,6 +113,10 @@ class RunnerTest(unittest.TestCase):
         self.assertTrue(any(e.get('decision', {}).get('choice') == 'retreat' for e in sequence))
         self.assertEqual(event['scenario']['status'], 'missing_checkpoint')
         self.assertFalse(event['scenario']['borg_memory_restored'])
+        self.assertTrue((batch / 'records/seed-101/README.md').is_file())
+        self.assertTrue((batch / 'records/seed-101/analysis/README.md').is_file())
+        landing = batch / 'records/seed-101/analysis/event-1/README.md'
+        self.assertIn('**Seed: `101`**', landing.read_text())
 
     def test_archive_appends_and_never_replaces(self):
         _, batch = self.batch('101')

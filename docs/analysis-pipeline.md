@@ -29,6 +29,11 @@ the analysis must not discard a useful finding because no tuning knob exists.
    messages and available structured thoughts into a chronology with original
    source line numbers. Curate the nearest preceding save as an executable
    scenario. A terminal low-HP episode and its death are one episode.
+   Generate a GitHub-rendered landing page (`README.md`) in every episode
+   directory, linking the seed/version, report, inventory, GIF and saved scenario.
+   Each run and its episode collection also get navigation pages; missing assets
+   are labelled unavailable instead of becoming broken links. Historical dossiers
+   receive additive landing pages without changing their original evidence.
    Retain inventory/equipment/spell observations and their changes across the
    episode, and embed a small screenshot GIF when verified capture succeeds.
 3. **Archive**: append compact records and analysis to `results`, one directory
