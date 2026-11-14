@@ -1,0 +1,37 @@
+{
+  "birth_seed": 102,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 1,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 3200,
+    "file": "checkpoint-000032-t0000003202.save",
+    "game_turn": 3202,
+    "keys": 722,
+    "max_depth": 1,
+    "race_idx": 2,
+    "seed": 102
+  },
+  "checkpoint_lead_turns": 50,
+  "class_idx": 1,
+  "compressed_sha256": "abffefd5769b2eab9819207214d85579cd8e7cc7f3257ddc0076fdd0dfdc07d1",
+  "event_kind": "near_death_candidate",
+  "origin": {
+    "binary_sha256": "4a876901da0bf2a143d71dfb7fab5e05f20aa532bf43ad8690eac6ad2d7227a8",
+    "program": "borg-reborn-rs",
+    "seed": 102,
+    "source_commit": "e9a6a521f3ac2fc631aed2c2e3d6c595dde9ab71"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 3262,
+  "race_idx": 2,
+  "report_start_turn": 3252,
+  "save": "start.save.gz",
+  "save_sha256": "85aab912b628df41172ab99c9ec7701999ae345f08a912cb4a3d1dd82c0274c4",
+  "schema": "borg-cemetery/save-scenario@1",
+  "start_turn": 3202,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

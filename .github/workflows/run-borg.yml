@@ -62,9 +62,14 @@ jobs:
                          workflow_attempt=os.environ['GITHUB_RUN_ATTEMPT'])
           (Path(os.environ['RUNNER_TEMP']) / 'request.json').write_text(json.dumps(request, indent=2) + '\n')
           PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - uses: dtolnay/rust-toolchain@stable
+      - name: Install GIF renderer
+        run: python3 -m pip install -r requirements-media.txt
       - name: Install native build dependencies
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq build-essential cmake libx11-dev
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq build-essential cmake libx11-dev fonts-dejavu-core
       - name: Build and run explicit seeds
         env:
           PROGRAM: ${{ inputs.program }}
@@ -85,6 +90,9 @@ jobs:
             --seeds "$SEEDS" --race "$RACE" --class "$CLASS" \
             --turns "$TURNS" --wall-seconds "$WALL" --checkpoint-every "$CHECKPOINT" \
             --out "$RUNNER_TEMP/batch" "${profile_args[@]}"
+      - name: Capture verified episode screenshot previews
+        if: always()
+        run: python3 scripts/capture_episode_media.py "$RUNNER_TEMP/batch"
       - name: Keep request even when setup or argument validation fails
         if: always()
         run: |

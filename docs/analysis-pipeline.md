@@ -29,6 +29,8 @@ the analysis must not discard a useful finding because no tuning knob exists.
    messages and available structured thoughts into a chronology with original
    source line numbers. Curate the nearest preceding save as an executable
    scenario. A terminal low-HP episode and its death are one episode.
+   Retain inventory/equipment/spell observations and their changes across the
+   episode, and embed a small screenshot GIF when verified capture succeeds.
 3. **Archive**: append compact records and analysis to `results`, one directory
    per workflow run and attempt. Preserve original raw evidence as a 90-day
    artifact. Curated compressed scenario saves are retained with their hashes;
@@ -40,6 +42,31 @@ These stages are implemented by `.github/workflows/run-borg.yml`. The separate
 loads the same saved game in each, compares survival and archives results.
 Open-ended causal investigation and automated proposal generation below remain
 a delivery plan, not jobs that already exist.
+
+## Inventory and visual review
+
+Reborn's existing `BORG_OBSERVATION_LOG` records its observed inventory,
+equipment, quiver and spell availability. The collector retains that full stream
+compressed, and episode reports project player-facing descriptions, quantities,
+known-state flags and spells at the start, on changes and at the last available
+observation. Diagnostic hidden item-kind identifiers are not promoted into the
+inventory report. borg-rs's native frame stream supplies player-visible item
+descriptions instead. Missing instrumentation is explicitly reported.
+
+The pinned reborn frontend does not provide continuous screen recording.
+`capture_episode_media.py` therefore uses its existing key-limit and terminal
+dump support: replay the same birth to sampled key positions, check both key
+and state prefixes byte-for-byte, then retain the genuine terminal text. The
+final death screen is taken directly from the original stderr stream. No engine
+or Borg source is patched, and divergent replays cannot become accepted frames.
+
+Pillow renders these terminal screenshots in monochrome, with recorded inventory
+and the last available decision beside them, into a GIF. The side panels are
+labelled observations and may precede the screen. Sampling/timing is for viewing,
+not real-time execution. Frame text, hashes and errors accompany the GIF. The
+default limits are 24 sampled screens per episode and 300 seconds of replay work
+per batch; missing or partial capture is visible in the report. Replays remain
+diagnostics belonging to the original life, never new deaths for statistics.
 
 ## Discover opportunities before selecting interventions
 

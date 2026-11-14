@@ -56,6 +56,7 @@ def run_scenario(source, scenario_dir, out, turns=1000, wall_seconds=120, profil
                     'STALL_TIMEOUT_SECONDS', 'SAVE_ROOT'):
             env.pop(key, None)
         env['SAVE_ROOT'] = str(out)
+        env['BORG_OBSERVATION_LOG'] = str(out / 'run/observations.jsonl')
         if profile is None and head == scenario.get('origin', {}).get('source_commit') and scenario.get('baseline_profile'):
             name = scenario['baseline_profile']
             if Path(name).name != name:

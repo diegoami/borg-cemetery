@@ -8,6 +8,7 @@ import re
 import shutil
 
 from run_batch import digest, read_json, write_json
+from episode_inventory import extract_inventory
 
 STATE = re.compile(r'^(\d+) (-?\d+),(-?\d+) d(\d+)/(\d+) hp(-?\d+)/(\d+)(?: sp(-?\d+)/(\d+))?')
 
@@ -236,6 +237,16 @@ def extract(raw, record, out, stable_hp=0.7, stable_samples=3):
         timeline = sequence(raw, rows, decisions, start, end, (event['end'] or {}).get('line', 0))
         write_json(dest / 'sequence.json', timeline)
         report_event(dest / 'report.md', event, timeline, scenario)
+        inventory = extract_inventory(raw, dest, start, end)
+        with (dest / 'report.md').open('a') as report:
+            report.write(f"\n[Inventory, equipment and spells](inventory.md): {inventory['status']}.\n")
+            media = raw / 'media' / event['id']
+            if media.is_dir():
+                shutil.copytree(media, dest / 'media', dirs_exist_ok=False)
+                status = read_json(media / 'media.json')
+                if status.get('gif') and (dest / 'media' / status['gif']).is_file():
+                    report.write('\n![Episode: actual terminal screenshots](media/episode.gif)\n')
+                report.write(f"\nAnimation capture: {status.get('status', 'unavailable')}; provenance in media/media.json.\n")
         event.update(scenario=scenario, sequence=f"{event['id']}/sequence.json", report=f"{event['id']}/report.md")
     result = dict(schema='borg-cemetery/scenarios@2', identity=identity, events=selected,
                   boundary_rule=dict(stable_hp_ratio=stable_hp, stable_distinct_turns=stable_samples,

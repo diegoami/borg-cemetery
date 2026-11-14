@@ -38,3 +38,21 @@ native frontend stops at its next boundary). The compact trial receipts and
 comparison are retained beside the report. These builds contain different
 engine/Borg implementations, so this compares complete versions from one saved
 position; it does not isolate a particular policy or establish general benefit.
+
+## Inventory and screenshot animation
+
+The additive `episode-media-v3/` includes the
+[inventory and chronological report](episode-media-v3/event-3/report.md) and a
+[23-frame screenshot GIF](episode-media-v3/event-3/media/episode.gif), under 1 MB.
+The death episode runs from the inferred stable state at turn 3432 to death at
+3640 and retains the checkpoint at 3402. Two earlier near-death candidates that
+recovered have their own reports, inventories and shorter GIFs under `event-1/`
+and `event-2/`.
+
+Inventory was recovered by a same-source, same-birth observation-logging rerun
+whose complete key and state streams matched the original byte-for-byte. Each
+sampled terminal screen was captured by replaying to a verified key/state prefix;
+the terminal death screen comes from the original run. The GIF uses monochrome
+terminal glyphs, with observed item quantities and the last Borg decision in a
+side panel. `media/media.json` retains screenshot/provenance hashes. Earlier
+reports and the saved-position comparison above are preserved as written.

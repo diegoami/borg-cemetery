@@ -58,6 +58,17 @@ separate, stronger requirement for exact uninterrupted continuation.
 The design for episode reconstruction, open-ended discovery of survival
 improvements and experiments is in [the analysis pipeline](docs/analysis-pipeline.md).
 
+Each episode also links an **inventory/equipment/spell report** and a small
+**animated GIF of actual terminal screens**, where supported. The GIF includes
+the last observed carried items and Borg decision beside the monochrome screen.
+Screens are sampled by verified replays of the pinned executable from birth;
+each replay's input and state prefix must match the original. Diagnostic replays
+are not additional independent lives. Missing screenshots or inventory stay
+explicitly unavailable, and a time budget can produce a partial preview.
+
+See the [Fang episode with inventory and animation](runs/local-validation-2026-11-14-reborn-seed102/episode-media-v3/event-3/report.md)
+or open its [GIF](runs/local-validation-2026-11-14-reborn-seed102/episode-media-v3/event-3/media/episode.gif).
+
 For a reborn parameter experiment, commit a candidate profile to this checkout
 and supply its path in the optional `profile` input. Unknown or invalid keys
 must be rejected by the pinned Borg. The profile is copied into the run records.
@@ -75,11 +86,17 @@ CMake, Make, C compiler and any native dependencies of the selected version):
 flock -n /tmp/angband-validation.lock python3 scripts/run_batch.py \
   --program borg-reborn-rs --ref FULL_COMMIT_SHA --seeds 101,102 \
   --turns 100000 --out /tmp/cemetery-batch
+python3 -m pip install -r requirements-media.txt
+flock -n /tmp/angband-validation.lock python3 scripts/capture_episode_media.py /tmp/cemetery-batch
 python3 scripts/extract_scenarios.py /tmp/cemetery-batch
 python3 -m unittest discover -s tests -v
 ```
 
 Every output directory must be new. Local runs do not publish anything.
+For new batches, capture media before extracting the final reports so the GIFs
+are included. The CI workflow does this automatically. Media generation uses
+Pillow; original run collection and save-scenario trials otherwise use the
+Python standard library and the selected project's native tools.
 
 ## Layout
 

@@ -13,9 +13,10 @@ import extract_scenarios as scenarios
 import archive_records
 import compare_batches
 import run_scenario
+import capture_episode_media
 
 
-FIXTURE = '''import hashlib, json, pathlib, subprocess, sys
+FIXTURE = '''import hashlib, json, os, pathlib, subprocess, sys
 root = pathlib.Path(__file__).resolve().parent
 if sys.argv[1] == 'build':
     game = root / 'build/rust/game'
@@ -38,6 +39,9 @@ else:
     (out / 'keys.log').write_text('40 1 68 0\\n')
     (out / 'state.log').write_text('10 1,1 d1/1 hp10/10 sp0/0\\n30 1,1 d1/1 hp2/10 sp0/0\\n40 1,1 d1/1 hp1/10 sp0/0\\n')
     (out / 'trace.jsonl').write_text(json.dumps({'turn': 40, 'choice': 'retreat'}) + '\\n')
+    if os.environ.get('BORG_OBSERVATION_LOG'):
+        pathlib.Path(os.environ['BORG_OBSERVATION_LOG']).write_text(json.dumps(
+            {'turn': 10, 'inventory': [{'desc': 'a potion', 'number': 1}], 'equipment': [], 'spells': []}) + '\\n')
 '''
 
 
@@ -83,6 +87,10 @@ class RunnerTest(unittest.TestCase):
             self.assertEqual((record / 'death-report.md').exists(), status == 'death')
             self.assertFalse((record / 'keys.log').exists())
             self.assertIn('keys.log', rec['hashes'])
+            self.assertIn('observations.jsonl.gz', rec['hashes'])
+            import gzip
+            self.assertIn('a potion', gzip.decompress((batch / 'evidence' / record.name / 'observations.jsonl.gz').read_bytes()).decode())
+            self.assertFalse((batch / 'evidence' / record.name / 'observations.jsonl').exists())
 
     def test_fetch_failure_keeps_seeds(self):
         args = runner.parse_args(['--program', 'borg-rs', '--ref', 'missing',
@@ -217,6 +225,18 @@ class RunnerTest(unittest.TestCase):
         candidate['save_sha256'] = 'different'
         with self.assertRaisesRegex(ValueError, 'save_sha256'):
             run_scenario.compare_trials(baseline, candidate)
+
+    def test_screenshot_capture_rejects_divergent_replay_prefix(self):
+        _, batch = self.batch('101')
+        raw = batch / 'evidence/seed-101'
+        identity = runner.read_json(batch / 'records/seed-101/run.json')
+        event = scenarios.events(scenarios.states(raw / 'state.log'), runner.read_json(raw / 'summary.json'))[0]
+        (raw / 'keys.log').write_text('999 1 0 0\n')
+        media = self.root / 'media'
+        result = capture_episode_media.capture(batch / 'source', raw, identity, event, media, max_frames=3)
+        self.assertEqual(result['status'], 'unavailable')
+        self.assertTrue(any('prefix mismatch' in error for error in result['errors']))
+        self.assertFalse((media / 'episode.gif').exists())
 
 
 if __name__ == '__main__':

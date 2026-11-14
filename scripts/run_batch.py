@@ -2,6 +2,7 @@
 """Run a pinned Rust Borg, keeping seed receipts before any external work."""
 import argparse
 import hashlib
+import gzip
 import json
 import os
 from pathlib import Path
@@ -158,14 +159,28 @@ def run_batch(a):
                        class_idx=a.cls, turns=a.turns, flags='menu', status='running',
                        checkpoint_every=a.checkpoint_every)
             write_json(dest / 'run.json', rec)
+            # These are observation-only interfaces already provided by the
+            # pinned projects. Unsupported logs remain explicitly unavailable.
+            env['BORG_OBSERVATION_LOG'] = str(raw / 'observations.jsonl')
+            frontend = source / 'angband/src/main-borgh.c'
+            extra = (['--', '-frames', str(raw / 'frames.jsonl')]
+                     if frontend.is_file() and 'opt_frames' in frontend.read_text() else [])
             rc = command(['bash', 'harness/run.sh', str(raw), str(seed),
-                          str(a.race), str(a.cls), str(a.turns), 'menu'],
+                          str(a.race), str(a.cls), str(a.turns), 'menu', *extra],
                          cwd=source, env=env, log=evidence / f'seed-{seed}-launcher.log',
                          timeout=a.wall_seconds + 30)
             summary = read_json(raw / 'summary.json')
             process = read_json(raw / 'process.json')
             rec.update(status=outcome(summary, process, rc, seed, a.race, a.cls),
                        exit_code=rc, summary=summary, process=process, hashes={})
+            observations = raw / 'observations.jsonl'
+            if observations.is_file():
+                # Retain the full stream losslessly without accumulating all
+                # uncompressed observation logs over a multi-seed batch.
+                rec['observations_sha256'] = digest(observations)
+                with observations.open('rb') as src, gzip.open(str(observations) + '.gz', 'wb') as dst:
+                    shutil.copyfileobj(src, dst)
+                observations.unlink()
             # Whitelist compact originals; raw logs and saves stay out of Git.
             for name in ('summary.json', 'process.json', 'config.txt', 'params.json'):
                 if (raw / name).is_file():
