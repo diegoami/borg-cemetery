@@ -39,11 +39,11 @@ The registry files sit next to the cases: `README.md`, `index.json`, `owner-revi
 
 ### `recordings/` (not yet)
 
-A full recording bundle today is **100–180 MB** (the frozen executable about 14 MB; the run's checkpoint saves and frames most of the rest). That is too large for plain Git: GitHub refuses files over 100 MB, and a repository of such runs grows without bound. Before recordings come here, one of these has to be decided:
+**Decided (owner, 2026-11-14):**
+- **Slim recordings, committed here.** A recording holds only what cannot be recomputed: the input streams, the start save, the save points (compressed) and a small digest per frame. The screens and logs are rebuilt on replay. It names the build it needs and does not carry the executable (borg-rs#67, #66).
+- **Release assets only if necessary.** A recording that is still too large goes into a GitHub release of this repository, with an entry under `recordings/` that points at the asset.
 
-- **slim recordings** (borg-rs#67): inputs plus save points, with the frames rebuilt on replay, so a recording is small enough for Git;
-- **Git LFS** for the large files;
-- **GitHub release assets**: one release per batch of recordings, with the repository holding only an index.
+Why: a full recording bundle today is 100–180 MB, with the frozen executable about 14 MB and the run's checkpoint saves and frames most of the rest. GitHub refuses files over 100 MB, and a repository of such runs grows without bound. Recordings come here once borg-rs#67 has slimmed them.
 
 ## Rules
 
