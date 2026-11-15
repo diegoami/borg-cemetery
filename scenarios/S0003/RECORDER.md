@@ -8,8 +8,9 @@ session-specific paths. From this directory, run:
 ./watch.sh
 ```
 
-The build prepares the pinned optional recorder integration in your persistent
-user cache. Watching captures a new run from S0003's exact save at turn 3402,
+The build prepares the pinned optional recorder integration in the shared,
+ignored `.cache/borg-cemetery/` entry in the cemetery checkout. Existing older
+user-cache versions are reused, and later calls skip compilation. Watching captures a new run from S0003's exact save at turn 3402,
 verifies it, and plays its recorded frames from the inferred stable point.
 Press Ctrl-C to stop. For verification without the player:
 
@@ -29,6 +30,12 @@ Return/Escape prompts, including the score screen, until the window closes.
 The launcher then attempts full recorder replay verification and attaches your
 recording, outcome and notes under **Alternative human play** in death D0007.
 If you activate the Borg, the entry is labelled mixed human/Borg play.
+
+The retained save is at turn **3402**, 30 engine ticks before the report's
+inferred stable point at **3432**. Fang is out of view at that marked point;
+the original Borg is bitten at 3440, and Fang is drawn as `C`. Your own actions
+can avoid or change that encounter. `watch.sh` shows the recorded Borg sequence;
+`play.sh` lets you make a new continuation from the saved position.
 
 The original death remains unchanged before that appended section, and your
 continuation is not counted as another independent life. Compact recording

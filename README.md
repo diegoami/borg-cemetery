@@ -40,8 +40,14 @@ the death report, with your notes, the last observed outcome, replay verificatio
 and a command to watch it. Activating the Borg is labelled mixed human/Borg play;
 neither kind of branch counts as a new independent life.
 
-Runtime builds and working recordings go in a persistent user cache, with
-`--cache` or `BORG_CEMETERY_CACHE` available to select its location. Compact human
+Runtime builds and working recordings share this checkout's ignored
+`.cache/borg-cemetery/` entry, keyed by program/version rather than death. If
+the older user cache already exists, that entry links to it so existing builds
+and recording paths are reused immediately. `--cache` or `BORG_CEMETERY_CACHE`
+can select another location. A successful version is hash-checked and reused;
+`build.sh` prints **Using cached …** without invoking CMake, Cargo or the native
+build script again. Interrupted recorder-tool builds reuse the completed game
+phase. Original seed-only builds also get reusable version receipts. Compact human
 recording archives and written entries are retained under the death's
 `alternatives/human/` directory. Executables stay out of Git. The launcher does
 not automatically stage or publish your working tree; commit/push the resulting

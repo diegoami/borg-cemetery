@@ -87,6 +87,15 @@ class CaseLauncherTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'expected starting turn'):
                 alternative_summary(root, dict(start_turn=3402, race_idx=2, class_idx=1))
 
+    def test_human_seek_needs_a_real_save_at_that_turn(self):
+        root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as cache:
+            result = subprocess.run([str(root / 'scenarios/S0003/play.sh'), '--from-turn', '3432', '--cache', cache],
+                                    capture_output=True, text=True)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn('starting save is at turn 3402', result.stderr)
+            self.assertFalse((Path(cache) / 'sources').exists())
+
 
 if __name__ == '__main__':
     unittest.main()

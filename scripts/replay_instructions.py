@@ -20,7 +20,9 @@ def instructions(directory, program, source, seed, race, cls, endpoint, scenario
              'Choose the operation below. Watching screenshots, verifying a recording and starting another Borg from a save have different requirements.', '',
              '## Case-local commands', '',
              '```bash', './build.sh', './watch.sh', './watch.sh --verify-only', './play.sh --label "My alternative" --note "What I tried"', '```', '',
-             'Builds and recording work use a persistent cache (`$XDG_CACHE_HOME/borg-cemetery` or `~/.cache/borg-cemetery`). '
+             'Builds and recording work share this checkout\'s ignored `.cache/borg-cemetery/` entry, keyed by program/version. '
+             'An existing older user cache is reused through that entry, preserving its recording paths. '
+             'A successful version prints "Using cached …" and skips compilation on later calls. '
              'Set `BORG_CEMETERY_CACHE` or pass `--cache /path` to choose another location. '
              'The first saved-position build needs Git, Rust/Cargo, CMake, a C compiler, Make and X11 development headers. '
              'It builds the pinned optional recorder integration separately from the original recorder-off version. '

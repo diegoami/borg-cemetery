@@ -44,6 +44,33 @@ def sha(path):
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
 
+def default_cache(root=ROOT):
+    explicit = os.environ.get('BORG_CEMETERY_CACHE')
+    if explicit:
+        return Path(explicit).expanduser()
+    local = root / '.cache/borg-cemetery'
+    legacy = Path(os.environ.get('XDG_CACHE_HOME') or str(Path.home() / '.cache')) / 'borg-cemetery'
+    if not local.exists() and not local.is_symlink() and legacy.is_dir():
+        # Preserve existing runtimes and absolute recording bindings. The
+        # checkout-local entry points at the old cache rather than rebuilding.
+        local.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            local.symlink_to(legacy.resolve(), target_is_directory=True)
+        except FileExistsError:
+            pass
+    return local
+
+
+def cached_executable(receipt, key='binary'):
+    if not receipt.exists():
+        return None
+    result = read(receipt)
+    binary = Path(result[key])
+    if not binary.is_file() or sha(binary) != result[key + '_sha256']:
+        raise ValueError(f'Cached executable changed: {binary}. Preserve that cache and use a fresh --cache.')
+    return result
+
+
 def run(args, **kwargs):
     argv = [str(a) for a in args]
     timeout = kwargs.pop('timeout', None)
@@ -120,20 +147,41 @@ def checkout(cache, program, commit):
     return dest
 
 
-def recorder_build(cache, jobs):
+def cached_recorder(cache):
     folder = cache / 'recorder-runtime' / RECORDER_SOURCE
     receipt = folder / 'runtime.json'
     if receipt.exists():
         result = read(receipt)
-        if all(Path(result[k]).is_file() and sha(Path(result[k])) == result[k + '_sha256']
+        if result.get('source_commit') == RECORDER_SOURCE and all(Path(result[k]).is_file() and sha(Path(result[k])) == result[k + '_sha256']
                for k in ('binary', 'recorder')):
+            print(f'Using cached recorder-enabled Borg version {RECORDER_SOURCE[:12]}.', flush=True)
             return result
         raise ValueError('Cached recorder executable changed; preserve the cache and choose a fresh --cache.')
+    return None
+
+
+def recorder_build(cache, jobs):
+    existing = cached_recorder(cache)
+    if existing is not None:
+        return existing
+    folder = cache / 'recorder-runtime' / RECORDER_SOURCE
+    receipt = folder / 'runtime.json'
     source = checkout(cache, 'borg-reborn-rs', RECORDER_SOURCE)
     build = folder / 'engine'
-    run(['cmake', '-S', source / 'engine', '-B', build, '-DCMAKE_BUILD_TYPE=Release',
-         '-DSUPPORT_BORG_RECORDING=ON', '-DSUPPORT_X11=ON'])
-    run(['cmake', '--build', build, '--parallel', jobs])
+    game_receipt = folder / 'game-ready.json'
+    game = cached_executable(game_receipt)
+    if game is not None and game.get('source_commit') != RECORDER_SOURCE:
+        raise ValueError('The cached recorder game phase belongs to a different version.')
+    if game is None:
+        config = (build / 'CMakeCache.txt').read_text() if (build / 'CMakeCache.txt').exists() else ''
+        required = ('SUPPORT_BORG_RECORDING:BOOL=ON', 'SUPPORT_X11:BOOL=ON', 'CMAKE_BUILD_TYPE:STRING=Release',
+                    f'CMAKE_HOME_DIRECTORY:INTERNAL={source / "engine"}')
+        if not all(line in config.splitlines() for line in required):
+            run(['cmake', '-S', source / 'engine', '-B', build, '-DCMAKE_BUILD_TYPE=Release',
+                 '-DSUPPORT_BORG_RECORDING=ON', '-DSUPPORT_X11=ON'])
+        run(['cmake', '--build', build, '--parallel', jobs])
+        game_binary = build / 'game/angband'
+        write(game_receipt, dict(source_commit=RECORDER_SOURCE, binary=str(game_binary), binary_sha256=sha(game_binary)))
     tools = folder / 'tools'
     run(['cargo', 'build', '--locked', '--release', '--manifest-path',
          source / 'vendor/angband-recorder/Cargo.toml', '--target-dir', tools])
@@ -142,6 +190,37 @@ def recorder_build(cache, jobs):
                   binary_sha256=sha(binary), recorder_sha256=sha(recorder),
                   profile=str(source / 'harness/profiles/reborn-default.txt'))
     write(receipt, result)
+    return result
+
+
+def original_build(cache, selected):
+    program, commit = selected['program'], selected['source']
+    folder = cache / 'original-runtime' / program / commit
+    receipt = folder / 'runtime.json'
+    existing = cached_executable(receipt)
+    if existing is not None:
+        if existing.get('source_commit') != commit or existing.get('program') != program:
+            raise ValueError('The cached original runtime identifies a different program/version.')
+        print(f'Using cached {program} version {commit[:12]}: {existing["binary"]}', flush=True)
+        return existing
+    source = checkout(cache, program, commit)
+    binary = source / 'build/rust/game/angband'
+    build_id = source / 'build/rust/BUILD_ID'
+    identity = {}
+    if build_id.exists():
+        identity = dict(line.split('=', 1) for line in build_id.read_text().splitlines() if '=' in line)
+    reusable = (binary.is_file() and identity.get('git_rev') == commit and identity.get('impl') == 'rust'
+                and identity.get('inputs_dirty') == 'no' and identity.get('binary_sha256') == sha(binary))
+    if not reusable:
+        env = dict(os.environ, BORG_IMPL='rust')
+        for name in ('BORG_TEST_FEATURES', 'ANGBAND_BIN'):
+            env.pop(name, None)
+        run(['bash', source / 'harness/build.sh'], env=env)
+    if not binary.is_file():
+        raise ValueError('The original build did not produce its expected executable.')
+    result = dict(program=program, source_commit=commit, binary=str(binary), binary_sha256=sha(binary))
+    write(receipt, result)
+    print(f'Cached {program} version {commit[:12]}: {binary}', flush=True)
     return result
 
 
@@ -422,7 +501,12 @@ def human_play(args, selected, runtime):
     if args.prepare_only:
         print(f'Human starting save prepared and hash-checked: {run_dir / "save/Borg"}. No game has been played or attached.', flush=True)
         return
-    print(f'You control the game from saved turn {scenario["start_turn"]}. The Borg starts off. Ctrl-X saves and exits; acknowledge Return/Escape if prompted. Your continuation will be attached to the death report.', flush=True)
+    print(f'Human continuation: saved turn {scenario["start_turn"]}; original report boundary '
+          f'{scenario.get("report_start_turn", "not recorded")}; original endpoint '
+          f'{scenario.get("original_endpoint_turn", "not recorded")}.', flush=True)
+    print('You control the game; the Borg starts off. Your actions can change whether the original encounter happens. '
+          'Use watch.sh to watch the recorded Borg sequence. Ctrl-X saves and exits; acknowledge Return/Escape if prompted. '
+          'Your continuation will be attached to the death report.', flush=True)
     with (folder / 'capture.log').open('w') as log:
         captured = subprocess.run([str(a) for a in [recorder, 'record', folder / 'record', '--', *command]],
                                   cwd=binary.parent, env=env, stdout=log, stderr=subprocess.STDOUT)
@@ -458,9 +542,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action', choices=('build', 'watch', 'human'))
     parser.add_argument('--case', type=Path, required=True)
-    default_cache = Path(os.environ.get('BORG_CEMETERY_CACHE') or
-                         str(Path(os.environ.get('XDG_CACHE_HOME') or str(Path.home() / '.cache')) / 'borg-cemetery'))
-    parser.add_argument('--cache', type=Path, default=default_cache)
+    parser.add_argument('--cache', type=Path, help='shared version cache (default: this checkout/.cache/borg-cemetery)')
     parser.add_argument('--jobs', type=int, default=min(4, os.cpu_count() or 1))
     parser.add_argument('--archive', type=Path, help='already downloaded legacy archive; checksum is still verified')
     parser.add_argument('--verify-only', action='store_true')
@@ -474,9 +556,15 @@ def main():
     args = parser.parse_args()
     if args.jobs < 1 or not 0 <= args.delay <= 10:
         parser.error('jobs must be positive; delay must be 0..10 seconds')
-    args.case, args.cache = args.case.resolve(), args.cache.resolve()
+    args.case = args.case.resolve()
+    args.cache = (args.cache if args.cache is not None else default_cache()).expanduser().resolve()
     try:
         selected = plan(args.case)
+        if args.action == 'human' and selected['kind'] == 'scenario' and args.from_turn is not None:
+            saved_turn = read(selected['scenario'] / 'scenario.json')['start_turn']
+            if args.from_turn != saved_turn:
+                raise ValueError(f'This retained human starting save is at turn {saved_turn}, not {args.from_turn}. '
+                                 'watch.sh --from-turn seeks recorded screens; human play needs an actual save at the requested position.')
         if args.alternative:
             watch_alternative(args)
             return
@@ -494,14 +582,27 @@ def main():
                 argv += ['--from-turn', str(args.from_turn)]
             run(argv)
             return
+        if args.action == 'build' and selected['kind'] == 'scenario':
+            origin = read(selected['scenario'] / 'scenario.json').get('origin', {})
+            if origin.get('program') == 'borg-reborn-rs' and origin.get('source_commit') in QUALIFIED_ORIGINS:
+                # A cache hit is read-only and should work even while another
+                # native run owns the shared validation lock.
+                if cached_recorder(args.cache) is not None:
+                    return
+        if args.action == 'build' and selected['kind'] == 'seed':
+            cached = cached_executable(args.cache / 'original-runtime' / selected['program'] / selected['source'] / 'runtime.json')
+            if cached is not None:
+                if cached.get('source_commit') != selected['source'] or cached.get('program') != selected['program']:
+                    raise ValueError('Cached original runtime belongs to another version.')
+                print(f'Using cached {selected["program"]} version {selected["source"][:12]}: {cached["binary"]}', flush=True)
+                return
         with native_lock():
             if selected['kind'] == 'legacy':
                 selected = legacy_scenario(args.cache, args.case, selected, args.archive, args.from_turn)
             if selected['kind'] == 'seed':
                 if args.action != 'build':
                     raise ValueError('This historical death has no retained recording/save. build.sh builds its original version; REPLAY.md describes its seed rerun. No original movie can be invented.')
-                source = checkout(args.cache, selected['program'], selected['source'])
-                run(['bash', source / 'harness/build.sh'], env=dict(os.environ, BORG_IMPL='rust'))
+                original_build(args.cache, selected)
                 return
             if args.action != 'human':
                 origin = read(selected['scenario'] / 'scenario.json').get('origin', {})

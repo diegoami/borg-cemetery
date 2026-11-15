@@ -9,6 +9,11 @@ The process generates executable `build.sh`, `watch.sh` and `play.sh` in each
 death/run and extracted scenario directory. The entry points locate shared
 cemetery tools rather than embedding workstation or temporary-session paths.
 They use persistent caches and immutable source/archive pins. The current
+cache entry is the checkout's ignored `.cache/borg-cemetery/`; existing user
+caches are reused through an alias without relocating recorded executables.
+Original source builds and optional recorder runtimes have per-version hash
+receipts, and interrupted recorder-tool builds preserve the completed game
+phase. Cache hits do not invoke build tools. The current
 qualified standalone recorder side-build covers the original seed-102 reborn
 version and its optional integration; other unqualified versions are refused
 rather than replayed using a different Borg. Historical frozen recordings use
