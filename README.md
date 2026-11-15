@@ -9,6 +9,10 @@ The code lives elsewhere:
 This repository holds run outputs and the CI scripts that collect and analyze
 them. Borg and engine implementation code stays in the source repositories.
 
+M1 is [awaiting owner-run milestone review](https://github.com/diegoami/borg-cemetery/pull/1).
+The [pinned review packet](docs/reviews/M1/README.md) lists scope, evidence and
+limitations. It is not yet an accepted milestone.
+
 ## Browse deaths
 
 - [Historical death registry](deaths/README.md): every case has its own landing page.

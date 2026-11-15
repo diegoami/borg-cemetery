@@ -9,6 +9,9 @@ or run its reviewer. No next milestone is selected. Automated causal discovery,
 tuning proposals, exact uninterrupted Borg-memory continuation and wider
 recorder-version qualification remain future work, not M1 completion claims.
 
+[Milestone M1](https://github.com/diegoami/borg-cemetery/milestone/1) ·
+[Review PR #1: main → reviewed](https://github.com/diegoami/borg-cemetery/pull/1).
+
 ## M1 boundary
 
 - Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`, the last commit before
