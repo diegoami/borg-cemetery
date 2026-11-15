@@ -2,6 +2,17 @@
 
 Choose the operation below. Watching screenshots, verifying a recording and starting another Borg from a save have different requirements.
 
+## Case-local commands
+
+```bash
+./build.sh
+./watch.sh
+./watch.sh --verify-only
+./play.sh --label "My alternative" --note "What I tried"
+```
+
+Builds and recording work use a persistent cache (`$XDG_CACHE_HOME/borg-cemetery` or `~/.cache/borg-cemetery`). Set `BORG_CEMETERY_CACHE` or pass `--cache /path` to choose another location. The first saved-position build needs Git, Rust/Cargo, CMake, a C compiler, Make and X11 development headers. It builds the pinned optional recorder integration separately from the original recorder-off version. Human control needs an X11 display such as WSLg; Ctrl-X saves and exits (acknowledge Return/Escape if prompted). When you exit, the process retains your recording, attempts replay verification, and adds an Alternative human play entry. Verification failures remain labelled; activating the Borg makes the entry mixed human/Borg play. These are repository changes for you to commit/push; unrelated changes are not staged automatically.
+
 ## Watch the recorded screenshots
 
 [Open the animated episode](media/episode.gif). No installation is needed.

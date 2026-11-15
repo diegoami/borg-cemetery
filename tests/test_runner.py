@@ -122,6 +122,8 @@ class RunnerTest(unittest.TestCase):
         _, batch = self.batch('101')
         remote = self.root / 'archive.git'
         subprocess.run(['git', 'init', '--bare', '-q', str(remote)], check=True)
+        for launcher in (batch / 'records').rglob('*.sh'):
+            launcher.chmod(0o644)  # Actions artifact downloads strip executable bits.
         original = subprocess.run
 
         def local_git(argv, **kwargs):
@@ -138,6 +140,9 @@ class RunnerTest(unittest.TestCase):
         listing = subprocess.check_output(['git', '--git-dir', str(remote), 'ls-tree', '-r', '--name-only', 'results'], text=True)
         self.assertIn('runs/12-1/batch.json', listing)
         self.assertIn('runs/12-2/batch.json', listing)
+        mode = subprocess.check_output(['git', '--git-dir', str(remote), 'ls-tree', 'results',
+                                        'runs/12-1/seed-101/watch.sh'], text=True)
+        self.assertTrue(mode.startswith('100755 '), mode)
 
     def test_validation(self):
         for seeds in ['1,1', '-1', '4294967296', 'bad', '']:

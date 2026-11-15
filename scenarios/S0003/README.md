@@ -15,6 +15,10 @@
 
 [Read the chronological report](report.md)
 
+## Build, watch or play
+
+From this directory: `./build.sh` prepares the pinned runtime; `./watch.sh` records/verifies the saved-position run and plays it. `./play.sh --label "My attempt"` opens the saved position for human control and attaches the recording to its death report after you exit.
+
 ## Watch the episode
 
 ![Episode animation](media/episode.gif)

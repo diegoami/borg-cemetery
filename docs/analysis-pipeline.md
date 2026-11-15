@@ -5,6 +5,35 @@ inventory/spell tables, animations and REPLAY guides. Serialized observations
 remain tool inputs; human pages must not print their object/array syntax or
 require readers to inspect those files to understand an event or launch replay.
 
+The process generates executable `build.sh`, `watch.sh` and `play.sh` in each
+death/run and extracted scenario directory. The entry points locate shared
+cemetery tools rather than embedding workstation or temporary-session paths.
+They use persistent caches and immutable source/archive pins. The current
+qualified standalone recorder side-build covers the original seed-102 reborn
+version and its optional integration; other unqualified versions are refused
+rather than replayed using a different Borg. Historical frozen recordings use
+their bundled player and runtime.
+
+## Alternative human play
+
+`play.sh` starts a copy of the retained engine save in an isolated X11 profile,
+with saved RNG and a fresh process whose Borg starts off. It captures actual
+terminal polling through the standalone recorder. After the window closes it
+attempts full replay verification and attaches a human-readable entry under
+`alternatives/human/<session>/`, indexed in the original death report. It records
+the starting-save identity, runtime identity, user label/notes, last observed
+outcome and verification status. Mixed human/Borg control is labelled from
+recorded bot events; automated Borg replays cannot masquerade as human play.
+An alive final observation is not promoted into a survival-to-horizon result.
+
+The original death account is preserved before a bounded appended section.
+Replay failures and incomplete streams remain explicit; no alternative is
+attached when the recording fails to demonstrate the expected starting turn
+and character. These branches are not independent lives. Small recording data
+archives are retained in the case, with binaries left in the persistent cache.
+Oversized archives remain locally retained with an explicit publication note.
+The process does not automatically upload recordings or stage unrelated changes.
+
 The selected seed-102 evidence is consolidated as death D0007, scenarios
 S0001–S0003 and run 2026-11-14-seed102. The former local-validation tree and
 duplicate generated versions have been removed after byte-preservation checks

@@ -37,6 +37,11 @@ def archive(records):
             if dest.exists():
                 raise RuntimeError(f'attempt already archived: {dest.name}')
             shutil.copytree(records, dest)
+            # Actions artifacts do not preserve executable bits. Restore the
+            # generated entry points before committing the results branch.
+            for launcher in dest.rglob('*.sh'):
+                if launcher.name in ('build.sh', 'watch.sh', 'play.sh') and not launcher.is_symlink():
+                    launcher.chmod(0o755)
             git('add', 'runs')
             git('commit', '-m', f'Archive Borg runs {run_id} attempt {attempt}')
             result = git('push', 'origin', 'HEAD:refs/heads/results', check=False)

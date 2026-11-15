@@ -10,6 +10,10 @@
 | Death turn | 37680 |
 | Program version | [f772eb6dcb93dc8d53cfc0167496d6122133f42e](https://github.com/diegoami/borg-rs/commit/f772eb6dcb93dc8d53cfc0167496d6122133f42e) |
 
+## Build, watch or play
+
+From this directory, run `./build.sh`, then `./watch.sh`. Use `./watch.sh --verify-only` for a verification without opening the player. Where a starting save is retained, `./play.sh --label "My attempt"` records an alternative human continuation and adds it to this report. Historical cases lacking a recording/save explain that limit instead of inventing playback.
+
 ## What happened
 
 Source: post-M4 #345 investigation, normal-live suite. Actual build identities

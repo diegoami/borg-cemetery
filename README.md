@@ -21,6 +21,41 @@ for evidence that was not retained. Original reports and records stay intact.
 
 ## Read and replay
 
+Every death and scenario directory has executable launchers, generated as part
+of collection and analysis:
+
+```bash
+cd deaths/D0007
+./build.sh
+./watch.sh
+./play.sh --label "My attempt" --note "What I tried differently"
+```
+
+`build.sh` uses pinned source or a checksum-verified frozen runtime. `watch.sh`
+verifies and plays the retained recording or qualified saved-position replay.
+`play.sh` opens an available saved position in X11/WSLg, with the Borg initially
+off. Ctrl-X saves and exits; follow the Return/Escape prompts until the window
+closes. It then retains your recording and adds **Alternative human play** to
+the death report, with your notes, the last observed outcome, replay verification
+and a command to watch it. Activating the Borg is labelled mixed human/Borg play;
+neither kind of branch counts as a new independent life.
+
+Runtime builds and working recordings go in a persistent user cache, with
+`--cache` or `BORG_CEMETERY_CACHE` available to select its location. Compact human
+recording archives and written entries are retained under the death's
+`alternatives/human/` directory. Executables stay out of Git. The launcher does
+not automatically stage or publish your working tree; commit/push the resulting
+recording and report when ready. Reverification needs the exact recorded runtime;
+recorded-frame viewing remains available when a matching rebuild is unavailable.
+
+For non-interactive checks, use `./watch.sh --verify-only` or
+`./watch.sh --dump-turn 3432`. A historical case without a retained recording or
+save explains that limitation. Saved-position Borg playback requires a qualified
+recorder-enabled version; a different Borg is never silently substituted.
+
+If using data from a `results`-branch checkout, set `BORG_CEMETERY_HOME` to a
+full `main` checkout so the case-local launchers can find the shared tools.
+
 - [Deaths](deaths/README.md): written accounts, character details, inventory and playback instructions.
 - [Saved scenarios](scenarios/README.md): written situation reports and commands for trying alternative Borgs.
 - [Original recordings of D0005 and D0006](https://github.com/diegoami/borg-cemetery/releases/tag/recordings-2026-11-15): downloadable bundles with the matching executable and recorder/player.
