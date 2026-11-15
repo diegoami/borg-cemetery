@@ -33,13 +33,19 @@ disappear because tests pass.
 
 ## Owner-requested redesign proposal
 
-The [controlled-experiment design](docs/cemetery-redesign.md) proposes replacing
-routine permanent Git report collection with fixed seed cohorts, exact
-build/configuration identities, database-backed attempts, bounded external
-evidence and on-demand analysis/reconstruction. Near-deaths require independent
-engine evidence; findings feed scenario trials and cohort validation.
+The [battle-scenario architecture](docs/cemetery-redesign.md) proposes a shared
+laboratory for fatal and surviving encounters. It imports thousands of fixed
+source cases, records exact build/configuration evidence, preserves portable
+scenarios and generates analysis on demand. Target-build assessments deprioritize
+old failures when new builds survive/avoid them, while selected situations remain
+regression fixtures. Independent near-death evidence and bounded external storage
+are required. Borg-zoo retains population comparisons; parameter optimization is
+outside this design. Other projects/users integrate through the
+[scenario contract](docs/architecture/scenario-contract.md).
 
 This is planning requested by the owner, not a selected next milestone or an
 implementation commitment. M1 remains unaccepted; its implementation pin and
-existing evidence are unchanged. The proposal includes delivery slices and
-acceptance criteria for a later owner decision.
+existing evidence are unchanged. A dedicated architecture PR targets main and
+includes a [runnable review prompt](docs/architecture/review-prompt.md), delivery
+slices and acceptance examples. The owner selects/runs the reviewer and decides
+architecture approval before implementation planning.
