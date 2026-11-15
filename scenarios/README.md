@@ -17,3 +17,6 @@ Trials preserve the saved engine RNG and start a fresh Borg in each arm.
 These saved positions are playable; this birth has no standalone-recorder
 input recording. Each replay page explains that distinction and the exact
 commands that are available.
+
+[A verified local recorder session for S0003 is ready](S0003/RECORDER.md),
+with a one-command terminal player and a separate reexecute-and-verify command.

@@ -58,3 +58,6 @@ No complete angband-recorder input recording was captured for this birth.
 The GIF consists of genuine terminal screenshots obtained from verified
 input/state prefixes. The saved-game comparison above is a working engine
 save trial; it does not restore the original Borg's private memory.
+
+A later saved-position run has now been captured and verified with the
+standalone recorder. [Play the prepared local S0003 recorder session](../../scenarios/S0003/RECORDER.md).

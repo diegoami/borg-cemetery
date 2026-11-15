@@ -27,7 +27,10 @@ class HumanReportsTest(unittest.TestCase):
             replay = (folder / 'REPLAY.md').read_text()
             self.assertIn('scripts/run_scenario.py', replay)
             self.assertIn(str(folder.relative_to(root)), replay)
-            self.assertIn('No complete angband-recorder recording', replay)
+            if (folder / 'RECORDER.md').is_file():
+                self.assertIn('Prepared local recorder session', replay)
+            else:
+                self.assertIn('No complete angband-recorder recording', replay)
             for name in ('README.md', 'report.md', 'inventory.md'):
                 content = (folder / name).read_text()
                 self.assertNotIn('"base_fail":', content)

@@ -20,6 +20,10 @@ def instructions(directory, program, source, seed, race, cls, endpoint, scenario
              'Choose the operation below. Watching screenshots, verifying a recording and starting another Borg from a save have different requirements.', '']
     if (directory / 'media/episode.gif').is_file():
         lines += ['## Watch the recorded screenshots', '', '[Open the animated episode](media/episode.gif). No installation is needed.', '']
+    local_session = (directory / 'RECORDER.md').is_file()
+    if local_session:
+        lines += ['## Prepared local recorder session', '',
+                  '[Use the verified standalone-recorder session](RECORDER.md). It records a new run from this saved position and matches the previous scenario trial.', '']
     if case_id in ('D0005', 'D0006'):
         name = case_id + '-recorded'
         turn = 36184 if case_id == 'D0005' else 22736
@@ -38,7 +42,8 @@ def instructions(directory, program, source, seed, race, cls, endpoint, scenario
                   'The original executable is included because recompiling the same source does not guarantee an identical executable.', '']
     else:
         lines += ['## Replay with angband-recorder', '',
-                  '**No complete angband-recorder recording is retained for this case.** '
+                  ('**The original birth was not captured by the standalone recorder. A verified saved-position recording is available locally through the guide above.** '
+                   if local_session else '**No complete angband-recorder recording is retained for this case.** ') +
                   'An engine save or screenshot GIF does not contain the recorder input streams, so neither can be passed to the recorder as a full recording.', '',
                   'For a future case that includes a recorder-enabled recording bundle and its exact recorded executable, the commands are:', '',
                   '```bash', 'angband-recorder view /path/to/recording 1',

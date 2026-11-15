@@ -40,7 +40,7 @@ Saved turn: 3402. Both versions start with fresh Borg memory and the saved engin
 
 ## Recording and replay
 
-The GIF is a visual recording of sampled game screens. A complete standalone-recorder input recording was not captured for this episode.
+A new saved-position run has been captured with the standalone recorder and verified locally. [Play the prepared recorder session](RECORDER.md). The original birth was not captured by this recorder.
 
 [Read the playback instructions and requirements](REPLAY.md)
 

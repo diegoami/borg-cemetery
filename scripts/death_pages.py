@@ -122,8 +122,11 @@ def episode_page(directory, event, identity):
                     'and choose the alternative Borg project/version.', '']
     else:
         content += ['No runnable starting save was retained. The report remains available.', '']
-    content += ['## Recording and replay', '',
-                'The GIF is a visual recording of sampled game screens. A complete standalone-recorder input recording was not captured for this episode.', '',
+    recording_note = ('A new saved-position run has been captured with the standalone recorder and verified locally. '
+                      '[Play the prepared recorder session](RECORDER.md). The original birth was not captured by this recorder.'
+                      if (directory / 'RECORDER.md').is_file() else
+                      'The GIF is a visual recording of sampled game screens. A complete standalone-recorder input recording was not captured for this episode.')
+    content += ['## Recording and replay', '', recording_note, '',
                 '[Read the playback instructions and requirements](REPLAY.md)', '']
     back = '[All scenarios](../README.md)' if directory.parent.name == 'scenarios' else '[All episodes from this run](../README.md)'
     content += ['', back, '',

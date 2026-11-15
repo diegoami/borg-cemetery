@@ -6,9 +6,13 @@ Choose the operation below. Watching screenshots, verifying a recording and star
 
 [Open the animated episode](media/episode.gif). No installation is needed.
 
+## Prepared local recorder session
+
+[Use the verified standalone-recorder session](RECORDER.md). It records a new run from this saved position and matches the previous scenario trial.
+
 ## Replay with angband-recorder
 
-**No complete angband-recorder recording is retained for this case.** An engine save or screenshot GIF does not contain the recorder input streams, so neither can be passed to the recorder as a full recording.
+**The original birth was not captured by the standalone recorder. A verified saved-position recording is available locally through the guide above.** An engine save or screenshot GIF does not contain the recorder input streams, so neither can be passed to the recorder as a full recording.
 
 For a future case that includes a recorder-enabled recording bundle and its exact recorded executable, the commands are:
 
