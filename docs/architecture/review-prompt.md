@@ -14,7 +14,9 @@ branch targets main; the separate M1 review targets reviewed. Do not merge eithe
 PR, select another milestone, run games, alter evidence or change another repo.
 
 Read AGENTS.md, PLAN.md, [the proposal](../cemetery-redesign.md) and
-[the scenario contract](scenario-contract.md). Read README navigation changes and
+[the scenario contract](scenario-contract.md), the
+[Firebase backend decision](firebase-backend.md), and the
+[response to the first review](review-response.md). Read README navigation changes and
 the earlier-pipeline scope correction. Distinguish implemented M1 capabilities
 from proposed service capabilities; this PR contains documentation only.
 
@@ -51,12 +53,21 @@ restoration exist merely because the proposal requires them.
 8. Walk runner loss, duplicate/altered imports, stale publication, new-build arrival,
    source artifact expiry, quota exhaustion, garbage-collection/pinning races and
    backup recovery. Are availability and missing evidence honest in the UI?
-9. Are components and delivery slices proportionate? Identify an unnecessary
-   service or a missing indispensable protocol. Assess PostgreSQL/document/object
-   boundaries and the operational burden for a small shared installation.
+9. Are components and delivery slices proportionate? Assess Firestore document/
+   index/query boundaries, application-enforced uniqueness/references, Auth/rules
+   versus server IAM, TTL limitations, transaction side effects and cross-store
+   recovery. Can the shared installation stay bounded without pretending the
+   emulators are a self-hosted production backend?
 10. Are the human report, replay commands, inventory/thoughts/animation and
     maintainer feedback useful? Is the proposed investigation broad enough to
     discover behavior/code defects, without automatic tuning or causal overclaim?
+
+For the follow-up revision, re-audit all six findings from review
+`5911244495` at `d084f13f09e4af8bdf989ad2bdb774db05625d22` against the new head
+pinned in the PR body. Especially check independent outcome/scope/encounter axes,
+per-study priorities, dimension-specific regressions, fully qualified source
+executions, restore after artifact collection and qualifier invalidation. Treat
+the review response as proposed corrections, not as reviewer acceptance.
 
 ## Deliverable
 

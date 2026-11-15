@@ -49,3 +49,10 @@ existing evidence are unchanged. [Architecture PR #2](https://github.com/diegoam
 targets main and includes a [runnable review prompt](docs/architecture/review-prompt.md), delivery
 slices and acceptance examples. The owner selects/runs the reviewer and decides
 architecture approval before implementation planning.
+
+The first [architecture review](https://github.com/diegoami/borg-cemetery/pull/2#pullrequestreview-5911244495)
+returned **accept with specified changes** at `d084f13`. The updated proposal
+records [responses to its six findings](docs/architecture/review-response.md)
+and proposes [Firebase](docs/architecture/firebase-backend.md) following the
+owner's database direction. These are proposed corrections awaiting confirmation,
+not architecture acceptance, implementation work or an M1 acceptance decision.

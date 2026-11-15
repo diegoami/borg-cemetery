@@ -8,6 +8,10 @@ The earlier 64-case evaluation proposal is superseded.
 
 Read the [scenario and integration contract](architecture/scenario-contract.md)
 for identities, state transitions, adapter operations and acceptance examples.
+The [Firebase backend decision](architecture/firebase-backend.md) specifies the
+managed document/artifact backend, queries, authorization and recovery protocol.
+The [review response](architecture/review-response.md) tracks the six findings
+on the previous proposal head and the corrections proposed here.
 The [review prompt](architecture/review-prompt.md) defines this review. M1 remains
 unaccepted and its implementation boundary is unchanged.
 
@@ -76,8 +80,8 @@ flowchart TD
     Z[Zoo runs and evidence] --> I[Versioned import adapters]
     N[Other project harnesses] --> I
     I --> C[Cemetery API and job coordinator]
-    C --> D[(Run and scenario documents)]
-    C --> O[(External artifact store)]
+    C --> D[(Cloud Firestore documents)]
+    C --> O[(Cloud Storage artifacts)]
     C --> W[Isolated CI or local workers]
     W --> C
     C --> H[Human scenario pages and replay bundles]
@@ -85,22 +89,28 @@ flowchart TD
     B --> Z
 ```
 
-Use one PostgreSQL database with constrained identity/status columns and JSONB
-for versioned configuration, episode and analysis documents. PostgreSQL provides
-indexed JSONB and compound uniqueness/foreign keys; these fit evolving evidence
-documents with stable relationships.
-([JSONB](https://www.postgresql.org/docs/current/datatype-json.html),
-[constraints](https://www.postgresql.org/docs/current/ddl-constraints.html).)
-Use an S3-compatible object store for compressed traces, saves, runtime packages,
-recordings and report caches. Provider and deployment budget remain review/deploy
-decisions; this proposal provisions neither.
+Propose **Firebase Cloud Firestore** for metadata, **Cloud Storage for Firebase**
+for compressed artifacts, and **Firebase Authentication** for user identity.
+Firestore's document/collection model and compound queries fit the source,
+scenario, evidence and study records. Use Firestore rather than Firebase Realtime
+Database's single JSON tree.
+([Database comparison](https://firebase.google.com/docs/firestore/rtdb-vs-firestore).)
 
-The coordinator can use database-backed jobs initially. Workers run in GitHub
-Actions or locally through the same API and artifact interface. A local install
-uses the same schema plus a filesystem artifact backend. No Kubernetes, separate
-message broker, search cluster or hosted AI service is required. An analysis
-worker can be a deterministic tool, a human-assisted process or an optional model;
-scenario storage and replay do not depend on an AI provider.
+Host human pages on Firebase Hosting with a small Cloud Run API/coordinator.
+Workers stay in GitHub Actions or run locally; native games and heavy analysis
+do not execute inside database callbacks. All authoritative mutations go through
+the coordinator, which implements identity uniqueness and referential invariants
+with deterministic document keys, transactions and explicit validation. These
+are application obligations; no SQL foreign-key guarantee is assumed.
+
+Local development uses the Firebase Auth/Firestore/Storage emulators and a local
+API, while downloaded native scenario bundles remain usable offline. An emulator
+is a development/test dependency, not a self-hosted production Firebase service.
+Other maintainers can use a shared workspace or deploy into their own Firebase
+project; identifiers and source packages are not tied to this owner's account.
+No Kubernetes, separate broker, search cluster or AI provider is required.
+Deployment, billing, indexes and rules need qualification before cutover; no
+Firebase resource is provisioned by this design update.
 
 ## 4. Identity and stored records
 
@@ -112,15 +122,20 @@ scenario storage and replay do not depend on an AI provider.
 | Run attempt | Original source run identity or separate diagnostic execution, actual outcome, provenance and available evidence |
 | Episode | Observed encounter sequence within one attempt: boundaries, context, outcome and danger qualification |
 | Scenario revision | Immutable runnable start and observation/encounter contract derived from an episode |
-| Build assessment | Scenario relevance for one tracked build/configuration, with separate full-seed and saved-position results |
+| Evidence check | Immutable executed seed/local check with its own execution contract, terminal outcome, encounter result and observation scope |
+| Study/assessment | Independent study objective; per-study/build/configuration relevance projection over shared checks and a hazard qualification contract when applicable |
 | Investigation/trial | Exact evidence and tool versions, target scenario/build, hypothesis, executed alternative and qualified outcome |
 | Artifact/pin/job | Digests, locations, dependency owners, retention state, worker leases and deletion receipts |
 
 A seed is essential provenance but is not a globally unique scenario. The same
 seed can contain several battles; different engines give it different meaning.
-One encounter may have several checkpoints. Merge duplicate imports by source
-identity and payload digest; group related encounters for browsing without
-merging distinct original lives or replacing their evidence.
+One encounter may have several checkpoints. A source execution is identified by
+producer/repository, immutable origin result revision/path, suite/cell and source
+execution/attempt coordinates, within a workspace/project. A later retrieval
+commit is provenance, not a new execution identity. Repeated measured executions
+have distinct source coordinates even when their logical cell is identical.
+Merge identical reimports by that qualified key and payload digest; group related
+encounters for browsing without merging original lives or replacing evidence.
 
 Build identity includes repository, resolved commit, source-input digest,
 clean/dirty status, executable/runtime/data digest, compiler/build flags and
@@ -162,6 +177,11 @@ Calibration uses reviewed positive and negative fixtures, including safe low HP,
 fear without an attack opportunity, fast multiple attacks and high-HP lethal
 bursts. Sample non-triggered surviving fights to find misses. Version the
 qualifier and boundary/recovery rules; threshold values remain pilot findings.
+Hazard studies depend on an immutable qualification contract covering evaluator,
+thresholds, scheduling and recovery semantics. Updating it makes affected hazard
+projections pending requalification, preserving previous-version results. A
+changed diagnostic qualifier alone does not rewrite a runnable scenario; changing
+its start, encounter anchor or replay endpoint requires a new scenario revision.
 Engine truth is diagnostic evidence and must be separated from what the Borg
 could observe. Investigations can explain unknown threats without giving tested
 Borgs access to hidden game information.
@@ -205,9 +225,12 @@ cannot count as surviving a scenario.
 ## 7. Revalidate relevance before spending analysis effort
 
 A scenario revision preserves its original position and outcome. A new build
-creates a new assessment, not a rewritten death account. Assessment belongs to
-one project/build/**effective configuration**; another user's result cannot
-silently resolve it globally.
+creates new study-specific assessments, not a rewritten death account. Assessment
+identity includes the immutable **study revision**, target build and effective
+configuration, plus the qualification contract for hazard studies. Death,
+hazardous-recovery, ordinary-battle and pinned local-tactical objectives have
+independent priorities while sharing immutable execution evidence. Another
+user's result cannot silently resolve them globally.
 
 When a tracked build changes, import any equivalent source result first, then
 queue missing relevance checks for the project's active investigations. Keep
@@ -215,6 +238,9 @@ bounded episode-follow-up checks separate from full-seed results: surviving a
 seed means a verified living endpoint at its complete original source horizon,
 or an engine-confirmed win, under the same birth/ordinary-play contract. Local
 follow-up extends past the old episode through its declared recovery window.
+Record terminal outcome, encounter result, scope, death relation and contract
+validity as independent fields. Thus verified full-horizon survival with unknown
+encounter details is representable and can deactivate only the death study.
 Explicitly check whether the encounter occurred where evidence permits. A short
 run, stall, failed reconstruction or mismatched contract cannot establish seed
 survival. Prioritize active cases; do not launch a duplicate whole-population
@@ -222,19 +248,25 @@ experiment.
 
 | New evidence | Investigation action |
 | --- | --- |
-| Same encounter still kills or produces a qualified near-death | Keep active with the new build's evidence |
-| Same encounter is survived with verified recovery | Remove that build/configuration from the active failure queue; keep a bounded regression fixture |
+| Same encounter still kills in a full-seed check | Keep its death study active; a later matched seed death can reopen that objective |
+| Same encounter produces a qualified near-death and recovers | Hazard study active; death study may be inactive at the same time |
+| Same encounter is survived with verified recovery | Deactivate that death study for the build/configuration; independent hazard/ordinary studies keep their own priorities |
 | Full seed survives its source horizon; encounter avoided or unknown | Stop the old death investigation for this build/configuration; preserve the avoided/unknown distinction and make no direct battle-survival claim |
 | Shorter continuation passes the old episode without encountering it | Record bounded non-recurrence and provisionally lower priority; no full-seed survival claim |
-| Seed survives, but the old saved-position trial still fails | Record both; current run no longer exposes the old position, while its isolated tactical weakness remains reproducible |
+| Seed survives, but the old saved-position trial still fails | Record both; seed-death manifestation inactive, while local danger remains reproducible under its declared continuation mode |
 | Old position is survived, but the seed dies later | Mark local survival; create/link the later failure as a different episode |
-| Check fails, ends too early or lacks encounter evidence | Keep unknown/currently unverified; never resolve by absence of evidence |
+| Terminal/contract evidence is missing, or the check fails/ends too early | Keep pending/unverified; missing encounter details alone are independent of a verified full-seed survival receipt |
 
 Full-seed results and saved-position trials are separate assessment fields. Even
 when a new build unexpectedly survives a seed, do not infer which change caused
 it. Stop pursuing the now-inactive manifestation by default; a maintainer may
 explicitly pin the old position as a tactical study. A later build that fails it
-again reopens the assessment and links the regression.
+again reopens the applicable study and links the regression only under that
+objective's compatible evidence contract. A local-only death reopens a pinned
+local-tactical study, not a seed-death investigation when the seed still survives.
+Repeated seed avoidance plus local death therefore does not create a new
+seed-death regression. Qualifier changes trigger requalification, not a claimed
+Borg regression. Detailed transitions are in the scenario contract.
 
 Seed-survival deactivation applies to the old **death manifestation**. A study
 of a near-death or an ordinary surviving battle is not dismissed merely because
@@ -295,7 +327,8 @@ leak or permission inheritance. Trusted publication receives job-scoped upload
 access; candidate code receives no database/deletion credentials. Offline bundle
 inspection/import must not execute included launchers. Execution is an explicit
 isolated worker action. Check archive paths, declared sizes and digests before
-extracting untrusted bundles. A small installation can run everything locally.
+extracting untrusted bundles. Native bundles run offline; local service development
+uses emulators. Production self-hosting of the managed backend is not promised.
 
 ## 10. Bounded storage and reliable jobs
 
@@ -329,20 +362,30 @@ plans affected owners, marks objects, waits, then serializes its final reference
 check/delete transition with new pin acquisition. Verify imported bytes before
 releasing source dependencies. Record unavailable/pruned status and a bounded
 deletion receipt. A valid hash without recoverable bytes is not replay evidence.
-Bucket lifecycle rules apply only to disposable namespaces, not shared pinned
-runtime dependencies. ([S3 lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html).)
+Firestore TTL and bucket expiry apply only to independently disposable records
+and objects, not authoritative studies, pins or shared runtime dependencies.
+Firestore TTL is asynchronous and does not cascade into subcollections; the
+coordinator owns dependency-aware retirement and bounded deletion.
+([Firestore TTL](https://firebase.google.com/docs/firestore/ttl).)
 
 When protected data fills the quota, pause new admissions and expose the required
 retirement decision. Budget database detail, job receipts and backups separately;
 use bounded snapshots rather than an infinite history of every assessment.
 After metadata expires, the landing route explains that the case is unavailable.
-Backups need a restore drill and a defined maximum recovery window before cutover.
+Recovery snapshots include core metadata plus a verified manifest of required
+immutable Cloud Storage generations, retained for the snapshot's entire lifetime.
+Pause workspace writes/GC while creating that bounded recovery set. Independent
+database and bucket backups are not a coordinated recovery point. After restore,
+fence old jobs with a new deployment epoch and reconcile actual object bytes
+before advertising replay or dispatching work. Missing dependencies become
+unavailable/incomplete. The Firebase decision specifies the cross-store protocol.
 
 Ingestion registers expected captures before execution. Immutable objects are
 uploaded and hash-verified before transactionally attaching a complete manifest.
-Compound uniqueness prevents duplicate imports; an altered payload under an
-existing source ID is a conflict. Attempts and jobs have idempotency keys, leases
-and fencing tokens, so late workers cannot overwrite new results. Incomplete
+Transactional creation of deterministic identity documents prevents duplicate
+imports; an altered payload under an existing qualified source key is a conflict.
+Attempts and jobs have idempotency keys, leases and fencing tokens, so late
+workers cannot overwrite new results. Incomplete
 uploads remain explicitly incomplete and orphan objects expire after a grace
 period. No failure or missing cell becomes a death or survival.
 
@@ -370,16 +413,20 @@ Proposed delivery slices, subject to architecture/milestone approval:
 3. **Current-build relevance:** implement the assessment table above and job
    freshness. Prove unexpected seed survival deprioritizes an old failure,
    avoidance is distinguished, later death creates a new case and regression
-   reopens the old assessment without rewriting it.
+   reopens the correct study without rewriting old evidence. Prove simultaneous
+   death-inactive/hazard-active state and qualifier-change requalification.
 4. **Shared investigation service:** on-demand readable pages, human/alternative
    trials and maintainer packets. A second project imports and runs a supported
    package without the original author's checkout or account.
 5. **Bounded cutover:** fault-inject collection/pinning races, exercise quotas,
    reproduce a case after discarding its generated report, and restore from a
-   backup. Only then stop publishing routine new run data to Git.
+   recovery snapshot taken before a later artifact collection. Reject stale
+   worker epochs and reconcile missing bytes before serving availability. Test
+   Firestore authorization, indexes and transaction/pin races in emulators and
+   a bounded staging deployment before routine Git publication stops.
 
 Review must settle the source discovery manifests, adapter instrumentation gaps,
 near-death calibration method, recovery/encounter predicates, configuration
-visibility, hosting and workspace quotas. The requested decision is architecture
-direction and changes needed before implementation planning, not milestone
-acceptance or permission to start running a new platform.
+visibility, Firebase deployment details and workspace quotas. The requested
+decision is architecture direction and changes before implementation planning,
+not milestone acceptance or permission to start running a new platform.

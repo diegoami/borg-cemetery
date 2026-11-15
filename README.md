@@ -24,6 +24,10 @@ parameter optimization is outside this proposal. Other projects/users can supply
 adapters and maintain their own scenario assessments. See the
 [integration contract](docs/architecture/scenario-contract.md) and
 [architecture review prompt](docs/architecture/review-prompt.md).
+The proposed managed backend is [Firebase](docs/architecture/firebase-backend.md):
+Firestore documents, Cloud Storage artifacts and Auth, with a small API/coordinator.
+The [review response](docs/architecture/review-response.md) records corrections
+to study identity, relevance, source imports, qualification and recovery.
 This is proposed behavior; the collection and Git archive behavior below is
 still the current implementation.
 
