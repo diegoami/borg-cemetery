@@ -13,6 +13,15 @@ M1 is [awaiting owner-run milestone review](https://github.com/diegoami/borg-cem
 The [pinned review packet](docs/reviews/M1/README.md) lists scope, evidence and
 limitations. It is not yet an accepted milestone.
 
+## Statistics by build
+
+[Statistics](statistics/README.md) separates the seven curated cemetery dossiers
+from a pinned inventory of the historical borg-reborn-rs archive. Browse exact
+builds, causes, character types, death turns and depths, seeds and source reports.
+Repeated attempts and scenario/human branches do not inflate the death counts;
+these selected death archives do not provide a mortality-rate denominator.
+New native death registration refreshes the local statistics automatically.
+
 ## Browse deaths
 
 - [Historical death registry](deaths/README.md): every case has its own landing page.

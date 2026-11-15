@@ -12,7 +12,10 @@ def register(root):
     registry.mkdir(parents=True, exist_ok=True)
     with (registry / '.registry.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
-        return _register(root)
+        count = _register(root)
+        from build_statistics import generate
+        generate(root)
+        return count
 
 
 def _register(root):
