@@ -26,6 +26,8 @@ if sys.argv[1] == 'build':
     (game.parent / 'BUILD_ID').write_text('impl=rust\\ngit_rev=' + rev +
         '\\ninputs_dirty=no\\nsource_sha256=fixture\\nrustc=fixture\\ncc=fixture\\nbinary_sha256=' + hashlib.sha256(b'fixture binary').hexdigest() + '\\n')
 else:
+    toolkit = pathlib.Path(os.environ.get('BORG_CEMETERY_DIR', '/missing'))
+    assert (toolkit / 'scripts/native/API_VERSION').read_text().strip() == '1'
     out, seed, race, cls, turns = sys.argv[2:7]
     out = pathlib.Path(out)
     out.mkdir()
@@ -70,7 +72,8 @@ class RunnerTest(unittest.TestCase):
                 argv = [str(self.source) if x.startswith('https://github.com/') else x for x in argv]
             return original(argv, **kwargs)
 
-        with patch.object(runner, 'command', side_effect=local_command):
+        with patch.object(runner, 'command', side_effect=local_command), \
+                patch.dict(os.environ, {'BORG_CEMETERY_DIR': '/stale-inherited-checkout'}):
             rc = runner.run_batch(args)
         return rc, args.out
 

@@ -2,12 +2,12 @@
 
 Recorded Angband Borg runs, written death investigations and playable saved scenarios.
 
-The code lives elsewhere:
-- [borg-rs](https://github.com/diegoami/borg-rs): the Rust Borg and its toolkit, which write these records;
-- `angband-recorder`: the recorder, being extracted from borg-rs (borg-rs#62).
-
-This repository holds run outputs and the CI scripts that collect and analyze
-them. Borg and engine implementation code stays in the source repositories.
+Borg and engine code stays in [borg-rs](https://github.com/diegoami/borg-rs)
+and [borg-reborn-rs](https://github.com/diegoami/borg-reborn-rs). This repository
+owns the [shared native death tools](docs/native-death-tools.md), run outputs,
+reports and CI collection/analysis scripts. Borg-reborn-rs keeps compatibility
+pointers to the shared tools. `angband-recorder` is being extracted from borg-rs
+(borg-rs#62).
 
 M1 is [awaiting owner-run milestone review](https://github.com/diegoami/borg-cemetery/pull/1).
 The [pinned review packet](docs/reviews/M1/README.md) lists scope, evidence and

@@ -98,7 +98,8 @@ def capture(source, raw, identity, event, dest, profile=None, max_frames=24, dea
                 replay = Path(tmp) / f'frame-{i}'
                 env = dict(os.environ, BORG_IMPL='rust', TZ='UTC', LANG='C.UTF-8', LC_ALL='C.UTF-8',
                            RUN_TIMEOUT_SECONDS=str(min(30, int(remaining))), CHECKPOINT_EVERY='0',
-                           BORG_DEATH_RECORDS_DIR=str(Path(tmp) / 'diagnostic-deaths'))
+                           BORG_CEMETERY_DIR=str(Path(__file__).resolve().parents[1]),
+                   BORG_DEATH_RECORDS_DIR=str(Path(tmp) / 'diagnostic-deaths'))
                 for name in ('ANGBAND_BIN', 'BORG_PROFILE', 'BORG_OBSERVATION_LOG', 'BORG_RECORD_DIR',
                              'BORG_TOOLKIT_NATIVE', 'BORGH_DATA_ROOT', 'STALL_TIMEOUT_SECONDS', 'SAVE_ROOT'):
                     env.pop(name, None)

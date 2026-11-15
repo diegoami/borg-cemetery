@@ -126,6 +126,7 @@ def run_batch(a):
         manifest['status'] = 'building'
         write_json(records / 'batch.json', manifest)
         env = dict(os.environ, BORG_IMPL='rust', BORG_X11='OFF',
+                   BORG_CEMETERY_DIR=str(Path(__file__).resolve().parents[1]),
                    BORG_DEATH_RECORDS_DIR=str(evidence / 'native-deaths'),
                    TZ='UTC', LANG='C.UTF-8', LC_ALL='C.UTF-8',
                    RUN_TIMEOUT_SECONDS=str(a.wall_seconds))
