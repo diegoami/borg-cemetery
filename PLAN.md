@@ -45,7 +45,7 @@ outside this design. Other projects/users integrate through the
 
 This is planning requested by the owner, not a selected next milestone or an
 implementation commitment. M1 remains unaccepted; its implementation pin and
-existing evidence are unchanged. A dedicated architecture PR targets main and
-includes a [runnable review prompt](docs/architecture/review-prompt.md), delivery
+existing evidence are unchanged. [Architecture PR #2](https://github.com/diegoami/borg-cemetery/pull/2)
+targets main and includes a [runnable review prompt](docs/architecture/review-prompt.md), delivery
 slices and acceptance examples. The owner selects/runs the reviewer and decides
 architecture approval before implementation planning.

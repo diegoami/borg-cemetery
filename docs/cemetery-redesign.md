@@ -27,7 +27,8 @@ reproduction and focused regression case for the Borg maintainer.
 | Borg/engine project | Gameplay, instrumentation, configuration export, native build/run/save support and any private-state transfer contract |
 | Project maintainer | Tracked builds/configurations, investigation priorities, proposed gameplay changes and acceptance |
 
-Cemetery does not own an optimizer, population scoreboard or experiment scheduler.
+Cemetery does not own an optimizer, population scoreboard or population experiment
+scheduler.
 It does not sweep parameters, select a winning profile or assert population
 survival gains from its selected scenarios. Configuration variants describe what
 was played. An explicitly requested alternative build/configuration may be tried
