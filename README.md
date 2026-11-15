@@ -13,6 +13,16 @@ M1 is [awaiting owner-run milestone review](https://github.com/diegoami/borg-cem
 The [pinned review packet](docs/reviews/M1/README.md) lists scope, evidence and
 limitations. It is not yet an accepted milestone.
 
+## Proposed redesign
+
+The [controlled-experiment redesign](docs/cemetery-redesign.md) proposes a fixed
+seed suite, a small set of exact build/configuration variants, database-backed
+run tracking and bounded external artifact storage. It defines independent
+near-death qualification, on-demand reconstruction and analysis, and a feedback
+loop through saved scenarios and cohort validation. This is a design proposal;
+the collection and Git archive behavior described below is still the current
+implementation.
+
 ## Statistics by build
 
 [Statistics](statistics/README.md) separates the seven curated cemetery dossiers

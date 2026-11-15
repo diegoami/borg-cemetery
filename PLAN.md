@@ -30,3 +30,16 @@ The owner decides acceptance and merges the review PR. Only then should the
 reviewed boundary advance and an acceptance tag such as `m1` be recorded.
 Review findings become explicit follow-up work; unresolved blockers do not
 disappear because tests pass.
+
+## Owner-requested redesign proposal
+
+The [controlled-experiment design](docs/cemetery-redesign.md) proposes replacing
+routine permanent Git report collection with fixed seed cohorts, exact
+build/configuration identities, database-backed attempts, bounded external
+evidence and on-demand analysis/reconstruction. Near-deaths require independent
+engine evidence; findings feed scenario trials and cohort validation.
+
+This is planning requested by the owner, not a selected next milestone or an
+implementation commitment. M1 remains unaccepted; its implementation pin and
+existing evidence are unchanged. The proposal includes delivery slices and
+acceptance criteria for a later owner decision.

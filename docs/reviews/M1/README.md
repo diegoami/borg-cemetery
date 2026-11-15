@@ -155,6 +155,14 @@ rejection. All 46 own tests and 35 native tests pass; the statistics check passe
 
 ## Known limits and review questions
 
+The owner subsequently requested a [controlled-experiment redesign](../../cemetery-redesign.md).
+That document proposes a fixed cohort, complete build/configuration run tracking,
+independent near-death qualification and bounded external storage. It is planning
+only; it does not implement a new milestone, change M1's implementation pin or
+delete evidence. Review current delivered behavior against the M1 contract,
+without treating the proposed architecture as already available. The publication
+head also includes these design/navigation documents.
+
 1. The near-death and reasonably-stable boundaries are heuristics, not established
    definitions of imminent death or safety. The original save may precede the
    report boundary; S0003's difference is 30 engine ticks. Human control can

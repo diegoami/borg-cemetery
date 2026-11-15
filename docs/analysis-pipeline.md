@@ -1,5 +1,12 @@
 # Death analysis and tuning pipeline
 
+The [controlled-experiment redesign](cemetery-redesign.md) is the proposed next
+architecture: fixed cohorts, exact build/configuration variants, independently
+qualified near-deaths, bounded external storage and on-demand investigation.
+Its storage/retention model supersedes the permanent archive direction in this
+earlier plan. The implemented CI stages below still describe current behavior;
+the redesign has not been implemented or accepted as a new milestone.
+
 Human entry points are the death and scenario README pages, written reports,
 inventory/spell tables, animations and REPLAY guides. Serialized observations
 remain tool inputs; human pages must not print their object/array syntax or
