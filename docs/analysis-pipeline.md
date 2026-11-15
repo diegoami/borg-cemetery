@@ -30,6 +30,14 @@ the starting-save identity, runtime identity, user label/notes, last observed
 outcome and verification status. Mixed human/Borg control is labelled from
 recorded bot events; automated Borg replays cannot masquerade as human play.
 An alive final observation is not promoted into a survival-to-horizon result.
+When a recording passes the original death time, the report explicitly compares
+those turns. Qualification binds the original save bytes, initial character,
+replay verification, continuous observations and ordinary-play flags; restarting
+or resurrecting a different life cannot supply the comparison. This establishes
+one observed continuation from the saved position, not a prescribed fight or
+population survival advantage. The raw capture is retained unchanged and the
+comparison is written beside it. Future report attachments include this summary
+automatically instead of leaving readers to infer it from timestamps.
 
 The original death account is preserved before a bounded appended section.
 Replay failures and incomplete streams remain explicit; no alternative is

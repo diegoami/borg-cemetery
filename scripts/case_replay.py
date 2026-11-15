@@ -18,6 +18,7 @@ import tarfile
 import tempfile
 import time
 import urllib.request
+from human_comparison import recording_comparison, markdown as comparison_markdown, prose as comparison_prose
 
 ROOT = Path(__file__).resolve().parents[1]
 # Optional recording integration, separate from the original recorder-off build.
@@ -354,7 +355,7 @@ def alternative_summary(recording, scenario):
         raise ValueError('The human recording has no observation of the expected starting turn; it cannot be attached as this scenario.')
     last = observed[-1]
     outcome = (f"Died: {last.get('cause') or 'cause not recorded'}" if last.get('dead')
-               else 'Last observed alive; no survival-to-horizon claim')
+               else 'Last observed alive')
     return dict(actor=actor, outcome=outcome, last_turn=last.get('turn'), hp=last.get('hp'))
 
 
@@ -364,6 +365,11 @@ def attach_human(case, scenario_dir, session, label, note):
     verification = read(session / 'verification.json')
     dest = case / 'alternatives/human' / session.name
     dest.mkdir(parents=True, exist_ok=False)
+    case_record = read(case / 'record.json') if (case / 'record.json').exists() else read(case / 'run.json')
+    cause = case_record.get('raw_cause', case_record.get('summary', {}).get('death_cause'))
+    comparison = recording_comparison(session / 'record', scenario, verification['verified'], cause)
+    write(dest / 'comparison.json', comparison)
+    (dest / 'comparison.md').write_text(comparison_markdown(comparison))
     packed = dest / 'recording.tar.xz'
     with tarfile.open(packed, 'w:xz') as archive:
         archive.add(session / 'record', arcname='recording')
@@ -385,12 +391,22 @@ def attach_human(case, scenario_dir, session, label, note):
         f"Recorded game version: `{meta['runtime'].get('source_commit', 'not retained')}` (the separate recorder-enabled runtime).\n\n"
         f"Outcome: {summary['outcome']}; last recorded turn {summary['last_turn']}, HP {summary['hp']}.\n\n"
         f"Replay verification: {'passed' if verification['verified'] else 'failed; recording retained for investigation'}.\n\n"
-        f'{note}\n\n{recording_link}\n\n'
+        f'{note}\n\n{comparison_markdown(comparison)}\n\n{recording_link}\n\n'
         f'From the death directory, replay with `./watch.sh --alternative {session.name}`.\n\n'
         'This is a branch of the original life, not a new independent death or a proved improvement.\n')
+    update_human_section(case)
+    return dest
+
+
+def update_human_section(case):
     entries = sorted((case / 'alternatives/human').glob('*/README.md'))
     section = ['## Alternative human play', '']
-    section += [f'- [{read(p.parent / "alternative.json")["label"]}]({p.relative_to(case)})' for p in entries]
+    for page in entries:
+        meta = read(page.parent / 'alternative.json')
+        section += [f'- [{meta["label"]}]({page.relative_to(case)})']
+        comparison = page.parent / 'comparison.json'
+        if comparison.exists():
+            section += ['', '  ' + comparison_prose(read(comparison)), '']
     marker, end = '<!-- alternative-human-play:start -->', '<!-- alternative-human-play:end -->'
     report = case / ('report.md' if (case / 'report.md').exists() else 'death-report.md')
     original = report.read_text()
@@ -411,7 +427,6 @@ def attach_human(case, scenario_dir, session, label, note):
         dossier_page(case)
     elif (case / 'run.json').exists():
         run_page(case)
-    return dest
 
 
 def legacy_scenario(cache, case, selected, archive=None, start=None):
@@ -479,7 +494,11 @@ def watch_alternative(args):
     print('Viewing the retained human recording. Verification at attachment: ' + ('passed' if meta['verification']['verified'] else 'not passed'), flush=True)
     watch_frames(runtime, recording, args.dump_turn if args.dump_turn is not None else (args.from_turn or 0), args.delay, args.dump_turn is not None)
     if args.dump_turn is None:
-        print(f"{meta['outcome']}; last recorded turn {meta['last_turn']}.", flush=True)
+        comparison = entry / 'comparison.json'
+        if comparison.exists():
+            print(comparison_prose(read(comparison)), flush=True)
+        else:
+            print(f"{meta['outcome']}; last recorded turn {meta['last_turn']}.", flush=True)
 
 
 def human_play(args, selected, runtime):

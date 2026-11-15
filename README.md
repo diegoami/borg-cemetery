@@ -71,6 +71,12 @@ full `main` checkout so the case-local launchers can find the shared tools.
 - [Original recordings of D0005 and D0006](https://github.com/diegoami/borg-cemetery/releases/tag/recordings-2026-11-15): downloadable bundles with the matching executable and recorder/player.
 - [Run records](runs/): batch provenance and outcomes.
 
+[The recorded human alternative to D0007](deaths/D0007/alternatives/human/20261115T004527-7541a0/README.md)
+stayed alive to turn 4873 with 15/15 HP, beyond the original death at 3640.
+It demonstrates survival from the retained starting position; Fang was never
+recorded as visible in that continuation. The original capture metadata and
+recording are preserved alongside the readable comparison.
+
 The human pages use prose, tables, pictures and executable commands. Machine-readable files are retained for tools; they are not required reading.
 
 ## Pinned seeded runs in CI

@@ -1,0 +1,63 @@
+{
+  "schema": "borg-cemetery/human-alternative@1",
+  "label": "Alternative human play",
+  "note": "",
+  "scenario": "scenarios/S0003",
+  "scenario_manifest": {
+    "birth_seed": 102,
+    "borg_memory_restored": false,
+    "checkpoint": {
+      "capture_method": "fork_private_engine",
+      "class_idx": 1,
+      "clevel": 1,
+      "depth": 1,
+      "due_turn": 3400,
+      "file": "checkpoint-000034-t0000003402.save",
+      "game_turn": 3402,
+      "keys": 764,
+      "max_depth": 1,
+      "race_idx": 2,
+      "seed": 102
+    },
+    "checkpoint_lead_turns": 30,
+    "class_idx": 1,
+    "compressed_sha256": "ce2bfbef1f94124d75dfdcc8280c50d287ee2d6c1480ee401d254c143cc4f0e6",
+    "event_kind": "death",
+    "origin": {
+      "binary_sha256": "4a876901da0bf2a143d71dfb7fab5e05f20aa532bf43ad8690eac6ad2d7227a8",
+      "program": "borg-reborn-rs",
+      "seed": 102,
+      "source_commit": "e9a6a521f3ac2fc631aed2c2e3d6c595dde9ab71"
+    },
+    "original_continuation_verified": false,
+    "original_endpoint_turn": 3640,
+    "race_idx": 2,
+    "report_start_turn": 3432,
+    "save": "start.save.gz",
+    "save_sha256": "2883cc50b041337bbe24c00408b79f1aab384f61ffd4a6a749b32bb80e23de5b",
+    "schema": "borg-cemetery/save-scenario@1",
+    "start_turn": 3402,
+    "startup_contract": "fresh_borg_saved_engine_rng",
+    "status": "ready_for_restart_trials"
+  },
+  "save_sha256": "2883cc50b041337bbe24c00408b79f1aab384f61ffd4a6a749b32bb80e23de5b",
+  "runtime": {
+    "source_commit": "2e648118eedc31904dcaed056db52e14acda2a07",
+    "binary": "/home/diego/.cache/borg-cemetery/recorder-runtime/2e648118eedc31904dcaed056db52e14acda2a07/engine/game/angband",
+    "recorder": "/home/diego/.cache/borg-cemetery/recorder-runtime/2e648118eedc31904dcaed056db52e14acda2a07/tools/release/angband-recorder",
+    "binary_sha256": "576cb6252995339a22ca236247dc1c56716fd162494df6184127876170850dae",
+    "recorder_sha256": "564bddbe211bb3f504979633a03758cf48ac30b176d1320b1aac75d27612a756",
+    "profile": "/home/diego/.cache/borg-cemetery/sources/borg-reborn-rs/2e648118eedc31904dcaed056db52e14acda2a07/harness/profiles/reborn-default.txt"
+  },
+  "recording_sha256": "c145d36749b83c296a45edd00656082940077e9fe3df84baec2d5f8390d7bfc3",
+  "session": "/home/diego/.cache/borg-cemetery/human/20261115T004527-7541a0",
+  "verification": {
+    "verified": true,
+    "log": "/home/diego/.cache/borg-cemetery/human/20261115T004527-7541a0/verify.log"
+  },
+  "independent_birth": false,
+  "actor": "human play",
+  "outcome": "Last observed alive; no survival-to-horizon claim",
+  "last_turn": 4873,
+  "hp": 15
+}

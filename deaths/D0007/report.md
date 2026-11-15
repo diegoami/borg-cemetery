@@ -61,3 +61,12 @@ save trial; it does not restore the original Borg's private memory.
 
 A later saved-position run has now been captured and verified with the
 standalone recorder. [Play the prepared local S0003 recorder session](../../scenarios/S0003/RECORDER.md).
+
+<!-- alternative-human-play:start -->
+## Alternative human play
+
+- [Alternative human play](alternatives/human/20261115T004527-7541a0/README.md)
+
+  Survived beyond the original death turn 3640: the continuation was last observed alive at 4873, 1233 engine ticks later, with 15/15 HP at level 2.
+
+<!-- alternative-human-play:end -->
