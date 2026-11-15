@@ -10,7 +10,7 @@ if using a model reviewer, use another family.
 
 Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`.
 
-Implementation head: `40eee5b009e3a65f2605923a88099b0dbbc5eb7a`.
+Implementation head: `33c375527a8e443cdfcda19e864e4561f0c1c9ef`.
 
 The review PR body additionally pins its publication head, including review/process
 documents. Read those documents from the PR, then audit the exact implementation
@@ -56,12 +56,21 @@ Inspect the code and evidence rather than trusting their claims. The owner wants
 6. Prove cache hits do not invoke compilers/configuration. Examine interrupted
    build phases, shared per-version use, executable/resource identity, relocation,
    source/cache modifications and concurrency. Do not remove unique evidence.
-7. Run focused checks. Basic suite:
+7. Audit the manual seven-case analysis and the five bounded D0007 arms. Check
+   score calculations against the pinned source, negative outcomes, refusal
+   violations, fresh-Borg limitations and whether proposals exceed the evidence.
+   This pass is not a blind calibration study or proof of general survival gain.
+8. Audit the native-tool ownership move, source-context forwarding, immutable CI
+   toolkit pin, registry lock and canonical-index guard. Historical reborn IDs
+   collide with cemetery IDs; there is no bulk migration. Reconciliation checks
+   records, not publication. Check both sides of the linked integration PR.
+9. Run focused checks. Basic suite:
 
 ```bash
 python3 -m venv /tmp/borg-cemetery-review-venv
 /tmp/borg-cemetery-review-venv/bin/pip install -r requirements-media.txt
 /tmp/borg-cemetery-review-venv/bin/python -m unittest discover -s tests -v
+/tmp/borg-cemetery-review-venv/bin/python -m unittest discover -s scripts/native/tests -v
 ```
 
 Use a fresh isolated checkout/cache for destructive or failure-injection checks.

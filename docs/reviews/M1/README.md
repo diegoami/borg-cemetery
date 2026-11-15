@@ -10,7 +10,7 @@ by this session. The owner merges the milestone review PR and decides acceptance
 
 Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`.
 
-Implementation: `40eee5b009e3a65f2605923a88099b0dbbc5eb7a`.
+Implementation: `33c375527a8e443cdfcda19e864e4561f0c1c9ef`.
 
 Review the complete baseline-to-implementation diff, not only the latest commit.
 The review PR also includes subsequent documentation-only review preparation;
@@ -36,7 +36,7 @@ recorded retrospectively as delivered areas, not fabricated closed task issues.
 ## Evidence available to a reviewer
 
 - Run the Python suite from a clean checkout after installing
-  `requirements-media.txt`. The implementation head contains 39 own tests plus 31 retained native-tool tests, covering
+  `requirements-media.txt`. The implementation head contains 39 own tests plus 35 retained native-tool tests, covering
   runner failures and identity, archive append/modes, episode boundaries,
   readable pages, scenario binding, launchers, human attachment and cache reuse.
 - The prior implementation head `2015956` passed
@@ -108,12 +108,15 @@ retained, and the short-rest result is explicitly qualified as a refusal/cooldow
 interaction. No Borg source/default profile or population experiment changed.
 
 Native exporter, registry utilities, source-checked rerun and reconciliation
-code plus 31 original tests moved from reborn 83cf442a into scripts/native with
+code plus 35 retained tests moved from reborn 83cf442a (and the concurrent
+#276 registry-template/tests addition) into scripts/native with
 licence/provenance. Canonical registration protects existing records/indexes and
 adds readable pages/catalogue. Reborn [task PR #282](https://github.com/diegoami/borg-reborn-rs/pull/282)
 keeps thin API-1 forwarders and pins this toolkit in CI, preserving temporary
 registries and historical guards. Its integration is separately gated by its
-full CI. Review this cross-repository boundary and mutable local API resolution;
+full CI. Exact toolkit CI is [green](https://github.com/diegoami/borg-cemetery/actions/runs/43709191890).
+The concurrent pointer-only change in reborn #276 is preserved; historical case
+links resolve to the retained source archive rather than unimported cemetery URLs. Review this cross-repository boundary and mutable local API resolution;
 do not infer compatibility from a copied function name alone.
 
 ## Known limits and review questions

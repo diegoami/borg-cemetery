@@ -16,7 +16,7 @@ recorder-version qualification remain future work, not M1 completion claims.
 
 - Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`, the last commit before
   this implementation session's collection/replay work.
-- Implementation head: `40eee5b009e3a65f2605923a88099b0dbbc5eb7a`.
+- Implementation head: `33c375527a8e443cdfcda19e864e4561f0c1c9ef`.
 - [Review packet and evidence](docs/reviews/M1/README.md).
 - [Independent reviewer prompt](docs/reviews/M1/PROMPT.md).
 
