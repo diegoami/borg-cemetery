@@ -10,7 +10,7 @@ by this session. The owner merges the milestone review PR and decides acceptance
 
 Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`.
 
-Implementation: `33c375527a8e443cdfcda19e864e4561f0c1c9ef`.
+Implementation: `0e1e9b89fbe487bbf58f922bceba4d817a037e52`.
 
 Review the complete baseline-to-implementation diff, not only the latest commit.
 The review PR also includes subsequent documentation-only review preparation;
@@ -113,11 +113,18 @@ code plus 35 retained tests moved from reborn 83cf442a (and the concurrent
 licence/provenance. Canonical registration protects existing records/indexes and
 adds readable pages/catalogue. Reborn [task PR #282](https://github.com/diegoami/borg-reborn-rs/pull/282)
 keeps thin API-1 forwarders and pins this toolkit in CI, preserving temporary
-registries and historical guards. Its integration is separately gated by its
-full CI. Exact toolkit CI is [green](https://github.com/diegoami/borg-cemetery/actions/runs/43709191890).
+registries and historical guards. Its integration head is `ca43b3796b1b8464e7aa3f922f0f41be7d862221`, using the
+unchanged toolkit pin `33c375527a8e443cdfcda19e864e4561f0c1c9ef`. Integration is
+separately gated by its full CI. Exact toolkit CI is [green](https://github.com/diegoami/borg-cemetery/actions/runs/43709191890).
 The concurrent pointer-only change in reborn #276 is preserved; historical case
 links resolve to the retained source archive rather than unimported cemetery URLs. Review this cross-repository boundary and mutable local API resolution;
 do not infer compatibility from a copied function name alone.
+
+Cemetery batch, saved-scenario and diagnostic screenshot runners explicitly
+supply their own toolkit checkout, because isolated Borg source clones cannot
+discover it as a sibling. The batch fixture checks that the owned API is present
+even when an inherited BORG_CEMETERY_DIR points to a stale location. All 39 own
+and 35 native tests pass after this fix.
 
 ## Known limits and review questions
 
