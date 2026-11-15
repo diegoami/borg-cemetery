@@ -13,7 +13,7 @@ from reborn commit `83cf442a6bc6c1dec768cab2a1f22530c9caac1e`.
 | `rerun-death.py` | Exact source-hash check, original key-stream verification, observation/world/knowledge logs, checkpoints and preserved core/errand/ladders settings |
 | `reconcile-deaths.py` | No unexported natural run death; comparison with the declared historical reference registry |
 | `death_registry.py` | Original-format identity handling and isolated-registry utilities; canonical cemetery presentation is delegated to our own registration step |
-| Original tool tests | 31 focused export/rerun/reconciliation checks retained with the moved code |
+| Original tool tests | 35 focused export/rerun/reconciliation/registry checks retained with the moved code |
 
 Reborn still owns the game, Borg, build, measured-run launcher and observations.
 Its four existing tool paths become API-checked thin forwarders. CI checks out

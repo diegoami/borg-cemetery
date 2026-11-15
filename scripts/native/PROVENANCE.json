@@ -9,5 +9,13 @@
     "tools/tests/test_export_death.py": "76770889e640d622751d239042a9c04d28ddfe0631d831f6b1da019887d3a3d0",
     "tools/tests/test_rerun_death.py": "e25d09845fc4ef82084e1a9d91b132cd6a3b2542735310cb7b734846472389a3",
     "tools/tests/test_reconcile_deaths.py": "c7c4a7055b33835313a81107aef23d2565b219665cb29d22d96efa5f156134fb"
+  },
+  "supplement": {
+    "commit": "f441296ff55b2a452daeaed11e5ffbb45f0ce224",
+    "files_sha256": {
+      "tools/death_registry.py": "fea5ea13b859b9c2610119e1d700c7ae2f9514bf69cea955d9a5fcc9923cb644",
+      "tools/tests/test_death_registry.py": "b0d1abdb2d07a632e3d2b6b9820c4e292328ba1662deed26b37b253a10e4069c"
+    },
+    "scope": "Retained canonical-home notice template and four new registry regression tests from the concurrent pointer PR #276."
   }
 }

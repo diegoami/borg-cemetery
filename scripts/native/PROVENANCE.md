@@ -39,3 +39,8 @@ The source/build must match the dossier. A loaded-save dossier cannot be
 recreated from a birth seed alone. `--any-build` remains explicitly diagnostic,
 not a successful reproduction. Machine identity files are tool inputs; the
 case's README, report, analysis and replay guides are the human interface.
+
+The concurrent reborn pointer PR #276 (`f441296ff55b2a452daeaed11e5ffbb45f0ce224`)
+added a canonical-home notice to the native index template and four registry
+regression tests. These are retained here too; supplemental donor hashes are
+in `PROVENANCE.json`. The original source baseline above is unchanged.
