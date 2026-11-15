@@ -10,7 +10,7 @@ by this session. The owner merges the milestone review PR and decides acceptance
 
 Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`.
 
-Implementation: `5c3c69e6544a07f9b84f5d4feb18bf176ee10983`.
+Implementation: `fd76656adec4db375027d9531ccb187aebf4f672`.
 
 Review the complete baseline-to-implementation diff, not only the latest commit.
 The review PR also includes subsequent documentation-only review preparation;
@@ -36,7 +36,7 @@ recorded retrospectively as delivered areas, not fabricated closed task issues.
 ## Evidence available to a reviewer
 
 - Run the Python suite from a clean checkout after installing
-  `requirements-media.txt`. The implementation head contains 31 tests, covering
+  `requirements-media.txt`. The implementation head contains 35 tests, covering
   runner failures and identity, archive append/modes, episode boundaries,
   readable pages, scenario binding, launchers, human attachment and cache reuse.
 - The prior implementation head `2015956` passed
@@ -69,8 +69,28 @@ recorded retrospectively as delivered areas, not fabricated closed task issues.
 - Migration preserved native records, source save/observation data, terminal
   text captures and comparison bindings. The old local-validation tree was
   removed; original D0001–D0006 records remain unchanged. Git history retains
-  prior generated views. Owner-generated, uncommitted human continuations are
-  deliberately excluded from this implementation review snapshot.
+  prior generated views. The owner explicitly requested publication of the real human continuation
+  after the initial review pin. Its original archive and capture metadata are
+  retained unchanged beside a new readable comparison and checksum/start binding
+  checks. The new implementation pin includes that recording and the automatic
+  comparison logic.
+
+## Owner-requested human continuation addition
+
+After the initial review packet, the owner requested that the real human
+continuation be published in the report. The implementation pin above supersedes
+`5c3c69e6544a07f9b84f5d4feb18bf176ee10983` and includes this correction.
+
+[The recorded human alternative](../../../deaths/D0007/alternatives/human/20261115T004527-7541a0/README.md)
+loaded the original S0003 save at 3402 and was alive at 4873, level 2 with 15/15
+HP: 1233 engine ticks beyond the original death at 3640. The archived captured
+file inputs contain the exact source save bytes, the archive matches its capture
+hash, recorder verification passed at capture, there are no Borg input events,
+and the observed flags show no cheat-live/wizard/debug use. Fang was never
+recorded as visible; this is survival from the retained starting position, not
+proof of defeating Fang in a direct fight or of a general policy improvement.
+Original capture metadata is preserved; the comparison is added beside it.
+New attachments produce this distinction and summary automatically.
 
 ## Known limits and review questions
 
