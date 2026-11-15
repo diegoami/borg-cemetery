@@ -114,8 +114,11 @@ licence/provenance. Canonical registration protects existing records/indexes and
 adds readable pages/catalogue. Reborn [task PR #282](https://github.com/diegoami/borg-reborn-rs/pull/282)
 keeps thin API-1 forwarders and pins this toolkit in CI, preserving temporary
 registries and historical guards. Its integration head is `ca43b3796b1b8464e7aa3f922f0f41be7d862221`, using the
-unchanged toolkit pin `33c375527a8e443cdfcda19e864e4561f0c1c9ef`. Integration is
-separately gated by its full CI. Exact toolkit CI is [green](https://github.com/diegoami/borg-cemetery/actions/runs/43709191890).
+unchanged toolkit pin `33c375527a8e443cdfcda19e864e4561f0c1c9ef`. Full integration CI is [green](https://github.com/diegoami/borg-reborn-rs/actions/runs/43709250234)
+for that exact head (Rust, engine and recorder), including the full deterministic
+suite, missing-death reconciliation and exact-source rerun. PR #282 merged as
+`811f338a44428bacda79492690e7ac903a8e0c8b`. The primary local consumer checkout
+was not modified. Exact toolkit CI is [green](https://github.com/diegoami/borg-cemetery/actions/runs/43709191890).
 The concurrent pointer-only change in reborn #276 is preserved; historical case
 links resolve to the retained source archive rather than unimported cemetery URLs. Review this cross-repository boundary and mutable local API resolution;
 do not infer compatibility from a copied function name alone.
@@ -124,7 +127,9 @@ Cemetery batch, saved-scenario and diagnostic screenshot runners explicitly
 supply their own toolkit checkout, because isolated Borg source clones cannot
 discover it as a sibling. The batch fixture checks that the owned API is present
 even when an inherited BORG_CEMETERY_DIR points to a stale location. All 39 own
-and 35 native tests pass after this fix.
+and 35 native tests pass after this fix; [implementation CI](https://github.com/diegoami/borg-cemetery/actions/runs/43710142197)
+and [review-publication CI](https://github.com/diegoami/borg-cemetery/actions/runs/43710159948)
+are green. The later integration receipt changes documentation only.
 
 ## Known limits and review questions
 
