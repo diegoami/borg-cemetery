@@ -44,6 +44,9 @@ class StatisticsTest(unittest.TestCase):
         self.assertIn('| 2 | 1 | 0 | 3 | 1 |', report)
         self.assertIn('No mortality or survival rate', report)
         self.assertIn('d' * 64, (self.root / 'statistics/attempts.md').read_text())
+        page = next((self.root / 'statistics/builds').glob('*/README.md')).read_text()
+        self.assertIn('Embedded repeats (all builds)', page)
+        self.assertNotIn('d' * 64, page)
 
     def test_same_commit_different_binary_and_dirty_inputs_stay_separate(self):
         path, _ = dossier(self.root)

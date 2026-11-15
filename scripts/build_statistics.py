@@ -217,9 +217,10 @@ def render(sources):
         location = f'statistics/builds/{key}'
         build = rows[0]['build']
         page = [f"# {build['program']} · {(build['commit'] or 'Unknown')[:12]}", '',
-                'Exact retained build identity. Counts are death dossiers, not mortality rates.', '']
+                'Exact primary-case build identity. Counts are death dossiers, not mortality rates. '
+                'Embedded attempts can use other builds; their actual executable hashes appear in the [extra-attempt table](../../attempts.md).', '']
         page += table(['Identity field', 'Value'], [[field, build.get(field)] for field in FIELDS])
-        page += table(['Registry', 'Dossiers', 'Known start families', 'Missing family', 'Retained attempts', 'Explicit repeats'],
+        page += table(['Registry', 'Dossiers', 'Known start families', 'Missing family', 'Embedded attempts (all builds)', 'Embedded repeats (all builds)'],
                       [[s['name'], *counts(part)] for s in sources if (part := [r for r in rows if r['registry'] == s['name']])])
         page += ['## Causes by registry', '']
         for source in sources:

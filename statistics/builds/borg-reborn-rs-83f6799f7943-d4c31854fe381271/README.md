@@ -1,6 +1,6 @@
 # borg-reborn-rs · 83f6799f7943
 
-Exact retained build identity. Counts are death dossiers, not mortality rates.
+Exact primary-case build identity. Counts are death dossiers, not mortality rates. Embedded attempts can use other builds; their actual executable hashes appear in the [extra-attempt table](../../attempts.md).
 
 | Identity field | Value |
 | --- | --- |
@@ -12,7 +12,7 @@ Exact retained build identity. Counts are death dossiers, not mortality rates.
 | inputs_dirty | yes |
 | git_dirty | yes |
 
-| Registry | Dossiers | Known start families | Missing family | Retained attempts | Explicit repeats |
+| Registry | Dossiers | Known start families | Missing family | Embedded attempts (all builds) | Embedded repeats (all builds) |
 | --- | --- | --- | --- | --- | --- |
 | reborn-historical | 46 | 46 | 0 | 46 | 0 |
 
