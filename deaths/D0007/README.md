@@ -90,6 +90,7 @@ standalone recorder. [Play the prepared local S0003 recorder session](../../scen
 ## Read and replay
 
 - [Original written report](report.md)
+- [Survival analysis, hypotheses and proposed experiments](analysis.md)
 - [Recording download and replay instructions](REPLAY.md)
 - [Borg settings used](PARAMETERS.md)
 

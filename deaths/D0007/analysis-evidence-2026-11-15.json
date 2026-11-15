@@ -1,0 +1,49 @@
+{
+  "scope": "supplemental recorder-enabled S0003 rerun; original keys/messages/state matched, not original recorder-off frames or private Borg memory",
+  "baseline_channels_equal": {
+    "keys.log": true,
+    "state.log": true,
+    "messages.log": true
+  },
+  "binary_sha256": "cd894d15eee54860214ff0a4f39bc448bd3fd0e8113bc0daf945dc90355fffc5",
+  "recorder_sha256": "d9ee8bb59d03a0638f59c437643d283be8cb9299f4596b797f45ade07e433596",
+  "frames_sha256": "eedfcf1ed5c5cd159ef5599b2866ce2226a304b9b73b9c6cba6875b89b7ef5d1",
+  "anchors": [
+    {
+      "frame": 88,
+      "turn": 3612,
+      "hp": 6,
+      "sp": 2,
+      "fang": [
+        {
+          "hp": 25,
+          "id": 16,
+          "max_hp": 25,
+          "name": "Fang, Farmer Maggot's Dog",
+          "speed": 120,
+          "visible": 1,
+          "x": 83,
+          "y": 6
+        }
+      ]
+    },
+    {
+      "frame": 96,
+      "turn": 3632,
+      "hp": 4,
+      "sp": 1,
+      "fang": [
+        {
+          "hp": 16,
+          "id": 16,
+          "max_hp": 25,
+          "name": "Fang, Farmer Maggot's Dog",
+          "speed": 120,
+          "visible": 1,
+          "x": 83,
+          "y": 6
+        }
+      ]
+    }
+  ]
+}

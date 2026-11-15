@@ -1,0 +1,85 @@
+[
+  {
+    "name": "control",
+    "rc": 0,
+    "status": "death",
+    "turn": 3640,
+    "hp": -2,
+    "cause": "Fang, Farmer Maggot's Dog",
+    "effective_override": {},
+    "clevel": 1,
+    "max_depth": 1,
+    "distinct_position_depth_pairs": 5,
+    "minimum_logged_hp": -2,
+    "trace_violations": 0,
+    "independent_birth": false
+  },
+  {
+    "name": "horizon-2",
+    "rc": 0,
+    "status": "survived_horizon",
+    "turn": 4402,
+    "hp": 9,
+    "cause": "",
+    "effective_override": {
+      "threat_horizon": 2
+    },
+    "clevel": 1,
+    "max_depth": 1,
+    "distinct_position_depth_pairs": 16,
+    "minimum_logged_hp": 5,
+    "trace_violations": 0,
+    "independent_birth": false
+  },
+  {
+    "name": "horizon-3",
+    "rc": 0,
+    "status": "death",
+    "turn": 3650,
+    "hp": -4,
+    "cause": "Fang, Farmer Maggot's Dog",
+    "effective_override": {
+      "threat_horizon": 3
+    },
+    "clevel": 1,
+    "max_depth": 1,
+    "distinct_position_depth_pairs": 13,
+    "minimum_logged_hp": -4,
+    "trace_violations": 0,
+    "independent_birth": false
+  },
+  {
+    "name": "risk-75",
+    "rc": 0,
+    "status": "death",
+    "turn": 3640,
+    "hp": -2,
+    "cause": "Fang, Farmer Maggot's Dog",
+    "effective_override": {
+      "risk_aversion_pct": 75
+    },
+    "clevel": 1,
+    "max_depth": 1,
+    "distinct_position_depth_pairs": 5,
+    "minimum_logged_hp": -2,
+    "trace_violations": 0,
+    "independent_birth": false
+  },
+  {
+    "name": "rest-1",
+    "rc": 0,
+    "status": "survived_horizon",
+    "turn": 4402,
+    "hp": 9,
+    "cause": "",
+    "effective_override": {
+      "rest_turns": 1
+    },
+    "clevel": 1,
+    "max_depth": 1,
+    "distinct_position_depth_pairs": 77,
+    "minimum_logged_hp": 5,
+    "trace_violations": 4,
+    "independent_birth": false
+  }
+]

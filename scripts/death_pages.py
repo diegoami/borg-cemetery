@@ -186,6 +186,7 @@ def dossier_page(directory):
         content += [body, '']
     content += ['## Read and replay', '']
     content += links(directory, [('inventory.md', 'Human-readable inventory'), ('report.md', 'Original written report'),
+                                 ('analysis.md', 'Survival analysis, hypotheses and proposed experiments'),
                                  ('REPLAY.md', 'Recording download and replay instructions'),
                                  ('PARAMETERS.md', 'Borg settings used'),
                                  ('overall-assessment.md', 'Detailed written assessment'), ('CharOutput.txt', 'Character output')])

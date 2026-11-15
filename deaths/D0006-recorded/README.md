@@ -49,6 +49,7 @@ Qualified reruns remain this same one life and do not mark owner review.
 ## Read and replay
 
 - [Original written report](report.md)
+- [Survival analysis, hypotheses and proposed experiments](analysis.md)
 - [Recording download and replay instructions](REPLAY.md)
 - [Detailed written assessment](overall-assessment.md)
 - [Character output](CharOutput.txt)

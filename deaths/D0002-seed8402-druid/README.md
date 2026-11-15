@@ -72,6 +72,7 @@ Legacy dossier: original movies were not captured. See immutable record.json and
 
 - [Human-readable inventory](inventory.md)
 - [Original written report](report.md)
+- [Survival analysis, hypotheses and proposed experiments](analysis.md)
 - [Recording download and replay instructions](REPLAY.md)
 
 A complete recorder recording is not retained for this case. The replay instructions distinguish a seed rerun from playback of an original recording.

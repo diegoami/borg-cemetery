@@ -67,6 +67,7 @@ If using data from a `results`-branch checkout, set `BORG_CEMETERY_HOME` to a
 full `main` checkout so the case-local launchers can find the shared tools.
 
 - [Deaths](deaths/README.md): written accounts, character details, inventory and playback instructions.
+- [Complete death catalogue](deaths/CATALOG.md) includes new native exports without rewriting the imported historical registry.
 - [Saved scenarios](scenarios/README.md): written situation reports and commands for trying alternative Borgs.
 - [Original recordings of D0005 and D0006](https://github.com/diegoami/borg-cemetery/releases/tag/recordings-2026-11-15): downloadable bundles with the matching executable and recorder/player.
 - [Run records](runs/): batch provenance and outcomes.
@@ -78,6 +79,18 @@ recorded as visible in that continuation. The original capture metadata and
 recording are preserved alongside the readable comparison.
 
 The human pages use prose, tables, pictures and executable commands. Machine-readable files are retained for tools; they are not required reading.
+
+[Survival analysis across the retained deaths](docs/death-analysis.md) ranks
+evidence-backed improvement hypotheses and gives per-case experiments. It is
+an analyst pass; proposed profile files are not accepted tuning changes.
+
+The [native export/rerun/reconciliation tools](scripts/native/PROVENANCE.md)
+are owned here, brought over from borg-reborn-rs with their provenance and tests.
+That repository retains its harness and game instrumentation plus thin pointers
+to these commands. Set `BORG_CEMETERY_DIR` to this checkout when it is not beside
+the consumer checkout. Explicit `BORG_DEATH_RECORDS_DIR` overrides still support
+isolated validation registries. Historical reborn validation cases are not bulk
+imported as new independent deaths.
 
 ## Pinned seeded runs in CI
 

@@ -36,3 +36,5 @@ The six imported historical cases retain their original registry statistics: six
 Export with tools/record-death.py, curate assessment.json/report.md, regenerate with tools/aggregate-deaths.py. Original-C defect leads go to neo-angband-tracker under the repository policy; no automatic issues or gameplay changes are made by the logger.
 
 [Download and replay the original D0005 and D0006 recordings](https://github.com/diegoami/borg-cemetery/releases/tag/recordings-2026-11-15). Each case has written download and playback instructions.
+
+[New survival-analysis pass and ranked experiments](../docs/death-analysis.md) · [Complete catalogue](CATALOG.md).

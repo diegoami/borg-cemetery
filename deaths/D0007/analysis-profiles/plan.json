@@ -1,0 +1,45 @@
+{
+  "schema": "borg-cemetery/analysis-plan@1",
+  "case": "D0007",
+  "scenario": "S0003",
+  "source_commit": "e9a6a521f3ac2fc631aed2c2e3d6c595dde9ab71",
+  "saved_turn": 3402,
+  "horizon_engine_turns": 1000,
+  "status": "completed_diagnostic_comparison",
+  "arms": [
+    {
+      "name": "control",
+      "override": {}
+    },
+    {
+      "name": "horizon-2",
+      "override": {
+        "threat_horizon": 2
+      }
+    },
+    {
+      "name": "horizon-3",
+      "override": {
+        "threat_horizon": 3
+      }
+    },
+    {
+      "name": "risk-75",
+      "override": {
+        "risk_aversion_pct": 75
+      }
+    },
+    {
+      "name": "rest-1",
+      "override": {
+        "rest_turns": 1
+      }
+    }
+  ],
+  "limitations": [
+    "One retained starting condition, not independent births.",
+    "Rest-turn parameter also changes Recover goal budget.",
+    "Whole-Borg private memory is reset on load."
+  ],
+  "results": "../analysis-results/results.json"
+}
