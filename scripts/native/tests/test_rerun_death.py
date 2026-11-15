@@ -2,9 +2,11 @@
 
 import importlib.util
 import json
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 HERE = Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location('rerun_death', HERE.parent / 'rerun-death.py')
@@ -13,13 +15,13 @@ spec.loader.exec_module(rd)
 
 
 def dossier(root, schema='borg-reborn-rs/death-record@1', impl='rust', flags='menu,exact', seed=102,
-            summary_extra=None, config_extra=''):
+            summary_extra=None, config_extra='', keys_sha256='k' * 64):
     d = Path(root) / 'D0001-rust-seed102'
     d.mkdir()
     (d / 'record.json').write_text(json.dumps({
         'schema': schema, 'identity': {'impl': impl, 'seed': seed, 'flags': flags, 'source_sha256': 'abc', 'git_rev': 'f00'},
         'terminal': {'turn': 743, 'race_idx': 2, 'class_idx': 1},
-        'attempts': [{'outcome': 'death', 'result_sha256': 'k' * 64}]}))
+        'attempts': [{'outcome': 'death', 'result_sha256': keys_sha256}]}))
     (d / 'summary.json').write_text(json.dumps({'seed': seed, 'race_idx': 2, 'class_idx': 1, 'game_turns': 743,
                                                 **(summary_extra or {})}))
     (d / 'config.txt').write_text(f'flags={flags}\nborg_txt_sha256=x\nprofile=harness/profiles/reborn-default.txt\n'
@@ -61,6 +63,94 @@ class PlanTest(unittest.TestCase):
             (Path(t) / 'D0001-rust-seed102').rename(Path(t) / 'old')
             with self.assertRaises(SystemExit):
                 rd.plan(dossier(t, config_extra=f'borg_ladders={ladders}\nborg_ladders_sha256={good}\n'))
+
+    def test_a_plan_is_restored_from_the_source_checkout(self):
+        # Issue #3: a plan run reruns with the plan config.txt names, resolved
+        # like run.sh recorded it: relative to the source checkout.
+        with tempfile.TemporaryDirectory() as t:
+            src = Path(t) / 'src'
+            plan_file = src / 'harness/plans/errands_plan_ambitious.txt'
+            plan_file.parent.mkdir(parents=True)
+            plan_file.write_text('/dive 3\n')
+            good = rd.hashlib.sha256(plan_file.read_bytes()).hexdigest()
+            d = dossier(t, config_extra='borg_errands_plan=harness/plans/errands_plan_ambitious.txt\n'
+                                        f'borg_errands_plan_sha256={good}\n')
+            with mock.patch.object(rd, 'ROOT', src):
+                p = rd.plan(d)
+        self.assertEqual(p['env']['BORG_ERRANDS_PLAN'], str(plan_file))
+
+    def test_an_absolute_plan_path_is_used_as_recorded(self):
+        with tempfile.TemporaryDirectory() as t:
+            plan_file = Path(t) / 'plan.txt'
+            plan_file.write_text('/dive 3\n')
+            good = rd.hashlib.sha256(plan_file.read_bytes()).hexdigest()
+            p = rd.plan(dossier(t, config_extra=f'borg_errands_plan={plan_file}\n'
+                                                f'borg_errands_plan_sha256={good}\n'))
+        self.assertEqual(p['env']['BORG_ERRANDS_PLAN'], str(plan_file))
+
+    def test_a_dossier_copy_of_the_plan_is_used(self):
+        # export-death.py keeps the plan, so its bytes win over the source
+        # checkout's copy (which need not exist any more).
+        with tempfile.TemporaryDirectory() as t:
+            plan = '/dive 3\n'
+            good = rd.hashlib.sha256(plan.encode()).hexdigest()
+            d = dossier(t, config_extra='borg_errands_plan=harness/plans/gone.txt\n'
+                                        f'borg_errands_plan_sha256={good}\n')
+            (d / 'errands_plan.txt').write_text(plan)
+            p = rd.plan(d)
+        self.assertEqual(p['env']['BORG_ERRANDS_PLAN'], str(d / 'errands_plan.txt'))
+
+    def test_a_changed_plan_is_refused(self):
+        with tempfile.TemporaryDirectory() as t:
+            plan_file = Path(t) / 'plan.txt'
+            plan_file.write_text('/dive 3\n')
+            good = rd.hashlib.sha256(plan_file.read_bytes()).hexdigest()
+            config = f'borg_errands_plan={plan_file}\nborg_errands_plan_sha256={good}\n'
+            self.assertEqual(rd.plan(dossier(t, config_extra=config))['env']['BORG_ERRANDS_PLAN'], str(plan_file))
+            plan_file.write_text('/dive 4\n')
+            (Path(t) / 'D0001-rust-seed102').rename(Path(t) / 'old')
+            with self.assertRaises(SystemExit) as e:
+                rd.plan(dossier(t, config_extra=config))
+        self.assertIn('the run read errands plan', str(e.exception))
+
+    def test_a_missing_plan_is_refused(self):
+        with tempfile.TemporaryDirectory() as t:
+            config = f'borg_errands_plan={Path(t) / "gone.txt"}\nborg_errands_plan_sha256={"a" * 64}\n'
+            with self.assertRaises(SystemExit) as e:
+                rd.plan(dossier(t, config_extra=config))
+        self.assertIn('missing', str(e.exception))
+
+    def test_the_rerun_sets_the_plan(self):
+        with tempfile.TemporaryDirectory() as t:
+            base = Path(t)
+            src = base / 'src'
+            (src / 'build/rust').mkdir(parents=True)
+            (src / 'build/rust/BUILD_ID').write_text('source_sha256=abc\n')
+            plan_file = src / 'harness/plans/p.txt'
+            plan_file.parent.mkdir(parents=True)
+            plan_file.write_text('/dive 3\n')
+            good = rd.hashlib.sha256(plan_file.read_bytes()).hexdigest()
+            keys = b'keys\n'
+            d = dossier(base, keys_sha256=rd.hashlib.sha256(keys).hexdigest(),
+                        config_extra=f'borg_errands_plan=harness/plans/p.txt\n'
+                                     f'borg_errands_plan_sha256={good}\n')
+            calls = {}
+
+            def fake_run(cmd, **kwargs):
+                calls['env'] = kwargs['env']
+                run = Path(cmd[1])
+                run.mkdir()
+                (run / 'keys.log').write_bytes(keys)
+                (run / 'summary.json').write_text('{}')
+                for name in ('observations.jsonl', 'worlds.txt', 'knowledge.json'):
+                    (run.parent / name).write_text('x')
+                return subprocess.CompletedProcess(cmd, 0, '', '')
+
+            # run.sh hashes the regenerated borg.txt, so the plan must be set
+            # on the call, not only known to the dossier.
+            with mock.patch.object(rd, 'ROOT', src), mock.patch.object(rd.subprocess, 'run', fake_run):
+                self.assertEqual(rd.main([str(d), str(base / 'out')]), 0)
+        self.assertEqual(calls['env']['BORG_ERRANDS_PLAN'], str(plan_file))
 
     def test_only_rust_harness_dossiers(self):
         with tempfile.TemporaryDirectory() as t:
