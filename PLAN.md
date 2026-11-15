@@ -2,7 +2,7 @@
 
 | Milestone | Scope | State |
 | --- | --- | --- |
-| M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches | Prepared for owner-run review; **not accepted** |
+| M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | Prepared for owner-run review; **not accepted** |
 
 The owner requested the first milestone review on 2026-11-15 and will choose
 or run its reviewer. No next milestone is selected. Automated causal discovery,
@@ -16,7 +16,7 @@ recorder-version qualification remain future work, not M1 completion claims.
 
 - Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`, the last commit before
   this implementation session's collection/replay work.
-- Implementation head: `0e1e9b89fbe487bbf58f922bceba4d817a037e52`.
+- Implementation head: `cd562eabc40267a15be3eb7d2036d65e6f0c4a5a`.
 - [Review packet and evidence](docs/reviews/M1/README.md).
 - [Independent reviewer prompt](docs/reviews/M1/PROMPT.md).
 

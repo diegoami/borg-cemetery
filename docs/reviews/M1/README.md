@@ -10,7 +10,7 @@ by this session. The owner merges the milestone review PR and decides acceptance
 
 Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`.
 
-Implementation: `0e1e9b89fbe487bbf58f922bceba4d817a037e52`.
+Implementation: `cd562eabc40267a15be3eb7d2036d65e6f0c4a5a`.
 
 Review the complete baseline-to-implementation diff, not only the latest commit.
 The review PR also includes subsequent documentation-only review preparation;
@@ -36,7 +36,7 @@ recorded retrospectively as delivered areas, not fabricated closed task issues.
 ## Evidence available to a reviewer
 
 - Run the Python suite from a clean checkout after installing
-  `requirements-media.txt`. The implementation head contains 39 own tests plus 35 retained native-tool tests, covering
+  `requirements-media.txt`. The implementation head contains 46 own tests plus 35 retained native-tool tests, covering
   runner failures and identity, archive append/modes, episode boundaries,
   readable pages, scenario binding, launchers, human attachment and cache reuse.
 - The prior implementation head `2015956` passed
@@ -130,6 +130,28 @@ even when an inherited BORG_CEMETERY_DIR points to a stale location. All 39 own
 and 35 native tests pass after this fix; [implementation CI](https://github.com/diegoami/borg-cemetery/actions/runs/43710142197)
 and [review-publication CI](https://github.com/diegoami/borg-cemetery/actions/runs/43710159948)
 are green. The later integration receipt changes documentation only.
+
+## Owner-requested statistics by build
+
+[Statistics](../../../statistics/README.md) inventories the seven curated local
+cases (four builds) and the 2,378 historical reborn dossiers (114 builds) at
+`ec9058d18625056154e7f69a21b63036932ff739`. The external files remain in reborn;
+only normalized statistical fields and source-file hashes are retained here,
+with report links pinned to that revision. No historical IDs are migrated.
+One declared/qualified starting-family key occurs in both archives, so the two
+registries are not pooled into an independent-life denominator.
+
+Build groups include project, commit, source-input and executable hashes,
+implementation and dirtiness. Recorded cores/profiles/settings are shown within
+each build. Death causes and terminal turn/depth/level summaries weight retained
+dossiers; scenario/human branches and repeated attempts do not become independent
+births. This is not a complete CI/all-game cohort or a mortality-rate estimate.
+
+Native registration regenerates local reports, ordinary regeneration preserves
+the frozen external inventory, and CI checks that reports are current. Seven new
+regression checks cover repeat/family accounting, build separation, absent/saved
+seeds, unknown identity, stale outputs, pinned external inputs and living-record
+rejection. All 46 own tests and 35 native tests pass; the statistics check passes.
 
 ## Known limits and review questions
 

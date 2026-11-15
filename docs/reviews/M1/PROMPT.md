@@ -10,7 +10,7 @@ if using a model reviewer, use another family.
 
 Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`.
 
-Implementation head: `0e1e9b89fbe487bbf58f922bceba4d817a037e52`.
+Implementation head: `cd562eabc40267a15be3eb7d2036d65e6f0c4a5a`.
 
 The review PR body additionally pins its publication head, including review/process
 documents. Read those documents from the PR, then audit the exact implementation
@@ -64,13 +64,19 @@ Inspect the code and evidence rather than trusting their claims. The owner wants
    toolkit pin, registry lock and canonical-index guard. Historical reborn IDs
    collide with cemetery IDs; there is no bulk migration. Reconciliation checks
    records, not publication. Check both sides of the linked integration PR.
-9. Run focused checks. Basic suite:
+9. Audit statistics/build separation, known/missing seed provenance, selected-death
+   denominators, family overlaps and repeats. The external historical inventory
+   is a pinned statistical snapshot, not a migration or a complete run cohort.
+   Check dirty builds, different executables at one commit, core/profile settings,
+   pinned source links and offline deterministic regeneration.
+10. Run focused checks. Basic suite:
 
 ```bash
 python3 -m venv /tmp/borg-cemetery-review-venv
 /tmp/borg-cemetery-review-venv/bin/pip install -r requirements-media.txt
 /tmp/borg-cemetery-review-venv/bin/python -m unittest discover -s tests -v
 /tmp/borg-cemetery-review-venv/bin/python -m unittest discover -s scripts/native/tests -v
+/tmp/borg-cemetery-review-venv/bin/python scripts/build_statistics.py --check
 ```
 
 Use a fresh isolated checkout/cache for destructive or failure-injection checks.
