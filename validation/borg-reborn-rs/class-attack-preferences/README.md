@@ -1,5 +1,9 @@
 # Native class/family attack preference validation
 
+**Final CI:** [all checks pass at3f744ddb](final-ci/README.md). The current archive
+retains77 original/qualified packages; the source CI reference stays pinned to
+the independently published73-package snapshot at62039b27.
+
 **Current combined-tree validation:** [recorder-sync](recorder-sync/README.md)
 compares25e89494 with frozen current track-p46d5f2ae. The original exact-build
 comparison below is retained as historical evidence, not relabeled.
