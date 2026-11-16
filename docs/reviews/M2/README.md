@@ -23,7 +23,12 @@ attempts of the same six cases, not twelve independent population lives.
 The readable table is [report.md](report.md); compact machine outcomes and
 per-stream evidence hashes are [results.json](results.json), with exact generated
 [scenario specs](scenarios.json). Raw logs remain outside Git in the task's
-`p1-real-suite` / `p1-real-suite-repeat` evidence directories. Cloud runs upload
+`p1-real-suite`, `p1-real-suite-repeat`, and final-runner
+`p1-final-suite-executed` evidence directories. A separate final-runner preflight
+was rejected before any gameplay because a scratch build symlink was untracked;
+its six identity-mismatch rows are retained in `p1-final-suite` and excluded from
+valid gameplay outcomes. The corrected clean worktree reused the unchanged,
+hash-verified 401597 build; no build identity was edited. Cloud runs upload
 their own exact source/binary receipts and raw logs with 14-day retention.
 
 Every qualified-near-death count is null with unavailable coverage. Low-HP
@@ -42,9 +47,9 @@ are explicitly declared; source saves/private Borg state are not restored.
 
 ## Validation and review findings
 
-- Cemetery: 53 runner/tests, 46 native-tool tests; statistics check over 129 reports.
+- Cemetery: 54 runner/tests, 46 native-tool tests; statistics check over 129 reports.
 - Reborn: formatting, Clippy, 165 workspace tests and 328 core release tests pass
-  (four existing ignored); 88 tool tests, 19 script tests, vendor audit pass.
+  (four existing ignored); 91 tool tests, 19 script tests, vendor audit pass.
 - Native local suite: 80 tests, 16 dependency/fixture skips, zero failures. CI
   supplies the missing upstream Git object, bindgen, zoo and incident fixtures.
 - Ordinary and exact smoke each match all three stored-reference streams, 3/3.
@@ -52,7 +57,7 @@ are explicitly declared; source saves/private Borg state are not restored.
   immutable qualified IDs; the original 2,584-package snapshot verified and controls reconcile.
   All six task-control packages and the gameplay packets are now retained only
   in Cemetery under the accepted ownership rule; source pages become pointers.
-  See ownership-migration.json for byte-preserving receipts.
+  See [ownership-migration.json](ownership-migration.json) for byte-preserving receipts.
   These ordinary records are distinct from synthetic suite results.
 - Direct export of a real synthetic death is rejected; reconciliation reports
   zero natural deaths for the six synthetic games, with no natural registry.

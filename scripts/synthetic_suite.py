@@ -243,7 +243,9 @@ def generate(path):
         integer(build['class_idx'], 0, 8)
         if build['core'] not in ('reborn', 'borg-rs'):
             raise ValueError('unsupported explicit Borg core')
-        local_file(root, build['profile'], build['profile_sha256'])
+        profile = local_file(root, build['profile'], build['profile_sha256'])
+        if build['core'] == 'borg-rs' and any(line.split('#', 1)[0].strip() for line in profile.read_text().splitlines()):
+            raise ValueError('P1 borg-rs suites support explicit defaults only; named core parameter profiles need a separate adapter')
         if build['start'] == 'record':
             if not all(k in build for k in ('record', 'record_sha256', 'catalog', 'catalog_sha256')):
                 raise ValueError('record build needs exact catalog provenance')

@@ -130,6 +130,16 @@ class SuiteTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'duplicate'):
             s.generate(self.path)
 
+    def test_core_profiles_cannot_silently_ignore_named_overrides(self):
+        self.manifest['character_builds'][0]['core'] = 'borg-rs'
+        self.save()
+        self.assertEqual(len(s.generate(self.path)['cases']), 4)
+        self.profile.write_text('max_tries_per_turn = 4\n')
+        self.manifest['character_builds'][0]['profile_sha256'] = s.sha(self.profile)
+        self.save()
+        with self.assertRaisesRegex(ValueError, 'explicit defaults only'):
+            s.generate(self.path)
+
     def test_outcomes_failures_and_unknown_qualification_are_independent(self):
         for mode, expected in [('death', 'death'), ('survived_to_cap', 'survived_to_cap'),
                                ('stopped', 'stopped'), ('short', 'stopped'), ('timeout', 'timeout'),

@@ -101,3 +101,9 @@ for gameplay. Source/binary/toolchain identities remain in the result packet.
 P2 expands observed catalogs and implements qualified null-move evidence after
 review. P3 adds compatible paired two-executable impact comparison. P1 makes no
 population, improvement, historical-death-reproduction or average-kit claim.
+
+The P1 runner applies named profiles to the original reborn core. For the
+vendored `borg-rs` core it accepts only an empty/comment-only profile, meaning
+explicit pinned defaults. Named overrides are rejected instead of silently
+ignored; a calibrated core-profile adapter is later work. The engine primitive
+and real startup tests support both cores. The approved P1 bank uses reborn.
