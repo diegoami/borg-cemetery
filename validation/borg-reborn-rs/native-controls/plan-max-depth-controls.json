@@ -3,16 +3,16 @@
   "purpose": "CI identity and export checks, not zoo comparison",
   "source": {
     "repository": "diegoami/borg-reborn-rs",
-    "change": "plan phases as max-depth caps",
-    "git_rev": "ab069d8d6b9b236ef87c264596c714a7dfd9820d",
-    "source_sha256": "231c2cc5945f88619316d974c724309a73ce0fdc4bc4bbd1302681d13328e7a7",
+    "change": "plan phases as max-depth caps; level-loop errand removed",
+    "git_rev": "a9afffe2fb822144c78b666a6e08f7385b277f6f",
+    "source_sha256": "2d8693c8b254f8fb63b9204d32eca4c1f9e1d8f44de59b916931c83234b81af4",
     "base": "borg-reborn-rs main d3ebe3c0"
   },
   "note": "CI deaths retained because the encounter family includes the source hash. Repeated validation attempts, not new independent lives or a survival comparison.",
   "runs": [
     {
       "run": "core",
-      "case": "D0000-q0e9d33c149b5a14e7814ccfd2b4f7e62910e1a0f5867f55702840869de6505b5",
+      "case": "D0000-q3b5918d5061c02e9b55058b3472d307266a0c9feeb6ed000a2083e6abb773d95",
       "seed": 1011,
       "class": "Mage",
       "death_cause": "a cave spider",
@@ -20,7 +20,7 @@
     },
     {
       "run": "reborn-1020",
-      "case": "D0000-q3970cd1d787be38db6822d15ae5f9cf1db43b418b141d2adcbdc20b58f5852ae",
+      "case": "D0000-q4bb22a6935265762f9e5faffc3ed0e5ccdc7be1e139c92ad62001b9e3ea2d743",
       "seed": 1020,
       "class": "Druid",
       "death_cause": "a giant white mouse",
@@ -28,7 +28,7 @@
     },
     {
       "run": "smoke-mage-2",
-      "case": "D0000-qeea4698d7d1b9d5da305b18784e06d725ce0e76a38e971d636074f8581566c92",
+      "case": "D0000-qad0fe15dbdc85e346abfdab20bd457659b0478204c8c02a7f360a2f0937490f8",
       "seed": 102,
       "class": "Mage",
       "death_cause": "Fang, Farmer Maggot's Dog",
