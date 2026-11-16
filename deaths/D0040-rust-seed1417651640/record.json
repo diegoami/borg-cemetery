@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0040-rust-seed1417651640",
+  "run_kind": "harness",
+  "character": "Half-Orc Necromancer",
+  "raw_cause": "a black naga",
+  "terminal": {
+    "cause": "a black naga",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 2,
+    "turn": 35791,
+    "race_idx": 6,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1417651640,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "bb60ddb5f938d926d18918e7cb525ce56505a3f7d02dd688db2c726ddcb97a15",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1422
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-plan-town/1417651640",
+      "result_sha256": "d081ad5945939af153714db09174c4358e3ed9f7f4b181053c9c526628f58993",
+      "raw_sha256": {
+        "keys.log": "d081ad5945939af153714db09174c4358e3ed9f7f4b181053c9c526628f58993",
+        "messages.log": "d88c34b96a4b1896739e596a6ad9e816795fcdf97bf2679bd8ee20e93f9d0ff6",
+        "state.log": "9fd62c903d42b8ff0e90ac142a1f371289ffb5f13383812e3b63ad093a9268cb"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-4522dd5c60176c37b01f534850ed7d41e17de3c4cca8cded8a101f32a04cf146",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "0c061c34c889bcc9af31bb84b46c4da9a4a60fe9f887d5a991972e8e35bf3108",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "72d28e5ac199b240cca40ef7524e83262b478b280ae7264f51bb0288663b5f0b",
+    "trace-core-tail.jsonl": "07db1844514ef5dbe153e51995cc8036f6837ad883fc55a5ac0ecb146f715d2f"
+  },
+  "investigation": null,
+  "issue": null
+}

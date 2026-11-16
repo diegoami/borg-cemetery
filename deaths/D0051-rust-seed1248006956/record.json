@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0051-rust-seed1248006956",
+  "run_kind": "harness",
+  "character": "Hobbit Ranger",
+  "raw_cause": "a baby black dragon",
+  "terminal": {
+    "cause": "a baby black dragon",
+    "dead": true,
+    "depth": 6,
+    "max_depth": 8,
+    "level": 4,
+    "turn": 60678,
+    "race_idx": 3,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1248006956,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "d928e265b6756eda0c5f80666a3658ea15e0dad553b9dbb4eaa214fb1520b5cd",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 6560
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-town/1248006956",
+      "result_sha256": "3f4248bd9338af17d16e6c9a892d0d1a194c24bdbc7b5b803293092f55d510aa",
+      "raw_sha256": {
+        "keys.log": "3f4248bd9338af17d16e6c9a892d0d1a194c24bdbc7b5b803293092f55d510aa",
+        "messages.log": "d81327540a1fbf550582af6af3edf5680245baf9c3f469f70453f2c9a50d6133",
+        "state.log": "7216eb35a55d91a8da3f00f991ff536cbad73b6c7b1d239ff54837420bb6f04e"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-10d108c09d6ced9f48aa6eb5c45b344b827344037755a8495dcc766c602bd173",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "a91d7078dd4f91103891161a94989a1c8fd51ad2779b17f19e9dd5dc5f16ac10",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "425e201dc49d831ce26e53194e89abef69344c26e65c8fc6a2d23d28b9370252",
+    "trace-core-tail.jsonl": "8ecfd24e49f561a3e2c66542c4c62744ceaff8cc5a379423b277de1f7bcd581a"
+  },
+  "investigation": null,
+  "issue": null
+}

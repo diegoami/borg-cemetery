@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0070-rust-seed102088710",
+  "run_kind": "harness",
+  "character": "Elf Rogue",
+  "raw_cause": "a grey mushroom patch",
+  "terminal": {
+    "cause": "a grey mushroom patch",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 52908,
+    "race_idx": 2,
+    "class_idx": 6
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 102088710,
+    "flags": "-",
+    "git_rev": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+    "git_dirty": "no",
+    "source_sha256": "2317021cfad2c97c840903ba95eb10cb0b5831d8ada93574b62ceac4d2e15b4c",
+    "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254",
+    "borg_txt_sha256": "7298534401b6784cf73f74a6347a8119ace501cb4569adff630f16f147646dd5",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 5654
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths4ec/classes-1800-small/4.2.6-reborn-rust-plans-m13-survival/reborn-m13-plan-town/102088710",
+      "result_sha256": "db77513a3c418eacf11e52dade4ac817c6cf5e30f9f00ebd39c5708854753ccf",
+      "raw_sha256": {
+        "keys.log": "db77513a3c418eacf11e52dade4ac817c6cf5e30f9f00ebd39c5708854753ccf",
+        "messages.log": "bb7d6946292c04ed0721908087df6e8c2c21072537a1d1821ab2fddf96b60286",
+        "state.log": "242076759e581f900e65fb3609b5e9ec4d5809d99c301050934bae40885e97e4"
+      },
+      "source_commit": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+      "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254"
+    }
+  ],
+  "encounter_family": "start-1346e241ba3d3b3c8c3ba5b13f91c7c8cc8ae6003f64bd9952bad094161b263d",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "87648232ca281819594e3f4706df902fee13024cbc8f670ebce42b1c696bf543",
+    "config.txt": "46513011605f607b89bf9d3f32750b042eda87d554f5cf95c41df7ed71e56111",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "b4fea081cce7b25e1aaedbc7a4226af4501b8548e6e1fa27615695b36c6cc83d",
+    "trace-core-tail.jsonl": "0f7c1db5d8f4408ab47ba1add26a3a0244f553ba42d2633627500b7e9b7dcd71"
+  },
+  "investigation": null,
+  "issue": null
+}
