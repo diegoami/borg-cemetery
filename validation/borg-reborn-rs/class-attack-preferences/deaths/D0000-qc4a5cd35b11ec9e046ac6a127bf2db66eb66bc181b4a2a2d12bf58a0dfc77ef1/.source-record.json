@@ -1,0 +1,57 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0005-rust-seed1022",
+  "run_kind": "harness",
+  "character": "Gnome Druid",
+  "raw_cause": "a giant yellow centipede",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 14120,
+    "race_idx": 4,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1022,
+    "flags": "menu",
+    "git_rev": "cac37f5901c90562715e47e7bcd4f9ff91ea4f9f",
+    "git_dirty": "no",
+    "source_sha256": "8c1fd6f44cf80a05ae9b9c0c5d9529e532d086eb75e11110939b0f13a3444cdc",
+    "binary_sha256": "cd0ba385aa81c2ddacb0d52ce349951fa1b2b1146f3016d4a66e93bb82a661bb",
+    "borg_txt_sha256": "41baeab598a35735abbb446aa6a8b7e52442055cdd8b2a93c155a96aeedf8f56",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3"
+  },
+  "decision_trace": null,
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/403-final-full/full-2-druid-2",
+      "result_sha256": "5d143d91fc928bb44171ce27e2846cd22d84cce3164e91686a0481acd4ed9f94",
+      "raw_sha256": {
+        "keys.log": "5d143d91fc928bb44171ce27e2846cd22d84cce3164e91686a0481acd4ed9f94",
+        "messages.log": "aa4bf9d500633b218ab722007177f53c379e514213f8aef11ebd74a46e137590",
+        "state.log": "e8699cec479acd7785cad91a2fd411c7be494007617f4826666b138b2cb01405"
+      },
+      "source_commit": "cac37f5901c90562715e47e7bcd4f9ff91ea4f9f",
+      "binary_sha256": "cd0ba385aa81c2ddacb0d52ce349951fa1b2b1146f3016d4a66e93bb82a661bb"
+    }
+  ],
+  "encounter_family": "start-3b1e665c897d0f2c65c191e22a6749cee8808014399d2925e56e9d9760692bc2",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "082c10fbf86c79589fc2046259afc9ffdf6f8265ab579d2731011ae8b4929867",
+    "config.txt": "866fbb0853b477c019a2e2432540fd944f626eb9cbf1d0a20fa5ffb8617bc7a3",
+    "depths.json": "e08a161f441fb8738064b99c9eb583209f26136cf54b5bb226e58500ee8f9ead",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "04dfe51cc84723272feeebc1e5b6bb8a7fac2cff3fed4f8e868cc89aae953feb"
+  },
+  "investigation": null,
+  "issue": null
+}

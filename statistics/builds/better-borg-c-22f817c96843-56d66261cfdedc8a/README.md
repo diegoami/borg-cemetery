@@ -53,6 +53,6 @@ cemetery: 1 dossiers.
 
 | Registry | Case report | Seed | Seed basis | Character | Cause | Turn | Depth | Level | Settings | Start family |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| cemetery | [D0007-collected](../../../deaths/D0007-collected/README.md) | Unknown | saved RNG | Measure Gnome Mage | a soldier | 179053 | Unknown | Unknown | [settings](#settings-cemetery-98cc6261449f) | start-f7f51c4d9967fbf8c4e7ca587cbb2318ab44ee54914c312cdc61702e296398e0 |
+| cemetery | [D-61d35b4323acf3ac6163e1b6285232fcf90349a8e726edc20d21bde4fa7258ee](../../../deaths/D0007-collected/README.md) | Unknown | saved RNG | Measure Gnome Mage | a soldier | 179053 | Unknown | Unknown | [settings](#settings-cemetery-98cc6261449f) | start-f7f51c4d9967fbf8c4e7ca587cbb2318ab44ee54914c312cdc61702e296398e0 |
 
 [Statistics index](../../README.md)

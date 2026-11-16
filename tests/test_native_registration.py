@@ -19,7 +19,8 @@ class NativeRegistrationTest(unittest.TestCase):
             case.mkdir(parents=True)
             record = dict(schema='borg-reborn-rs/death-record@1', id=case.name, encounter_family='start-example',
                           identity=dict(seed=123, git_rev='a' * 40), raw_cause='a monster',
-                          terminal=dict(turn=100, race_idx=0, class_idx=0, dead=True))
+                          terminal=dict(turn=100, race_idx=0, class_idx=0, dead=True),
+                          attempts=[dict(role='original', outcome='death', result_sha256='b' * 64)])
             (case / 'record.json').write_text(json.dumps(record))
             (case / 'report.md').write_text('Original native report.\n')
             (root / 'deaths/README.md').write_text('Curated historical index.\n')

@@ -1,0 +1,57 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "cd0ba385aa81c2ddacb0d52ce349951fa1b2b1146f3016d4a66e93bb82a661bb",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/403-synced-full/full-2-druid-1",
+      "raw_sha256": {
+        "keys.log": "7cf84ceb230ddb35da1086034817f2571c4892e573d2b7c5eb1173f797e62108",
+        "messages.log": "014f872fde7331df78cef361e6a1da21a4c4f21d03a05a6fd430ad399340e8ae",
+        "state.log": "56a1c8c0e3a065cc92297cbfa9461dc04b357d6153d0eff5d4d29dece5f308e1"
+      },
+      "result_sha256": "7cf84ceb230ddb35da1086034817f2571c4892e573d2b7c5eb1173f797e62108",
+      "role": "original",
+      "source_commit": "25e89494413177223935ba3dc12bbf49a7e2e380"
+    }
+  ],
+  "character": "Hobbit Druid",
+  "core_decision_trace": null,
+  "decision_trace": null,
+  "encounter_family": "start-3d9112d42e4cecff6e3e89973e227fd810a618e341b4f69c231142be985ba75e",
+  "files_sha256": {
+    "build.json": "c5b84900555940372458d73f3d1d7d75ebf7387b045ec9c56564b7bb79f1241b",
+    "config.txt": "10dfa550135a8005b7b20f0e68727036d51b341aa5b76c2fe21a48661ceb029e",
+    "depths.json": "d07754746ad314a99f5d22fef68b0d12e84e1503dff3e08eb562bc118832cc70",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "27219a77489001ca627897f5b02e64172003f49e1b124c469942a2892ef47bc2"
+  },
+  "id": "D0000-q9553ccbdeb4730216f9c7baaeec436b6a9f6570b59fbfd48008389944de57287",
+  "identity": {
+    "binary_sha256": "cd0ba385aa81c2ddacb0d52ce349951fa1b2b1146f3016d4a66e93bb82a661bb",
+    "borg_txt_sha256": "2da6fc3537b0994523e5c3a2920b95bc6b852928239d2c9d4401f15dc5a37d62",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "25e89494413177223935ba3dc12bbf49a7e2e380",
+    "impl": "rust",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1021,
+    "source_sha256": "0d05063ed05226f0a7d1b92c7aad844f1ce73994fd9b1615dda7c44a3aaf46e4"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a fruit bat",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a fruit bat",
+    "class_idx": 2,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 3,
+    "turn": 30109
+  }
+}
