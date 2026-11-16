@@ -1,0 +1,5 @@
+# Approved recorder promotion onto independently advanced main
+
+The owner accepted the recorder-only review at46d5f2ae and requested merging it. Track-p had concurrently gained unreviewed preference work (#405), so preserve that separate draft review and promote the accepted recorder snapshot alone. Accepted main8a0b57c8 adds #354 harness work and #368 core refresh; neither is rewritten. Reviewed recorder implementation bytes are unchanged.
+
+Clean build71978c7b/source1573e6ca produced three retained controls: native1011, original-core smoke102 and original-core1020. All match the corresponding accepted-main9a4ea375 controls in key SHA and terminal facts. Exact identities, source-qualified case mappings, payload hashes and raw locations are in promotion-main-sync.json. These are validation continuations of controls, not independent lives or a population-performance claim. Earlier45-case receipts retain their original identities and are not relabelled as current-main proof. Combined source CI must pass before merge.

@@ -9,7 +9,7 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 67; distinct starting conditions: 66; retained process attempts: 66 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 70; distinct starting conditions: 69; retained process attempts: 69 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -59,6 +59,8 @@ Dossiers: 67; distinct starting conditions: 66; retained process attempts: 66 (i
 | [D0000-q93b74e7bc658b1dd84851eb70986333e1bd9d8c2a4854444c44549f21d21d8dc](D0000-q93b74e7bc658b1dd84851eb70986333e1bd9d8c2a4854444c44549f21d21d8dc/report.md) | unassigned | `c310d0185990` | 1023 | a metallic red centipede | 13184 | unassessed |
 | [D0000-q942b5789e5c46940429248a14f8a10c5d6d73a17273f4685497e97834d5854f2](D0000-q942b5789e5c46940429248a14f8a10c5d6d73a17273f4685497e97834d5854f2/report.md) | unassigned | `60a506b689ff` | 1022 | a giant yellow centipede | 14120 | unassessed |
 | [D0000-q99546bcf1453ec3dcde322c143e92f0bb2ff0ad09660bf8d35d979fc877f9b71](D0000-q99546bcf1453ec3dcde322c143e92f0bb2ff0ad09660bf8d35d979fc877f9b71/report.md) | unassigned | `79ec0591248d` | 1020 | a small kobold | 9547 | unassessed |
+| [D0000-q9f5285fd989053070dab78fdf5c0dabb557d6f1a4c7a109134eb4e4e91305fe9](D0000-q9f5285fd989053070dab78fdf5c0dabb557d6f1a4c7a109134eb4e4e91305fe9/report.md) | unassigned | `71978c7bb676` | 102 | Fang, Farmer Maggot's Dog | 3640 | unassessed |
+| [D0000-qa02ad14602b599b3cff50f189a16169d823b22be3d147bd416bd51d43b1d7786](D0000-qa02ad14602b599b3cff50f189a16169d823b22be3d147bd416bd51d43b1d7786/report.md) | unassigned | `71978c7bb676` | 1011 | a cave spider | 18903 | unassessed |
 | [D0000-qa22f379c0ae352dfdb3622abfa3f199c4264e858106fd4bef33b644690c7cd3c](D0000-qa22f379c0ae352dfdb3622abfa3f199c4264e858106fd4bef33b644690c7cd3c/report.md) | unassigned | `cf687bb24de8` | 1062 | a kobold | 6720 | unassessed |
 | [D0000-qa5ccdc36bb20727ec115452a6d70d950ccbe0e2aed8d4c609f10aecfbba598fb](D0000-qa5ccdc36bb20727ec115452a6d70d950ccbe0e2aed8d4c609f10aecfbba598fb/report.md) | unassigned | `80d37b8bde6e` | 1020 | a giant white mouse | 8922 | unassessed |
 | [D0000-qa9ab68a6ece567098f0f7ac1d0ec554e5c6bd255ac66ef77882f33ccd693de37](D0000-qa9ab68a6ece567098f0f7ac1d0ec554e5c6bd255ac66ef77882f33ccd693de37/report.md) | unassigned | `c310d0185990` | 1024 | a grey mushroom patch | 5613 | unassessed |
@@ -80,6 +82,7 @@ Dossiers: 67; distinct starting conditions: 66; retained process attempts: 66 (i
 | [D0000-qee65e8edbd3bf8644d1fcfb458398ce992a214938cee66b5bb482b5e24b17fe9](D0000-qee65e8edbd3bf8644d1fcfb458398ce992a214938cee66b5bb482b5e24b17fe9/report.md) | unassigned | `60a506b689ff` | 1074 | poison | 22250 | unassessed |
 | [D0000-qf91e2c916a7cf6eb83007c40acfde25c1ee8179df79cfe41c05dcf0d8687892d](D0000-qf91e2c916a7cf6eb83007c40acfde25c1ee8179df79cfe41c05dcf0d8687892d/report.md) | unassigned | `80d37b8bde6e` | 102 | Fang, Farmer Maggot's Dog | 3640 | unassessed |
 | [D0000-qfe265e6ec832c636a527e8e5ab1fb9bbf32358e87b74d51de77bf1e6bf4e20fb](D0000-qfe265e6ec832c636a527e8e5ab1fb9bbf32358e87b74d51de77bf1e6bf4e20fb/report.md) | unassigned | `79ec0591248d` | 1022 | a giant yellow centipede | 14120 | unassessed |
+| [D0000-qff56fe6845b928fdd4b44af9722e01e19fa0cfda292c45ff2e1707d809218c80](D0000-qff56fe6845b928fdd4b44af9722e01e19fa0cfda292c45ff2e1707d809218c80/report.md) | unassigned | `71978c7bb676` | 1020 | a giant white mouse | 8922 | unassessed |
 
 ## Aggregated actions
 
