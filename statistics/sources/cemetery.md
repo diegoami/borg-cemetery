@@ -4,29 +4,33 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `c4179a6aa0d9c20a06b32d3212f77149fa1ff0566e788c3dbe6ac4ab876a3aed`.
+Input inventory SHA-256: `f3557155ec181013d09a4eead837909138b5250a2055b34f8793df587dc9e428`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
 | Cause | Dossiers |
 | --- | --- |
-| poison | 8 |
+| poison | 10 |
+| a soldier | 8 |
+| Fang, Farmer Maggot's Dog | 7 |
 | a wild cat | 6 |
-| Fang, Farmer Maggot's Dog | 6 |
-| a soldier | 5 |
-| a grey mushroom patch | 4 |
-| a cutpurse | 3 |
+| a grey mushroom patch | 6 |
+| a cutpurse | 4 |
 | a giant yellow centipede | 3 |
 | a grey mold | 3 |
+| Grip, Farmer Maggot's Dog | 3 |
 | starvation | 2 |
 | a small kobold | 2 |
 | a crow | 2 |
-| Grip, Farmer Maggot's Dog | 2 |
 | a fatal wound | 2 |
 | a snaga | 2 |
+| a blue yeek | 2 |
 | a cave spider | 2 |
 | burning to a cinder in lava | 2 |
+| a kobold shaman | 2 |
 | a blue worm mass | 2 |
+| a giant white louse | 2 |
+| a fruit bat | 2 |
 | a pseudo-dragon | 1 |
 | a killer brown beetle | 1 |
 | a kobold | 1 |
@@ -35,12 +39,12 @@ The companion snapshot for an external source retains normalized statistical fie
 | a giant white ant | 1 |
 | an ironfist priest | 1 |
 | a clear icky thing | 1 |
-| a blue yeek | 1 |
 | a black naga | 1 |
 | a brown mold | 1 |
-| a kobold shaman | 1 |
 | a baby black dragon | 1 |
-| a giant white louse | 1 |
+| a giant white mouse | 1 |
+| a radiation eye | 1 |
+| a wild dog | 1 |
 
 ## Terminal distributions
 
@@ -48,15 +52,21 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 70 | 2626 | 30749 | 87129.91 | 1094860 |
-| depth | 45 | 0 | 1 | 1.73 | 13 |
-| level | 45 | 1 | 2 | 2.98 | 8 |
+| turn | 88 | 2626 | 28706.5 | 75884.25 | 1094860 |
+| depth | 63 | 0 | 1 | 1.89 | 18 |
+| level | 63 | 1 | 2 | 2.98 | 8 |
 
 ## Characters
 
 | Character | Dossiers |
 | --- | --- |
-| Half-Elf Druid | 2 |
+| Half-Elf Druid | 3 |
+| Dwarf Necromancer | 3 |
+| Elf Rogue | 3 |
+| Human Ranger | 3 |
+| Half-Elf Mage | 3 |
+| Half-Troll Priest | 3 |
+| Human Mage | 3 |
 | CollectedBorg | 2 |
 | Measure Human Priest | 2 |
 | Measure Half-Troll Necromancer | 2 |
@@ -64,13 +74,13 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Measure Dunadan Druid | 2 |
 | Measure Human Necromancer | 2 |
 | Measure Elf Necromancer | 2 |
-| Dwarf Necromancer | 2 |
-| Elf Rogue | 2 |
-| Human Ranger | 2 |
-| Half-Elf Mage | 2 |
+| Human Necromancer | 2 |
+| Half-Orc Rogue | 2 |
+| Dunadan Druid | 2 |
+| Elf Druid | 2 |
+| Hobbit Druid | 2 |
+| Human Druid | 2 |
 | Elf Ranger | 2 |
-| Half-Troll Priest | 2 |
-| Human Mage | 2 |
 | Human Warrior | 1 |
 | Hobbit Rogue | 1 |
 | Gnome Blackguard | 1 |
@@ -88,21 +98,15 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Measure Kobold Mage | 1 |
 | Measure Half-Orc Mage | 1 |
 | Measure High-Elf Paladin | 1 |
-| Human Necromancer | 1 |
 | Hobbit Mage | 1 |
 | Dunadan Warrior | 1 |
 | Dunadan Necromancer | 1 |
 | Human Priest | 1 |
 | Gnome Necromancer | 1 |
-| Half-Orc Rogue | 1 |
 | Dwarf Priest | 1 |
 | Half-Orc Necromancer | 1 |
 | Dunadan Mage | 1 |
-| Dunadan Druid | 1 |
-| Elf Druid | 1 |
 | Dwarf Druid | 1 |
-| Hobbit Druid | 1 |
-| Human Druid | 1 |
 | Half-Troll Ranger | 1 |
 | Gnome Ranger | 1 |
 | Dunadan Blackguard | 1 |
@@ -111,5 +115,10 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Elf Priest | 1 |
 | Human Blackguard | 1 |
 | Half-Elf Ranger | 1 |
+| Gnome Priest | 1 |
+| Half-Orc Druid | 1 |
+| Elf Warrior | 1 |
+| Dunadan Ranger | 1 |
+| Half-Troll Paladin | 1 |
 
 [Statistics index](../README.md)
