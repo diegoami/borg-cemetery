@@ -1,0 +1,47 @@
+{
+  "candidate_screen": {
+    "hp_threshold": 2,
+    "kind": "low_hp_candidate"
+  },
+  "character_builds": [
+    {
+      "class_idx": 0,
+      "core": "reborn",
+      "id": "birth",
+      "profile": "profile.txt",
+      "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+      "race_idx": 0,
+      "start": "birth"
+    },
+    {
+      "catalog": "catalog.json",
+      "catalog_sha256": "df3206ab7fd3eb3a8fe8a38bfae4fe139c222e9be8ade242f8b3d7d33468ad6b",
+      "class_idx": 0,
+      "core": "reborn",
+      "id": "observed-level5",
+      "profile": "profile.txt",
+      "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+      "race_idx": 0,
+      "record": "warrior-level5.build",
+      "record_sha256": "3e0aa670d216c3bc4e6627d895ee30bce7375a0398a2de87865ecc197427ab44",
+      "start": "record"
+    }
+  ],
+  "depths": [
+    5,
+    10,
+    15
+  ],
+  "revision": 1,
+  "runtime": {
+    "commit": "401597cafd16f8330590763aa9bc15c10e40e5be",
+    "repository": "diegoami/borg-reborn-rs"
+  },
+  "schema": "borg-cemetery/synthetic-suite@1",
+  "seeds": [
+    101
+  ],
+  "suite_id": "p1-warrior",
+  "turn_cap": 5000,
+  "wall_seconds": 30
+}

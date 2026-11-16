@@ -3,7 +3,7 @@
 | Milestone | Scope | State |
 | --- | --- | --- |
 | M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | Prepared for owner-run review; **not accepted** |
-| M2 / synthetic P1. Small generated-depth suite | One class, depths 5/10/15, one seed, birth kit plus one observed level tier; deterministic manifests, bounded execution, independent outcome/failure fields, candidate danger screens and reports; pinned cemetery CI | In progress, owner-directed 2026-11-16; review at milestone |
+| M2 / synthetic P1. Small generated-depth suite | One class, depths 5/10/15, one seed, birth kit plus one observed level tier; deterministic manifests, bounded execution, independent outcome/failure fields, candidate danger screens and reports; pinned cemetery CI | Prepared for owner-run milestone review; not accepted |
 
 The owner instructed continued implementation with review at the milestone.
 This selects the bounded synthetic P1 work under #5 and reborn #371. It does
@@ -64,7 +64,7 @@ build/configuration identities, database-backed attempts, bounded external
 evidence and on-demand analysis/reconstruction. Near-deaths require independent
 engine evidence; findings feed scenario trials and cohort validation.
 
-This is planning requested by the owner, not a selected next milestone or an
-implementation commitment. M1 remains unaccepted; its implementation pin and
+The broader database/service redesign remains planning, not an implementation
+commitment. Only the bounded synthetic P1 subset selected above is authorized. M1 remains unaccepted; its implementation pin and
 existing evidence are unchanged. The proposal includes delivery slices and
 acceptance criteria for a later owner decision.

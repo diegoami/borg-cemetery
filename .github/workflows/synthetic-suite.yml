@@ -1,0 +1,59 @@
+name: Synthetic P1 generated dungeon suite
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - scripts/synthetic_suite.py
+      - synthetic/**
+      - .github/workflows/synthetic-suite.yml
+permissions:
+  contents: read
+jobs:
+  suite:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate suite and resolve exact engine commit
+        id: target
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          from pathlib import Path
+          sys.path.insert(0, 'scripts')
+          from synthetic_suite import generate
+          suite = generate(Path('synthetic/p1-warrior/suite.json'))
+          assert len(suite['cases']) == 6
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
+              stream.write('commit=' + suite['manifest']['runtime']['commit'] + '\n')
+          PY
+      - uses: actions/checkout@v4
+        with:
+          repository: diegoami/borg-reborn-rs
+          ref: ${{ steps.target.outputs.commit }}
+          path: target-borg
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@1.100.0
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq build-essential cmake libssl-dev
+      - name: Build exact target
+        working-directory: target-borg
+        run: BORG_IMPL=rust flock /tmp/angband-validation.lock harness/build.sh
+      - name: Execute six generated scenarios without saved games
+        run: |
+          python3 scripts/synthetic_suite.py run --manifest synthetic/p1-warrior/suite.json \
+            --source target-borg --out "$RUNNER_TEMP/synthetic-p1"
+      - name: Publish report in job summary
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/synthetic-p1/report.md" ]; then
+            cat "$RUNNER_TEMP/synthetic-p1/report.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: synthetic-p1-evidence
+          path: ${{ runner.temp }}/synthetic-p1
+          if-no-files-found: error
+          retention-days: 14
