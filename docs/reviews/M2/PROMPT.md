@@ -34,3 +34,12 @@ Borg-executable improvement comparison is included. These belong to P2/P3.
 Keep the milestone unaccepted/unmerged until the owner decides. Preserve M1's
 separate unaccepted review boundary. Competing reborn PR #386 is not an additional
 primitive to merge on top; selected shared startup fixes have explicit provenance.
+
+Read REVIEW-FIXES.md for the response to the d406d2c9/e750549 reviews.
+Recheck capture presence/absence receipts, unchanged ordinary capture-control
+streams, the native character_dungeon lifecycle guard, normalized synthetic
+flags and visible malformed-option exclusions in mixed natural/synthetic scans.
+The earlier Cemetery review covered the guard only: independently review the
+P1 runner, catalog, retained controls and evidence before accepting that scope.
+The observed-tier source capture may retain an earlier exact runtime pin than
+suite execution; verify both identities rather than rewriting the catalog.
