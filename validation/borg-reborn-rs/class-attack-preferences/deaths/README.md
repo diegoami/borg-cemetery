@@ -9,7 +9,7 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 98; distinct starting conditions: 82; retained process attempts: 82 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 99; distinct starting conditions: 83; retained process attempts: 83 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -38,6 +38,7 @@ Dossiers: 98; distinct starting conditions: 82; retained process attempts: 82 (i
 | [D0000-q43489718a2e5da2bac0a568bb38eeffd0d8a91295ada7c500a220a4064fe126b](D0000-q43489718a2e5da2bac0a568bb38eeffd0d8a91295ada7c500a220a4064fe126b/report.md) | unassigned | `8e007cddc1b0` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-q4576015c2994d99f4b1fdd9fba3b029cb2f8c68b09341b501cc3458c37a9aba6](D0000-q4576015c2994d99f4b1fdd9fba3b029cb2f8c68b09341b501cc3458c37a9aba6/report.md) | unassigned | `8e007cddc1b0` | 1043 | Grip, Farmer Maggot's Dog | 23504 | unassessed |
 | [D0000-q457ebde3074870507b19c4a9c7579078c5d68a5734d1110623d63bac5210db43](D0000-q457ebde3074870507b19c4a9c7579078c5d68a5734d1110623d63bac5210db43/report.md) | unassigned | `cac37f5901c9` | 1073 | a gallant | 94857 | unassessed |
+| [D0000-q45b98cebcefe6c649d4c420c542bd8b86c6266ca04e576b32bc4c9748c3af1f5](D0000-q45b98cebcefe6c649d4c420c542bd8b86c6266ca04e576b32bc4c9748c3af1f5/report.md) | unassigned | `0ebe558ddbe5` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-q4920f5ffb12ba8ce603319b354254344aadaab6a9dcf8f1bd475ca5324e43317](D0000-q4920f5ffb12ba8ce603319b354254344aadaab6a9dcf8f1bd475ca5324e43317/report.md) | unassigned | `cac37f5901c9` | 1021 | a fruit bat | 30109 | unassessed |
 | [D0000-q52a866560bfeaecd3722b3b2152067548f091e8e597f559e4edacdfed1e8a279](D0000-q52a866560bfeaecd3722b3b2152067548f091e8e597f559e4edacdfed1e8a279/report.md) | unassigned | `cd411e551fa8` | 1023 | a metallic red centipede | 13184 | unassessed |
 | [D0000-q5857bd12deb63d6acac04c2546822f7f4bbbd0c3870129d7e061d636f4eb058e](D0000-q5857bd12deb63d6acac04c2546822f7f4bbbd0c3870129d7e061d636f4eb058e/report.md) | unassigned | `fc556f855d03` | 102 | Fang, Farmer Maggot's Dog | 3640 | unassessed |
