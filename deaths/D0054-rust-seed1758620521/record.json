@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0054-rust-seed1758620521",
+  "run_kind": "harness",
+  "character": "Half-Elf Ranger",
+  "raw_cause": "a wild cat",
+  "terminal": {
+    "cause": "a wild cat",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 5,
+    "turn": 83169,
+    "race_idx": 1,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1758620521,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "371c3fcf160b5fc959cf01f875191349987f6db52926897816d035aa6fa8ee7c",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 8615
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-town/1758620521",
+      "result_sha256": "e6bf623f4890822c1d8822c2aa90cd579ff19e4bbfc20f4d77aaea1a599f66b1",
+      "raw_sha256": {
+        "keys.log": "e6bf623f4890822c1d8822c2aa90cd579ff19e4bbfc20f4d77aaea1a599f66b1",
+        "messages.log": "e62af6f92ed9a0d8fc485fc4fa9fbf5f27c968fb893330c6dc60a2d198003946",
+        "state.log": "8df909fbc263ae56fbe51b87a1c7bea9d8e3a26860e46b488bdea41438050fb0"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-95f5a628844f3e4947f3554179e1c8466a040c33155fa89c171782152d97e605",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "d2fa0490526bc3a0b1298429abc77158b32d0f33886378643abac326b35c74b1",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "8db247c8cfec42a081e4e1040d17513cc9f7f2e8fd461c8e73520a897eeb4d58",
+    "trace-core-tail.jsonl": "6c367cb8d5e515983db58d2da8451cadb46d61eba9e05bfe728b6a78d348ec0b"
+  },
+  "investigation": null,
+  "issue": null
+}

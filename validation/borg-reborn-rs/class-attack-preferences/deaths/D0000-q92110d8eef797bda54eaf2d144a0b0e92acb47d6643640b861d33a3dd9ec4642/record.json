@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "47a2db27d503470eeca22fc73a9cc91a806a7560097d8200931de316acead288",
+      "outcome": "death",
+      "raw_directory": "/tmp/tmpcah2o8cv/on",
+      "raw_sha256": {
+        "keys.log": "da1c7108b7a227ba2a4774cd11d271880c1494b5e42cd2f8801d89b858619729",
+        "messages.log": "791b82f33b60ebdbc3329909f7b1d7be557945ca6920e27b226430a58e0489e0",
+        "state.log": "bb0ce3938afff4b831f0c0c60f4cd40a2346616577b4116af401b962226e09c1"
+      },
+      "result_sha256": "da1c7108b7a227ba2a4774cd11d271880c1494b5e42cd2f8801d89b858619729",
+      "role": "original",
+      "source_commit": "cce8ccfc320bff92cf2a17a54cadbd12af08cdb8"
+    }
+  ],
+  "character": "Elf Mage",
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 161,
+    "of": 161
+  },
+  "decision_trace": null,
+  "encounter_family": "start-3a9752e62044554ff7f35989ca946a61b7c48cbd3e245e26033e36768493dfe8",
+  "files_sha256": {
+    "build.json": "f2f468b8861bb645580ce15738b209112c91395ca681fc3fe0ad2dd942a9ebde",
+    "config.txt": "a1888d6d6c7c831f74ff8fa555b5a3d409ba05cbca8e5450a0ef1a46cd647658",
+    "depths.json": "e3700df30b10ec0a3a1c966821dd8635e4d6a94132b128dd078ef5e1382cae80",
+    "params-core.json": "e2ab02d6ddf1a6124465179504cd8c9793564cd44b863fabcd8d8e367b64987b",
+    "summary.json": "858b550958b93dc86c6670c4cce8a91e27d6af874d52116b991d122c25a6960d",
+    "trace-core-tail.jsonl": "4576e25674b0ccd4c968d8909a3c9eb4d12942ce55b89a156fdbcc81ec45005e"
+  },
+  "id": "D0000-q92110d8eef797bda54eaf2d144a0b0e92acb47d6643640b861d33a3dd9ec4642",
+  "identity": {
+    "binary_sha256": "47a2db27d503470eeca22fc73a9cc91a806a7560097d8200931de316acead288",
+    "borg_txt_sha256": "3e5f27a2ee1e424776e585af9fd43efe2e427a695fb92b6225832392e3cd801e",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "cce8ccfc320bff92cf2a17a54cadbd12af08cdb8",
+    "impl": "rust",
+    "params_core_sha256": "e2ab02d6ddf1a6124465179504cd8c9793564cd44b863fabcd8d8e367b64987b",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1011,
+    "source_sha256": "d012f3af1441c69dbdd4c7dcf8200d4eda55bb8c82b6c4bafa8dec784f390226"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a fruit bat",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a fruit bat",
+    "class_idx": 1,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 2,
+    "turn": 1979
+  }
+}

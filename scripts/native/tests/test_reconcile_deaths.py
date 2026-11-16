@@ -1,7 +1,9 @@
 """tools/reconcile-deaths.py --runs (E review, finding 3). Run: python3 -m unittest discover -s tools/tests"""
 
 import hashlib
+import contextlib
 import importlib.util
+import io
 import json
 import tempfile
 import unittest
@@ -43,6 +45,38 @@ def dossier(registry, case, sha, fam=None):
 
 
 class RunsTest(unittest.TestCase):
+    def test_mixed_scan_reports_exclusions_and_keeps_natural_deaths(self):
+        with tempfile.TemporaryDirectory() as t:
+            run(t, 'natural')
+            with (Path(t) / 'runs/natural/config.txt').open('a') as stream:
+                stream.write('synthetic=0\nstart_depth=0\n')
+            excluded = {'one-way': {'game_options': {'birth_force_descend': True, 'birth_no_recall': True}},
+                        'bad-options': {'game_options': [1]}, 'synthetic': {'synthetic': True}}
+            for name, extra in excluded.items():
+                run(t, name)
+                path = Path(t) / 'runs' / name / 'summary.json'
+                path.write_text(json.dumps(dict(json.loads(path.read_text()), **extra)))
+            run(t, 'conservative-config')
+            with (Path(t) / 'runs/conservative-config/config.txt').open('a') as stream:
+                stream.write('synthetic=no\n')
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output):
+                deaths, missing = rc.unexported([Path(t) / 'runs'], Path(t) / 'temp', build_id(t))
+            self.assertEqual((deaths, [path.name for path, _ in missing]), (1, ['natural']))
+            self.assertEqual(output.getvalue().count('SKIPPED:'), 4)
+            for reason in ('malformed game_options', 'one-way birth options', 'synthetic start'):
+                self.assertIn(reason, output.getvalue())
+
+    def test_synthetic_deaths_are_excluded_from_natural_reconciliation(self):
+        with tempfile.TemporaryDirectory() as t:
+            for name, config in [('synthetic', 'synthetic=1\n'),
+                                 ('depth', 'start_depth=20\n'),
+                                 ('flags', 'flags=menu,start-depth=20\n')]:
+                run(t, name)
+                with (Path(t) / 'runs' / name / 'config.txt').open('a') as stream:
+                    stream.write(config)
+            self.assertEqual(rc.unexported([Path(t) / 'runs'], Path(t) / 'temp', build_id(t)), (0, []))
+
     def test_an_unexported_death_fails_even_with_an_empty_registry(self):
         with tempfile.TemporaryDirectory() as t:
             run(t, 'a')
@@ -76,6 +110,66 @@ class RunsTest(unittest.TestCase):
             (Path(t) / 'runs' / 'manifest').write_text('build_id_source_sha256=fromsuite\n')
             dossier(Path(t) / 'temp', 'D0001-rust-seed1', sha, fam=family(source='fromsuite'))
             self.assertEqual(rc.unexported([Path(t) / 'runs'], Path(t) / 'temp', build_id(t, 'cafe')), (1, []))
+
+
+def stated(registry, case, sha, source, seed=1011, race=2, cls=1, borg_txt='b0'):
+    """A dossier that states its start, built from SOURCE."""
+    d = Path(registry) / case
+    d.mkdir(parents=True)
+    (d / 'record.json').write_text(json.dumps({
+        'encounter_family': family(source=source) + f'-{seed}-{race}-{cls}-{borg_txt}', 'raw_cause': 'a cave spider',
+        'identity': {'impl': 'rust', 'seed': seed, 'flags': 'menu', 'source_sha256': source, 'borg_txt_sha256': borg_txt},
+        'terminal': {'turn': 9, 'race_idx': race, 'class_idx': cls},
+        'attempts': [{'outcome': 'death', 'result_sha256': sha}]}))
+    (d / 'config.txt').write_text('flags=menu\n')
+
+
+class UnchangedGameTest(unittest.TestCase):
+    """borg-reborn-rs #464: an unchanged game is not a new death."""
+
+    def check(self, temp, registry, *extra):
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            code = rc.main([str(temp), '--registry', str(registry), *extra])
+        return code, output.getvalue()
+
+    def test_the_same_game_from_another_build_is_known(self):
+        with tempfile.TemporaryDirectory() as t:
+            stated(Path(t) / 'reg', 'D0000-qold', 'k' * 64, source='old')
+            stated(Path(t) / 'temp', 'D0001-rust-seed1011', 'k' * 64, source='new')
+            code, out = self.check(Path(t) / 'temp', Path(t) / 'reg')
+            self.assertEqual(code, 0, out)
+            self.assertIn('KNOWN: D0001-rust-seed1011: the same game as retained D0000-qold', out)
+            self.assertIn('0 not in', out)
+
+    def test_exact_still_requires_the_same_build(self):
+        with tempfile.TemporaryDirectory() as t:
+            stated(Path(t) / 'reg', 'D0000-qold', 'k' * 64, source='old')
+            stated(Path(t) / 'temp', 'D0001-rust-seed1011', 'k' * 64, source='new')
+            code, out = self.check(Path(t) / 'temp', Path(t) / 'reg', '--exact')
+            self.assertEqual(code, 1)
+            self.assertIn('UNRECORDED: D0001-rust-seed1011', out)
+
+    def test_another_key_stream_is_a_new_death(self):
+        with tempfile.TemporaryDirectory() as t:
+            stated(Path(t) / 'reg', 'D0000-qold', 'k' * 64, source='old')
+            stated(Path(t) / 'temp', 'D0001-rust-seed1011', 'j' * 64, source='new')
+            code, out = self.check(Path(t) / 'temp', Path(t) / 'reg')
+            self.assertEqual(code, 1)
+            self.assertIn('UNRECORDED', out)
+
+    def test_the_same_keys_from_another_start_are_a_new_death(self):
+        for other in [{'seed': 1012}, {'race': 3}, {'cls': 2}, {'borg_txt': 'b1'}]:
+            with self.subTest(other=other), tempfile.TemporaryDirectory() as t:
+                stated(Path(t) / 'reg', 'D0000-qold', 'k' * 64, source='old', **other)
+                stated(Path(t) / 'temp', 'D0001-rust-seed1011', 'k' * 64, source='new')
+                self.assertEqual(self.check(Path(t) / 'temp', Path(t) / 'reg')[0], 1)
+
+    def test_a_record_without_its_start_is_matched_exactly(self):
+        with tempfile.TemporaryDirectory() as t:
+            dossier(Path(t) / 'reg', 'D0000-qold', 'k' * 64, fam=family(source='old'))
+            dossier(Path(t) / 'temp', 'D0001-rust-seed1011', 'k' * 64, fam=family(source='new'))
+            self.assertEqual(self.check(Path(t) / 'temp', Path(t) / 'reg')[0], 1)
 
 
 if __name__ == '__main__':

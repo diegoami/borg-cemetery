@@ -1,0 +1,260 @@
+{
+  "independent_run_count": 1,
+  "limitations": [
+    "one observation, not a population average or typical-kit claim",
+    "Human Warrior only; no artifacts, egos, curses or nondefault item properties"
+  ],
+  "missing_data": [
+    "historical monster/object knowledge beyond the recorded projection",
+    "Borg private memory and source dungeon/quest history"
+  ],
+  "normalization": [
+    "full HP/SP at synthetic start",
+    "no timed status effects",
+    "fresh Borg memory",
+    "fresh-birth hunger and other nonprojected character state",
+    "native mundane-kind projection; recorded combat knowledge and carried-kind awareness",
+    "other historical knowledge, quest history and dungeon state are not restored"
+  ],
+  "projection": {
+    "hp-rolls": [
+      19,
+      38,
+      50,
+      52,
+      65,
+      78,
+      87,
+      94,
+      112,
+      115,
+      122,
+      139,
+      151,
+      163,
+      181,
+      184,
+      203,
+      213,
+      228,
+      244,
+      262,
+      264,
+      277,
+      288,
+      291,
+      304,
+      316,
+      321,
+      332,
+      341,
+      354,
+      364,
+      369,
+      377,
+      396,
+      400,
+      403,
+      415,
+      434,
+      446,
+      460,
+      462,
+      471,
+      483,
+      485,
+      486,
+      498,
+      517,
+      534,
+      539
+    ],
+    "identity": [
+      0,
+      0,
+      5
+    ],
+    "items": [
+      {
+        "aware": 1,
+        "pval": 0,
+        "quantity": 1,
+        "slot": 6,
+        "sval": 2,
+        "timeout": 0,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 16
+      },
+      {
+        "aware": 1,
+        "pval": 0,
+        "quantity": 1,
+        "slot": 0,
+        "sval": 1,
+        "timeout": 0,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 9
+      },
+      {
+        "aware": 1,
+        "pval": 0,
+        "quantity": 1,
+        "slot": -1,
+        "sval": 26,
+        "timeout": 0,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 26
+      },
+      {
+        "aware": 1,
+        "pval": 0,
+        "quantity": 1,
+        "slot": 5,
+        "sval": 1,
+        "timeout": 3231,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 19
+      },
+      {
+        "aware": 1,
+        "pval": 0,
+        "quantity": 3,
+        "slot": -1,
+        "sval": 5,
+        "timeout": 0,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 28
+      },
+      {
+        "aware": 1,
+        "pval": 0,
+        "quantity": 2,
+        "slot": -1,
+        "sval": 1,
+        "timeout": 5000,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 19
+      },
+      {
+        "aware": 0,
+        "pval": 0,
+        "quantity": 1,
+        "slot": -1,
+        "sval": 23,
+        "timeout": 0,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 25
+      },
+      {
+        "aware": 0,
+        "pval": 0,
+        "quantity": 2,
+        "slot": -1,
+        "sval": 34,
+        "timeout": 0,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 26
+      },
+      {
+        "aware": 0,
+        "pval": 0,
+        "quantity": 1,
+        "slot": -1,
+        "sval": 27,
+        "timeout": 0,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 25
+      },
+      {
+        "aware": 0,
+        "pval": 0,
+        "quantity": 3,
+        "slot": -1,
+        "sval": 6,
+        "timeout": 0,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 25
+      },
+      {
+        "aware": 1,
+        "pval": 0,
+        "quantity": 1,
+        "slot": 10,
+        "sval": 1,
+        "timeout": 0,
+        "to_a": 0,
+        "to_d": 0,
+        "to_h": 0,
+        "tval": 11
+      }
+    ],
+    "knowledge": [
+      1,
+      1,
+      1
+    ],
+    "observed": [
+      18057,
+      58,
+      0
+    ],
+    "stats": [
+      17,
+      10,
+      10,
+      16,
+      16
+    ],
+    "vitals": [
+      70,
+      84,
+      72,
+      0
+    ]
+  },
+  "provenance": {
+    "build": {
+      "binary": "/workspace/work/borg-reborn-rs/build/rust/game/angband",
+      "binary_sha256": "f039fa852ff368cff59187e5260fa3e13f91bb01dfd8b7b46cf9b44d79e73a20",
+      "built_utc": "2026-11-16T01:52:51Z",
+      "cc": "cc (Debian 14.2.0-19) 14.2.0",
+      "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+      "git_dirty": "no",
+      "git_rev": "401597cafd16f8330590763aa9bc15c10e40e5be",
+      "impl": "rust",
+      "inputs_dirty": "no",
+      "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+      "source_sha256": "8a61938aa14162168a6b669b8b5b7ca40ff21ff04890665c5e533984f85fb076"
+    },
+    "capture_turn": 18057,
+    "config_sha256": "22b94f44b75b4c0bd914ce2d1431ff56294fd9ac160784d5be194a5fbf3c85be",
+    "keys_sha256": "5f2d8beddf7f44e08e0b44160535406ca2eaafb52fb6e8c55b1f96b4bcd43812",
+    "seed": 101,
+    "state_sha256": "3f4b11308ebddd58374892f1103719e5f09e44ce1c77892e5adc72d74513ce02",
+    "summary_sha256": "74a3126e5636f8e9bba61d871852cc6695e1c4ab101f2813d4602f43807286f3"
+  },
+  "record_sha256": "3e0aa670d216c3bc4e6627d895ee30bce7375a0398a2de87865ecc197427ab44",
+  "sample_count": 1,
+  "schema": "borg-cemetery/character-catalog@1",
+  "selection": "single_observed_tier"
+}

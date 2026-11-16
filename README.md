@@ -211,7 +211,10 @@ recordings/    recording download index and playback guide
 
 ### `deaths/`
 
-The death records. One directory per case (`D0001-…`), with:
+The death records. New dossiers use `D-<full SHA-256>` IDs; published `D0001-…`
+paths remain aliases. Existing dossiers have retroactive canonical IDs in
+`death-id.json`. [Identity rule and alias lookup](docs/death-identity.md).
+One directory per case, with:
 - the record (`record.json`) and its build/input identity;
 - the curated native evidence;
 - the assessment and actions;

@@ -24,6 +24,8 @@ ROOT = Path(globals().get('SOURCE_ROOT', os.environ.get('BORG_DEATH_SOURCE_ROOT'
 BASIC_SCHEMA = 'borg-reborn-rs/death-record@1'
 RECORDED_SCHEMA = 'borg-rs/death-record@1'
 RECORDING_SCHEMA = 'borg-rs-headless-recording@1'
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from death_identity import canonical_id
 
 
 def read(path):
@@ -77,6 +79,7 @@ def aggregate(root):
     records, causes, actions = [], defaultdict(set), {}
     for path in sorted(root.glob('D*/record.json')):
         record = read(path)
+        record['id'] = canonical_id(path.parent, record)
         if record['schema'] not in (RECORDED_SCHEMA, BASIC_SCHEMA):
             raise ValueError('Unknown death record schema: ' + str(path))
         assessment = read(path.with_name('assessment.json'))
