@@ -9,7 +9,7 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 98; distinct starting conditions: 82; retained process attempts: 82 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 99; distinct starting conditions: 83; retained process attempts: 83 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -107,6 +107,7 @@ Dossiers: 98; distinct starting conditions: 82; retained process attempts: 82 (i
 | [D0000-qeae3dd6a743b7da84b983d87a01c07287045249764ce2ba63c662ac3f1d3834e](D0000-qeae3dd6a743b7da84b983d87a01c07287045249764ce2ba63c662ac3f1d3834e/report.md) | unassigned | `76d05952bc40` | 1011 | a cave spider | 18903 | unassessed |
 | [D0000-qecd89e20bfd763e886a5eac6237cd983c3ee18b2dc583078bff58f686d835582](D0000-qecd89e20bfd763e886a5eac6237cd983c3ee18b2dc583078bff58f686d835582/report.md) | unassigned | `cd411e551fa8` | 1011 | a cave spider | 18903 | unassessed |
 | [D0000-qef2d92e17bfe88e1807cfa6e713b736e6583fee1eb6ff7b435e39759f95cc7ad](D0000-qef2d92e17bfe88e1807cfa6e713b736e6583fee1eb6ff7b435e39759f95cc7ad/report.md) | unassigned | `feff999e80fb` | 1011 | a cave spider | 18903 | unassessed |
+| [D0000-qf4f8eb6cbb718df3436b94d96c3742812c9d3e85638c028775fc1c4285d36992](D0000-qf4f8eb6cbb718df3436b94d96c3742812c9d3e85638c028775fc1c4285d36992/report.md) | unassigned | `300f4716f34e` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-qf8e5f38c81807b1e3478514e57af3d1ce1179a79969d222fb06626e99552b0d2](D0000-qf8e5f38c81807b1e3478514e57af3d1ce1179a79969d222fb06626e99552b0d2/report.md) | unassigned | `5584d0cbfe91` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-qf92035df260ac7f893b3d35aa51c8b8baef5bf375e06748530181feae628bcb3](D0000-qf92035df260ac7f893b3d35aa51c8b8baef5bf375e06748530181feae628bcb3/report.md) | unassigned | `cd411e551fa8` | 1062 | a soldier | 49147 | unassessed |
 | [D0000-qfe540acf2d799c9e17d3a42688948109ed2b1b5187e8f9afec9c08a048948260](D0000-qfe540acf2d799c9e17d3a42688948109ed2b1b5187e8f9afec9c08a048948260/report.md) | unassigned | `cd411e551fa8` | 1074 | poison | 22250 | unassessed |
