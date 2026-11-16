@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-a52fd21a8e0aff1c9ac46ab2670135c28e2c9c4f4fa8ee0b3f2bc8517650e257",
+  "run_kind": "harness",
+  "character": "Half-Elf Blackguard",
+  "raw_cause": "a giant white mouse",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 4,
+    "turn": 57520,
+    "race_idx": 1,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 888896726,
+    "flags": "-",
+    "git_rev": "f02cd2940a7439a8965b3883270a9a73df7e0bf5",
+    "git_dirty": "no",
+    "source_sha256": "bb27c7c3740aacdd27f23d978cee67f1fcdab72921e4feb09cb819ca0b9c1915",
+    "binary_sha256": "9728702e34ea2d47ced9404b9767908956a03a6e0752bcaa28c5eb18ebb088a5",
+    "borg_txt_sha256": "03e465215820406f37ed6b203aa5e512291769b191c75dd0d0e3e70386949214",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1305
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-angband-borg-zoo/8e883c1d-7aa1-4ec6-8b49-b95ddfa42a6c/scratchpad/work/classes-18/4.2.6-reborn-rust-heal/reborn-heal1-trip1-attack1-plan/888896726",
+      "result_sha256": "4ad4df8138935dbd661412fedf9cd2b334f618ac5e899c8add68a394120890af",
+      "raw_sha256": {
+        "keys.log": "4ad4df8138935dbd661412fedf9cd2b334f618ac5e899c8add68a394120890af",
+        "messages.log": "0b8982b94ecf6cb3f74e10c9d982190f6951917b27c192c29157112761ad2097",
+        "state.log": "8b15853f37657869e4b91f4fa07d9504d656000faf0840920d2eec6509c7be96"
+      },
+      "source_commit": "f02cd2940a7439a8965b3883270a9a73df7e0bf5",
+      "binary_sha256": "9728702e34ea2d47ced9404b9767908956a03a6e0752bcaa28c5eb18ebb088a5"
+    }
+  ],
+  "encounter_family": "start-7dbc24f1e713cb0075d81a9b4fcd907b97254b4091b0c70347277117e75c6382",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "f4080cf50cec5f462cd1d646db79a609dbe8c9c42908358fe7daff4036fc5d18",
+    "config.txt": "941582cf07a4ceaa3ed1a851b38db1935676ca986dd8fbc5a7908f75d1186125",
+    "errands_plan.txt": "084bc3e8999697bd8edf7fd302ea75d65b50ef2714afdd3a47354a1f24137e87",
+    "params-core.json": "dc993c1383f1ec61fc0a66d80e53231bf67557cb3731da24924e1dc794cf5c48",
+    "summary.json": "daf84f64c48ddf767b324a35e090d765e76da8c4a5d4c035b3093a1415e1bf2f",
+    "trace-core-tail.jsonl": "3655e3e40b2107f874828faeb58debcd6f7eca3378a8cc654bc0397ee52eed40"
+  },
+  "investigation": null,
+  "issue": null
+}

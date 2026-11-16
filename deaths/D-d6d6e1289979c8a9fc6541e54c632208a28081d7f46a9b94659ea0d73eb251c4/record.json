@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-d6d6e1289979c8a9fc6541e54c632208a28081d7f46a9b94659ea0d73eb251c4",
+  "run_kind": "harness",
+  "character": "Half-Elf Druid",
+  "raw_cause": "a crow",
+  "terminal": {
+    "cause": "a crow",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 27401,
+    "race_idx": 1,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 934061548,
+    "flags": "-",
+    "git_rev": "f02cd2940a7439a8965b3883270a9a73df7e0bf5",
+    "git_dirty": "no",
+    "source_sha256": "bb27c7c3740aacdd27f23d978cee67f1fcdab72921e4feb09cb819ca0b9c1915",
+    "binary_sha256": "9728702e34ea2d47ced9404b9767908956a03a6e0752bcaa28c5eb18ebb088a5",
+    "borg_txt_sha256": "08ad8954f0454477531fefbd42aca0a479a1eb99c3d24a7353ec6edc03be59eb",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 2694
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-angband-borg-zoo/8e883c1d-7aa1-4ec6-8b49-b95ddfa42a6c/scratchpad/work/classes-18/4.2.6-reborn-rust-heal/reborn-heal1-trip1-attack1-plan/934061548",
+      "result_sha256": "b08aec02a1c347db8210b494a7ca520df13065bbcacad52bdc43e82dbe971f81",
+      "raw_sha256": {
+        "keys.log": "b08aec02a1c347db8210b494a7ca520df13065bbcacad52bdc43e82dbe971f81",
+        "messages.log": "482539b9f8faa55c0fb1dfbf2cb9eebffdaddf87549da43b424bc363c869a5a5",
+        "state.log": "4608e6ce8a2d8af872e287d992ebd88bd8838d63030ebc649910aebd2c8f3cac"
+      },
+      "source_commit": "f02cd2940a7439a8965b3883270a9a73df7e0bf5",
+      "binary_sha256": "9728702e34ea2d47ced9404b9767908956a03a6e0752bcaa28c5eb18ebb088a5"
+    }
+  ],
+  "encounter_family": "start-f5b9f6369b3d9c4e98f560283ee79e44ad3efd1c8bc387f4cc99511adc23e7c7",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "f4080cf50cec5f462cd1d646db79a609dbe8c9c42908358fe7daff4036fc5d18",
+    "config.txt": "95a51a4e5e133ec5b292e4c12a2132a48e37b4ce68570aa476a3292a574ecb2e",
+    "errands_plan.txt": "084bc3e8999697bd8edf7fd302ea75d65b50ef2714afdd3a47354a1f24137e87",
+    "params-core.json": "dc993c1383f1ec61fc0a66d80e53231bf67557cb3731da24924e1dc794cf5c48",
+    "summary.json": "55e8acffdd2c5420d689d97112c719bc277fbbc1931f8a5fc7535fc8a774bd93",
+    "trace-core-tail.jsonl": "a68738c67d2dc9f7aba721eb17c050c207e7e1d909abe0cff288bcd7d1771d8c"
+  },
+  "investigation": null,
+  "issue": null
+}
