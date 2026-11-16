@@ -100,8 +100,8 @@ def main():
         profile = json.loads(profile_path.read_text())
         expected_settings = {key.removeprefix('borg_param_'): value
                              for key, value in profile['settings'].items() if key.startswith('borg_param_')}
-        for name in ['user', 'save', 'archive', 'panic', 'scores']:
-            (directory / name).mkdir(parents=True)
+        for subdirectory in ['user', 'save', 'archive', 'panic', 'scores']:
+            (directory / subdirectory).mkdir(parents=True)
         (directory / 'profile.json').write_bytes(profile_path.read_bytes())
         config = adapter.config_text(profile_build, profile, case['race_id'], case['class_id'])
         assert adapter.check_config(config, profile) is None

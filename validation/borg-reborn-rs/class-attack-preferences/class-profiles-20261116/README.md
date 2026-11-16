@@ -1,3 +1,5 @@
+**Completed:** [18-run results and limitations](REPORT.md).
+
 # Exploratory class-preference profiles
 
 Owner-requested bounded local smoke of the main-promoted native preference

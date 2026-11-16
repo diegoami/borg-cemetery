@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0002-rust-seed1020",
+  "run_kind": "harness",
+  "character": "Elf Druid",
+  "raw_cause": "a small kobold",
+  "terminal": {
+    "cause": "a small kobold",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 9547,
+    "race_idx": 2,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020,
+    "flags": "menu,exact",
+    "git_rev": "8e007cddc1b0c0fb9f97319f8a8128b88680bf97",
+    "git_dirty": "no",
+    "source_sha256": "290fd89ed58c536dd59835d259d85dc1a40cd5dd8b71d1e16f765a268abf71b3",
+    "binary_sha256": "29936aa54c24f930b06a433ca84ba525efed198e4405348955daf83db54cde2c",
+    "borg_txt_sha256": "eec333ca60198ad4c65d0d4fc2a9674d02fbe3a8f28a01f6ac84ff25abceed5f",
+    "profile_sha256": "077323cfec1ffa1473ccf7a9fcd1d65d6930c7d64278c932a02cbefb5bafdeba",
+    "params_core_sha256": "6e1a8235577e0d77b608671fc1d47c9cbd0c9b3a94619b8ad2d22695769bdfd3"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1027
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/class-profiles-20261116-01/druid-boosted",
+      "result_sha256": "42c17d0d67dfef1bf3ed2e883005057c182511131437b74fd62b1775ae87d077",
+      "raw_sha256": {
+        "keys.log": "42c17d0d67dfef1bf3ed2e883005057c182511131437b74fd62b1775ae87d077",
+        "messages.log": "51043424b5c66e32d05b5abc11f2ed5f7521cc7b37231fcb2bf73f70f13071f7",
+        "state.log": "fa5405441cb0acb0c89459f652c633dc96a4b3c756e49eec64d2144f8e11cf8e"
+      },
+      "source_commit": "8e007cddc1b0c0fb9f97319f8a8128b88680bf97",
+      "binary_sha256": "29936aa54c24f930b06a433ca84ba525efed198e4405348955daf83db54cde2c"
+    }
+  ],
+  "encounter_family": "start-c763b9c9de496e3bda198beff4c9e39eda9965abdb713f260b2d2ce04dd1f1e7",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2807fdfcd01d854a94895e0f76b7d87e25dcae338d7d2f6a692ae2bafa3e640d",
+    "config.txt": "80371a79e1a26089404116be8d3eacbc26801565f053c9db1edd852b4ff6a985",
+    "depths.json": "b78e66e9db60ad8df09830b5cfd5149b4aeded9df94ca80bd9b9cd7d5903d2ff",
+    "params-core.json": "6e1a8235577e0d77b608671fc1d47c9cbd0c9b3a94619b8ad2d22695769bdfd3",
+    "summary.json": "c17aa4768fc30e699ff1ea6650989f95636e78105ebe2dfee8b8f979238086d6",
+    "trace-core-tail.jsonl": "67adcd1baf8ef779f656aa0717b5f82831f712fbd87df1b5c6772a52cf1af8a9"
+  },
+  "investigation": null,
+  "issue": null
+}
