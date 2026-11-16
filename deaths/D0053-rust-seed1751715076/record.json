@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0053-rust-seed1751715076",
+  "run_kind": "harness",
+  "character": "Human Blackguard",
+  "raw_cause": "a blue worm mass",
+  "terminal": {
+    "cause": "a blue worm mass",
+    "dead": true,
+    "depth": 4,
+    "max_depth": 4,
+    "level": 6,
+    "turn": 87590,
+    "race_idx": 0,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1751715076,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "c018ffb4c3372495c6a7560ed0406024efd1a329c4c1db03b7c73457cf65615a",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 4756
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-town/1751715076",
+      "result_sha256": "1ebb8f3c15c88124d349191d207fb98b2f3680b0fda4d8ae769ee1454d5ada34",
+      "raw_sha256": {
+        "keys.log": "1ebb8f3c15c88124d349191d207fb98b2f3680b0fda4d8ae769ee1454d5ada34",
+        "messages.log": "411c39902114187aa91ecf0a2d4f05e1335decd4b633caf98f7d0a56adba75fe",
+        "state.log": "4eba0f6f92ff52169980cd092c0a1e3df8c2626a7e9e01d0fd47783271f93830"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-be427c98869470198714cdde3fead3ca8176c3294fe46d92ec95c005d8e806fc",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "72a80815c29d454c693edf865968952a10da744f876d6a9d4932903e5a16c208",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "a14fff58185e85dede4980b1fe9a3a972ced6c051c52853dc88d46e334de7059",
+    "trace-core-tail.jsonl": "4a3567b27d6c14b9a7358c766eb75026b4a429e58756e0a6a98d3fcd371a5ed6"
+  },
+  "investigation": null,
+  "issue": null
+}
