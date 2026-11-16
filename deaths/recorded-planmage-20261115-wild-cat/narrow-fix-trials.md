@@ -43,8 +43,8 @@ is `scenarios/planmage-town-phase-407718/fixture.zip`.
 
 Read-only observation of the original whole-stream verified replay gives melee25
 versus normal Magic Missile17 at411668. Magic Missile was available. Melee adds
-two-turn full danger while bolt scoring adds one-turn partial danger; this is a
-source-supported explanation of the preference, not a measured component breakdown.
+two-turn full danger while bolt scoring adds one-turn partial danger; the component observer now confirms1+24=25 for melee versus7+10=17 for
+Magic Missile; see magic-missile-analysis.md and its verified replay receipt.
 No attack default was changed in either narrow proposal.
 
 The town snapshot shows two oil flasks at the General Store and ten at Home;

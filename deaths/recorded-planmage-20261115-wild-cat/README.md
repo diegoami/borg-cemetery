@@ -30,3 +30,4 @@ already known. Original recording hashes and published export history stay
 unchanged; current source/player report locations will redirect here.
 
 - [Narrow replacement trials after rollback](narrow-fix-trials.md)
+- [Measured melee versus Magic Missile score breakdown](magic-missile-analysis.md)
