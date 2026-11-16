@@ -49,3 +49,38 @@ Curated raw observations, observer script and verification receipt are in
 code with stale argument registers; those probes are deliberately excluded from
 the curated component evidence. All retained summaries distinguish measured
 returns from source-derived attribution. Source investigation issue:#391.
+
+## Callers and existing tuning surface
+
+All classes enter the same attack selector:
+`borg_attack → borg_calculate_attack_effectiveness(BF_THRUST) →
+borg_attack_aux_thrust → melee_score`.
+The direct call is borg_fight_attack.rs:544. Whirlwind Attack(3271), Leap
+into Battle(3349) and Maim Foe(3464) also share this helper. It scores each
+melee-like candidate; it is not a class preference selector. Magic Missile
+uses the separate normal-spell/bolt route. The final selector compares all
+returned values at4573–4586 and executes the highest at4600.
+
+Existing borg.txt settings are:
+
+```ini
+borg_param_attack_melee_danger_horizon = 2
+borg_param_attack_bolt_danger_horizon = 1
+borg_param_attack_melee_partial_min_level = 15
+borg_param_attack_melee_partial_danger_divisor = 10
+```
+
+The full/partial damage modes remain hard-coded. There is no independent
+class-by-attack weight on the danger bonus. Mage-specific hit/damage penalties
+exist earlier in thrust damage calculation; their effect is already included
+in the observed damage1 and can be overwhelmed by the later additive danger.
+The owner proposes Mage spell/device, Warrior melee and Ranger projectile
+preferences. Treat a consistent danger comparison and a tunable class preference
+as separate proposed changes; neither is implemented by this investigation.
+
+Two exploratory one-action native reloads tried melee horizons2 and1. Both
+ended after an initial ordinary CLW action, before any attack candidate was
+scored; their empty score lists do not demonstrate a tuning effect. The receipt
+is retained as horizon-probe-inconclusive.json. They are additional counterfactual
+branches of the same life, not independent runs or evidence against the original
+whole-stream observed component breakdown above.
