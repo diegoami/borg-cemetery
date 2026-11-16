@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0035-rust-seed904568879",
+  "run_kind": "harness",
+  "character": "Dunadan Necromancer",
+  "raw_cause": "a cave spider",
+  "terminal": {
+    "cause": "a cave spider",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 6744,
+    "race_idx": 8,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 904568879,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "8ca10649e8175f262f9e892addbcd766726adbb3a2dd89718fe590adb4b476d4",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 541
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-plan-town/904568879",
+      "result_sha256": "7ec6556becd560b3b8478c6901c372aee569e8c5875cd0c838424d85375e94ea",
+      "raw_sha256": {
+        "keys.log": "7ec6556becd560b3b8478c6901c372aee569e8c5875cd0c838424d85375e94ea",
+        "messages.log": "1677401e89efb281a44ebd04d27876db266ae899c6a8f8c6935091f64b94840e",
+        "state.log": "e436e50e42946f1a3fce5cb1e47a62f8fe905297c021d16b6af07dc97145a8dd"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-5803d245f553f0d448a976ab67240d8914491f9cdba04b851c33371d7b62f980",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "dab218f0d9b1851c5e894602fdd7b965d4d7dc89fcd7a2b0876b20dd8efc546d",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "c7b425c286c243d1166f65bcda9f0ad67d2a99ca9761772555f76c5be4d31ade",
+    "trace-core-tail.jsonl": "85e20a6dcc3bab9c0a9f8788bb4a8582cc162f495c7a45dbf8fc57233340383e"
+  },
+  "investigation": null,
+  "issue": null
+}

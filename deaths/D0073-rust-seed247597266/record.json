@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0073-rust-seed247597266",
+  "run_kind": "harness",
+  "character": "Half-Elf Mage",
+  "raw_cause": "a fruit bat",
+  "terminal": {
+    "cause": "a fruit bat",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 40862,
+    "race_idx": 1,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 247597266,
+    "flags": "-",
+    "git_rev": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+    "git_dirty": "no",
+    "source_sha256": "2317021cfad2c97c840903ba95eb10cb0b5831d8ada93574b62ceac4d2e15b4c",
+    "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254",
+    "borg_txt_sha256": "9e37585cf2d6b49c2306fcb04afaffb673f92e1b94fe65312d6fbaefb8abbbcf",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 4258
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths4ec/classes-1800-small/4.2.6-reborn-rust-plans-m13-survival/reborn-m13-plan-town/247597266",
+      "result_sha256": "06690a3d8583c5e27ab251b2b5b651a45411ae53074cae43df90a1af9533034b",
+      "raw_sha256": {
+        "keys.log": "06690a3d8583c5e27ab251b2b5b651a45411ae53074cae43df90a1af9533034b",
+        "messages.log": "531532b3b8e01981033e6986dce900aaa3036cedc6082644c4684d1932421f0f",
+        "state.log": "6d6cd0b99980f57b2ae7a250e52a10a1e20b2f7ba93f8d273a2a903127bc34c5"
+      },
+      "source_commit": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+      "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254"
+    }
+  ],
+  "encounter_family": "start-2e4915c68a909a1b52dcbc2d58b9fa85696ce579857ed9b03e171c81fc09b497",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "87648232ca281819594e3f4706df902fee13024cbc8f670ebce42b1c696bf543",
+    "config.txt": "40dd8a79b7e48e8e5bc2034245ea6e79a68e2c6303535f962140beee04a7a41b",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "9730c111e0d99d31d6a701242ce3cb31aff3395cc26521fd3d34300b4025e739",
+    "trace-core-tail.jsonl": "5b33b74169088dae9867843b371e2e3a62d273d7ad482afc91ba8a816ceee93f"
+  },
+  "investigation": null,
+  "issue": null
+}

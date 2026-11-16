@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0048-rust-seed167240942",
+  "run_kind": "harness",
+  "character": "Gnome Ranger",
+  "raw_cause": "a giant yellow centipede",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 2,
+    "turn": 13088,
+    "race_idx": 4,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 167240942,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "bf9a56c99313df8192db74a34f91faeaefee8b45871789a80dcdd5e0ab48823a",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1535
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-town/167240942",
+      "result_sha256": "d1d38d5ae8b3544c8681a4d725bb4347c89ff3c0a31698f67b42b510dcbcc00d",
+      "raw_sha256": {
+        "keys.log": "d1d38d5ae8b3544c8681a4d725bb4347c89ff3c0a31698f67b42b510dcbcc00d",
+        "messages.log": "6bf22cbbcf0f4021e9320c1e3833d14b40164f5ae8ce1c7cbbb25a155798a831",
+        "state.log": "cdbd135a96d578b025d14691f38da85f5d858fffdf37a98eba45fa62991c2336"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-42c7880b382a9b13d81cd617883c9f4e7c3c9727748b0200ce1768c3110535af",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "9abd2385aef3cebae49a98add79c679d662bf947ba0dc5e50715f2a96b73e6e0",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "fdf79b777d3ae5d2c8c34e0da34ad5636488270ff23505724ab510c8d86dba54",
+    "trace-core-tail.jsonl": "0edd338dd0726551f409bad98a886a2c895f72513de7e000c279d24798cb50ec"
+  },
+  "investigation": null,
+  "issue": null
+}

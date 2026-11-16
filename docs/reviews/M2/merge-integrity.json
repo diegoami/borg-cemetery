@@ -1,0 +1,15 @@
+{
+  "schema": "borg-cemetery/merge-integrity@1",
+  "merge_commit": "74cb8ff87821197e219b9d0c746a78c85cf64480",
+  "parents": [
+    "b55b07aed36eb4ad15acf9db5ee2a7cc7acc53e1",
+    "5abfdbe94e67d368111604cb869720bc9270832e"
+  ],
+  "scope": "Every file in qualified native-control packages from both parent trees; generated README/index regenerated through immutable importer",
+  "package_count": 73,
+  "file_count": 803,
+  "all_parent_git_blobs_preserved": true,
+  "parent_blob_manifest_sha256": "088673da25f8e6746cb4d7ab668ee613d65e21c2da054db0b5be8de50f4ed909",
+  "raw_manifest_location": "task workspace p1-milestone-merge-package-blobs.json; immutable parents independently reconstruct it",
+  "check": "tools/import-deaths.py --registry validation/borg-reborn-rs/native-controls/deaths --legacy task-native-controls-empty-legacy.json --check; no legacy packages in this qualified-only registry"
+}

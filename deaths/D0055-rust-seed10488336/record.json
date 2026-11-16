@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0055-rust-seed10488336",
+  "run_kind": "harness",
+  "character": "Dwarf Necromancer",
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 4960,
+    "race_idx": 5,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 10488336,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "230e3220ba36b9d002919b6857264863e0ac26666460c07889e9e9ceda2b1d09",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 576
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-town/10488336",
+      "result_sha256": "eab5e5754e8d56918e9d258745735e4c71021f16e17ae62d3dd915358edea257",
+      "raw_sha256": {
+        "keys.log": "eab5e5754e8d56918e9d258745735e4c71021f16e17ae62d3dd915358edea257",
+        "messages.log": "fd16147841cee5b93740309a715f69b54a7fe55d786c00dce2e75db8405e7a4c",
+        "state.log": "f430e9249aa8d7f85e8bac6f605ff8ad9ccdac16ad7c42df1e29ece7a423fc93"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-82f2337a6ecb3d2713a7439fe89fb7eb9ada4bab2cfde71e8b94a9ddd2ba2446",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "e8502b17caf36bc0a914106d14d8a64be44b3112a8868df1db49886704708c5f",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "85fbbd4ced0a3f6448f837f67560e77457a7468beb167697c4cb3bc52c84675d",
+    "trace-core-tail.jsonl": "d809caf3ba482402b24f23fed6baa098025eab94fd585fd731ba051c349fb132"
+  },
+  "investigation": null,
+  "issue": null
+}
