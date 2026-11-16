@@ -9,11 +9,12 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 77; distinct starting conditions: 67; retained process attempts: 67 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 81; distinct starting conditions: 70; retained process attempts: 70 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
 | [D0000-q02f30741bcc828dbb7d10c2aa5daf9a78166ef2a2d52a4d2b7f362b1e27975f8](D0000-q02f30741bcc828dbb7d10c2aa5daf9a78166ef2a2d52a4d2b7f362b1e27975f8/report.md) | unassigned | `cd411e551fa8` | 1072 | a giant white mouse | 40785 | unassessed |
+| [D0000-q04a77535e4b05cc57f73ec41824b4c26eeb933b38a2a3e444e044c5004827320](D0000-q04a77535e4b05cc57f73ec41824b4c26eeb933b38a2a3e444e044c5004827320/report.md) | unassigned | `76d05952bc40` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-q05a002d17f8c6024f121d149f33c37263604c0dc093707d781bb597530c8e900](D0000-q05a002d17f8c6024f121d149f33c37263604c0dc093707d781bb597530c8e900/report.md) | unassigned | `46d5f2ae46c2` | 1072 | a giant white mouse | 40785 | unassessed |
 | [D0000-q075c4b84fc5c301d251ab875d1d8cae3382306f9f45f16e0a24acb088dab9005](D0000-q075c4b84fc5c301d251ab875d1d8cae3382306f9f45f16e0a24acb088dab9005/report.md) | unassigned | `cac37f5901c9` | 1043 | a wild cat | 23423 | unassessed |
 | [D0000-q0c57bbbf6fc570ff052bbd3308fc9016c47027dfb854d8f6390093674fc80461](D0000-q0c57bbbf6fc570ff052bbd3308fc9016c47027dfb854d8f6390093674fc80461/report.md) | unassigned | `46d5f2ae46c2` | 1062 | a soldier | 49147 | unassessed |
@@ -30,6 +31,7 @@ Dossiers: 77; distinct starting conditions: 67; retained process attempts: 67 (i
 | [D0000-q342ac57dc382236da3f907beee9d6dbee17d7a5bc0eb2534eea34d9ceba36103](D0000-q342ac57dc382236da3f907beee9d6dbee17d7a5bc0eb2534eea34d9ceba36103/report.md) | unassigned | `46d5f2ae46c2` | 1073 | a gallant | 94857 | unassessed |
 | [D0000-q37d94e9c7aa4590a8c71a9dc8a69659281a2ef9f5f6b2b038bc50ec8e5226576](D0000-q37d94e9c7aa4590a8c71a9dc8a69659281a2ef9f5f6b2b038bc50ec8e5226576/report.md) | unassigned | `25e894944131` | 1084 | a grey mushroom patch | 22908 | unassessed |
 | [D0000-q3f83e146209fa81ce82ae13e590b5f79f6f7d2f9b4dc420d14aff3f7d64c54bc](D0000-q3f83e146209fa81ce82ae13e590b5f79f6f7d2f9b4dc420d14aff3f7d64c54bc/report.md) | unassigned | `da947fa0709e` | 102 | Fang, Farmer Maggot's Dog | 3640 | unassessed |
+| [D0000-q4256418e3786ed6c3e6e32b52519d8cb9060cc9463ddf47b3908a66d762160ff](D0000-q4256418e3786ed6c3e6e32b52519d8cb9060cc9463ddf47b3908a66d762160ff/report.md) | unassigned | `76d05952bc40` | 102 | Fang, Farmer Maggot's Dog | 3640 | unassessed |
 | [D0000-q457ebde3074870507b19c4a9c7579078c5d68a5734d1110623d63bac5210db43](D0000-q457ebde3074870507b19c4a9c7579078c5d68a5734d1110623d63bac5210db43/report.md) | unassigned | `cac37f5901c9` | 1073 | a gallant | 94857 | unassessed |
 | [D0000-q4920f5ffb12ba8ce603319b354254344aadaab6a9dcf8f1bd475ca5324e43317](D0000-q4920f5ffb12ba8ce603319b354254344aadaab6a9dcf8f1bd475ca5324e43317/report.md) | unassigned | `cac37f5901c9` | 1021 | a fruit bat | 30109 | unassessed |
 | [D0000-q52a866560bfeaecd3722b3b2152067548f091e8e597f559e4edacdfed1e8a279](D0000-q52a866560bfeaecd3722b3b2152067548f091e8e597f559e4edacdfed1e8a279/report.md) | unassigned | `cd411e551fa8` | 1023 | a metallic red centipede | 13184 | unassessed |
@@ -45,6 +47,7 @@ Dossiers: 77; distinct starting conditions: 67; retained process attempts: 67 (i
 | [D0000-q7f049b203e7841e2381a22dd6c3a9a90eb32700c112432c02cae7360cb6a545a](D0000-q7f049b203e7841e2381a22dd6c3a9a90eb32700c112432c02cae7360cb6a545a/report.md) | unassigned | `25e894944131` | 1020 | a giant white mouse | 8922 | unassessed |
 | [D0000-q8757c0581d8471968f7d3a817f1745a58129755e4fb2c8babaeb6c934334aa5c](D0000-q8757c0581d8471968f7d3a817f1745a58129755e4fb2c8babaeb6c934334aa5c/report.md) | unassigned | `25e894944131` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-q8ade5f56bafe8723af4835b7163e8aa7015e9f4b591c35ca2f8167ee44ad2da6](D0000-q8ade5f56bafe8723af4835b7163e8aa7015e9f4b591c35ca2f8167ee44ad2da6/report.md) | unassigned | `cd411e551fa8` | 1084 | a grey mushroom patch | 22908 | unassessed |
+| [D0000-q8b3506f86d687860c734a83a60442db0b1312e2321fdcc677c764fccb354b054](D0000-q8b3506f86d687860c734a83a60442db0b1312e2321fdcc677c764fccb354b054/report.md) | unassigned | `f3b4335f9792` | 1011 | a cave spider | 18903 | unassessed |
 | [D0000-q8f229f646813c01f128322ff2b57899164518d309053a7d2fda87280fdbf9fc7](D0000-q8f229f646813c01f128322ff2b57899164518d309053a7d2fda87280fdbf9fc7/report.md) | unassigned | `25e894944131` | 1020 | a small kobold | 9547 | unassessed |
 | [D0000-q913620cbd23d5dbc3a080efc3d995b4c1ed9b423c6651dc16e13cb92b82cd4a4](D0000-q913620cbd23d5dbc3a080efc3d995b4c1ed9b423c6651dc16e13cb92b82cd4a4/report.md) | unassigned | `cd411e551fa8` | 1050 | a grey mold | 24096 | unassessed |
 | [D0000-q91e0c66c7a6cf10c182159391e4af199801e7049f48aff61651eab5cb0fee460](D0000-q91e0c66c7a6cf10c182159391e4af199801e7049f48aff61651eab5cb0fee460/report.md) | unassigned | `cd411e551fa8` | 1074 | poison | 22250 | unassessed |
@@ -84,6 +87,7 @@ Dossiers: 77; distinct starting conditions: 67; retained process attempts: 67 (i
 | [D0000-qdf62967dee163608704d5e2e5f3f84acc38fbcd6dec64d4671dd8593fd216019](D0000-qdf62967dee163608704d5e2e5f3f84acc38fbcd6dec64d4671dd8593fd216019/report.md) | unassigned | `cac37f5901c9` | 1062 | a soldier | 49147 | unassessed |
 | [D0000-qe900e86858feddfa82ca60f01c8597c14e167cce06699cb2107dbe7efe180f53](D0000-qe900e86858feddfa82ca60f01c8597c14e167cce06699cb2107dbe7efe180f53/report.md) | unassigned | `cd411e551fa8` | 1021 | a fruit bat | 30109 | unassessed |
 | [D0000-qe98bac8d081d4bb4269a945ec64884382f4f3e8cb0a4f6cb81e6f543438e090b](D0000-qe98bac8d081d4bb4269a945ec64884382f4f3e8cb0a4f6cb81e6f543438e090b/report.md) | unassigned | `cd411e551fa8` | 1073 | a gallant | 94857 | unassessed |
+| [D0000-qeae3dd6a743b7da84b983d87a01c07287045249764ce2ba63c662ac3f1d3834e](D0000-qeae3dd6a743b7da84b983d87a01c07287045249764ce2ba63c662ac3f1d3834e/report.md) | unassigned | `76d05952bc40` | 1011 | a cave spider | 18903 | unassessed |
 | [D0000-qecd89e20bfd763e886a5eac6237cd983c3ee18b2dc583078bff58f686d835582](D0000-qecd89e20bfd763e886a5eac6237cd983c3ee18b2dc583078bff58f686d835582/report.md) | unassigned | `cd411e551fa8` | 1011 | a cave spider | 18903 | unassessed |
 | [D0000-qef2d92e17bfe88e1807cfa6e713b736e6583fee1eb6ff7b435e39759f95cc7ad](D0000-qef2d92e17bfe88e1807cfa6e713b736e6583fee1eb6ff7b435e39759f95cc7ad/report.md) | unassigned | `feff999e80fb` | 1011 | a cave spider | 18903 | unassessed |
 | [D0000-qf8e5f38c81807b1e3478514e57af3d1ce1179a79969d222fb06626e99552b0d2](D0000-qf8e5f38c81807b1e3478514e57af3d1ce1179a79969d222fb06626e99552b0d2/report.md) | unassigned | `5584d0cbfe91` | 1011 | a fruit bat | 1979 | unassessed |
