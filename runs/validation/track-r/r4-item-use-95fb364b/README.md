@@ -26,7 +26,9 @@ replays, different source epochs, CI exports and reused donor observations
 are not independent trials or survival-improvement evidence. Earlier epochs
 do not validate the current runtime. See source handover for setup failures.
 
-Final numeric allocation remains centralized and pending (#344 in source).
+Canonical D-<hash> identities are assigned by the cemetery owner tool in
+additive death-id.json sidecars and the alias catalogue. Original provisional
+IDs remain unchanged; no sequential numeric IDs are allocated.
 No new final D-number, complete R4 acceptance or main promotion is claimed.
 Source code keeps pinned receipts only; canonical reports are here. The
 prepublication canonical-reconcile failure is preserved: it found 12 current
