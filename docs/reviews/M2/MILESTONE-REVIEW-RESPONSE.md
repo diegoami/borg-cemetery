@@ -53,3 +53,14 @@ The prior statement that P1 itself was not reviewed is superseded by this
 independent milestone review; new review fixes and owner acceptance remain open.
 M1 and the competing #386 remain separate. Do not advance reviewed/tags or start
 P2/P3 based only on this recommendation.
+
+## Coordinated source follow-up references
+
+The reborn session published its source-only fix as reborn #412, head
+2faaadb1a8c9aee07fddcae905eee46699e99005, stacked on #378. It reports 94 tool and
+19 script tests passing and real stale-toolkit/synthetic-death rejection with no
+registry creation. It will integrate only into #378 after CI; that session owns
+the source branch and body. The low-priority kind-specific charge follow-up is
+reborn #411. No source/runtime/native-tool pin/API change is required by the
+Cemetery fixes. Current integration and checks are recorded in the PR bodies
+and the coordination comments, without treating either as owner acceptance.
