@@ -18,3 +18,18 @@ are diagnostics, not qualified near-deaths or survival improvements.
 
 See `docs/synthetic-suite.md` for the schema, work budget, failure semantics and
 commands, and `docs/reviews/M2/` for the milestone evidence/reviewer packet.
+
+P1 birth-tier normalization: `start_build=birth` retains the ordinary,
+option-default Warrior birth kit, then applies one-way options. It is **not**
+the kit from a native birth performed with `birth_no_recall` already enabled.
+At the pinned engine, `lib/gamedata/class.txt:157` conditions the Word of Recall
+scroll on that option; a native one-way birth omits it. These three constructed
+birth cells keep the scroll and each consumes it at turn 3 with “Nothing
+happens.” This declared difference preserves the reviewed P1 streams and is
+part of the experiment's limitation, not evidence for native one-way kit play.
+The observed tier separately retains its recorded ordinary-source inventory.
+
+The native record's pval ceiling is currently 32767, without a per-kind charge
+cap. The fixed observed kit has no wands/staves and every recorded pval is zero;
+this bank does not qualify charged/recharged builds. Wider item validation needs
+a separate source-side change and new qualification before extending the bank.

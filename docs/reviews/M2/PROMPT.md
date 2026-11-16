@@ -43,3 +43,11 @@ The earlier Cemetery review covered the guard only: independently review the
 P1 runner, catalog, retained controls and evidence before accepting that scope.
 The observed-tier source capture may retain an earlier exact runtime pin than
 suite execution; verify both identities rather than rewriting the catalog.
+
+The independent milestone review at 34cec1fc/b55b07a now covers the P1 scope.
+For the follow-up delta, read MILESTONE-REVIEW-RESPONSE.md and merge-integrity.json,
+verify union preservation, the retained-stream CI gate and process-group cleanup,
+and recheck the separate reborn session's native-tool subtree verification.
+The birth kit is explicitly ordinary-before-one-way-options and includes a Recall
+scroll absent from a native one-way birth; judge that declared P1 construction
+without treating it as native-kit play. Charged builds remain unqualified.

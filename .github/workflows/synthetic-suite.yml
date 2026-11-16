@@ -6,6 +6,7 @@ on:
       - scripts/synthetic_suite.py
       - synthetic/**
       - .github/workflows/synthetic-suite.yml
+      - docs/reviews/M2/results.json
 permissions:
   contents: read
 jobs:
@@ -44,6 +45,11 @@ jobs:
         run: |
           python3 scripts/synthetic_suite.py run --manifest synthetic/p1-warrior/suite.json \
             --source target-borg --out "$RUNNER_TEMP/synthetic-p1"
+      - name: Check outcomes and all three gameplay streams against retained evidence
+        run: |
+          python3 scripts/synthetic_suite.py verify \
+            --actual "$RUNNER_TEMP/synthetic-p1/results.json" \
+            --expected docs/reviews/M2/results.json
       - name: Publish report in job summary
         if: always()
         run: |

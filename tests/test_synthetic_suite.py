@@ -1,9 +1,11 @@
 """Synthetic suite contracts with a fake execution adapter, never game saves."""
 import copy
 import json
+import os
 from pathlib import Path
 import sys
 import tempfile
+import time
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
@@ -55,6 +57,7 @@ class FakeAdapter:
                       synthetic_contract=case['harness_contract'], dungeon_mode='one_way', profile_sha256=build['profile_sha256'])
         (output / 'config.txt').write_text(''.join(f'{k}={v}\n' for k, v in config.items()))
         (output / 'messages.log').write_text('0 1 0 Nothing happens.\n1 2 0 Nothing happens!\n2 3 0 Borg note: Nothing happens.\n')
+        (output / 'keys.log').write_text('0 107\n1 108\n')
         if self.mode != 'missing':
             (output / 'state.log').write_text(f"1 1,1 d{case['depth']}/{case['depth']} hp1/20 sp0/0 f100\n"
                                              f"2 1,1 d{case['depth']}/{case['depth']} hp10/20 sp0/0 f100\n")
@@ -139,6 +142,54 @@ class SuiteTest(unittest.TestCase):
         self.save()
         with self.assertRaisesRegex(ValueError, 'explicit defaults only'):
             s.generate(self.path)
+
+    def test_retained_comparison_detects_changed_streams_and_incomplete_cases(self):
+        actual = s.run_suite(self.path, self.root, self.root / 'comparison', adapter=FakeAdapter())
+        expected = copy.deepcopy(actual)
+        self.assertEqual(s.verify_results(actual, expected), 4)
+        for mutation in ('keys', 'state', 'messages', 'missing_digest', 'missing_case',
+                         'duplicate_case', 'status', 'runtime'):
+            changed = copy.deepcopy(actual)
+            row = changed['results'][0]
+            if mutation in ('keys', 'state', 'messages'):
+                row['evidence'][mutation + '.log']['sha256'] = '0' * 64
+            elif mutation == 'missing_digest':
+                del row['evidence']['keys.log']
+            elif mutation == 'missing_case':
+                changed['results'].pop()
+            elif mutation == 'duplicate_case':
+                changed['results'][1] = copy.deepcopy(row)
+            elif mutation == 'status':
+                row['status'] = 'death'
+            else:
+                changed['requested_runtime']['commit'] = '0' * 40
+            with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                s.verify_results(changed, expected)
+
+    def test_outer_timeout_kills_engine_grandchildren(self):
+        pidfile = self.root / 'grandchild.pid'
+        # A real launcher + child process exercises cleanup, rather than
+        # mocking TimeoutExpired while leaving process ownership untested.
+        code = ('import pathlib, subprocess, sys; '
+                'child=subprocess.Popen([sys.executable,"-c","import time; time.sleep(60)"]); '
+                'pathlib.Path(sys.argv[1]).write_text(str(child.pid)); child.wait()')
+        with (self.root / 'timeout.log').open('wb') as log:
+            self.assertEqual(s.run_bounded([sys.executable, '-c', code, str(pidfile)],
+                                          self.root, os.environ.copy(), log, 1), 124)
+        pid = int(pidfile.read_text())
+        status = Path(f'/proc/{pid}/stat')
+        # A killed child can briefly await its init reaper as a zombie.
+        deadline = time.monotonic() + 2
+        while True:
+            try:
+                state = status.read_text().split(') ', 1)[1][0]
+            except FileNotFoundError:
+                break
+            if state in ('Z', 'X'):
+                break
+            if time.monotonic() >= deadline:
+                self.fail(f'grandchild {pid} is still running after group timeout')
+            time.sleep(0.01)
 
     def test_outcomes_failures_and_unknown_qualification_are_independent(self):
         for mode, expected in [('death', 'death'), ('survived_to_cap', 'survived_to_cap'),

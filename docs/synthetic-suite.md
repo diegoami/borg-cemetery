@@ -107,3 +107,33 @@ vendored `borg-rs` core it accepts only an empty/comment-only profile, meaning
 explicit pinned defaults. Named overrides are rejected instead of silently
 ignored; a calibrated core-profile adapter is later work. The engine primitive
 and real startup tests support both cores. The approved P1 bank uses reborn.
+
+### P1 birth-kit and charged-item limits
+
+The frozen birth cells use the ordinary Warrior kit before the frontend enables
+one-way options. Native `class.txt:157` would omit Word of Recall at a birth
+with `birth_no_recall` already enabled. P1 instead retains that scroll, and each
+birth cell consumes it at turn 3 without effect. This is a declared construction
+difference, not a native one-way birth kit. The six reviewed gameplay streams
+and scenario definitions remain unchanged; the bank README records the limit.
+The observed ordinary-source record is a separate declared projection.
+
+P1 does not qualify charged-device tiers: its observed record contains no
+wands/staves and all pvals are zero. The current native parser's numeric pval
+ceiling is not a kind-specific charge bound. Do not infer broader item validity
+from this fixed bank or extend it to charged builds without qualification.
+
+### Retained evidence gate and outer timeout
+
+`synthetic_suite.py verify --actual RUN/results.json --expected
+ docs/reviews/M2/results.json` checks exact scenario IDs/specs, the requested
+runtime, terminal outcomes/turns, and all three key/state/message stream receipts.
+It intentionally permits attempt-specific process paths, timing and binary
+hashes to differ across toolchains. Missing cases/digests and changed gameplay
+fail the gate. The pinned workflow runs this comparison after execution and also
+runs when the retained reference changes.
+
+The adapter owns a new process group for the launcher/supervisor/engine. If its
+outer wall bound expires, it kills the entire group and reaps its launcher,
+retaining status 124 and partial evidence. A real subprocess regression verifies
+that the engine grandchild is no longer running after the timeout.

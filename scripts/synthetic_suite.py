@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 import re
+import signal
 import subprocess
 
 SCHEMA = 'borg-cemetery/synthetic-suite@1'
@@ -287,6 +288,22 @@ class ExecutionError(Exception):
         self.status = status
 
 
+def run_bounded(argv, cwd, env, log, seconds):
+    # Own the entire launcher/supervisor/engine process group. Killing just
+    # bash on the outer wall limit can leave its engine grandchild running.
+    with subprocess.Popen(argv, cwd=cwd, env=env, stdout=log, stderr=subprocess.STDOUT,
+                          start_new_session=True) as process:
+        try:
+            return process.wait(timeout=seconds)
+        except subprocess.TimeoutExpired:
+            try:
+                os.killpg(process.pid, signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+            process.wait()
+            return 124
+
+
 class RebornAdapter:
     def __init__(self, source):
         self.source = Path(source).resolve()
@@ -336,12 +353,7 @@ class RebornAdapter:
             argv += ['--', '-start-build', str(local_file(root, build['record'], build['record_sha256']))]
         with Path('/tmp/angband-validation.lock').open('a') as lock, (output.parent / 'launcher.log').open('wb') as log:
             fcntl.flock(lock, fcntl.LOCK_EX)
-            try:
-                result = subprocess.run(argv, cwd=self.source, env=env, stdout=log, stderr=subprocess.STDOUT,
-                                        timeout=case['wall_seconds'] + 15)
-                return result.returncode
-            except subprocess.TimeoutExpired:
-                return 124
+            return run_bounded(argv, self.source, env, log, case['wall_seconds'] + 15)
 
 
 def classify(case, output, returncode, expected_binary=None):
@@ -352,11 +364,11 @@ def classify(case, output, returncode, expected_binary=None):
                   qualified_near_death=dict(coverage='unavailable', count=None, reason='P1 has no null-move evaluator'),
                   evidence={})
     receipts = {}
-    for name in ('summary.json', 'process.json', 'config.txt', 'state.log', 'messages.log'):
+    for name in ('summary.json', 'process.json', 'config.txt', 'keys.log', 'state.log', 'messages.log'):
         path = output / name
         if path.is_file():
             result['evidence'][name] = dict(sha256=sha(path), bytes=path.stat().st_size)
-            if name not in ('state.log', 'messages.log'):
+            if name in ('summary.json', 'process.json', 'config.txt'):
                 try:
                     value = kv(path) if name == 'config.txt' else read(path)
                     if not isinstance(value, dict):
@@ -548,6 +560,38 @@ def run_suite(path, source, output, target_commit=None, adapter=None):
     return document
 
 
+def verify_results(actual, expected):
+    """Check the fixed bank's outcomes and all three streams across toolchains.
+
+    Paths, process timings and binary hashes are attempt-specific; scenario
+    identity and gameplay streams are exact retained expectations.
+    """
+    for name in ('schema', 'suite_spec_sha256', 'scenario_count', 'requested_runtime'):
+        if actual.get(name) != expected.get(name):
+            raise ValueError(f'retained evidence identity mismatch: {name}')
+    def rows(document):
+        result = {row['scenario_id']: row for row in document['results']}
+        if len(result) != len(document['results']) or len(result) != document['scenario_count']:
+            raise ValueError('retained evidence has duplicate/missing scenarios')
+        return result
+    a, b = rows(actual), rows(expected)
+    if a.keys() != b.keys():
+        raise ValueError('retained evidence scenario set mismatch')
+    for identifier, row in a.items():
+        reference = b[identifier]
+        if row['status'] in FAILURES:
+            raise ValueError(f'{identifier}: attempted gameplay failed')
+        for key in ('spec_sha256', 'status', 'terminal', 'observed_turns'):
+            if row.get(key) != reference.get(key):
+                raise ValueError(f'{identifier}: retained {key} mismatch')
+        for name in ('keys.log', 'state.log', 'messages.log'):
+            receipt = row['evidence'].get(name)
+            if (not isinstance(receipt, dict) or not HEX.fullmatch(receipt.get('sha256', '')) or
+                    receipt != reference['evidence'].get(name)):
+                raise ValueError(f'{identifier}: retained {name} mismatch or missing digest')
+    return len(a)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
@@ -561,9 +605,15 @@ def main():
     child = sub.add_parser('catalog')
     for name in ('record', 'run', 'source', 'out'):
         child.add_argument('--' + name, required=True, type=Path)
+    child = sub.add_parser('verify')
+    child.add_argument('--actual', required=True, type=Path)
+    child.add_argument('--expected', required=True, type=Path)
     args = parser.parse_args()
     try:
-        if args.command == 'generate':
+        if args.command == 'verify':
+            count = verify_results(read(args.actual), read(args.expected))
+            print(f'{count} scenarios and {3 * count} gameplay streams match retained evidence')
+        elif args.command == 'generate':
             value = generate(args.manifest)
             write(args.out, dict(schema='borg-cemetery/synthetic-scenarios@1', suite_spec_sha256=value['suite_spec_sha256'], scenarios=value['cases']))
         elif args.command == 'catalog':

@@ -7,7 +7,7 @@ pin remain separate and unchanged. The paired PR bodies pin the exact review hea
 
 - Exact reborn runtime: `99473510940b8a7bd6e77ad61e3a2b00c72a6e6d`.
 - Runtime input digest: `bf9a451c46a07142b59525a9c9c581287930e3b333baa4a81dda4816ed2a025a`.
-- Local measured binary: `000d8d6f08d976fa25df75d9b330a13e529ad9dff0b3716e07f6ca2a0abcc6a7`.
+- Local measured binary: `8336a9cad4d28eba8c9b284bce1f0ab3b2318eb65b6924413284eb2969d4e5c6`.
 - Suite spec digest: `8030348f3d9a16d7b1cc5ef093806d0fe7934d4cf2b2aa7b0aff700a274031c9`.
 - Bank: `synthetic/p1-warrior/`; one class, one seed, three starting depths,
   birth plus one observed level-5 tier. Six cells, 5,000 engine turns and
@@ -47,7 +47,7 @@ are explicitly declared; source saves/private Borg state are not restored.
 
 ## Validation and review findings
 
-- Cemetery: 54 runner/tests, 50 native-tool tests; statistics check over 129 reports.
+- Cemetery: 56 runner/tests, 50 native-tool tests; statistics check over 129 reports.
 - Reborn: formatting, Clippy, 165 workspace tests and 328 core release tests pass
   (four existing ignored); 91 tool tests, 19 script tests, vendor audit pass.
 - Native local suite: 81 tests, 16 dependency/fixture skips, zero failures. CI
@@ -101,3 +101,24 @@ review fixes. Its six outcomes and all 18 gameplay streams match the previously
 reviewed runtime; raw logs are in `p1-review-suite`. Prior packets remain in Git
 at e750549 and are not retroactively relabelled. The observed-tier catalog still
 names its original 401597 source capture, independently of this execution pin.
+
+## Independent milestone review and coordinated response
+
+The full P1 scope has now been independently reviewed at reborn 34cec1fc /
+Cemetery b55b07a. This supersedes the earlier note about guard-only coverage.
+See [MILESTONE-REVIEW-RESPONSE.md](MILESTONE-REVIEW-RESPONSE.md) for the findings,
+merge integrity, source-session ownership and remaining declared limitations.
+The recommendation is conditional, not owner acceptance.
+
+In particular, the birth cells retain an ordinary-before-one-way-option kit:
+native one-way birth omits the Recall scroll that these cells consume at turn 3.
+This is declared P1 normalization; the bank does not claim native one-way kits.
+The observed tier contains no charged devices, and does not qualify the parser's
+current generic pval ceiling as a kind-specific charge bound.
+
+The final coordinated runner execution is retained from `p1-milestone-suite`
+(clean runtime 99473510 in an isolated worktree). All 18 streams match the
+previous `p1-review-suite`; evidence now also binds keys.log. The workflow's
+verify step enforces these hashes against the retained packet automatically.
+Cemetery checks after the follow-ups: 56 repo tests, 50 native-tool tests,
+statistics over 129 reports. The reviewed birth normalization is unchanged.
