@@ -24,3 +24,11 @@ Raw local source/build/run outputs remain /workspace/work/453-*; per-case
 summary and key/message/state hashes are in candidate-receipts.json. R carry and
 population tuning are separate. Source #407 must preserve the accepted main
 snapshot and pass combined CI before promotion.
+
+The independent clean main baseline now completes45/45 cells. Strict harness/diff
+reports45/45 identical keys/messages/state triples against the combined clean
+candidate, with no stale-input override. Actual source/binary/build/config receipts
+are retained separately for both sides; the source hashes are290fd89e and8646eb97.
+Eight baseline source-qualified death records are added without changing prior
+records;106 packages verify. Fresh CI independently uses the earlier98-package
+0f9f7cf7 archive containing its candidate identities, not its own temporary registry.
