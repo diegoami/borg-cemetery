@@ -254,3 +254,9 @@ supported replay inputs and identify the exact runtime they require.
   collections stay outside Git.
 - **A rerun or a backup branch is not an independent life.** It is never counted as a new death.
 - **Licence:** the records are produced by Angband and the Borgs, under the Angband licence (GPL-2.0-or-later or the Angband licence; see the borg-rs `angband/docs/copying.rst`).
+
+## Recorded incident: PlanMage
+
+[Wild-cat incident and playable positions](deaths/recorded-planmage-20261115-wild-cat/README.md)
+retain the canonical report, actual saved states and behavioral trials.
+Original recordings stay in player-cemetery; source repos link to this case.

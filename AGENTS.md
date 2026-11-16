@@ -17,3 +17,16 @@ Do not merge the review PR, mark the milestone accepted, create its acceptance
 tag or start another milestone without the owner's acceptance/instruction.
 Owner-requested fixes during preparation are included before the review freeze;
 later fixes must update the review's pinned head and validation evidence.
+
+# Canonical gameplay evidence ownership (owner, 2026-11-16)
+
+This repository is the canonical home for gameplay incident reports, death
+investigations, reusable scenarios and behavioral/counterfactual trial results.
+Author and publish those here, including validation incidents; source repos
+keep implementation, tests, fixture references and short validation summaries.
+Player-cemetery holds original human/mixed recordings and working play/save
+state, with links to cases here rather than duplicate incident reports.
+Preserve source/build/parent-lineage identities and immutable raw evidence.
+Label constructed scenarios and fresh-Borg restarts; never count replay or
+alternative continuations of one life as independent samples. Historical
+public exports retain their hashes; use pointers for misplaced current pages.
