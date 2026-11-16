@@ -9,7 +9,7 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 102; distinct starting conditions: 86; retained process attempts: 86 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 104; distinct starting conditions: 88; retained process attempts: 88 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -111,6 +111,8 @@ Dossiers: 102; distinct starting conditions: 86; retained process attempts: 86 (
 | [D-24935c370f32186a2d99024074b30ce2174877e876ba604eaa45bbeddfbea32d](D0000-qeae3dd6a743b7da84b983d87a01c07287045249764ce2ba63c662ac3f1d3834e/report.md) | unassigned | `76d05952bc40` | 1011 | a cave spider | 18903 | unassessed |
 | [D-3dc3a8507a229f5ecb032bcc3dc76d624625c8f393c5a0d1bae7cd0609de651b](D0000-qecd89e20bfd763e886a5eac6237cd983c3ee18b2dc583078bff58f686d835582/report.md) | unassigned | `cd411e551fa8` | 1011 | a cave spider | 18903 | unassessed |
 | [D-56c0790c16ec08048a3f3d420bae3e26a27e10fb0631698050ad4a8f068bd637](D0000-qef2d92e17bfe88e1807cfa6e713b736e6583fee1eb6ff7b435e39759f95cc7ad/report.md) | unassigned | `feff999e80fb` | 1011 | a cave spider | 18903 | unassessed |
+| [D-f152254615e77e95712f935ccedd5e8d295c707968ca0ea8f1f5b0c9b2e324d2](D0000-qf4f8eb6cbb718df3436b94d96c3742812c9d3e85638c028775fc1c4285d36992/report.md) | unassigned | `300f4716f34e` | 1011 | a fruit bat | 1979 | unassessed |
+| [D-147fdce46acb38af6bea100915e0673287559e96645c530926ae484af2a01e8f](D0000-qf6e7799eb58ec87218c80ca67c2d7a1a45aac6e414c0cef924bb0e91df451c86/report.md) | unassigned | `07f59a6e0957` | 1011 | a fruit bat | 1979 | unassessed |
 | [D-d82021733db4836ee8884be476e8c3e012962b47915c44c826a401365468743d](D0000-qf8e5f38c81807b1e3478514e57af3d1ce1179a79969d222fb06626e99552b0d2/report.md) | unassigned | `5584d0cbfe91` | 1011 | a fruit bat | 1979 | unassessed |
 | [D-3ad9755864396365576ddb456bcf6e784fe750f5c2e7c72c33f448bd4f6a5840](D0000-qf92035df260ac7f893b3d35aa51c8b8baef5bf375e06748530181feae628bcb3/report.md) | unassigned | `cd411e551fa8` | 1062 | a soldier | 49147 | unassessed |
 | [D-f4a5edaf6b5645f9d9045f5b5598f1d96fd63746a4c69da265c23fd72dece0f6](D0000-qfe540acf2d799c9e17d3a42688948109ed2b1b5187e8f9afec9c08a048948260/report.md) | unassigned | `cd411e551fa8` | 1074 | poison | 22250 | unassessed |
