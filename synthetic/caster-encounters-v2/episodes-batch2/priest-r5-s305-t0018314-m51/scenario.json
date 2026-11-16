@@ -1,0 +1,124 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 305,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 3,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 18300,
+    "file": "checkpoint-000183-t0000018304.save",
+    "game_turn": 18304,
+    "keys": 3747,
+    "max_depth": 2,
+    "race_idx": 5,
+    "seed": 305
+  },
+  "class_idx": 3,
+  "compressed_sha256": "a9b0844dd08e577d1bdc7cb409198d64dfbfff7cae22df1e0f45337f41d95690",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Mace (2d4) (+0,+0)",
+        "kind": 52,
+        "slot": 1
+      },
+      {
+        "description": "Sling (x2) (+5,+4)",
+        "kind": 76,
+        "slot": 2
+      },
+      {
+        "description": "Wooden Torch (3237 turns)",
+        "kind": 4,
+        "slot": 5
+      },
+      {
+        "description": "Cloak [1,+0]",
+        "kind": 123,
+        "slot": 7
+      },
+      {
+        "description": "Wicker Shield [2,+6] {??}",
+        "kind": 132,
+        "slot": 8
+      }
+    ],
+    "equipment_kind_signature": "19647fb8727389c9086ab83ca9aae60486184cff76c202424e605c068f65ed18",
+    "hp": 18,
+    "inventory": [
+      {
+        "count": 3,
+        "description": "Holy Books of Prayers [Novice's Handbook]",
+        "kind": 386
+      },
+      {
+        "count": 5,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 2,
+        "description": "Potions of Cure Serious Wounds",
+        "kind": 232
+      },
+      {
+        "count": 1,
+        "description": "Scroll titled \"hica invet\"",
+        "kind": 207
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "full",
+    "max_hp": 18,
+    "max_sp": 4,
+    "sp": 4
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "priest-r5-s305-t0018314-m51",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 18,
+    "max_hp": 18,
+    "max_sp": 4,
+    "sp": 4
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-a86c87e76e0cc9cbacc1f091c6b92285303b39a0228a0568f49113f69f0c864d",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 305,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20004,
+  "race_idx": 5,
+  "save": "start.save.gz",
+  "save_sha256": "e8ccbb690fffa2aca25a0d0ada471a0642dd299687ec554011ad8189887fd8c3",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 18314,
+    "first_visible_turn": 18314,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 10,
+    "monster_index": 51,
+    "monster_kind": "giant white mouse",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "1b73faf43412595e3eac9e54a98dfad6ea4986421ec37cc45335cf1f7a3c273b",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 18314
+  },
+  "start_turn": 18304,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

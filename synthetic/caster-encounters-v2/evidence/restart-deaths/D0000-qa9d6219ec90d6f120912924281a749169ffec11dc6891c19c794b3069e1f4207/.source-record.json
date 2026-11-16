@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed301",
+  "run_kind": "harness",
+  "character": "Half-Orc Necromancer",
+  "raw_cause": "a grey mold",
+  "terminal": {
+    "cause": "a grey mold",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 13547,
+    "race_idx": 6,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 301,
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "1df53d29d600b3cdfec566f46c7410ea3d4194f1deda82bb85362eed76e4930f",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 14,
+    "of": 14
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-bank-v2-final-actual/shard-36/necromancer-r6-s301/run",
+      "result_sha256": "b4d242ec142754b8ffc2cecf03cfe20babb16a4f9435e5c06a4cef3b1ab0b29f",
+      "raw_sha256": {
+        "keys.log": "b4d242ec142754b8ffc2cecf03cfe20babb16a4f9435e5c06a4cef3b1ab0b29f",
+        "messages.log": "19fb534dcbc436d2067265704c6f3b2e42c1e2fe5be40e2b4e0900b0d955e024",
+        "state.log": "0a0ebb352734fe5f56d0b7d2c10339daf4723b1f0ad3d2d6ee2107c74c0dc45c"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776"
+    }
+  ],
+  "encounter_family": "start-f9cb552f37e0c9d5811cdefd515dd6bc4701e4b186fd5f522b95ceea40e313c7",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "871203ed1fe173cabbf43bddcc069ae750cfc7294424d3ff032d36d24e161ffd",
+    "depths.json": "53b0a25fac43c604eb8e3f69872e36c0e3fb62f160a5de7351fea99337f6ac56",
+    "params.json": "58830171d6c797fe7111a6f12b09ad758b44a50d6419d8de3dc3b4e838aaa905",
+    "summary.json": "d7ba61bc9ce09556b9eff716f739769b01d12aa92cf0940a350793c09ef080f3",
+    "trace-tail.jsonl": "a6411e894d14962bdc978a30db0d98fe32da92f96771851bc6b77b7ad440974e"
+  },
+  "investigation": null,
+  "issue": null
+}

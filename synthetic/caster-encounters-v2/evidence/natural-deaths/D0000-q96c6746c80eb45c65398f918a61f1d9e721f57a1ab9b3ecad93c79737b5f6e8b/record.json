@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-harvest-v2/druid-r8-s301",
+      "raw_sha256": {
+        "keys.log": "63ce9e1b8aa26342c747c5375f9e25037dec084a7821a4fa8821775f5b057fa8",
+        "messages.log": "a1076b3a7ab97c546a8b731e97c8496bdaefb1e7ec04c972b0e4819b20c7f0df",
+        "state.log": "be85812200d10d0d44e82d38690f2b09e0a28a7e493b7f7381c1af8ef8e2254d"
+      },
+      "result_sha256": "63ce9e1b8aa26342c747c5375f9e25037dec084a7821a4fa8821775f5b057fa8",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Dunadan Druid",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 943
+  },
+  "encounter_family": "start-e915caf388ed1ad3efaa0a2d8b18be6723e86f527785f1a2b393e984c3c3f495",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "98bde281b4f4605aafba1eeec0cc65434fb72e6c949e9b0dc5d3d9b8c8379762",
+    "depths.json": "60711647b13a6e7e610f31688f09d6402b3c3e0688f1d6d5039d1b681607c742",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "5eb820c56b6ee4bf47bbfaa8e0ce85a813d65fdcf1d2a951f3524bf5c2835012",
+    "trace-tail.jsonl": "e01518d53f211cff666e7ded83c7862ce7cfbd712b99903d0c93df4bad82fc6f"
+  },
+  "id": "D0000-q96c6746c80eb45c65398f918a61f1d9e721f57a1ab9b3ecad93c79737b5f6e8b",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "b218c55f969891e0cade62af339a85ab794f27102ec5e6b301c064e01b364d43",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 301,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "class_idx": 2,
+    "dead": true,
+    "depth": 1,
+    "level": 2,
+    "max_depth": 1,
+    "race_idx": 8,
+    "turn": 13674
+  }
+}

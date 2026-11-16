@@ -1,0 +1,104 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 303,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 2,
+    "clevel": 1,
+    "depth": 0,
+    "due_turn": 800,
+    "file": "checkpoint-000008-t0000000801.save",
+    "game_turn": 801,
+    "keys": 180,
+    "max_depth": 0,
+    "race_idx": 2,
+    "seed": 303
+  },
+  "class_idx": 2,
+  "compressed_sha256": "ef1bed0378d6462c51b7a33a1a986b927206c7e6e0028979a9bc0abade20223b",
+  "coverage": {
+    "depth": 0,
+    "equipment": [
+      {
+        "description": "Whip (1d3) (+0,+0)",
+        "kind": 47,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (5000 turns)",
+        "kind": 4,
+        "slot": 5
+      }
+    ],
+    "equipment_kind_signature": "85c02c5b3eb730b04d3579f990b8978618d626962fe9be478576dff9a8201273",
+    "hp": 11,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Book of Nature Magics [Lesser Charms]",
+        "kind": 381
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 1,
+    "mana_state": "full",
+    "max_hp": 11,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "event_kind": "death_encounter",
+  "id": "druid-r2-s303",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 11,
+    "max_hp": 11,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-c604740cbd72766a5d73997b849097e3755194cbce57f46b6e528eca3943f455",
+    "parent_death_id": "D-96e700983fb6863426308b0eafd70b1a703733e6e6848ba74ee7ae90c77c70ce",
+    "program": "borg-reborn-rs",
+    "seed": 303,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 864,
+  "race_idx": 2,
+  "save": "start.save.gz",
+  "save_sha256": "1667a9ec31d85b1d025309fae8d8eb3056f8dfa1c845a704d97d579cb3c0fead",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_visible_turn": 851,
+    "kind": "first_visible_kind_in_selected_episode",
+    "lead_engine_turns": 50,
+    "monster_index": 3,
+    "monster_kind": "battle-scarred veteran",
+    "no_omniscient_trigger": true,
+    "observation_line": 88,
+    "observation_sha256": "8a68df9b098a189b17d96fe8173995d397cc7f3caf96dd00d59070589eb3b45f",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 851
+  },
+  "start_turn": 801,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

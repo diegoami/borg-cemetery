@@ -1,0 +1,99 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 305,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 4,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 16200,
+    "file": "checkpoint-000133-t0000016204.save",
+    "game_turn": 16204,
+    "keys": 2925,
+    "max_depth": 1,
+    "race_idx": 6,
+    "seed": 305
+  },
+  "class_idx": 4,
+  "compressed_sha256": "eb468b51c31378f9d9f0a324d53aaf55b5a42e63c67506b71526a8de3731791b",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Main Gauche (1d5) (+0,+0)",
+        "kind": 34,
+        "slot": 1
+      }
+    ],
+    "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+    "hp": 15,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Necromantic Tome [Into the Shadows]",
+        "kind": 391
+      },
+      {
+        "count": 1,
+        "description": "Apple",
+        "kind": 8
+      },
+      {
+        "count": 8,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "full",
+    "max_hp": 15,
+    "max_sp": 4,
+    "sp": 4
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "necromancer-r6-s305-t0016284-m37",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 15,
+    "max_hp": 15,
+    "max_sp": 4,
+    "sp": 4
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-d2614d24600de5fa31eb27377d839ae7a07e47c7520a4cf284e1194315e8b181",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 305,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20008,
+  "race_idx": 6,
+  "save": "start.save.gz",
+  "save_sha256": "a1c8b7094bf93e9a2b1be08db4767464f040cd1801daeb769716362a93a0a42a",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 16284,
+    "first_visible_turn": 16284,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 80,
+    "monster_index": 37,
+    "monster_kind": "wild dog",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "f877f68e7db5c693157382e84a59f158f4e6aa6392eb58d05a05f48f9b9d5f41",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 16284
+  },
+  "start_turn": 16204,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

@@ -1,0 +1,104 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 308,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 4,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 7300,
+    "file": "checkpoint-000073-t0000007301.save",
+    "game_turn": 7301,
+    "keys": 1570,
+    "max_depth": 1,
+    "race_idx": 9,
+    "seed": 308
+  },
+  "class_idx": 4,
+  "compressed_sha256": "32a22d5ff3d2d7e4abaa5fa22ecc7eb6587dbf737e4685eab593ce7e9d82f991",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Main Gauche (1d5) (+0,+0)",
+        "kind": 34,
+        "slot": 1
+      }
+    ],
+    "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+    "hp": 12,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Necromantic Tome [Into the Shadows]",
+        "kind": 391
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Phase Door",
+        "kind": 185
+      },
+      {
+        "count": 1,
+        "description": "Scroll titled \"pa spor scitas\"",
+        "kind": 189
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 1,
+    "mana_state": "full",
+    "max_hp": 12,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "necromancer-r9-s308-t0007391-m33",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 12,
+    "max_hp": 12,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-8b3b9f587083e0e2538b211c18696a6df2abcb41c4077455347aa807156e4bc5",
+    "parent_death_id": "D-abb28fea46e0581251020744e4852f5bb70ff2e8e0fedcb8f7042fdcf8da3bfd",
+    "program": "borg-reborn-rs",
+    "seed": 308,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 9285,
+  "race_idx": 9,
+  "save": "start.save.gz",
+  "save_sha256": "f722ad99fe7cb2e7920aecb1da866bcae4af4b5bfb9bec8ec357783f60170b30",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 7452,
+    "first_visible_turn": 7391,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 90,
+    "monster_index": 33,
+    "monster_kind": "giant white mouse",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "1d84f32109d573cd7697410b6af39dd002ff082aa2a33bd244ad3919b2a3f3f6",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 7391
+  },
+  "start_turn": 7301,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

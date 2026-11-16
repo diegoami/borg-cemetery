@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-bank-v2-first-actual/shard-8/druid-unseen-contact-202/run",
+      "raw_sha256": {
+        "keys.log": "87d91caf9165ecd3d21f58fe8bbbb5f7d00cd152bb282e8d20402e10d8312892",
+        "messages.log": "793dbafc41e14c0147de92d5e6d694dca3e7ede3aa11b9f6380369781fd3a17d",
+        "state.log": "fd21255da3e2a53e2adaa3eaf3844121a85d381ba2cf726d2f269e10a1e20f2b"
+      },
+      "result_sha256": "87d91caf9165ecd3d21f58fe8bbbb5f7d00cd152bb282e8d20402e10d8312892",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Dunadan Druid",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 10,
+    "of": 10
+  },
+  "encounter_family": "start-1389102c62ec01c7aa06fa6bf4d5a23aa059e11886f67001ca4fea523a19e873",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "970abc563f0f568bc6dbdcd577db97fbfe4ba8c5679ac9c93edda359c8d2226a",
+    "depths.json": "c70c65b77d8e46c822c4b40896a3e4d356a100802efde7fa53f3add0a4742a17",
+    "params.json": "c181ff871e358b0999272e419d671393de778ac6414cae49b3c4da7645a7afcf",
+    "summary.json": "762cb284fbc7e0ab778068386482a9c1691f3a3746de969e2bfacc5a35c33adb",
+    "trace-tail.jsonl": "8facd1d21bdd86e3624fa4e321249e43143dcad558183f8ee2a51eb67258f4ec"
+  },
+  "id": "D0000-q71516808e98c976c67ab36062e1d70c28bb5c0c5811896c6abae2f60bf2f2ed7",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "b218c55f969891e0cade62af339a85ab794f27102ec5e6b301c064e01b364d43",
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 202,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a clear icky thing",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a clear icky thing",
+    "class_idx": 2,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 8,
+    "turn": 7818
+  }
+}

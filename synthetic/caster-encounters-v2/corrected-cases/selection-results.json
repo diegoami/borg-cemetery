@@ -1,0 +1,58 @@
+{
+  "attempts": [
+    {
+      "id": "mage-r1-s304",
+      "natural_status": "survived_cap",
+      "reason": "incoming attack has no known monster kind",
+      "status": "excluded"
+    },
+    {
+      "coverage": {
+        "depth": 1,
+        "equipment": [
+          {
+            "description": "Main Gauche (1d5) (+0,+0)",
+            "kind": 34,
+            "slot": 1
+          }
+        ],
+        "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+        "hp": 11,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Necromantic Tome [Into the Shadows]",
+            "kind": 391
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 1,
+            "description": "Scroll titled \"inva antas spe\"",
+            "kind": 222
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 1,
+        "mana_state": "empty",
+        "max_hp": 11,
+        "max_sp": 2,
+        "sp": 0
+      },
+      "id": "necromancer-r2-s302",
+      "natural_status": "death",
+      "parent_death_id": "D-1e58f0f284677e5886b74d62675e30b4abe26d78cbbc54c5841adfbf6aa69108",
+      "scenario": "synthetic/caster-encounters-v2/corrected-cases/necromancer-r2-s302/scenario.json",
+      "sha256": "ebb19b03f605509d9381c621b344aeac6ca88667d8f3d38c634251de3b8b756f",
+      "status": "selected"
+    }
+  ],
+  "schema": "borg-cemetery/encounter-selection@1"
+}

@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-bank-v2-first-actual/shard-22/necromancer-r6-s301/run",
+      "raw_sha256": {
+        "keys.log": "b4d242ec142754b8ffc2cecf03cfe20babb16a4f9435e5c06a4cef3b1ab0b29f",
+        "messages.log": "19fb534dcbc436d2067265704c6f3b2e42c1e2fe5be40e2b4e0900b0d955e024",
+        "state.log": "0a0ebb352734fe5f56d0b7d2c10339daf4723b1f0ad3d2d6ee2107c74c0dc45c"
+      },
+      "result_sha256": "b4d242ec142754b8ffc2cecf03cfe20babb16a4f9435e5c06a4cef3b1ab0b29f",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Half-Orc Necromancer",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 14,
+    "of": 14
+  },
+  "encounter_family": "start-f9cb552f37e0c9d5811cdefd515dd6bc4701e4b186fd5f522b95ceea40e313c7",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "f3964b7f14b31f427f36b48c6613af92846c4301d5d2cbdbefc1d3210714f6e1",
+    "depths.json": "0248e2f1742a28d6493cce77e5079577350f822d372d657d5cdec56c572511e3",
+    "params.json": "9b0f699192add601cf0fd7be2ea7b4cd40784ba2f4f414a0460c524da0c11c87",
+    "summary.json": "bc1bef03c146ceef593db7890bc6e6192b45bd4014dd86e727137eeb9403dcca",
+    "trace-tail.jsonl": "a6411e894d14962bdc978a30db0d98fe32da92f96771851bc6b77b7ad440974e"
+  },
+  "id": "D0000-q3878e0ce55a4deb9ffbb70954592de95f9fef4ffbf0720fee92800bca0ba4b4c",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "1df53d29d600b3cdfec566f46c7410ea3d4194f1deda82bb85362eed76e4930f",
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 301,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a grey mold",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a grey mold",
+    "class_idx": 4,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 6,
+    "turn": 13547
+  }
+}
