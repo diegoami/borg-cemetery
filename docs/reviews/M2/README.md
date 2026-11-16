@@ -49,7 +49,10 @@ are explicitly declared; source saves/private Borg state are not restored.
   supplies the missing upstream Git object, bindgen, zoo and incident fixtures.
 - Ordinary and exact smoke each match all three stored-reference streams, 3/3.
 - Three ordinary control dossiers for the new source baseline are retained with
-  immutable qualified IDs; 2,584 historical packages verify and controls reconcile.
+  immutable qualified IDs; the original 2,584-package snapshot verified and controls reconcile.
+  All six task-control packages and the gameplay packets are now retained only
+  in Cemetery under the accepted ownership rule; source pages become pointers.
+  See ownership-migration.json for byte-preserving receipts.
   These ordinary records are distinct from synthetic suite results.
 - Direct export of a real synthetic death is rejected; reconciliation reports
   zero natural deaths for the six synthetic games, with no natural registry.
