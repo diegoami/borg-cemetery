@@ -9,7 +9,7 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 104; distinct starting conditions: 88; retained process attempts: 88 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 105; distinct starting conditions: 89; retained process attempts: 89 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -102,6 +102,7 @@ Dossiers: 104; distinct starting conditions: 88; retained process attempts: 88 (
 | [D-588c4cf0064279ca6315080bd3b9d82b02479a5dce32e51f4836ffffd7f5c706](D0000-qd5f064008eba5f8877d8f6271bcec904a278b8122b1cbc51b30b35dc59dea7ff/report.md) | unassigned | `cac37f5901c9` | 1050 | a grey mold | 24096 | unassessed |
 | [D-c0717fa3587f67c8bff6cf4f3b14b6e6736acb13947ca798b39de7cc0fed4f9d](D0000-qd7cb8151fed12354d2ea54034faa8cbfbc0391678910e6f0aac42a0166ab9d9e/report.md) | unassigned | `46d5f2ae46c2` | 1023 | a metallic red centipede | 13184 | unassessed |
 | [D-af1a06731ce12b767b2c189d4e85ef163048197f7418d75ccb332ea2639393ab](D0000-qd9ba48f8d906b68505b03a12141acc506893e47f8b1a49fa5f71b533c0ff88d4/report.md) | unassigned | `cd411e551fa8` | 1084 | a grey mushroom patch | 22908 | unassessed |
+| [D-5aab038ee0622e06333756eef6a15c2626317392e215bb1a93f37cb089a72b79](D0000-qdb8f0f57ae89c07f38ff73756bb4ce01a5ffcae053e209a295bedf555d06a19f/report.md) | unassigned | `9b047a7b22e6` | 1011 | a fruit bat | 1979 | unassessed |
 | [D-8b85644fc665eb55cde46778a17fa83389409d31f9be69d08dc3cb7e98ea9149](D0000-qdf62967dee163608704d5e2e5f3f84acc38fbcd6dec64d4671dd8593fd216019/report.md) | unassigned | `cac37f5901c9` | 1062 | a soldier | 49147 | unassessed |
 | [D-3b0f93c103fb1929dc9ba00c35cedb3e481b70115f8b94d175d39ab4d1966fc1](D0000-qe234f0e5eea07c6a02387249027a20d143962cf843d46a2d67b6f92bea7eb6ce/report.md) | unassigned | `8e007cddc1b0` | 1011 | a cave spider | 18903 | unassessed |
 | [D-d743569d2e76562974192016e13255eaa81b249d2cf8184e0b8d3c71c03276c4](D0000-qe3a44ec24bce77f730ebfc2b86b589f16550e3ad4b5a0d739cc84ff23f926a32/report.md) | unassigned | `0c5ad8f77cfa` | 1011 | a fruit bat | 1979 | unassessed |
