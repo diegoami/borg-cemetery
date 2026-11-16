@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1011",
+  "run_kind": "harness",
+  "character": "Elf Mage",
+  "raw_cause": "a cave spider",
+  "terminal": {
+    "cause": "a cave spider",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 18903,
+    "race_idx": 2,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1011,
+    "flags": "menu",
+    "git_rev": "feff999e80fb2f822b117595af156b62db0ca5ca",
+    "git_dirty": "no",
+    "source_sha256": "8c1fd6f44cf80a05ae9b9c0c5d9529e532d086eb75e11110939b0f13a3444cdc",
+    "binary_sha256": "c1d5b3393a3d52bd3be0465f15a0cda5a51d6991e32012b2a1fc741436f0cf91",
+    "borg_txt_sha256": "9dc792e714d6650dff82a0a28ddd2c46f8930400250ae838dc2e7acab63867bb",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1155
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-reborn-rs/borg-reborn-rs/harness/out/core-trace-death",
+      "result_sha256": "6c02605eeaacdc178886a85ff7e8bb10d96de559550b884ab6dc02be2e966794",
+      "raw_sha256": {
+        "keys.log": "6c02605eeaacdc178886a85ff7e8bb10d96de559550b884ab6dc02be2e966794",
+        "messages.log": "e7e746305a86b3ed391460fb114ae90b280ae206ac8536ae21c1245d7380d180",
+        "state.log": "9932a3bfa185dc02f4956ee17a7a2dc342ebeeb2918459972ed10a82666b352a"
+      },
+      "source_commit": "feff999e80fb2f822b117595af156b62db0ca5ca",
+      "binary_sha256": "c1d5b3393a3d52bd3be0465f15a0cda5a51d6991e32012b2a1fc741436f0cf91"
+    }
+  ],
+  "encounter_family": "start-d77286bfcbc06d4f6b5009fd633f33baeb78229405d4f7d0ce6e90fb65eb7b7f",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ace3cd993aa9eeff18ba5ce341d0c1c6653a6dc1281be5147a7e03a6ae0d2332",
+    "config.txt": "30914aceaa9795589d20a1e0803cc0d851de4f705c9a2a20353f5be4b80a72fd",
+    "depths.json": "632e580f00819b59f15ec19cf1b4f3afb7bdfb581041538edd624d18e5435ae3",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "aeee649c0266681f4f7e52e23c581acfa99051bfbbbad315f66d627c8d4c3184",
+    "trace-core-tail.jsonl": "172547666bcd370fe02c951282db227f62bab6f2b129476094c9dddb42a644fa"
+  },
+  "investigation": null,
+  "issue": null
+}
