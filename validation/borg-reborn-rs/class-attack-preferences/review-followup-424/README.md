@@ -22,3 +22,11 @@ its diagnostic is retained. The corrected run uses the supported selector `rebor
 Local formatting/Clippy,165 workspace tests,336 core tests/four existing ignores,
 vendor check and strict package integrity pass. Original gameplay logs/builds
 remain under /workspace/work/424-*; the receipts retain actual hashes and settings.
+
+Second CI43874372787 passed all behavioral/reference/full-suite checks but final
+original-core reconciliation required the rerun-source Druid seed1020 case
+under the new source identity. Preserve all three original artifact archives
+and four imported packets. An independently generated local default-core
+Druid control reproduces c542b7d80373 exactly and is also retained. The expanded
+archive verifies86 qualified packages before a third fresh CI run. No check,
+seed or expected key hash is changed. Package count is not a life count.
