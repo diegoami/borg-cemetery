@@ -1,3 +1,5 @@
+**Review follow-up #424:** [log/status correction controls](review-followup-424/README.md) retain four additional qualified packages (81 total); earlier pins and evidence below are unchanged.
+
 # Native class/family attack preference validation
 
 **Final CI:** [all checks pass at3f744ddb](final-ci/README.md). The current archive
