@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""Play a private copy of the exact retained position; Borg starts paused."""
+from pathlib import Path
+import gzip, hashlib, json, os, shutil, subprocess, tempfile
+case=Path(__file__).resolve().parent
+meta=json.loads((case/'scenario.json').read_text())
+session=Path(os.environ.get('PLANMAGE_ORIGINAL_SESSION',meta['local_original_session']))
+exe=session/'runtime/game/angband';cli=session/'runtime/angband-recorder'
+if not exe.is_file() or hashlib.sha256(exe.read_bytes()).hexdigest()!=meta['origin']['binary_sha256']:
+    raise SystemExit('Matching frozen runtime is unavailable. Set PLANMAGE_ORIGINAL_SESSION to the preserved original session.')
+blob=(case/meta['save']).read_bytes()
+if hashlib.sha256(blob).hexdigest()!=meta['compressed_sha256']:raise SystemExit('Scenario archive changed')
+data=gzip.decompress(blob)
+if hashlib.sha256(data).hexdigest()!=meta['save_sha256']:raise SystemExit('Scenario save changed')
+root=case
+while not (root/'scripts/case_replay.py').is_file():
+    if root.parent==root:raise SystemExit('Run from a full Borg Cemetery checkout')
+    root=root.parent
+base=root/'.cache/incident350/human';base.mkdir(parents=True,exist_ok=True)
+out=Path(tempfile.mkdtemp(prefix='before-death-',dir=base))
+for name in ['user','save','archive','panic','scores','diagnostics']:(out/name).mkdir()
+for p in (session/'segments/live/user').iterdir():
+    if p.is_file():shutil.copy2(p,out/'user'/p.name)
+(out/'save/PlanMage').write_bytes(data)
+env={k:v for k,v in os.environ.items() if not k.startswith(('BORG_','BORGH_','ANGBAND_'))}
+env.update(DISPLAY=os.environ.get('DISPLAY',':0'),BORG_CORE='borg-rs',BORG_RUN_DIR=str(out/'diagnostics'),BORG_ERRAND_OUT=str(out/'errands.jsonl'),BORG_TOWN_PLAN_RECORD=str(out/'diagnostics/town-plan.jsonl'),TZ='UTC',LANG='C.UTF-8',LC_ALL='C.UTF-8')
+args=['-mx11','-f']+[f'-d{k}={out/k}' for k in ['user','save','archive','panic','scores']]+['-uPlanMage']
+(out/'human-start.json').write_text(json.dumps({'scenario':str(case),'output':str(out),'original_save_sha256':meta['save_sha256'],'borg_initially_active':False,'same_life_branch':True},indent=2)+'\n')
+print(f"Playable position: level {meta['level']} Mage, DL{meta['depth']}, {meta['initial_hp']}/{meta['max_hp']} HP, {meta['sp']} SP. Borg is OFF.",flush=True)
+print('Ctrl-S saves. Ctrl-X saves and exits. Recording/output:',out,flush=True)
+raise SystemExit(subprocess.run([str(cli),'record',str(out/'recording'),'--',str(exe),*args],cwd=exe.parent,env=env).returncode)
