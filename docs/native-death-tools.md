@@ -55,3 +55,29 @@ The [survival analysis](death-analysis.md) uses these distinctions. Concrete
 proposals name whether they need an existing profile setting, a qualified
 native fixture, missing instrumentation or a future intervention facility.
 Neither moving tools nor writing an analysis applies a gameplay fix.
+
+## Synthetic execution boundary
+
+Synthetic generated-depth runs are experimental results, not natural deaths.
+The exporter and reconciliation share the same conservative guard. In summary
+or config, absent/empty/zero `start_depth` is ordinary (JSON numeric zero, including 0.0, or false, or the
+literal string `0`); other string spellings, including `00` and `0.0`, are excluded.
+The accepted ordinary `synthetic` values are absent, JSON false/numeric zero, empty string,
+`0` and lowercase `false`. Values such as `False` or `no` fail closed.
+One conflicting synthetic marker suffices to exclude a run.
+
+Supplied and recorded comma-separated flags are stripped and lowercased.
+`start-depth` / `start_depth` and `synthetic` tokens are excluded when bare or
+followed by `=` or whitespace. The real suite emits `menu,start-depth=N`.
+
+The pair `game_options.birth_force_descend: true` and `birth_no_recall: true`
+also excludes unmarked one-way save lineage. This native receipt intentionally
+requires JSON booleans, without coercing strings/numbers; `loaded: true` alone
+is not evidence of synthetic lineage. An absent/null option object is permitted;
+a non-object is malformed and excluded rather than crashing the scan.
+Reconciliation prints `SKIPPED: <run>: <reason>` for each exclusion, so strict
+marker parsing cannot silently hide a run.
+
+This is the natural-registry boundary for cemetery #5 / borg-reborn-rs #371.
+The P1 suite/report layer is documented in [synthetic-suite.md](synthetic-suite.md).
+No existing dossier is rewritten or promoted from a synthetic result.

@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0002-rust-seed102",
+  "run_kind": "harness",
+  "character": "Elf Mage",
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 3640,
+    "race_idx": 2,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 102,
+    "flags": "menu",
+    "git_rev": "300f4716f34e92e2186d86652d3cf49fee589529",
+    "git_dirty": "no",
+    "source_sha256": "9bec1ff5eee8cb1683a1e30d4ddba7291af48e58119e582a3d8c9a023a2a92bd",
+    "binary_sha256": "37d9f8f7e6bd6455eef864be597054e9e413dd322700288d3d70a45e1cdad2d0",
+    "borg_txt_sha256": "5f53296441769ec37d1e8fc6019110e8c0b7ac1f39f69520ff9218d0ce0dad92",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 373
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-reborn-rs/363b8e4f-0f25-42e8-8383-d41ed8b07227/scratchpad/ci459/runs/suite-smoke/smoke-mage-2",
+      "result_sha256": "50491fa139246c688f04bb21dd925a97efdc5c7a4e4a44fee52dd2a00417e5ac",
+      "raw_sha256": {
+        "keys.log": "50491fa139246c688f04bb21dd925a97efdc5c7a4e4a44fee52dd2a00417e5ac",
+        "messages.log": "8a7a8c4dfd5303863802060057369eae88a2f05649b656eb517e2428d55724fa",
+        "state.log": "b1b82d28736d7546e7234f268c10fe6d7ca7da59b99034f164e2ef3fd65276b7"
+      },
+      "source_commit": "300f4716f34e92e2186d86652d3cf49fee589529",
+      "binary_sha256": "37d9f8f7e6bd6455eef864be597054e9e413dd322700288d3d70a45e1cdad2d0"
+    }
+  ],
+  "encounter_family": "start-8e586c2b5825a968e2b7b7f28b00e7ac062a47b2b65bd73e7351a21480853d18",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "9a77994d49aa197bdb2e6d9c60b334b227d5cf4fc086e9c61a63804c78412a39",
+    "config.txt": "d5439b26006c1ea4161869f22aac16dfec75b6d299aeed11526fa02366812143",
+    "depths.json": "3c2fb80795af4d37deebfa6a94a572613cbb8f2c21fa4d69e2f6a3c4a8816898",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "e7c8db5da83568e9aca06c37ece7109c600be23a6bd40f7cdc179653a96742d4",
+    "trace-tail.jsonl": "13f26a0e8b09314dc4a2b83dcd66db9d7a07209d17414f904344d32d3b5fceeb"
+  },
+  "investigation": null,
+  "issue": null
+}

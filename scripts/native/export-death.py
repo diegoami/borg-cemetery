@@ -11,7 +11,7 @@ new death.
   tools/export-death.py RUN_DIR --impl IMPL --build-id FILE [--flags F]
 
 The dossier goes to $BORG_DEATH_RECORDS_DIR, default borg-cemetery/deaths/, as
-DNNNN-IMPL-seedSEED/ with:
+D-<full SHA-256 of encounter family and original key stream>/ with:
   record.json      borg-rs-style record: identity, terminal state, attempts,
                    encounter family (same start state = same family)
   assessment.json  "unassessed"; filled in by a person or a later task
@@ -37,6 +37,9 @@ from pathlib import Path
 
 CEMETERY_ROOT = Path(__file__).resolve().parents[2]
 ROOT = Path(globals().get('SOURCE_ROOT', os.environ.get('BORG_DEATH_SOURCE_ROOT', str(CEMETERY_ROOT.parent / 'borg-reborn-rs'))))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from death_identity import death_id, metadata, ensure
+
 SCHEMA = 'borg-reborn-rs/death-record@1'
 
 
@@ -65,7 +68,7 @@ def registry_dir():
 # Thinks of the decision trace a dossier keeps.
 TRACE_TAIL = 200
 
-REQUIRED = ('record.json', 'assessment.json', 'report.md', 'build.json', 'summary.json', 'config.txt')
+REQUIRED = ('record.json', 'assessment.json', 'report.md', 'build.json', 'summary.json', 'config.txt', 'death-id.json')
 
 
 def existing(reg):
@@ -75,7 +78,7 @@ def existing(reg):
     failed before this tool wrote atomically; it is reported, never
     silently skipped or renumbered around.
     """
-    cases = sorted(d for d in reg.iterdir() if d.is_dir() and re.match(r'D\d{4}', d.name)) if reg.exists() else []
+    cases = sorted(d for d in reg.iterdir() if d.is_dir() and re.match(r'D(?:\d{4}|-[0-9a-f]{64}$)', d.name)) if reg.exists() else []
     seen, broken = {}, []
     for d in cases:
         try:
@@ -83,6 +86,8 @@ def existing(reg):
         except (OSError, ValueError):
             broken.append(d.name)
             continue
+        if (d / 'death-id.json').exists():
+            ensure(d, check=True)
         for a in rec.get('attempts', []):
             if a.get('result_sha256'):
                 seen.setdefault((rec.get('encounter_family'), a['result_sha256']), d.name)
@@ -177,6 +182,7 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
            if 'trace-core-tail.jsonl' in files else '')
         + "**Unassessed.** Basic dossier written by `tools/export-death.py` at the end of the run "
         "(RULES 12). Upgrade it with the full death tooling (T1.6) before investigating.\n").encode()
+    files['death-id.json'] = (json.dumps(metadata(record, files['record.json'], case), indent=2, sort_keys=True) + '\n').encode()
     return files
 
 
@@ -186,10 +192,29 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
 NOT_NATURAL_CAUSES = {'Retiring', 'Quitting', 'Interrupting', 'Ripe Old Age'}
 
 
-def not_natural(summary, flags='-'):
+def not_natural(summary, flags='-', config=None):
     """None for a natural death, else why the run is not one. Only natural
     deaths enter the registry (RULES 12; as borg-rs's full exporter)."""
-    flag_set = set(flags.split(','))
+    config = config or {}
+    flag_set = {flag.strip().lower() for raw in (flags, config.get('flags', '-'))
+                for flag in raw.split(',')}
+    # Either producer's marker is sufficient. Missing/contradictory metadata
+    # must never turn an experimental death into a natural registry entry.
+    for record in (summary, config):
+        if (record.get('synthetic') not in (None, False, 0, '', '0', 'false') or
+                record.get('start_depth') not in (None, False, 0, '', '0')):
+            return 'not natural: synthetic start'
+    if any(re.match(r'^(?:start[-_]depth|synthetic)(?:[=\s]|$)', flag) for flag in flag_set):
+        return 'not natural: synthetic start'
+    options = summary.get('game_options')
+    if options is None:
+        options = {}
+    if not isinstance(options, dict):
+        return 'not natural: malformed game_options'
+    # The native option receipt uses JSON booleans. Do not infer synthetic
+    # lineage from a loaded game alone or coerce strings/numbers to booleans.
+    if options.get('birth_force_descend') is True and options.get('birth_no_recall') is True:
+        return 'not natural: one-way birth options (including synthetic-save lineage)'
     if not summary.get('dead'):
         return 'not dead'
     if summary.get('stop_reason') != 'death':
@@ -242,14 +267,14 @@ def export(run_dir, impl, build_id_path, flags='-'):
     # when the suite ends: record where the logs will be.
     final_dir = re.sub(r'\.partial\.\d+(?=/|$)', '', str(run_dir))
     summary = json.loads((run_dir / 'summary.json').read_text())
-    why = not_natural(summary, flags)
+    config = read_kv(run_dir / 'config.txt')
+    why = not_natural(summary, flags, config)
     if why:
         return None, why
     keys = run_dir / 'keys.log'
     if not keys.exists():
         raise SystemExit(f'export-death: {keys} missing; cannot identify the run')
     build = read_kv(build_id_path)
-    config = read_kv(run_dir / 'config.txt')
     keys_sha = sha256_file(keys)
     family = run_family(summary, config, impl, build.get('source_sha256'), flags)
     reg = registry_dir()
@@ -268,14 +293,20 @@ def export(run_dir, impl, build_id_path, flags='-'):
             if not missing:
                 return case, 'repeat'
             files = dossier(case, *args)
+            # Identity metadata pins the retained original, including its old
+            # source/path fields, rather than the current repair invocation.
+            raw_record = (out / 'record.json').read_bytes()
+            files['death-id.json'] = (json.dumps(metadata(json.loads(raw_record), raw_record, case),
+                                                indent=2, sort_keys=True) + '\n').encode()
             written = [name for name in missing if name in files]
             for name in written:
                 (out / name).write_bytes(files[name])
             if not written:  # e.g. a run without config.txt: nothing to restore
                 return case, 'repeat'
             return case, 'repaired: ' + ', '.join(written)
-        n = max([int(d.name[1:5]) for d in cases] + [0]) + 1
-        case = f"D{n:04d}-{impl}-seed{summary.get('seed')}"
+        case = death_id(family, keys_sha)
+        if (reg / case).exists():
+            raise SystemExit(f'export-death: identity collision at {reg / case}; refusing to overwrite')
         tmp = reg / f'.tmp-{case}'
         tmp.mkdir()
         for name, data in dossier(case, *args).items():

@@ -53,6 +53,6 @@ cemetery: 1 dossiers.
 
 | Registry | Case report | Seed | Seed basis | Character | Cause | Turn | Depth | Level | Settings | Start family |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| cemetery | [D0006-collected](../../../deaths/D0006-collected/README.md) | Unknown | saved RNG | Human Warrior; default point buy; normal UI birth | a killer brown beetle | 73100 | Unknown | Unknown | [settings](#settings-cemetery-98cc6261449f) | start-3d21766b4d7846dc1d9bb7fd31649534bfbee0927ba6e987188306e79b0c92b8 |
+| cemetery | [D-04dc0cc834131e4d63c53834e816f1d18f9277ce3ca1be119e0971952ca3fbb9](../../../deaths/D0006-collected/README.md) | Unknown | saved RNG | Human Warrior; default point buy; normal UI birth | a killer brown beetle | 73100 | Unknown | Unknown | [settings](#settings-cemetery-98cc6261449f) | start-3d21766b4d7846dc1d9bb7fd31649534bfbee0927ba6e987188306e79b0c92b8 |
 
 [Statistics index](../../README.md)

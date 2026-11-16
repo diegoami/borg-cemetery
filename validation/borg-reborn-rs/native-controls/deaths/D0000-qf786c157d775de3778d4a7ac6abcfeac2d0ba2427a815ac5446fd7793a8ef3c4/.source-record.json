@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0003-rust-seed1020",
+  "run_kind": "harness",
+  "character": "Elf Druid",
+  "raw_cause": "a giant white mouse",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 8922,
+    "race_idx": 2,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020,
+    "flags": "menu",
+    "git_rev": "0ebe558ddbe50cfb69ba279f7add7e5cc352156e",
+    "git_dirty": "no",
+    "source_sha256": "6d5ded1415ceede14b754b9be0a98146cb19f3094d99f7b6cd781c4c0cb5e524",
+    "binary_sha256": "05e1fa7197e00fd736323f6e2d16521ecc12bbbf8ce799287a41af1e3b662617",
+    "borg_txt_sha256": "761cdd15caa7baf58d226006449221d9f3f7de4f5df5a79f483f8e121f8e1e77",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 751
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-reborn-rs/099c3cd2-6fd6-4899-9726-cecf4b5b0df5/scratchpad/ci455c/runs/rerun-source-1020-2-2",
+      "result_sha256": "c542b7d80373f4e96cd151e9df3be44dbf458719a2b1f7064b38e9e3cf56b084",
+      "raw_sha256": {
+        "keys.log": "c542b7d80373f4e96cd151e9df3be44dbf458719a2b1f7064b38e9e3cf56b084",
+        "messages.log": "770bf5c38f86bfd8e484c607be5bf5414a51717034bb475746b249affb7a7386",
+        "state.log": "eeb130bc50c09f07e13aaf263ad63812d0217650f86db369e7ade09633c58bce"
+      },
+      "source_commit": "0ebe558ddbe50cfb69ba279f7add7e5cc352156e",
+      "binary_sha256": "05e1fa7197e00fd736323f6e2d16521ecc12bbbf8ce799287a41af1e3b662617"
+    }
+  ],
+  "encounter_family": "start-5b620ae1861917f44c811769e4be33c7d4fbec134c18d99d07971050c079704c",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "9b0b4557ed04a3c4ba117be13381c4afaae68dd3da11af3edc5bed553a8d1de4",
+    "config.txt": "02c861b6459098d1ad68e0588ff363b066698635c6891fea186d59f981f86c70",
+    "depths.json": "5286600f4634a72e92eef1e8151835a442833ba75c828b05da84aa173486b860",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "c47aa6c2b44016000df2f985a82e2b6bb8d305730c3fb9b9767d5bf649b9345c",
+    "trace-tail.jsonl": "2bd09b377f55b5a4622a8908a0c4540197d36477db2169ad26eecca44740692d"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "borg-cemetery/p1-results-lineage@1",
+  "preserved_snapshots": [
+    {
+      "commit": "b55b07aed36eb4ad15acf9db5ee2a7cc7acc53e1",
+      "path": "docs/reviews/M2/checkpoints/p1-results-b55b07a.json",
+      "sha256": "005d44e8097c0be2496cd9b3881ddbdb4c9b3268afed7888d91d6edfe19cb9ea",
+      "binary_sha256": "000d8d6f08d976fa25df75d9b330a13e529ad9dff0b3716e07f6ca2a0abcc6a7",
+      "source_sha256": "bf9a451c46a07142b59525a9c9c581287930e3b333baa4a81dda4816ed2a025a",
+      "build": {
+        "binary": "/workspace/work/borg-reborn-rs/build/rust/game/angband",
+        "binary_sha256": "000d8d6f08d976fa25df75d9b330a13e529ad9dff0b3716e07f6ca2a0abcc6a7",
+        "built_utc": "2026-11-16T08:57:56Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "99473510940b8a7bd6e77ad61e3a2b00c72a6e6d",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "bf9a451c46a07142b59525a9c9c581287930e3b333baa4a81dda4816ed2a025a"
+      }
+    },
+    {
+      "commit": "52dff9fdb2f423d505641c5a5295e1cad3fb7e82",
+      "path": "docs/reviews/M2/checkpoints/p1-results-52dff9f.json",
+      "sha256": "7c5bea2d9ef0b5795e7f1fbab928659f78449781d785caf10f8373e150dc14db",
+      "binary_sha256": "8336a9cad4d28eba8c9b284bce1f0ab3b2318eb65b6924413284eb2969d4e5c6",
+      "source_sha256": "bf9a451c46a07142b59525a9c9c581287930e3b333baa4a81dda4816ed2a025a",
+      "build": {
+        "binary": "/workspace/work/p1-milestone-runtime/build/rust/game/angband",
+        "binary_sha256": "8336a9cad4d28eba8c9b284bce1f0ab3b2318eb65b6924413284eb2969d4e5c6",
+        "built_utc": "2026-11-16T09:56:45Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "99473510940b8a7bd6e77ad61e3a2b00c72a6e6d",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "bf9a451c46a07142b59525a9c9c581287930e3b333baa4a81dda4816ed2a025a"
+      }
+    }
+  ],
+  "note": "Historical packets preserved byte-for-byte; current results are another runner execution, not a relabelled historical build. Same-toolchain bit reproducibility is not established.",
+  "external_reproductions": [
+    {
+      "repository": "diegoami/borg-cemetery",
+      "commit": "a5874c3d403a68aa4403fb756416a54a81e514f0",
+      "path": "docs/reviews/M2/reproductions/20261116-pilot/results-first.json",
+      "sha256": "c86a47bae19cd52b64628ef925f187fc95e0206d43aa040872863482511203e6",
+      "binary_sha256": "ba06d6fad667a51a25b644b62687a5b47f17cabe75fecce45638e7f4301b290b",
+      "build": {
+        "binary": "/workspace/work/pilot/borg-reborn-rs/build/rust/game/angband",
+        "binary_sha256": "ba06d6fad667a51a25b644b62687a5b47f17cabe75fecce45638e7f4301b290b",
+        "built_utc": "2026-11-16T09:50:47Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "99473510940b8a7bd6e77ad61e3a2b00c72a6e6d",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "bf9a451c46a07142b59525a9c9c581287930e3b333baa4a81dda4816ed2a025a"
+      }
+    }
+  ],
+  "active_reference": {
+    "path": "docs/reviews/M2/results.json",
+    "frozen_from_commit": "52dff9fdb2f423d505641c5a5295e1cad3fb7e82",
+    "sha256": "7c5bea2d9ef0b5795e7f1fbab928659f78449781d785caf10f8373e150dc14db"
+  },
+  "followup_attempt": {
+    "schema": "borg-cemetery/p1-verification@1",
+    "reference": "docs/reviews/M2/results.json",
+    "reference_sha256": "7c5bea2d9ef0b5795e7f1fbab928659f78449781d785caf10f8373e150dc14db",
+    "attempt": "docs/reviews/M2/reproductions/20261116-followup/results.json",
+    "attempt_sha256": "c7a474ef42fac4735fa8a1e73b9d46ec537c8f105e5e451aa8ba441791b8c0bb",
+    "cases": 6,
+    "streams": 18,
+    "comparison": "python3 scripts/synthetic_suite.py verify --actual docs/reviews/M2/reproductions/20261116-followup/results.json --expected docs/reviews/M2/results.json",
+    "match": true
+  }
+}
