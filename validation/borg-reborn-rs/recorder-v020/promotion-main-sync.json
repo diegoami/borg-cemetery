@@ -1,0 +1,115 @@
+{
+  "accepted_main": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+  "accepted_recorder_review": "46d5f2ae46c2af743a35ea21165191a0f1cd53f6",
+  "build_id": {
+    "binary": "/workspace/work/p351/build/rust/game/angband",
+    "binary_sha256": "a5ad0427195549c97c4b467d23dc3427c4252fc48a0e91802ff21a1ab81003fe",
+    "built_utc": "2026-11-16T12:23:45Z",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+    "git_dirty": "no",
+    "git_rev": "71978c7bb6766785ab8fdce0a06cc16a9e1c436d",
+    "impl": "rust",
+    "inputs_dirty": "no",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "source_sha256": "1573e6cad8bf9dc39f31324edc0d0e6fe9f37dfcefaa3625eb9c04de665ecfa7"
+  },
+  "cases": [
+    {
+      "baseline_case": "D0000-qa5ccdc36bb20727ec115452a6d70d950ccbe0e2aed8d4c609f10aecfbba598fb",
+      "case": "D0000-qff56fe6845b928fdd4b44af9722e01e19fa0cfda292c45ff2e1707d809218c80",
+      "case_files_sha256": {
+        ".source-record.json": "672f14cc42231a4d48443915e2dfe00d9ec2ce874971572697d34cb7cf669844",
+        "assessment.json": "b4fe7eca1f0af58be44d7968ccdbaf416dca6168a7a5098ce4616518a400f2b8",
+        "build.json": "63566c9d7371be96d4dd05f4bcea37676161001c2e321c6c02a903d35da35677",
+        "config.txt": "02c861b6459098d1ad68e0588ff363b066698635c6891fea186d59f981f86c70",
+        "depths.json": "5286600f4634a72e92eef1e8151835a442833ba75c828b05da84aa173486b860",
+        "import.json": "65ee9cd426a79e20a5825aada736fca73a5113565cead50da69959bf11cf4df6",
+        "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+        "record.json": "b6e99a4ac397884d256b1a32f1377fcb29739e5b0ae94e9e645f59b18b250328",
+        "report.md": "0dbb1f653ecfc38d215d335b2876560352636171a5ad9b49a868bcade1311d07",
+        "summary.json": "b65d32263f6c97ea396b02c385b8b2cfda4090327511094a4d69190b589b92ed",
+        "trace-tail.jsonl": "2bd09b377f55b5a4622a8908a0c4540197d36477db2169ad26eecca44740692d"
+      },
+      "keys_sha256": "c542b7d80373f4e96cd151e9df3be44dbf458719a2b1f7064b38e9e3cf56b084",
+      "seed": 1020,
+      "terminal": {
+        "cause": "a giant white mouse",
+        "class_idx": 2,
+        "dead": true,
+        "depth": 1,
+        "level": 2,
+        "max_depth": 1,
+        "race_idx": 2,
+        "turn": 8922
+      }
+    },
+    {
+      "baseline_case": "D0000-q308236ee380c6aaa8c7cd64b47641738fd715f2f56aa2187f8604eef69a19e31",
+      "case": "D0000-qa02ad14602b599b3cff50f189a16169d823b22be3d147bd416bd51d43b1d7786",
+      "case_files_sha256": {
+        ".source-record.json": "ebcfbe550da36e9474c71cc2b60588e30bc6ac255c7e2ac9aa69e80a915751f0",
+        "assessment.json": "b4fe7eca1f0af58be44d7968ccdbaf416dca6168a7a5098ce4616518a400f2b8",
+        "build.json": "63566c9d7371be96d4dd05f4bcea37676161001c2e321c6c02a903d35da35677",
+        "config.txt": "3e0d6f95db93307c94b73e6316fa648a50d3318eac2baf585bd0e8d40d98b2f2",
+        "depths.json": "632e580f00819b59f15ec19cf1b4f3afb7bdfb581041538edd624d18e5435ae3",
+        "import.json": "5f06ecfb7fc9bdadc624379744e92864c3ce4786d30f72ba8dcc32055bc4f66e",
+        "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+        "record.json": "db4c4c256149894dcc8e6a0a6b968474dc49f28261d3f1776a46abc4ea53b9b1",
+        "report.md": "810d6dbac9c1c1432346d7e1817bfcd828aa18c877555535efdeb7ce02b36a29",
+        "summary.json": "d42eec42618dc3d3881ad3ca80ecb4acf5446fa78e5223fc0f3c538a9ae9e0eb",
+        "trace-core-tail.jsonl": "6f6308a7909d4eed8cf553a20ca230f9d56c662ee677739ca8b720555e3dd510"
+      },
+      "keys_sha256": "6c02605eeaacdc178886a85ff7e8bb10d96de559550b884ab6dc02be2e966794",
+      "seed": 1011,
+      "terminal": {
+        "cause": "a cave spider",
+        "class_idx": 1,
+        "dead": true,
+        "depth": 1,
+        "level": 2,
+        "max_depth": 1,
+        "race_idx": 2,
+        "turn": 18903
+      }
+    },
+    {
+      "baseline_case": "D0000-qf91e2c916a7cf6eb83007c40acfde25c1ee8179df79cfe41c05dcf0d8687892d",
+      "case": "D0000-q9f5285fd989053070dab78fdf5c0dabb557d6f1a4c7a109134eb4e4e91305fe9",
+      "case_files_sha256": {
+        ".source-record.json": "65ef1c4d2597a4cf691edefbf64e84555b809aa040f835a20864d3f7b84bd0b6",
+        "assessment.json": "b4fe7eca1f0af58be44d7968ccdbaf416dca6168a7a5098ce4616518a400f2b8",
+        "build.json": "63566c9d7371be96d4dd05f4bcea37676161001c2e321c6c02a903d35da35677",
+        "config.txt": "d5439b26006c1ea4161869f22aac16dfec75b6d299aeed11526fa02366812143",
+        "depths.json": "3c2fb80795af4d37deebfa6a94a572613cbb8f2c21fa4d69e2f6a3c4a8816898",
+        "import.json": "e5340bb05db5bcb762ee8fe124cb3e073c7e7ff12f9b299501da3d533f962778",
+        "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+        "record.json": "0d2899297b4953abe859e5287856c600feeac2197c06bbc2306650d8ba4077eb",
+        "report.md": "39cbc10f8ee7e0f4663d2ab33c3e059484546e3f0c4dc36714f2a0f9a69b0e07",
+        "summary.json": "6eb3ee558043bc4861c42bfe63fd18e8270948f95590c8c4714d8ce418df9743",
+        "trace-tail.jsonl": "13f26a0e8b09314dc4a2b83dcd66db9d7a07209d17414f904344d32d3b5fceeb"
+      },
+      "keys_sha256": "50491fa139246c688f04bb21dd925a97efdc5c7a4e4a44fee52dd2a00417e5ac",
+      "seed": 102,
+      "terminal": {
+        "cause": "Fang, Farmer Maggot's Dog",
+        "class_idx": 1,
+        "dead": true,
+        "depth": 1,
+        "level": 1,
+        "max_depth": 1,
+        "race_idx": 2,
+        "turn": 3640
+      }
+    }
+  ],
+  "limits": "Three bounded validation controls; no population or survival claim. Key-hash and terminal parity with retained accepted-main controls, not a fresh full before/after comparison. Earlier 45-case recorder evidence remains with its original source epoch.",
+  "measured_source_revision": "71978c7bb6766785ab8fdce0a06cc16a9e1c436d",
+  "raw_run_roots": [
+    "/workspace/work/p351-promotion-core-death",
+    "/workspace/work/p351-promotion-smoke-death",
+    "/workspace/work/p351-promotion-original-death"
+  ],
+  "schema": "borg-reborn-rs/recorder-promotion-sync@1",
+  "source_sha256": "1573e6cad8bf9dc39f31324edc0d0e6fe9f37dfcefaa3625eb9c04de665ecfa7"
+}
