@@ -79,3 +79,19 @@ This is a small execution/catalog/classification milestone. P2's wider catalogs
 and qualified null-move evaluation, and P3's paired two-executable impact
 comparison, remain unimplemented. No population or Borg-improvement claim is made.
 Use [PROMPT.md](PROMPT.md) for the runnable owner-selected review.
+
+## Review follow-ups (2026-11-16)
+
+The owner-supplied reviews of reborn d406d2c9 and Cemetery e750549 are reviewer
+input, not acceptance. The reborn reviewer built and ran both startup/build
+suites (11 tests); the Cemetery reviewer ran 54 repo and 46 native-tool tests
+but explicitly did not review the P1 runner, catalog, retained controls or suite
+evidence. That part of the milestone still requires its scoped owner review.
+
+One-way starvation remains unmeasured: a hungry character without food may
+select return-home actions refused by the native rules and stall. The six cells
+cannot establish long-horizon policy competence. #386's policy changes remain
+separate. The libcrypto dependency is retained deliberately and documented for
+adapter hosts; successful supported capture has empirical parity at seed 101,
+not an exhaustive RNG-neutrality proof. Unsupported capture can terminate its
+run as a harness failure and cannot stand in for a successful paired control.

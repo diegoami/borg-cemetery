@@ -190,16 +190,23 @@ def not_natural(summary, flags='-', config=None):
     """None for a natural death, else why the run is not one. Only natural
     deaths enter the registry (RULES 12; as borg-rs's full exporter)."""
     config = config or {}
-    flag_set = set(flags.split(',')) | set(config.get('flags', '-').split(','))
+    flag_set = {flag.strip().lower() for raw in (flags, config.get('flags', '-'))
+                for flag in raw.split(',')}
     # Either producer's marker is sufficient. Missing/contradictory metadata
     # must never turn an experimental death into a natural registry entry.
     for record in (summary, config):
         if (record.get('synthetic') not in (None, False, 0, '', '0', 'false') or
                 record.get('start_depth') not in (None, False, 0, '', '0')):
             return 'not natural: synthetic start'
-    if any(flag.startswith('start-depth=') for flag in flag_set):
+    if any(re.match(r'^(?:start[-_]depth|synthetic)(?:[=\s]|$)', flag) for flag in flag_set):
         return 'not natural: synthetic start'
-    options = summary.get('game_options') or {}
+    options = summary.get('game_options')
+    if options is None:
+        options = {}
+    if not isinstance(options, dict):
+        return 'not natural: malformed game_options'
+    # The native option receipt uses JSON booleans. Do not infer synthetic
+    # lineage from a loaded game alone or coerce strings/numbers to booleans.
     if options.get('birth_force_descend') is True and options.get('birth_no_recall') is True:
         return 'not natural: one-way birth options (including synthetic-save lineage)'
     if not summary.get('dead'):
