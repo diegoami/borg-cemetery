@@ -1,0 +1,38 @@
+{
+  "schema": "borg-cemetery/native-validation-controls@1",
+  "purpose": "CI identity and export checks, not zoo comparison",
+  "source": {
+    "repository": "diegoami/borg-reborn-rs",
+    "change": "town planner item values (#400, #443, food)",
+    "git_rev": "90df4d9456346483835e5b07426f46daf96f174d",
+    "source_sha256": "1b1bfbfba3703623492a412b5666ea8940041f80b128e586864fb6e711f9f60c",
+    "base": "borg-reborn-rs main d3ebe3c0"
+  },
+  "note": "CI deaths retained because the encounter family includes the source hash. Repeated validation attempts, not new independent lives or a survival comparison.",
+  "runs": [
+    {
+      "run": "core",
+      "case": "D0000-q2edb9c778b1a8c0659e1b4a6fe63d5ba86f45e9963c6ca7e5d3379ad4a46bb49",
+      "seed": 1011,
+      "class": "Mage",
+      "death_cause": "a cave spider",
+      "game_turns": 18903
+    },
+    {
+      "run": "reborn-1020",
+      "case": "D0000-q6f25cfe5f377530a2d143071ad2ba2ec1cbeb09f13b3bd654e3eca2c64da962e",
+      "seed": 1020,
+      "class": "Druid",
+      "death_cause": "a giant white mouse",
+      "game_turns": 8922
+    },
+    {
+      "run": "smoke-mage-2",
+      "case": "D0000-q9625cdd65ac2a40216b0c0bc90b3d602d9e001e2d0e0fdc11e3ebac96f65b42b",
+      "seed": 102,
+      "class": "Mage",
+      "death_cause": "Fang, Farmer Maggot's Dog",
+      "game_turns": 3640
+    }
+  ]
+}
