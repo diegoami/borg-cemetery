@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1011",
+  "run_kind": "harness",
+  "character": "Elf Mage",
+  "raw_cause": "a cave spider",
+  "terminal": {
+    "cause": "a cave spider",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 18903,
+    "race_idx": 2,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1011,
+    "flags": "menu",
+    "git_rev": "0ebe558ddbe50cfb69ba279f7add7e5cc352156e",
+    "git_dirty": "no",
+    "source_sha256": "6d5ded1415ceede14b754b9be0a98146cb19f3094d99f7b6cd781c4c0cb5e524",
+    "binary_sha256": "05e1fa7197e00fd736323f6e2d16521ecc12bbbf8ce799287a41af1e3b662617",
+    "borg_txt_sha256": "3e5f27a2ee1e424776e585af9fd43efe2e427a695fb92b6225832392e3cd801e",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1155
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-reborn-rs/099c3cd2-6fd6-4899-9726-cecf4b5b0df5/scratchpad/ci455c/runs/core-trace-death",
+      "result_sha256": "6c02605eeaacdc178886a85ff7e8bb10d96de559550b884ab6dc02be2e966794",
+      "raw_sha256": {
+        "keys.log": "6c02605eeaacdc178886a85ff7e8bb10d96de559550b884ab6dc02be2e966794",
+        "messages.log": "e7e746305a86b3ed391460fb114ae90b280ae206ac8536ae21c1245d7380d180",
+        "state.log": "9932a3bfa185dc02f4956ee17a7a2dc342ebeeb2918459972ed10a82666b352a"
+      },
+      "source_commit": "0ebe558ddbe50cfb69ba279f7add7e5cc352156e",
+      "binary_sha256": "05e1fa7197e00fd736323f6e2d16521ecc12bbbf8ce799287a41af1e3b662617"
+    }
+  ],
+  "encounter_family": "start-0f4bca2053492a78208ba36aa1f697c68161d5b0027d7d5abf2a84a5d07d4193",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "9b0b4557ed04a3c4ba117be13381c4afaae68dd3da11af3edc5bed553a8d1de4",
+    "config.txt": "d2d44d869bf2978d1b20b832b377fb61f4b017c5628c27dac5b75e5d8d16a101",
+    "depths.json": "632e580f00819b59f15ec19cf1b4f3afb7bdfb581041538edd624d18e5435ae3",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "bca435f49eaa39ee6e18767920c0c195c6be454dcfe7f6522d3688ab8d7bd30f",
+    "trace-core-tail.jsonl": "172547666bcd370fe02c951282db227f62bab6f2b129476094c9dddb42a644fa"
+  },
+  "investigation": null,
+  "issue": null
+}
