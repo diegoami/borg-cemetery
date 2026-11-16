@@ -9,11 +9,13 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 1; distinct starting conditions: 1; retained process attempts: 1 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 3; distinct starting conditions: 3; retained process attempts: 3 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
 | [D0000-q92110d8eef797bda54eaf2d144a0b0e92acb47d6643640b861d33a3dd9ec4642](D0000-q92110d8eef797bda54eaf2d144a0b0e92acb47d6643640b861d33a3dd9ec4642/report.md) | unassigned | `cce8ccfc320b` | 1011 | a fruit bat | 1979 | unassessed |
+| [D0000-q9fc496b138d5689747fea26ba83bf0ad5d15bb8210dd5b52df6da1f555d35f92](D0000-q9fc496b138d5689747fea26ba83bf0ad5d15bb8210dd5b52df6da1f555d35f92/report.md) | unassigned | `9289dbc5b4aa` | 1011 | a fruit bat | 1979 | unassessed |
+| [D0000-qe3a44ec24bce77f730ebfc2b86b589f16550e3ad4b5a0d739cc84ff23f926a32](D0000-qe3a44ec24bce77f730ebfc2b86b589f16550e3ad4b5a0d739cc84ff23f926a32/report.md) | unassigned | `0c5ad8f77cfa` | 1011 | a fruit bat | 1979 | unassessed |
 
 ## Aggregated actions
 
