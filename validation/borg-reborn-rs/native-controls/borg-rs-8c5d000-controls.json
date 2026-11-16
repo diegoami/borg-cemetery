@@ -1,0 +1,31 @@
+{
+  "schema": "borg-cemetery/native-validation-controls@1",
+  "purpose": "CI identity and export checks, not zoo comparison",
+  "source": {
+    "repository": "diegoami/borg-reborn-rs",
+    "pr": 415,
+    "issue": 368,
+    "git_rev": "80d37b8bde6ed9d70b540f7733044df2fe2b2e25",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "borg_core_donor": "diegoami/borg-rs 8c5d000a58e9ddca1f1954ab9552e505856b313f"
+  },
+  "note": "The same two CI deaths as earlier sources (keys unchanged; borg_town_plan and borg_trip_policy are off in these runs), retained because the encounter family includes the source hash. Repeated validation attempts, not new independent lives.",
+  "runs": [
+    {
+      "run": "core",
+      "case": "D0000-q308236ee380c6aaa8c7cd64b47641738fd715f2f56aa2187f8604eef69a19e31",
+      "seed": 1011,
+      "class": "Mage",
+      "death_cause": "a cave spider",
+      "game_turns": 18903
+    },
+    {
+      "run": "reborn-1020",
+      "case": "D0000-qa5ccdc36bb20727ec115452a6d70d950ccbe0e2aed8d4c609f10aecfbba598fb",
+      "seed": 1020,
+      "class": "Druid",
+      "death_cause": "a giant white mouse",
+      "game_turns": 8922
+    }
+  ]
+}
