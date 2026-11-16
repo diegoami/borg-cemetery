@@ -44,3 +44,13 @@ The concurrent reborn pointer PR #276 (`f441296ff55b2a452daeaed11e5ffbb45f0ce224
 added a canonical-home notice to the native index template and four registry
 regression tests. These are retained here too; supplemental donor hashes are
 in `PROVENANCE.json`. The original source baseline above is unchanged.
+
+## Canonical dossier IDs (2026-11-16)
+
+The exporter now assigns versioned full SHA-256 IDs from the existing
+encounter-family/original-result pair instead of registry-local sequence
+numbers. `death_identity.py` implements the contract and additive historical
+identity metadata. This changes storage identity, not family calculation,
+natural-death eligibility, gameplay or independence rules. Original donor
+hashes above remain the historical baseline. See `docs/death-identity.md`
+in the Cemetery repository. Consumer pins must advance explicitly to adopt it.

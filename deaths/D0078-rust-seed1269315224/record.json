@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0078-rust-seed1269315224",
+  "run_kind": "harness",
+  "character": "Half-Orc Rogue",
+  "raw_cause": "a grey mushroom patch",
+  "terminal": {
+    "cause": "a grey mushroom patch",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 2,
+    "turn": 6069,
+    "race_idx": 6,
+    "class_idx": 6
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1269315224,
+    "flags": "-",
+    "git_rev": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+    "git_dirty": "no",
+    "source_sha256": "2317021cfad2c97c840903ba95eb10cb0b5831d8ada93574b62ceac4d2e15b4c",
+    "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254",
+    "borg_txt_sha256": "f089f888fd7cec3818fb9237572cf9f5dbdddb5c62f17480f045f556a7812d8a",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 627
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths4ec/classes-1800-small/4.2.6-reborn-rust-plans-m13-survival/reborn-m13-plan-town/1269315224",
+      "result_sha256": "f188ca1e8f34ed0258342a8f74653b5458a89a58171aac22fc9151a3f6c3ceec",
+      "raw_sha256": {
+        "keys.log": "f188ca1e8f34ed0258342a8f74653b5458a89a58171aac22fc9151a3f6c3ceec",
+        "messages.log": "f3f73191515b447808aaf0adb21533370fcb9cd1e7acabcc3c45c21d30d147ea",
+        "state.log": "2fabf81a3ac23e12ae6d527088c1fcc4455e33fdb12af4c5c8ed3adf5a794b88"
+      },
+      "source_commit": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+      "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254"
+    }
+  ],
+  "encounter_family": "start-af898a00a9a95c0d05c4babf73d4a8df4a52064b09a852f1a4942edec280b68a",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "87648232ca281819594e3f4706df902fee13024cbc8f670ebce42b1c696bf543",
+    "config.txt": "13b1c753efc462de755435b5baa057d8bb373131caa99dae3ca88fff8ec527a5",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "7561cfef10b569149c553264cc42217f52ca0646b4a61f4449598636d1bef903",
+    "trace-core-tail.jsonl": "f613639bc3dae3c3ff8eb24086b55f6423c5a3ad587ec4d1975c042a61fcd138"
+  },
+  "investigation": null,
+  "issue": null
+}

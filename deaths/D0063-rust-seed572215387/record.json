@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0063-rust-seed572215387",
+  "run_kind": "harness",
+  "character": "Elf Ranger",
+  "raw_cause": "a wild cat",
+  "terminal": {
+    "cause": "a wild cat",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 4,
+    "turn": 25020,
+    "race_idx": 2,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 572215387,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "2f97e2141998114a1243ee6c7bdbf22bed77ca33e5460a026b9084e903b6d0c4",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 2640
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-town/572215387",
+      "result_sha256": "553a40ed3d234b3f7b230b6940eb4282d78b2be9d7bd714f1077cf74e91d8bb9",
+      "raw_sha256": {
+        "keys.log": "553a40ed3d234b3f7b230b6940eb4282d78b2be9d7bd714f1077cf74e91d8bb9",
+        "messages.log": "782e0cb1c36a5fb1c8e7d09834ac5c3456a8ba622d5f3ca5df1f815f7b308fa0",
+        "state.log": "9f378e4099b0aa1dbba6424fd2424b14dbf029eec3c23bb6d66eeca2b6e97b12"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-3f6c3416c08a527736ee32b75807973e8e3a4de6be0aed0684124b2cdf9d1dd1",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "e484ffec57e5b8a4c60fa7424576a13198f7b8629e512a187c720d7158298bfe",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "25ee68c105c6be22ef0b361cba52d74614986e4db227fd3cbcda63f515778e9f",
+    "trace-core-tail.jsonl": "f52b5cb015c4929dc51c0737704b460570ba679974c9f39dd9d053d5e8426d41"
+  },
+  "investigation": null,
+  "issue": null
+}

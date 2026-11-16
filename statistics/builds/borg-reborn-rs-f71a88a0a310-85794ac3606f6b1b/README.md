@@ -53,6 +53,6 @@ reborn-historical: 1 dossiers.
 
 | Registry | Case report | Seed | Seed basis | Character | Cause | Turn | Depth | Level | Settings | Start family |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| reborn-historical | [D0526-recorded](https://github.com/diegoami/borg-reborn-rs/blob/ec9058d18625056154e7f69a21b63036932ff739/docs/deaths/D0526-recorded/report.md) | Unknown | not recorded | RustBorg | a rock lizard | 671 | 1 | 1 | [settings](#settings-reborn-historical-98cc6261449f) | start-7eccd9119e20e4f61e050592c8337fbc82259a9fa1e147bb71d1170e18cc7980 |
+| reborn-historical | [D0526](https://github.com/diegoami/borg-reborn-rs/blob/ec9058d18625056154e7f69a21b63036932ff739/docs/deaths/D0526-recorded/report.md) | Unknown | not recorded | RustBorg | a rock lizard | 671 | 1 | 1 | [settings](#settings-reborn-historical-98cc6261449f) | start-7eccd9119e20e4f61e050592c8337fbc82259a9fa1e147bb71d1170e18cc7980 |
 
 [Statistics index](../../README.md)

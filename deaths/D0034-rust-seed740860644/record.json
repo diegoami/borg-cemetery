@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0034-rust-seed740860644",
+  "run_kind": "harness",
+  "character": "Dunadan Warrior",
+  "raw_cause": "a giant yellow centipede",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 63205,
+    "race_idx": 8,
+    "class_idx": 0
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 740860644,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "3b867d1f4277487e60568aadb43f6edb92cf6d12a5f9b26d24e6f921676a87cf",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 6307
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-plan-town/740860644",
+      "result_sha256": "5c50a1693d9c92b784d8b63935c5084b4220f4850da150f3dbeddce64c594135",
+      "raw_sha256": {
+        "keys.log": "5c50a1693d9c92b784d8b63935c5084b4220f4850da150f3dbeddce64c594135",
+        "messages.log": "b1202517df550213cdb5d0b78124dc224935dab8b73e65762b5159a4ef09d683",
+        "state.log": "0919f259630e08f9617478bd5deee6566bc355e9f3d21a6b7d79ba5321bd007c"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-4ffbb7587f4344279def33d88038b7e5bf234a3200af348a832daf7e226b21c4",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "b4336f129e64001d13974f7ad944cd8c3887d5b30a0b18100ac4ed5bbe4dce09",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "e5b7130a9fe9a33b9e945165e7847f029318127af2d9d1f7e6f0281e5a01a0b8",
+    "trace-core-tail.jsonl": "cfa88e08f14c771f5cc010c4014270bb852caa65eafdb6820727587f928662e7"
+  },
+  "investigation": null,
+  "issue": null
+}

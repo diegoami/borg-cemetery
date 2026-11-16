@@ -4,6 +4,44 @@ Status: owner-requested design proposal, 2026-11-15. **Not implemented or an
 accepted milestone.** This proposes the next architecture; it does not change
 the M1 review boundary, run new games, provision services or delete evidence.
 
+## Owner decision: Cemetery execution and storage, Zoo reports (2026-11-16)
+
+Design the shared database and artifact contract in **Cemetery first**, then
+add the saved-scenario execution mode tracked in
+[Cemetery #32](https://github.com/diegoami/borg-cemetery/issues/32).
+Cemetery owns saves, scenarios, run/continuation records, intermediate
+checkpoints and canonical evidence. **Zoo owns aggregation, comparison reports
+and report presentation**, consuming immutable Cemetery result snapshots.
+This allocation supersedes earlier ownership suggestions in this proposal.
+
+| Execution mode | Game execution | Authoritative saves and run evidence | Reports |
+| --- | --- | --- | --- |
+| Zoo executes pinned Cemetery inputs | Zoo workers | Cemetery | Zoo |
+| Cemetery executes saved scenarios | Cemetery CLI or optional Cemetery CI | Cemetery | Zoo |
+
+Both modes share scenario, runtime, configuration, life, segment, checkpoint
+and attempt identities, plus a versioned result/export contract. Zoo must be
+able to report an already completed Cemetery batch without rerunning it.
+Record every requested cell and its executor, including incomplete and failed
+attempts; worker location does not change outcome or independence semantics.
+
+Save bytes belong in one durable content-addressed artifact store, referenced
+by the database. Each execution loads a private copy and appends new
+checkpoints; it never overwrites its input. Publish a checkpoint as usable only
+after all required engine/Borg-state blobs are durable and verified. Zoo and
+Cemetery retention references protect the same blobs. Keep explicit fresh-Borg
+restart versus verified uninterrupted-continuation labels.
+
+[Zoo #114](https://github.com/diegoami/borg-zoo/issues/114) remains the joint
+architecture coordination issue; its vendor evaluation feeds Cemetery's
+database decision. [Zoo #144](https://github.com/diegoami/borg-zoo/issues/144)
+covers both executor modes and reporting integration.
+[Cemetery #31](https://github.com/diegoami/borg-cemetery/issues/31) covers living
+100k milestones and continuation. Database design comes before executor/API
+integration: schema, immutable result snapshots, ingestion/retry/concurrent
+claims, durable publication, retention and backup/export must fit both modes.
+Provider and deployment choices remain open; no database service is deployed.
+
 ## What the cemetery should answer
 
 For a fixed set of starting conditions, does build B with configuration Y do
@@ -80,8 +118,9 @@ seed numbers do not guarantee equal worlds after engines or decisions diverge.
 
 ## 2. Store documents and artifacts outside Git
 
-Use **PostgreSQL with JSONB documents for metadata**, and an **S3-compatible
-object store for large artifacts**. This is a design recommendation: stable
+Evaluate **PostgreSQL with JSONB documents for metadata**, and an **S3-compatible
+object store for large artifacts** as one candidate in the shared #114 design.
+This earlier recommendation is not a selected provider or implementation: stable
 identity/status fields belong in constrained columns, while versioned analysis
 and configuration documents can evolve. PostgreSQL supports indexed JSONB and
 compound uniqueness/foreign-key constraints, which fit both needs.
@@ -358,12 +397,15 @@ cemetery compare --campaign CAMPAIGN --baseline REFERENCE --candidate CANDIDATE
 cemetery retention plan
 ```
 
-Cemetery owns cohort orchestration, identities, artifact retention, episode
-qualification, investigation, scenario comparison and feedback packets. Borg
-repositories own gameplay, effective-configuration export, engine observations
-and compatible save/private-state interfaces. Reuse zoo-compatible build/run
-adapters and consume their all-run summaries where available; do not run a
-second independent life and pretend it belongs to zoo's original cohort.
+Cemetery owns scenario execution requests in its executor mode, run identities,
+the shared database/artifact contract, retention, episode qualification and
+investigation evidence. Zoo owns population experiment orchestration,
+aggregation, scenario comparisons and report presentation. Borg repositories
+own gameplay, effective-configuration export, engine observations and compatible
+save/private-state interfaces. Reuse the same build/run adapters in both
+executor modes. Ingest original Zoo runs or original Cemetery runs; do not
+run a second life and substitute it for a requested cohort cell. Zoo reports
+pin the input result snapshot, analysis version and endpoint contract.
 
 | Existing component | Redesign treatment |
 | --- | --- |
@@ -377,6 +419,11 @@ second independent life and pretend it belongs to zoo's original cohort.
 | `statistics/` historical inventory | Keep as labelled legacy evidence; new performance statistics query complete cohorts |
 
 Suggested delivery slices, subject to the owner's milestone decision:
+
+The latest owner-selected order starts with the Cemetery database/artifact
+design in #32, then a smallest saved-scenario executor proof, optional Cemetery
+CI, and Zoo ingestion/reporting under #144. The broader slices below remain
+proposal context; they do not authorize a new cohort or override that order.
 
 1. **Matrix and storage:** schema/API, effective-settings export, one fixed pilot
    suite, runtime cache and CI ingestion. Acceptance: every requested cell is

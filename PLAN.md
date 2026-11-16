@@ -1,5 +1,15 @@
 # Milestones
 
+## Owner-directed caster bank (2026-11-16)
+
+The owner requested continued scenario work, prioritizing low-level casters,
+different equipment combinations, and extraction from deaths/near deaths.
+`synthetic/low-level-casters/` adds a provenance-checked incident candidate index
+and a bounded four-class birth matrix. This instruction authorizes that scoped
+bank work without changing the frozen M2 Warrior review packet or accepting M1/M2.
+Caster equipment application remains reborn #382; unsupported records are
+explicitly untested. No P2/P3 population experiment or acceptance tag is implied.
+
 | Milestone | Scope | State |
 | --- | --- | --- |
 | M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | Prepared for owner-run review; **not accepted** |
@@ -68,3 +78,23 @@ The broader database/service redesign remains planning, not an implementation
 commitment. Only the bounded synthetic P1 subset selected above is authorized. M1 remains unaccepted; its implementation pin and
 existing evidence are unchanged. The proposal includes delivery slices and
 acceptance criteria for a later owner decision.
+
+
+## Owner-selected execution/storage direction (2026-11-16)
+
+[Cemetery #32](https://github.com/diegoami/borg-cemetery/issues/32) records a
+Cemetery-first database/artifact design followed by an alternate saved-scenario
+executor: local CLI or optional Cemetery CI retains runs and intermediate
+checkpoints, while Zoo ingests pinned result snapshots, aggregates them and
+owns report presentation. Zoo-executed pinned Cemetery inputs remain supported.
+Both modes share one scenario/save/run identity and storage contract.
+
+Joint architecture coordination remains in
+[Zoo #114](https://github.com/diegoami/borg-zoo/issues/114); both executor modes
+feed [Zoo #144](https://github.com/diegoami/borg-zoo/issues/144).
+[Cemetery #31](https://github.com/diegoami/borg-cemetery/issues/31) supplies
+living 100k checkpoint/continuation requirements. The
+[updated design](docs/cemetery-redesign.md) records the ownership and sequence.
+This selects the architecture direction and planning task; the database and
+alternate executor are not implemented. M1/M2 acceptance and review pins are
+unchanged; no new implementation milestone has started.
