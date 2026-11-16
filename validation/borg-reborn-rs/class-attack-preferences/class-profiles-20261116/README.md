@@ -18,18 +18,39 @@ All omitted attack-family settings default to1000. The starting hypotheses are:
 
 | Class | Non-neutral settings |
 | --- | --- |
-| Warrior | melee2000, spell800 |
-| Mage | spell2000 |
-| Druid | spell2000 |
+| Warrior | melee1800, projectile1200, thrown1200 |
+| Mage | spell2000, device1200 |
+| Druid | spell1700 |
 | Priest | spell1700 |
-| Necromancer | spell2000 |
+| Necromancer | spell1800, device1200 |
 | Paladin | melee1800, spell1200 |
-| Rogue | melee2000, projectile1200 |
+| Rogue | projectile1300, thrown1600 |
 | Ranger | projectile2000 |
-| Blackguard | spell2000 |
+| Blackguard | melee1600, spell1400 |
 
-Warrior spell800 is inert because that class has no spells. Weapon spells remain
-spells; arrow activations remain activations. Control/emergency actions retain
+`engine-class-facts.json` extracts the real class definitions from
+`engine/angband/lib/gamedata/class.txt` at42cd156ac, including its file hash,
+source lines, base/growth skills, melee limits, flags and magic access.
+`player-calcs.c:1905,2246` applies race + class base + floor(class growth × CL/10)
+plus other modifiers. Native attack scoring already uses the resulting melee
+and bow skills (`borg_fight_attack.rs:379,744`) and spell damage/failure mechanics.
+The additional utility weights above are deliberately hypotheses, not another
+copy of those mechanics or a direct conversion of skill points into utility.
+
+Warrior's70/45 melee and55/45 shoot/throw support testing a melee emphasis with
+modest ranged preferences. Mage/Necromancer device36/13 and early attack spells
+support testing spell/device emphasis; Druid and Priest are full casters whose
+offensive access depends on level/books. Paladin65/40 melee, five maximum blows
+and strength multiplier5 support a melee-heavy hybrid. Rogue35/45 melee versus
+66/30 shooting and72/45 throwing is why its earlier example melee2000 was removed.
+Ranger72/45 shooting and FAST_SHOT motivate the projectile stress test.
+Blackguard65/40 melee plus COMBAT_REGEN and weapon spells motivates a hybrid.
+None of those facts determines1800 versus1600: the experiment measures these
+explicit trial bundles. Class strength alone cannot establish an optimal weight.
+The earlier illustrative profiles were superseded before any games ran.
+
+Warrior has no spells, so a spell800 override would be inert and is omitted.
+Weapon spells remain spells; arrow activations remain activations. Control/emergency actions retain
 their invocation family, and waiting stays fixed at1000. These semantics matter
 when interpreting results; do not infer that class fantasy determines an optimum.
 
