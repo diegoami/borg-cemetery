@@ -199,6 +199,9 @@ def not_natural(summary, flags='-', config=None):
             return 'not natural: synthetic start'
     if any(flag.startswith('start-depth=') for flag in flag_set):
         return 'not natural: synthetic start'
+    options = summary.get('game_options') or {}
+    if options.get('birth_force_descend') is True and options.get('birth_no_recall') is True:
+        return 'not natural: one-way birth options (including synthetic-save lineage)'
     if not summary.get('dead'):
         return 'not dead'
     if summary.get('stop_reason') != 'death':

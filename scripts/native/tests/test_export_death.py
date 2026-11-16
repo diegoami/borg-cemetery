@@ -69,6 +69,14 @@ class ExportTest(unittest.TestCase):
         run = make_run(self.base, 'natural', synthetic=False)
         self.assertEqual(ed.export(run, 'rust', self.build)[1], 'exported')
 
+    def test_one_way_save_lineage_cannot_be_exported_as_an_ordinary_death(self):
+        run = make_run(self.base, 'unmarked-loaded-one-way', loaded=True,
+                       game_options=dict(birth_force_descend=True, birth_no_recall=True))
+        case, reason = ed.export(run, 'rust', self.build)
+        self.assertIsNone(case)
+        self.assertIn('one-way birth options', reason)
+        self.assertFalse(self.reg.exists())
+
     def test_death_writes_a_dossier(self):
         run = make_run(self.base, 'dead')
         case, what = ed.export(run, 'c', self.build, 'menu')
