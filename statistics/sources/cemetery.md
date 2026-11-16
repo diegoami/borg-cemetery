@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `f3557155ec181013d09a4eead837909138b5250a2055b34f8793df587dc9e428`.
+Input inventory SHA-256: `291d4780947710c199a3a1a967d133a4e943b8c0600e67339603795a914b2b9b`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 

@@ -53,6 +53,6 @@ cemetery: 1 dossiers.
 
 | Registry | Case report | Seed | Seed basis | Character | Cause | Turn | Depth | Level | Settings | Start family |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| cemetery | [D0006-recorded](../../../deaths/D0006-recorded/README.md) | 2647001198 | recorded input | CollectedBorg | a grey mold | 22841 | 1 | 2 | [settings](#settings-cemetery-98cc6261449f) | start-a63e73e0d88797af457faedda0b34a7b68248c5f829ab4acb5c15583be4e9e2e |
+| cemetery | [D-4d830733e8a65f0fe12f51b6adea5468b6b6b18181466bf330c351cd84d20786](../../../deaths/D0006-recorded/README.md) | 2647001198 | recorded input | CollectedBorg | a grey mold | 22841 | 1 | 2 | [settings](#settings-cemetery-98cc6261449f) | start-a63e73e0d88797af457faedda0b34a7b68248c5f829ab4acb5c15583be4e9e2e |
 
 [Statistics index](../../README.md)
