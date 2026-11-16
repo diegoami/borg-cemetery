@@ -53,19 +53,19 @@
   "build_identity": {
     "build": {
       "binary": "/workspace/work/borg-reborn-rs/build/rust/game/angband",
-      "binary_sha256": "f039fa852ff368cff59187e5260fa3e13f91bb01dfd8b7b46cf9b44d79e73a20",
-      "built_utc": "2026-11-16T01:52:51Z",
+      "binary_sha256": "000d8d6f08d976fa25df75d9b330a13e529ad9dff0b3716e07f6ca2a0abcc6a7",
+      "built_utc": "2026-11-16T08:57:56Z",
       "cc": "cc (Debian 14.2.0-19) 14.2.0",
       "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
       "git_dirty": "no",
-      "git_rev": "401597cafd16f8330590763aa9bc15c10e40e5be",
+      "git_rev": "99473510940b8a7bd6e77ad61e3a2b00c72a6e6d",
       "impl": "rust",
       "inputs_dirty": "no",
       "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
-      "source_sha256": "8a61938aa14162168a6b669b8b5b7ca40ff21ff04890665c5e533984f85fb076"
+      "source_sha256": "bf9a451c46a07142b59525a9c9c581287930e3b333baa4a81dda4816ed2a025a"
     },
     "capabilities_sha256": "24e868eba8406ba01df37f4c92ba065ed7f35ad516c59d4af4f64974ec70baed",
-    "commit": "401597cafd16f8330590763aa9bc15c10e40e5be",
+    "commit": "99473510940b8a7bd6e77ad61e3a2b00c72a6e6d",
     "repository": "diegoami/borg-reborn-rs"
   },
   "counts": {
@@ -76,7 +76,7 @@
     "a wolf": 2,
     "an ochre jelly": 2
   },
-  "manifest_sha256": "7d1bacdc8bd148d9926ac0d36a8beaaf36fc2725eb7f2bf519da99f36f68865d",
+  "manifest_sha256": "95395b02abb84c834deeba53d46c162396ffac77aa7e53d4dc8e174f19f1cda3",
   "minimum_living_hp_distribution": {
     "0": 2,
     "5": 2,
@@ -90,7 +90,7 @@
     "workflow_run_id": null
   },
   "requested_runtime": {
-    "commit": "401597cafd16f8330590763aa9bc15c10e40e5be",
+    "commit": "99473510940b8a7bd6e77ad61e3a2b00c72a6e6d",
     "repository": "diegoami/borg-reborn-rs"
   },
   "results": [
@@ -107,16 +107,16 @@
       "depth": 5,
       "evidence": {
         "config.txt": {
-          "bytes": 425,
-          "sha256": "a4cc2646b12f55b3b5505c5ac8f1e45120ab9816f5951ddee5205c9252058837"
+          "bytes": 417,
+          "sha256": "f0388207fb5ac03d2ed63209ab19a54af441cd046c228191748a4a1359fc5d0b"
         },
         "messages.log": {
           "bytes": 5047,
           "sha256": "33e15395b7d56f1e3a7fe2e73ce7e018b45b275b77de2d4f7cd42ac4b64e6170"
         },
         "process.json": {
-          "bytes": 2077,
-          "sha256": "1469c9f8e60f5fc293b2f2f35ec76d6a28b36612551fa4a1ea0ee8f948596212"
+          "bytes": 2002,
+          "sha256": "dcfd803cacc6946d38ab4d586c83d4b62fe3942aeb5f67f5207808762841884c"
         },
         "state.log": {
           "bytes": 85775,
@@ -124,7 +124,7 @@
         },
         "summary.json": {
           "bytes": 2295,
-          "sha256": "665bf9335d89d0414312e10739060b37eb27f328179f6071fcf7f482063e1546"
+          "sha256": "11bbc7a195cea6e5f59a362462348b4aeaef58bfe5eef1eb5f36835791689812"
         }
       },
       "launcher_returncode": 0,
@@ -167,16 +167,16 @@
       "depth": 5,
       "evidence": {
         "config.txt": {
-          "bytes": 510,
-          "sha256": "691660a5fc667201a2938a7f0cabf56e2b554943a76c673f2a9ed02144d00b3b"
+          "bytes": 502,
+          "sha256": "82f07f0b9aced9278b7b2bc22daa0af2b1902725577080ed8975144316692fef"
         },
         "messages.log": {
           "bytes": 8545,
           "sha256": "8dcc47901c6c4a9cbaef025b639cfec6774b2b102842b24a5dd0aeb4fc4c0a4a"
         },
         "process.json": {
-          "bytes": 2206,
-          "sha256": "f1415db041104cea22896332592cf139600ebbe5cb7681e085b870369c15153f"
+          "bytes": 2123,
+          "sha256": "897637e6a2e20698030e6be965a75e0be750415100cd64438a2eca61c05ff930"
         },
         "state.log": {
           "bytes": 118188,
@@ -184,7 +184,7 @@
         },
         "summary.json": {
           "bytes": 2386,
-          "sha256": "e28f6a17fea74974db727d50515687cc1bf94aafb5bb8bb3d10f9db60f1b02d5"
+          "sha256": "3baa0e327ffb4a07e238b7a3c17efd309c0405367d95d45043e1d0591077b3ee"
         }
       },
       "launcher_returncode": 0,
@@ -227,16 +227,16 @@
       "depth": 10,
       "evidence": {
         "config.txt": {
-          "bytes": 427,
-          "sha256": "85e173562be94ab25826c7b28d160f32e104beae2261c2dcebd8abcba3e5d97e"
+          "bytes": 419,
+          "sha256": "b9711d2839bbf60255ecd6d033a7f9ff2a125279294282ff0538f10cc630f61c"
         },
         "messages.log": {
           "bytes": 1434,
           "sha256": "4d846fa3f3c34ada6fd0b5b43e132f5d806dfe21f9d50af84c306d592f36d726"
         },
         "process.json": {
-          "bytes": 4100,
-          "sha256": "1abd9f5e2854a96c41d2a90133639a0a26986c3e1f157e486875e6d39036aaaa"
+          "bytes": 4025,
+          "sha256": "5113cf9cca2c3decd5c53648e7beabd63f784ef7656bb3600432f2b9a750b8c7"
         },
         "state.log": {
           "bytes": 5418,
@@ -244,7 +244,7 @@
         },
         "summary.json": {
           "bytes": 2301,
-          "sha256": "a0e7c22f16c86104c1299965755281b8adf3d105056761938999ff16d915bc8c"
+          "sha256": "ca92265b23ae00c0e088253346b7eff23cf87d5065bb0ab2d86562a72daddcb3"
         }
       },
       "launcher_returncode": 0,
@@ -287,16 +287,16 @@
       "depth": 10,
       "evidence": {
         "config.txt": {
-          "bytes": 512,
-          "sha256": "ca7164d85076d16ac20f23dc0c55508569551a3004c3635941fd1265377f2188"
+          "bytes": 504,
+          "sha256": "adf8ac606c0ed4427f91af32909fdd07f3f13d672bb08139b11e91b77390aa7c"
         },
         "messages.log": {
           "bytes": 4426,
           "sha256": "cfad0bdb0671f289cdd34f0d06952f63fc80536fbb9c6e278badb80a69d44885"
         },
         "process.json": {
-          "bytes": 4227,
-          "sha256": "1cda0ad6828273169d78b87a689fc725804b245b078515b092cf2731181fa8d7"
+          "bytes": 4145,
+          "sha256": "0e46ea76e4ba1a880644c690825212f18f749ab83af3bc8d270b9eff4c7d3fb7"
         },
         "state.log": {
           "bytes": 28869,
@@ -304,7 +304,7 @@
         },
         "summary.json": {
           "bytes": 2394,
-          "sha256": "01117c8ae0a552961aec4e2680f28336735df88144a326c834ac0e3bd04fa186"
+          "sha256": "40b55d9d849bd37ee7c22ced32f4bfa4dbc3ae82eb7f778bd7dbbe1d041335ee"
         }
       },
       "launcher_returncode": 0,
@@ -347,16 +347,16 @@
       "depth": 15,
       "evidence": {
         "config.txt": {
-          "bytes": 427,
-          "sha256": "15fd747d1c2d165159507fc34c836a8d32197a33dd8f87c82a81bf16d364cb4b"
+          "bytes": 419,
+          "sha256": "96d65c3c4cce73e6178a31c6c268042c3df2c2b8804f0c41b63a08a7d85d52c7"
         },
         "messages.log": {
           "bytes": 674,
           "sha256": "c715e130f1b585c7f5d8bcf977fe6699739d55dff9b893528e7bb8ecedda8180"
         },
         "process.json": {
-          "bytes": 4099,
-          "sha256": "5fc60e2692692ca59d20c7d570aafcf5fe6bf6f1ea2f4cd8bab0ad963c11dee6"
+          "bytes": 4025,
+          "sha256": "a8c48d50598d7359950f7ec8348c11e7ee78f42b9b1c06e4d17e722c7a10ddec"
         },
         "state.log": {
           "bytes": 11842,
@@ -364,7 +364,7 @@
         },
         "summary.json": {
           "bytes": 2305,
-          "sha256": "6bb6dba1af52f0a4d97415552c82492cb333a9f30db706b2395ee6f74f0ea73b"
+          "sha256": "e0960b86c397ff4e077d46244035404ef53a213c0d5ed983c5ad26e6846ce11a"
         }
       },
       "launcher_returncode": 0,
@@ -407,16 +407,16 @@
       "depth": 15,
       "evidence": {
         "config.txt": {
-          "bytes": 512,
-          "sha256": "5e3deca39b9207e0a36a3dc56840f0185bdad01d9a87afa18cb8f8dcdc23f406"
+          "bytes": 504,
+          "sha256": "61062bf18509b0f298d34a50c750f7c26f17fd2974c0fbcb9a064e459da9c024"
         },
         "messages.log": {
           "bytes": 1712,
           "sha256": "5b2f65fd19989ced1491d7c7d7b20aa75750a4218a9acba6638037736b365d6a"
         },
         "process.json": {
-          "bytes": 4228,
-          "sha256": "2ef152e803b7bf455d46381e015106f891adb17b92d1001c3aee05c9f3952c63"
+          "bytes": 4144,
+          "sha256": "6feaf79fb5f4f86f95f280b698967108ea0da0461e15130c7be149df10d3aa6d"
         },
         "state.log": {
           "bytes": 11968,
@@ -424,7 +424,7 @@
         },
         "summary.json": {
           "bytes": 2399,
-          "sha256": "65f922e3b06fa219083cc35b0cc7ac90b95310988e23ad59a765dadbbec9a2f7"
+          "sha256": "7eaf74a8b5bb2301ed8a439ac2fa0719e2a55e5f929f4e307f493df71071bcd9"
         }
       },
       "launcher_returncode": 0,

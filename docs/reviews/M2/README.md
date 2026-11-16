@@ -5,9 +5,9 @@ pin remain separate and unchanged. The paired PR bodies pin the exact review hea
 
 ## Runtime and bank
 
-- Exact reborn runtime: `401597cafd16f8330590763aa9bc15c10e40e5be`.
-- Runtime input digest: `8a61938aa14162168a6b669b8b5b7ca40ff21ff04890665c5e533984f85fb076`.
-- Local measured binary: `f039fa852ff368cff59187e5260fa3e13f91bb01dfd8b7b46cf9b44d79e73a20`.
+- Exact reborn runtime: `99473510940b8a7bd6e77ad61e3a2b00c72a6e6d`.
+- Runtime input digest: `bf9a451c46a07142b59525a9c9c581287930e3b333baa4a81dda4816ed2a025a`.
+- Local measured binary: `000d8d6f08d976fa25df75d9b330a13e529ad9dff0b3716e07f6ca2a0abcc6a7`.
 - Suite spec digest: `8030348f3d9a16d7b1cc5ef093806d0fe7934d4cf2b2aa7b0aff700a274031c9`.
 - Bank: `synthetic/p1-warrior/`; one class, one seed, three starting depths,
   birth plus one observed level-5 tier. Six cells, 5,000 engine turns and
@@ -47,10 +47,10 @@ are explicitly declared; source saves/private Borg state are not restored.
 
 ## Validation and review findings
 
-- Cemetery: 54 runner/tests, 46 native-tool tests; statistics check over 129 reports.
+- Cemetery: 54 runner/tests, 50 native-tool tests; statistics check over 129 reports.
 - Reborn: formatting, Clippy, 165 workspace tests and 328 core release tests pass
   (four existing ignored); 91 tool tests, 19 script tests, vendor audit pass.
-- Native local suite: 80 tests, 16 dependency/fixture skips, zero failures. CI
+- Native local suite: 81 tests, 16 dependency/fixture skips, zero failures. CI
   supplies the missing upstream Git object, bindgen, zoo and incident fixtures.
 - Ordinary and exact smoke each match all three stored-reference streams, 3/3.
 - Three ordinary control dossiers for the new source baseline are retained with
@@ -95,3 +95,9 @@ separate. The libcrypto dependency is retained deliberately and documented for
 adapter hosts; successful supported capture has empirical parity at seed 101,
 not an exhaustive RNG-neutrality proof. Unsupported capture can terminate its
 run as a harness failure and cannot stand in for a successful paired control.
+
+The refreshed packet uses clean runtime 99473510 after the capture/lifecycle
+review fixes. Its six outcomes and all 18 gameplay streams match the previously
+reviewed runtime; raw logs are in `p1-review-suite`. Prior packets remain in Git
+at e750549 and are not retroactively relabelled. The observed-tier catalog still
+names its original 401597 source capture, independently of this execution pin.
