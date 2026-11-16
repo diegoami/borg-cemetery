@@ -1,0 +1,40 @@
+{
+  "run": 43929711023,
+  "tested_head": "9b011f30328d120bbf22c8bf579d3eca6a35869b",
+  "integration_commit": "92b76623fb4e67c4f050338c1b7e2a902cd7e0a8",
+  "main_commit": "4a2cb910d7d21271987a0ea9450d9089ca4e2ea0",
+  "tree": "f8d8860925c02a258a0b3fb07bfc4d2a904eb031",
+  "source_sha256": "290fd89ed58c536dd59835d259d85dc1a40cd5dd8b71d1e16f765a268abf71b3",
+  "independent_archive": "0f9f7cf79cc4c9e07ac44c019035496288c6995a",
+  "jobs": [
+    {
+      "id": 133518538323,
+      "name": "engine",
+      "conclusion": "success"
+    },
+    {
+      "id": 133518538924,
+      "name": "rust",
+      "conclusion": "success"
+    },
+    {
+      "id": 133518539270,
+      "name": "recorder",
+      "conclusion": "success"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 14259391728,
+      "name": "ci-death-registry"
+    },
+    {
+      "id": 14258495106,
+      "name": "ci-attack-preference-death-registry"
+    },
+    {
+      "id": 14256249778,
+      "name": "ci-core-death-registry"
+    }
+  ]
+}
