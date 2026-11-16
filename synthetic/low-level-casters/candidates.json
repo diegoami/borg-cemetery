@@ -23859,7 +23859,7 @@
       }
     }
   ],
-  "input_commit": "58f9ba3b0afa1bd5979008cc748f8cc3a4a694bd",
+  "input_commit": "5edfbbdd7f792f95599924bd51607f2d90ba6a77",
   "limitations": [
     "Observed loadouts are descriptions, not executable character-build records.",
     "No equipment effect, spell legality or causal explanation is inferred.",
@@ -24080,6 +24080,26 @@
     "low_hp_screen": "living HP <= 25% maximum; candidate only",
     "scope": "Published selected frames and existing saved scenarios; not full-run coverage"
   },
+  "skipped_records": [
+    {
+      "canonical_identity": {
+        "id": "D-65378e7ff779b640309236ac0bc5dc0e6f7a9ded247b4089c71d96e8e433f737",
+        "source": {
+          "path": "deaths/recorded-planmage-20261115-wild-cat/death-id.json",
+          "sha256": "ece671dcdd49c12791d4381fba0c72b52d425bb1e1e2a8c183765d9fc2a27600"
+        }
+      },
+      "case": "recorded-planmage-20261115-wild-cat",
+      "class_name": null,
+      "reason": "class_unavailable",
+      "record": {
+        "path": "deaths/recorded-planmage-20261115-wild-cat/record.json",
+        "sha256": "98ec47b5a44ba2fa219850cd98486e066b421dd70078fa6a2c7f3b2e255ae844"
+      },
+      "schema": "borg-reborn-rs/guided-death-analysis@1",
+      "terminal_level": null
+    }
+  ],
   "unobserved_cases": [
     {
       "canonical_identity": {
@@ -24100,6 +24120,46 @@
       "spells": null,
       "status": "no_recorded_frames",
       "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-3c7b61f03d55d6ebfa3a63f08bf9b6ab2fe57f43329a248b85e49b2622d2dd10",
+        "source": {
+          "path": "deaths/D0005-recorded/death-id.json",
+          "sha256": "8af2c00eb3a29562b6a34ebf52cdb670e3241497fa6097e75442b45c8412ad2c"
+        }
+      },
+      "case": "D0005-recorded",
+      "character": "CollectedBorg",
+      "class_name": "Necromancer",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0005-recorded/record.json",
+        "sha256": "ed4c8e27e43a52709b7c4fc9c7e884c7149df54f3bc227180b818f633a898232"
+      },
+      "spells": null,
+      "status": "frames_without_published_digest",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-4d830733e8a65f0fe12f51b6adea5468b6b6b18181466bf330c351cd84d20786",
+        "source": {
+          "path": "deaths/D0006-recorded/death-id.json",
+          "sha256": "7a2274d98ea66b993b7b1775d1b9f472ef6889484fabcb1245b7cb8f65cbc0e4"
+        }
+      },
+      "case": "D0006-recorded",
+      "character": "CollectedBorg",
+      "class_name": "Priest",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0006-recorded/record.json",
+        "sha256": "7489569bad588aa75720e230150ac3f33b268cb8735d0917165e8aafd948faa8"
+      },
+      "spells": null,
+      "status": "frames_without_published_digest",
+      "terminal_level": 2
     },
     {
       "canonical_identity": {

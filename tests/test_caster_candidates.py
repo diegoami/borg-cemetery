@@ -44,6 +44,9 @@ class CandidatesTest(unittest.TestCase):
         self.assertEqual(len(c.normalized_sets(observations, 'pack')), 1)
         observations[1]['inventory']['pack'] = [dict(description='a Potion of Speed')]
         self.assertEqual(len(c.normalized_sets(observations, 'pack')), 2)
+        # Unlisted plurals stay distinct: this is a bounded description normalizer.
+        self.assertNotEqual(c.normalized_items([dict(description='an Arrow')]),
+                            c.normalized_items([dict(description='2 Arrows')]))
 
     def test_hashes_loadout_deduplication_and_level_filter(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -78,6 +81,27 @@ class CandidatesTest(unittest.TestCase):
             result = c.collect(Path(tmp))
             self.assertEqual(result['cases'], [])
             self.assertEqual(result['excluded_frames'][0]['reason'], 'no_published_frame_digest')
+
+    def test_caster_hashless_frames_and_unknown_records_have_dossier_entries(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for name, record in [('caster', dict(character='CollectedBorg',
+                    terminal=dict(level=2, class_idx=4), recording=dict(
+                    selected_original_frames=[dict(json='frame.json')]))),
+                    ('guided', dict(schema='borg-reborn-rs/guided-death-analysis@1'))]:
+                case = root / 'deaths' / name
+                case.mkdir(parents=True)
+                (case / 'record.json').write_text(json.dumps(record))
+            result = c.collect(root)
+            self.assertEqual(result['cases'], [])
+            row = result['unobserved_cases'][0]
+            self.assertEqual(row['case'], 'caster')
+            self.assertEqual(row['status'], 'frames_without_published_digest')
+            self.assertEqual(row['class_name'], 'Necromancer')
+            self.assertEqual(row['terminal_level'], 2)
+            self.assertIsNone(row['inventory'])
+            self.assertEqual(result['skipped_records'][0]['case'], 'guided')
+            self.assertEqual(result['skipped_records'][0]['reason'], 'class_unavailable')
 
     def test_save_integrity_and_unknown_level(self):
         with tempfile.TemporaryDirectory() as tmp:

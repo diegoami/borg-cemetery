@@ -57,3 +57,31 @@ changes; existing outcomes and both attempts' build identities remain intact.
 Caster equipment application is still unsupported pending reborn #382. This
 response does not accept a milestone, merge into main or restore private Borg
 memory in saved scenarios. The owner chooses/runs any re-review.
+
+## Re-review corrections at 5edfbbd
+
+[Re-review](https://github.com/diegoami/borg-cemetery/pull/26#issuecomment-6922854617)
+recommends approval and confirms findings 1–6 and the pre-existing runner fixes.
+The following remaining corrections are applied:
+
+- **A:** `D0005-recorded` (Necromancer, level 2, four hash-less frames) and
+  `D0006-recorded` (Priest, level 2, one hash-less frame) are now individually
+  indexed under `unobserved_cases` as `frames_without_published_digest`, with
+  class, level, record digest and canonical identity. The five frames remain
+  excluded. They are caster records; the earlier README claim was incorrect.
+  Coverage is now 53 identified low-level caster dossiers: 14 observed,
+  37 frame-less, two without qualified frame hashes.
+- **B:** `skipped_records` explicitly indexes the one guided-analysis record
+  without derivable class/level, `recorded-planmage-20261115-wild-cat`, including
+  its schema, record digest and canonical identity. Its derived save scenarios
+  do not supply invented metadata to the original record.
+- **C:** README documents the 11-form plural list and that quiver contents are
+  excluded from normalized counts. A regression test confirms an unlisted
+  plural remains distinct. Existing 14 equipment/21 pack counts are unchanged.
+
+The new regression covers dossier-level hash-less-frame accounting and unknown
+record metadata. All 72 repository tests and 53 native tests pass. The 213-ID
+and 131-report statistics checks pass; retained 12 scenarios/36 gameplay streams
+still match. The generated index reproduces apart from its documented checkout
+pin. Birth suite, profile and both attempts remain byte-identical to the
+reviewed head; no new gameplay run or source change is included.

@@ -111,7 +111,7 @@ def observation(frame):
 
 def collect(root):
     root = root.resolve()
-    cases, saved, excluded, unobserved = [], [], [], []
+    cases, saved, excluded, unobserved, skipped = [], [], [], [], []
     for path in sorted((root / 'deaths').glob('*/record.json')):
         record = read(path)
         canonical_identity = death_identity(root, path)
@@ -172,6 +172,19 @@ def collect(root):
                               normalized_pack_sets=normalized_sets(observations, 'pack'),
                               execution_status='requires_caster_build_adapter',
                               original_continuation_verified=False))
+        elif frames and known_class in CASTERS and type(terminal_level) is int and 1 <= terminal_level <= 10:
+            status = ('frames_without_published_digest' if
+                      all('json_sha256' not in entry for entry in frames) else 'no_eligible_frames')
+            unobserved.append(dict(case=path.parent.name, record=reference(root, path),
+                                   canonical_identity=canonical_identity,
+                                   character=record.get('character'), terminal_level=terminal_level,
+                                   class_name=known_class, status=status,
+                                   inventory=None, spells=None))
+        elif known_class is None or (known_class in CASTERS and type(terminal_level) is not int):
+            skipped.append(dict(case=path.parent.name, record=reference(root, path),
+                                canonical_identity=canonical_identity, schema=record.get('schema'),
+                                class_name=known_class, terminal_level=terminal_level,
+                                reason='class_unavailable' if known_class is None else 'level_unavailable'))
     for path in sorted((root / 'scenarios').glob('*/scenario.json')):
         scenario = read(path)
         if scenario.get('class_idx') not in (1, 2, 3, 4):
@@ -200,7 +213,7 @@ def collect(root):
                              'Save restarts do not restore private Borg memory.',
                              'Multiple frames, loadouts and checkpoints of one life are correlated.'],
                 cases=cases, saved_scenarios=saved, excluded_frames=excluded,
-                unobserved_cases=unobserved)
+                unobserved_cases=unobserved, skipped_records=skipped)
 
 
 def require_clean_inputs(root):
