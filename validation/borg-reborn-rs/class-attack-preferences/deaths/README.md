@@ -9,7 +9,7 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 100; distinct starting conditions: 84; retained process attempts: 84 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 101; distinct starting conditions: 85; retained process attempts: 85 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -99,6 +99,7 @@ Dossiers: 100; distinct starting conditions: 84; retained process attempts: 84 (
 | [D0000-qd5f064008eba5f8877d8f6271bcec904a278b8122b1cbc51b30b35dc59dea7ff](D0000-qd5f064008eba5f8877d8f6271bcec904a278b8122b1cbc51b30b35dc59dea7ff/report.md) | unassigned | `cac37f5901c9` | 1050 | a grey mold | 24096 | unassessed |
 | [D0000-qd7cb8151fed12354d2ea54034faa8cbfbc0391678910e6f0aac42a0166ab9d9e](D0000-qd7cb8151fed12354d2ea54034faa8cbfbc0391678910e6f0aac42a0166ab9d9e/report.md) | unassigned | `46d5f2ae46c2` | 1023 | a metallic red centipede | 13184 | unassessed |
 | [D0000-qd9ba48f8d906b68505b03a12141acc506893e47f8b1a49fa5f71b533c0ff88d4](D0000-qd9ba48f8d906b68505b03a12141acc506893e47f8b1a49fa5f71b533c0ff88d4/report.md) | unassigned | `cd411e551fa8` | 1084 | a grey mushroom patch | 22908 | unassessed |
+| [D0000-qdb8f0f57ae89c07f38ff73756bb4ce01a5ffcae053e209a295bedf555d06a19f](D0000-qdb8f0f57ae89c07f38ff73756bb4ce01a5ffcae053e209a295bedf555d06a19f/report.md) | unassigned | `9b047a7b22e6` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-qdf62967dee163608704d5e2e5f3f84acc38fbcd6dec64d4671dd8593fd216019](D0000-qdf62967dee163608704d5e2e5f3f84acc38fbcd6dec64d4671dd8593fd216019/report.md) | unassigned | `cac37f5901c9` | 1062 | a soldier | 49147 | unassessed |
 | [D0000-qe234f0e5eea07c6a02387249027a20d143962cf843d46a2d67b6f92bea7eb6ce](D0000-qe234f0e5eea07c6a02387249027a20d143962cf843d46a2d67b6f92bea7eb6ce/report.md) | unassigned | `8e007cddc1b0` | 1011 | a cave spider | 18903 | unassessed |
 | [D0000-qe47507b414bfa49d96a87b24ba095b63d97d5eb3218a56a50d1ed72dd416597c](D0000-qe47507b414bfa49d96a87b24ba095b63d97d5eb3218a56a50d1ed72dd416597c/report.md) | unassigned | `8e007cddc1b0` | 1021 | a giant yellow centipede | 12668 | unassessed |
