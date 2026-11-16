@@ -37,7 +37,11 @@ coverage, not native saved-position scenarios. R check/switch is not implemented
 Initial CI engine reconciliation failed on the unchanged seed1011 key stream
 because source/parameter identities changed. Its original artifact and original
 record are preserved; the new build is not relabeled as an older accepted family.
-Qualified dossier imports retain every payload byte and original record. The
+The second CI run passed all gameplay/reference comparisons but its final
+reconciliation also needed the existing seed102 Fang smoke death under the new
+source identity. Its key hash equals the accepted smoke reference exactly; both
+second-run original artifact archives are retained. All 46 qualified packages
+retain every payload byte and original record. The
 new evidence pin lets CI reconcile against this independently retained archive;
 it does not compare a temporary registry only against itself. Source repo keeps
 code/tests, a dedicated immutable fixture reference and a concise summary.
