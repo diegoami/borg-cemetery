@@ -1,0 +1,38 @@
+{
+  "schema": "borg-cemetery/native-validation-controls@1",
+  "purpose": "CI identity and export checks, not zoo comparison",
+  "source": {
+    "repository": "diegoami/borg-reborn-rs",
+    "issue": 421,
+    "git_rev": "156655de13aa213471b95c0bca9a04aff73c4ab8",
+    "source_sha256": "d99390fe9550694588250c7acda67ccf75e0557b6efd300436bce937b648b3f8",
+    "base": "borg-reborn-rs main 4ecb93d7"
+  },
+  "note": "CI deaths retained because the encounter family includes the source hash. Repeated validation attempts, not new independent lives or a survival comparison.",
+  "runs": [
+    {
+      "run": "smoke-mage-2",
+      "case": "D0000-q0bfec63abf3bb677e7697385147746af751b3a86422bcae0f3fcad8b49eb614a",
+      "seed": 102,
+      "class": "Mage",
+      "death_cause": "Fang, Farmer Maggot's Dog",
+      "game_turns": 3640
+    },
+    {
+      "run": "reborn-1020",
+      "case": "D0000-qb7889c2f027b2db763452a69f79a6eb9961add01d61d141bc1c9103f0c2278c1",
+      "seed": 1020,
+      "class": "Druid",
+      "death_cause": "a giant white mouse",
+      "game_turns": 8922
+    },
+    {
+      "run": "core",
+      "case": "D0000-qee49161f8abd05a9f1c9d26f3728a9ed5e662ca4f0ffe0b13359a7cf80535f36",
+      "seed": 1011,
+      "class": "Mage",
+      "death_cause": "a cave spider",
+      "game_turns": 18903
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "e7e1d6eede06290b43b1d50eb032b27e7d174f7854398046beb9890324ddbd63",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-reborn-rs/363b8e4f-0f25-42e8-8383-d41ed8b07227/scratchpad/ci421/runs/rerun-source-1020-2-2",
+      "raw_sha256": {
+        "keys.log": "c542b7d80373f4e96cd151e9df3be44dbf458719a2b1f7064b38e9e3cf56b084",
+        "messages.log": "770bf5c38f86bfd8e484c607be5bf5414a51717034bb475746b249affb7a7386",
+        "state.log": "eeb130bc50c09f07e13aaf263ad63812d0217650f86db369e7ade09633c58bce"
+      },
+      "result_sha256": "c542b7d80373f4e96cd151e9df3be44dbf458719a2b1f7064b38e9e3cf56b084",
+      "role": "original",
+      "source_commit": "156655de13aa213471b95c0bca9a04aff73c4ab8"
+    }
+  ],
+  "character": "Elf Druid",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 751
+  },
+  "encounter_family": "start-7c87cebd5cd362f16a494566f5cbc97092b85f29187fbe453d453a5077958de6",
+  "files_sha256": {
+    "build.json": "3faa40a85c60a8f3cc5fc230389a9eb7ee7b3a3c406d98c4f2b69605c839ed1d",
+    "config.txt": "02c861b6459098d1ad68e0588ff363b066698635c6891fea186d59f981f86c70",
+    "depths.json": "5286600f4634a72e92eef1e8151835a442833ba75c828b05da84aa173486b860",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "e69a2e941139acfc991f0f204ae59a136306c3c4a54d5f4052714a42c2ad7f3c",
+    "trace-tail.jsonl": "2bd09b377f55b5a4622a8908a0c4540197d36477db2169ad26eecca44740692d"
+  },
+  "id": "D0000-qb7889c2f027b2db763452a69f79a6eb9961add01d61d141bc1c9103f0c2278c1",
+  "identity": {
+    "binary_sha256": "e7e1d6eede06290b43b1d50eb032b27e7d174f7854398046beb9890324ddbd63",
+    "borg_txt_sha256": "761cdd15caa7baf58d226006449221d9f3f7de4f5df5a79f483f8e121f8e1e77",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "156655de13aa213471b95c0bca9a04aff73c4ab8",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1020,
+    "source_sha256": "d99390fe9550694588250c7acda67ccf75e0557b6efd300436bce937b648b3f8"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a giant white mouse",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "class_idx": 2,
+    "dead": true,
+    "depth": 1,
+    "level": 2,
+    "max_depth": 1,
+    "race_idx": 2,
+    "turn": 8922
+  }
+}
