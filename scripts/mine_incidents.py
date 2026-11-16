@@ -116,6 +116,8 @@ def candidates(run, summary):
         row = dict(**incident, status='excluded')
         try:
             trigger = onset(episodes, message_rows, races, incident['turn'], summary['death_cause'] if incident['type'] == 'death' else None)
+            if trigger['trigger_turn'] >= summary['game_turns']:
+                raise ValueError('first observable contact is at terminal endpoint; no qualified onset')
             eligible = [c for c in checkpoints if c['game_turn'] <= trigger['trigger_turn']]
             if not eligible:
                 raise ValueError('no saved state before first observable threat')
