@@ -68,3 +68,23 @@ The broader database/service redesign remains planning, not an implementation
 commitment. Only the bounded synthetic P1 subset selected above is authorized. M1 remains unaccepted; its implementation pin and
 existing evidence are unchanged. The proposal includes delivery slices and
 acceptance criteria for a later owner decision.
+
+
+## Owner-selected execution/storage direction (2026-11-16)
+
+[Cemetery #32](https://github.com/diegoami/borg-cemetery/issues/32) records a
+Cemetery-first database/artifact design followed by an alternate saved-scenario
+executor: local CLI or optional Cemetery CI retains runs and intermediate
+checkpoints, while Zoo ingests pinned result snapshots, aggregates them and
+owns report presentation. Zoo-executed pinned Cemetery inputs remain supported.
+Both modes share one scenario/save/run identity and storage contract.
+
+Joint architecture coordination remains in
+[Zoo #114](https://github.com/diegoami/borg-zoo/issues/114); both executor modes
+feed [Zoo #144](https://github.com/diegoami/borg-zoo/issues/144).
+[Cemetery #31](https://github.com/diegoami/borg-cemetery/issues/31) supplies
+living 100k checkpoint/continuation requirements. The
+[updated design](docs/cemetery-redesign.md) records the ownership and sequence.
+This selects the architecture direction and planning task; the database and
+alternate executor are not implemented. M1/M2 acceptance and review pins are
+unchanged; no new implementation milestone has started.

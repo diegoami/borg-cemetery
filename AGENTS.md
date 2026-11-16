@@ -35,6 +35,16 @@ later fixes must update the review's pinned head and validation evidence.
 
 # Canonical gameplay evidence ownership (owner, 2026-11-16)
 
+Latest owner clarification: Cemetery owns saves, scenarios, run/continuation
+records, intermediate checkpoints and canonical investigation evidence. Zoo
+owns aggregation, comparison reports and report presentation. Design the
+shared database/artifact contract in Cemetery first (Cemetery #32, coordinated
+with Zoo #114). Support both Zoo execution of pinned Cemetery inputs and
+Cemetery saved-scenario execution locally or optionally in Cemetery CI; Zoo
+ingests immutable result snapshots from either mode (#144). Keep one
+authoritative save store with private execution copies. Historical reports
+remain preserved. See `docs/cemetery-redesign.md` for the recorded direction.
+
 This repository is the canonical home for gameplay incident reports, death
 investigations, reusable scenarios and behavioral/counterfactual trial results.
 Author and publish those here, including validation incidents; source repos
