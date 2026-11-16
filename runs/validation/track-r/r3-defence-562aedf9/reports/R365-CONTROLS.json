@@ -1,0 +1,1709 @@
+{
+  "schema": "borg-reborn-rs/r365-literal-restoration-controls@1",
+  "scope": "Literal owned Grim Purpose confusion restore +1; test-feature constructed states, not natural endgame or population evidence. Every attempt is retained.",
+  "accepted_port_sha256": "66d8dde51e91c433e1bd46777717c46c1a4ad87c01cd8becd34c015cf873057b",
+  "patch_sha256": "dcb42c63cc7d10ee1a88a7f9d8de9d7060354092932b775f66fe4a7a3fc65338",
+  "stale_build": {
+    "impl": "rust",
+    "git_rev": "c8e5ca8dd921ebe061c083ccdf4fae09dc7df60b",
+    "git_dirty": "yes",
+    "inputs_dirty": "yes",
+    "source_sha256": "3b3ed49eb737806ab6f23755ebe79a67796ce749cee7e8ac75c733d3c8935e96",
+    "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+    "binary": "/workspace/work/r3-defence-port/build/rust-test/game/angband",
+    "binary_sha256": "25b17caf49b0b4574f90bca331e444cc2007631d23e8bd8303457041b5c8fe71",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-16T03:41:13Z",
+    "test_features": "test-r3-defence"
+  },
+  "restored_test_build": {
+    "impl": "rust",
+    "git_rev": "c8e5ca8dd921ebe061c083ccdf4fae09dc7df60b",
+    "git_dirty": "yes",
+    "inputs_dirty": "no",
+    "source_sha256": "562aedf968831885c32b4f56271a2f7bd0245432aff9159dd629f59601ff4fe1",
+    "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+    "binary": "/workspace/work/r3-defence-port/build/rust-test/game/angband",
+    "binary_sha256": "de72aad2dd2fecd37d8e5bf43dfb4090ae3901c35519f80abadf737133320c20",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-16T03:41:36Z",
+    "test_features": "test-r3-defence"
+  },
+  "production_build": {
+    "impl": "rust",
+    "git_rev": "c8e5ca8dd921ebe061c083ccdf4fae09dc7df60b",
+    "git_dirty": "yes",
+    "inputs_dirty": "no",
+    "source_sha256": "562aedf968831885c32b4f56271a2f7bd0245432aff9159dd629f59601ff4fe1",
+    "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+    "binary": "/workspace/work/r3-defence-port/build/rust/game/angband",
+    "binary_sha256": "ab1bf10cafd6ea890e5cf919806b21783e71ff544de3530c15532c2e875f7f5e",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-16T03:42:49Z"
+  },
+  "stale_attempts": [
+    {
+      "mode": "check",
+      "harness_exit": 1,
+      "process": {
+        "checkpoint_count": 0,
+        "checkpoint_errors": [],
+        "child_pid": 215845,
+        "command": [
+          "/workspace/work/r3-defence-port/build/rust-test/game/angband",
+          "-mborgh",
+          "-n",
+          "-uBorg",
+          "-duser=/workspace/work/r365-evidence/stale-check/user",
+          "-dsave=/workspace/work/r365-evidence/stale-check/save",
+          "-darchive=/workspace/work/r365-evidence/stale-check/archive",
+          "-dpanic=/workspace/work/r365-evidence/stale-check/panic",
+          "-dscores=/workspace/work/r365-evidence/stale-check/scores",
+          "--",
+          "-seed",
+          "1001",
+          "-race",
+          "0",
+          "-class",
+          "1",
+          "-turns",
+          "1000",
+          "-keylog",
+          "/workspace/work/r365-evidence/stale-check/keys.log",
+          "-msglog",
+          "/workspace/work/r365-evidence/stale-check/messages.log",
+          "-statelog",
+          "/workspace/work/r365-evidence/stale-check/state.log",
+          "-summary",
+          "/workspace/work/r365-evidence/stale-check/summary.json",
+          "-screen",
+          "-menu-letters"
+        ],
+        "elapsed_seconds": 0.4890884019987425,
+        "engine_returncode": -6,
+        "executable_sha256_after": "25b17caf49b0b4574f90bca331e444cc2007631d23e8bd8303457041b5c8fe71",
+        "executable_sha256_before": "25b17caf49b0b4574f90bca331e444cc2007631d23e8bd8303457041b5c8fe71",
+        "exit_code": 134,
+        "interrupted_signal": null,
+        "last_observed_turn": null,
+        "progress_scope": "latest complete flushed native-frame world tick; legacy key-log fallback",
+        "signal": 6,
+        "stall_timeout_seconds": 0.0,
+        "stalled": false,
+        "started_unix": 1794800473.830149,
+        "status": "signal",
+        "stderr_tail": "\nthread '<unnamed>' (215845) panicked at borg-next/src/defence_fixture.rs:189:5:\ngrim-confusion-nonbinary: Err(\"final policy state differs\")\nstack backtrace:\n   0: __rustc::rust_begin_unwind\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/panicking.rs:676:5\n   1: core::panicking::panic_fmt\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/panicking.rs:80:14\n   2: borg_next::defence_fixture::check\n             at /workspace/work/r3-defence-port/borg-next/src/defence_fixture.rs:189:5\n   3: borg_next::defence_fixture::run::{closure#0}\n             at /workspace/work/r3-defence-port/borg-next/src/defence_fixture.rs:106:13\n   4: <std::sync::once::Once>::call_once::<borg_next::defence_fixture::run::{closure#0}>::{closure#0}\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/sync/once.rs:167:41\n   5: <std::sys::sync::once::futex::Once>::call\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/sys/sync/once/futex.rs:183:21\n   6: <std::sync::once::Once>::call_once::<borg_next::defence_fixture::run::{closure#0}>\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/sync/once.rs:167:20\n   7: borg_next::defence_fixture::run\n             at /workspace/work/r3-defence-port/borg-next/src/defence_fixture.rs:10:10\n   8: <borg_next::shadow::Next as borg_rs::shadow::Shadow>::after_think\n             at /workspace/work/r3-defence-port/borg-next/src/shadow.rs:365:9\n   9: borg_rs::shadow::after_think\n             at /workspace/work/r3-defence-port/borg-core/src/shadow.rs:48:39\n  10: borg_rs::borg_think::borg_think\n             at /workspace/work/r3-defence-port/borg-core/src/borg_think.rs:171:5\n  11: borg_rs::borg::generate_keypress\n             at /workspace/work/r3-defence-port/borg-core/src/borg.rs:538:12\n  12: borg_rs::borg::borg_entry_point::{closure#0}\n             at /workspace/work/r3-defence-port/borg-core/src/borg.rs:311:17\n  13: borg_rs::engine::enter::<borg_rs::headers::ui_event_h::keypress, borg_rs::borg::borg_entry_point::{closure#0}>\n             at /workspace/work/r3-defence-port/borg-core/src/engine.rs:111:13\n  14: borg_rs::borg::borg_entry_point\n             at /workspace/work/r3-defence-port/borg-core/src/borg.rs:310:5\n  15: inkey_ex\n  16: textui_get_command\n  17: textui_process_command\n  18: textui_get_cmd\n  19: play_game\n  20: main\n  21: <unknown>\n  22: __libc_start_main\n  23: _start\nnote: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.\n/workspace/work/r3-defence-port/build/rust-test/game/angband: Exiting on signal 6!\n",
+        "supervisor_pid": 215844,
+        "timed_out": false,
+        "timeout_seconds": 0.0
+      },
+      "fixture_count_before_abort": 33,
+      "witness": {
+        "agreement_error": "final policy state differs",
+        "case": "grim-confusion-nonbinary",
+        "choice": 2,
+        "driving_value": 0,
+        "expected_native_boolean_restoration": [
+          1,
+          0
+        ],
+        "final_confusion_free_action": [
+          1,
+          0
+        ],
+        "mode": "check",
+        "replayed_value": 0,
+        "schema": "borg-reborn-rs/r3-defence-constructed@1",
+        "synthetic": true,
+        "tape_events": 3,
+        "temporary_buffs_restored": true
+      },
+      "fixtures_sha256": "4a3c83b205d0942fe44d12ad59c74ded1c75690d05e4dea5f4d68596f1a9cd47",
+      "stderr_sha256": "f86483aea57000392b6c603317b4f16cf09ce2c8b8b452b2706a355a79fc6da5"
+    },
+    {
+      "mode": "switch",
+      "harness_exit": 1,
+      "process": {
+        "checkpoint_count": 0,
+        "checkpoint_errors": [],
+        "child_pid": 215878,
+        "command": [
+          "/workspace/work/r3-defence-port/build/rust-test/game/angband",
+          "-mborgh",
+          "-n",
+          "-uBorg",
+          "-duser=/workspace/work/r365-evidence/stale-switch/user",
+          "-dsave=/workspace/work/r365-evidence/stale-switch/save",
+          "-darchive=/workspace/work/r365-evidence/stale-switch/archive",
+          "-dpanic=/workspace/work/r365-evidence/stale-switch/panic",
+          "-dscores=/workspace/work/r365-evidence/stale-switch/scores",
+          "--",
+          "-seed",
+          "1001",
+          "-race",
+          "0",
+          "-class",
+          "1",
+          "-turns",
+          "1000",
+          "-keylog",
+          "/workspace/work/r365-evidence/stale-switch/keys.log",
+          "-msglog",
+          "/workspace/work/r365-evidence/stale-switch/messages.log",
+          "-statelog",
+          "/workspace/work/r365-evidence/stale-switch/state.log",
+          "-summary",
+          "/workspace/work/r365-evidence/stale-switch/summary.json",
+          "-screen",
+          "-menu-letters"
+        ],
+        "elapsed_seconds": 0.659168240003055,
+        "engine_returncode": -6,
+        "executable_sha256_after": "25b17caf49b0b4574f90bca331e444cc2007631d23e8bd8303457041b5c8fe71",
+        "executable_sha256_before": "25b17caf49b0b4574f90bca331e444cc2007631d23e8bd8303457041b5c8fe71",
+        "exit_code": 134,
+        "interrupted_signal": null,
+        "last_observed_turn": null,
+        "progress_scope": "latest complete flushed native-frame world tick; legacy key-log fallback",
+        "signal": 6,
+        "stall_timeout_seconds": 0.0,
+        "stalled": false,
+        "started_unix": 1794800474.4457953,
+        "status": "signal",
+        "stderr_tail": "\nthread '<unnamed>' (215878) panicked at borg-next/src/defence_fixture.rs:189:5:\ngrim-confusion-nonbinary: Err(\"final policy state differs\")\nstack backtrace:\n   0: __rustc::rust_begin_unwind\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/panicking.rs:676:5\n   1: core::panicking::panic_fmt\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/panicking.rs:80:14\n   2: borg_next::defence_fixture::check\n             at /workspace/work/r3-defence-port/borg-next/src/defence_fixture.rs:189:5\n   3: borg_next::defence_fixture::run::{closure#0}\n             at /workspace/work/r3-defence-port/borg-next/src/defence_fixture.rs:106:13\n   4: <std::sync::once::Once>::call_once::<borg_next::defence_fixture::run::{closure#0}>::{closure#0}\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/sync/once.rs:167:41\n   5: <std::sys::sync::once::futex::Once>::call\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/sys/sync/once/futex.rs:183:21\n   6: <std::sync::once::Once>::call_once::<borg_next::defence_fixture::run::{closure#0}>\n             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/sync/once.rs:167:20\n   7: borg_next::defence_fixture::run\n             at /workspace/work/r3-defence-port/borg-next/src/defence_fixture.rs:10:10\n   8: <borg_next::shadow::Next as borg_rs::shadow::Shadow>::after_think\n             at /workspace/work/r3-defence-port/borg-next/src/shadow.rs:365:9\n   9: borg_rs::shadow::after_think\n             at /workspace/work/r3-defence-port/borg-core/src/shadow.rs:48:39\n  10: borg_rs::borg_think::borg_think\n             at /workspace/work/r3-defence-port/borg-core/src/borg_think.rs:171:5\n  11: borg_rs::borg::generate_keypress\n             at /workspace/work/r3-defence-port/borg-core/src/borg.rs:538:12\n  12: borg_rs::borg::borg_entry_point::{closure#0}\n             at /workspace/work/r3-defence-port/borg-core/src/borg.rs:311:17\n  13: borg_rs::engine::enter::<borg_rs::headers::ui_event_h::keypress, borg_rs::borg::borg_entry_point::{closure#0}>\n             at /workspace/work/r3-defence-port/borg-core/src/engine.rs:111:13\n  14: borg_rs::borg::borg_entry_point\n             at /workspace/work/r3-defence-port/borg-core/src/borg.rs:310:5\n  15: inkey_ex\n  16: textui_get_command\n  17: textui_process_command\n  18: textui_get_cmd\n  19: play_game\n  20: main\n  21: <unknown>\n  22: __libc_start_main\n  23: _start\nnote: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.\n/workspace/work/r3-defence-port/build/rust-test/game/angband: Exiting on signal 6!\n",
+        "supervisor_pid": 215877,
+        "timed_out": false,
+        "timeout_seconds": 0.0
+      },
+      "fixture_count_before_abort": 33,
+      "witness": {
+        "agreement_error": "final policy state differs",
+        "case": "grim-confusion-nonbinary",
+        "choice": 2,
+        "driving_value": 0,
+        "expected_native_boolean_restoration": [
+          1,
+          0
+        ],
+        "final_confusion_free_action": [
+          2,
+          0
+        ],
+        "mode": "switch",
+        "replayed_value": 0,
+        "schema": "borg-reborn-rs/r3-defence-constructed@1",
+        "synthetic": true,
+        "tape_events": 3,
+        "temporary_buffs_restored": true
+      },
+      "fixtures_sha256": "7c80b8f276450f5d4d5b62b6d948d2ecf563627d40394328a5a452954a8ef63f",
+      "stderr_sha256": "84570e9df03636fd20a143c0f7344b0b9742c105793e5940380514924ddb87fc"
+    }
+  ],
+  "restored_attempts": [
+    {
+      "mode": "check",
+      "constructed_case_count": 43,
+      "cases": [
+        {
+          "agreement_error": null,
+          "case": "selector-0",
+          "choice": 0,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-1",
+          "choice": 1,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 7,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-2",
+          "choice": 2,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-3",
+          "choice": 3,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 2,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-4",
+          "choice": 4,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 7,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-5",
+          "choice": 5,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 7,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-6",
+          "choice": 6,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 5,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-7",
+          "choice": 7,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 6,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-8",
+          "choice": 8,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 5,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-9",
+          "choice": 9,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-10",
+          "choice": 10,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-11",
+          "choice": 11,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 4,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-12",
+          "choice": 12,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 2,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-13",
+          "choice": 13,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 5,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-14",
+          "choice": 14,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-15",
+          "choice": 15,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-16",
+          "choice": 16,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-17",
+          "choice": 17,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-18",
+          "choice": 18,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 2,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-19",
+          "choice": 19,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 4,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-20",
+          "choice": 20,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-21",
+          "choice": 21,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 4,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-22",
+          "choice": 22,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-23",
+          "choice": 23,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-24",
+          "choice": 24,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 2,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-25",
+          "choice": 25,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 11,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-26",
+          "choice": 26,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-27",
+          "choice": 27,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-28",
+          "choice": 28,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-29",
+          "choice": 29,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-30",
+          "choice": 30,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "speed-restoration",
+          "choice": 1,
+          "driving_value": 1000,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 1000,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 5,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "grim-confusion-nonbinary",
+          "choice": 2,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": [
+            1,
+            0
+          ],
+          "final_confusion_free_action": [
+            1,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "grim-free-action-nonbinary",
+          "choice": 2,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": [
+            0,
+            1
+          ],
+          "final_confusion_free_action": [
+            0,
+            1
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "fire-restoration",
+          "choice": 4,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "cold-restoration",
+          "choice": 5,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "acid-restoration",
+          "choice": 6,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "electricity-restoration",
+          "choice": 7,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "poison-restoration",
+          "choice": 8,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "protection-evil-restoration",
+          "choice": 9,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "shield-restoration",
+          "choice": 10,
+          "driving_value": 1000,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 1000,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "all-resists-restoration",
+          "choice": 3,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "morgoth-rest-simulation",
+          "choice": 27,
+          "driving_value": 200,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "check",
+          "replayed_value": 200,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        }
+      ],
+      "fixtures_sha256": "f0bba3eb0bdb5ce3104311a38dd8e6875277869d134487b0850cf2e36002407e",
+      "live_play_streams_equal_production_off": true,
+      "live_play_hashes": {
+        "keys.log": "c43d1dece033b09c0a66c52702c2dbd5aad544af98c8e01d3bb5904e39f52110",
+        "messages.log": "cef04fe2638af4f0e92adb827d03c69e518b3c3ba5e2b0b5bce2a91032bca855",
+        "state.log": "30b3f0def6fc43bdcb4dc8df8c6ab88dd4cf5ec465a156ebc2c63fb4850ad5cd"
+      }
+    },
+    {
+      "mode": "switch",
+      "constructed_case_count": 43,
+      "cases": [
+        {
+          "agreement_error": null,
+          "case": "selector-0",
+          "choice": 0,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-1",
+          "choice": 1,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 7,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-2",
+          "choice": 2,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-3",
+          "choice": 3,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 2,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-4",
+          "choice": 4,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 7,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-5",
+          "choice": 5,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 7,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-6",
+          "choice": 6,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 5,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-7",
+          "choice": 7,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 6,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-8",
+          "choice": 8,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 5,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-9",
+          "choice": 9,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-10",
+          "choice": 10,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-11",
+          "choice": 11,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 4,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-12",
+          "choice": 12,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 2,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-13",
+          "choice": 13,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 5,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-14",
+          "choice": 14,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-15",
+          "choice": 15,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-16",
+          "choice": 16,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-17",
+          "choice": 17,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-18",
+          "choice": 18,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 2,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-19",
+          "choice": 19,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 4,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-20",
+          "choice": 20,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-21",
+          "choice": 21,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 4,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-22",
+          "choice": 22,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-23",
+          "choice": 23,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-24",
+          "choice": 24,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 2,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-25",
+          "choice": 25,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 11,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-26",
+          "choice": 26,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-27",
+          "choice": 27,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-28",
+          "choice": 28,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-29",
+          "choice": 29,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "selector-30",
+          "choice": 30,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 0,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "speed-restoration",
+          "choice": 1,
+          "driving_value": 1000,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 1000,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 5,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "grim-confusion-nonbinary",
+          "choice": 2,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": [
+            1,
+            0
+          ],
+          "final_confusion_free_action": [
+            1,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "grim-free-action-nonbinary",
+          "choice": 2,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": [
+            0,
+            1
+          ],
+          "final_confusion_free_action": [
+            0,
+            1
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "fire-restoration",
+          "choice": 4,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "cold-restoration",
+          "choice": 5,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "acid-restoration",
+          "choice": 6,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "electricity-restoration",
+          "choice": 7,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "poison-restoration",
+          "choice": 8,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "protection-evil-restoration",
+          "choice": 9,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "shield-restoration",
+          "choice": 10,
+          "driving_value": 1000,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 1000,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "all-resists-restoration",
+          "choice": 3,
+          "driving_value": 0,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 0,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 3,
+          "temporary_buffs_restored": true
+        },
+        {
+          "agreement_error": null,
+          "case": "morgoth-rest-simulation",
+          "choice": 27,
+          "driving_value": 200,
+          "expected_native_boolean_restoration": null,
+          "final_confusion_free_action": [
+            0,
+            0
+          ],
+          "mode": "switch",
+          "replayed_value": 200,
+          "schema": "borg-reborn-rs/r3-defence-constructed@1",
+          "synthetic": true,
+          "tape_events": 1,
+          "temporary_buffs_restored": true
+        }
+      ],
+      "fixtures_sha256": "edaac9d4cf2908505f2a82838ec15cec226d2a1a62cf07749c9e6e58a2391763",
+      "live_play_streams_equal_production_off": true,
+      "live_play_hashes": {
+        "keys.log": "c43d1dece033b09c0a66c52702c2dbd5aad544af98c8e01d3bb5904e39f52110",
+        "messages.log": "cef04fe2638af4f0e92adb827d03c69e518b3c3ba5e2b0b5bce2a91032bca855",
+        "state.log": "30b3f0def6fc43bdcb4dc8df8c6ab88dd4cf5ec465a156ebc2c63fb4850ad5cd"
+      }
+    }
+  ]
+}

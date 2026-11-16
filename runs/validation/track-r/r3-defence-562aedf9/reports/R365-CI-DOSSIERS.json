@@ -1,0 +1,30 @@
+{
+  "schema": "borg-reborn-rs/r365-ci-dossiers@1",
+  "allocation": "Provisional workflow/artifact namespace; final numeric IDs belong to central cemetery acceptance.",
+  "packets": [
+    {
+      "original_provisional_id": "D0001-rust-seed1011",
+      "qualified_path": "docs/deaths/D0000-qea81edb831c1c729785afebf41a10aca7109e6c4dffba8d085f0f4db44fd56e6",
+      "record_sha256": "e1e53354f060b754b289f7aaf5b3ff06fe9d5bce9cf37378d8035866c6bf41ee",
+      "source_namespace": {
+        "repository": "diegoami/borg-reborn-rs",
+        "workflow_run_id": 43794648571,
+        "artifact_id": 14194246631,
+        "registry": "core-deaths"
+      },
+      "build": {
+        "binary": "/home/runner/work/borg-reborn-rs/borg-reborn-rs/build/rust/game/angband",
+        "binary_sha256": "e0c826a3a3583a7435cbe7b0ccfe9e09bc971c863c697fcb27b6d9000213e08f",
+        "built_utc": "2026-11-16T02:52:48Z",
+        "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "cce92043d1b3783c986d4b8bf27d5251b56e5fdc",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "562aedf968831885c32b4f56271a2f7bd0245432aff9159dd629f59601ff4fe1"
+      }
+    }
+  ]
+}
