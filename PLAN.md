@@ -1,5 +1,15 @@
 # Milestones
 
+## Owner-directed caster bank (2026-11-16)
+
+The owner requested continued scenario work, prioritizing low-level casters,
+different equipment combinations, and extraction from deaths/near deaths.
+`synthetic/low-level-casters/` adds a provenance-checked incident candidate index
+and a bounded four-class birth matrix. This instruction authorizes that scoped
+bank work without changing the frozen M2 Warrior review packet or accepting M1/M2.
+Caster equipment application remains reborn #382; unsupported records are
+explicitly untested. No P2/P3 population experiment or acceptance tag is implied.
+
 | Milestone | Scope | State |
 | --- | --- | --- |
 | M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | Prepared for owner-run review; **not accepted** |
