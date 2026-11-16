@@ -1,7 +1,9 @@
 """tools/reconcile-deaths.py --runs (E review, finding 3). Run: python3 -m unittest discover -s tools/tests"""
 
 import hashlib
+import contextlib
 import importlib.util
+import io
 import json
 import tempfile
 import unittest
@@ -43,6 +45,38 @@ def dossier(registry, case, sha, fam=None):
 
 
 class RunsTest(unittest.TestCase):
+    def test_mixed_scan_reports_exclusions_and_keeps_natural_deaths(self):
+        with tempfile.TemporaryDirectory() as t:
+            run(t, 'natural')
+            with (Path(t) / 'runs/natural/config.txt').open('a') as stream:
+                stream.write('synthetic=0\nstart_depth=0\n')
+            excluded = {'one-way': {'game_options': {'birth_force_descend': True, 'birth_no_recall': True}},
+                        'bad-options': {'game_options': [1]}, 'synthetic': {'synthetic': True}}
+            for name, extra in excluded.items():
+                run(t, name)
+                path = Path(t) / 'runs' / name / 'summary.json'
+                path.write_text(json.dumps(dict(json.loads(path.read_text()), **extra)))
+            run(t, 'conservative-config')
+            with (Path(t) / 'runs/conservative-config/config.txt').open('a') as stream:
+                stream.write('synthetic=no\n')
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output):
+                deaths, missing = rc.unexported([Path(t) / 'runs'], Path(t) / 'temp', build_id(t))
+            self.assertEqual((deaths, [path.name for path, _ in missing]), (1, ['natural']))
+            self.assertEqual(output.getvalue().count('SKIPPED:'), 4)
+            for reason in ('malformed game_options', 'one-way birth options', 'synthetic start'):
+                self.assertIn(reason, output.getvalue())
+
+    def test_synthetic_deaths_are_excluded_from_natural_reconciliation(self):
+        with tempfile.TemporaryDirectory() as t:
+            for name, config in [('synthetic', 'synthetic=1\n'),
+                                 ('depth', 'start_depth=20\n'),
+                                 ('flags', 'flags=menu,start-depth=20\n')]:
+                run(t, name)
+                with (Path(t) / 'runs' / name / 'config.txt').open('a') as stream:
+                    stream.write(config)
+            self.assertEqual(rc.unexported([Path(t) / 'runs'], Path(t) / 'temp', build_id(t)), (0, []))
+
     def test_an_unexported_death_fails_even_with_an_empty_registry(self):
         with tempfile.TemporaryDirectory() as t:
             run(t, 'a')

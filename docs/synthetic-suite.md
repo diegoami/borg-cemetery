@@ -1,0 +1,159 @@
+# Synthetic suite contract, P1
+
+`borg-cemetery/synthetic-suite@1` is a generated-dungeon definition, not a saved
+position or a replay. P1 ships the reborn execution adapter; scheduling, stable
+scenario identity, normalized outcomes and reports are separate from execution.
+Another engine needs its own reviewed adapter/capability and character-record
+contract. An unsupported backend is never advertised as runnable.
+
+The checked-in example is `synthetic/p1-warrior/suite.json`: Human Warrior,
+seed 101, starting depths 5/10/15, birth kit and one real observed level-5 tier.
+There are six cells, each capped at 5,000 engine turns and 30 wall seconds.
+Native downward travel remains legal; depth means **starting depth**. Native
+harness stopping is at the first key at/past the cap; actual turns are recorded.
+
+## Definition and identity
+
+| Field | Meaning |
+|---|---|
+| schema, suite_id, revision | Immutable interpretation and owner-chosen revision |
+| seeds, depths | Unique bounded grid values; deterministic sorted generation |
+| turn_cap, wall_seconds | Gameplay horizon and independent wall limit |
+| candidate_screen | Explicit `low_hp_candidate` rule; never near-death qualification |
+| character_builds | Unique ID, race/class, explicit core, exact profile digest, birth or record dependency |
+| runtime | Supported repository and exact 40-hex commit; no moving branch |
+
+A record build names exact native-record and catalog files plus SHA256 digests.
+Catalog provenance binds a clean measured source/binary, capture receipt, seed,
+source log/config/summary hashes, sampling limits and normalization. The source
+run and any save bytes are not execution dependencies. P1 uses one actual
+observation, not an invented average or a population-representative kit.
+
+The spec digest excludes executable selection. Each scenario hashes canonical
+suite identity/revision, seed, starting depth, character/profile/catalog identity,
+stop/screen rules and required harness contract. Grid order and another target
+executable do not change scenario IDs. Changing these starting conditions does.
+The original manifest byte digest is retained separately. Duplicate IDs/JSON
+keys, missing definitions, changed dependency bytes, unknown/ambiguous screen
+rules and excessive grids are refused. Limits are 64 cells, 100,000 turns and
+120 wall seconds per cell; the approved P1 bank is much smaller.
+
+## Adapter and evidence
+
+The real adapter verifies the exact clean target checkout, capability declaration,
+source-input digest and binary digest. The engine must support contract
+`borg-reborn-rs/synthetic-start@2`, including the requested core. @1 is deliberately
+not advertised: its old first-key/player-depth check did not prove the cave was
+active before Borg activation. Those old development results are superseded.
+
+Each game runs in an isolated directory under the shared engine lock. The child
+receives a small explicit environment, an immutable profile copy and, for a tier,
+a private declarative record copy independently hashed by the engine. No account
+credentials, arbitrary commands, inherited Borg policy, binary override, data
+override or save root comes from the suite. The harness reports actual cave depth,
+absence of pending generation, character tier and record digest. Runtime binary
+before/after hashes, configuration and first/terminal log boundaries are checked.
+
+Raw output directories are preserved outside Git. Each attempt writes scenario
+and result JSON; the suite writes `scenarios.json`, `results.json` and `report.md`.
+Existing output directories are never overwritten. Preflight failure produces
+one invalid result per scheduled cell, with zero games attempted. Timeouts and
+failed receipts retain partial evidence without a death/survival label.
+
+## Independent outcome fields
+
+- Terminal categories: `death`, `survived_to_cap`, `stopped`.
+- Invalid execution categories: `harness_failure`, `identity_mismatch`, `timeout`,
+  `unsupported`. A dead/alive-looking partial summary cannot override these.
+- `qualified_near_death`: coverage `unavailable`, count **null** in P1. The later
+  engine null-move evaluator is required; absence of it is not zero exposure.
+- `candidate_screen`: distinct sampled engine turns with living HP at/below the
+  configured threshold (2 in P1), with explicit pre-key sampling limitations.
+  A scenario can die and contain candidate screens; these are separate facts.
+- `refusal_messages`: exact generic “Nothing happens.” / “Nothing happens!”
+  message counts, with coverage. They do not uniquely identify an action or
+  establish its energy/resource cost; inspect adjacent messages for attribution.
+
+Reports preserve every scenario denominator, depth/tier outcome counts, sampled
+minimum living HP distribution, death causes and missing evidence. Synthetic
+results never enter natural death/population statistics or `deaths/`. The engine
+also refuses unmarked one-way save reloads, and the native exporter/reconciler
+independently exclude one-way/synthetic lineage. No synthetic dossier is created.
+
+## Commands and cloud path
+
+```sh
+python3 scripts/synthetic_suite.py generate --manifest synthetic/p1-warrior/suite.json --out /tmp/p1-scenarios.json
+python3 scripts/synthetic_suite.py run --manifest synthetic/p1-warrior/suite.json --source /path/to/exact-built-reborn --out /tmp/p1-results
+```
+
+Use a fresh result path. The runner takes the engine lock internally; do not wrap
+it in another lock on the same file. Build the exact manifest commit first, with
+`BORG_IMPL=rust flock /tmp/angband-validation.lock harness/build.sh`.
+
+`.github/workflows/synthetic-suite.yml` validates the bank, checks out the exact
+reborn commit, builds it with Rust 1.100.0, and runs six cells in a read-only job.
+It publishes a readable job summary and evidence artifact with 14-day retention.
+Raw logs stay in artifacts, not Git; compact reviewed outcomes may be retained.
+The workflow does not archive to the natural registry or use write credentials
+for gameplay. Source/binary/toolchain identities remain in the result packet.
+
+P2 expands observed catalogs and implements qualified null-move evidence after
+review. P3 adds compatible paired two-executable impact comparison. P1 makes no
+population, improvement, historical-death-reproduction or average-kit claim.
+
+The P1 runner applies named profiles to the original reborn core. For the
+vendored `borg-rs` core it accepts only an empty/comment-only profile, meaning
+explicit pinned defaults. Named overrides are rejected instead of silently
+ignored; a calibrated core-profile adapter is later work. The engine primitive
+and real startup tests support both cores. The approved P1 bank uses reborn.
+
+### P1 birth-kit and charged-item limits
+
+The frozen birth cells use the ordinary Warrior kit before the frontend enables
+one-way options. Native `class.txt:157` would omit Word of Recall at a birth
+with `birth_no_recall` already enabled. P1 instead retains that scroll, and each
+birth cell consumes it at turn 3 without effect. This is a declared construction
+difference, not a native one-way birth kit. The six reviewed gameplay streams
+and scenario definitions remain unchanged; the bank README records the limit.
+The observed ordinary-source record is a separate declared projection.
+
+P1 does not qualify charged-device tiers: its observed record contains no
+wands/staves and all pvals are zero. The current native parser's numeric pval
+ceiling is not a kind-specific charge bound. Do not infer broader item validity
+from this fixed bank or extend it to charged builds without qualification.
+
+### Retained evidence gate and outer timeout
+
+`synthetic_suite.py verify --actual RUN/results.json --expected
+ docs/reviews/M2/results.json` checks exact scenario IDs/specs, the requested
+runtime, terminal outcomes/turns, and all three key/state/message stream receipts.
+It intentionally permits attempt-specific process paths, timing and binary
+hashes to differ across toolchains. Missing cases/digests and changed gameplay
+fail the gate. The pinned workflow runs this comparison after execution and also
+runs when the retained reference changes.
+
+The adapter owns a new process group for the launcher/supervisor/engine. If its
+outer wall bound expires, it kills the entire group and reaps its launcher,
+retaining status 124 and partial evidence. A real subprocess regression verifies
+that the engine grandchild is no longer running after the timeout.
+
+The six P1 cells are paired conditions on three generated caves from the same
+seed 101, not six independent lives. Birth/observed cells at each depth share
+the cave; the tier source also uses seed 101. Denominator is one per cell.
+Death/survival counts imply no population rate or isolated tier-effect estimate,
+including because birth cells spend an inert Recall-scroll action.
+
+The retained gate also requires matching manifest/source/capability identities,
+clean exact runtime receipts and deterministic diagnostics (death cause, minimum
+HP, candidate/refusal screens and progress). Both packets must keep qualified
+near-death coverage unavailable and its count null, even if both were edited.
+Binary hashes, paths and timings remain attempt-specific across builds. This is
+a regression gate, not an independent approval mechanism: a jointly changed
+runner/reference still requires review. The synthetic workflow pins its action
+revisions to commit SHAs. Cancellation/interruption runs group cleanup too; CLI
+SIGTERM is converted to an exception so the cleanup finally block executes.
+Valid runs require keys/state/messages logs, with key-line and state-row counts
+agreeing with summary.keys. A missing verified executable digest never disables
+identity checks; native signed-32-bit game-turn bounds and timed_out typing are
+checked. A death receipt is not qualified counterfactual/causal death analysis.

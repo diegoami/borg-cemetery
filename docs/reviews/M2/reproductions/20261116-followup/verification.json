@@ -1,0 +1,11 @@
+{
+  "schema": "borg-cemetery/p1-verification@1",
+  "reference": "docs/reviews/M2/results.json",
+  "reference_sha256": "7c5bea2d9ef0b5795e7f1fbab928659f78449781d785caf10f8373e150dc14db",
+  "attempt": "docs/reviews/M2/reproductions/20261116-followup/results.json",
+  "attempt_sha256": "c7a474ef42fac4735fa8a1e73b9d46ec537c8f105e5e451aa8ba441791b8c0bb",
+  "cases": 6,
+  "streams": 18,
+  "comparison": "python3 scripts/synthetic_suite.py verify --actual docs/reviews/M2/reproductions/20261116-followup/results.json --expected docs/reviews/M2/results.json",
+  "match": true
+}

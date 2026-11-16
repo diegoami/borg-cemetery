@@ -186,10 +186,29 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
 NOT_NATURAL_CAUSES = {'Retiring', 'Quitting', 'Interrupting', 'Ripe Old Age'}
 
 
-def not_natural(summary, flags='-'):
+def not_natural(summary, flags='-', config=None):
     """None for a natural death, else why the run is not one. Only natural
     deaths enter the registry (RULES 12; as borg-rs's full exporter)."""
-    flag_set = set(flags.split(','))
+    config = config or {}
+    flag_set = {flag.strip().lower() for raw in (flags, config.get('flags', '-'))
+                for flag in raw.split(',')}
+    # Either producer's marker is sufficient. Missing/contradictory metadata
+    # must never turn an experimental death into a natural registry entry.
+    for record in (summary, config):
+        if (record.get('synthetic') not in (None, False, 0, '', '0', 'false') or
+                record.get('start_depth') not in (None, False, 0, '', '0')):
+            return 'not natural: synthetic start'
+    if any(re.match(r'^(?:start[-_]depth|synthetic)(?:[=\s]|$)', flag) for flag in flag_set):
+        return 'not natural: synthetic start'
+    options = summary.get('game_options')
+    if options is None:
+        options = {}
+    if not isinstance(options, dict):
+        return 'not natural: malformed game_options'
+    # The native option receipt uses JSON booleans. Do not infer synthetic
+    # lineage from a loaded game alone or coerce strings/numbers to booleans.
+    if options.get('birth_force_descend') is True and options.get('birth_no_recall') is True:
+        return 'not natural: one-way birth options (including synthetic-save lineage)'
     if not summary.get('dead'):
         return 'not dead'
     if summary.get('stop_reason') != 'death':
@@ -242,14 +261,14 @@ def export(run_dir, impl, build_id_path, flags='-'):
     # when the suite ends: record where the logs will be.
     final_dir = re.sub(r'\.partial\.\d+(?=/|$)', '', str(run_dir))
     summary = json.loads((run_dir / 'summary.json').read_text())
-    why = not_natural(summary, flags)
+    config = read_kv(run_dir / 'config.txt')
+    why = not_natural(summary, flags, config)
     if why:
         return None, why
     keys = run_dir / 'keys.log'
     if not keys.exists():
         raise SystemExit(f'export-death: {keys} missing; cannot identify the run')
     build = read_kv(build_id_path)
-    config = read_kv(run_dir / 'config.txt')
     keys_sha = sha256_file(keys)
     family = run_family(summary, config, impl, build.get('source_sha256'), flags)
     reg = registry_dir()

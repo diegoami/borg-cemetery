@@ -3,9 +3,34 @@
 | Milestone | Scope | State |
 | --- | --- | --- |
 | M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | Prepared for owner-run review; **not accepted** |
+| M2 / synthetic P1. Small generated-depth suite | One class, depths 5/10/15, one seed, birth kit plus one observed level tier; deterministic manifests, bounded execution, independent outcome/failure fields, candidate danger screens and reports; pinned cemetery CI | Prepared for owner-run milestone review; not accepted |
+
+The owner instructed continued implementation with review at the milestone.
+This selects the bounded synthetic P1 work under #5 and reborn #371. It does
+not accept M1, move its review pin, or authorize expansion into synthetic P2/P3.
+The existing synthetic-start PRs are integration checkpoints, not a task-level
+review stop. The milestone packet will pin both repositories and the real suite.
+
+### M2 / synthetic P1 exit
+
+- Human Warrior, depths 5/10/15, seed 101; birth kit and one level tier derived
+  from a real observed run. Record observation provenance and sampling limits;
+  do not call a single observed kit a population average.
+- A strict declarative build contract applied by reborn without an input save;
+  unsupported native item/state features fail visibly rather than disappearing.
+- Stable scenario identity independent of the executable under test; explicit
+  harness capability, profile/build-catalog digests and exact runtime pins.
+- Bounded suite runner and human/machine reports with complete denominators,
+  death/survival/stopped separated from failure/mismatch/timeout. Low HP is only
+  a candidate screen; qualified null-move coverage/count is unavailable in P1.
+- Fake-adapter regression cases, a real six-cell pinned suite and a read-only
+  game-execution CI workflow. Synthetic outcomes never enter natural registries.
+- Freeze for owner-run milestone review with exact pins, evidence and limitations.
+  Qualified null-move diagnostics and wider catalogs belong to P2; paired
+  two-build impact comparison belongs to P3.
 
 The owner requested the first milestone review on 2026-11-15 and will choose
-or run its reviewer. No next milestone is selected. Automated causal discovery,
+or run its reviewer. M2 is separately selected above. Automated causal discovery,
 tuning proposals, exact uninterrupted Borg-memory continuation and wider
 recorder-version qualification remain future work, not M1 completion claims.
 
@@ -39,7 +64,7 @@ build/configuration identities, database-backed attempts, bounded external
 evidence and on-demand analysis/reconstruction. Near-deaths require independent
 engine evidence; findings feed scenario trials and cohort validation.
 
-This is planning requested by the owner, not a selected next milestone or an
-implementation commitment. M1 remains unaccepted; its implementation pin and
+The broader database/service redesign remains planning, not an implementation
+commitment. Only the bounded synthetic P1 subset selected above is authorized. M1 remains unaccepted; its implementation pin and
 existing evidence are unchanged. The proposal includes delivery slices and
 acceptance criteria for a later owner decision.
