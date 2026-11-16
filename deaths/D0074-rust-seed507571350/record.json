@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0074-rust-seed507571350",
+  "run_kind": "harness",
+  "character": "Half-Elf Druid",
+  "raw_cause": "a blue yeek",
+  "terminal": {
+    "cause": "a blue yeek",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 8718,
+    "race_idx": 1,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 507571350,
+    "flags": "-",
+    "git_rev": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+    "git_dirty": "no",
+    "source_sha256": "2317021cfad2c97c840903ba95eb10cb0b5831d8ada93574b62ceac4d2e15b4c",
+    "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254",
+    "borg_txt_sha256": "f42c5b6d90fd99e3421fc7f03a68fced6b840d500b7f0750fa93d9297a0b74d2",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 884
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths4ec/classes-1800-small/4.2.6-reborn-rust-plans-m13-survival/reborn-m13-plan-town/507571350",
+      "result_sha256": "dad0aaec04f312d3f8d4875ed3839dfc4a64d5a4afb8aa80c6f6ff401202ae54",
+      "raw_sha256": {
+        "keys.log": "dad0aaec04f312d3f8d4875ed3839dfc4a64d5a4afb8aa80c6f6ff401202ae54",
+        "messages.log": "c2281093f946e745e6f2221fa084462119d2aaf521e7d44b92948a4bafa16a68",
+        "state.log": "448d5883803b05a942a24b7e2e749791ed6c6ba7662d0f13b29b165ca989ba62"
+      },
+      "source_commit": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+      "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254"
+    }
+  ],
+  "encounter_family": "start-e40c167fc2e485fc8b827afe37377b4a07557ea7fe27492b5a4ed190dff6af7b",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "87648232ca281819594e3f4706df902fee13024cbc8f670ebce42b1c696bf543",
+    "config.txt": "9e8ad2fbb688fb6ed3b401d071b72e9937861fbe7aabc4d36b5017f8a938970e",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "76a93a77c3fe197f82a24469289018061c36c4d1d0557dfbcdb58905673c2ceb",
+    "trace-core-tail.jsonl": "9398e307d74cb64c976f5bf40819c59d9452b13c2d2b0928e72d49ac8f50a317"
+  },
+  "investigation": null,
+  "issue": null
+}

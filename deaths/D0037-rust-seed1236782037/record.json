@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0037-rust-seed1236782037",
+  "run_kind": "harness",
+  "character": "Gnome Necromancer",
+  "raw_cause": "poison",
+  "terminal": {
+    "cause": "poison",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 51620,
+    "race_idx": 4,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1236782037,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "7878e5058963fd9deb6b3a3fbbf8ffbbe13cdb26af8723f033aabe01cf45b76b",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 2626
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-plan-town/1236782037",
+      "result_sha256": "b219b53838d1d8488a9a2189bfb852125b1e3f4cc76cc58761911bd2e29d6daf",
+      "raw_sha256": {
+        "keys.log": "b219b53838d1d8488a9a2189bfb852125b1e3f4cc76cc58761911bd2e29d6daf",
+        "messages.log": "2ffdf066d946e6521bd7baa0cc7080bdc2234425312d544d0104a0cdf9def6c9",
+        "state.log": "c409384f1b6f9f0dd6db567ee5b36233a3862a252924ae5b0f1d002e9e6da7b9"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-6627ad0fa5cb214b3c7bce2ebe6d58f84d76a65e5d89c95009f0c87e7e0fb606",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "88806bcaa12e8498c6a644ac9a2cc779986c91991ddc883cedd97e39ae33f682",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "acbc9eb1ff43b51bf1a2b287f760b756a336780e334171d11358b7d81f09fcb3",
+    "trace-core-tail.jsonl": "76d8b37a1858fa7ee680bf0e04d548f81e77e03484b5e8366ede27bef2f2060d"
+  },
+  "investigation": null,
+  "issue": null
+}

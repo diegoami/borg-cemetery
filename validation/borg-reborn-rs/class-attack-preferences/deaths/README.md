@@ -13,9 +13,9 @@ Dossiers: 3; distinct starting conditions: 3; retained process attempts: 3 (incl
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
-| [D0000-q92110d8eef797bda54eaf2d144a0b0e92acb47d6643640b861d33a3dd9ec4642](D0000-q92110d8eef797bda54eaf2d144a0b0e92acb47d6643640b861d33a3dd9ec4642/report.md) | unassigned | `cce8ccfc320b` | 1011 | a fruit bat | 1979 | unassessed |
-| [D0000-q9fc496b138d5689747fea26ba83bf0ad5d15bb8210dd5b52df6da1f555d35f92](D0000-q9fc496b138d5689747fea26ba83bf0ad5d15bb8210dd5b52df6da1f555d35f92/report.md) | unassigned | `9289dbc5b4aa` | 1011 | a fruit bat | 1979 | unassessed |
-| [D0000-qe3a44ec24bce77f730ebfc2b86b589f16550e3ad4b5a0d739cc84ff23f926a32](D0000-qe3a44ec24bce77f730ebfc2b86b589f16550e3ad4b5a0d739cc84ff23f926a32/report.md) | unassigned | `0c5ad8f77cfa` | 1011 | a fruit bat | 1979 | unassessed |
+| [D-65ee280697b91dbffd08ccda2682162ea83db1696e45b5b91a9eb103b0564cfd](D0000-q92110d8eef797bda54eaf2d144a0b0e92acb47d6643640b861d33a3dd9ec4642/report.md) | unassigned | `cce8ccfc320b` | 1011 | a fruit bat | 1979 | unassessed |
+| [D-d2c6d23ee5e69492f60ec4e1db958c11fa00ab49908e3b9c8f8917a7ccc54fb7](D0000-q9fc496b138d5689747fea26ba83bf0ad5d15bb8210dd5b52df6da1f555d35f92/report.md) | unassigned | `9289dbc5b4aa` | 1011 | a fruit bat | 1979 | unassessed |
+| [D-d743569d2e76562974192016e13255eaa81b249d2cf8184e0b8d3c71c03276c4](D0000-qe3a44ec24bce77f730ebfc2b86b589f16550e3ad4b5a0d739cc84ff23f926a32/report.md) | unassigned | `0c5ad8f77cfa` | 1011 | a fruit bat | 1979 | unassessed |
 
 ## Aggregated actions
 

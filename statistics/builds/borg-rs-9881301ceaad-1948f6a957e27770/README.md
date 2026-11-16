@@ -53,6 +53,6 @@ cemetery: 1 dossiers.
 
 | Registry | Case report | Seed | Seed basis | Character | Cause | Turn | Depth | Level | Settings | Start family |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| cemetery | [D0005-recorded](../../../deaths/D0005-recorded/README.md) | 1532917772 | recorded input | CollectedBorg | Fang, Farmer Maggot's Dog | 36289 | 1 | 2 | [settings](#settings-cemetery-98cc6261449f) | start-5b1ef1f3afe8194eb7c4f977358ead9d309d8cbffabb6cfe6aa26a22f501ebf8 |
+| cemetery | [D-3c7b61f03d55d6ebfa3a63f08bf9b6ab2fe57f43329a248b85e49b2622d2dd10](../../../deaths/D0005-recorded/README.md) | 1532917772 | recorded input | CollectedBorg | Fang, Farmer Maggot's Dog | 36289 | 1 | 2 | [settings](#settings-cemetery-98cc6261449f) | start-5b1ef1f3afe8194eb7c4f977358ead9d309d8cbffabb6cfe6aa26a22f501ebf8 |
 
 [Statistics index](../../README.md)

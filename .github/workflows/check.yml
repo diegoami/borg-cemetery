@@ -15,4 +15,5 @@ jobs:
       - run: python3 -m pip install -r requirements-media.txt
       - run: python3 -m unittest discover -s tests -v
       - run: python3 -m unittest discover -s scripts/native/tests -v
+      - run: python3 scripts/death_ids.py --check
       - run: python3 scripts/build_statistics.py --check

@@ -5,6 +5,8 @@ import fcntl
 from pathlib import Path
 
 from death_pages import dossier_page, read, source_link, text
+from death_ids import refresh
+from native.death_identity import canonical_id
 
 
 def register(root):
@@ -12,6 +14,7 @@ def register(root):
     registry.mkdir(parents=True, exist_ok=True)
     with (registry / '.registry.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
+        refresh(root.resolve())
         count = _register(root)
         from build_statistics import generate
         generate(root)
@@ -31,11 +34,12 @@ def _register(root):
         schema = str(record.get('schema', ''))
         program = 'better-borg-c' if schema.startswith('better-borg-c/') else ('borg-reborn-rs' if schema.startswith('borg-reborn-rs/') else 'borg-rs')
         version = identity.get('git_rev', identity.get('source'))
-        entries.append(f"| [{text(record['id'])}]({path.parent.name}/README.md) | {text(identity.get('seed', 'Not used / saved RNG'))} | "
+        entries.append(f"| [{canonical_id(path.parent, record)}]({path.parent.name}/README.md) · {text(record['id'])} | {text(identity.get('seed', 'Not used / saved RNG'))} | "
                        f"{source_link(program, version)} | {text(record.get('raw_cause', 'Not recorded'))} | "
                        f"{terminal.get('turn', identity.get('turn', 'Not recorded'))} |")
     content = ['# Death catalogue', '',
                'Each entry opens the human-readable death report, evidence and available replay commands. '
+               'Canonical IDs are SHA-256 identities; old numbers are aliases. [Identity rule and alias lookup](../docs/death-identity.md). '
                'Case identifiers are records, not a survival-rate denominator; repeats and alternatives are not additional independent lives.', '',
                '| Case | Seed | Version | Cause | Death turn |', '| --- | --- | --- | --- | --- |', *entries, '',
                '[Cross-case survival analysis](../docs/death-analysis.md) · [Historical registry and actions](README.md)', '']

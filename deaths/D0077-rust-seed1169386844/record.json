@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0077-rust-seed1169386844",
+  "run_kind": "harness",
+  "character": "Half-Orc Druid",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 65689,
+    "race_idx": 6,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1169386844,
+    "flags": "-",
+    "git_rev": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+    "git_dirty": "no",
+    "source_sha256": "2317021cfad2c97c840903ba95eb10cb0b5831d8ada93574b62ceac4d2e15b4c",
+    "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254",
+    "borg_txt_sha256": "3ce27ae06e036c733cf5dcae034b2b29f7c5fc83c9b0f2b111aa0d8dff03aa90",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 4681
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths4ec/classes-1800-small/4.2.6-reborn-rust-plans-m13-survival/reborn-m13-plan-town/1169386844",
+      "result_sha256": "d890131d7ff1e0be356f408fe1a941bf956cfaac9abacda61ba7b32109b284b8",
+      "raw_sha256": {
+        "keys.log": "d890131d7ff1e0be356f408fe1a941bf956cfaac9abacda61ba7b32109b284b8",
+        "messages.log": "a2a953dbaae3c6d9f2e5e5d23ddb106d336e54bd027b9fd73490e0b47479c19e",
+        "state.log": "1d6e59d667613fda1c2020d8bc2368c96f583a1c24d555e76b588b04bba847e8"
+      },
+      "source_commit": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+      "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254"
+    }
+  ],
+  "encounter_family": "start-5c089a78f6bece2c459f8abf68e8d03a0de149ee67c0ace775634b0f9ba9079f",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "87648232ca281819594e3f4706df902fee13024cbc8f670ebce42b1c696bf543",
+    "config.txt": "59bfd7d7f65d1cdba9fa6718b822932e0c6db474f7e2e06f92f5d6dfcc4ea11d",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "e9d336268f7cfb9b8f1e830828a02578f9e263e5dbe3c02abbcd2e3cefbccd6f",
+    "trace-core-tail.jsonl": "033df544dc79e416c165b494cdc53298c8d2813482b2386091b4122a8fdd58f6"
+  },
+  "investigation": null,
+  "issue": null
+}
