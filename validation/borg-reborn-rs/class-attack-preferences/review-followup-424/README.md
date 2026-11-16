@@ -30,3 +30,17 @@ and four imported packets. An independently generated local default-core
 Druid control reproduces c542b7d80373 exactly and is also retained. The expanded
 archive verifies86 qualified packages before a third fresh CI run. No check,
 seed or expected key hash is changed. Package count is not a life count.
+
+Final CI43876104117 passes all Rust, engine and recorder jobs at source head
+a626555d. The full engine/reference/perception suite, native preference checks,
+both death reconciliation gates and original-core replay pass. All three final
+uploaded registry archives are retained here verbatim. Reconciliation outputs
+were generated against the independently published86-package f2e4b38c archive
+before adding these zip files; none of the final records is used as its own
+expected baseline. These repeat records remain in their original archives,
+without inflating the86 qualified-package count. The source fixture remains
+f2e4b38c; this successful-CI evidence supplement does not change runtime inputs.
+
+PR#426 merged into track-p as50c92ba01ca827659d060c4abbb3704db7e5152c;
+its tree d81702cef8e85a3031661f5b52ff3debb88658f0 equals the tested head.
+Main promotion and R carry remain separately gated.
