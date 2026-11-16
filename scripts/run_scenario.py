@@ -51,7 +51,7 @@ def run_scenario(source, scenario_dir, out, turns=1000, wall_seconds=120, profil
             raise ValueError('target build inputs have changed')
         env = dict(os.environ, BORG_IMPL='rust', TZ='UTC', LANG='C.UTF-8', LC_ALL='C.UTF-8',
                    RUN_TIMEOUT_SECONDS=str(wall_seconds), CHECKPOINT_EVERY='0',
-                   BORG_CEMETERY_DIR=str(Path(__file__).resolve().parents[1]),
+                   BORG_CEMETERY_DIR=os.environ.get('BORG_CEMETERY_DIR', str(Path(__file__).resolve().parents[1])),
                    BORG_DEATH_RECORDS_DIR=str(out / 'native-deaths'))
         for key in ('ANGBAND_BIN', 'BORG_PROFILE', 'BORGH_DATA_ROOT', 'BORG_TEST_FEATURES',
                     'STALL_TIMEOUT_SECONDS', 'SAVE_ROOT'):

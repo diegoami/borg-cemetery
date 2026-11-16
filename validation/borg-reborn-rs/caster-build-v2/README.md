@@ -8,30 +8,31 @@ Exact compiler/build receipt is in `build.json`; per-run process/config/summary
 receipts are retained separately from the full raw logs.
 
 Four ordinary seed-202 capture/control conditions, 20,000 engine-turn cap:
-Gnome Mage, Dunadan Druid, Human Priest and Elf Necromancer. Requested capture
-level 2. Mage/Priest/Necromancer produce the three observed records here; Druid
-has an explicit absent capture because it dies at level 1. No state is invented
-for it. All four capture/control pairs match keys, state and messages (12/12
+Gnome Mage, Dunadan Druid, Human Priest and Elf Necromancer. The initial optional schema-validation capture target was
+level 2; it never filtered death collection. Mage/Priest/Necromancer produce the three observed level-2 records here; Druid
+has an explicit absent capture because it dies at level 1. Its death is retained and an additional natural level-1 Druid record is now
+retained too; no state is invented for it. All four capture/control pairs match keys, state and messages (12/12
 stream pairs). This checks read-only capture on these supported runs, not all
 possible unsupported items/effects. Birth-level support for all four classes is
 also tested by the source's native contract tests.
 
-The three records include actual learned/worked flags and learning order,
+The three level-2 records include actual learned/worked flags and learning order;
+the additional Druid record captures its real level-1 starting state,
 partial HP/SP, base stats and mundane carried/equipped kit. They are observations,
 not representative population averages. See `catalog.json` for record hashes,
 source selection and capture receipts. Source schema @2 preserves integral
 observed HP/SP; fractional resources reset, nutrition normalizes to birth, and
 other historical knowledge/private Borg state is not restored.
 
-Each record is applied through the native harness at depth 3, seed 202, 3,000
-engine-turn cap twice: six executions of three starting conditions. Outcomes are
-four cap survivals and two Priest deaths. The three repeat pairs match all nine
-key/state/message streams. They are synthetic starts, not historical encounter
-replays or six independent natural lives. `applied.json` retains every result and
+All four records are applied through the native harness at depth 3, seed 202,
+3,000 engine-turn cap twice: eight executions of four starting conditions.
+Outcomes are four cap survivals, two Priest deaths and two Druid deaths. The
+four repeat pairs match all 12 key/state/message streams. They are synthetic starts, not historical encounter
+replays or eight independent natural lives. `applied.json` retains every result and
 stream digest. They do not qualify near deaths or establish improvement.
 
 Cemetery's portable synthetic-suite build parser/catalog still only accepts @1.
-These records are `native_harness_validated`, **not portable-suite qualified**;
+These declarative records are `native_harness_validated`, **not portable-suite qualified**;
 `requires_cemetery_v2_adapter` remains explicit. Description-only dossiers in
 the incident bank are not converted by this validation. Stat-modifier gear,
 charged devices and active status/drain/shapechange remain unsupported.
@@ -57,3 +58,31 @@ Raw logs and initial failed suite directories remain outside Git under
 `/workspace/work/caster-natural-validation/`. Readable evidence and immutable
 compact receipts here are the canonical report; source keeps only brief links.
 No Zoo population experiment was dispatched. Zoo pushid comparison remains #144.
+
+
+## All-death reproduction and fast encounter starts
+
+Owner clarification: **collect every natural death regardless of class/level**.
+A level-target build capture is optional projection validation, never a filter.
+All four new natural death families now have literal input files, pinned runtime
+and game-data manifests, runnable birth recipes and successful death/three-stream
+checks under `reproduction/`. The original non-recording executable and data are
+cached locally; no remote binary retention is claimed. Recording is unnecessary.
+
+The separate `synthetic/fast-caster-encounters/` bank selects saves at/before
+first observable threat contact. It loads directly into an already-built Borg,
+so the routine test does not replay each birth. Four cases ran in about2.2s on accepted main,
+three times with matching streams. These are fresh-Borg counterfactuals, distinct
+from exact birth reproductions. See `DRUID-UNSEEN-RECOVERY.md` for the early Druid
+failure motivating the unseen-contact case.
+
+`prior-fixture-union.json` records a byte-preserving additive union of the source's
+previously adopted evidence pin77dd467, including its max-depth save archive and
+nine prior control packages absent from Cemetery main. Generated union indexes
+are regenerated; existing immutable payloads are never replaced. Those historical
+controls are not newly measured games in this validation.
+
+Optional recorder probes launched before the owner clarified that recording was
+unnecessary remain indexed under `auxiliary_probes`; one initial replay failed
+terminal-call verification. They are excluded from scenario/reproduction claims.
+No additional recorder work is required by this bank.

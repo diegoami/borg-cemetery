@@ -1,6 +1,147 @@
 {
+  "auxiliary_probes": [
+    {
+      "evidence": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 3903,
+          "sha256": "4648acf84fd5676341363793251bb68b1fdd20703940b02a93145e6067bdd7b6"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2002,
+          "sha256": "3dcd9b9a2225fdc05595096f0ba1d5e7a5bd7939247280afdd689d1f2f3fbb4e"
+        }
+      },
+      "id": "druid-recorded-reproduction",
+      "independent_life": false,
+      "receipt_directory": "receipts/druid-recorded-reproduction",
+      "role": "optional recorder qualification probe, superseded by owner instruction that recording is unnecessary",
+      "status": "success",
+      "used_for_scenarios": false
+    },
+    {
+      "evidence": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "messages.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "process.json": {
+          "bytes": 1878,
+          "sha256": "682030a705a8299b386a4fa891c837c48b1b9e8c8ce58b357d992b5c840f5844"
+        },
+        "state.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "id": "druid-verified-replay",
+      "independent_life": false,
+      "receipt_directory": "receipts/druid-verified-replay",
+      "role": "optional recorder qualification probe, superseded by owner instruction that recording is unnecessary",
+      "status": "exit_failure",
+      "used_for_scenarios": false
+    },
+    {
+      "evidence": {
+        "config.txt": {
+          "bytes": 238,
+          "sha256": "c2d312cdf406cf33f0c98e7f985de78f9d72c5e2e7612a6dfa63b59487127f48"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 4053,
+          "sha256": "5512ae398200e7b6ef22a449d6694dec3c11d297de978ac3508c163f3cb2961e"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2002,
+          "sha256": "091786e8377500a8d3bc0c3f39291c6c4855d8bcb3f494209bfcad12ccadd79e"
+        }
+      },
+      "id": "druid-headless-reproduction",
+      "independent_life": false,
+      "receipt_directory": "receipts/druid-headless-reproduction",
+      "role": "optional recorder qualification probe, superseded by owner instruction that recording is unnecessary",
+      "status": "success",
+      "used_for_scenarios": false
+    },
+    {
+      "evidence": {
+        "config.txt": {
+          "bytes": 238,
+          "sha256": "c2d312cdf406cf33f0c98e7f985de78f9d72c5e2e7612a6dfa63b59487127f48"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 3992,
+          "sha256": "56af5347c58622daac8006c9205d41d5a73ad781e18a92cc111cc3d41dc6d90d"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2002,
+          "sha256": "307f3d760a76fa3a19619555d338e40329d8f5aa58f7b8bcc01f79ec3b9c1d19"
+        }
+      },
+      "id": "druid-headless-replay",
+      "independent_life": false,
+      "receipt_directory": "receipts/druid-headless-replay",
+      "role": "optional recorder qualification probe, superseded by owner instruction that recording is unnecessary",
+      "status": "success",
+      "used_for_scenarios": false
+    }
+  ],
   "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
   "build_identity": "build.json",
+  "death_collection": {
+    "class_filter": null,
+    "level_capture": "optional schema validation only, never death collection eligibility",
+    "level_filter": null,
+    "mode": "all_natural_deaths",
+    "recording_required": false
+  },
   "initial_suite_failures": [
     {
       "gameplay_runs": [
@@ -402,6 +543,63 @@
       },
       "id": "elf-necromancer",
       "streams_match": true
+    },
+    {
+      "capture": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 4044,
+          "sha256": "e0a54a8e9df62bd864e80c8777d5db09fd284395e3ac3b32e99dc52eeafe96c0"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2227,
+          "sha256": "ab03654d401d64926580ccbb47e722eb02f95d02be1ec444ba77153f3c9fbfee"
+        }
+      },
+      "capture_status": "captured",
+      "control": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 3848,
+          "sha256": "48a551968bc3279f4e91479003b869703041fcff96841dbebb4375f60aa33461"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2002,
+          "sha256": "67727039a5f83de2b63cdece5920c39e52b115933f67d7ffb2bab9b31ed2fd62"
+        }
+      },
+      "id": "dunadan-druid-level1",
+      "streams_match": true
     }
   ],
   "new_natural_packages": [
@@ -493,6 +691,46 @@
         "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1"
       },
       "source_run": "elf-necromancer-capture"
+    },
+    {
+      "application_status": "native_harness_validated",
+      "id": "dunadan-druid-level1",
+      "observed": "observed:1:13:2",
+      "portable_suite_status": "requires_cemetery_v2_adapter",
+      "record": "records/dunadan-druid-level1.build",
+      "record_sha256": "bc16245aa21ce954af0e83bbd7727310b2f932b25260aba4b5f81bbafb3bc073",
+      "source_identity": {
+        "binary": "/workspace/work/reborn-caster-builds/build/rust/game/angband",
+        "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+        "built_utc": "2026-11-16T17:25:21Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1"
+      },
+      "source_run": "dunadan-druid-level1-capture"
+    }
+  ],
+  "reproduction_recipes": [
+    {
+      "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/mage-seed1011/recipe.json",
+      "sha256": "4866a09c99ac401ce6df1cc30c641724224f74b70be0c61f4387e249443658a3"
+    },
+    {
+      "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/druid-seed1020/recipe.json",
+      "sha256": "9b2e630e619726a01dd85b5533867a8872adbc3776dc767068415c935deb2bb5"
+    },
+    {
+      "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/mage-seed102/recipe.json",
+      "sha256": "624d221d88e7b7bf884248efca48b4833a04715cc44af5e082bacf0e5252dca2"
+    },
+    {
+      "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/druid-seed202/recipe.json",
+      "sha256": "7a186f9151c35a83be38a281e2ba09410f5bc87fdc3fa6ecb17512642a635a6d"
     }
   ],
   "schema": "borg-cemetery/caster-native-validation@1",
@@ -505,5 +743,27 @@
     }
   },
   "source_commit": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
-  "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1"
+  "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1",
+  "verified_birth_reproductions": [
+    {
+      "id": "druid-seed1020",
+      "receipt": "reproduction/druid-seed1020/verified.json",
+      "sha256": "72e1751cbf067ac51a7765186252ef92d66e233d1a57524fd56f0ba33e5acc1c"
+    },
+    {
+      "id": "druid-seed202",
+      "receipt": "reproduction/druid-seed202/verified.json",
+      "sha256": "83d590e7f131d8de785e172fee2e1725b1df0a18cf55da9f406480bf39c8a6e9"
+    },
+    {
+      "id": "mage-seed1011",
+      "receipt": "reproduction/mage-seed1011/verified.json",
+      "sha256": "b3fff490cec364c958fdc0dd6f14fe5342764d21cfed88d3d7dff3292c55b7e1"
+    },
+    {
+      "id": "mage-seed102",
+      "receipt": "reproduction/mage-seed102/verified.json",
+      "sha256": "47f7b7b3ef39cc26bf032c734aa7b58ca4200558b54c64ffdfe5bea2a4f0fad2"
+    }
+  ]
 }
