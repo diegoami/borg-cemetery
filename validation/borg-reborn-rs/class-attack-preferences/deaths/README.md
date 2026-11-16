@@ -9,7 +9,7 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 99; distinct starting conditions: 83; retained process attempts: 83 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 100; distinct starting conditions: 84; retained process attempts: 84 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -110,6 +110,7 @@ Dossiers: 99; distinct starting conditions: 83; retained process attempts: 83 (i
 | [D0000-qf4f8eb6cbb718df3436b94d96c3742812c9d3e85638c028775fc1c4285d36992](D0000-qf4f8eb6cbb718df3436b94d96c3742812c9d3e85638c028775fc1c4285d36992/report.md) | unassigned | `300f4716f34e` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-qf8e5f38c81807b1e3478514e57af3d1ce1179a79969d222fb06626e99552b0d2](D0000-qf8e5f38c81807b1e3478514e57af3d1ce1179a79969d222fb06626e99552b0d2/report.md) | unassigned | `5584d0cbfe91` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-qf92035df260ac7f893b3d35aa51c8b8baef5bf375e06748530181feae628bcb3](D0000-qf92035df260ac7f893b3d35aa51c8b8baef5bf375e06748530181feae628bcb3/report.md) | unassigned | `cd411e551fa8` | 1062 | a soldier | 49147 | unassessed |
+| [D0000-qfcc490e5b2784118515343227276d2382564dbddd07850b5570c6f8d8ca969c3](D0000-qfcc490e5b2784118515343227276d2382564dbddd07850b5570c6f8d8ca969c3/report.md) | unassigned | `a4fbda882093` | 1011 | a fruit bat | 1979 | unassessed |
 | [D0000-qfe540acf2d799c9e17d3a42688948109ed2b1b5187e8f9afec9c08a048948260](D0000-qfe540acf2d799c9e17d3a42688948109ed2b1b5187e8f9afec9c08a048948260/report.md) | unassigned | `cd411e551fa8` | 1074 | poison | 22250 | unassessed |
 | [D0000-qfeeb1befa3a01dc1586d5eaf54e42eb8c5139f9be9b0febcddf4c07e9fa0425d](D0000-qfeeb1befa3a01dc1586d5eaf54e42eb8c5139f9be9b0febcddf4c07e9fa0425d/report.md) | unassigned | `cac37f5901c9` | 1020 | a small kobold | 9547 | unassessed |
 
