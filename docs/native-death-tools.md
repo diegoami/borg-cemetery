@@ -55,3 +55,12 @@ The [survival analysis](death-analysis.md) uses these distinctions. Concrete
 proposals name whether they need an existing profile setting, a qualified
 native fixture, missing instrumentation or a future intervention facility.
 Neither moving tools nor writing an analysis applies a gameplay fix.
+
+## Synthetic starts (reborn #371)
+
+Generated-depth scenarios are synthetic evidence, not natural deaths. The native
+exporter rejects a synthetic marker or start depth in summary/config, a
+`start-depth=N` flag, or the forced-descent/no-recall option pair. Rejection
+happens before creating or locking the natural registry, even when called
+directly. Natural-death reconciliation uses the same predicate. No synthetic
+registry or scenario collection is introduced by this change.

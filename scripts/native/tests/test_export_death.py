@@ -186,6 +186,26 @@ class ExportTest(unittest.TestCase):
         self.assertEqual((index['cases'], index['distinct_starting_conditions']), (1, 1))
         self.assertIn('D0001-c-seed101', (self.reg / 'README.md').read_text())
 
+    def test_synthetic_markers_never_create_a_natural_registry(self):
+        for index, (extra, config, flags) in enumerate([
+            ({'synthetic': True}, '', '-'),
+            ({'start_depth': 20}, '', '-'),
+            ({}, 'synthetic=1\n', '-'),
+            ({}, 'start_depth=20\n', '-'),
+            ({}, 'flags=start-depth=20\n', '-'),
+            ({}, '', 'menu,start-depth=20'),
+            ({'game_options': {'birth_force_descend': True, 'birth_no_recall': True}}, '', '-'),
+        ]):
+            with self.subTest(index=index):
+                run = make_run(self.base, f'synthetic{index}', **extra)
+                with (run / 'config.txt').open('a') as f:
+                    f.write(config)
+                # No keys or build needed to reject; no registry side effects.
+                (run / 'keys.log').unlink()
+                self.assertEqual(ed.export(run, 'rust', self.base / 'missing-build', flags),
+                                 (None, 'not natural: synthetic dungeon start'))
+                self.assertFalse(self.reg.exists())
+
     def test_only_natural_deaths_are_exported(self):
         for extra, flags in (({'stop_reason': 'turns'}, '-'), ({'cheat_live': True}, '-'), ({}, 'cheatlive'),
                              ({}, 'cheat,menu'), ({'death_cause': 'Quitting'}, '-'),

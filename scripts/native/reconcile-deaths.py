@@ -67,7 +67,7 @@ def unexported(runs, temp, build_id=ROOT / 'build/rust/BUILD_ID', impl='rust'):
             summary = json.loads(summary_path.read_text())
             config = ed.read_kv(run / 'config.txt')
             flags = config.get('flags', '-')
-            if ed.not_natural(summary, flags) is not None:
+            if ed.not_natural(summary, flags, config) is not None:
                 continue
             deaths += 1
             sha = hashlib.sha256((run / 'keys.log').read_bytes()).hexdigest() if (run / 'keys.log').exists() else None

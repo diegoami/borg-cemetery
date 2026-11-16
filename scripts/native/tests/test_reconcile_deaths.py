@@ -43,6 +43,13 @@ def dossier(registry, case, sha, fam=None):
 
 
 class RunsTest(unittest.TestCase):
+    def test_synthetic_runs_are_not_missing_natural_dossiers(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            run(root, 'synthetic')
+            (root / 'runs/synthetic/config.txt').write_text('synthetic=1\n')
+            self.assertEqual(rc.unexported([root / 'runs'], root / 'registry'), (0, []))
+
     def test_an_unexported_death_fails_even_with_an_empty_registry(self):
         with tempfile.TemporaryDirectory() as t:
             run(t, 'a')
