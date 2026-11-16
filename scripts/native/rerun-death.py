@@ -15,6 +15,11 @@ The build must be the death's: build/rust/BUILD_ID's source_sha256 equals
 the dossier's, else the tool says which commit to check out and build.
 --any-build reruns anyway; the result is then not a reproduction.
 
+The run's recorded settings are restored too, including an errands plan:
+the dossier's own copy when export-death.py kept one, else the file
+config.txt names in the source checkout. A ladders or plan file whose
+bytes differ from the recorded sha256 is refused.
+
 OUTDIR gets the run directory (OUTDIR/run: keys, messages, state, summary,
 trace, params, checkpoints) and the logs (OUTDIR/observations.jsonl,
 worlds.txt, knowledge.json). The rerun's death is not exported to the
@@ -40,14 +45,14 @@ def read_kv(path):
 
 
 # The settings harness/run.sh records when the environment gives them
-# (review #227, finding 8): the core, the errand and its options.
+# (review #227, finding 8): the core, the errand and its options, the plan.
 SETTINGS = ('BORG_CORE', 'BORG_CORE_OVERRIDES', 'BORG_ERRAND', 'BORG_STOPSCARED', 'BORG_ERRAND_BUDGET',
-            'BORG_LADDERS')
+            'BORG_LADDERS', 'BORG_ERRANDS_PLAN')
 
 
-def settings(config):
+def settings(config, case_dir=None):
     """The environment a dossier's run had, from its config.txt. A ladders
-    file must still be the one the run read."""
+    file or errands plan must still be the one the run read."""
     # Empty values too: set but empty is not unset (re-review #227, 6).
     env = {v: config[v.lower()] for v in SETTINGS if v.lower() in config}
     if env.get('BORG_LADDERS'):
@@ -56,6 +61,20 @@ def settings(config):
         have = hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else None
         if have != want:
             raise SystemExit(f'rerun-death: the run read ladders {path} ({str(want)[:12]}); '
+                             f'here it is {"missing" if have is None else have[:12]}')
+    if env.get('BORG_ERRANDS_PLAN'):
+        # A dossier keeps the plan a run read, so a later edit in the source
+        # checkout does not change what the rerun plays. Without the copy,
+        # config.txt names it relative to the source checkout (absolute when
+        # outside it); run.sh runs in its own directory.
+        recorded = Path(env['BORG_ERRANDS_PLAN'])
+        copy = case_dir / 'errands_plan.txt' if case_dir else None
+        path = copy if copy and copy.exists() else (recorded if recorded.is_absolute() else ROOT / recorded)
+        env['BORG_ERRANDS_PLAN'] = str(path)
+        want = config.get('borg_errands_plan_sha256')
+        have = hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else None
+        if have != want:
+            raise SystemExit(f'rerun-death: the run read errands plan {path} ({str(want)[:12]}); '
                              f'here it is {"missing" if have is None else have[:12]}')
     return env
 
@@ -86,7 +105,7 @@ def plan(case_dir):
         'flags': flags.replace('exact', '').replace(',,', ',').strip(',') or '-',
         'profile': config.get('profile'),
         'keys_sha256': record['attempts'][0]['result_sha256'],
-        'env': settings(config),
+        'env': settings(config, case_dir),
         'source_sha256': ident.get('source_sha256'),
         'git_rev': ident.get('git_rev'),
     }

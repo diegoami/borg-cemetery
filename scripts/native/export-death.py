@@ -17,6 +17,7 @@ DNNNN-IMPL-seedSEED/ with:
   assessment.json  "unassessed"; filled in by a person or a later task
   report.md        one-screen summary
   summary.json, config.txt, build.json   the run's own small files
+  errands_plan.txt  the plan a plan run read (BORG_ERRANDS_PLAN runs)
   trace-tail.jsonl  the last 200 decision thinks (Rust runs)
 Raw logs (keys.log, messages.log, state.log) stay in RUN_DIR, outside Git;
 the record names their SHA-256 (RULES 18). T1.6 upgraded these dossiers to
@@ -97,6 +98,10 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
     for name in ('summary.json', 'config.txt', 'depths.json', 'params.json', 'params-core.json'):
         if (run_dir / name).exists():
             files[name] = (run_dir / name).read_bytes()
+    # A plan run's dossier keeps the plan itself, so rerun-death.py can
+    # reproduce it after the source checkout's plan is edited (or moved).
+    if config.get('borg_errands_plan') and (run_dir / 'user/errands_plan.txt').exists():
+        files['errands_plan.txt'] = (run_dir / 'user/errands_plan.txt').read_bytes()
     # The reborn Borg's decision trace (T2.4): its last TRACE_TAIL lines,
     # the thinks that led to the death.
     trace_lines = 0

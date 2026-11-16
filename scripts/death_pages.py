@@ -36,7 +36,7 @@ def save_page(directory, content):
 
 
 def source_link(program, source):
-    if program in ('borg-rs', 'borg-reborn-rs') and re.fullmatch(r'[0-9a-f]{7,40}', str(source)):
+    if program in ('borg-rs', 'borg-reborn-rs', 'better-borg-c') and re.fullmatch(r'[0-9a-f]{7,40}', str(source)):
         return f'[{source}](https://github.com/diegoami/{program}/commit/{source})'
     return text(source)
 
