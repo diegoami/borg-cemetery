@@ -52,6 +52,8 @@ def execute(source, out, seed, race, cls, spec, save=None, turns=None):
                BORG_ENCOUNTER_LOG=str(out / 'encounters.jsonl'), BORG_KNOWLEDGE_LOG=str(out / 'knowledge.json'),
                BORG_DEATH_RECORDS_DIR=str(out / 'native-deaths'), RUN_TIMEOUT_SECONDS=str(spec['wall_seconds']),
                CHECKPOINT_EVERY='0' if save else str(spec['checkpoint_every']))
+    if save:
+        env.pop('BORG_KNOWLEDGE_LOG', None)
     flags = 'menu'
     if save:
         env['SAVE_ROOT'] = str(save.parent)
