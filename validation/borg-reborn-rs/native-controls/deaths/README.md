@@ -9,10 +9,13 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 97; distinct starting conditions: 96; retained process attempts: 96 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 100; distinct starting conditions: 99; retained process attempts: 99 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
+| [D-0db02e6e7510ac437d517d6a5c475699cca14665ff38a1f58318630d17e46ded](D-0db02e6e7510ac437d517d6a5c475699cca14665ff38a1f58318630d17e46ded/report.md) | unassigned | `4a7a851902b0` | 1020 | a giant white mouse | 8922 | unassessed |
+| [D-170652b5c20ab11efaba78134a6e014824e9192d12387bb8354792fb6e47d178](D-170652b5c20ab11efaba78134a6e014824e9192d12387bb8354792fb6e47d178/report.md) | unassigned | `4a7a851902b0` | 102 | Fang, Farmer Maggot's Dog | 3640 | unassessed |
+| [D-fcdd03438b03c9cc5dab2b04278bf74bafc33a077818ce30015b770625bd2e29](D-fcdd03438b03c9cc5dab2b04278bf74bafc33a077818ce30015b770625bd2e29/report.md) | unassigned | `4a7a851902b0` | 1011 | a cave spider | 18903 | unassessed |
 | [D-430ea89cd11a946bd126e0c7dbae3c0b324c55fc9bbca3e24ec66460afac7879](D0000-q02e753f3bfb81ef805fcc305e84beac6883209806b3afafc1ae58870d1a1185e/report.md) | unassigned | `60a506b689ff` | 1050 | a grey mold | 24096 | unassessed |
 | [D-dc203ecb03142fd0e59395e75abc00bab573b7582058998d2d252c2888325203](D0000-q046b7b25ec35ac47a362315717cd69ac9445a246d478686e59bf986c1da0708d/report.md) | unassigned | `4fa86ac995e9` | 1020 | a giant white mouse | 8922 | unassessed |
 | [D-13efc3e9c29f8ce67a4db6ae522dff61c3642ea52b1a445f914f4bfd3fd54f3c](D0000-q0975578bc6c4c631289a8e40935a67163489d1d1331d4724807cf5a32564e7eb/report.md) | unassigned | `5e8454ab390a` | 1011 | a wild dog | 17759 | unassessed |
