@@ -38,6 +38,8 @@ class ExportTest(unittest.TestCase):
         os.environ['BORG_DEATH_RECORDS_DIR'] = str(self.reg)
         self.build = self.base / 'BUILD_ID'
         self.build.write_text('impl=c\ngit_rev=1234567\ngit_dirty=no\nbinary_sha256=beef\nsource_sha256=cafe\n')
+        self.first_id = ed.death_id(ed.family_of('c', 101, 0, 0, 'cafe', 'feed'),
+                                    ed.hashlib.sha256(b'abc\n').hexdigest())
 
     def tearDown(self):
         os.environ.pop('BORG_DEATH_RECORDS_DIR', None)
@@ -48,10 +50,67 @@ class ExportTest(unittest.TestCase):
         self.assertEqual(ed.export(run, 'c', self.build), (None, 'not dead'))
         self.assertFalse(self.reg.exists() and any(self.reg.iterdir()))
 
+    def test_synthetic_deaths_never_create_a_natural_registry(self):
+        markers = [({'synthetic': True}, '', '-'),
+                   ({'start_depth': 20}, '', '-'),
+                   ({}, 'synthetic=1\n', '-'),
+                   ({}, 'start_depth=20\n', '-'),
+                   ({}, 'flags=menu,start-depth=20\n', '-'),
+                   ({}, '', 'menu,start-depth=20'),
+                   ({'synthetic': False}, 'synthetic=1\n', '-')]
+        for index, (summary, config, flags) in enumerate(markers):
+            with self.subTest(summary=summary, config=config, flags=flags):
+                run = make_run(self.base, f'synthetic-{index}', **summary)
+                with (run / 'config.txt').open('a') as stream:
+                    stream.write(config)
+                self.assertEqual(ed.export(run, 'rust', self.build, flags),
+                                 (None, 'not natural: synthetic start'))
+                self.assertFalse(self.reg.exists())
+
+    def test_explicit_natural_marker_preserves_natural_export(self):
+        run = make_run(self.base, 'natural', synthetic=False)
+        with (run / 'config.txt').open('a') as stream:
+            stream.write('synthetic=0\nstart_depth=0\n')
+        self.assertEqual(ed.export(run, 'rust', self.build)[1], 'exported')
+
+    def test_flag_variants_are_excluded_from_both_flag_sources(self):
+        for index, flag in enumerate(('start-depth 20', 'start-depth', 'start_depth=20',
+                                      'synthetic', 'menu, start-depth=20', 'Start-Depth=20')):
+            for recorded in (False, True):
+                with self.subTest(flag=flag, recorded=recorded):
+                    run = make_run(self.base, f'variant-{index}-{recorded}')
+                    if recorded:
+                        (run / 'config.txt').write_text(f'flags={flag}\n')
+                    self.assertEqual(ed.export(run, 'rust', self.build, '-' if recorded else flag),
+                                     (None, 'not natural: synthetic start'))
+        self.assertFalse(self.reg.exists())
+
+    def test_malformed_option_receipts_fail_closed_without_registry_access(self):
+        for index, options in enumerate(([1], [], 'true', 1, False)):
+            run = make_run(self.base, f'options-{index}', game_options=options)
+            self.assertEqual(ed.export(run, 'rust', self.build),
+                             (None, 'not natural: malformed game_options'))
+        self.assertFalse(self.reg.exists())
+
+    def test_one_way_lineage_requires_native_boolean_pair_not_just_a_load(self):
+        summary = dict(dead=True, stop_reason='death', death_cause='a cave spider', loaded=True)
+        for options in ({}, {'birth_force_descend': True},
+                        {'birth_force_descend': 'true', 'birth_no_recall': 'true'},
+                        {'birth_force_descend': 1, 'birth_no_recall': 1}):
+            self.assertIsNone(ed.not_natural(dict(summary, game_options=options)))
+
+    def test_one_way_save_lineage_cannot_be_exported_as_an_ordinary_death(self):
+        run = make_run(self.base, 'unmarked-loaded-one-way', loaded=True,
+                       game_options=dict(birth_force_descend=True, birth_no_recall=True))
+        case, reason = ed.export(run, 'rust', self.build)
+        self.assertIsNone(case)
+        self.assertIn('one-way birth options', reason)
+        self.assertFalse(self.reg.exists())
+
     def test_death_writes_a_dossier(self):
         run = make_run(self.base, 'dead')
         case, what = ed.export(run, 'c', self.build, 'menu')
-        self.assertEqual((case, what), ('D0001-c-seed101', 'exported'))
+        self.assertEqual((case, what), (self.first_id, 'exported'))
         d = self.reg / case
         rec = json.loads((d / 'record.json').read_text())
         self.assertEqual(rec['terminal']['cause'], 'a cave spider')
@@ -142,7 +201,7 @@ class ExportTest(unittest.TestCase):
 
     def test_repeat_is_not_a_new_case(self):
         ed.export(make_run(self.base, 'one'), 'c', self.build)
-        self.assertEqual(ed.export(make_run(self.base, 'two'), 'c', self.build), ('D0001-c-seed101', 'repeat'))
+        self.assertEqual(ed.export(make_run(self.base, 'two'), 'c', self.build), (self.first_id, 'repeat'))
         self.assertEqual(len([d for d in self.reg.iterdir() if d.is_dir()]), 1)
 
     def test_interrupted_dossier_is_repaired_not_accepted(self):
@@ -176,7 +235,7 @@ class ExportTest(unittest.TestCase):
         (self.reg / '.tmp-D0001-c-seed101').mkdir()
         (self.reg / '.tmp-D0001-c-seed101' / 'record.json').write_text('{half')
         case, what = ed.export(make_run(self.base, 'one'), 'c', self.build)
-        self.assertEqual((case, what), ('D0001-c-seed101', 'exported'))
+        self.assertEqual((case, what), (self.first_id, 'exported'))
         self.assertFalse((self.reg / '.tmp-D0001-c-seed101').exists())
 
     def test_case_without_record_fails_loudly(self):
@@ -195,14 +254,15 @@ class ExportTest(unittest.TestCase):
         changed = self.base / 'BUILD_ID2'
         changed.write_text('impl=c\ngit_rev=89abcde\ngit_dirty=no\nbinary_sha256=beef\nsource_sha256=d1ff\n')
         case, what = ed.export(make_run(self.base, 'two'), 'c', changed)
-        self.assertEqual((case, what), ('D0002-c-seed101', 'exported'))
+        self.assertEqual(what, 'exported')
+        self.assertNotEqual(case, self.first_id)
 
     def test_main_aggregates_the_registry(self):
         run = make_run(self.base, 'dead')
         self.assertEqual(ed.main([str(run), '--impl', 'c', '--build-id', str(self.build)]), 0)
         index = json.loads((self.reg / 'index.json').read_text())
         self.assertEqual((index['cases'], index['distinct_starting_conditions']), (1, 1))
-        self.assertIn('D0001-c-seed101', (self.reg / 'README.md').read_text())
+        self.assertIn(self.first_id, (self.reg / 'README.md').read_text())
 
     def test_only_natural_deaths_are_exported(self):
         for extra, flags in (({'stop_reason': 'turns'}, '-'), ({'cheat_live': True}, '-'), ({}, 'cheatlive'),
@@ -261,10 +321,11 @@ class ExportTest(unittest.TestCase):
         self.assertEqual(json.loads((self.reg / 'index.json').read_text())['cases'], 1)
         self.assertTrue((self.reg / 'README.md').exists())
 
-    def test_numbering_and_family(self):
+    def test_hash_ids_and_family(self):
         ed.export(make_run(self.base, 'one'), 'c', self.build)
         case, _ = ed.export(make_run(self.base, 'two', seed=102), 'rust', self.build)
-        self.assertEqual(case, 'D0002-rust-seed102')
+        self.assertRegex(case, r'^D-[0-9a-f]{64}$')
+        self.assertNotEqual(case, self.first_id)
         fam = {json.loads((d / 'record.json').read_text())['encounter_family']
                for d in self.reg.iterdir() if d.is_dir()}
         self.assertEqual(len(fam), 2, 'different seed and implementation: different start')
@@ -275,6 +336,46 @@ class ExportTest(unittest.TestCase):
         self.assertEqual(what, 'exported')
         fams = [json.loads((self.reg / c / 'record.json').read_text())['encounter_family'] for c in (a, b)]
         self.assertEqual(fams[0], fams[1])
+
+    def test_separate_branch_registries_assign_the_same_ids_in_opposite_orders(self):
+        one = make_run(self.base, 'one')
+        two = make_run(self.base, 'two', keys='other\n')
+        first = ed.export(one, 'c', self.build)[0]
+        second = ed.export(two, 'c', self.build)[0]
+        # Frozen version-1 vector: changing the encoding is an ID migration.
+        self.assertEqual(first, 'D-e4223d59c64aa5703a8d5f6495685de8facf0852a4d96ddc0276aff446db7209')
+        os.environ['BORG_DEATH_RECORDS_DIR'] = str(self.base / 'other-branch')
+        self.assertEqual(ed.export(two, 'c', self.build)[0], second)
+        self.assertEqual(ed.export(one, 'c', self.build)[0], first)
+        self.assertNotEqual(first, second)
+
+    def test_legacy_repeat_adds_metadata_without_rewriting_original_evidence(self):
+        run = make_run(self.base, 'one')
+        canonical, _ = ed.export(run, 'c', self.build)
+        legacy = self.reg / 'D0099-c-seed101'
+        (self.reg / canonical).rename(legacy)
+        record = json.loads((legacy / 'record.json').read_text())
+        record['id'] = legacy.name
+        (legacy / 'record.json').write_text(json.dumps(record))
+        (legacy / 'death-id.json').unlink()
+        original = (legacy / 'record.json').read_bytes()
+        case, result = ed.export(make_run(self.base, 'repeat'), 'c', self.build)
+        self.assertEqual(case, legacy.name)
+        self.assertEqual(result, 'repaired: death-id.json')
+        self.assertEqual((legacy / 'record.json').read_bytes(), original)
+        self.assertEqual(json.loads((legacy / 'death-id.json').read_text())['id'], canonical)
+
+    def test_repeat_refuses_tampered_identity_metadata(self):
+        run = make_run(self.base, 'one')
+        case, _ = ed.export(run, 'c', self.build)
+        path = self.reg / case / 'death-id.json'
+        value = json.loads(path.read_text())
+        value['id'] = 'D-' + '0' * 64
+        path.write_text(json.dumps(value))
+        before = (self.reg / case / 'record.json').read_bytes()
+        with self.assertRaisesRegex(ValueError, 'differs'):
+            ed.export(make_run(self.base, 'repeat'), 'c', self.build)
+        self.assertEqual((self.reg / case / 'record.json').read_bytes(), before)
 
 
 if __name__ == '__main__':

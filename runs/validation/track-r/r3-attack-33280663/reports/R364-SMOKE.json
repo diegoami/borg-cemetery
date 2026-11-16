@@ -1,0 +1,182 @@
+{
+  "schema": "borg-reborn-rs/r364-smoke@1",
+  "receiver_build": {
+    "impl": "rust",
+    "git_rev": "60d0a7a7857a235fb0d44c5dad194cc3acc73194",
+    "git_dirty": "yes",
+    "inputs_dirty": "no",
+    "source_sha256": "33280663dd357837a77e6fd38e84dc4b1e224a73fd415ece6de41654023f866a",
+    "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+    "binary": "/workspace/work/r3-attack-port/build/rust/game/angband",
+    "binary_sha256": "4a496e02b2c3f038b442e3a0a2e8026e40c5b7d643790746912c299121f066f3",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-16T01:35:54Z"
+  },
+  "native_modes": {
+    "off": [
+      {
+        "name": "smoke-mage-2",
+        "dead": false,
+        "process_status": "success",
+        "exit_code": 0,
+        "hashes": {
+          "keys.log": "adfc8bedd55060a2304930672e3766c1bb0ad75565e6fb6baad95b1b023f2a0b",
+          "messages.log": "25dc872ddbc2a38cce4ae4fbeed265f9b54d4d51e7872b106206536de7bfbe67",
+          "state.log": "d7f6ea04cc388441edb3b131bb21bd71f595ad801920bf58a2dea0d7c763dc5d"
+        },
+        "summary_sha256": "260c05be17ac3773d59fdc55ebc6318114b863487902261deb5a26186bd24830",
+        "process_sha256": "53e237223b79bc58cf77ca014cf4e8d3ddbbed8e689f511187a0053af841e76b"
+      },
+      {
+        "name": "smoke-priest-3",
+        "dead": false,
+        "process_status": "success",
+        "exit_code": 0,
+        "hashes": {
+          "keys.log": "d4021d533f8ad27b515a5c427d9f9e6865964466e2358e38d812e21afe8e750f",
+          "messages.log": "943bca96861a3c188be2024c5466fe80ee920f161d85f9578bee5e0a8092d1cf",
+          "state.log": "41b13ce721bbac56cb965ec6691218ebb9f3f866ee0964a739adf3d670cc64ee"
+        },
+        "summary_sha256": "790076617d3a547557186f5308b016d26217f97cf52db6c73aa41c863428f64b",
+        "process_sha256": "62041113a24e221ee961fb55b1e8631d562377991b8db68c22fcc48640c0960c"
+      },
+      {
+        "name": "smoke-warrior-1",
+        "dead": false,
+        "process_status": "success",
+        "exit_code": 0,
+        "hashes": {
+          "keys.log": "8d3029a7a4558e087ce1e6e51b51f2f2c777dbbb7ad7f8be65ee9c956108a6c5",
+          "messages.log": "44d0e6524730ad31c740d42f31e927df3daca12022d540246beac4ad4f6ede4d",
+          "state.log": "1983f4060195ab32de6ac50fdb351e46d837883945eb9909376b630b9ac19a57"
+        },
+        "summary_sha256": "1bef405e399277f1bcc209de7e974b7ac0a1f381abe28e37054ab3c3343d3ce9",
+        "process_sha256": "7b2fef1d6537d3bb0c9e8029d782298a343926d03cc5cf1910ecd3012c5bcda4"
+      }
+    ],
+    "check": [
+      {
+        "name": "smoke-mage-2",
+        "dead": false,
+        "process_status": "success",
+        "exit_code": 0,
+        "hashes": {
+          "keys.log": "adfc8bedd55060a2304930672e3766c1bb0ad75565e6fb6baad95b1b023f2a0b",
+          "messages.log": "25dc872ddbc2a38cce4ae4fbeed265f9b54d4d51e7872b106206536de7bfbe67",
+          "state.log": "d7f6ea04cc388441edb3b131bb21bd71f595ad801920bf58a2dea0d7c763dc5d"
+        },
+        "summary_sha256": "ec395249b03d49b786f7bee3387d766ec0b9e52355aa4f7d9885c48b5e91e796",
+        "process_sha256": "d38af19bea0440ca1c93d8285b10a7f6a783da256caa943b8111c9165f8f785b"
+      },
+      {
+        "name": "smoke-priest-3",
+        "dead": false,
+        "process_status": "success",
+        "exit_code": 0,
+        "hashes": {
+          "keys.log": "d4021d533f8ad27b515a5c427d9f9e6865964466e2358e38d812e21afe8e750f",
+          "messages.log": "943bca96861a3c188be2024c5466fe80ee920f161d85f9578bee5e0a8092d1cf",
+          "state.log": "41b13ce721bbac56cb965ec6691218ebb9f3f866ee0964a739adf3d670cc64ee"
+        },
+        "summary_sha256": "05b838d27b10038443dd084f3ca2759d96258de7c7c3e8347029c0c7eeb30f79",
+        "process_sha256": "ca1d97e2211a58f6840b9c4343264976d99c0e4ce3d8758f2465b8ce62e96db7"
+      },
+      {
+        "name": "smoke-warrior-1",
+        "dead": false,
+        "process_status": "success",
+        "exit_code": 0,
+        "hashes": {
+          "keys.log": "8d3029a7a4558e087ce1e6e51b51f2f2c777dbbb7ad7f8be65ee9c956108a6c5",
+          "messages.log": "44d0e6524730ad31c740d42f31e927df3daca12022d540246beac4ad4f6ede4d",
+          "state.log": "1983f4060195ab32de6ac50fdb351e46d837883945eb9909376b630b9ac19a57"
+        },
+        "summary_sha256": "dabee21d63d29117e1a9b3f4de4c760170f9fdd99423cfa16828298aab7ff06d",
+        "process_sha256": "be3a50dd249080f44f084cca899b14b48a9a7162d0f2a8ab13d56da4a0ff65f0"
+      }
+    ],
+    "switch": [
+      {
+        "name": "smoke-mage-2",
+        "dead": false,
+        "process_status": "success",
+        "exit_code": 0,
+        "hashes": {
+          "keys.log": "adfc8bedd55060a2304930672e3766c1bb0ad75565e6fb6baad95b1b023f2a0b",
+          "messages.log": "25dc872ddbc2a38cce4ae4fbeed265f9b54d4d51e7872b106206536de7bfbe67",
+          "state.log": "d7f6ea04cc388441edb3b131bb21bd71f595ad801920bf58a2dea0d7c763dc5d"
+        },
+        "summary_sha256": "7efddb6376f6aa04b6a78ac0632e0ca371a49897626ccc962baf9c4a32796af4",
+        "process_sha256": "a2a90d4a22a4b6bc4ae7d2082371cce0c20b796c713d6efdaf817d5128b93a10"
+      },
+      {
+        "name": "smoke-priest-3",
+        "dead": false,
+        "process_status": "success",
+        "exit_code": 0,
+        "hashes": {
+          "keys.log": "d4021d533f8ad27b515a5c427d9f9e6865964466e2358e38d812e21afe8e750f",
+          "messages.log": "943bca96861a3c188be2024c5466fe80ee920f161d85f9578bee5e0a8092d1cf",
+          "state.log": "41b13ce721bbac56cb965ec6691218ebb9f3f866ee0964a739adf3d670cc64ee"
+        },
+        "summary_sha256": "9dd475a0e008de0c77b06a9f6591482a1ca5d06c830ea6a8fb167b5c164122e5",
+        "process_sha256": "5c0858e523dbc6229a1873d077067e8150c6205a5a1dead3827b54e8acaf9b6b"
+      },
+      {
+        "name": "smoke-warrior-1",
+        "dead": false,
+        "process_status": "success",
+        "exit_code": 0,
+        "hashes": {
+          "keys.log": "8d3029a7a4558e087ce1e6e51b51f2f2c777dbbb7ad7f8be65ee9c956108a6c5",
+          "messages.log": "44d0e6524730ad31c740d42f31e927df3daca12022d540246beac4ad4f6ede4d",
+          "state.log": "1983f4060195ab32de6ac50fdb351e46d837883945eb9909376b630b9ac19a57"
+        },
+        "summary_sha256": "bf583ec471c426246fd7ee002fe68d353a73334a91955da7595a088d28d4f17a",
+        "process_sha256": "d256e3885fc8049eaf8b8459bca845b7c034cfabb3b97c83668d152df4e31381"
+      }
+    ]
+  },
+  "original_reference_matches": [
+    {
+      "name": "smoke-mage-2",
+      "dead": true,
+      "process_status": "success",
+      "exit_code": 0,
+      "hashes": {
+        "keys.log": "50491fa139246c688f04bb21dd925a97efdc5c7a4e4a44fee52dd2a00417e5ac",
+        "messages.log": "8a7a8c4dfd5303863802060057369eae88a2f05649b656eb517e2428d55724fa",
+        "state.log": "b1b82d28736d7546e7234f268c10fe6d7ca7da59b99034f164e2ef3fd65276b7"
+      },
+      "summary_sha256": "f98dead4874a67b6c2288055fb3c2b027b1d0620ae3487a4040303405df07d53",
+      "process_sha256": "d071cfadea3c3cf4c5d0fd434b5f47cc742fa0f4d7546cb40cea401b13a96e16"
+    },
+    {
+      "name": "smoke-priest-3",
+      "dead": false,
+      "process_status": "success",
+      "exit_code": 0,
+      "hashes": {
+        "keys.log": "fd43db01385c0df2ef3763aca8c451cb6965ab62b67fdc9da530a6c776c64aea",
+        "messages.log": "12db0d8516b1d55f291cf0d11cbc327d669feaf48c8d194e04c074ff3d427662",
+        "state.log": "5b84b64ac19d9cddb7f7f3496d43ad373df9a31677b8f902e48492d49cf6fa74"
+      },
+      "summary_sha256": "584d686f4f38af1c84909a891411095bc46fb7c84aa48853a07f019de62bf13b",
+      "process_sha256": "f2568d50ae6c0964aba963f2148c4ca216f829420b62fe48d3f1c272f496631c"
+    },
+    {
+      "name": "smoke-warrior-1",
+      "dead": false,
+      "process_status": "success",
+      "exit_code": 0,
+      "hashes": {
+        "keys.log": "5f2d8beddf7f44e08e0b44160535406ca2eaafb52fb6e8c55b1f96b4bcd43812",
+        "messages.log": "b6ccdcd89c7c809dfece802b8d5c6d604dcadef76d381381b022947dc3c42d9e",
+        "state.log": "3f4b11308ebddd58374892f1103719e5f09e44ce1c77892e5adc72d74513ce02"
+      },
+      "summary_sha256": "1bb6b4320ee302940dddc99c88f76449664b0cdfff338e63b01782e9f73df87e",
+      "process_sha256": "bb30c16de5f1ea0a7e5ce435571531271a0a5decf633d924a3c0b925ac23f1d2"
+    }
+  ]
+}

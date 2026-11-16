@@ -1,0 +1,165 @@
+{
+  "schema": "borg-reborn-rs/r365-nested@1",
+  "feature": "borg-core/test-force-nested",
+  "test_build": {
+    "impl": "rust",
+    "git_rev": "36ff9461ede384d945e4ac9cb00088644a2abbf7",
+    "git_dirty": "yes",
+    "inputs_dirty": "no",
+    "source_sha256": "562aedf968831885c32b4f56271a2f7bd0245432aff9159dd629f59601ff4fe1",
+    "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+    "binary": "/workspace/work/r3-defence-port/build/rust-test/game/angband",
+    "binary_sha256": "9b40831657f55fe70f1b68e23a1dde12fbdc0b406a1aded73972e2a02c0c09fd",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-16T07:37:31Z",
+    "test_features": "borg-core/test-force-nested"
+  },
+  "runs": [
+    {
+      "name": "nested-off",
+      "dead": false,
+      "hashes": {
+        "keys.log": "d3ccbfe358dee4edbab8256d9a62ac092215b59797c3501befb4d2647ea7c2b8",
+        "messages.log": "24c14a51c5ccc655aae6d1720e1777daeca8569e7f74a87c53bab9ba3185f9ca",
+        "state.log": "cafe1061bce39e79a185e8277efe535373769d1dceb61dab1d6f8ea70abd1d72"
+      },
+      "process_status": "success",
+      "exit_code": 0,
+      "summary_sha256": "8e91bc0622c186437ec6893cc97cc0a292c0c34d1a9dfba82175bf1293d8f122",
+      "process_sha256": "e9e3403684d5fe3fb3d90fc6d02c663f2f6ccc616614a26517e1a25f78bc8e79",
+      "mode": "off",
+      "native_nested_callbacks": 4
+    },
+    {
+      "name": "nested-check",
+      "dead": false,
+      "hashes": {
+        "keys.log": "d3ccbfe358dee4edbab8256d9a62ac092215b59797c3501befb4d2647ea7c2b8",
+        "messages.log": "24c14a51c5ccc655aae6d1720e1777daeca8569e7f74a87c53bab9ba3185f9ca",
+        "state.log": "cafe1061bce39e79a185e8277efe535373769d1dceb61dab1d6f8ea70abd1d72"
+      },
+      "process_status": "success",
+      "exit_code": 0,
+      "summary_sha256": "85aed27ef39fb1726e5f8a2a876a7e2f0e7c919949d8e978db1a5e9f766ff189",
+      "process_sha256": "928b48e8efbbf4c2628152c2b30ea6a771b386b696e7b576c9451a5654da5666",
+      "mode": "check",
+      "native_nested_callbacks": 4,
+      "shadow_counts": {
+        "attack_calls": 280646,
+        "caution_actions": 93,
+        "caution_calls": 1967,
+        "comparisons": 901619,
+        "danger_calls": 384732,
+        "danger_comparisons": 384732,
+        "defence_calls": 1569,
+        "dependency_requests": 466384,
+        "escape_calls": 4119,
+        "mismatches": 0,
+        "monster_comparisons": 85,
+        "policy_markers": 108089,
+        "pure_attack_comparisons": 181969,
+        "pure_points": {
+          "attack.borg_mon_blow_effect": 181966,
+          "attack.borg_thrust_damage_one": 3
+        },
+        "recovery_calls": 1757,
+        "root_points": {
+          "attack.borg_attack": 1874,
+          "attack.borg_attack_aux_launch": 12012,
+          "attack.borg_attack_aux_spell_bolt": 24024,
+          "caution.borg_caution": 1967,
+          "defence.borg_defend": 1569,
+          "recovery.borg_recover": 1757
+        },
+        "stateful_comparisons": 43203,
+        "stateful_points": {
+          "attack.borg_attack": 1874,
+          "attack.borg_attack_aux_launch": 12384,
+          "attack.borg_attack_aux_spell_bolt": 36300,
+          "attack.borg_calculate_attack_effectiveness": 48023,
+          "attack.borg_thrust_damage_one": 96,
+          "caution.borg_caution": 1967,
+          "defence.borg_defend": 1569,
+          "escape.borg_allow_teleport": 6,
+          "escape.borg_caution_phase": 7,
+          "escape.borg_dimension_door": 9,
+          "escape.borg_escape": 1876,
+          "escape.borg_freedom": 2,
+          "escape.borg_recall": 243,
+          "escape.borg_shadow_shift": 9,
+          "escape.borg_surrounded": 1967,
+          "recovery.borg_recover": 1757
+        },
+        "tape_events": 574473,
+        "thinks": 2003,
+        "wall_comparisons": 291630
+      }
+    },
+    {
+      "name": "nested-switch",
+      "dead": false,
+      "hashes": {
+        "keys.log": "d3ccbfe358dee4edbab8256d9a62ac092215b59797c3501befb4d2647ea7c2b8",
+        "messages.log": "24c14a51c5ccc655aae6d1720e1777daeca8569e7f74a87c53bab9ba3185f9ca",
+        "state.log": "cafe1061bce39e79a185e8277efe535373769d1dceb61dab1d6f8ea70abd1d72"
+      },
+      "process_status": "success",
+      "exit_code": 0,
+      "summary_sha256": "6cf380517cc0bc5e60068bf8d8a3cf07a18e348ee7118cc6a373645066b0e0a4",
+      "process_sha256": "af3f21092d18473aad262dc030a50921f42cdc3386aefccb7c7fd2583c5713e8",
+      "mode": "switch",
+      "native_nested_callbacks": 4,
+      "shadow_counts": {
+        "attack_calls": 280646,
+        "caution_actions": 93,
+        "caution_calls": 1967,
+        "comparisons": 901619,
+        "danger_calls": 384732,
+        "danger_comparisons": 384732,
+        "defence_calls": 1569,
+        "dependency_requests": 466384,
+        "escape_calls": 4119,
+        "mismatches": 0,
+        "monster_comparisons": 85,
+        "policy_markers": 108089,
+        "pure_attack_comparisons": 181969,
+        "pure_points": {
+          "attack.borg_mon_blow_effect": 181966,
+          "attack.borg_thrust_damage_one": 3
+        },
+        "recovery_calls": 1757,
+        "root_points": {
+          "attack.borg_attack": 1874,
+          "attack.borg_attack_aux_launch": 12012,
+          "attack.borg_attack_aux_spell_bolt": 24024,
+          "caution.borg_caution": 1967,
+          "defence.borg_defend": 1569,
+          "recovery.borg_recover": 1757
+        },
+        "stateful_comparisons": 43203,
+        "stateful_points": {
+          "attack.borg_attack": 1874,
+          "attack.borg_attack_aux_launch": 12384,
+          "attack.borg_attack_aux_spell_bolt": 36300,
+          "attack.borg_calculate_attack_effectiveness": 48023,
+          "attack.borg_thrust_damage_one": 96,
+          "caution.borg_caution": 1967,
+          "defence.borg_defend": 1569,
+          "escape.borg_allow_teleport": 6,
+          "escape.borg_caution_phase": 7,
+          "escape.borg_dimension_door": 9,
+          "escape.borg_escape": 1876,
+          "escape.borg_freedom": 2,
+          "escape.borg_recall": 243,
+          "escape.borg_shadow_shift": 9,
+          "escape.borg_surrounded": 1967,
+          "recovery.borg_recover": 1757
+        },
+        "tape_events": 574473,
+        "thinks": 2003,
+        "wall_comparisons": 291630
+      }
+    }
+  ]
+}

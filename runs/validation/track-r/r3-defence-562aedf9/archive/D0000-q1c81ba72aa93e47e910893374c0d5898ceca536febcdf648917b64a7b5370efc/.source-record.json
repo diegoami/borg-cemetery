@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0003-rust-seed1023",
+  "run_kind": "harness",
+  "character": "Dwarf Druid",
+  "raw_cause": "a metallic red centipede",
+  "terminal": {
+    "cause": "a metallic red centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 13184,
+    "race_idx": 5,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1023,
+    "flags": "menu",
+    "git_rev": "c8e5ca8dd921ebe061c083ccdf4fae09dc7df60b",
+    "git_dirty": "yes",
+    "source_sha256": "562aedf968831885c32b4f56271a2f7bd0245432aff9159dd629f59601ff4fe1",
+    "binary_sha256": "ab1bf10cafd6ea890e5cf919806b21783e71ff544de3530c15532c2e875f7f5e",
+    "borg_txt_sha256": "1543138167cf7a1649af41edb1990bb60c0c1886b0703ed0cab4ee190bfed8a4",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1199
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/r365-evidence/receiver-full-off/full-2-druid-3",
+      "result_sha256": "a842a5177954184a1cf9706a0cc0c35e2c3421b830bacb05f42c9a339091220f",
+      "raw_sha256": {
+        "keys.log": "a842a5177954184a1cf9706a0cc0c35e2c3421b830bacb05f42c9a339091220f",
+        "messages.log": "773e8d04dec1f5dec7b3c546c921bc0bf57004a6cf32ee3abe565028b5f6f306",
+        "state.log": "917208c762248a29dddc26c30de61b6bdfaf93bd95f08ff78c81c2404db7a7b2"
+      },
+      "source_commit": "c8e5ca8dd921ebe061c083ccdf4fae09dc7df60b",
+      "binary_sha256": "ab1bf10cafd6ea890e5cf919806b21783e71ff544de3530c15532c2e875f7f5e"
+    }
+  ],
+  "encounter_family": "start-9237225cb21d4c36a019456ac0804980da8c85c55af1173c4f9b5f36d35cfb81",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "f293822d20421f09ac2059dca315b1db544296d6b0e6626804490068e2fa6e33",
+    "config.txt": "9d0d7d65bfc78eb0a2485b72bd78e628855fd89c79acff5b9dbb7cebdeb24bc3",
+    "depths.json": "fd215581c63e7c4edd41b68dae16c0c81ba6abd728a74379ecf172baafc34eba",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "e10a0d0cbf6fd45875a245307a4c081961a8fae0f4ed90efa76cef296c36c24f",
+    "trace-core-tail.jsonl": "5ddcb75127573d1d349957085a3199cee8477b37eccedcf517570cb51d67120a"
+  },
+  "investigation": null,
+  "issue": null
+}

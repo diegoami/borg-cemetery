@@ -11,6 +11,7 @@ import posixpath
 import re
 import statistics
 import subprocess
+from native.death_identity import canonical_id
 
 ROOT = Path(__file__).resolve().parents[1]
 FIELDS = ('program', 'commit', 'source_sha256', 'binary_sha256', 'impl', 'inputs_dirty', 'git_dirty')
@@ -75,7 +76,7 @@ def normalize(directory, registry, program=None, revision=None):
               if (directory / name).exists()}
     report = (f'https://github.com/diegoami/{program}/blob/{revision}/docs/deaths/{directory.name}/report.md'
               if revision else f'deaths/{directory.name}/README.md')
-    return dict(registry=registry, case=directory.name, id=record.get('id'), build=build_identity,
+    return dict(registry=registry, case=directory.name, id=canonical_id(directory, record), build=build_identity,
                 family=family, seed=None if saved else seed,
                 seed_basis='saved RNG' if saved else 'recorded input' if seed is not None else 'not recorded',
                 character=record.get('character'), cause=record.get('raw_cause') or terminal.get('cause'),
@@ -125,7 +126,7 @@ def report_link(row, location):
     target = row['report']
     if not target.startswith('https://'):
         target = posixpath.relpath(target, location)
-    return f"[{cell(row['case'])}]({target})"
+    return f"[{cell(row['id'])}]({target})"
 
 
 def table(headers, rows):
