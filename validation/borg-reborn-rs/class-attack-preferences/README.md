@@ -1,5 +1,9 @@
 # Native class/family attack preference validation
 
+**Current combined-tree validation:** [recorder-sync](recorder-sync/README.md)
+compares25e89494 with frozen current track-p46d5f2ae. The original exact-build
+comparison below is retained as historical evidence, not relabeled.
+
 Source change: [borg-reborn-rs #405](https://github.com/diegoami/borg-reborn-rs/pull/405), task #403, design #396.
 
 Clean native implementation cac37f5901c90562715e47e7bcd4f9ff91ea4f9f is compared
