@@ -59,3 +59,54 @@ full mana but one emergency scroll; failure/status-blocked casting; food and
 recall backups under the same constraints; and a safe-rest information service
 where discarding a duplicate is genuinely reasonable. Label constructed cases
 and do not count these repeated trials as independent lives.
+
+## Mage-specific refinement at source6c89d9a2
+
+This section is a source audit, not a newly observed sale or death. The earlier
+resource table covers all caster classes; it must not be read as saying a Mage
+learns every spell named there. In engine42cd156ac's Mage class, Word of Recall,
+Remove Hunger and Turn Stone to Mud are absent. Their spell-based suppression
+rules apply to other classes, not to this Mage merely because it uses magic.
+
+M13's loop at borg_town_capability.rs:473–486 suppresses the entire weight of
+selected capability categories after a learned, nonzero-rated spell passes
+borg_spell_legal_fail(...,20). That checks maximum rested mana (borg_magic.rs:
+435–461), not an emergency reserve of current mana. It is effect-based, not a
+blanket Mage check; another caster with a qualifying spell can trigger it too.
+
+| Actual Mage case | Item value affected | Why it matters |
+| --- | --- | --- |
+| Learned Treasure Detection, eligible atCL10 and rated5, once failure passes20% | Magic Mapping scrolls, Mapping staves, Magic Mapping rods, Enlightenment potions: MAP service weight becomes0 | Definite semantic mismatch in the classifier: ore/gold/object sensing is put in MAP alongside terrain mapping. Treasure Detection does not reveal the dungeon layout. Minimum learn level is not proof of learning or current qualification. |
+| Learned Detect Monsters, eligible atCL3, when reliable enough | Detect Evil staff: MONSTERS service weight becomes0 | Engine Detect Monsters excludes invisible races, while Detect Evil tests evil regardless of invisibility. The shared category incorrectly treats these as complete substitutes. |
+| Learned Reveal Monsters, eligible atCL15, when reliable enough | Detect Invisible scroll/staff: INVISIBLE weight becomes0 | Physical detection backup loses its service value despite finite/shared spell mana. Actual disposal has not been reproduced here. |
+| Learned Reveal Monsters under the same conditions | True Seeing potion loses its SINVIS service value | A detection snapshot and sustained See Invisible are different abilities but share INVISIBLE. The potion can retain blindness-cure value; do not call the whole potion worthless. |
+| Learned Light Room, when reliable enough | Lighting component of Light scroll/staff and Illumination rod becomes0 | These items also have light-sensitive-monster damage in the engine; that ATTACK component remains. Rod/Wand of Light use a light beam and are not simply erased as illumination duplicates. |
+| All supplied MAP/MONSTERS/INVISIBLE categories covered by qualifying learned spells | Detection rod's modeled services can all become0 | Composite devices require a per-effect audit; one suppressed category alone does not prove the whole device has no value. |
+
+The Mage spell ratings are at borg_magic.rs:130–160 (Treasure Detection is5,
+Detect Monsters85 and Reveal Monsters85); actual class spell/effect definitions
+are engine/angband/lib/gamedata/class.txt's Mage block at172–448. Item effects
+are in lib/gamedata/object.txt. Engine effect-handler-general.c distinguishes
+MAP_AREA(1201), DETECT_ORE(1519), SENSE_GOLD(1682), SENSE_OBJECTS(1725),
+DETECT_VISIBLE_MONSTERS(1854), DETECT_INVISIBLE_MONSTERS(1874) and
+DETECT_EVIL(1911). The capability conflations are at
+borg_town_capability.rs:225–254, with SINVIS classification at timed_cap.
+
+There is no analogous blanket learned-spell suppression of M13 ATTACK, HEAL,
+MANA, SPEED, TELEPORT or OTHER categories. In particular, attack wands are not
+assigned zero merely because a Mage knows attack spells. Legacy equipment
+activation scoring does give some abilities lower class-dependent bonuses:
+Teleport Other500 for a Mage versus1000 for a Warrior; Resist All650 versus
+25650 with current defaults (borg_power.rs:110–130; params.rs:1048–1060).
+These are bonuses within equipment valuation, not total item prices or a proof
+that an item will be discarded.
+
+Separate capability gaps affect all classes: Stun Monster wands, Confuse Monsters
+staves and Wonder wands have no modeled direct combat benefit in this M13
+classifier. The first two are explicitly excluded pending their consumer
+support; Wonder lacks a guaranteed-effect model. They are not Mage spell-
+replacement cases, and other item contributions must still be considered.
+
+No policy, item quota or shopping implementation was changed by this audit.
+The concrete mapping/detection equivalence problems deserve isolated native
+scenarios before any broader replacement of resource valuation.
