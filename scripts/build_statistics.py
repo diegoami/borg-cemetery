@@ -38,7 +38,8 @@ def number(value):
 
 def normalize(directory, registry, program=None, revision=None):
     record = read(directory / 'record.json')
-    if record.get('schema') not in ('borg-rs/death-record@1', 'borg-reborn-rs/death-record@1'):
+    if record.get('schema') not in ('borg-rs/death-record@1', 'borg-reborn-rs/death-record@1',
+                                    'better-borg-c/death-record@1'):
         raise ValueError(f'Unsupported death schema: {directory}')
     identity = record.get('identity', {})
     build = read(directory / 'build.json') or record.get('build', {})
@@ -47,7 +48,8 @@ def normalize(directory, registry, program=None, revision=None):
     config_text = (directory / 'config.txt').read_text() if (directory / 'config.txt').exists() else ''
     config = dict(line.split('=', 1) for line in config_text.splitlines() if '=' in line)
     original = next((a for a in record.get('attempts', []) if a.get('role') == 'original'), {})
-    program = program or ('borg-reborn-rs' if record['schema'].startswith('borg-reborn-rs/') else 'borg-rs')
+    program = program or ('better-borg-c' if record['schema'].startswith('better-borg-c/')
+                          else ('borg-reborn-rs' if record['schema'].startswith('borg-reborn-rs/') else 'borg-rs'))
     terminal = record.get('terminal', {})
     if terminal.get('dead') is False:
         raise ValueError(f'Living record in death registry: {directory}')

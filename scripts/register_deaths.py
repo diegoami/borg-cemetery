@@ -28,7 +28,8 @@ def _register(root):
         if not record.get('id') or not record.get('encounter_family'):
             raise ValueError(f'Incomplete native death identity: {path}')
         dossier_page(path.parent)
-        program = 'borg-reborn-rs' if str(record.get('schema', '')).startswith('borg-reborn-rs/') else 'borg-rs'
+        schema = str(record.get('schema', ''))
+        program = 'better-borg-c' if schema.startswith('better-borg-c/') else ('borg-reborn-rs' if schema.startswith('borg-reborn-rs/') else 'borg-rs')
         version = identity.get('git_rev', identity.get('source'))
         entries.append(f"| [{text(record['id'])}]({path.parent.name}/README.md) | {text(identity.get('seed', 'Not used / saved RNG'))} | "
                        f"{source_link(program, version)} | {text(record.get('raw_cause', 'Not recorded'))} | "

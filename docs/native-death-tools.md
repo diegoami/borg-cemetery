@@ -10,7 +10,7 @@ from reborn commit `83cf442a6bc6c1dec768cab2a1f22530c9caac1e`.
 | Reborn facility | Reuse here |
 | --- | --- |
 | `export-death.py` | Natural-death filtering, immutable source/build/config/seed identity, encounter-family/key deduplication, atomic export and repair of missing files |
-| `rerun-death.py` | Exact source-hash check, original key-stream verification, observation/world/knowledge logs, checkpoints and preserved core/errand/ladders settings |
+| `rerun-death.py` | Exact source-hash check, original key-stream verification, observation/world/knowledge logs, checkpoints and preserved core/errand/ladders/errands-plan settings |
 | `reconcile-deaths.py` | No unexported natural run death; comparison with the declared historical reference registry |
 | `death_registry.py` | Original-format identity handling and isolated-registry utilities; canonical cemetery presentation is delegated to our own registration step |
 | Original tool tests | 35 focused export/rerun/reconciliation/registry checks retained with the moved code |

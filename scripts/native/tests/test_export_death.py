@@ -106,6 +106,24 @@ class ExportTest(unittest.TestCase):
         c, _ = ed.export(make_run(self.base, 'untraced', seed=7), 'c', self.build)
         self.assertIsNone(json.loads((self.reg / c / 'record.json').read_text())['decision_trace'])
 
+    def test_a_plan_run_keeps_the_plan_it_read(self):
+        # Issue #3: a dossier is self-contained even if the source checkout's
+        # plan file is edited later.
+        run = make_run(self.base, 'planned')
+        (run / 'user').mkdir()
+        plan = '/dive 3\n'
+        (run / 'user/errands_plan.txt').write_text(plan)
+        with (run / 'config.txt').open('a') as f:
+            f.write('borg_errands_plan=harness/plans/p.txt\n')
+            f.write('borg_errands_plan_sha256=' + ed.sha256_file(run / 'user/errands_plan.txt') + '\n')
+        case, _ = ed.export(run, 'rust', self.build)
+        d = self.reg / case
+        self.assertEqual((d / 'errands_plan.txt').read_text(), plan)
+        self.assertIn('errands_plan.txt', json.loads((d / 'record.json').read_text())['files_sha256'])
+        # A run without a plan gets no empty file.
+        other, _ = ed.export(make_run(self.base, 'plain', seed=5), 'rust', self.build)
+        self.assertFalse((self.reg / other / 'errands_plan.txt').exists())
+
     def test_named_core_trace_tail_is_preserved_and_hashed(self):
         run = make_run(self.base, 'core-trace')
         (run / 'params-core.json').write_text('[]\n')
