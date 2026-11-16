@@ -1,3 +1,8 @@
 # Terminal screenshots retain their original rectangular padding and blank rows.
 runs/**/media/*.txt -whitespace
 scenarios/**/media/*.txt -whitespace
+# Literal reproduction inputs retain original bytes, including trailing spaces.
+validation/borg-reborn-rs/caster-build-v2/reproduction/**/borg.txt -whitespace
+synthetic/fast-caster-encounters/evidence/expansion-source-runs/**/user/borg.txt -whitespace
+# Native message streams include blank messages; hashes cover their padding.
+studies/fast-caster-config/evidence/**/run/messages.log -whitespace

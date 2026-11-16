@@ -84,3 +84,27 @@ format, provide `--target-commit FULL_SHA` and that clean, built checkout. The
 starting saves/profile remain identical. Zoo orchestration and paired pushid
 reporting are tracked in borg-zoo #144; this runner does not make population
 claims or launch large experiments.
+
+## More cases and configuration comparisons
+
+The original four-case `suite.json` remains frozen. `expanded-suite.json` adds
+four surviving encounter controls, making **eight cases, two per caster class**.
+Two real runs completed 8/8 valid in **6.19 and 5.17 seconds**. Class subsets are
+`mage-suite.json`, `druid-suite.json`, `priest-suite.json` and
+`necromancer-suite.json`. Priest/Necromancer subsets use 500-engine-turn horizons
+and ran in **1.12 / 1.29 seconds**; Mage/Druid retain the 1,000-turn baseline.
+
+The expansion prespecified Human/Hobbit Priest seeds 203/204 and Elf/Half-Orc
+Necromancer seeds 203/204. All four survived the 20,000-turn natural harvest;
+all attempts are retained in `evidence/expansion-harvest.json`. Their observed
+minimum HP fractions were approximately 43%, 30%, 73% and 42%. These are
+**surviving controls, not qualified near deaths**. Starts precede the latest
+continuous encounter with the attacker before the observed HP minimum. Each
+case has observation/contact witnesses and a parent encounter-family identity;
+none invents a parent death or an independent life for a restart.
+
+For varying literal `borg.txt` values or errands plans with one fixed build,
+use the [configuration comparison instructions](../../studies/fast-caster-config/README.md).
+The supplied three-arm, two-case example takes about four seconds and produces
+paired Markdown/JSON reports. `plan-suite.json` includes a town-departure start
+so plan tests are not limited to immediate combat.

@@ -1,0 +1,37 @@
+{
+  "checkpoint_coverage": "selected starts stored canonically in scenario bank; full checkpoint index retained here",
+  "files": [
+    {
+      "archive": "keys.log.gz",
+      "bytes": 54956,
+      "file": "keys.log",
+      "sha256": "c72b365455069316e7b08c31551d4558caa596b4429009b57b3c1305a69682a2"
+    },
+    {
+      "archive": "state.log.gz",
+      "bytes": 477833,
+      "file": "state.log",
+      "sha256": "5e16135c2bed03c3d81f385e2016df54bbe1adef546880a2cf1a056b9e8842b0"
+    },
+    {
+      "archive": "messages.log.gz",
+      "bytes": 21541,
+      "file": "messages.log",
+      "sha256": "2dd0eb45dd5a243579cd70c4a3b468b657cc24890338a311bd1d00b1ad6fb347"
+    },
+    {
+      "archive": "trace.jsonl.gz",
+      "bytes": 1007924,
+      "file": "trace.jsonl",
+      "sha256": "501bac777920ef33f3f18f988062c161b9d2f55856f4653b66710f123790cfea"
+    },
+    {
+      "bytes": 563568939,
+      "coverage": "full original retained locally; selected observation witnesses in scenario bank",
+      "file": "observations.jsonl",
+      "sha256": "5b12e07e376430a35d141caf3f08f17fb7c8f6749a398a16a6791290569473db"
+    }
+  ],
+  "independent_life": true,
+  "original_run": "/workspace/work/caster-expansion/necromancer-half-orc-204"
+}

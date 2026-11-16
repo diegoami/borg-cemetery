@@ -1,0 +1,60 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 203,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 3,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 7600,
+    "file": "checkpoint-000074-t0000007601.save",
+    "game_turn": 7601,
+    "keys": 1502,
+    "max_depth": 1,
+    "race_idx": 0,
+    "seed": 203
+  },
+  "class_idx": 3,
+  "compressed_sha256": "fc37e3bc6329c59573e44f790e6282b64c28f00ba3369b008058c390b72e6ce3",
+  "event_kind": "surviving_encounter",
+  "id": "priest-human-203-grey-mold",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 13,
+    "max_hp": 13,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-3f6e603243a6c8eff691431b049d65ac4ac59197d46fcc5ca2adf27a7c370ec7",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 203,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20005,
+  "race_idx": 0,
+  "save": "start.save.gz",
+  "save_sha256": "ec492601b14b386fad12460abf534027b8cf18b600e8f0b22005afe39044b356",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "episode_basis": "latest uninterrupted visibility episode of the attacker before the observed HP minimum; earlier attack message wins",
+    "first_visible_in_episode_turn": 7671,
+    "kind": "first_observable_contact_in_selected_fight",
+    "lead_engine_turns": 70,
+    "monster_index": 10,
+    "monster_kind": "grey mold",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "96f44f29d728242520e1128fd33137581dedcb7bd53815fb258fb2cd561bbfcb",
+    "observation_source": "/workspace/work/caster-expansion/priest-human-203/observations.jsonl",
+    "trigger_turn": 7671
+  },
+  "start_turn": 7601,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

@@ -20,3 +20,5 @@ onset and the Borg's opportunity to respond, rather than starting at1 HP.
 A fresh reborn Borg from that save still dies at7818, consistently across three
 trials. Saved engine RNG is preserved; private Borg memory is not restored.
 This is a local regression case, not a population finding or a completed fix.
+
+Controller fix follow-up: [borg-reborn-rs #462](https://github.com/diegoami/borg-reborn-rs/issues/462).
