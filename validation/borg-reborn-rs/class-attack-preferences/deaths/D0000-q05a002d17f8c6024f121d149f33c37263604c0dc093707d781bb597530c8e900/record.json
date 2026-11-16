@@ -1,0 +1,57 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "de7102eeb1e261f4e080ee71487f074ba992fa06a8f5d7c8de05ca43fa669df9",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/403-recorder-base-full/full-7-ranger-2",
+      "raw_sha256": {
+        "keys.log": "2bbda4cbc42ff6e313ddc4fbc2dc866d6728d470c9ae57dbe5e1890b0aa395a6",
+        "messages.log": "b89d60b88825fe925622ebcc83cb2b29f0612cd64cd9fb89d29b569321246adb",
+        "state.log": "79300448e13f2cc613b7cc51c223d3d60732203909b575c698ad6a7c9aaba3be"
+      },
+      "result_sha256": "2bbda4cbc42ff6e313ddc4fbc2dc866d6728d470c9ae57dbe5e1890b0aa395a6",
+      "role": "original",
+      "source_commit": "46d5f2ae46c2af743a35ea21165191a0f1cd53f6"
+    }
+  ],
+  "character": "High-Elf Ranger",
+  "core_decision_trace": null,
+  "decision_trace": null,
+  "encounter_family": "start-e69e4aefb3e9b1b0e34785e4772de7c70ce954276bcd91bd044628e2aa60d0a2",
+  "files_sha256": {
+    "build.json": "73ce7e8e238851f4df3d648dad5144b38ec0da0f389a507ab372aef51512de40",
+    "config.txt": "b10c8001904887abcaae2d08a9188047b60b8a1723a166778c70effdadbf5655",
+    "depths.json": "eec2256a0d0ab631f83eaf0d265bd98cd69a8b461b70ce41df9734d038d4b598",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "c5e236536bdbda74678ccd9f440ac4725d9b7673236de7ef73889a72d05db8c2"
+  },
+  "id": "D0000-q05a002d17f8c6024f121d149f33c37263604c0dc093707d781bb597530c8e900",
+  "identity": {
+    "binary_sha256": "de7102eeb1e261f4e080ee71487f074ba992fa06a8f5d7c8de05ca43fa669df9",
+    "borg_txt_sha256": "d0af2e00a80809b0907d5c2f079e540d94eb74bb21fb61fcc58deda918546d07",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "46d5f2ae46c2af743a35ea21165191a0f1cd53f6",
+    "impl": "rust",
+    "params_core_sha256": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1072,
+    "source_sha256": "7d2af92011c8d5fa7d73cb2df1e5460048f2dd1f0987cc0143df26406a5a94f7"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a giant white mouse",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "class_idx": 7,
+    "dead": true,
+    "depth": 1,
+    "level": 4,
+    "max_depth": 2,
+    "race_idx": 9,
+    "turn": 40785
+  }
+}
