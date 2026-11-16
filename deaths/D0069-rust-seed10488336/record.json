@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0069-rust-seed10488336",
+  "run_kind": "harness",
+  "character": "Dwarf Necromancer",
+  "raw_cause": "Grip, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Grip, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 2721,
+    "race_idx": 5,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 10488336,
+    "flags": "-",
+    "git_rev": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+    "git_dirty": "no",
+    "source_sha256": "2317021cfad2c97c840903ba95eb10cb0b5831d8ada93574b62ceac4d2e15b4c",
+    "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254",
+    "borg_txt_sha256": "80191e31b6af6668ac2224c06fd029ce6a97eec45c187172017e287df04254e5",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 315
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths4ec/classes-1800-small/4.2.6-reborn-rust-plans-m13-survival/reborn-m13-plan-town/10488336",
+      "result_sha256": "8f7566de38e27310b60caa595c7ef8ece03ba6af9a14cd889eee6f5a26412fa5",
+      "raw_sha256": {
+        "keys.log": "8f7566de38e27310b60caa595c7ef8ece03ba6af9a14cd889eee6f5a26412fa5",
+        "messages.log": "d5ead839d98cd7b083ca4aecbacd9a413dfe099090395cedcbbf0fba7aa0ecad",
+        "state.log": "73055fe9ed01b1bc0d067a62d88275587965979f306d3982ad792c28826fe50f"
+      },
+      "source_commit": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+      "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254"
+    }
+  ],
+  "encounter_family": "start-e89fa8668aa0010ea496c7b6cf407f2dae64485991954cc0e2380c028901fc2d",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "87648232ca281819594e3f4706df902fee13024cbc8f670ebce42b1c696bf543",
+    "config.txt": "bdfb45bb0e0a3400e525c3a8e9aeedcaff9f568a5140e00a2c4fb0f4929b84a3",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "5c9735125fb5b3b1130dd0ac7e8730a9cedb1081488258f58557741f188aa7ad",
+    "trace-core-tail.jsonl": "968c7dd6c32f630959de851a272e419b6f1f3db4200924b245ed14e1365e7ef8"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0004-rust-seed1023",
+  "run_kind": "harness",
+  "character": "Dwarf Druid",
+  "raw_cause": "a metallic red centipede",
+  "terminal": {
+    "cause": "a metallic red centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 13184,
+    "race_idx": 5,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1023,
+    "flags": "menu",
+    "git_rev": "cac37f5901c90562715e47e7bcd4f9ff91ea4f9f",
+    "git_dirty": "no",
+    "source_sha256": "8c1fd6f44cf80a05ae9b9c0c5d9529e532d086eb75e11110939b0f13a3444cdc",
+    "binary_sha256": "cd0ba385aa81c2ddacb0d52ce349951fa1b2b1146f3016d4a66e93bb82a661bb",
+    "borg_txt_sha256": "1543138167cf7a1649af41edb1990bb60c0c1886b0703ed0cab4ee190bfed8a4",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3"
+  },
+  "decision_trace": null,
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/403-final-full/full-2-druid-3",
+      "result_sha256": "a842a5177954184a1cf9706a0cc0c35e2c3421b830bacb05f42c9a339091220f",
+      "raw_sha256": {
+        "keys.log": "a842a5177954184a1cf9706a0cc0c35e2c3421b830bacb05f42c9a339091220f",
+        "messages.log": "773e8d04dec1f5dec7b3c546c921bc0bf57004a6cf32ee3abe565028b5f6f306",
+        "state.log": "917208c762248a29dddc26c30de61b6bdfaf93bd95f08ff78c81c2404db7a7b2"
+      },
+      "source_commit": "cac37f5901c90562715e47e7bcd4f9ff91ea4f9f",
+      "binary_sha256": "cd0ba385aa81c2ddacb0d52ce349951fa1b2b1146f3016d4a66e93bb82a661bb"
+    }
+  ],
+  "encounter_family": "start-51f2be8849a6f2b142d9fd7d2a8764689f69d5e2b83c45b170f89d733a34ae6c",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "082c10fbf86c79589fc2046259afc9ffdf6f8265ab579d2731011ae8b4929867",
+    "config.txt": "8e4133b7fe4774f11ad07cfe9f6ea957d57df8113ef504b4fb75dedcb5a0b7f1",
+    "depths.json": "fd215581c63e7c4edd41b68dae16c0c81ba6abd728a74379ecf172baafc34eba",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "da2cf330154a1ecaa73307869435baa1c7423c4a0ab85758555af1ca80d770bd"
+  },
+  "investigation": null,
+  "issue": null
+}

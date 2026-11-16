@@ -1,0 +1,925 @@
+{
+  "aggregates": [
+    {
+      "character_build_id": "dunadan-druid",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 1
+    },
+    {
+      "character_build_id": "elf-necromancer",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 1
+    },
+    {
+      "character_build_id": "gnome-mage",
+      "counts": {
+        "survived_to_cap": 1
+      },
+      "denominator": 1,
+      "depth": 1
+    },
+    {
+      "character_build_id": "human-priest",
+      "counts": {
+        "survived_to_cap": 1
+      },
+      "denominator": 1,
+      "depth": 1
+    },
+    {
+      "character_build_id": "dunadan-druid",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 3
+    },
+    {
+      "character_build_id": "elf-necromancer",
+      "counts": {
+        "survived_to_cap": 1
+      },
+      "denominator": 1,
+      "depth": 3
+    },
+    {
+      "character_build_id": "gnome-mage",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 3
+    },
+    {
+      "character_build_id": "human-priest",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 3
+    },
+    {
+      "character_build_id": "dunadan-druid",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 5
+    },
+    {
+      "character_build_id": "elf-necromancer",
+      "counts": {
+        "survived_to_cap": 1
+      },
+      "denominator": 1,
+      "depth": 5
+    },
+    {
+      "character_build_id": "gnome-mage",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 5
+    },
+    {
+      "character_build_id": "human-priest",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 5
+    }
+  ],
+  "attempted_count": 12,
+  "build_identity": {
+    "build": {
+      "binary": "/workspace/work/scenario-runtime-83da/build/rust/game/angband",
+      "binary_sha256": "f8233c8c4f96803b373807744999b9d9b68e607d3c14612e93ee1312cda8a668",
+      "built_utc": "2026-11-16T13:51:12Z",
+      "cc": "cc (Debian 14.2.0-19) 14.2.0",
+      "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+      "git_dirty": "no",
+      "git_rev": "83da6679c76dfa2a0bee369b3d839a364422e4a4",
+      "impl": "rust",
+      "inputs_dirty": "no",
+      "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+      "source_sha256": "2d1420b704fa8faa4a1972fe9548fdd2ebaa2a5fde98c9ff7ce9f4ba51d2ecef"
+    },
+    "capabilities_sha256": "24e868eba8406ba01df37f4c92ba065ed7f35ad516c59d4af4f64974ec70baed",
+    "commit": "83da6679c76dfa2a0bee369b3d839a364422e4a4",
+    "repository": "diegoami/borg-reborn-rs"
+  },
+  "counts": {
+    "death": 8,
+    "survived_to_cap": 4
+  },
+  "death_causes": {
+    "Fang, Farmer Maggot's Dog": 1,
+    "Grip, Farmer Maggot's Dog": 1,
+    "a black naga": 1,
+    "a clear icky thing": 1,
+    "a giant white ant": 2,
+    "a green glutton ghost": 1,
+    "a grey mushroom patch": 1
+  },
+  "manifest_sha256": "63b916378906f2235b6fc380e9e86ca7539705861a3b9ffd6300973a8cc35c9c",
+  "minimum_living_hp_distribution": {
+    "0": 5,
+    "1": 2,
+    "11": 2,
+    "2": 1,
+    "6": 2
+  },
+  "missing_evidence": [],
+  "producer": {
+    "runner_sha256": "c19ff268fab88e5f9f483f5142801cf4ae8ecda8cbb2553e2e7143365012598c",
+    "workflow_attempt": null,
+    "workflow_run_id": null
+  },
+  "requested_runtime": {
+    "commit": "83da6679c76dfa2a0bee369b3d839a364422e4a4",
+    "repository": "diegoami/borg-reborn-rs"
+  },
+  "results": [
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 2,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "dunadan-druid",
+      "death_cause": "Fang, Farmer Maggot's Dog",
+      "depth": 1,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "dc6ea0e4d744802556e83ed12ad40ae42afbd74e0cbe3dfd2c62bb9378ca5f48"
+        },
+        "keys.log": {
+          "bytes": 248,
+          "sha256": "4092faf4874da560829a8ae7d99efe9d7d08c0fb73c101345a8b6e708b478d8c"
+        },
+        "messages.log": {
+          "bytes": 808,
+          "sha256": "700e9c64dd73b04f81064ea66d17457deedfab3f7f31490d9a425248b1665689"
+        },
+        "process.json": {
+          "bytes": 4157,
+          "sha256": "fb9a0325c63725f64932ee1f1ab87dfd8403be0f6762244e0102eab04d0f19f0"
+        },
+        "state.log": {
+          "bytes": 2610,
+          "sha256": "ec0532edd99eaf1f9551266cfb7d31a890b3bfd8dea119eec2c3086687d220bf"
+        },
+        "summary.json": {
+          "bytes": 2310,
+          "sha256": "938e05797a254b227a50b4a47f2d69bb5e28fe43bd745d81d6247e404b9605ab"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 1,
+      "observed_turns": 94,
+      "progress": {
+        "borg_decisions": 10,
+        "game_turns": 94,
+        "keys": 23,
+        "player_turns": 9,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 0
+      },
+      "scenario_id": "low-level-casters-74d8a0bcfe924d75c5949419",
+      "spec_sha256": "74d8a0bcfe924d75c59494198c35c911b0298a3569274972ebe2e072c661d5a1",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 1,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "elf-necromancer",
+      "death_cause": "a grey mushroom patch",
+      "depth": 1,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "716d28dfab67a82acb227fa1b46e5958b959c5efa9ba4895b6942cf36481409f"
+        },
+        "keys.log": {
+          "bytes": 138,
+          "sha256": "9c27f751a440c502eba1b72e4da790c6d398e8623049f20723fc9d183e0ef385"
+        },
+        "messages.log": {
+          "bytes": 786,
+          "sha256": "22e33c59c8987958ae098601fe175ebd3f4ded568428e9276d84f26d7b05a6ee"
+        },
+        "process.json": {
+          "bytes": 4157,
+          "sha256": "fe35d6fb0f1db8838c5c80f0cd32313111a58512554117628c00df9155a74532"
+        },
+        "state.log": {
+          "bytes": 1408,
+          "sha256": "449ca0b78ddb41149edb8fa0cf0e8186e1c72aac17df1e4b775399de269a3420"
+        },
+        "summary.json": {
+          "bytes": 2307,
+          "sha256": "6d71d85802dc3bc5879140e30c70b882cfcb97f5cf79981df96637b50deda5c1"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 1,
+      "observed_turns": 47,
+      "progress": {
+        "borg_decisions": 5,
+        "game_turns": 47,
+        "keys": 13,
+        "player_turns": 5,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 0
+      },
+      "scenario_id": "low-level-casters-df0b5a42e8ac6187c9e0a4ee",
+      "spec_sha256": "df0b5a42e8ac6187c9e0a4ee2d54ca194d8969a45465b4a92f396be659d7e97b",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 0,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "gnome-mage",
+      "death_cause": null,
+      "depth": 1,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "f64642f21016613d8fbce8df90a1d4d57527df0a5d785f8f80dcd68118fb7a06"
+        },
+        "keys.log": {
+          "bytes": 7778,
+          "sha256": "b40609bc9545d4501f427ea61e987905d3f197e19393f133d9b7ab889d36d911"
+        },
+        "messages.log": {
+          "bytes": 1516,
+          "sha256": "1da181e5f59104a2122501270ef35daa46fef2b8ee7be872bf6accf1e5904b96"
+        },
+        "process.json": {
+          "bytes": 2136,
+          "sha256": "e6d6b8c6332a9c409b17f9fb5757bd7a9a87b510e5c6089b3de4a8dadd588be1"
+        },
+        "state.log": {
+          "bytes": 70087,
+          "sha256": "1ba7e229f1e9a15e29fdbdae072845ca1e71403bd1d3ca0a43dcdae976dba1cf"
+        },
+        "summary.json": {
+          "bytes": 2288,
+          "sha256": "d73bb48daa15c975e03265282a6a8a71f4882d3b6c8684f686189b50c93981ad"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 6,
+      "observed_turns": 3003,
+      "progress": {
+        "borg_decisions": 302,
+        "game_turns": 3003,
+        "keys": 617,
+        "player_turns": 300,
+        "stop_reason": "turns"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 0
+      },
+      "scenario_id": "low-level-casters-4dbd9db86cec10ca02a4d1f7",
+      "spec_sha256": "4dbd9db86cec10ca02a4d1f7f56a91ed66c0e036084d72b2b4386afc4c5b7da8",
+      "status": "survived_to_cap",
+      "terminal": "alive_at_horizon"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 7,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "human-priest",
+      "death_cause": null,
+      "depth": 1,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "7165280b07f67045bd1ae05c816aac542136ce13c02aea0ea703c8278b6ec1b4"
+        },
+        "keys.log": {
+          "bytes": 5389,
+          "sha256": "d06f01895865ccd860992bf6ccf7e8268298a7685a7139704163f327ed65c0d2"
+        },
+        "messages.log": {
+          "bytes": 1752,
+          "sha256": "458b8a713781d8eef1693c7d65ae5ff68a51f3c2c69c1be700cfe098d13260d7"
+        },
+        "process.json": {
+          "bytes": 2135,
+          "sha256": "854b15989714a6432d3d9135837b562ca909e5c3278d7b00931911f923aafb6a"
+        },
+        "state.log": {
+          "bytes": 48918,
+          "sha256": "5981b9b321b6b1fa39385acec070c1329adba4ea747f7b02a98f2903c8d22c47"
+        },
+        "summary.json": {
+          "bytes": 2294,
+          "sha256": "c7fc04b8e389f5ce9ad764f9262a6387a9fbf5bee5f9d248be538b0020ad6070"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 0,
+      "observed_turns": 3001,
+      "progress": {
+        "borg_decisions": 203,
+        "game_turns": 3001,
+        "keys": 423,
+        "player_turns": 300,
+        "stop_reason": "turns"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 0
+      },
+      "scenario_id": "low-level-casters-dca4c724443b339884e13ea5",
+      "spec_sha256": "dca4c724443b339884e13ea54ea59309de5282ea429edbab455013119e9e7dc9",
+      "status": "survived_to_cap",
+      "terminal": "alive_at_horizon"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 2,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "dunadan-druid",
+      "death_cause": "a clear icky thing",
+      "depth": 3,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "2478f93304db7f4b4062b775943bc82fb0e56ddc64bc59000a2daec9c2390c34"
+        },
+        "keys.log": {
+          "bytes": 1882,
+          "sha256": "c758589502992d53d82f4edda2535cc67110d5f324a56263f4878973f247aaf9"
+        },
+        "messages.log": {
+          "bytes": 832,
+          "sha256": "24788acadc86e6b6e8427dd2f9e337880bee9b2cfc6e1a638150b02a56b6b782"
+        },
+        "process.json": {
+          "bytes": 4157,
+          "sha256": "b4fda3dde4a9d1246a8bd5ac2ef0792ebe8b833d58e8a6d16c4aa54376f6bc25"
+        },
+        "state.log": {
+          "bytes": 18453,
+          "sha256": "6152f3d9bce85f1de8f66e99d89dc198a9600e8878fb374d9d8d5a4532b9e679"
+        },
+        "summary.json": {
+          "bytes": 2307,
+          "sha256": "d1141db4973f2f9cf3cd39b565c1ce85328a4b1d885ab6adb20a1bb05c253f53"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 0,
+      "observed_turns": 729,
+      "progress": {
+        "borg_decisions": 68,
+        "game_turns": 729,
+        "keys": 161,
+        "player_turns": 72,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "low-level-casters-35ae1ca36acec1a44f8279a1",
+      "spec_sha256": "35ae1ca36acec1a44f8279a19f2178f736fa47af4db3e95b99c5feca621d096d",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 0,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "elf-necromancer",
+      "death_cause": null,
+      "depth": 3,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "9387af74a1aae5ce958eba352d7658bc1ac192dfcfe3d8238959171ac3293608"
+        },
+        "keys.log": {
+          "bytes": 7616,
+          "sha256": "5a94906dfa7e54a63890be9963f622c2b587c2bfb3f84d985b22b707efc73454"
+        },
+        "messages.log": {
+          "bytes": 830,
+          "sha256": "61d908fb14180f732f3114e87b7864ab74db46c5d57b95e8ef844019e173985d"
+        },
+        "process.json": {
+          "bytes": 2136,
+          "sha256": "a300617a3a8e846cfeacc40ab668cb34ce44e82d4538d3f29e75a0ee2cb89e94"
+        },
+        "state.log": {
+          "bytes": 66814,
+          "sha256": "56f2ae5b316e2232054833adeba94d2041e0ff7bf462e3a35f8c1a2adcdaac15"
+        },
+        "summary.json": {
+          "bytes": 2296,
+          "sha256": "6a871104fe43f33c7ddfddb5d5ac9507cb3e04f85153344064e08f8f830254f4"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 11,
+      "observed_turns": 3002,
+      "progress": {
+        "borg_decisions": 300,
+        "game_turns": 3002,
+        "keys": 604,
+        "player_turns": 300,
+        "stop_reason": "turns"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "low-level-casters-b97b6c57fb16eb40ec038950",
+      "spec_sha256": "b97b6c57fb16eb40ec038950b840a5539e3850595c96f62e6bdcfdf0366e041b",
+      "status": "survived_to_cap",
+      "terminal": "alive_at_horizon"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 1,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "gnome-mage",
+      "death_cause": "a black naga",
+      "depth": 3,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "7cb0a3bb0b0794d0a6827758c8e031fba53e848eaed6f0520d6878df92a5df28"
+        },
+        "keys.log": {
+          "bytes": 7102,
+          "sha256": "a5e83c835f003c54c7992c1c91823e1575577694a49b137faace206a7baffdec"
+        },
+        "messages.log": {
+          "bytes": 1112,
+          "sha256": "7f4230fec8ba73ee116522c792ec395141c0a8605ed17668c5f67ffa05ec8f77"
+        },
+        "process.json": {
+          "bytes": 4157,
+          "sha256": "316cb2856fca1e8cc40217831c50f34fdaca1bc3f5e2bbefbd1c9ebc63310663"
+        },
+        "state.log": {
+          "bytes": 64181,
+          "sha256": "be744116d3e4e4d31163cd70bd30fed7bb68215b5975f6271a83ede0ec64ec1f"
+        },
+        "summary.json": {
+          "bytes": 2300,
+          "sha256": "b0a08ee7cd8f090eeb89def979c7b12776c4707de32f4a2934c331acb15fa366"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 2,
+      "observed_turns": 2749,
+      "progress": {
+        "borg_decisions": 275,
+        "game_turns": 2749,
+        "keys": 565,
+        "player_turns": 275,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "low-level-casters-fccbdb830f0a58b8c426184a",
+      "spec_sha256": "fccbdb830f0a58b8c426184a4e07baa77e5d209553a8d0cfd345d11739f67f24",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 0,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "human-priest",
+      "death_cause": "Grip, Farmer Maggot's Dog",
+      "depth": 3,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "75fbecf3d0c577c85f40aa227f49e6e48755a18030ca511a49563b56ccf9e0ed"
+        },
+        "keys.log": {
+          "bytes": 4565,
+          "sha256": "cc1ee00ec0f0ca003768a3a20495d28d514e70d5b1bc79ee003943915f874251"
+        },
+        "messages.log": {
+          "bytes": 1984,
+          "sha256": "7a003c9a596ae507bfd844d811f604a48255af63b24027cc31c64ae75541cbef"
+        },
+        "process.json": {
+          "bytes": 4156,
+          "sha256": "1a0b467b2878abda2c84d787dbbc3b1a0c3e5846afe86c993f210ad6788a5b37"
+        },
+        "state.log": {
+          "bytes": 42060,
+          "sha256": "8b70f08b20cf7f362e88178bb9626e12abf63cc9559252eb4679523eb8da540b"
+        },
+        "summary.json": {
+          "bytes": 2317,
+          "sha256": "acb3e8cb92879699050e29da0ee8b845753fa5af9ef612f9abd1aa7eab922d90"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 6,
+      "observed_turns": 1851,
+      "progress": {
+        "borg_decisions": 181,
+        "game_turns": 1851,
+        "keys": 369,
+        "player_turns": 185,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "low-level-casters-bf407e6ea20e342baf385e13",
+      "spec_sha256": "bf407e6ea20e342baf385e13619c88bd297154e425418917dc7983882aa4ab3a",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 3,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "dunadan-druid",
+      "death_cause": "a green glutton ghost",
+      "depth": 5,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "3b197c08fccd7a00061aea8e6e0d4a6c7793a7fa25e821c845339bc2885ccebc"
+        },
+        "keys.log": {
+          "bytes": 2880,
+          "sha256": "35a7046c71924889a5c16bd6ba77d28e96277abf2d95ab881aa025f697c590ee"
+        },
+        "messages.log": {
+          "bytes": 1407,
+          "sha256": "c5ca9590fc116873f940fd3a2000bc6882bf2363c22c073245c8a14ba9421215"
+        },
+        "process.json": {
+          "bytes": 4156,
+          "sha256": "c5e831d6e3aa92fab3e55c83b1282c29d20a54de47a8e09716dd993507d48e3a"
+        },
+        "state.log": {
+          "bytes": 27471,
+          "sha256": "213a870dd888481cf151cf0447958c882c25ddc3b355498b00509e568964fafc"
+        },
+        "summary.json": {
+          "bytes": 2315,
+          "sha256": "b57eafe477beaa94e5b8ab5b69e6c71f8c5ae16a778e16e8ae7d64499be41644"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 0,
+      "observed_turns": 1397,
+      "progress": {
+        "borg_decisions": 106,
+        "game_turns": 1397,
+        "keys": 240,
+        "player_turns": 139,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "low-level-casters-d444708d5ef9673efd61b8a1",
+      "spec_sha256": "d444708d5ef9673efd61b8a1b6070a2bef892b2b7d11d16600614b6d82f3a4ce",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 0,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "elf-necromancer",
+      "death_cause": null,
+      "depth": 5,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "acbf0d8f5a15c1f18003e6ad48fc8449e0c225d4bc709d61ab9ac73dfb8ba388"
+        },
+        "keys.log": {
+          "bytes": 7620,
+          "sha256": "a30ddbdcc95064de39f93030e02a9726719d1aff4d12bc35fdb6f7153b60a4c6"
+        },
+        "messages.log": {
+          "bytes": 267,
+          "sha256": "7a60a3d5074dd7cb6f6ef1b0c94558d7ac9ccfc2eac186f000b3f5ca09b5b198"
+        },
+        "process.json": {
+          "bytes": 2135,
+          "sha256": "19bb5ba4eeacb3a9c232ce709667f17eb8b841af6b7f6fe520e8cf2e05ff1b6a"
+        },
+        "state.log": {
+          "bytes": 66814,
+          "sha256": "5cbbebf59ae1ccdd3ddeff1211212d95635ae0f73f3c929b0e9cb6fddb4eb83c"
+        },
+        "summary.json": {
+          "bytes": 2295,
+          "sha256": "fee5c284179301a3d296e990be1d1c9cbd544066eead3cdba3a74f9e01887b9f"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 11,
+      "observed_turns": 3001,
+      "progress": {
+        "borg_decisions": 301,
+        "game_turns": 3001,
+        "keys": 604,
+        "player_turns": 300,
+        "stop_reason": "turns"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "low-level-casters-4b755928120966eea928218d",
+      "spec_sha256": "4b755928120966eea928218de1a2e21ae2d3686324aaa54fea323027f1b5e15e",
+      "status": "survived_to_cap",
+      "terminal": "alive_at_horizon"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 2,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "gnome-mage",
+      "death_cause": "a giant white ant",
+      "depth": 5,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "f67be87c8bc123f453e2ffad38967b8104e4ae16b6f5e5a700a6bd9c865f1ae0"
+        },
+        "keys.log": {
+          "bytes": 5612,
+          "sha256": "3b2003752997ec4e38f815e2c8f8dc0ad3ab202a3679ba325400f72954008eed"
+        },
+        "messages.log": {
+          "bytes": 1805,
+          "sha256": "a5e3861a33e4189935cad202e6fde5f71ae2f9e90c34f7c6ffa6b5931bd9f1c0"
+        },
+        "process.json": {
+          "bytes": 4154,
+          "sha256": "530cae1fde9cad4c1bae24f82ff110588024e43fa6561c2589159d1c4619bda7"
+        },
+        "state.log": {
+          "bytes": 50990,
+          "sha256": "f0bce2c4c62b3555157c51b397ebfe797d24810f0e2e98a9a88ae0a91921815e"
+        },
+        "summary.json": {
+          "bytes": 2306,
+          "sha256": "6d8154aff5c60f44c2b2321610457ff9f98feb7fa2afb333adb1b2de9ab1c1cc"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 0,
+      "observed_turns": 2190,
+      "progress": {
+        "borg_decisions": 220,
+        "game_turns": 2190,
+        "keys": 450,
+        "player_turns": 219,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "low-level-casters-c2c9e049bb0a30a3e1184558",
+      "spec_sha256": "c2c9e049bb0a30a3e1184558deab9fb27663f6686f0b67e03f58dd0a25e333b7",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 3,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "human-priest",
+      "death_cause": "a giant white ant",
+      "depth": 5,
+      "evidence": {
+        "config.txt": {
+          "bytes": 431,
+          "sha256": "248582c8ecaae439e44fc762c40e012557630b713855c64003754564d8f0cfaf"
+        },
+        "keys.log": {
+          "bytes": 2853,
+          "sha256": "df24539105d5d7f146c31b576dc17a98977cbfdced1eac8f8f23af6d64fea75e"
+        },
+        "messages.log": {
+          "bytes": 1040,
+          "sha256": "1328f023b83415fe1efddd21117bc15285626be2670d50fd3fe9f6ff0cb9de64"
+        },
+        "process.json": {
+          "bytes": 4157,
+          "sha256": "415229f6c60ed7c9a0de45e118ed6746690b636fe57ea8ebc163f4ffa05aeb3f"
+        },
+        "state.log": {
+          "bytes": 26942,
+          "sha256": "5df569af3f42aebe0f8ce1887b700226a33c02ceb9d5771ffa7f337e8ffe6e9c"
+        },
+        "summary.json": {
+          "bytes": 2308,
+          "sha256": "606f42bbaf89ec5c9020bef884bc0c0908bc221fc4f08badf613682a116b15c3"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 0,
+      "observed_turns": 1164,
+      "progress": {
+        "borg_decisions": 117,
+        "game_turns": 1164,
+        "keys": 237,
+        "player_turns": 117,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "low-level-casters-1df7e39e29bb5cb7db9e4ecd",
+      "spec_sha256": "1df7e39e29bb5cb7db9e4ecd74318a7dd3d765c9fbc8c11405e8df24258d91f9",
+      "status": "death",
+      "terminal": "dead"
+    }
+  ],
+  "revision": 1,
+  "scenario_count": 12,
+  "schema": "borg-cemetery/synthetic-results@1",
+  "suite_id": "low-level-casters",
+  "suite_spec_sha256": "e14fa44603231ecf8c6509f3015bfd2d75b7e10dbc6e1df9615c47a7556044ed"
+}

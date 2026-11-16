@@ -16,6 +16,14 @@ under another family are another death). A death the exporter missed fails
 here, even when TEMP_REGISTRY is empty. The family needs the run's build:
 the suite manifest's build_id_source_sha256 when the run is in a suite
 output, else --build-id (default build/rust/BUILD_ID).
+
+An unchanged game is not a new death (borg-reborn-rs #464, RULES 12 as
+amended by the owner on 2026-11-16): a temporary dossier is KNOWN when the
+registry retains a death with the same start (implementation, seed, race,
+class, flags, borg.txt and save; not the build) and the same key stream,
+whatever source built it. A different key stream, or the same keys from
+another start, is still UNRECORDED. --exact restores the build-qualified
+match (encounter family and key stream).
 """
 
 import argparse
@@ -37,6 +45,32 @@ def keys(reg):
         for a in rec.get('attempts', []):
             if a.get('outcome') == 'death':
                 out[(rec.get('encounter_family'), a.get('result_sha256'))] = rec_path.parent.name
+    return out
+
+
+def start_of(case_dir, rec):
+    """The run's inputs without its build, or None when the record does not
+    state them (such a death is matched exactly). The core parameter table
+    is left out: its hash changes whenever the source adds a parameter."""
+    i, t = rec.get('identity') or {}, rec.get('terminal') or {}
+    if not i.get('impl') or 'seed' not in i or 'race_idx' not in t or 'class_idx' not in t:
+        return None
+    config = case_dir / 'config.txt'
+    save = exporter().read_kv(config).get('save_sha256') if config.exists() else None
+    return (i['impl'], i['seed'], t['race_idx'], t['class_idx'], i.get('flags'), i.get('borg_txt_sha256'), save)
+
+
+def games(reg):
+    """(start, key stream) -> case, for the deaths whose start is stated."""
+    out = {}
+    for rec_path in sorted(Path(reg).glob('D*/record.json')):
+        rec = json.loads(rec_path.read_text())
+        start = start_of(rec_path.parent, rec)
+        if start is None:
+            continue
+        for a in rec.get('attempts', []):
+            if a.get('outcome') == 'death':
+                out.setdefault((start, a.get('result_sha256')), rec_path.parent.name)
     return out
 
 
@@ -85,6 +119,8 @@ def main(argv=None):
     ap.add_argument('--registry', default=str(ROOT / 'docs/deaths'))
     ap.add_argument('--runs', nargs='+', default=[], metavar='DIR')
     ap.add_argument('--build-id', type=Path, default=ROOT / 'build/rust/BUILD_ID')
+    ap.add_argument('--exact', action='store_true',
+                    help='require a retained death of the same build (encounter family), as before #464')
     a = ap.parse_args(argv)
     failed = False
     if a.runs:
@@ -95,6 +131,15 @@ def main(argv=None):
         failed = bool(missing)
     known = keys(a.registry)
     new = {k: v for k, v in keys(a.temp).items() if k not in known}
+    if not a.exact and new:
+        retained = games(a.registry)
+        for game, case in sorted(games(a.temp).items(), key=lambda kv: kv[1]):
+            match = retained.get(game)
+            hit = [k for k, v in new.items() if v == case and k[1] == game[1]]
+            if match and hit:
+                for k in hit:
+                    del new[k]
+                print(f"KNOWN: {case}: the same game as retained {match} (keys {game[1][:12]}), another build")
     for (_, sha), case in sorted(new.items(), key=lambda kv: kv[1]):
         rec = json.loads((Path(a.temp) / case / 'record.json').read_text())
         print(f"UNRECORDED: {case}: {rec['raw_cause']} at turn {rec['terminal'].get('turn')} (keys {sha[:12]})")

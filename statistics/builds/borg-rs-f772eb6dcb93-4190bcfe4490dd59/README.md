@@ -101,9 +101,9 @@ cemetery: 1 dossiers.
 
 | Registry | Case report | Seed | Seed basis | Character | Cause | Turn | Depth | Level | Settings | Start family |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| cemetery | [D0001-seed8400-warrior](../../../deaths/D0001-seed8400-warrior/README.md) | 8400 | recorded input | Human Warrior | a pseudo-dragon | 37680 | 13 | 8 | [settings](#settings-cemetery-b6580c270022) | start-9137edbc887c66b39ea7ade206c1117c8a3e1649247ccc516049b480b940b781 |
-| cemetery | [D0002-seed8402-druid](../../../deaths/D0002-seed8402-druid/README.md) | 8402 | recorded input | Half-Elf Druid | a cutpurse | 5590 | 1 | 1 | [settings](#settings-cemetery-0e2e112f0eec) | start-4e799102dc00b5a5b85db356ecdcc56ef1d7b957f76e76c8ab89191b2bf4f923 |
-| cemetery | [D0003-seed8406-rogue](../../../deaths/D0003-seed8406-rogue/README.md) | 8406 | recorded input | Hobbit Rogue | a giant yellow centipede | 5600 | 1 | 2 | [settings](#settings-cemetery-1395d4ad6b5c) | start-170b8f642c8199ade5596968c51b6fb2f5ccb1c0eed70286e83dd3558a6a5479 |
-| cemetery | [D0004-seed8408-blackguard](../../../deaths/D0004-seed8408-blackguard/README.md) | 8408 | recorded input | Gnome Blackguard | a wild cat | 6231 | 1 | 1 | [settings](#settings-cemetery-c6c69dda315e) | start-eb6049d1b5144e265f601e492ae170d2a233db174f88d5d069ab03c63b9708b3 |
+| cemetery | [D-f5a4849136fcbcddf31b7ceb39c01ce1c1bed0d78e97bac7b661b91da845a4f2](../../../deaths/D0001-seed8400-warrior/README.md) | 8400 | recorded input | Human Warrior | a pseudo-dragon | 37680 | 13 | 8 | [settings](#settings-cemetery-b6580c270022) | start-9137edbc887c66b39ea7ade206c1117c8a3e1649247ccc516049b480b940b781 |
+| cemetery | [D-20e935c15f56569c63010832c3e55ed3a29d6f86e832785b89e6c10f33692167](../../../deaths/D0002-seed8402-druid/README.md) | 8402 | recorded input | Half-Elf Druid | a cutpurse | 5590 | 1 | 1 | [settings](#settings-cemetery-0e2e112f0eec) | start-4e799102dc00b5a5b85db356ecdcc56ef1d7b957f76e76c8ab89191b2bf4f923 |
+| cemetery | [D-9aef4abe1d3cc5cea960dc47fcaf1c976de04eb9eef11db3148f120b74458680](../../../deaths/D0003-seed8406-rogue/README.md) | 8406 | recorded input | Hobbit Rogue | a giant yellow centipede | 5600 | 1 | 2 | [settings](#settings-cemetery-1395d4ad6b5c) | start-170b8f642c8199ade5596968c51b6fb2f5ccb1c0eed70286e83dd3558a6a5479 |
+| cemetery | [D-1f143a29797dcd3505fb449c7f0403f66be358cdda9939688fd386965d3d28a2](../../../deaths/D0004-seed8408-blackguard/README.md) | 8408 | recorded input | Gnome Blackguard | a wild cat | 6231 | 1 | 1 | [settings](#settings-cemetery-c6c69dda315e) | start-eb6049d1b5144e265f601e492ae170d2a233db174f88d5d069ab03c63b9708b3 |
 
 [Statistics index](../../README.md)

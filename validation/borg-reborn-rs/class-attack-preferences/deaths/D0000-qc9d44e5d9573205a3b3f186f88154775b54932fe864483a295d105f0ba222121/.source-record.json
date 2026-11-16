@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0005-rust-seed1022",
+  "run_kind": "harness",
+  "character": "Gnome Druid",
+  "raw_cause": "a giant yellow centipede",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 14120,
+    "race_idx": 4,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1022,
+    "flags": "menu",
+    "git_rev": "8e007cddc1b0c0fb9f97319f8a8128b88680bf97",
+    "git_dirty": "no",
+    "source_sha256": "290fd89ed58c536dd59835d259d85dc1a40cd5dd8b71d1e16f765a268abf71b3",
+    "binary_sha256": "29936aa54c24f930b06a433ca84ba525efed198e4405348955daf83db54cde2c",
+    "borg_txt_sha256": "cae1bd79b7857e891311bb8605e2b05b3fbd65bffd2a3f092942c84be85ac262",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1248
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/453-candidate-full/full-2-druid-2",
+      "result_sha256": "5d143d91fc928bb44171ce27e2846cd22d84cce3164e91686a0481acd4ed9f94",
+      "raw_sha256": {
+        "keys.log": "5d143d91fc928bb44171ce27e2846cd22d84cce3164e91686a0481acd4ed9f94",
+        "messages.log": "28704a65785132bdde1a62e86d4c42e2889ea448dbf45acadce85ed131520de2",
+        "state.log": "e8699cec479acd7785cad91a2fd411c7be494007617f4826666b138b2cb01405"
+      },
+      "source_commit": "8e007cddc1b0c0fb9f97319f8a8128b88680bf97",
+      "binary_sha256": "29936aa54c24f930b06a433ca84ba525efed198e4405348955daf83db54cde2c"
+    }
+  ],
+  "encounter_family": "start-1fdac2ace7055d03a9f04b558722b811d1ade7950f667cce17fb6aafbd7c27ec",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2807fdfcd01d854a94895e0f76b7d87e25dcae338d7d2f6a692ae2bafa3e640d",
+    "config.txt": "6dcab88352d3d58eb017427021ace4731698f2ff8c80c1d71207bd9c828ce01d",
+    "depths.json": "e08a161f441fb8738064b99c9eb583209f26136cf54b5bb226e58500ee8f9ead",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "0cf72a72bda8899146fd41517f884731fb6b575f94cc5ee1c3385f06610836e6",
+    "trace-core-tail.jsonl": "5707a32ecdae9e7eb1302b771ab72f27af0d44530328fe0e1b354803d51dd8ea"
+  },
+  "investigation": null,
+  "issue": null
+}

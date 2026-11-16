@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0036-rust-seed1217781050",
+  "run_kind": "harness",
+  "character": "Human Priest",
+  "raw_cause": "a cave spider",
+  "terminal": {
+    "cause": "a cave spider",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 10661,
+    "race_idx": 0,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1217781050,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "f2c86e4706db7c4c01b4e1efda331eedf6bd4402f3058e7037c83f55c42edca4",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 511
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-plan-town/1217781050",
+      "result_sha256": "9c4f38c2143100e25211ba9e8254eff506512566114e54d35c77e30c2585bccc",
+      "raw_sha256": {
+        "keys.log": "9c4f38c2143100e25211ba9e8254eff506512566114e54d35c77e30c2585bccc",
+        "messages.log": "bcb25d5d1c4b7aea116ba54f04446709e06b2443eea7ae34fc6332c5cf77d71c",
+        "state.log": "a4b1e1ec076e58aa185dd50624373f976c0f929926c5ab764c0dd049fd9a3c30"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-922a126af8f4d5ddd5b72dc064ca96fe6de6497360682f9951535807c479a381",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "4bc4bb0904af4a170f590d65ae6734676c32f60a59accb45981701da47c5cd45",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "eb8778f56f39e013e971969ee74cd9158f2cc5fe05b95d8969712355764199bd",
+    "trace-core-tail.jsonl": "e44446119cef3f9b550d444a476d508e82a1abf96a81782a55a7e7830a9cb846"
+  },
+  "investigation": null,
+  "issue": null
+}
