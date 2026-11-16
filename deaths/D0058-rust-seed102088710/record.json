@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0058-rust-seed102088710",
+  "run_kind": "harness",
+  "character": "Elf Rogue",
+  "raw_cause": "a grey mushroom patch",
+  "terminal": {
+    "cause": "a grey mushroom patch",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 52908,
+    "race_idx": 2,
+    "class_idx": 6
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 102088710,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "7298534401b6784cf73f74a6347a8119ace501cb4569adff630f16f147646dd5",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 5654
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-plan-town/102088710",
+      "result_sha256": "db77513a3c418eacf11e52dade4ac817c6cf5e30f9f00ebd39c5708854753ccf",
+      "raw_sha256": {
+        "keys.log": "db77513a3c418eacf11e52dade4ac817c6cf5e30f9f00ebd39c5708854753ccf",
+        "messages.log": "fd178d1e064964b9ecd64205d720472c31ef6f2395206f440eb92455da1ce46b",
+        "state.log": "242076759e581f900e65fb3609b5e9ec4d5809d99c301050934bae40885e97e4"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-ceb1dabf53dba329668b2bc9f5d32049179815ae94406df8b0d00768b32fb673",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "3beea2ae63e147b6984e40f9ed6f843badb87ba1db3e6ee93ffc88a63b2ad45f",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "f6630f984afc823eddcbb9c746ff55eb32754eff2d429bfed5b5c571ee677f33",
+    "trace-core-tail.jsonl": "0f7c1db5d8f4408ab47ba1add26a3a0244f553ba42d2633627500b7e9b7dcd71"
+  },
+  "investigation": null,
+  "issue": null
+}

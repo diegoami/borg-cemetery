@@ -6,6 +6,21 @@ without asking again. Do not stop with local-only changes unless the owner
 explicitly requests that, or a concrete blocker prevents delivery. Report the
 commit and push result, including any blocker. Preserve unrelated work.
 
+# Death identity rule
+
+New death dossiers use `D-<full SHA-256>` from the versioned encounter-family
+and original key-stream identity in `scripts/native/death_identity.py`. Never
+allocate sequential death numbers or reserve number ranges per branch. The
+same evidence must receive the same ID across branches and independent
+registries. Different continuations remain separate results of their original
+life, not independent samples.
+
+Historical numbers and paths are aliases, not canonical identities. Preserve
+published evidence bytes and hashes; assign retroactive IDs in additive
+`death-id.json` files. Run `python3 scripts/death_ids.py` after importing
+historical evidence and `python3 scripts/death_ids.py --check` before delivery.
+See `docs/death-identity.md` for the contract and alias resolution.
+
 # Milestone reviews
 
 Use [PLAN.md](PLAN.md) for the active milestone and review boundary. At a
