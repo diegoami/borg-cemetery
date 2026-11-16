@@ -1,0 +1,208 @@
+{
+  "schema": "borg-cemetery/observed-attack-components@1",
+  "turn": 411668,
+  "original_source": "820140e0409b34f0ee53cabfbac2b57a39f62e7e",
+  "original_binary_sha256": "f13c46b148c6e614d21d0e525cf448df6c0376173882f1d31b069bdf97839885",
+  "observation_only": true,
+  "verification": {
+    "exit": 0,
+    "stdout": "VERIFIED: supplied streams match (no re-execution by this command)\n",
+    "stderr": ""
+  },
+  "melee": {
+    "damage_input_observed": 1,
+    "score_return_observed": 25,
+    "added_bonus_by_difference": 24,
+    "danger_horizon_from_source": 2,
+    "full_damage_from_source": true
+  },
+  "magic_missile": {
+    "damage_input_observed": 7,
+    "score_return_observed": 17,
+    "added_bonus_by_difference": 10,
+    "danger_horizon_from_source": 1,
+    "full_damage_from_source": false,
+    "mana_penalty": 0
+  },
+  "measurements": [
+    {
+      "function": "borg_rs::borg_fight_attack::melee_score",
+      "turn": 411668,
+      "args": {
+        "monster": 1,
+        "x": 131,
+        "y": 41,
+        "damage": 1
+      },
+      "stack": [
+        "borg_rs::borg_fight_attack::borg_attack_aux_thrust",
+        "borg_rs::borg_fight_attack::borg_attack",
+        "borg_rs::borg_think_dungeon::borg_think_dungeon",
+        "borg_rs::borg_think::borg_think_inner",
+        "borg_rs::borg_think::borg_think",
+        "borg_rs::borg::generate_keypress"
+      ],
+      "eax": 1,
+      "edx": 25,
+      "rax": 1
+    },
+    {
+      "function": "borg_rs::borg_fight_attack::borg_calculate_attack_effectiveness",
+      "turn": 411668,
+      "args": {
+        "attack": 1
+      },
+      "stack": [
+        "borg_rs::borg_fight_attack::borg_attack",
+        "borg_rs::borg_think_dungeon::borg_think_dungeon",
+        "borg_rs::borg_think::borg_think_inner",
+        "borg_rs::borg_think::borg_think",
+        "borg_rs::borg::generate_keypress",
+        "borg_rs::borg::borg_entry_point::{closure#0}"
+      ],
+      "eax": 25,
+      "edx": 130,
+      "rax": 25
+    },
+    {
+      "function": "borg_rs::borg_fight_attack::borg_launch_bolt_aux_hack",
+      "turn": 411668,
+      "args": {
+        "monster": 1,
+        "damage": 7,
+        "type": 0,
+        "ammo": 0
+      },
+      "stack": [
+        "borg_rs::borg_fight_attack::borg_launch_bolt_at_location",
+        "borg_rs::borg_fight_attack::borg_launch_bolt",
+        "borg_rs::borg_fight_attack::borg_attack_aux_spell_bolt",
+        "borg_rs::borg_fight_attack::borg_calculate_attack_effectiveness",
+        "borg_rs::borg_fight_attack::borg_attack",
+        "borg_rs::borg_think_dungeon::borg_think_dungeon"
+      ],
+      "eax": 17,
+      "edx": 10608,
+      "rax": 17
+    },
+    {
+      "function": "borg_rs::borg_fight_attack::borg_launch_bolt_aux_hack",
+      "turn": 411668,
+      "args": {
+        "monster": 1,
+        "damage": 7,
+        "type": 0,
+        "ammo": 0
+      },
+      "stack": [
+        "borg_rs::borg_fight_attack::borg_launch_bolt_at_location",
+        "borg_rs::borg_fight_attack::borg_launch_bolt",
+        "borg_rs::borg_fight_attack::borg_attack_aux_spell_bolt",
+        "borg_rs::borg_fight_attack::borg_calculate_attack_effectiveness",
+        "borg_rs::borg_fight_attack::borg_attack",
+        "borg_rs::borg_think_dungeon::borg_think_dungeon"
+      ],
+      "eax": 17,
+      "edx": 10608,
+      "rax": 17
+    },
+    {
+      "function": "borg_rs::borg_fight_attack::borg_attack_aux_spell_bolt",
+      "turn": 411668,
+      "args": {
+        "spell": 0,
+        "radius": 0,
+        "damage": 7,
+        "type": 0,
+        "range": 20
+      },
+      "stack": [
+        "borg_rs::borg_fight_attack::borg_calculate_attack_effectiveness",
+        "borg_rs::borg_fight_attack::borg_attack",
+        "borg_rs::borg_think_dungeon::borg_think_dungeon",
+        "borg_rs::borg_think::borg_think_inner",
+        "borg_rs::borg_think::borg_think",
+        "borg_rs::borg::generate_keypress"
+      ],
+      "eax": 17,
+      "edx": 33,
+      "rax": 17
+    },
+    {
+      "function": "borg_rs::borg_fight_attack::borg_calculate_attack_effectiveness",
+      "turn": 411668,
+      "args": {
+        "attack": 4
+      },
+      "stack": [
+        "borg_rs::borg_fight_attack::borg_attack",
+        "borg_rs::borg_think_dungeon::borg_think_dungeon",
+        "borg_rs::borg_think::borg_think_inner",
+        "borg_rs::borg_think::borg_think",
+        "borg_rs::borg::generate_keypress",
+        "borg_rs::borg::borg_entry_point::{closure#0}"
+      ],
+      "eax": 17,
+      "edx": 33,
+      "rax": 17
+    },
+    {
+      "function": "borg_rs::borg_fight_attack::borg_calculate_attack_effectiveness",
+      "turn": 411668,
+      "args": {
+        "attack": 5
+      },
+      "stack": [
+        "borg_rs::borg_fight_attack::borg_attack",
+        "borg_rs::borg_think_dungeon::borg_think_dungeon",
+        "borg_rs::borg_think::borg_think_inner",
+        "borg_rs::borg_think::borg_think",
+        "borg_rs::borg::generate_keypress",
+        "borg_rs::borg::borg_entry_point::{closure#0}"
+      ],
+      "eax": 0,
+      "edx": 30,
+      "rax": 0
+    },
+    {
+      "function": "borg_rs::borg_fight_attack::melee_score",
+      "turn": 411668,
+      "args": {
+        "monster": 1,
+        "x": 131,
+        "y": 41,
+        "damage": 1
+      },
+      "stack": [
+        "borg_rs::borg_fight_attack::borg_attack_aux_thrust",
+        "borg_rs::borg_fight_attack::borg_attack",
+        "borg_rs::borg_think_dungeon::borg_think_dungeon",
+        "borg_rs::borg_think::borg_think_inner",
+        "borg_rs::borg_think::borg_think",
+        "borg_rs::borg::generate_keypress"
+      ],
+      "eax": 1,
+      "edx": 25,
+      "rax": 1
+    },
+    {
+      "function": "borg_rs::borg_fight_attack::borg_calculate_attack_effectiveness",
+      "turn": 411668,
+      "args": {
+        "attack": 1
+      },
+      "stack": [
+        "borg_rs::borg_fight_attack::borg_attack",
+        "borg_rs::borg_think_dungeon::borg_think_dungeon",
+        "borg_rs::borg_think::borg_think_inner",
+        "borg_rs::borg_think::borg_think",
+        "borg_rs::borg::generate_keypress",
+        "borg_rs::borg::borg_entry_point::{closure#0}"
+      ],
+      "eax": 25,
+      "edx": -138335480,
+      "rax": 25
+    }
+  ],
+  "debugger_limitations": "Inlined optimized function breakpoints can expose stale argument registers. Curated measurements use the real melee_score, bolt-aux and normal-spell boundaries; omitted inlined thrust/launch-damage probes are not evidence of their arguments or results."
+}
