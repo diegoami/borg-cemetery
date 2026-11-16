@@ -55,3 +55,14 @@ The [survival analysis](death-analysis.md) uses these distinctions. Concrete
 proposals name whether they need an existing profile setting, a qualified
 native fixture, missing instrumentation or a future intervention facility.
 Neither moving tools nor writing an analysis applies a gameplay fix.
+# Synthetic execution boundary
+
+Synthetic generated-depth runs are experimental results, not natural deaths.
+The native exporter rejects a run if either `summary.json` or `config.txt`
+marks `synthetic` or a nonzero `start_depth`, or if the supplied/recorded flags
+contain `start-depth=...`. Conflicting markers are resolved conservatively:
+one synthetic marker is enough to exclude the run. Reconciliation applies the
+same rule and does not require a natural dossier for synthetic deaths.
+
+This is the registry guard for cemetery #5 / borg-reborn-rs #371, not a suite
+runner or a synthetic-dossier promotion path. No existing dossier is rewritten.

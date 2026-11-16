@@ -48,6 +48,27 @@ class ExportTest(unittest.TestCase):
         self.assertEqual(ed.export(run, 'c', self.build), (None, 'not dead'))
         self.assertFalse(self.reg.exists() and any(self.reg.iterdir()))
 
+    def test_synthetic_deaths_never_create_a_natural_registry(self):
+        markers = [({'synthetic': True}, '', '-'),
+                   ({'start_depth': 20}, '', '-'),
+                   ({}, 'synthetic=1\n', '-'),
+                   ({}, 'start_depth=20\n', '-'),
+                   ({}, 'flags=menu,start-depth=20\n', '-'),
+                   ({}, '', 'menu,start-depth=20'),
+                   ({'synthetic': False}, 'synthetic=1\n', '-')]
+        for index, (summary, config, flags) in enumerate(markers):
+            with self.subTest(summary=summary, config=config, flags=flags):
+                run = make_run(self.base, f'synthetic-{index}', **summary)
+                with (run / 'config.txt').open('a') as stream:
+                    stream.write(config)
+                self.assertEqual(ed.export(run, 'rust', self.build, flags),
+                                 (None, 'not natural: synthetic start'))
+                self.assertFalse(self.reg.exists())
+
+    def test_explicit_natural_marker_preserves_natural_export(self):
+        run = make_run(self.base, 'natural', synthetic=False)
+        self.assertEqual(ed.export(run, 'rust', self.build)[1], 'exported')
+
     def test_death_writes_a_dossier(self):
         run = make_run(self.base, 'dead')
         case, what = ed.export(run, 'c', self.build, 'menu')
