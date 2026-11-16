@@ -1,6 +1,13 @@
 {
   "cases": [
     {
+      "canonical_identity": {
+        "id": "D-61d35b4323acf3ac6163e1b6285232fcf90349a8e726edc20d21bde4fa7258ee",
+        "source": {
+          "path": "deaths/D0007-collected/death-id.json",
+          "sha256": "dd5978a56d5dbbf909db29445f7c367dfc0f9234d4fd6fef2eb42e54c67792d7"
+        }
+      },
       "case": "D0007-collected",
       "character": "Measure Gnome Mage",
       "execution_status": "requires_caster_build_adapter",
@@ -12,9 +19,141 @@
         "start_save": "f7f51c4d9967fbf8c4e7ca587cbb2318ab44ee54914c312cdc61702e296398e0",
         "turn": 179053
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "0a551a560fe42c30ddbd47f91fbe2bced362d1d09a513af8918fde0ce3963685",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Cloak [1,+0]",
+              "slot": "back"
+            },
+            {
+              "description": "Iron Helm [7,+0]",
+              "slot": "head"
+            },
+            {
+              "description": "Pair of Leather Sandals of Slow Descent [1,+4]",
+              "slot": "feet"
+            },
+            {
+              "description": "Rapier (1d6) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Ring of Searching <+1>",
+              "slot": "right hand"
+            },
+            {
+              "description": "Robe [2,+0]",
+              "slot": "body"
+            },
+            {
+              "description": "Set of Leather Gloves [1,+0]",
+              "slot": "hands"
+            },
+            {
+              "description": "Small Metal Shield [5,+4]",
+              "slot": "arm"
+            },
+            {
+              "description": "Wooden Torch",
+              "slot": "light"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "37a44db6f99f89b41179e5ec8bb24f4c6c19332a6f7fd59452e7a915bb1df8d6",
+          "items": [
+            {
+              "description": "Book of Magic Spells [First Spells]"
+            },
+            {
+              "description": "Flask of oil"
+            },
+            {
+              "description": "Handful of Dried Fruits"
+            },
+            {
+              "description": "Metallic Blue Potion"
+            },
+            {
+              "description": "Potion of Boldness"
+            },
+            {
+              "description": "Potion of Confusion"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Potion of Sleep"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        },
+        {
+          "id": "53222066fa3d3d3d30cceb8371639c1c75ed9c47a815aa059a248ced55484ba5",
+          "items": [
+            {
+              "description": "Apple"
+            },
+            {
+              "description": "Book of Magic Spells [First Spells]"
+            },
+            {
+              "description": "Flask of oil"
+            },
+            {
+              "description": "Handful of Dried Fruits"
+            },
+            {
+              "description": "Metallic Blue Potion"
+            },
+            {
+              "description": "Potion of Boldness"
+            },
+            {
+              "description": "Potion of Confusion"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Potion of Sleep"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 27,
           "inventory": {
@@ -212,6 +351,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 27,
           "inventory": {
@@ -414,6 +555,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 27,
           "inventory": {
@@ -616,6 +759,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 20,
           "inventory": {
@@ -818,6 +963,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 15,
           "inventory": {
@@ -1020,6 +1167,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 10,
           "inventory": {
@@ -1222,6 +1371,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 3,
           "inventory": {
@@ -2183,6 +2334,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-eda46eb24c1b1b1e6a4c87f96fbf9432645ef09cbd574b0d6a02f94c4e30e8cc",
+        "source": {
+          "path": "deaths/D0008-collected/death-id.json",
+          "sha256": "b3a36bad0bbaa5f165fef06ae98af980cde59007b81accc4d025f3f311022384"
+        }
+      },
       "case": "D0008-collected",
       "character": "Measure Human Priest",
       "execution_status": "requires_caster_build_adapter",
@@ -2194,9 +2352,105 @@
         "start_save": "8a7977170aea7f057fe101e8c7071e6f7a3fd3c0f0afe74816fb5c3b8681d1d6",
         "turn": 10940
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "ec8dea9d89176e7d0f524a56cbf34c4f3d00678402f17e9035e2d221cc654603",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "arm"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "body"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "feet"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "head"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "right hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Cloak [1,+0]",
+              "slot": "back"
+            },
+            {
+              "description": "Mace (2d4) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Set of Gauntlets [3,+2]",
+              "slot": "hands"
+            },
+            {
+              "description": "Wooden Torch",
+              "slot": "light"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "2ac6186de8178a26c3e4bd7b7c3d1e1fe9a92e7c085c40ca631f2a6b824aeed6",
+          "items": [
+            {
+              "description": "Holy Book of Prayers [Novice's Handbook]"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll of Phase Door"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        },
+        {
+          "id": "9c87ce44f608ecc79fd8653d04720f30cea5fdb2a33750e7cc304adff4c2443f",
+          "items": [
+            {
+              "description": "Holy Book of Prayers [Novice's Handbook]"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll of Phase Door"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 7,
           "inventory": {
@@ -2325,6 +2579,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 13,
           "inventory": {
@@ -2453,6 +2709,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 13,
           "inventory": {
@@ -2576,6 +2834,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -2699,6 +2959,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 8,
           "inventory": {
@@ -2822,6 +3084,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 2,
           "inventory": {
@@ -2945,6 +3209,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 2,
           "inventory": {
@@ -3723,6 +3989,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-0dfda751cd5f0559547f97cd7689763821dcbe521654442e41f535b5525e5390",
+        "source": {
+          "path": "deaths/D0009-collected/death-id.json",
+          "sha256": "2a04b991d3474d3332278225b3460a55503ed3909e8482782e5f367b479fd302"
+        }
+      },
       "case": "D0009-collected",
       "character": "Measure Half-Troll Necromancer",
       "execution_status": "requires_caster_build_adapter",
@@ -3734,9 +4007,133 @@
         "start_save": "c21a39467898f195b177ddade7682491407506b4a8699fd545606b19217c5304",
         "turn": 218620
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "c8ab06a3c62873d28fb633954ca28e03a2c72f1aef456ceb58a82b79b1c06591",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "back"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "hands"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "light"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "right hand"
+            },
+            {
+              "description": "Halberd (3d5) (+5,+3)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Hard Leather Cap [2,-1]",
+              "slot": "head"
+            },
+            {
+              "description": "Pair of Leather Boots of Slow Descent [2,+6]",
+              "slot": "feet"
+            },
+            {
+              "description": "Short Bow (x2) (+4,+4)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Soft Leather Armour [8,+4] {??}",
+              "slot": "body"
+            },
+            {
+              "description": "Wicker Shield [2,+0]",
+              "slot": "arm"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "30fa3f093ed75a22931fa30be39816ee3940b45be0c2687dbd12d8a8e82d6857",
+          "items": [
+            {
+              "description": "Cloak (-15,-15) [1,+0] {cursed, ??}"
+            },
+            {
+              "description": "Crumbly Mushroom"
+            },
+            {
+              "description": "Ironwood Staff"
+            },
+            {
+              "description": "Lantern"
+            },
+            {
+              "description": "Lavender Potion"
+            },
+            {
+              "description": "Main Gauche (1d5) (+0,+0)"
+            },
+            {
+              "description": "Mottled Mushroom"
+            },
+            {
+              "description": "Mulberry Staff"
+            },
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Pungent Potion"
+            },
+            {
+              "description": "Purple Potion"
+            },
+            {
+              "description": "Scroll titled \"clargo sacido\""
+            },
+            {
+              "description": "Scroll titled \"premo vadvero\""
+            },
+            {
+              "description": "Scroll titled \"quor nam cor\""
+            },
+            {
+              "description": "Scroll titled \"ratrudeo me\""
+            },
+            {
+              "description": "Scroll titled \"unnas que cra\""
+            },
+            {
+              "description": "Studded Leather Armour (-1) [12,+0]"
+            },
+            {
+              "description": "Teak Staff"
+            },
+            {
+              "description": "Viscous Pink Potion"
+            },
+            {
+              "description": "Wand of Wonder (1 charge)"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 5,
           "hp": 45,
           "inventory": {
@@ -3995,6 +4392,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 5,
           "hp": 37,
           "inventory": {
@@ -4253,6 +4652,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 5,
           "hp": 29,
           "inventory": {
@@ -4511,6 +4912,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 5,
           "hp": 21,
           "inventory": {
@@ -4769,6 +5172,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 5,
           "hp": 13,
           "inventory": {
@@ -5027,6 +5432,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 5,
           "hp": 7,
           "inventory": {
@@ -5285,6 +5692,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 5,
           "hp": 1,
           "inventory": {
@@ -5733,6 +6142,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-7550d9b77297d5e830da953da265f277bd737d15990594178828584be86cced0",
+        "source": {
+          "path": "deaths/D0013-collected/death-id.json",
+          "sha256": "4f4685afa60ff78d7412befe3f078f7d3e138ff54a4d652d59cb72f6a238cb43"
+        }
+      },
       "case": "D0013-collected",
       "character": "Measure Dunadan Druid",
       "execution_status": "requires_caster_build_adapter",
@@ -5744,9 +6160,82 @@
         "start_save": "8b906127396ca042028e6ab2d44852cd3c2aa81b830dc71615fed205eda35d71",
         "turn": 3716
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "53d1198ff6459e919efbf082951982d37b2874427f5b2d089103589e263bd883",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "arm"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "back"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "body"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "feet"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "hands"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "head"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Ring of Feather Falling",
+              "slot": "left hand"
+            },
+            {
+              "description": "Ring of Protection [+10]",
+              "slot": "right hand"
+            },
+            {
+              "description": "Whip (1d3) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Wooden Torch",
+              "slot": "light"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "a2be5c0b2d5a0e5040d067f6ab21dc0bc08224da9deb6b933d9c8a4f224c9fdc",
+          "items": [
+            {
+              "description": "Book of Nature Magics [Lesser Charms]"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 12,
           "inventory": {
@@ -5865,6 +6354,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 12,
           "inventory": {
@@ -5983,6 +6474,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 12,
           "inventory": {
@@ -6101,6 +6594,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 12,
           "inventory": {
@@ -6219,6 +6714,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 13,
           "inventory": {
@@ -6337,6 +6834,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 9,
           "inventory": {
@@ -6455,6 +6954,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 3,
           "inventory": {
@@ -7183,6 +7684,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-e4c2eade5efbbb0fda4e3bc78ff36be8cd70c56cbe931f3640a84dd35cbcd251",
+        "source": {
+          "path": "deaths/D0015-collected/death-id.json",
+          "sha256": "3489a810545dfdd053418eb844a635f81a324bd41cea9cf1181adf464c6f209b"
+        }
+      },
       "case": "D0015-collected",
       "character": "Measure Dunadan Necromancer",
       "execution_status": "requires_caster_build_adapter",
@@ -7194,9 +7702,79 @@
         "start_save": "8e95491acf005d90db0ca02a7513faa63c452609f90c667727b239cef9eae2bc",
         "turn": 4158
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "86091ef6872dc0058c787d6710b4908270c42fe8d9379978d78abdd1a6214ff3",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "arm"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "hands"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "head"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "light"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Cloak [1,+0]",
+              "slot": "back"
+            },
+            {
+              "description": "Main Gauche (1d5) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Pair of Iron Shod Boots [4,+0]",
+              "slot": "feet"
+            },
+            {
+              "description": "Ring of Protection [+6]",
+              "slot": "right hand"
+            },
+            {
+              "description": "Robe [2,+3]",
+              "slot": "body"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "1f59114ed615e82ce1dbdd2ca6f578818fe3e9663113d604d2920044086b4a69",
+          "items": [
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Ration of Food"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 13,
           "inventory": {
@@ -7310,6 +7888,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 13,
           "inventory": {
@@ -7423,6 +8003,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 13,
           "inventory": {
@@ -7536,6 +8118,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 13,
           "inventory": {
@@ -7649,6 +8233,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 8,
           "inventory": {
@@ -7762,6 +8348,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 5,
           "inventory": {
@@ -7875,6 +8463,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 2,
           "inventory": {
@@ -8077,6 +8667,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-ca90162bc54968765127dc0727c877143efa71ddfb8ba21144f370099ffb6915",
+        "source": {
+          "path": "deaths/D0016-collected/death-id.json",
+          "sha256": "ec030d2d6d7b0a9671aed8c86184f28cdf8ba8370915befccdd09edb4f3654ab"
+        }
+      },
       "case": "D0016-collected",
       "character": "Measure Human Necromancer",
       "execution_status": "requires_caster_build_adapter",
@@ -8088,9 +8685,105 @@
         "start_save": "421d1dacc3ab8865ad7e6c1691092fe17df889b36b72b5ccb714985f3055590c",
         "turn": 4199
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "b8dbb3725e27d02e35a0c882d57e1a08e858bcd144e51a6db7e33a0770d66605",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "back"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "feet"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "head"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "light"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Leather Shield [8,+0]",
+              "slot": "arm"
+            },
+            {
+              "description": "Main Gauche (1d5) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Ring of Feather Falling",
+              "slot": "left hand"
+            },
+            {
+              "description": "Ring of Searching <+1>",
+              "slot": "right hand"
+            },
+            {
+              "description": "Set of Gauntlets [3,+0]",
+              "slot": "hands"
+            },
+            {
+              "description": "Soft Leather Armour [8,+0]",
+              "slot": "body"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "76b7b9a64b0374345bafbab3e454e0ad2142642f846890202dd7d61294548334",
+          "items": [
+            {
+              "description": "Mustard Yellow Potion"
+            },
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll titled \"pons aus excus\""
+            }
+          ]
+        },
+        {
+          "id": "c82e75dd5a8d38875b3c125b3a7c92947ab6cc1c2c3df07b5a20185d7cf15d0e",
+          "items": [
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll titled \"pons aus excus\""
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 10,
           "inventory": {
@@ -8214,6 +8907,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 10,
           "inventory": {
@@ -8337,6 +9032,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -8460,6 +9157,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -8583,6 +9282,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -8711,6 +9412,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 7,
           "inventory": {
@@ -8839,6 +9542,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 5,
           "inventory": {
@@ -9162,6 +9867,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-17cb629e180809d6d31863421165af33a7d11e6da4277fc64c52364a39bb37f3",
+        "source": {
+          "path": "deaths/D0018-collected/death-id.json",
+          "sha256": "142b70a9e0df8241d32b320186b05cf16dd404fa2f981f6c7a606441438cafbd"
+        }
+      },
       "case": "D0018-collected",
       "character": "Measure Dunadan Druid",
       "execution_status": "requires_caster_build_adapter",
@@ -9173,9 +9885,109 @@
         "start_save": "db258aeca7217b9213a26a0a1fd8c03e503424dacc254b158c26c956ee17db40",
         "turn": 33471
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "7941f13f1586d1a8747ee36f8f6363680208ad80712778e6dea4ef248f39107f",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Amulet of Slow Digestion",
+              "slot": "neck"
+            },
+            {
+              "description": "Cloak of Stealth [1,+7] <+1>",
+              "slot": "back"
+            },
+            {
+              "description": "Hard Leather Cap [2,+0]",
+              "slot": "head"
+            },
+            {
+              "description": "Pair of Leather Sandals [1,+5]",
+              "slot": "feet"
+            },
+            {
+              "description": "Ring of Feather Falling",
+              "slot": "right hand"
+            },
+            {
+              "description": "Set of Leather Gloves [1,+0]",
+              "slot": "hands"
+            },
+            {
+              "description": "Small Metal Shield [5,+0]",
+              "slot": "arm"
+            },
+            {
+              "description": "Studded Leather Armour (-1) [12,+2]",
+              "slot": "body"
+            },
+            {
+              "description": "Whip (1d3) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Wooden Torch",
+              "slot": "light"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "303155505bdc957a34d415b6ef491e39483707799cf63a4d9ccb7b62b4b1b076",
+          "items": [
+            {
+              "description": "Apple"
+            },
+            {
+              "description": "Book of Nature Magics [Lesser Charms]"
+            },
+            {
+              "description": "Pair of Leather Sandals [1,+0]"
+            },
+            {
+              "description": "Potion of Confusion"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll of Darkness"
+            },
+            {
+              "description": "Scroll of Light"
+            },
+            {
+              "description": "Scroll titled \"pictus nereus\""
+            },
+            {
+              "description": "Scroll titled \"tor lemeo adax\""
+            },
+            {
+              "description": "Ultramarine Potion"
+            },
+            {
+              "description": "Wicker Shield [2,+0]"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 19,
           "inventory": {
@@ -9361,6 +10173,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 12,
           "inventory": {
@@ -9546,6 +10360,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 10,
           "inventory": {
@@ -9731,6 +10547,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 7,
           "inventory": {
@@ -9916,6 +10734,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 5,
           "inventory": {
@@ -10101,6 +10921,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 3,
           "inventory": {
@@ -10286,6 +11108,8 @@
         },
         {
           "class": "Druid",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 1,
           "inventory": {
@@ -11396,6 +12220,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-9a89d87cde0f738eb343c664b9e0ee9a1c729b75db4c30e150987e2b1e5ed7aa",
+        "source": {
+          "path": "deaths/D0019-collected/death-id.json",
+          "sha256": "67a023b43c12fea5ffec50773ee338543e7ca08265e085a13e36ff084ddfdf93"
+        }
+      },
       "case": "D0019-collected",
       "character": "Measure Half-Troll Necromancer",
       "execution_status": "requires_caster_build_adapter",
@@ -11407,9 +12238,85 @@
         "start_save": "0d69efab4e5e3bd81d6913fdbd930b7ccb0e37e225276197ff6e2d7dcfc87f7e",
         "turn": 8056
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "c5bf67049084f737ede69386725013a765fc2ac7577c07077956808a4ea72a48",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "arm"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "back"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "feet"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "hands"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "light"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "right hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Main Gauche (1d5) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Metal Cap [3,+0]",
+              "slot": "head"
+            },
+            {
+              "description": "Soft Leather Armour [8,+5]",
+              "slot": "body"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "42c476ba572388ee9faa214b308bae31e69bd9c8added389ad72877e8ca856ee",
+          "items": [
+            {
+              "description": "Blue Potion"
+            },
+            {
+              "description": "Handful of Dried Fruits"
+            },
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Ration of Food"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 9,
           "inventory": {
@@ -11544,6 +12451,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 9,
           "inventory": {
@@ -11678,6 +12587,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 6,
           "inventory": {
@@ -11812,6 +12723,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 6,
           "inventory": {
@@ -11946,6 +12859,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 5,
           "inventory": {
@@ -12080,6 +12995,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 5,
           "inventory": {
@@ -12214,6 +13131,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 1,
           "inventory": {
@@ -12447,6 +13366,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-9f6eef945aea45a3ba1eef99b90629a610aed8a58ad68c904a4a22dc80d68b5f",
+        "source": {
+          "path": "deaths/D0020-collected/death-id.json",
+          "sha256": "57bd3570c2f78ae2787545299c0ab378c31f45448cdfdd51a1acadcb2b5594c0"
+        }
+      },
       "case": "D0020-collected",
       "character": "Measure Human Priest",
       "execution_status": "requires_caster_build_adapter",
@@ -12458,9 +13384,85 @@
         "start_save": "d8a8bcd3ac5385d98de607f1778b7c7af4d469fe6ed9339e2877ab5b88eb93e2",
         "turn": 92490
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "d2b00ae67f911cd1195f61ffcda3b8f44e6dedf7bbabc962cac8760bc127d834",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Cloak [1,+0]",
+              "slot": "back"
+            },
+            {
+              "description": "Mace (2d4) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Metal Cap [3,+0]",
+              "slot": "head"
+            },
+            {
+              "description": "Pair of Leather Boots [2,+0]",
+              "slot": "feet"
+            },
+            {
+              "description": "Ring of Searching <+4>",
+              "slot": "right hand"
+            },
+            {
+              "description": "Robe [2,+5]",
+              "slot": "body"
+            },
+            {
+              "description": "Set of Gauntlets [3,+0]",
+              "slot": "hands"
+            },
+            {
+              "description": "Small Metal Shield [5,+0]",
+              "slot": "arm"
+            },
+            {
+              "description": "Wooden Torch",
+              "slot": "light"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "3ea856600ec3d6af100e8eccce5283b8dc21147d895914ff69a514eed390940f",
+          "items": [
+            {
+              "description": "Holy Book of Prayers [Novice's Handbook]"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 12,
           "inventory": {
@@ -12611,6 +13613,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 10,
           "inventory": {
@@ -12761,6 +13765,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 8,
           "inventory": {
@@ -12911,6 +13917,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 6,
           "inventory": {
@@ -13061,6 +14069,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 5,
           "inventory": {
@@ -13211,6 +14221,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 2,
           "inventory": {
@@ -13361,6 +14373,8 @@
         },
         {
           "class": "Priest",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 1,
           "inventory": {
@@ -14191,6 +15205,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-edc6ee190d2d85fa19ca91a42a12c8c89bde19d3dac71067e722ae35f94bce7e",
+        "source": {
+          "path": "deaths/D0021-collected/death-id.json",
+          "sha256": "23061403852c213057aca1a20414a4dac4abd416ca35c93b5603d683e164ba9c"
+        }
+      },
       "case": "D0021-collected",
       "character": "Measure Elf Necromancer",
       "execution_status": "requires_caster_build_adapter",
@@ -14202,9 +15223,99 @@
         "start_save": "a03e785e0ff72d2a122e9be1739371b6df8874b8535a9b5b23b54e4e1f7240e9",
         "turn": 10881
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "1b7d359ab65718909b2ddc16b2a00f5daf7147c20883d16dbd15c9399680b367",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "back"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "body"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "head"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "light"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Leather Shield [8,+0]",
+              "slot": "arm"
+            },
+            {
+              "description": "Main Gauche (1d5) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Pair of Leather Boots [2,+0]",
+              "slot": "feet"
+            },
+            {
+              "description": "Ring of Searching <+1>",
+              "slot": "right hand"
+            },
+            {
+              "description": "Set of Gauntlets [3,+4]",
+              "slot": "hands"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "a451349cefe76138179807d57570c3e9a136b7b03a32412d30d7f44dff516efa",
+          "items": [
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Pair of Leather Sandals [1,+0]"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll of Phase Door"
+            }
+          ]
+        },
+        {
+          "id": "a76d369c34afafa0bf5bea9da567efd842326b32452514060712f89c3050300a",
+          "items": [
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Pair of Leather Sandals [1,+0]"
+            },
+            {
+              "description": "Ration of Food"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -14328,6 +15439,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -14451,6 +15564,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -14569,6 +15684,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -14687,6 +15804,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 10,
           "inventory": {
@@ -14805,6 +15924,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 7,
           "inventory": {
@@ -14923,6 +16044,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 6,
           "inventory": {
@@ -15226,6 +16349,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-046ea850ae7a0c11607ea22535ee9998627067aec3dd52fd9a27c03ef0eb1fae",
+        "source": {
+          "path": "deaths/D0025-collected/death-id.json",
+          "sha256": "fc0fe84fbeab48380cbf27b8b23a84d71494cea3bef7b7cc6001b0bb8e58f325"
+        }
+      },
       "case": "D0025-collected",
       "character": "Measure Human Necromancer",
       "execution_status": "requires_caster_build_adapter",
@@ -15237,9 +16367,105 @@
         "start_save": "219afc46c44f7e8a6f1e232ab59ed53f98a5753484862ae6d5f50afc05ae609c",
         "turn": 46642
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "bdf0def6d4db30d6d730b169fb50a8313b9684a67b2035aa22435f834e18dbb4",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "back"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "light"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Leather Shield [8,+0]",
+              "slot": "arm"
+            },
+            {
+              "description": "Main Gauche (1d5) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Metal Cap [3,+0]",
+              "slot": "head"
+            },
+            {
+              "description": "Pair of Leather Boots [2,+0]",
+              "slot": "feet"
+            },
+            {
+              "description": "Ring of Feather Falling",
+              "slot": "right hand"
+            },
+            {
+              "description": "Set of Gauntlets [3,+0]",
+              "slot": "hands"
+            },
+            {
+              "description": "Studded Leather Armour (-1) [12,+0]",
+              "slot": "body"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "61e67752c3b85f49743385c6d90f69a36335b0a68999a4e17e7455e7d1ac64bf",
+          "items": [
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll titled \"do plus\""
+            }
+          ]
+        },
+        {
+          "id": "7ce52cb508db018b0e39d7b2a3b3172467ebb56582299f4ac95a475016b5716c",
+          "items": [
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll titled \"do plus\""
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 3,
           "inventory": {
@@ -15374,6 +16600,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 3,
           "inventory": {
@@ -15508,6 +16736,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 1,
           "inventory": {
@@ -15647,6 +16877,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 1,
           "inventory": {
@@ -15786,6 +17018,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 1,
           "inventory": {
@@ -15925,6 +17159,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 1,
           "inventory": {
@@ -16064,6 +17300,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 1,
           "inventory": {
@@ -16398,6 +17636,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-9955a59015dc093fac818db7391da1786031b1f1eeb22075cef9f9c0d646ab1c",
+        "source": {
+          "path": "deaths/D0027-collected/death-id.json",
+          "sha256": "c2be32145a07d885e4b12d9d225e547524b81aab7d592fc71a985db76f0036dd"
+        }
+      },
       "case": "D0027-collected",
       "character": "Measure Kobold Mage",
       "execution_status": "requires_caster_build_adapter",
@@ -16409,9 +17654,94 @@
         "start_save": "57e7f4ce8e98f23bce4ce5e5f317308cc972e5e17b45aa44f5ba26faf096aa7b",
         "turn": 709990
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "e6df660252d1a5a963b37b2dce7caa6c4810c96973f6ce04f1ff2fee35cc1e6d",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "light"
+            },
+            {
+              "description": "Amulet of Resist Acid",
+              "slot": "neck"
+            },
+            {
+              "description": "Cloak [1,+8]",
+              "slot": "back"
+            },
+            {
+              "description": "Iron Helm [7,+0]",
+              "slot": "head"
+            },
+            {
+              "description": "Leather Shield [8,+1]",
+              "slot": "arm"
+            },
+            {
+              "description": "Pair of Leather Sandals of Slow Descent [1,+3]",
+              "slot": "feet"
+            },
+            {
+              "description": "Ring of Protection [+9]",
+              "slot": "left hand"
+            },
+            {
+              "description": "Ring of Searching <+2>",
+              "slot": "right hand"
+            },
+            {
+              "description": "Set of Leather Gloves of Free Action [1,+3]",
+              "slot": "hands"
+            },
+            {
+              "description": "Sling (x2) (+0,+0)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Studded Leather Armour (-1) [12,+0]",
+              "slot": "body"
+            },
+            {
+              "description": "the Dagger 'Narthanc' (1d4) (+9,+12) [+10]",
+              "slot": "weapon"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "0054b47dd4a05e42e2085af7a637128a30555e1248c1c47119a6b297ad058a54",
+          "items": [
+            {
+              "description": "Book of Magic Spells [Attacks and Knowledge]"
+            },
+            {
+              "description": "Book of Magic Spells [First Spells]"
+            },
+            {
+              "description": "Potion of Boldness"
+            },
+            {
+              "description": "Potion of Neutralize Poison"
+            },
+            {
+              "description": "Potion of Speed"
+            },
+            {
+              "description": "Scroll of Phase Door"
+            },
+            {
+              "description": "Scroll of Teleportation"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 3,
           "hp": 29,
           "inventory": {
@@ -16649,6 +17979,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 3,
           "hp": 24,
           "inventory": {
@@ -16886,6 +18218,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 3,
           "hp": 18,
           "inventory": {
@@ -17123,6 +18457,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 3,
           "hp": 12,
           "inventory": {
@@ -17360,6 +18696,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 3,
           "hp": 6,
           "inventory": {
@@ -17597,6 +18935,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 3,
           "hp": 3,
           "inventory": {
@@ -17834,6 +19174,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 3,
           "hp": 0,
           "inventory": {
@@ -17951,7 +19293,7 @@
           },
           "level": 9,
           "loadout_id": "fc3173151bab1c551eea203057e2a566d8973924272fb68596bf65853c3a465c",
-          "low_hp_candidate": false,
+          "low_hp_candidate": true,
           "max_hp": 57,
           "max_sp": 14,
           "missing": [],
@@ -18196,6 +19538,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-e275e9a98d695e412a7af001aceb93a97f6d6bb047aade69eae83810263c84d0",
+        "source": {
+          "path": "deaths/D0028-collected/death-id.json",
+          "sha256": "1c740c8261ecc8ce1d7be5f95f93c0d1531a66526d38ad34f86e25c3d383b58d"
+        }
+      },
       "case": "D0028-collected",
       "character": "Measure Half-Orc Mage",
       "execution_status": "requires_caster_build_adapter",
@@ -18207,9 +19556,227 @@
         "start_save": "9f3a2a575d273814c8a3564db476c96855910a1169e3b24c5630215a5c602447",
         "turn": 502176
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "d6abd59fcb58fb918a6d9c66fd7bcf8bdb9cb9a6f21a8c1bd7cad049eff15c5f",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "Amulet of Resist Acid",
+              "slot": "neck"
+            },
+            {
+              "description": "Cloak [1,+0]",
+              "slot": "back"
+            },
+            {
+              "description": "Leather Shield [8,+2]",
+              "slot": "arm"
+            },
+            {
+              "description": "Metal Cap [3,+0]",
+              "slot": "head"
+            },
+            {
+              "description": "Pair of Leather Sandals of Slow Descent [1,+4]",
+              "slot": "feet"
+            },
+            {
+              "description": "Rapier (1d6) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Ring of Protection [+6]",
+              "slot": "right hand"
+            },
+            {
+              "description": "Set of Leather Gloves [1,+5]",
+              "slot": "hands"
+            },
+            {
+              "description": "Sling (x2) (+0,+0)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Studded Leather Armour (-1) [12,+0]",
+              "slot": "body"
+            },
+            {
+              "description": "Wooden Torch",
+              "slot": "light"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "2db0d02cde340c97c5b643c39c4acad5f48b87804dba40df0b601110fba7def6",
+          "items": [
+            {
+              "description": "Apple"
+            },
+            {
+              "description": "Book of Magic Spells [First Spells]"
+            },
+            {
+              "description": "Brown Potion"
+            },
+            {
+              "description": "Flask of oil"
+            },
+            {
+              "description": "Potion of Blindness"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Potion of Neutralize Poison"
+            },
+            {
+              "description": "Potion of Poison"
+            },
+            {
+              "description": "Potion of Speed"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll of Darkness"
+            },
+            {
+              "description": "Scroll of Phase Door"
+            },
+            {
+              "description": "Scroll titled \"indum for pero\""
+            },
+            {
+              "description": "Wand of Stinking Cloud (0 charges)"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        },
+        {
+          "id": "5b3de3e98606550f6bfbaf13f0adc24a9ce0cc8602e2ff90d093fdc2bfa99695",
+          "items": [
+            {
+              "description": "Apple"
+            },
+            {
+              "description": "Book of Magic Spells [First Spells]"
+            },
+            {
+              "description": "Brown Potion"
+            },
+            {
+              "description": "Flask of oil"
+            },
+            {
+              "description": "Potion of Blindness"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Potion of Neutralize Poison"
+            },
+            {
+              "description": "Potion of Poison"
+            },
+            {
+              "description": "Potion of Speed"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll of Darkness"
+            },
+            {
+              "description": "Scroll of Phase Door"
+            },
+            {
+              "description": "Scroll titled \"indum for pero\""
+            },
+            {
+              "description": "Short Bow (x2) (+0,+0)"
+            },
+            {
+              "description": "Wand of Stinking Cloud (0 charges)"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        },
+        {
+          "id": "b4c7e864a416de9a0eb465303dd6cb3e0b4f27576764cd8ba2968f3eceb52702",
+          "items": [
+            {
+              "description": "Apple"
+            },
+            {
+              "description": "Book of Magic Spells [First Spells]"
+            },
+            {
+              "description": "Brown Potion"
+            },
+            {
+              "description": "Flask of oil"
+            },
+            {
+              "description": "Potion of Blindness"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Potion of Neutralize Poison"
+            },
+            {
+              "description": "Potion of Poison"
+            },
+            {
+              "description": "Potion of Speed"
+            },
+            {
+              "description": "Ration of Food"
+            },
+            {
+              "description": "Scroll of Darkness"
+            },
+            {
+              "description": "Scroll of Phase Door"
+            },
+            {
+              "description": "Scroll titled \"indum for pero\""
+            },
+            {
+              "description": "Short Bow (x2) (+0,+0)"
+            },
+            {
+              "description": "Wand of Stinking Cloud (0 charges)"
+            },
+            {
+              "description": "Wicker Shield [2,+0]"
+            },
+            {
+              "description": "Wooden Torch"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 0,
           "inventory": {
@@ -18377,7 +19944,7 @@
           },
           "level": 7,
           "loadout_id": "9271a29059a6f7cc13263a6e523ccac8cfcb4449c9abf8c3caca6210ea84350f",
-          "low_hp_candidate": false,
+          "low_hp_candidate": true,
           "max_hp": 36,
           "max_sp": 11,
           "missing": [],
@@ -18475,6 +20042,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 0,
           "inventory": {
@@ -18642,7 +20211,7 @@
           },
           "level": 7,
           "loadout_id": "e718db438c66c7fd132acce31bda2cce6830a55665473e2d3e5473b4bddcfabd",
-          "low_hp_candidate": false,
+          "low_hp_candidate": true,
           "max_hp": 36,
           "max_sp": 11,
           "missing": [],
@@ -18740,6 +20309,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 1,
           "inventory": {
@@ -19005,6 +20576,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 1,
           "inventory": {
@@ -19270,6 +20843,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 1,
           "inventory": {
@@ -19535,6 +21110,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 1,
           "inventory": {
@@ -19795,6 +21372,8 @@
         },
         {
           "class": "Mage",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 2,
           "hp": 1,
           "inventory": {
@@ -21212,6 +22791,13 @@
       }
     },
     {
+      "canonical_identity": {
+        "id": "D-843a0560e5da9bb01c25a279e9d073dc7ece41444fe1478270fb7657af4a09df",
+        "source": {
+          "path": "deaths/D0029-collected/death-id.json",
+          "sha256": "3c3216cbdd5ae864406f70f508c7f50cf8f3207ed4daac524fd1c6dd6f21e381"
+        }
+      },
       "case": "D0029-collected",
       "character": "Measure Elf Necromancer",
       "execution_status": "requires_caster_build_adapter",
@@ -21223,9 +22809,82 @@
         "start_save": "d0e1df8029f944f0ea4a4c9931786aa0c29f9335517f711a549b5ae93db2d75f",
         "turn": 8050
       },
+      "normalized_equipment_sets": [
+        {
+          "id": "32f9a45a1ef644abf93cc7c912a495c2459ae3c3abc34d0ee083d5f66b092391",
+          "items": [
+            {
+              "description": "(nothing)",
+              "slot": "left hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "light"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "neck"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "right hand"
+            },
+            {
+              "description": "(nothing)",
+              "slot": "shooting"
+            },
+            {
+              "description": "Cloak [1,+0]",
+              "slot": "back"
+            },
+            {
+              "description": "Iron Helm [7,+0]",
+              "slot": "head"
+            },
+            {
+              "description": "Main Gauche (1d5) (+0,+0)",
+              "slot": "weapon"
+            },
+            {
+              "description": "Pair of Leather Sandals [1,+2]",
+              "slot": "feet"
+            },
+            {
+              "description": "Robe [2,+2]",
+              "slot": "body"
+            },
+            {
+              "description": "Set of Leather Gloves [1,+0]",
+              "slot": "hands"
+            },
+            {
+              "description": "Wicker Shield [2,+3]",
+              "slot": "arm"
+            }
+          ]
+        }
+      ],
+      "normalized_pack_sets": [
+        {
+          "id": "709c96dee5f1e5b1e866a74cf2b415a7954ba1e5df2984df2972a0d3eeb6ff8b",
+          "items": [
+            {
+              "description": "Necromantic Tome [Into the Shadows]"
+            },
+            {
+              "description": "Potion of Cure Light Wounds"
+            },
+            {
+              "description": "Ration of Food"
+            }
+          ]
+        }
+      ],
       "observations": [
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -21344,6 +23003,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -21462,6 +23123,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 11,
           "inventory": {
@@ -21580,6 +23243,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 4,
           "inventory": {
@@ -21698,6 +23363,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 2,
           "inventory": {
@@ -21816,6 +23483,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 1,
           "inventory": {
@@ -21934,6 +23603,8 @@
         },
         {
           "class": "Necromancer",
+          "class_basis": "frame_spells",
+          "dead": false,
           "depth": 1,
           "hp": 0,
           "inventory": {
@@ -22020,7 +23691,7 @@
           },
           "level": 1,
           "loadout_id": "9505ed6bcbb22ebed351e14c7e51bfa5d9fc87a445de0082b74765e057624a76",
-          "low_hp_candidate": false,
+          "low_hp_candidate": true,
           "max_hp": 11,
           "max_sp": 2,
           "missing": [],
@@ -22188,7 +23859,7 @@
       }
     }
   ],
-  "input_commit": "5f81ac33ca5d8626191e671388272da63d0b4af3",
+  "input_commit": "58f9ba3b0afa1bd5979008cc748f8cc3a4a694bd",
   "limitations": [
     "Observed loadouts are descriptions, not executable character-build records.",
     "No equipment effect, spell legality or causal explanation is inferred.",
@@ -22408,5 +24079,747 @@
     "level_min": 1,
     "low_hp_screen": "living HP <= 25% maximum; candidate only",
     "scope": "Published selected frames and existing saved scenarios; not full-run coverage"
-  }
+  },
+  "unobserved_cases": [
+    {
+      "canonical_identity": {
+        "id": "D-20e935c15f56569c63010832c3e55ed3a29d6f86e832785b89e6c10f33692167",
+        "source": {
+          "path": "deaths/D0002-seed8402-druid/death-id.json",
+          "sha256": "b76ef222833e8d70a68dd7f406693687e790dd3f168ddde3b56a220e93d4d80e"
+        }
+      },
+      "case": "D0002-seed8402-druid",
+      "character": "Half-Elf Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0002-seed8402-druid/record.json",
+        "sha256": "b38335c6707aa5e4ece1a1e500ac79a40ca3b920b013b360cd3b6efea11bac36"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-13c6183d9188403524c33eba596a613f0e3c9a926a974cc8e5f45a8b72e04047",
+        "source": {
+          "path": "deaths/D0007/death-id.json",
+          "sha256": "4e10c75c41ae0b3aa6aedae7b085e7caf0b0b043c2798ea9ea30a8781538df24"
+        }
+      },
+      "case": "D0007",
+      "character": "Elf Mage",
+      "class_name": "Mage",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0007/record.json",
+        "sha256": "05d86912419d8d7b9c1d83ff94117bb5450601cc9bef742a3b3306a682707140"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-c94a2157c87a037c1bec7954cb3168c4f3a1f5c18a205d3c382545146cc86955",
+        "source": {
+          "path": "deaths/D0031-rust-seed176707408/death-id.json",
+          "sha256": "50ec3c73feaf22083a833b81eae197e3215af5dc0901d5695a353c3c0f288faa"
+        }
+      },
+      "case": "D0031-rust-seed176707408",
+      "character": "Human Necromancer",
+      "class_name": "Necromancer",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0031-rust-seed176707408/record.json",
+        "sha256": "78576a06d2e6fdbc3586af43bc85c7e1e2b7dfa958e10644bad5958eb5916f4c"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 5
+    },
+    {
+      "canonical_identity": {
+        "id": "D-cbf06474390b67faabd6b678181e7844874a7967a27c5d7bed9e95109c468267",
+        "source": {
+          "path": "deaths/D0032-rust-seed300461652/death-id.json",
+          "sha256": "9032f4289b8126e109af244162da7d893d3a9bfea8c6aac97b64d750ec57779a"
+        }
+      },
+      "case": "D0032-rust-seed300461652",
+      "character": "Hobbit Mage",
+      "class_name": "Mage",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0032-rust-seed300461652/record.json",
+        "sha256": "da2a5664ef9a38515b4013530ccca507f9db51330e587d344aef6eba880cb81b"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 3
+    },
+    {
+      "canonical_identity": {
+        "id": "D-19d88ff239f09d3cc4c41d3d899c7d1afb93e5c12ce9135e1b925da0ec0a6227",
+        "source": {
+          "path": "deaths/D0033-rust-seed507571350/death-id.json",
+          "sha256": "60026f3eb02ab37a584cb00fc620e4ffa04997995a270d96cb62433a5a337fc7"
+        }
+      },
+      "case": "D0033-rust-seed507571350",
+      "character": "Half-Elf Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0033-rust-seed507571350/record.json",
+        "sha256": "8870b3908983017651b3d47636cfc1919db21a125b86595edb87f13db2fc7760"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-bfcfbf9a91e092bbf920052f0838ea00c9355a5ab346eee5e86480cfee47fb8f",
+        "source": {
+          "path": "deaths/D0035-rust-seed904568879/death-id.json",
+          "sha256": "4bb12ad09fccf7048f7ce80a82656f860c488845bdbeb88f44717526be1cd8af"
+        }
+      },
+      "case": "D0035-rust-seed904568879",
+      "character": "Dunadan Necromancer",
+      "class_name": "Necromancer",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0035-rust-seed904568879/record.json",
+        "sha256": "638edaf137fc8258507f07de991b9e3459d5222f6d4d10b8509a457eeead8ed0"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-ba7588e6c2518b6d3995211dbd422ce20779d5cf0fd63bea64b017323f0ad4c9",
+        "source": {
+          "path": "deaths/D0036-rust-seed1217781050/death-id.json",
+          "sha256": "cd18852414d19bdfb1e5bb08834ebd2faa29e2b63e013cd5c68d56393da6f74d"
+        }
+      },
+      "case": "D0036-rust-seed1217781050",
+      "character": "Human Priest",
+      "class_name": "Priest",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0036-rust-seed1217781050/record.json",
+        "sha256": "9f87cbdad0895641ee45b5e103861c47a3d94819ad59bf8ba0fa4dd3792011e1"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-b2927792983bf3f568524a1ce58f5561d4ea7a3e84beb7e9f7aa96dd0c678a86",
+        "source": {
+          "path": "deaths/D0037-rust-seed1236782037/death-id.json",
+          "sha256": "86fafa32d223a9f56a17141f6fec0c7d009870ee57e5426718a09d1b1bd62389"
+        }
+      },
+      "case": "D0037-rust-seed1236782037",
+      "character": "Gnome Necromancer",
+      "class_name": "Necromancer",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0037-rust-seed1236782037/record.json",
+        "sha256": "e556692031aaf33dbedbc88d6cd2a6e9d695f54e7d1c1aa0a6b54a925f93a5da"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 4
+    },
+    {
+      "canonical_identity": {
+        "id": "D-01be6cac3cf35ba37d539ad8dcce6a168a295f9903c791f9cd9025996382ca75",
+        "source": {
+          "path": "deaths/D0039-rust-seed1303043906/death-id.json",
+          "sha256": "9585478ec45019d415a97183cc994228f287fb0e8f70a3e612cb6774977ac53b"
+        }
+      },
+      "case": "D0039-rust-seed1303043906",
+      "character": "Dwarf Priest",
+      "class_name": "Priest",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0039-rust-seed1303043906/record.json",
+        "sha256": "ca997520461a79694e66bc7f5037dc08f906bed6e4c84d3fcabf37ad348e8122"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 4
+    },
+    {
+      "canonical_identity": {
+        "id": "D-384b8741d3c22bd71fe5d7082e18e6afdb9ddf7c6f8671e4d91ad4fedad80d1f",
+        "source": {
+          "path": "deaths/D0040-rust-seed1417651640/death-id.json",
+          "sha256": "6d025f690674a05d53ed3810a46c076fec46b8525a9f884defc47a831f2640f9"
+        }
+      },
+      "case": "D0040-rust-seed1417651640",
+      "character": "Half-Orc Necromancer",
+      "class_name": "Necromancer",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0040-rust-seed1417651640/record.json",
+        "sha256": "148d5eab93b1a982254a1321eea6b2acfe2c7cfe0fba238a8f58387d5b60a57b"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-3a18084f5c4d5754dd01e97e0b39234320952128fb9679ba72b0f08e798a814c",
+        "source": {
+          "path": "deaths/D0041-rust-seed1429594888/death-id.json",
+          "sha256": "e5f3fd97959b64e3e96d1308b3a5d9088da94ed7db139bbb5dbcb318028cd6e8"
+        }
+      },
+      "case": "D0041-rust-seed1429594888",
+      "character": "Dunadan Mage",
+      "class_name": "Mage",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0041-rust-seed1429594888/record.json",
+        "sha256": "98d2d510d1299f260af43ffdca5df1a1f0173b35e59c412e021f9d7b4fb98508"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 3
+    },
+    {
+      "canonical_identity": {
+        "id": "D-eb6157a764ccfa6bbf32c2be50978f0a322e42c883214834d5bf436ff8fe0277",
+        "source": {
+          "path": "deaths/D0042-rust-seed1678303796/death-id.json",
+          "sha256": "904890701ee2c2cee75d58436c0ebaceb27e66098533fd879d3e2ef99421dca6"
+        }
+      },
+      "case": "D0042-rust-seed1678303796",
+      "character": "Dunadan Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0042-rust-seed1678303796/record.json",
+        "sha256": "cc8b9a1bcfc4ce3cfbc2513b3690ef8c5bb653cc1ee8ecb2bed207605eeb2e98"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 4
+    },
+    {
+      "canonical_identity": {
+        "id": "D-007f5e4bb2339b2faad86419c3418d8a13b9052963e55b57fb5c2c3d9d967018",
+        "source": {
+          "path": "deaths/D0043-rust-seed1678765969/death-id.json",
+          "sha256": "355914514f3e9a80bf4d736a6aeaad6fb3b01fe15755be916121c86b251bb4ca"
+        }
+      },
+      "case": "D0043-rust-seed1678765969",
+      "character": "Elf Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0043-rust-seed1678765969/record.json",
+        "sha256": "07b3acb53c5d86b232899bf7888882b02f870d09203c1a59d4f62fffe1e449d8"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-59cfae3855bf83b011d7192606456eb36b2a288e0cfa9f709a89547c67ae88b8",
+        "source": {
+          "path": "deaths/D0044-rust-seed1705599023/death-id.json",
+          "sha256": "3dd7fba7c7196689bf03deae8fedb6a4b969c19a20a98f1e0d8121e523c02dbc"
+        }
+      },
+      "case": "D0044-rust-seed1705599023",
+      "character": "Dwarf Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0044-rust-seed1705599023/record.json",
+        "sha256": "0e025d53b6622797cca20c8e976199477601fcee5436e46b0cbb4b399ec5ac89"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 6
+    },
+    {
+      "canonical_identity": {
+        "id": "D-6997b381d618969df385c5d0f6daf14146cf662952a934b549fea6eda66acc95",
+        "source": {
+          "path": "deaths/D0045-rust-seed2002578196/death-id.json",
+          "sha256": "72dae0380c4aa2505ff0425b4a054974cecbbbe279d42a5d3f581b8614c1d618"
+        }
+      },
+      "case": "D0045-rust-seed2002578196",
+      "character": "Hobbit Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0045-rust-seed2002578196/record.json",
+        "sha256": "cb2342da8491f009419b3390a8916ca132d6344e2350ad6849dc95a88cdb5d90"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-bf76b3a9ab0fdd919e75abdb3e5e0e02d43d7d4c43f3d64530e60a0bca6ae016",
+        "source": {
+          "path": "deaths/D0046-rust-seed2109297965/death-id.json",
+          "sha256": "6dfb7cef21eebaab11031c3df45cb58f8b86ce8fa6d7647f7bc201137da89894"
+        }
+      },
+      "case": "D0046-rust-seed2109297965",
+      "character": "Human Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0046-rust-seed2109297965/record.json",
+        "sha256": "f849d73cbf70415204304251ae6bab8e3fbb10bd4aa672c5984d86afbea4488f"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 4
+    },
+    {
+      "canonical_identity": {
+        "id": "D-14e1bd40736de4d122770d1b2264cbce42b9aaee9b5a9b8015e13234b9dfbe34",
+        "source": {
+          "path": "deaths/D0052-rust-seed1478804878/death-id.json",
+          "sha256": "bfae736b1d22dcf1114c583bbde5f793a2b0339c0cf59469eee471583c785f4a"
+        }
+      },
+      "case": "D0052-rust-seed1478804878",
+      "character": "Elf Priest",
+      "class_name": "Priest",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0052-rust-seed1478804878/record.json",
+        "sha256": "d0c9a863c76dbaca42bf54017ae76d2387600c0d033e93f26814b9eccb06fd5f"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-2b01d3446748541e885637b80ae94745cb50b7eb69df483b78e8090afa1550fb",
+        "source": {
+          "path": "deaths/D0055-rust-seed10488336/death-id.json",
+          "sha256": "1451a724ff33952678dae829d73f6d09346e5f8721b023e25affe86fe52d4bd7"
+        }
+      },
+      "case": "D0055-rust-seed10488336",
+      "character": "Dwarf Necromancer",
+      "class_name": "Necromancer",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0055-rust-seed10488336/record.json",
+        "sha256": "0893474a3cacd25d94715077c7ef5920a9f334c68dc635f05e3ccf8c58994ab8"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-a5c1735d42c01530a08776364b72af8311eae01cbe5bd29ea4e53f0b34a89971",
+        "source": {
+          "path": "deaths/D0056-rust-seed10488336/death-id.json",
+          "sha256": "2299c075939e6b1006a9e6032541c088f6f24d7024dd5dc01439a3a672b23bf5"
+        }
+      },
+      "case": "D0056-rust-seed10488336",
+      "character": "Dwarf Necromancer",
+      "class_name": "Necromancer",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0056-rust-seed10488336/record.json",
+        "sha256": "5a71ae2101962e631f7acec1b8869eccd2a4e1c0280f680952ddd7c9f6da8e6f"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-fa43b709eb870b10fdfe00319eddaef79538aa83139795cf0488cf43cf0c649b",
+        "source": {
+          "path": "deaths/D0061-rust-seed247597266/death-id.json",
+          "sha256": "015aa34cef52dae7767c258d90a480fc890ca8c410db86368c2351044a0e9a99"
+        }
+      },
+      "case": "D0061-rust-seed247597266",
+      "character": "Half-Elf Mage",
+      "class_name": "Mage",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0061-rust-seed247597266/record.json",
+        "sha256": "afeaca8747557b4ce6284d31e7d571164b5486fa46bc11629dd196acd360ac44"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-56efd566c6a338f39c779e40ac1e5d00e4e21990be7b01bc5f203bc4c4cc669b",
+        "source": {
+          "path": "deaths/D0062-rust-seed247597266/death-id.json",
+          "sha256": "49ef42eabe889e9f4d475584350be0c4c77f64cf6cc96f27968e155009780ec6"
+        }
+      },
+      "case": "D0062-rust-seed247597266",
+      "character": "Half-Elf Mage",
+      "class_name": "Mage",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0062-rust-seed247597266/record.json",
+        "sha256": "604409f7e56cefe6c99a677477a4b733176c5ce58c5dcdf8ed176ef581a63737"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-ed72c14c3876702d3fbb61f667e7ab15e70600b6defb16fe2a27f7b441c9b6ba",
+        "source": {
+          "path": "deaths/D0065-rust-seed1086352478/death-id.json",
+          "sha256": "2913726989b32f64fa088c6fc29e1d21da8cfe83dd32e80d3aeb1d2c21ac1615"
+        }
+      },
+      "case": "D0065-rust-seed1086352478",
+      "character": "Half-Troll Priest",
+      "class_name": "Priest",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0065-rust-seed1086352478/record.json",
+        "sha256": "5129c6925967b53b2a07134ea55310e7ecb377908049cc67525ee99bd6ff5f5d"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 3
+    },
+    {
+      "canonical_identity": {
+        "id": "D-dc8d4c0b2d28f2f1ac6c867edbbe2ac9c4d970cfaca6d0826715dbd6d189d2a1",
+        "source": {
+          "path": "deaths/D0066-rust-seed1086352478/death-id.json",
+          "sha256": "3a566dbf478122a6f4b184c19da79c53ab163d10b78cb443a501087023c36f1d"
+        }
+      },
+      "case": "D0066-rust-seed1086352478",
+      "character": "Half-Troll Priest",
+      "class_name": "Priest",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0066-rust-seed1086352478/record.json",
+        "sha256": "45c2db2234621addbeaa0cb4e149e70f9371026b232284bd578098fc2509dbd9"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-0f74854e24e4e6492cf2d11202fd7764763212b883de988d9ba556cd4aaf0644",
+        "source": {
+          "path": "deaths/D0067-rust-seed2097768768/death-id.json",
+          "sha256": "25386849e2ad7de38773b4295ab62fb254db13f8f6eb9eb3a559b608ea81cdd1"
+        }
+      },
+      "case": "D0067-rust-seed2097768768",
+      "character": "Human Mage",
+      "class_name": "Mage",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0067-rust-seed2097768768/record.json",
+        "sha256": "d8645c10a0629efa84f7a70ca8f93521afa5d330d389900643f61b58d6e46dd1"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 3
+    },
+    {
+      "canonical_identity": {
+        "id": "D-aea9e9dbc21f7c272129ed03127607fad8536a6259641fb263d02944bf5901d3",
+        "source": {
+          "path": "deaths/D0068-rust-seed2097768768/death-id.json",
+          "sha256": "c2bd865b786a8e0717eb6dc5ff6bead4e8b72e08372102bc434c5157da9c83ff"
+        }
+      },
+      "case": "D0068-rust-seed2097768768",
+      "character": "Human Mage",
+      "class_name": "Mage",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0068-rust-seed2097768768/record.json",
+        "sha256": "ef1d4898789b91c0c30df74bf14f178910bd03956f1a22572b505888aab49add"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-c4867bdd655de1e534c930570c5106b9ba5b8b0185ae599f0eb7197f0fdf1041",
+        "source": {
+          "path": "deaths/D0069-rust-seed10488336/death-id.json",
+          "sha256": "01c589a5be1a80c7ed22449440a15e08fdd120fb787337bc62baeb3de01e998c"
+        }
+      },
+      "case": "D0069-rust-seed10488336",
+      "character": "Dwarf Necromancer",
+      "class_name": "Necromancer",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0069-rust-seed10488336/record.json",
+        "sha256": "5bb88b27db9ad58ae1dd26fc4c82294f35ea6c9ea75bd3863dd00a20d8de96e1"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-1050895b1f9b28943ecdf3db64a77403157c358e622973c8b5a5f0f680093a54",
+        "source": {
+          "path": "deaths/D0072-rust-seed176707408/death-id.json",
+          "sha256": "ef053568882a8ce349914a0312ca1d74412681bda48ff387691676f0774ba434"
+        }
+      },
+      "case": "D0072-rust-seed176707408",
+      "character": "Human Necromancer",
+      "class_name": "Necromancer",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0072-rust-seed176707408/record.json",
+        "sha256": "2908d022c70f37e50af7cc85e5098b59944d43871f994b49868785cfdf80a4b0"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-d9d7385f7b9e064b73948ea542c2800f170654b22db0467f89c051d767a07935",
+        "source": {
+          "path": "deaths/D0073-rust-seed247597266/death-id.json",
+          "sha256": "733b7510be6a72ca2f5d1ca58ee344784bb03787202625059be04f429644fc56"
+        }
+      },
+      "case": "D0073-rust-seed247597266",
+      "character": "Half-Elf Mage",
+      "class_name": "Mage",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0073-rust-seed247597266/record.json",
+        "sha256": "a7efb9658f6e75527a34a2222217d100206ae5ba8f0727e70cc3c6f1bd0cb681"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 3
+    },
+    {
+      "canonical_identity": {
+        "id": "D-ae882a1be98a8fdef22c7d0fd0f4cc8b0847426e26b1a8fe26af6dfac1dde745",
+        "source": {
+          "path": "deaths/D0074-rust-seed507571350/death-id.json",
+          "sha256": "39d73177127a65dca5932780266e40f5100537e549c8a24aa377a97216da6c7e"
+        }
+      },
+      "case": "D0074-rust-seed507571350",
+      "character": "Half-Elf Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0074-rust-seed507571350/record.json",
+        "sha256": "d8e8d3895d0fb3607f7f995cb58b6ee6fd53d3f89ab982501182fdf573ed7c22"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-68158e709e4487cd1e2485896c345ff5e50c047cf0255248a67125ee237a4fdd",
+        "source": {
+          "path": "deaths/D0075-rust-seed652511567/death-id.json",
+          "sha256": "c5704c21da396b7d192a64249863e2f5088605081e171582e2c19335838114d6"
+        }
+      },
+      "case": "D0075-rust-seed652511567",
+      "character": "Gnome Priest",
+      "class_name": "Priest",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0075-rust-seed652511567/record.json",
+        "sha256": "8677a788191b8305ba756b6c78a4e321c12d95233989cc5dd50bf6fb1a12e331"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-0e3e0b492ffd34535d6c5c3b8e40d3bac51b05248d12bac1fc6c80de48cdfc9b",
+        "source": {
+          "path": "deaths/D0076-rust-seed1086352478/death-id.json",
+          "sha256": "b3f6d2c6dc66d80b2375405e68cb707b54d5cb91994f59300336078824d00827"
+        }
+      },
+      "case": "D0076-rust-seed1086352478",
+      "character": "Half-Troll Priest",
+      "class_name": "Priest",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0076-rust-seed1086352478/record.json",
+        "sha256": "de582b181236eb0facf52c94bacbd8e2a7cebbba4d627d1e067ab4ec061c2b4c"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-5f615f02ae667996766365ece74fc5ab23f63fa9c2dbe07c228dde8cb12a11d7",
+        "source": {
+          "path": "deaths/D0077-rust-seed1169386844/death-id.json",
+          "sha256": "7c16fd229312e333a85ac88f171ce502a7e0878407f2920370d2f8ba21e9e70a"
+        }
+      },
+      "case": "D0077-rust-seed1169386844",
+      "character": "Half-Orc Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0077-rust-seed1169386844/record.json",
+        "sha256": "d22517db94f49cdfec23e446a079ad3ca0bbf9eabcab3434bcb65918c5bc82c4"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 4
+    },
+    {
+      "canonical_identity": {
+        "id": "D-13b2a7d242acff2e50fd82f5492a39f0822a15d59cc2dbf8414aa00f5c307abe",
+        "source": {
+          "path": "deaths/D0080-rust-seed1678303796/death-id.json",
+          "sha256": "ae29976005f1f9c5383a317a093d4e39dcb191670a0ad84d6d0ee1afc1206f04"
+        }
+      },
+      "case": "D0080-rust-seed1678303796",
+      "character": "Dunadan Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0080-rust-seed1678303796/record.json",
+        "sha256": "b92dad66542be1b1a4406e25bd30ac09ee685dfee3353219c8fe85e6546a880f"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 4
+    },
+    {
+      "canonical_identity": {
+        "id": "D-d600e5b45eb5e0ddcbd9ec91a0b17cb2a3b6ffff671b3a2cb55fcadebc851dfa",
+        "source": {
+          "path": "deaths/D0081-rust-seed1678765969/death-id.json",
+          "sha256": "54f49d9fc017496e7a663aa8e39e092cbeff0fb02af954e6b7021889e3176cee"
+        }
+      },
+      "case": "D0081-rust-seed1678765969",
+      "character": "Elf Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0081-rust-seed1678765969/record.json",
+        "sha256": "5a33d7406de81af28d805251e04fa07c4ff420d2fcbdab0ff01cb8741a1516ad"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-ae5cf200fb3477c9ea60929fd6af14457945264dc5897643b8da690f2e4f7046",
+        "source": {
+          "path": "deaths/D0084-rust-seed2002578196/death-id.json",
+          "sha256": "b63c010e3582e8d5894490ea15120bf1d0433bceaff7a5b380ca2bf3a019ffc9"
+        }
+      },
+      "case": "D0084-rust-seed2002578196",
+      "character": "Hobbit Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0084-rust-seed2002578196/record.json",
+        "sha256": "88c9f77ee59c693f9569538f6020c13d864c3ab7703e83c2e25ec4c1246da3c8"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 2
+    },
+    {
+      "canonical_identity": {
+        "id": "D-605dee45a8bc05f86268e3c742ce442699741e2f4d178ce7b73ce581703723db",
+        "source": {
+          "path": "deaths/D0085-rust-seed2097768768/death-id.json",
+          "sha256": "41160c0c185d1f88bf8630947a10577f42b5f880ba449d3d78cdb9070d150e47"
+        }
+      },
+      "case": "D0085-rust-seed2097768768",
+      "character": "Human Mage",
+      "class_name": "Mage",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0085-rust-seed2097768768/record.json",
+        "sha256": "1262520dcfd2fa2a0b4952dd9806a5d3ece58b4b5e22cf9b609db26dc294c969"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 1
+    },
+    {
+      "canonical_identity": {
+        "id": "D-c0ba4a464137e5070b70244b8b1b9ae715612318dfc60e27e7175856994b7f1c",
+        "source": {
+          "path": "deaths/D0086-rust-seed2109297965/death-id.json",
+          "sha256": "8af85f2d02f646908ccb1037b3ab04a06a0eb531770bc093b5cc36956481dae3"
+        }
+      },
+      "case": "D0086-rust-seed2109297965",
+      "character": "Human Druid",
+      "class_name": "Druid",
+      "inventory": null,
+      "record": {
+        "path": "deaths/D0086-rust-seed2109297965/record.json",
+        "sha256": "de35b34743f27dae961699738a67965e7e27345e70c2a12be201e0d7d3707993"
+      },
+      "spells": null,
+      "status": "no_recorded_frames",
+      "terminal_level": 4
+    }
+  ]
 }

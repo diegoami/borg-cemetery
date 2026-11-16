@@ -1,5 +1,6 @@
 """Preserve provenance and avoid promoting observations to executable state."""
 import json
+import subprocess
 from pathlib import Path
 import sys
 import tempfile
@@ -11,7 +12,7 @@ import caster_candidates as c
 
 class CandidatesTest(unittest.TestCase):
     def test_projection_excludes_hidden_gear_and_missing_stays_missing(self):
-        row = c.observation(dict(turn=4, hp=2, max_hp=10,
+        row = c.observation(dict(turn=4, hp=2, max_hp=10, dead=0,
                                  details=dict(gear=[dict(actual_kind='Teleportation')]),
                                  inventory=dict(pack=[dict(description='an unknown scroll',
                                                            actual_kind='Teleportation')]),
@@ -19,8 +20,30 @@ class CandidatesTest(unittest.TestCase):
         self.assertTrue(row['low_hp_candidate'])
         self.assertNotIn('Teleportation', json.dumps(row))
         self.assertEqual(row['missing'], ['spells'])
-        for hp, maximum in [(0, 10), (-1, 10), (2, 0), (True, 10), (None, 10)]:
-            self.assertFalse(c.observation(dict(hp=hp, max_hp=maximum))['low_hp_candidate'])
+        for hp, maximum in [(-1, 10), (2, 0), (True, 10), (None, 10)]:
+            self.assertFalse(c.observation(dict(hp=hp, max_hp=maximum, dead=0))['low_hp_candidate'])
+        self.assertTrue(c.observation(dict(hp=0, max_hp=10, dead=0))['low_hp_candidate'])
+        self.assertFalse(c.observation(dict(hp=0, max_hp=10, dead=1))['low_hp_candidate'])
+        self.assertFalse(c.observation(dict(hp=0, max_hp=10))['low_hp_candidate'])
+
+    def test_spell_diagnostics_are_removed_at_both_levels(self):
+        result = c.observation(dict(spells={'class': 'Mage', 'hidden_rng': 12,
+            'learned': [{'name': 'Magic Missile', 'mana': 1, 'hidden_target_hp': 50}]}))
+        self.assertEqual(result['spells'], {'class': 'Mage', 'learned': [
+            {'name': 'Magic Missile', 'mana': 1}]})
+
+    def test_normalization_separates_equipment_from_pack_resources(self):
+        first = [dict(description='a Wooden Torch (663 turns)', weight=10)]
+        second = [dict(description='10 Wooden Torches (5000 turns)', weight=100)]
+        self.assertEqual(c.normalized_items(first), c.normalized_items(second))
+        self.assertNotEqual(c.normalized_items([dict(description='a Shield [2,+0]')]),
+                            c.normalized_items([dict(description='a Shield [2,+1]')]))
+        observations = [dict(inventory=dict(equipment=first, pack=first)),
+                        dict(inventory=dict(equipment=first, pack=second))]
+        self.assertEqual(len(c.normalized_sets(observations, 'equipment')), 1)
+        self.assertEqual(len(c.normalized_sets(observations, 'pack')), 1)
+        observations[1]['inventory']['pack'] = [dict(description='a Potion of Speed')]
+        self.assertEqual(len(c.normalized_sets(observations, 'pack')), 2)
 
     def test_hashes_loadout_deduplication_and_level_filter(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -71,6 +94,44 @@ class CandidatesTest(unittest.TestCase):
             save.write_bytes(b'changed')
             with self.assertRaisesRegex(ValueError, 'hash mismatch'):
                 c.collect(root)
+
+    def test_missing_frames_and_missing_spells_are_visible(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            case = root / 'deaths/mage'
+            case.mkdir(parents=True)
+            record = dict(character='Hobbit Mage', terminal=dict(level=3, class_idx=1))
+            path = case / 'record.json'
+            path.write_text(json.dumps(record))
+            row = c.collect(root)['unobserved_cases'][0]
+            self.assertEqual(row['status'], 'no_recorded_frames')
+            self.assertIsNone(row['inventory'])
+            frame = case / 'frame.json'
+            frame.write_text(json.dumps(dict(turn=10, level=3, dead=0, hp=0, max_hp=10)))
+            record['recording'] = dict(selected_original_frames=[dict(
+                json=frame.name, json_sha256=c.digest(frame))])
+            path.write_text(json.dumps(record))
+            row = c.collect(root)['cases'][0]['observations'][0]
+            self.assertIn('spells', row['missing'])
+            self.assertEqual(row['class_basis'], 'record_metadata')
+            self.assertTrue(row['low_hp_candidate'])
+            record.update(character='Unknown', terminal={})
+            path.write_text(json.dumps(record))
+            self.assertEqual(c.collect(root)['excluded_frames'][0]['reason'], 'class_unavailable')
+            record.update(character='Hobbit Mage', terminal=dict(level=3, class_idx=1))
+            frame.write_text(json.dumps(dict(turn=10, level=3, spells={'class': 'Priest'})))
+            record['recording']['selected_original_frames'][0]['json_sha256'] = c.digest(frame)
+            path.write_text(json.dumps(record))
+            self.assertEqual(c.collect(root)['excluded_frames'][0]['reason'], 'class_metadata_conflict')
+
+    def test_untracked_inputs_are_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            subprocess.run(['git', 'init', '-q', str(root)], check=True)
+            (root / 'deaths').mkdir()
+            (root / 'deaths/untracked.json').write_text('{}')
+            with self.assertRaisesRegex(ValueError, 'untracked changes'):
+                c.require_clean_inputs(root)
 
 
 if __name__ == '__main__':
