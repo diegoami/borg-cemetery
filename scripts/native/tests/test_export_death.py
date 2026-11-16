@@ -48,6 +48,63 @@ class ExportTest(unittest.TestCase):
         self.assertEqual(ed.export(run, 'c', self.build), (None, 'not dead'))
         self.assertFalse(self.reg.exists() and any(self.reg.iterdir()))
 
+    def test_synthetic_deaths_never_create_a_natural_registry(self):
+        markers = [({'synthetic': True}, '', '-'),
+                   ({'start_depth': 20}, '', '-'),
+                   ({}, 'synthetic=1\n', '-'),
+                   ({}, 'start_depth=20\n', '-'),
+                   ({}, 'flags=menu,start-depth=20\n', '-'),
+                   ({}, '', 'menu,start-depth=20'),
+                   ({'synthetic': False}, 'synthetic=1\n', '-')]
+        for index, (summary, config, flags) in enumerate(markers):
+            with self.subTest(summary=summary, config=config, flags=flags):
+                run = make_run(self.base, f'synthetic-{index}', **summary)
+                with (run / 'config.txt').open('a') as stream:
+                    stream.write(config)
+                self.assertEqual(ed.export(run, 'rust', self.build, flags),
+                                 (None, 'not natural: synthetic start'))
+                self.assertFalse(self.reg.exists())
+
+    def test_explicit_natural_marker_preserves_natural_export(self):
+        run = make_run(self.base, 'natural', synthetic=False)
+        with (run / 'config.txt').open('a') as stream:
+            stream.write('synthetic=0\nstart_depth=0\n')
+        self.assertEqual(ed.export(run, 'rust', self.build)[1], 'exported')
+
+    def test_flag_variants_are_excluded_from_both_flag_sources(self):
+        for index, flag in enumerate(('start-depth 20', 'start-depth', 'start_depth=20',
+                                      'synthetic', 'menu, start-depth=20', 'Start-Depth=20')):
+            for recorded in (False, True):
+                with self.subTest(flag=flag, recorded=recorded):
+                    run = make_run(self.base, f'variant-{index}-{recorded}')
+                    if recorded:
+                        (run / 'config.txt').write_text(f'flags={flag}\n')
+                    self.assertEqual(ed.export(run, 'rust', self.build, '-' if recorded else flag),
+                                     (None, 'not natural: synthetic start'))
+        self.assertFalse(self.reg.exists())
+
+    def test_malformed_option_receipts_fail_closed_without_registry_access(self):
+        for index, options in enumerate(([1], [], 'true', 1, False)):
+            run = make_run(self.base, f'options-{index}', game_options=options)
+            self.assertEqual(ed.export(run, 'rust', self.build),
+                             (None, 'not natural: malformed game_options'))
+        self.assertFalse(self.reg.exists())
+
+    def test_one_way_lineage_requires_native_boolean_pair_not_just_a_load(self):
+        summary = dict(dead=True, stop_reason='death', death_cause='a cave spider', loaded=True)
+        for options in ({}, {'birth_force_descend': True},
+                        {'birth_force_descend': 'true', 'birth_no_recall': 'true'},
+                        {'birth_force_descend': 1, 'birth_no_recall': 1}):
+            self.assertIsNone(ed.not_natural(dict(summary, game_options=options)))
+
+    def test_one_way_save_lineage_cannot_be_exported_as_an_ordinary_death(self):
+        run = make_run(self.base, 'unmarked-loaded-one-way', loaded=True,
+                       game_options=dict(birth_force_descend=True, birth_no_recall=True))
+        case, reason = ed.export(run, 'rust', self.build)
+        self.assertIsNone(case)
+        self.assertIn('one-way birth options', reason)
+        self.assertFalse(self.reg.exists())
+
     def test_death_writes_a_dossier(self):
         run = make_run(self.base, 'dead')
         case, what = ed.export(run, 'c', self.build, 'menu')
