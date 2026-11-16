@@ -33,3 +33,9 @@ The native record's pval ceiling is currently 32767, without a per-kind charge
 cap. The fixed observed kit has no wands/staves and every recorded pval is zero;
 this bank does not qualify charged/recharged builds. Wider item validation needs
 a separate source-side change and new qualification before extending the bank.
+
+The six P1 cells are paired conditions on three generated caves from the same
+seed 101, not six independent lives. Birth/observed cells at each depth share
+the cave; the tier source also uses seed 101. Denominator is one per cell.
+Death/survival counts imply no population rate or isolated tier-effect estimate,
+including because birth cells spend an inert Recall-scroll action.

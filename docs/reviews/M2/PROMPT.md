@@ -51,3 +51,12 @@ and recheck the separate reborn session's native-tool subtree verification.
 The birth kit is explicitly ordinary-before-one-way-options and includes a Recall
 scroll absent from a native one-way birth; judge that declared P1 construction
 without treating it as native-kit play. Charged builds remain unqualified.
+
+The 52dff9f review recommends approving guard/suite changes with no blocker.
+For any follow-up delta check, read FOLLOW-UP-52dff9f.md and results-lineage.json:
+verify hard near-death/source/manifest invariants, required key receipts and the
+interruption cleanup; compare the separately retained new attempt to the frozen
+52dff9f baseline using its committed verification command. Confirm the paired
+three-cave/two-condition/one-seed scope and the explicit absence of a claim of
+same-toolchain binary reproducibility. Native/source fixes remain owned by the
+reborn session; no new runtime/native pin is introduced here.

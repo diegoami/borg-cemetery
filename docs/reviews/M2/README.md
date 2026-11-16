@@ -47,7 +47,7 @@ are explicitly declared; source saves/private Borg state are not restored.
 
 ## Validation and review findings
 
-- Cemetery: 56 runner/tests, 50 native-tool tests; statistics check over 129 reports.
+- Cemetery: 58 runner/tests, 50 native-tool tests; statistics check over 129 reports.
 - Reborn: formatting, Clippy, 165 workspace tests and 328 core release tests pass
   (four existing ignored); 91 tool tests, 19 script tests, vendor audit pass.
 - Native local suite: 81 tests, 16 dependency/fixture skips, zero failures. CI
@@ -120,5 +120,42 @@ The final coordinated runner execution is retained from `p1-milestone-suite`
 (clean runtime 99473510 in an isolated worktree). All 18 streams match the
 previous `p1-review-suite`; evidence now also binds keys.log. The workflow's
 verify step enforces these hashes against the retained packet automatically.
-Cemetery checks after the follow-ups: 56 repo tests, 50 native-tool tests,
+Cemetery checks after the follow-ups: 58 repo tests, 50 native-tool tests,
 statistics over 129 reports. The reviewed birth normalization is unchanged.
+
+## Scope and packet lineage after the 52dff9f review
+
+The six scenario specifications are **paired conditions on three generated caves**,
+all from seed 101. Birth and observed-tier cells at a depth share the initial
+cave/coordinates (d5 50,15; d10 28,36; d15 159,16). The source tier also came
+from seed 101. Each cell has denominator one. Four deaths and two cap survivals
+are descriptive counts, not an outcome rate from six independent lives. Repeats
+add no independent observations. Birth/observed differences include the inert
+Recall-scroll action and the declared projection, so this is not an experiment
+isolating character level alone.
+
+Historical result files are now retained byte for byte as
+[the b55b07a packet](checkpoints/p1-results-b55b07a.json) and
+[the 52dff9f packet](checkpoints/p1-results-52dff9f.json).
+[results-lineage.json](results-lineage.json) gives their exact file/build hashes
+and an immutable reference to the #15 pilot. `results.json` is now frozen byte for byte at the 52dff9f reference. It historically
+replaced the b55b07a packet (000d8d6f… → 8336a9ca…); both original files and
+hashes are preserved above. Fresh follow-up results are retained separately in
+`reproductions/20261116-followup/`, with both sets of stream hashes and a runnable
+comparison receipt. Path/timing receipts differ; historical builds are not relabelled.
+
+Three binaries have been recorded for runtime 99473510 / source bf9a451c:
+`000d8d6f…` (b55b07a packet), `ba06d6fa…` (#15 pilot), and `8336a9ca…`
+(52dff9f and the latest execution). All three report rustc 1.100.0 and GCC 14.2.0,
+but were built in different directories. Same-toolchain bit reproducibility was
+**not established**. The specific cause of the byte differences was not isolated;
+we do not attribute them solely to toolchain versions, paths or timestamps.
+This corrects the earlier cross-toolchain-only explanation. Full build identities
+remain separate, while identical gameplay streams establish the limited observed
+behavioural reproduction. See [FOLLOW-UP-52dff9f.md](FOLLOW-UP-52dff9f.md).
+
+The latest follow-up leaves results.json unchanged, and records its new attempt
+separately. All six outcomes and 18 streams match the frozen baseline under the
+stricter semantic verifier. Checks: 58 repo tests, 50 native-tool tests and
+statistics over 129 reports. Main's new qualified controls are merged without
+replacing prior packages; the separate follow-up integrity receipt records it.

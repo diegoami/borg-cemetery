@@ -60,9 +60,9 @@ Neither moving tools nor writing an analysis applies a gameplay fix.
 
 Synthetic generated-depth runs are experimental results, not natural deaths.
 The exporter and reconciliation share the same conservative guard. In summary
-or config, absent/empty/zero `start_depth` is ordinary (JSON 0 or false, or the
-literal string `0`); other spellings, including `00` and `0.0`, are excluded.
-The accepted ordinary `synthetic` values are absent, JSON false/0, empty string,
+or config, absent/empty/zero `start_depth` is ordinary (JSON numeric zero, including 0.0, or false, or the
+literal string `0`); other string spellings, including `00` and `0.0`, are excluded.
+The accepted ordinary `synthetic` values are absent, JSON false/numeric zero, empty string,
 `0` and lowercase `false`. Values such as `False` or `no` fail closed.
 One conflicting synthetic marker suffices to exclude a run.
 

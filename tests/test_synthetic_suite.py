@@ -2,6 +2,8 @@
 import copy
 import json
 import os
+import signal
+import subprocess
 from pathlib import Path
 import sys
 import tempfile
@@ -20,7 +22,10 @@ class FakeAdapter:
     def describe(self, commit, contracts, cores=()):
         if self.mode == 'unsupported':
             raise s.ExecutionError('unsupported', 'capability absent')
-        return dict(commit=commit, contracts=sorted(contracts))
+        return dict(repository='diegoami/borg-reborn-rs', commit=commit, contracts=sorted(contracts),
+                    capabilities_sha256='d' * 64,
+                    build=dict(impl='rust', git_rev=commit, git_dirty='no', inputs_dirty='no',
+                               binary_sha256='b' * 64, source_sha256='c' * 64))
 
     def run(self, case, root, output):
         self.calls.append(case)
@@ -36,7 +41,8 @@ class FakeAdapter:
                        game_options=dict(birth_force_descend=True, birth_no_recall=True),
                        dead=self.mode == 'death', stop_reason='death' if self.mode == 'death' else 'turns',
                        death_cause='a test monster' if self.mode == 'death' else '', game_turns=case['turn_cap'], keys=2)
-        process = dict(status='success', exit_code=0)
+        process = dict(status='success', exit_code=0, timed_out=False,
+                       executable_sha256_before='b' * 64, executable_sha256_after='b' * 64)
         if self.mode == 'identity_mismatch':
             summary['start_depth'] += 1
         if self.mode == 'timeout':
@@ -57,7 +63,7 @@ class FakeAdapter:
                       synthetic_contract=case['harness_contract'], dungeon_mode='one_way', profile_sha256=build['profile_sha256'])
         (output / 'config.txt').write_text(''.join(f'{k}={v}\n' for k, v in config.items()))
         (output / 'messages.log').write_text('0 1 0 Nothing happens.\n1 2 0 Nothing happens!\n2 3 0 Borg note: Nothing happens.\n')
-        (output / 'keys.log').write_text('0 107\n1 108\n')
+        (output / 'keys.log').write_text('1 1 6b 0\n2 2 6c 0\n')
         if self.mode != 'missing':
             (output / 'state.log').write_text(f"1 1,1 d{case['depth']}/{case['depth']} hp1/20 sp0/0 f100\n"
                                              f"2 1,1 d{case['depth']}/{case['depth']} hp10/20 sp0/0 f100\n")
@@ -148,7 +154,8 @@ class SuiteTest(unittest.TestCase):
         expected = copy.deepcopy(actual)
         self.assertEqual(s.verify_results(actual, expected), 4)
         for mutation in ('keys', 'state', 'messages', 'missing_digest', 'missing_case',
-                         'duplicate_case', 'status', 'runtime'):
+                         'duplicate_case', 'status', 'runtime', 'near_death', 'source',
+                         'manifest', 'death_cause', 'minimum_hp'):
             changed = copy.deepcopy(actual)
             row = changed['results'][0]
             if mutation in ('keys', 'state', 'messages'):
@@ -161,10 +168,49 @@ class SuiteTest(unittest.TestCase):
                 changed['results'][1] = copy.deepcopy(row)
             elif mutation == 'status':
                 row['status'] = 'death'
+            elif mutation == 'near_death':
+                row['qualified_near_death'] = dict(count=0)
+            elif mutation == 'source':
+                changed['build_identity']['build']['source_sha256'] = 'e' * 64
+            elif mutation == 'manifest':
+                changed['manifest_sha256'] = 'e' * 64
+            elif mutation == 'death_cause':
+                row['death_cause'] = 'changed'
+            elif mutation == 'minimum_hp':
+                row['minimum_observed_living_hp'] = 123
             else:
                 changed['requested_runtime']['commit'] = '0' * 40
             with self.subTest(mutation=mutation), self.assertRaises(ValueError):
                 s.verify_results(changed, expected)
+        changed = copy.deepcopy(actual)
+        for row in changed['results']:
+            row['qualified_near_death'] = dict(coverage='unavailable', count=0)
+        with self.assertRaisesRegex(ValueError, 'unavailable/null'):
+            s.verify_results(changed, changed)
+
+    def test_identity_and_key_log_receipts_cannot_be_bypassed(self):
+        case = s.generate(self.path)['cases'][0]
+        output = self.root / 'receipts'
+        FakeAdapter().run(case, self.root, output)
+        self.assertEqual(s.classify(case, output, 0, 'b' * 64)['status'], 'survived_to_cap')
+        for digest in (None, '', False, 'a' * 64):
+            with self.subTest(digest=digest):
+                self.assertEqual(s.classify(case, output, 0, digest)['status'], 'identity_mismatch')
+        process = s.read(output / 'process.json')
+        for key in ('executable_sha256_before', 'executable_sha256_after'):
+            s.write(output / 'process.json', dict(process, **{key: 'e' * 64}))
+            self.assertEqual(s.classify(case, output, 0, 'b' * 64)['status'], 'identity_mismatch')
+        s.write(output / 'process.json', dict(process, timed_out='false'))
+        self.assertEqual(s.classify(case, output, 0, 'b' * 64)['status'], 'harness_failure')
+        s.write(output / 'process.json', process)
+        summary = s.read(output / 'summary.json')
+        s.write(output / 'summary.json', dict(summary, game_turns=10**30))
+        self.assertEqual(s.classify(case, output, 0, 'b' * 64)['status'], 'identity_mismatch')
+        s.write(output / 'summary.json', summary)
+        (output / 'keys.log').unlink()
+        self.assertEqual(s.classify(case, output, 0, 'b' * 64)['status'], 'harness_failure')
+        (output / 'keys.log').write_text('1 1 6b 0\n')
+        self.assertEqual(s.classify(case, output, 0, 'b' * 64)['status'], 'identity_mismatch')
 
     def test_outer_timeout_kills_engine_grandchildren(self):
         pidfile = self.root / 'grandchild.pid'
@@ -190,6 +236,42 @@ class SuiteTest(unittest.TestCase):
             if time.monotonic() >= deadline:
                 self.fail(f'grandchild {pid} is still running after group timeout')
             time.sleep(0.01)
+
+    def test_interrupted_runner_cleans_its_separate_process_group(self):
+        pidfile = self.root / 'cancelled.pid'
+        child_code = ('import pathlib, subprocess, sys; '
+                      'child=subprocess.Popen([sys.executable,"-c","import time;time.sleep(60)"]); '
+                      'pathlib.Path(sys.argv[1]).write_text(str(child.pid)); child.wait()')
+        code = ('import os, signal, sys; '
+                'sys.path.insert(0,sys.argv[1]); import synthetic_suite as s; '
+                'signal.signal(signal.SIGTERM,s.terminate); '
+                's.run_bounded([sys.executable,"-c",sys.argv[2],sys.argv[3]],'
+                'os.getcwd(),os.environ.copy(),sys.stdout,60)')
+        worker = subprocess.Popen([sys.executable, '-c', code, str(Path(s.__file__).parent),
+                                   child_code, str(pidfile)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        try:
+            deadline = time.monotonic() + 5
+            while not pidfile.exists() and time.monotonic() < deadline:
+                time.sleep(0.01)
+            self.assertTrue(pidfile.exists(), 'worker failed to start the grandchild')
+            worker.send_signal(signal.SIGTERM)
+            self.assertEqual(worker.wait(timeout=5), 128 + signal.SIGTERM)
+            status = Path(f'/proc/{int(pidfile.read_text())}/stat')
+            deadline = time.monotonic() + 2
+            while True:
+                try:
+                    state = status.read_text().split(') ', 1)[1][0]
+                except FileNotFoundError:
+                    break
+                if state in ('Z', 'X'):
+                    break
+                if time.monotonic() >= deadline:
+                    self.fail('cancelled runner left its grandchild running')
+                time.sleep(0.01)
+        finally:
+            if worker.poll() is None:
+                worker.kill()
+            worker.wait()
 
     def test_outcomes_failures_and_unknown_qualification_are_independent(self):
         for mode, expected in [('death', 'death'), ('survived_to_cap', 'survived_to_cap'),

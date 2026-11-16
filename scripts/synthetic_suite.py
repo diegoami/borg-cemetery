@@ -14,6 +14,7 @@ from pathlib import Path
 import re
 import signal
 import subprocess
+import sys
 
 SCHEMA = 'borg-cemetery/synthetic-suite@1'
 RESULT_SCHEMA = 'borg-cemetery/synthetic-results@1'
@@ -296,12 +297,17 @@ def run_bounded(argv, cwd, env, log, seconds):
         try:
             return process.wait(timeout=seconds)
         except subprocess.TimeoutExpired:
+            return 124
+        finally:
             try:
                 os.killpg(process.pid, signal.SIGKILL)
             except ProcessLookupError:
                 pass
             process.wait()
-            return 124
+
+
+def terminate(signum, frame):
+    raise SystemExit(128 + signum)
 
 
 class RebornAdapter:
@@ -389,10 +395,13 @@ def classify(case, output, returncode, expected_binary=None):
     if returncode == 124 or process.get('status') == 'timeout' or process.get('timed_out') is True:
         result.update(status='timeout', reason='wall limit; partial evidence retained')
         return result
+    if type(process.get('timed_out')) is not bool:
+        result['reason'] = 'missing/malformed timed_out receipt'
+        return result
     if type(returncode) is not int or returncode or process.get('status') != 'success' or type(process.get('exit_code')) is not int or process.get('exit_code') != 0:
         result['reason'] = 'launcher/child failure or missing successful process receipt'
         return result
-    if result['reason'] or set(receipts) != {'summary.json', 'process.json', 'config.txt'} or 'state.log' not in result['evidence']:
+    if result['reason'] or set(receipts) != {'summary.json', 'process.json', 'config.txt'} or not {'keys.log', 'state.log', 'messages.log'} <= result['evidence'].keys():
         result['reason'] = result['reason'] or 'missing required evidence'
         return result
     build = case['character_build']
@@ -406,7 +415,8 @@ def classify(case, output, returncode, expected_binary=None):
                     initial_generation_pending=False, start_build=build['start'],
                     synthetic_contract=case['harness_contract'], dungeon_mode='one_way')
     mismatch = [key for key, value in expected.items() if type(summary.get(key)) is not type(value) or summary.get(key) != value]
-    if expected_binary and (process.get('executable_sha256_before') != expected_binary or process.get('executable_sha256_after') != expected_binary):
+    if (not isinstance(expected_binary, str) or not HEX.fullmatch(expected_binary) or
+            process.get('executable_sha256_before') != expected_binary or process.get('executable_sha256_after') != expected_binary):
         mismatch.append('executed binary digest')
     for key, summary_key in (('level', 'initial_clevel'), ('max_hp', 'initial_max_hp'), ('max_sp', 'initial_max_sp')):
         if key in case['expected_start'] and (type(summary.get(summary_key)) is not int or summary[summary_key] != case['expected_start'][key]):
@@ -445,8 +455,21 @@ def classify(case, output, returncode, expected_binary=None):
         result.update(status='identity_mismatch', reason='missing or incorrect first state')
         return result
     terminal_turn = summary.get('game_turns')
-    if type(terminal_turn) is not int or terminal_turn < previous or type(summary.get('keys')) is not int or summary.get('keys') != len(rows):
+    # The pinned engine's turn counter is int32_t. Do not accept impossible
+    # JSON integers; the cap can legitimately be crossed between key boundaries.
+    if type(terminal_turn) is not int or not previous <= terminal_turn <= 2**31 - 1 or type(summary.get('keys')) is not int or summary.get('keys') != len(rows):
         result.update(status='identity_mismatch', reason='terminal/log boundary mismatch')
+        return result
+    try:
+        keys = (output / 'keys.log').read_text().splitlines()
+        if len(keys) != summary['keys']:
+            raise ValueError('keys.log line count differs from summary/state')
+        for line, state in zip(keys, rows):
+            match = re.fullmatch(r'(\d+) (\d+) [0-9a-fA-F]+ (\d+)', line)
+            if not match or int(match[1]) != state[0]:
+                raise ValueError('malformed key or key/state turn mismatch')
+    except (ValueError, UnicodeError) as error:
+        result.update(status='identity_mismatch', reason=str(error))
         return result
     alive = [(turn, hp) for turn, _, _, hp in rows if hp >= 0]
     result['minimum_observed_living_hp'] = min((hp for _, hp in alive), default=None)
@@ -498,8 +521,9 @@ def report(document):
     document['attempted_count'] = sum(row['attempted'] for row in rows)
     document['minimum_living_hp_distribution'] = dict(Counter(str(row['minimum_observed_living_hp']) for row in rows))
     document['death_causes'] = dict(Counter(row['death_cause'] for row in rows if row['status'] == 'death'))
-    document['missing_evidence'] = [dict(scenario_id=row['scenario_id'], files=sorted({'summary.json', 'process.json', 'config.txt', 'state.log'} - row['evidence'].keys()))
-                                    for row in rows if {'summary.json', 'process.json', 'config.txt', 'state.log'} - row['evidence'].keys()]
+    required = {'summary.json', 'process.json', 'config.txt', 'keys.log', 'state.log', 'messages.log'}
+    document['missing_evidence'] = [dict(scenario_id=row['scenario_id'], files=sorted(required - row['evidence'].keys()))
+                                    for row in rows if required - row['evidence'].keys()]
     lines += ['Death causes: ' + json.dumps(document['death_causes'], sort_keys=True),
               'Sampled minimum living HP distribution: ' + json.dumps(document['minimum_living_hp_distribution'], sort_keys=True),
               f"Scenarios with missing evidence: {len(document['missing_evidence'])}.", '']
@@ -518,6 +542,9 @@ def run_suite(path, source, output, target_commit=None, adapter=None):
     identity, preflight = None, None
     try:
         identity = adapter.describe(target, {case['harness_contract'] for case in cases}, {case['character_build']['core'] for case in cases})
+        binary = (identity.get('build') or {}).get('binary_sha256')
+        if not isinstance(binary, str) or not HEX.fullmatch(binary):
+            raise ExecutionError('identity_mismatch', 'preflight requires a verified binary digest')
     except ExecutionError as error:
         preflight = error
     except (OSError, ValueError, TypeError, subprocess.SubprocessError) as error:
@@ -566,9 +593,22 @@ def verify_results(actual, expected):
     Paths, process timings and binary hashes are attempt-specific; scenario
     identity and gameplay streams are exact retained expectations.
     """
-    for name in ('schema', 'suite_spec_sha256', 'scenario_count', 'requested_runtime'):
+    for name in ('schema', 'suite_spec_sha256', 'scenario_count', 'requested_runtime', 'manifest_sha256'):
         if actual.get(name) != expected.get(name):
             raise ValueError(f'retained evidence identity mismatch: {name}')
+    for document in (actual, expected):
+        identity = document.get('build_identity') or {}
+        build = identity.get('build') or {}
+        if (build.get('impl') != 'rust' or identity.get('commit') != document['requested_runtime']['commit'] or
+                build.get('git_rev') != identity.get('commit') or
+                build.get('git_dirty') != 'no' or build.get('inputs_dirty') != 'no' or
+                not isinstance(build.get('source_sha256'), str) or not HEX.fullmatch(build['source_sha256'])):
+            raise ValueError('retained evidence requires an exact clean source identity')
+    for key in ('repository', 'commit', 'capabilities_sha256'):
+        if actual['build_identity'].get(key) != expected['build_identity'].get(key):
+            raise ValueError(f'retained source identity mismatch: {key}')
+    if actual['build_identity']['build']['source_sha256'] != expected['build_identity']['build']['source_sha256']:
+        raise ValueError('retained source digest mismatch')
     def rows(document):
         result = {row['scenario_id']: row for row in document['results']}
         if len(result) != len(document['results']) or len(result) != document['scenario_count']:
@@ -581,9 +621,14 @@ def verify_results(actual, expected):
         reference = b[identifier]
         if row['status'] in FAILURES:
             raise ValueError(f'{identifier}: attempted gameplay failed')
-        for key in ('spec_sha256', 'status', 'terminal', 'observed_turns'):
+        for key in ('spec_sha256', 'status', 'terminal', 'observed_turns', 'death_cause',
+                    'minimum_observed_living_hp', 'candidate_screen', 'refusal_messages', 'progress'):
             if row.get(key) != reference.get(key):
                 raise ValueError(f'{identifier}: retained {key} mismatch')
+        for item in (row, reference):
+            near = item.get('qualified_near_death') or {}
+            if near.get('coverage') != 'unavailable' or near.get('count', 'missing') is not None:
+                raise ValueError(f'{identifier}: P1 near-death coverage/count must remain unavailable/null')
         for name in ('keys.log', 'state.log', 'messages.log'):
             receipt = row['evidence'].get(name)
             if (not isinstance(receipt, dict) or not HEX.fullmatch(receipt.get('sha256', '')) or
@@ -627,4 +672,7 @@ def main():
 
 
 if __name__ == '__main__':
+    # CI cancellation commonly escalates from SIGINT to SIGTERM. Convert the
+    # latter to an exception so run_bounded's group-cleanup finally executes.
+    signal.signal(signal.SIGTERM, terminate)
     raise SystemExit(main())

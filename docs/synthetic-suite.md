@@ -137,3 +137,23 @@ The adapter owns a new process group for the launcher/supervisor/engine. If its
 outer wall bound expires, it kills the entire group and reaps its launcher,
 retaining status 124 and partial evidence. A real subprocess regression verifies
 that the engine grandchild is no longer running after the timeout.
+
+The six P1 cells are paired conditions on three generated caves from the same
+seed 101, not six independent lives. Birth/observed cells at each depth share
+the cave; the tier source also uses seed 101. Denominator is one per cell.
+Death/survival counts imply no population rate or isolated tier-effect estimate,
+including because birth cells spend an inert Recall-scroll action.
+
+The retained gate also requires matching manifest/source/capability identities,
+clean exact runtime receipts and deterministic diagnostics (death cause, minimum
+HP, candidate/refusal screens and progress). Both packets must keep qualified
+near-death coverage unavailable and its count null, even if both were edited.
+Binary hashes, paths and timings remain attempt-specific across builds. This is
+a regression gate, not an independent approval mechanism: a jointly changed
+runner/reference still requires review. The synthetic workflow pins its action
+revisions to commit SHAs. Cancellation/interruption runs group cleanup too; CLI
+SIGTERM is converted to an exception so the cleanup finally block executes.
+Valid runs require keys/state/messages logs, with key-line and state-row counts
+agreeing with summary.keys. A missing verified executable digest never disables
+identity checks; native signed-32-bit game-turn bounds and timed_out typing are
+checked. A death receipt is not qualified counterfactual/causal death analysis.
