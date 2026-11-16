@@ -1,0 +1,77 @@
+{
+  "schema": "class-preference-smoke@1",
+  "promoted_commit": "4a2cb910d7d21271987a0ea9450d9089ca4e2ea0",
+  "runtime_source_sha256": "290fd89ed58c536dd59835d259d85dc1a40cd5dd8b71d1e16f765a268abf71b3",
+  "binary_sha256": "29936aa54c24f930b06a433ca84ba525efed198e4405348955daf83db54cde2c",
+  "actual_build_commit": "8e007cddc1b0c0fb9f97319f8a8128b88680bf97",
+  "game_turn_cap": 100000,
+  "flags": "menu,exact",
+  "purpose": "Owner-requested bounded real-engine mechanism smoke, one open-suite seed per class. Descriptive outcomes only; no population or improvement claim.",
+  "classes": [
+    {
+      "class": "warrior",
+      "class_id": 0,
+      "race_id": 0,
+      "seed": 1000,
+      "profile": "profiles/warrior.json"
+    },
+    {
+      "class": "mage",
+      "class_id": 1,
+      "race_id": 1,
+      "seed": 1010,
+      "profile": "profiles/mage.json"
+    },
+    {
+      "class": "druid",
+      "class_id": 2,
+      "race_id": 2,
+      "seed": 1020,
+      "profile": "profiles/druid.json"
+    },
+    {
+      "class": "priest",
+      "class_id": 3,
+      "race_id": 3,
+      "seed": 1030,
+      "profile": "profiles/priest.json"
+    },
+    {
+      "class": "necromancer",
+      "class_id": 4,
+      "race_id": 4,
+      "seed": 1040,
+      "profile": "profiles/necromancer.json"
+    },
+    {
+      "class": "paladin",
+      "class_id": 5,
+      "race_id": 5,
+      "seed": 1050,
+      "profile": "profiles/paladin.json"
+    },
+    {
+      "class": "rogue",
+      "class_id": 6,
+      "race_id": 6,
+      "seed": 1060,
+      "profile": "profiles/rogue.json"
+    },
+    {
+      "class": "ranger",
+      "class_id": 7,
+      "race_id": 7,
+      "seed": 1070,
+      "profile": "profiles/ranger.json"
+    },
+    {
+      "class": "blackguard",
+      "class_id": 8,
+      "race_id": 8,
+      "seed": 1080,
+      "profile": "profiles/blackguard.json"
+    }
+  ],
+  "neutral_profile": "profiles/neutral.json",
+  "zoo_pin": "c5f1b0429ea898c8d5484aa4f1ac0d681972aac7"
+}
