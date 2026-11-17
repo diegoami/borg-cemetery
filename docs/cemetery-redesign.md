@@ -1,8 +1,10 @@
-# Cemetery redesign: controlled runs and reproducible dangerous scenarios
+# Architecture proposal: a shared laboratory for Borg battle scenarios
 
-Status: owner-requested design proposal, 2026-11-15. **Not implemented or an
-accepted milestone.** This proposes the next architecture; it does not change
-the M1 review boundary, run new games, provision services or delete evidence.
+Status: **proposed for architecture review; no implementation authorized by this
+document**. This revision incorporates the owner's clarification: cemetery studies
+battle scenarios and how Borgs survive or die. Borg-zoo owns population comparisons.
+Configuration is recorded as evidence; parameter search is outside this design.
+The earlier 64-case evaluation proposal is superseded.
 
 ## Owner decision: Cemetery execution and storage, Zoo reports (2026-11-16)
 
@@ -12,7 +14,10 @@ add the saved-scenario execution mode tracked in
 Cemetery owns saves, scenarios, run/continuation records, intermediate
 checkpoints and canonical evidence. **Zoo owns aggregation, comparison reports
 and report presentation**, consuming immutable Cemetery result snapshots.
-This allocation supersedes earlier ownership suggestions in this proposal.
+This allocation supersedes earlier ownership suggestions in this proposal,
+including the historical human-report allocation in the original architecture
+review packet. The Firebase documents below remain a backend proposal, not
+a deployed service or an accepted milestone.
 
 | Execution mode | Game execution | Authoritative saves and run evidence | Reports |
 | --- | --- | --- | --- |
@@ -42,411 +47,427 @@ integration: schema, immutable result snapshots, ingestion/retry/concurrent
 claims, durable publication, retention and backup/export must fit both modes.
 Provider and deployment choices remain open; no database service is deployed.
 
-## What the cemetery should answer
+Read the [scenario and integration contract](architecture/scenario-contract.md)
+for identities, state transitions, adapter operations and acceptance examples.
+The [Firebase backend decision](architecture/firebase-backend.md) specifies the
+managed document/artifact backend, queries, authorization and recovery protocol.
+The [review response](architecture/review-response.md) tracks the six findings
+on the previous proposal head and the corrections proposed here.
+The [review prompt](architecture/review-prompt.md) defines this review. M1 remains
+unaccepted and its implementation boundary is unchanged.
 
-For a fixed set of starting conditions, does build B with configuration Y do
-better than build A with configuration X? Where did it become exposed to death,
-what could it have done differently, and does that change help elsewhere?
+## 1. Purpose and ownership
 
-The current historical statistics cannot answer that question. They inventory
-selected death dossiers, without a complete cohort of survivors and failures.
-Generating more permanent death pages would preserve that limitation. The unit
-of work should be a controlled experiment, with deaths and dangerous recoveries
-as evidence inside it.
+The questions are: what happened in this encounter, what did the Borg know, why
+did it die or recover, and can another implementation survive the same position?
+Study surviving battles as well as deaths. Preserve executable situations with
+their context, and stop spending analysis effort on an old failure once it no
+longer affects a project's tracked build. A useful outcome is an explanation,
+reproduction and focused regression case for the Borg maintainer.
 
-The proposed loop is:
+| Owner | Responsibility |
+| --- | --- |
+| Borg-zoo | Seed suites, population experiments, aggregation/comparison reports and presentation, performance statistics and any confirmation/sealed-suite policy |
+| Cemetery | Shared save/run database and artifacts, encounter discovery, death/near-death qualification, scenario packages, reconstruction, local or CI trials and current-build relevance evidence |
+| Borg/engine project | Gameplay, instrumentation, configuration export, native build/run/save support and any private-state transfer contract |
+| Project maintainer | Tracked builds/configurations, investigation priorities, proposed gameplay changes and acceptance |
+
+Cemetery does not own an optimizer, population scoreboard or population experiment
+scheduler.
+It does not sweep parameters, select a winning profile or assert population
+survival gains from its selected scenarios. Configuration variants describe what
+was played. An explicitly requested alternative build/configuration may be tried
+on a scenario, but it is an investigative trial, not an automatic tuning loop.
+Broader validation of a gameplay change belongs in zoo.
+
+This boundary follows the inspected
+[zoo design at 912ecb13](https://github.com/diegoami/borg-zoo/blob/912ecb13bb08e99f6d57b381a10b794e22e3423c/docs/DESIGN.md).
+It is an integration proposal, not a claim that zoo already exports cemetery
+scenario packages or that either repository has been changed to do so.
+
+## 2. Discover over thousands of fixed starting cases
+
+Select a frozen manifest of **many thousands of discovery cases**, initially
+targeting **8,192 cases per project** across approved source suites. This is an
+operational starting target for encounter diversity, not a statistical power
+claim or a hard ceiling. Support larger catalogues and deep-game sources; report
+coverage by character, depth and encounter mechanism. Tens of cases are suitable
+only for testing the pipeline. Thousands of town deaths still provide little
+coverage of a late-game battle.
+
+Reuse zoo's eligible development/discovery suites and their exact birth rules,
+caps and seed identities. Where additional cases are needed, their source owner
+registers another frozen discovery manifest. Do not silently modify suites,
+reinterpret a seed under another engine, or open confirmation/sealed inputs for
+exploratory analysis. The 8,192-case catalogue does not exist yet; no seeds are
+generated or suites unsealed by this PR. A project without zoo can supply the
+same versioned manifest through a native importer.
+
+This catalogue is a source index, not a requirement to rerun every case in
+cemetery for every build. Import qualified zoo results first. Request additional
+captures only for missing encounter evidence, scenario creation or relevance
+checks. Imported original runs and diagnostic reruns have different attempt IDs;
+never replace a measured zoo run with a cemetery rerun.
+
+Keep a few tracked builds per project, initially reference/current/previous,
+with explicit effective configurations. A thousand indexed outcomes can be
+cheap while only a small subset has detailed traces or active investigations.
+The detailed scenario-bank quota is independent of discovery catalogue size.
+
+## 3. Components and deployment
 
 ```mermaid
-flowchart LR
-    S[Versioned seed suite] --> M[Build and configuration matrix]
-    M --> R[CI runs: every cell has a status]
-    R --> D[Qualify dangerous episodes]
-    D --> A[On-demand investigation]
-    A --> P[Proposed change and scenario tests]
-    P --> V[Development cohort and held-out validation]
-    V --> F[Evidence packet for the Borg project]
-    V --> M
+flowchart TD
+    Z[Zoo runs and evidence] --> I[Versioned import adapters]
+    N[Other project harnesses] --> I
+    I --> C[Cemetery API and job coordinator]
+    C --> D[(Cloud Firestore documents)]
+    C --> O[(Cloud Storage artifacts)]
+    C --> W[Isolated CI or local workers]
+    W --> C
+    C --> H[Human scenario pages and replay bundles]
+    H --> B[Borg maintainer investigation and code changes]
+    B --> Z
 ```
 
-## 1. Fix the cohort and identify configurations properly
+Propose **Firebase Cloud Firestore** for metadata, **Cloud Storage for Firebase**
+for compressed artifacts, and **Firebase Authentication** for user identity.
+Firestore's document/collection model and compound queries fit the source,
+scenario, evidence and study records. Use Firestore rather than Firebase Realtime
+Database's single JSON tree.
+([Database comparison](https://firebase.google.com/docs/firestore/rtdb-vs-firestore).)
 
-Start with one versioned suite containing **64 seed cases**: 32 development
-cases and 32 held-out validation cases. This is a bounded pilot, not a claim
-that 64 cases can establish small survival gains. Choose the seeds once, before
-looking at outcomes. Each case binds a seed to race, class, birth options,
-calendar/time inputs and any other initialization randomness. Publish character
-coverage in the suite; do not silently make every seed/class combination an
-extra case. Fix the engine-turn horizon and progress checks in its run contract.
-Changing the cohort or horizon creates a new suite/contract revision.
+Host human pages on Firebase Hosting with a small Cloud Run API/coordinator.
+Workers stay in GitHub Actions or run locally; native games and heavy analysis
+do not execute inside database callbacks. All authoritative mutations go through
+the coordinator, which implements identity uniqueness and referential invariants
+with deterministic document keys, transactions and explicit validation. These
+are application obligations; no SQL foreign-key guarantee is assumed.
 
-Keep up to **three active builds and four active build/configuration variants**
-initially: a reference, a candidate and a recent comparison build. Configurations
-consume variant slots; this is not an unlimited Cartesian product. For example,
-reference/default, candidate/default, candidate/tuning-A and previous/default
-give 64 × 4 = 256 cohort cells. Tune on the 32 development cases and the scenario
-bank; run held-out validation for a frozen finalist. Unscheduled cells remain
-visible as such. This avoids paying for a full validation sweep after every edit.
+Local development uses the Firebase Auth/Firestore/Storage emulators and a local
+API, while downloaded native scenario bundles remain usable offline. An emulator
+is a development/test dependency, not a self-hosted production Firebase service.
+Other maintainers can use a shared workspace or deploy into their own Firebase
+project; identifiers and source packages are not tied to this owner's account.
+No Kubernetes, separate broker, search cluster or AI provider is required.
+Deployment, billing, indexes and rules need qualification before cutover; no
+Firebase resource is provisioned by this design update.
 
-A variant is an immutable **build identity plus effective configuration**:
+## 4. Identity and stored records
 
-| Identity | Required contents |
+| Record | Stable identity and purpose |
 | --- | --- |
-| Build | Project; resolved commit; source-input digest; clean/dirty status; exact binary/runtime digest; engine/data identity; compiler/build flags; instrumentation and recorder versions |
-| Effective configuration | All resolved defaults and overrides, with names/types/schema version; profile contents; native game and Borg options; selected core; relevant environment inputs |
-| Run contract | Seed suite revision; birth/calendar rules; turn horizon; wall/resource limits; harness version; stopping/progress rules; observation contract |
+| Workspace/project | Owner namespace, permissions, adapter and engine family; supports independent users/installations |
+| Source case | Source catalogue revision, seed and complete birth/initialization contract |
+| Build/configuration | Immutable source/runtime/data identity plus resolved effective settings; display labels can point to newer identities |
+| Run attempt | Original source run identity or separate diagnostic execution, actual outcome, provenance and available evidence |
+| Episode | Observed encounter sequence within one attempt: boundaries, context, outcome and danger qualification |
+| Scenario revision | Immutable runnable start and observation/encounter contract derived from an episode |
+| Evidence check | Immutable executed seed/local check with its own execution contract, terminal outcome, encounter result and observation scope |
+| Study/assessment | Independent study objective; per-study/build/configuration relevance projection over shared checks and a hazard qualification contract when applicable |
+| Investigation/trial | Exact evidence and tool versions, target scenario/build, hypothesis, executed alternative and qualified outcome |
+| Artifact/pin/job | Digests, locations, dependency owners, retention state, worker leases and deletion receipts |
 
-Record both requested and engine/Borg-reported values. A profile filename or
-commit alone is insufficient. Canonicalize and hash resolved configuration,
-retain its readable parameter table, and reject unknown or silently ignored
-overrides. A build lacking introspection is explicitly unqualified for a
-controlled parameter comparison until its adapter provides it. For dirty source,
-keep the exact input snapshot or refuse a reconstructable-build designation.
+A seed is essential provenance but is not a globally unique scenario. The same
+seed can contain several battles; different engines give it different meaning.
+One encounter may have several checkpoints. A source execution is identified by
+producer/repository, immutable origin result revision/path, suite/cell and source
+execution/attempt coordinates, within a workspace/project. A later retrieval
+commit is provenance, not a new execution identity. Repeated measured executions
+have distinct source coordinates even when their logical cell is identical.
+Merge identical reimports by that qualified key and payload digest; group related
+encounters for browsing without merging original lives or replacing evidence.
 
-Define a cohort cell by `(suite revision, case, variant, run contract)` and give
-each execution a separate attempt ID. Retries, recorder verification, human
-branches and saved-position trials reference that cell; none creates another
-independent seed case. Reuse an already verified identical cell unless an
-explicit diagnostic repeat is requested. Initially select the first valid
-primary gameplay attempt. Infrastructure failures permit a new primary attempt;
-recorded deaths and gameplay stalls cannot be replaced by favorable retries.
-Diagnostic repeats remain separate from the cohort result.
+Build identity includes repository, resolved commit, source-input digest,
+clean/dirty status, executable/runtime/data digest, compiler/build flags and
+instrumentation versions. Configuration records requested overrides **and all
+effective defaults**, selected core, native options and relevant environment.
+Retain source bytes for dirty inputs or label reconstruction unavailable.
+Unknown settings stay unknown; they cannot support a controlled equivalence claim.
 
-Different Borg builds are deliberately allowed. Matching engine/data and birth
-contracts permit the strongest paired comparison. Different engines require a
-separately qualified whole-system comparison, with the change disclosed. Equal
-seed numbers do not guarantee equal worlds after engines or decisions diverge.
+Every observation identifies engine tick, player decision and engine event where
+available. Keep counters distinct. Outcome labels include death, recovery,
+ongoing encounter, alive at horizon, win, stall, policy stop, timeout, failure and
+identity/configuration mismatch. A living final sample is not proven recovery.
 
-## 2. Store documents and artifacts outside Git
+## 5. Encounters, deaths and genuine near-deaths
 
-Evaluate **PostgreSQL with JSONB documents for metadata**, and an **S3-compatible
-object store for large artifacts** as one candidate in the shared #114 design.
-This earlier recommendation is not a selected provider or implementation: stable
-identity/status fields belong in constrained columns, while versioned analysis
-and configuration documents can evolve. PostgreSQL supports indexed JSONB and
-compound uniqueness/foreign-key constraints, which fit both needs.
-([JSONB documentation](https://www.postgresql.org/docs/current/datatype-json.html),
-[constraints](https://www.postgresql.org/docs/current/ddl-constraints.html).)
+An episode starts at the last supported reasonably stable state before tactical
+interaction and follows deterioration, engagement, escape, death or recovery.
+Extend it backwards when a preparation decision or resource shortage explains
+the battle. There is no fixed preceding 10/20/30-turn rule. Record the inferred
+boundary, its uncertainty and the actual earlier checkpoint used for replay.
 
-This needs one durable database, one artifact bucket and a small coordinator
-API/CLI; GitHub Actions remains the execution worker. No separate document
-database, search cluster or queue service is needed for the initial scope.
-Provider, hosting and cost limits remain deployment decisions. A local developer
-instance can use the same PostgreSQL schema and a filesystem artifact backend;
-do not synchronize a mutable database file by committing it from CI.
+Keep **outcome** separate from **danger qualification**. A routine battle that
+the Borg survives is useful evidence and a control, without being a near-death.
+Candidates include real deaths, independently detected damage/exposure, Borg
+alarms and representative ordinary encounters. Borg fear or low HP alone never
+qualifies a near-death.
 
-| Record | Purpose and links |
+The initial near-death qualifier verifies a credible lethal exposure from
+engine mechanics: hostile actions/residual effects due before the next legal
+player decision, actual speed/energy ordering, attack eligibility, hit/damage
+distributions, resistances and status effects. A theoretical maximum-damage roll
+alone is insufficient. Require a calibrated nontrivial lethal probability and
+then observed sustained recovery. Unsupported or incomplete mechanics produce
+an unverified candidate, not a fabricated risk score. Other hazard families
+need their own reviewed qualifier; strategic starvation is not automatically a
+battle near-death.
+
+Calibration uses reviewed positive and negative fixtures, including safe low HP,
+fear without an attack opportunity, fast multiple attacks and high-HP lethal
+bursts. Sample non-triggered surviving fights to find misses. Version the
+qualifier and boundary/recovery rules; threshold values remain pilot findings.
+Hazard studies depend on an immutable qualification contract covering evaluator,
+thresholds, scheduling and recovery semantics. Updating it makes affected hazard
+projections pending requalification, preserving previous-version results. A
+changed diagnostic qualifier alone does not rewrite a runnable scenario; changing
+its start, encounter anchor or replay endpoint requires a new scenario revision.
+Engine truth is diagnostic evidence and must be separated from what the Borg
+could observe. Investigations can explain unknown threats without giving tested
+Borgs access to hidden game information.
+
+## 6. Capture and reconstruct executable situations
+
+Import a source's actual evidence inventory and verify retrieved bytes before
+claiming durable capture. Zoo's inspected
+[evidence inventory](https://github.com/diegoami/borg-zoo/blob/912ecb13bb08e99f6d57b381a10b794e22e3423c/zoo/evidence.py)
+describes file hashes and missing files; it is not replay qualification. Its
+[borg-rs adapter](https://github.com/diegoami/borg-zoo/blob/912ecb13bb08e99f6d57b381a10b794e22e3423c/zoo/borgrs.py)
+has an evidence-retention mode; without it some non-death streams are discarded.
+Do not assume surviving battles or private Borg state were recorded historically.
+An opt-in producer export/retention hook is future integration work.
+
+During an instrumented run, use periodic checkpoints, a bounded recent trace
+buffer and a compact complete replay recipe/input stream. Triggers preserve
+checkpoint/context chunks, including surviving encounters, before buffer expiry.
+Generate a scenario package containing verified save bytes, engine RNG, runtime
+and data dependencies, effective settings, knowledge/inventory observations,
+encounter anchors, outcome/recovery criteria and replay instructions. Original
+evidence remains immutable when a report or scenario definition is revised.
+
+Two modes must remain explicit:
+
+- **Shared engine save, fresh Borg state:** baseline and alternative load the
+  same save/RNG with equally reset Borg state. Useful for position studies and
+  supported by the current runner; not the original uninterrupted decision.
+- **Original-prefix continuation:** compatible private-state restoration or a
+  verified prefix replay to a supported intervention/state-transfer boundary.
+  This stronger capability is adapter-specific and not yet implemented here.
+
+Reconstruction requires the exact runtime/data/configuration and all relevant
+birth/time/random inputs, plus checkpoints/input streams where needed. A seed
+alone is insufficient. Qualify it by matching intermediate world/input digests,
+scenario anchor and outcome; reject divergence. Rebuilding from source is a
+fallback whose bytes/behavior must be verified. Save compatibility and Borg-state
+compatibility are distinct gates. Failure to load or a silently new character
+cannot count as surviving a scenario.
+
+## 7. Revalidate relevance before spending analysis effort
+
+A scenario revision preserves its original position and outcome. A new build
+creates new study-specific assessments, not a rewritten death account. Assessment
+identity includes the immutable **study revision**, target build and effective
+configuration, plus the qualification contract for hazard studies. Death,
+hazardous-recovery, ordinary-battle and pinned local-tactical objectives have
+independent priorities while sharing immutable execution evidence. Another
+user's result cannot silently resolve them globally.
+
+When a tracked build changes, import any equivalent source result first, then
+queue missing relevance checks for the project's active investigations. Keep
+bounded episode-follow-up checks separate from full-seed results: surviving a
+seed means a verified living endpoint at its complete original source horizon,
+or an engine-confirmed win, under the same birth/ordinary-play contract. Local
+follow-up extends past the old episode through its declared recovery window.
+Record terminal outcome, encounter result, scope, death relation and contract
+validity as independent fields. Thus verified full-horizon survival with unknown
+encounter details is representable and can deactivate only the death study.
+Explicitly check whether the encounter occurred where evidence permits. A short
+run, stall, failed reconstruction or mismatched contract cannot establish seed
+survival. Prioritize active cases; do not launch a duplicate whole-population
+experiment.
+
+| New evidence | Investigation action |
 | --- | --- |
-| Suites and cases | Immutable seed/birth membership, split and contract revisions |
-| Builds, configurations, variants | Exact runtime identity and effective settings, independent of display labels |
-| Campaigns and cells | Explicit requested matrix, reference/candidate roles, selection rule and completion coverage |
-| Attempts | Status, timestamps, seed verification, terminal summary, progress, actor/attempt role and artifact references |
-| Episodes | Original attempt, adaptive boundaries, evidence grade, qualification method/version and availability |
-| Scenarios and trials | Exact start/save/runtime dependencies, continuation mode, alternative variant and outcome |
-| Investigations and proposals | Evidence references, hypotheses, competing explanations, candidate changes and validation results |
-| Artifacts and retention pins | Content digest, object location/size, owners, expiry, reconstruction dependencies and deletion receipt |
+| Same encounter still kills in a full-seed check | Keep its death study active; a later matched seed death can reopen that objective |
+| Same encounter produces a qualified near-death and recovers | Hazard study active; death study may be inactive at the same time |
+| Same encounter is survived with verified recovery | Deactivate that death study for the build/configuration; independent hazard/ordinary studies keep their own priorities |
+| Full seed survives its source horizon; encounter avoided or unknown | Stop the old death investigation for this build/configuration; preserve the avoided/unknown distinction and make no direct battle-survival claim |
+| Shorter continuation passes the old episode without encountering it | Record bounded non-recurrence and provisionally lower priority; no full-seed survival claim |
+| Seed survives, but the old saved-position trial still fails | Record both; seed-death manifestation inactive, while local danger remains reproducible under its declared continuation mode |
+| Old position is survived, but the seed dies later | Mark local survival; create/link the later failure as a different episode |
+| Terminal/contract evidence is missing, or the check fails/ends too early | Keep pending/unverified; missing encounter details alone are independent of a verified full-seed survival receipt |
 
-Full observations, thoughts, input streams, saves, runtimes, GIFs and generated
-reports are compressed objects, not one database document per game tick. Chunk
-long streams and index turn ranges so an investigation can fetch one episode.
-Objects with identical bytes can share storage; their owners remain distinct.
+Full-seed results and saved-position trials are separate assessment fields. Even
+when a new build unexpectedly survives a seed, do not infer which change caused
+it. Stop pursuing the now-inactive manifestation by default; a maintainer may
+explicitly pin the old position as a tactical study. A later build that fails it
+again reopens the applicable study and links the regression only under that
+objective's compatible evidence contract. A local-only death reopens a pinned
+local-tactical study, not a seed-death investigation when the seed still survives.
+Repeated seed avoidance plus local death therefore does not create a new
+seed-death regression. Qualifier changes trigger requalification, not a claimed
+Borg regression. Detailed transitions are in the scenario contract.
 
-Git keeps tools, schemas, suite definitions, experiment specifications, design
-decisions and a small curated regression-fixture manifest. Routine new run data,
-death pages and the growing statistics snapshot leave the Git publication path
-once the new backend is qualified. Existing published cases remain reachable
-during migration; there is no bulk history rewrite in this proposal.
+Seed-survival deactivation applies to the old **death manifestation**. A study
+of a near-death or an ordinary surviving battle is not dismissed merely because
+its source run remains alive; assess its encounter/hazard evidence or the
+maintainer's explicit study objective. A recovered but still hazardous encounter
+may remain active as a near-death study after its death investigation is inactive.
 
-### CI execution and durable publication
+Before dispatching a deep analysis, check assessment freshness against the
+currently tracked immutable build and configuration. Leases pin its evidence.
+If a newer build arrives while it runs, keep the result labelled for its old
+target and revalidate before presenting it as a current problem. Missing new
+evidence sets freshness to pending; it does not establish a fix.
 
-1. The coordinator registers the whole requested matrix before building. It
-   resolves immutable versions and issues attempt IDs plus expiring worker leases.
-2. CI builds each runtime once and uses a verified shared cache. Each seed runs
-   with a clean, explicit environment. Requested and actual identities are checked.
-3. A separate trusted publication step uploads immutable objects, verifies their
-   digests, then transactionally commits their manifest and the attempt outcome.
-   Candidate executable processes receive no database or deletion credentials.
-4. Lost runners leave expired/incomplete attempts; retries get new IDs. Idempotent
-   finalization and lease fencing prevent late workers from replacing a newer
-   result. Orphan uploads are collected after a grace period.
+## 8. Analysis and the human interface
 
-Natural death, alive at horizon, win, policy stop, stall, timeout, infrastructure
-failure and identity/configuration mismatch are distinct. Reports show all
-requested cells and missing results. Failure to execute is never survival.
+Query by project, build/configuration, seed, encounter family, outcome or current
+relevance. The job joins observations, messages, available thoughts, inventory,
+spells and actions into a readable chronology. It distinguishes observed facts,
+Borg beliefs, diagnostic hidden facts and analyst hypotheses. Look broadly for
+behavioral or implementation explanations, without a fixed checklist of tactics.
 
-## 3. Qualify real near-deaths independently of the Borg
+Each retained scenario has a stable landing page: exact seed/build/settings,
+start/episode/end timeline, cause or recovery, replay availability, original and
+alternative results, inventory/spells, and genuine screenshot animation where
+qualified capture allows it. Reports/GIFs are generated and cached on demand;
+serialized machine documents are never the required human interface. Downloaded
+bundles generate build/watch/play launchers and use verified per-version caches.
+Human play is an explicitly labelled alternative attached to the same scenario.
 
-Use the following labels. The existing HP/Borg-risk heuristic only produces
-**screening candidates** and must never directly increment a near-death count.
+Deliver a feedback packet with the reproducible situation, what the Borg knew,
+supported mechanism, competing explanations, earliest useful intervention point,
+proposed code/behavior/instrumentation change and focused scenario checks.
+Alternative trials report survival, new death, avoidance, recovery, progress and
+uncertainty. Local success does not establish a population improvement. The Borg
+maintainer implements/reviews changes and asks zoo for broad validation as needed.
+The analyzer does not mutate parameters, open upstream issues or publish changes
+without a separately authorized action.
 
-| Label | Required evidence |
+## 9. Reuse by other projects and users
+
+Publish a versioned adapter and portable scenario-bundle contract, with capability
+levels for metadata, chronology, reconstruction, shared-save trials and private
+continuation. Start with borg-rs and borg-reborn-rs adapters, but require no
+sibling checkout, owner-specific repository name, fixed filesystem path or CI
+provider. Native C and Neo projects can add adapters; sharing record syntax does
+not make their seeds, clocks, observations or save formats interchangeable.
+
+Each workspace owns project namespaces, tracked builds, priorities, quotas and
+sharing policy. Default evidence is private to that workspace. Explicit exports
+produce portable, checksummed bundles; importing one preserves origin and gives
+it a local assessment. Sharing a public fixture requires retaining its complete
+declared replay dependencies. Metadata-only imports remain usable for browsing
+but are not advertised as runnable.
+
+Enforce workspace permissions on queries, jobs, artifacts and downloads. Initially
+deduplicate objects only inside one workspace; no cross-user hash/availability
+leak or permission inheritance. Trusted publication receives job-scoped upload
+access; candidate code receives no database/deletion credentials. Offline bundle
+inspection/import must not execute included launchers. Execution is an explicit
+isolated worker action. Check archive paths, declared sizes and digests before
+extracting untrusted bundles. Native bundles run offline; local service development
+uses emulators. Production self-hosting of the managed backend is not promised.
+
+## 10. Bounded storage and reliable jobs
+
+Keep compact source/run/scenario documents in the database; compress and chunk
+large observations/thoughts/input streams in external storage. Git holds tools,
+schemas, source-manifest references and small selected fixture manifests. No new
+routine report archive or statistical data dump is added to Git under this model.
+
+Initial per-workspace budget proposal: three active builds, **20 GiB of artifact
+storage**, and **100 promoted detailed scenarios**, separate from thousands of
+indexed discovery cases. These are pilot limits to measure, configurable by the
+workspace owner, not global limits imposed on other users. Count artifact
+versions/backups and pinned runtimes; expiry dates alone do not bound storage.
+
+| Evidence | Initial retention proposal |
 | --- | --- |
-| Death | Engine-confirmed natural death and terminal cause, bound to the actual run |
-| Qualified near-death | Survived a credible immediate lethal exposure, independently verified from engine mechanics, followed by observed recovery |
-| Hazard candidate | Potential danger detected, but lethal exposure or recovery is not established |
-| Rejected candidate | Inspection establishes that the screening signal did not represent such an exposure |
+| Raw traces and disposable checkpoints | Seven-day capture/investigation window; promote selected episodes before expiry |
+| Reports, GIFs and screenshots | Regenerable cache, initially seven days; discard first under pressure |
+| Active source recipes and selected scenarios | Keep dependencies needed for their advertised reconstruction/replay level |
+| Inactive, unpinned detailed evidence | Thirty-day grace period, then collect; keep a compact result while metadata is retained |
+| Retired run detail/assessments | Initially 180 days unless a bounded investigation/regression pin requires them |
 
-For the first qualifier, evaluate **hostile actions and ongoing effects due
-before the next legal player decision**, after the chosen action has committed.
-Use actual energy/speed ordering, positions/line of sight, attack eligibility,
-damage distributions, resistances, status effects and residual damage. Log the
-decision and engine-event indices; several attacks can occur inside what a
-coarse turn log presents as one interval. Full HP can still be lethal exposure;
-low HP in a safe room is not one.
+Resolved/avoided scenarios release investigation pins after a cooldown unless
+selected for the bounded regression bank. Keep diverse failures, recoveries and
+ordinary controls, not only spectacular early deaths. Similar reports can share
+one representative detailed fixture without erasing distinct run identities.
 
-Where native instrumentation or a verified diagnostic replay can enumerate the
-immediate outcome distribution, calculate lethal probability independently of
-the Borg's estimate. Require a nontrivial probability threshold, chosen through
-calibration, rather than merely a theoretical maximum-damage roll. A sustained
-hazard such as starvation may need a separate validated qualifier: time to
-unavoidable damage and available feasible relief, with its own evidence.
-Unsupported mechanics remain unqualified. Do not invent a universal probability
-from a single observed trajectory or silently trust the same Borg threat code
-that is under investigation.
+Pins transitively protect replay dependencies. Live jobs hold temporary leases;
+expired leases require a grace period before collection. Garbage collection
+plans affected owners, marks objects, waits, then serializes its final reference
+check/delete transition with new pin acquisition. Verify imported bytes before
+releasing source dependencies. Record unavailable/pruned status and a bounded
+deletion receipt. A valid hash without recoverable bytes is not replay evidence.
+Firestore TTL and bucket expiry apply only to independently disposable records
+and objects, not authoritative studies, pins or shared runtime dependencies.
+Firestore TTL is asynchronous and does not cascade into subcollections; the
+coordinator owns dependency-aware retirement and bounded deletion.
+([Firestore TTL](https://firebase.google.com/docs/firestore/ttl).)
 
-Survival of one attack is not recovery. Follow the episode until independently
-observed exposure subsides for a calibrated decision interval; death before that
-is part of the death episode. End-of-run or missing evidence produces a hazard
-candidate with unresolved outcome. Merge overlapping alarms from one crisis.
+When protected data fills the quota, pause new admissions and expose the required
+retirement decision. Budget database detail, job receipts and backups separately;
+use bounded snapshots rather than an infinite history of every assessment.
+After metadata expires, the landing route explains that the case is unavailable.
+Recovery snapshots include core metadata plus a verified manifest of required
+immutable Cloud Storage generations, retained for the snapshot's entire lifetime.
+Pause workspace writes/GC while creating that bounded recovery set. Independent
+database and bucket backups are not a coordinated recovery point. After restore,
+fence old jobs with a new deployment epoch and reconcile actual object bytes
+before advertising replay or dispatching work. Missing dependencies become
+unavailable/incomplete. The Firebase decision specifies the cross-store protocol.
 
-Calibrate against reviewed positive and negative fixtures: safe low HP, fear
-without attack opportunity, resisted damage, full-HP lethal bursts, fast multiple
-attacks, poison, emergency healing and strategic depletion. Record precision and
-misses, sampling ordinary/high-HP runs as well as triggered candidates. Freeze
-the detector/qualifier version for a campaign; requalification is a separate
-versioned result. The probability threshold, recovery interval and acceptable
-error bounds are open pilot decisions, not constants justified by this document.
+Ingestion registers expected captures before execution. Immutable objects are
+uploaded and hash-verified before transactionally attaching a complete manifest.
+Transactional creation of deterministic identity documents prevents duplicate
+imports; an altered payload under an existing qualified source key is a conflict.
+Attempts and jobs have idempotency keys, leases and fencing tokens, so late
+workers cannot overwrite new results. Incomplete
+uploads remain explicitly incomplete and orphan objects expire after a grace
+period. No failure or missing cell becomes a death or survival.
 
-Engine truth can explain danger the Borg did not know about. Reports distinguish
-that diagnostic information from the observations available to the Borg when it
-acted. Neither an analyst nor a tested policy receives hidden information as a
-normal gameplay input.
+## 11. Migration and review gates
 
-## 4. Reconstruct the sequence and make executable scenarios
+Retain the current seven cases, human recordings, published downloads and M1
+review evidence as migration pins. No evidence is deleted, history rewritten,
+service deployed or other repository modified by this proposal.
 
-Infer an episode from the last supported reasonably stable state through the
-crisis and death or recovery. Extend backwards when preparation, depletion,
-navigation or a mistaken belief explains the later exposure. Retain both the
-immediate incident and links to earlier relevant decisions. There is no fixed
-10/20/30-turn definition, and a chosen starting point is a documented inference,
-not proof that the character was safe.
+Reuse native exporters, seed/build receipts, candidate episode extraction,
+shared-save runner, recorder/cache and readable-page generators. Add storage and
+adapter boundaries rather than copying harness logic. Replace the current
+same-source-only batch comparator only where a local scenario comparison needs
+cross-build compatibility; leave population comparisons to zoo. Retire routine
+results-branch publication after the replacement path is verified.
 
-During collection, keep periodic checkpoints and a bounded recent observation
-buffer. A trigger preserves the relevant checkpoint and stream chunks before
-they are overwritten. Earlier strategic context comes from the compact birth
-recipe/input stream and verified reconstruction. A buffer cannot guarantee that
-it captured every root cause; report missing context and reconstruct when possible.
+Proposed delivery slices, subject to architecture/milestone approval:
 
-Reconstruction requires more than a seed. Retain a recipe containing all birth
-randomness, fixed calendar/options, effective configuration, runtime/data digests,
-input/RNG contract and periodic world-state digests. Keep the exact runtime
-package once per build, including required data and dependencies. Source-only
-rebuilding is a fallback whose output must be checked, not a promise of byte
-identity. Inputs and digests must cover scheduling or external nondeterminism
-that the adapter needs to replay; unsupported builds have limited availability.
+1. **Imports and portable identity:** ingest pinned zoo and native examples,
+   including survivors, with settings/evidence gaps visible. Prove idempotence,
+   namespace isolation and thousands-of-cases indexing without new Git data.
+2. **Executable episodes:** retain adaptive battle sequences, calibrate the
+   independent near-death qualifier, package saves/runtimes and verify replay.
+   Prove safe-low-HP/fear-only negatives and real lethal-exposure positives.
+3. **Current-build relevance:** implement the assessment table above and job
+   freshness. Prove unexpected seed survival deprioritizes an old failure,
+   avoidance is distinguished, later death creates a new case and regression
+   reopens the correct study without rewriting old evidence. Prove simultaneous
+   death-inactive/hazard-active state and qualifier-change requalification.
+4. **Shared investigation service:** on-demand readable pages, human/alternative
+   trials and maintainer packets. A second project imports and runs a supported
+   package without the original author's checkout or account.
+5. **Bounded cutover:** fault-inject collection/pinning races, exercise quotas,
+   reproduce a case after discarding its generated report, and restore from a
+   recovery snapshot taken before a later artifact collection. Reject stale
+   worker epochs and reconcile missing bytes before serving availability. Test
+   Firestore authorization, indexes and transaction/pin races in emulators and
+   a bounded staging deployment before routine Git publication stops.
 
-Test reconstruction when qualifying a build and selected cases, before retiring
-their larger traces. Reexecute with the original Borg and compare intermediate
-state and input digests, including the scenario boundary and terminal outcome.
-A matching terminal summary alone is insufficient. Divergence is visible and
-blocks claims of exact reconstruction. Never substitute a newer executable.
-
-Two scenario modes remain explicit:
-
-- **Shared engine save, fresh Borg state:** load the same verified save/RNG into
-  baseline and candidate, reset both Borgs equally, verify character/start and
-  use the same horizon. This is supported by the current runner and is useful
-  for position benchmarks.
-- **Original-prefix continuation:** restore compatible Borg private state, or
-  replay the original prefix to an intervention boundary and perform a supported
-  state transfer. This requires instrumentation not yet delivered. If versions
-  cannot share that state, report the limit and use the first mode or full-birth
-  comparisons. Restarting a Borg is not exact continuation of its old decision.
-
-Cross-build engine-save and parameter-schema compatibility are explicit gates.
-Each trial records start drift, available actions, restored memory, original and
-alternative settings, observation support and its outcome. Surviving by avoiding
-an encounter is a valid position result, but is not proof of winning that fight.
-Human alternatives use the same evidence contract and retain their actor label.
-
-Availability is visible per case: retained/replayable, recipe-only,
-reconstruction-verified, diverged, unsupported, or deliberately pruned. A hash
-without its bytes or a usable reconstruction path does not make a game replayable.
-
-## 5. Retain a working set with explicit limits
-
-Initial policy proposal: three active builds, four active variants, **20 GiB of
-artifact storage** and at most **100 promoted regression scenarios**. These are
-starting operational limits to measure in the pilot, not measured requirements.
-Count shared runtimes, traces, checkpoints, artifact backups and object versions when
-budgeting actual storage; TTL alone does not bound bytes.
-
-| Data | Proposed lifecycle |
-| --- | --- |
-| Requested cohort, terminal summaries, settings, comparisons | Keep compact metadata for active variants; retain a compact campaign result and provenance when retiring them |
-| Full raw thoughts/observations and disposable checkpoints | Seven-day investigation window, with explicit promotion before expiry |
-| HTML/Markdown reports, GIFs and screenshots | Regenerable cache, initially seven days; discard first under pressure |
-| Birth recipe, input stream, selected hashes and build package | Keep for active variants and every promoted/review-pinned scenario that depends on them |
-| Promoted scenarios and alternative recordings | Keep within the scenario/storage quota; preserve dependencies and unresolved review evidence |
-| Retired, unpinned run evidence | Expire after a 30-day grace period; leave a small outcome/provenance record and clear loss-of-replay status |
-
-Keep the selected primary result per active cell, representative failures and a
-diverse scenario bank: new regressions, recurring mechanisms, dangerous recoveries
-and matched ordinary controls. Choose across character/depth/progress groups;
-retaining only dramatic early deaths would bias the feedback loop. Bound each
-category and record why a scenario was promoted or replaced. Repeated identical
-deaths do not each need a permanent full report.
-
-Retention is dependency-aware: pinning a scenario also pins its necessary save,
-runtime, configuration and replay inputs. Live investigations and worker leases
-hold temporary pins. Before deletion, produce a manifest of affected artifacts,
-check all owners, mark them, allow a grace period, then recheck references and
-delete. Pin acquisition and the final delete transition must be serialized so a
-new investigation cannot pin an object that is already being removed. Write a
-tombstone and byte-accounting receipt. Do not expire shared runtime objects just
-because one run's report is old.
-
-Use separate protected and disposable storage namespaces. Native bucket expiry
-is suitable for disposable objects; dependency-bearing objects are deleted by
-the coordinator after reference checks. S3 lifecycle rules operate by configured
-object groups, not the cemetery's dependency graph.
-([Lifecycle documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html).)
-
-If protected evidence fills the budget, stop admitting new captures and request
-retirement/pin decisions; do not silently delete it or promise unbounded pinning.
-Database detail and backups also need bounded retention: retire old episode and
-analysis documents, preserving compact campaign outcomes and pruning receipts.
-Set a separate metadata/backup quota before deployment. Deleting a report cannot
-preserve its observations unless a replay package actually remains usable.
-
-For retired, unpinned campaigns, initially keep per-cell terminal/provenance
-records for 180 days and compact aggregate comparisons for the latest 12
-campaigns per project. A referenced proposal can pin its supporting cohort
-manifest/results within the same quota. Pruning the underlying cohort removes
-the ability to independently recompute its aggregate; show that limit instead
-of presenting it as fully auditable history. Include tombstones in metadata
-retention rather than allowing an infinite deletion log.
-
-Existing curated deaths, published human recordings and M1 review evidence are
-migration pins. This design authorizes no deletion of them. Deleting tracked
-files in a later commit also would not remove their bytes from Git history.
-
-## 6. Investigate on demand and feed findings back into experiments
-
-Select a build **and effective configuration**, then a campaign, seed case,
-episode type or behavior cluster. A job queries metadata, fetches retained
-evidence or verifies reconstruction, and generates a human report. It records
-the analysis tool/model version and exact evidence manifest, allowing later
-reanalysis without changing the original observations.
-
-Every retained death/episode gets a stable landing URL backed by its metadata. Detailed
-pages are generated and cached on demand. They show the seed, build and parameter
-table, adaptive chronology, inventory/spells, observations and thoughts, actual
-screens/GIF when reconstructable, replay instructions and alternative outcomes.
-Expired pages can be regenerated if evidence permits; otherwise the landing page
-explains exactly what remains. Human readers never need to inspect serialized
-documents. Stable URLs do not imply permanent case retention: after metadata
-retirement the route reports that the individual account is unavailable.
-Downloaded replay bundles generate the familiar build/watch/play
-launchers and use the existing version cache.
-
-The investigation searches broadly for opportunities to improve survival;
-earlier examples about stairs, fighting or consumables are not a checklist.
-Compare deaths, qualified recoveries and ordinary successes. Cluster mechanisms,
-not just killer names: two dog deaths may have different causes, and resource
-depletion may recur against many enemies. Generated hypotheses are distinct
-from engine facts and supported causal claims.
-
-A feedback packet contains the observed failure mechanism, what the Borg knew,
-earliest supported intervention point, competing explanations, concrete proposed
-parameter/code/instrumentation change, executable scenario references, expected
-tradeoffs and a discriminating validation plan. If no exposed parameter expresses
-the fix, propose code or instrumentation rather than inventing a setting. The
-Borg project receives a small reproducible fixture/package and readable packet;
-it need not vendor the cemetery archive. Upstream issue/PR creation and gameplay
-changes remain explicit delivery actions, not automatic analyzer side effects.
-
-Evaluate proposals in three stages:
-
-1. Reproduce the baseline and try the candidate on selected saved scenarios,
-   matching the continuation mode. Include control cases and unfavorable trials.
-2. Run the full development cohort at the same contract/horizon. Compare paired
-   seeds, new deaths, deaths avoided, time to death, stalls, progress and resource
-   use. Camping indefinitely cannot establish an improvement.
-3. Freeze the candidate and success/regression criteria, then run held-out
-   validation. Record all attempted tuning arms. Repeatedly choosing settings
-   using validation outcomes consumes that hold-out; a later selection needs a
-   new, versioned validation set. Do not rotate seeds to hide a regression.
-
-Report cohort coverage and failed/missing executions alongside paired outcomes;
-do not compute success only over completed survivors. Show uncertainty and the
-small sample size. A scenario rescue is local evidence. A broad improvement
-requires cohort validation and may remain inconclusive. Near-death count alone
-is not an objective: a Borg that dies immediately can have fewer near-deaths.
-
-## 7. Tools, ownership and migration
-
-The proposed command surface is below; **these commands do not exist yet**:
-
-```text
-cemetery campaign run --suite pilot-v1 --variants comparison-v1
-cemetery runs --build BUILD --configuration CONFIG --suite pilot-v1
-cemetery analyze --build BUILD --configuration CONFIG --episodes deaths,qualified-near-deaths
-cemetery reconstruct --attempt ATTEMPT --until EPISODE
-cemetery scenario test --scenario SCENARIO --variant CANDIDATE
-cemetery compare --campaign CAMPAIGN --baseline REFERENCE --candidate CANDIDATE
-cemetery retention plan
-```
-
-Cemetery owns scenario execution requests in its executor mode, run identities,
-the shared database/artifact contract, retention, episode qualification and
-investigation evidence. Zoo owns population experiment orchestration,
-aggregation, scenario comparisons and report presentation. Borg repositories
-own gameplay, effective-configuration export, engine observations and compatible
-save/private-state interfaces. Reuse the same build/run adapters in both
-executor modes. Ingest original Zoo runs or original Cemetery runs; do not
-run a second life and substitute it for a requested cohort cell. Zoo reports
-pin the input result snapshot, analysis version and endpoint contract.
-
-| Existing component | Redesign treatment |
-| --- | --- |
-| `run_batch.py`, CI workflow | Reuse pinned execution/seed receipts; add suite/cell IDs and durable ingestion |
-| Native death toolkit | Keep instrumentation/export ownership here; emit episode/artifact manifests to the new backend |
-| `extract_scenarios.py` | Keep candidate extraction and adaptive boundaries; add independent qualification and evidence grades |
-| `run_scenario.py` | Keep honest shared-save/fresh-Borg semantics; add database trial records and compatibility checks |
-| `compare_batches.py` | Replace the same-source-only restriction with explicit cross-build campaign compatibility rules |
-| Recorder, launchers, cache, human attachments | Reuse verified identities; resolve artifacts through the backend and generated downloadable bundles |
-| `archive_records.py`, results-branch publication | Retire for new campaigns after replacement ingestion/recovery is verified |
-| `statistics/` historical inventory | Keep as labelled legacy evidence; new performance statistics query complete cohorts |
-
-Suggested delivery slices, subject to the owner's milestone decision:
-
-The latest owner-selected order starts with the Cemetery database/artifact
-design in #32, then a smallest saved-scenario executor proof, optional Cemetery
-CI, and Zoo ingestion/reporting under #144. The broader slices below remain
-proposal context; they do not authorize a new cohort or override that order.
-
-1. **Matrix and storage:** schema/API, effective-settings export, one fixed pilot
-   suite, runtime cache and CI ingestion. Acceptance: every requested cell is
-   accounted for; duplicate publication, runner loss and retry cannot corrupt it;
-   query and compare two builds/configurations without a Git data commit.
-2. **Evidence qualification and reconstruction:** native immediate-danger
-   instrumentation, reviewed positive/negative fixtures, calibrated qualifier,
-   adaptive episodes and replay qualification. Acceptance: fear-only and safe
-   low-HP fixtures are rejected, real exposure is evidenced, and a selected
-   pruned trace can be reconstructed with checked intermediate states.
-3. **Investigation and feedback:** on-demand human pages, mechanism analysis,
-   scenario-bank selection, proposal packets and cohort validation. Acceptance:
-   one real case reaches a reproducible proposed change with all control and
-   regression results; no survival gain is asserted without supporting results.
-4. **Bounded operation and cutover:** dry-run retention, dependency/race checks,
-   backup/restore drill and verified old-report regeneration. Acceptance: the
-   byte/scenario budgets hold, protected evidence survives collection, and an
-   intentionally pruned case displays an honest availability state. Only then
-   stop publishing new routine run data to Git.
-
-Pilot decisions still to resolve through measurement: seed/character coverage,
-meaningful horizon, near-death probability/recovery criteria, effective-settings
-gaps in each Borg adapter, compatible reconstruction modes, and actual storage
-and execution cost. Hosting and quotas must be fixed before deployment. These
-are inputs to implementation planning, not reasons to continue expanding the
-current permanent report archive.
+Review must settle the source discovery manifests, adapter instrumentation gaps,
+near-death calibration method, recovery/encounter predicates, configuration
+visibility, Firebase deployment details and workspace quotas. The requested
+decision is architecture direction and changes before implementation planning,
+not milestone acceptance or permission to start running a new platform.
