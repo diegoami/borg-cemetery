@@ -1,0 +1,165 @@
+{
+  "cases": [
+    {
+      "directory": "c2-r3-s1020078-i000",
+      "id": "c2-r3-s1020078-i000",
+      "incident_turn": 3145,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 3105,
+      "save_sha256": "5d2eb210881eb96f468d790d6cdb957a59d5fa7c2cf86d38b35bf581ac12cf4c"
+    },
+    {
+      "directory": "c2-r3-s1020078-i001",
+      "id": "c2-r3-s1020078-i001",
+      "incident_turn": 7762,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 7703,
+      "save_sha256": "c41a5260fe7741f6b68d72ce6c8c3748fd8e62f3c1b9ef3a3aa4c402312feced"
+    },
+    {
+      "directory": "c2-r3-s1020078-i002",
+      "id": "c2-r3-s1020078-i002",
+      "incident_turn": 13533,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 13403,
+      "save_sha256": "bb60f6a951f6d164120646762b7cbabd13a33e3fde5b347637c7fc1936f9c548"
+    },
+    {
+      "directory": "c2-r3-s1020078-i003",
+      "id": "c2-r3-s1020078-i003",
+      "incident_turn": 15497,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 15409,
+      "save_sha256": "c3ae1551a611845805765254dcff67108ff382fd3a0c78591a2ff5a6cb66dbc9"
+    },
+    {
+      "directory": "c2-r3-s1020078-i004",
+      "id": "c2-r3-s1020078-i004",
+      "incident_turn": 16568,
+      "incident_type": "death",
+      "initial_turn": 16504,
+      "save_sha256": "0c4989d750649e4405c7d8c232987bd0caeaf6788ac423edf32577b29ee3862d"
+    }
+  ],
+  "cls": 2,
+  "elapsed_seconds": 8.012217137999983,
+  "id": "c2-r3-s1020078",
+  "ordinal": 78,
+  "race": 3,
+  "retention": [
+    {
+      "archive": "encounters.jsonl.gz",
+      "archive_sha256": "57cef24c619f8edf30a5135d9e4ac136d40035bc9dda24cd0a7b25e984c13d2b",
+      "path": "encounters.jsonl",
+      "sha256": "6ef78b8b024616e8294b2532bbc56230f8cf4add17137a2bfdd086fc5f0525a1"
+    },
+    {
+      "archive": "trace.jsonl.gz",
+      "archive_sha256": "a8b8eac897da09a95c245ee597fe601fab2e2cd770c149738f8a052417bef38b",
+      "path": "trace.jsonl",
+      "sha256": "92423f84a6a2f1609d435361b5a9c9e89cf7db8c94d429519d8ebf96c32ba264"
+    },
+    {
+      "archive": "keys.log.gz",
+      "archive_sha256": "85ad2f6ef7df0a60fa29f7f5f7736c02754e35d9374c4383ae45fc7f3e4f3f9d",
+      "path": "keys.log",
+      "sha256": "f40a23e9a6fd23c6de525d818cbb7efcd6eb195ab5c03c9639b3647e916173d7"
+    },
+    {
+      "archive": "messages.log.gz",
+      "archive_sha256": "b5f678f7c7709af233ed50752b5167bdcb04964ba4582fd30a648c1e9417b278",
+      "path": "messages.log",
+      "sha256": "d4fe669d686be8ddc30906a023626991a4112a00b67cb324f261ab7861224c43"
+    },
+    {
+      "archive": "state.log.gz",
+      "archive_sha256": "64d64b60facf527fc0d56f388e646ed69efad9b5e14f08a6f66e93183f4b1070",
+      "path": "state.log",
+      "sha256": "2de8291c5b2c63f222337c5487df33c574642dfbade38ee0749a1aea2fcd3a63"
+    }
+  ],
+  "seed": 1020078,
+  "status": "death",
+  "summary": {
+    "borg_decisions": 1238,
+    "borg_rng": 2135587861,
+    "calendar": "fixed",
+    "class": "Druid",
+    "class_idx": 2,
+    "clevel": 1,
+    "dead": true,
+    "death_cause": "a giant white centipede",
+    "depth": 1,
+    "effective_settings": {},
+    "exact_turns": false,
+    "game_options": {
+      "animate_flicker": false,
+      "auto_more": true,
+      "autoexplore_commands": false,
+      "birth_ai_learn": true,
+      "birth_connect_stairs": true,
+      "birth_feelings": true,
+      "birth_force_descend": false,
+      "birth_know_flavors": false,
+      "birth_know_runes": false,
+      "birth_levels_persist": false,
+      "birth_lose_arts": false,
+      "birth_no_artifacts": false,
+      "birth_no_recall": false,
+      "birth_no_selling": true,
+      "birth_percent_damage": false,
+      "birth_randarts": false,
+      "birth_stacking": true,
+      "birth_start_kit": true,
+      "center_player": false,
+      "cheat_hear": false,
+      "cheat_live": false,
+      "cheat_room": false,
+      "cheat_xtra": false,
+      "disturb_near": true,
+      "effective_speed": false,
+      "highlight_player": false,
+      "hp_changes_color": true,
+      "hybrid_walls": false,
+      "mouse_movement": true,
+      "notify_recharge": false,
+      "pickup_always": false,
+      "pickup_inven": true,
+      "purple_uniques": false,
+      "rogue_like_commands": false,
+      "score_hear": false,
+      "score_live": false,
+      "score_room": false,
+      "score_xtra": false,
+      "show_damage": false,
+      "show_flavors": false,
+      "show_target": true,
+      "solid_walls": false,
+      "use_old_target": false,
+      "use_sound": false,
+      "view_yellow_light": false
+    },
+    "game_rng": {
+      "quick": false,
+      "quick_rng": 2685902592,
+      "rng": "3106cad1e01668001eb1e6f6234fb0b134fff7ba74b5054e5aa707551358558052f15bdbfef3f4e02e9556010b9a2f994417f78e3c985e9f260c6a34a3770b559d4ad68bf2d9c60339a9a013e18d0ceb7245ef828ab91050a8991611030cbafc031ef7594432da36bb0d975fc63a3153fc5c7f0bfef49278d481b5d7e6f1cc6d",
+      "rng_index": 5
+    },
+    "game_turns": 16568,
+    "hp": -2,
+    "keys": 2755,
+    "loaded": false,
+    "max_clevel": 1,
+    "max_depth": 1,
+    "max_hp": 10,
+    "menu_letters": true,
+    "player_energy": 165815,
+    "player_turns": 1658,
+    "race": "Hobbit",
+    "race_idx": 3,
+    "resting_turns": 487,
+    "seed": 1020078,
+    "stop_reason": "death",
+    "wall_seconds": 5.772
+  }
+}

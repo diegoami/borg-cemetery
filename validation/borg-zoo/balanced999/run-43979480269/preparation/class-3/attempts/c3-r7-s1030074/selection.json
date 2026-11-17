@@ -1,0 +1,121 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 1600,
+        "file": "checkpoint-000016-t0000001602.save",
+        "game_turn": 1602,
+        "keys": 391,
+        "max_depth": 1,
+        "race_idx": 7,
+        "seed": 1030074
+      },
+      "selection": {
+        "first_visible_turn": 1672,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 13,
+        "monster_kind": "grey mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 177,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 1672
+      },
+      "status": "candidate",
+      "turn": 1762,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 1,
+          "line": 186,
+          "max_hp": 16,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 21,
+              "race": 19
+            },
+            {
+              "index": 13,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 1762
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 4,
+          "level": 1,
+          "line": 186,
+          "max_hp": 16,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 21,
+              "race": 19
+            },
+            {
+              "index": 13,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 1762
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 11,
+          "level": 1,
+          "line": 188,
+          "max_hp": 16,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 21,
+              "race": 19
+            }
+          ],
+          "sp": 2,
+          "turn": 1782
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 8,
+        "depth": 1,
+        "due_turn": 91300,
+        "file": "checkpoint-000900-t0000091301.save",
+        "game_turn": 91301,
+        "keys": 20021,
+        "max_depth": 1,
+        "race_idx": 7,
+        "seed": 1030074
+      },
+      "selection": {
+        "first_visible_turn": 91361,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 154,
+        "monster_kind": "white worm mass",
+        "no_omniscient_trigger": true,
+        "observation_line": 9011,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 91361
+      },
+      "status": "candidate",
+      "turn": 91569,
+      "type": "death",
+      "witness": {
+        "cause": "a white worm mass"
+      }
+    }
+  ]
+}

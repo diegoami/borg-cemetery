@@ -1,0 +1,108 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 19000,
+        "file": "checkpoint-000181-t0000019009.save",
+        "game_turn": 19009,
+        "keys": 3795,
+        "max_depth": 1,
+        "race_idx": 2,
+        "seed": 1040066
+      },
+      "selection": {
+        "first_visible_turn": 19098,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 11,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 1807,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 19098
+      },
+      "status": "candidate",
+      "turn": 19118,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 5,
+          "level": 2,
+          "line": 1809,
+          "max_hp": 20,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 11,
+              "race": 19
+            }
+          ],
+          "sp": 0,
+          "turn": 19118
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 5,
+          "level": 2,
+          "line": 1809,
+          "max_hp": 20,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 11,
+              "race": 19
+            }
+          ],
+          "sp": 0,
+          "turn": 19118
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 20,
+          "level": 2,
+          "line": 1838,
+          "max_hp": 20,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 3,
+          "turn": 20147
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 5,
+        "depth": 2,
+        "due_turn": 86900,
+        "file": "checkpoint-000826-t0000086909.save",
+        "game_turn": 86909,
+        "keys": 16971,
+        "max_depth": 2,
+        "race_idx": 2,
+        "seed": 1040066
+      },
+      "selection": {
+        "first_visible_turn": 86969,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "acolyte",
+        "no_omniscient_trigger": true,
+        "observation_line": 8187,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 86969
+      },
+      "status": "candidate",
+      "turn": 87079,
+      "type": "death",
+      "witness": {
+        "cause": "an acolyte"
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 14200,
+        "file": "checkpoint-000136-t0000014207.save",
+        "game_turn": 14207,
+        "keys": 2742,
+        "max_depth": 1,
+        "race_idx": 8,
+        "seed": 1030009
+      },
+      "selection": {
+        "first_visible_turn": 14257,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 29,
+        "monster_kind": "giant white centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 1354,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 14255
+      },
+      "status": "candidate",
+      "turn": 14527,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 3,
+          "line": 1380,
+          "max_hp": 24,
+          "max_sp": 6,
+          "monsters": [
+            {
+              "index": 13,
+              "race": 47
+            }
+          ],
+          "sp": 6,
+          "turn": 14517
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 3,
+          "line": 1381,
+          "max_hp": 24,
+          "max_sp": 6,
+          "monsters": [
+            {
+              "index": 13,
+              "race": 47
+            }
+          ],
+          "sp": 6,
+          "turn": 14527
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 24,
+          "level": 3,
+          "line": 1389,
+          "max_hp": 24,
+          "max_sp": 6,
+          "monsters": [],
+          "sp": 6,
+          "turn": 14607
+        }
+      }
+    }
+  ]
+}

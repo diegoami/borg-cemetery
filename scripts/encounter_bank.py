@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def prepare_bank(path, root=ROOT):
     bank = read(path)
-    if bank.get('schema') != 'borg-cemetery/encounter-bank@1' or not 1 <= len(bank['shards']) <= 64:
+    if bank.get('schema') != 'borg-cemetery/encounter-bank@1' or not 1 <= len(bank['shards']) <= 128:
         raise ValueError('unsupported bank or shard budget')
     seen, saves, result = set(), set(), []
     common = None
@@ -32,8 +32,8 @@ def prepare_bank(path, root=ROOT):
             seen.add(name)
             saves.add(save)
         result.append((suite, len(cases)))
-    if len(seen) != bank['expected_cases'] or len(seen) > 512:
-        raise ValueError('bank case count differs or exceeds 512')
+    if len(seen) != bank['expected_cases'] or len(seen) > 1024:
+        raise ValueError('bank case count differs or exceeds 1024')
     return bank, result
 
 

@@ -1,0 +1,108 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 9500,
+        "file": "checkpoint-000089-t0000009501.save",
+        "game_turn": 9501,
+        "keys": 1817,
+        "max_depth": 1,
+        "race_idx": 0,
+        "seed": 1030093
+      },
+      "selection": {
+        "first_visible_turn": 9551,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 26,
+        "monster_kind": "kobold shaman",
+        "no_omniscient_trigger": true,
+        "observation_line": 879,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 9551
+      },
+      "status": "candidate",
+      "turn": 9561,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 880,
+          "max_hp": 23,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 26,
+              "race": 69
+            }
+          ],
+          "sp": 4,
+          "turn": 9561
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 880,
+          "max_hp": 23,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 26,
+              "race": 69
+            }
+          ],
+          "sp": 4,
+          "turn": 9561
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 12,
+          "level": 2,
+          "line": 903,
+          "max_hp": 23,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 4,
+          "turn": 10051
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 6,
+        "depth": 2,
+        "due_turn": 24900,
+        "file": "checkpoint-000217-t0000024906.save",
+        "game_turn": 24906,
+        "keys": 4356,
+        "max_depth": 2,
+        "race_idx": 0,
+        "seed": 1030093
+      },
+      "selection": {
+        "first_visible_turn": 24956,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 48,
+        "monster_kind": "green worm mass",
+        "no_omniscient_trigger": true,
+        "observation_line": 2095,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 24956
+      },
+      "status": "candidate",
+      "turn": 25037,
+      "type": "death",
+      "witness": {
+        "cause": "a green worm mass"
+      }
+    }
+  ]
+}

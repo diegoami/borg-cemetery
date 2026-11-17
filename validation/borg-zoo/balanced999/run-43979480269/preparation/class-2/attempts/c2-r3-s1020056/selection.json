@@ -1,0 +1,181 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 22000,
+        "file": "checkpoint-000207-t0000022003.save",
+        "game_turn": 22003,
+        "keys": 4275,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1020056
+      },
+      "selection": {
+        "first_visible_turn": 22063,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "large white snake",
+        "no_omniscient_trigger": true,
+        "observation_line": 2061,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 22063
+      },
+      "status": "candidate",
+      "turn": 22179,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 2073,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 24
+            }
+          ],
+          "sp": 2,
+          "turn": 22179
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 2073,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 24
+            }
+          ],
+          "sp": 2,
+          "turn": 22179
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 9,
+          "level": 1,
+          "line": 2077,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 22968
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 23000,
+        "file": "checkpoint-000211-t0000023008.save",
+        "game_turn": 23008,
+        "keys": 4334,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1020056
+      },
+      "selection": {
+        "first_visible_turn": 23058,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "large white snake",
+        "no_omniscient_trigger": true,
+        "observation_line": 2086,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 23058
+      },
+      "status": "candidate",
+      "turn": 23462,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 2126,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 24
+            }
+          ],
+          "sp": 2,
+          "turn": 23462
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 2126,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 24
+            }
+          ],
+          "sp": 2,
+          "turn": 23462
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 9,
+          "level": 1,
+          "line": 2130,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 24241
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 29900,
+        "file": "checkpoint-000267-t0000029901.save",
+        "game_turn": 29901,
+        "keys": 5432,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1020056
+      },
+      "selection": {
+        "first_visible_turn": 29901,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 2625,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 29901
+      },
+      "status": "candidate",
+      "turn": 29927,
+      "type": "death",
+      "witness": {
+        "cause": "a giant yellow centipede"
+      }
+    }
+  ]
+}

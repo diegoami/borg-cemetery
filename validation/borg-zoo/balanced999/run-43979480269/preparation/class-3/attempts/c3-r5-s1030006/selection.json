@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 70800,
+        "file": "checkpoint-000707-t0000070800.save",
+        "game_turn": 70800,
+        "keys": 14364,
+        "max_depth": 3,
+        "race_idx": 5,
+        "seed": 1030006
+      },
+      "selection": {
+        "first_visible_turn": 70850,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 34,
+        "monster_kind": "scout",
+        "no_omniscient_trigger": true,
+        "observation_line": 7084,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 70850
+      },
+      "status": "candidate",
+      "turn": 70988,
+      "type": "death",
+      "witness": {
+        "cause": "a scout"
+      }
+    }
+  ]
+}

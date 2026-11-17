@@ -1,0 +1,133 @@
+{
+  "cases": [
+    {
+      "directory": "c1-r7-s1010030-i000",
+      "id": "c1-r7-s1010030-i000",
+      "incident_turn": 4862,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 4702,
+      "save_sha256": "6904fdcf51f6a9fbe626cbbfea78fe966e3409d8e9d9ecf3b9d3fb59f3970899"
+    }
+  ],
+  "cls": 1,
+  "elapsed_seconds": 31.65135613199999,
+  "id": "c1-r7-s1010030",
+  "ordinal": 30,
+  "race": 7,
+  "retention": [
+    {
+      "archive": "encounters.jsonl.gz",
+      "archive_sha256": "14a131ff9ccae0972daadad43dcd836250f2f0b3b94a557642172adbb975e15a",
+      "path": "encounters.jsonl",
+      "sha256": "d2d71ca172f025805502e40a4469461a9d0fe1d39ca80a0edc229d7c2ad1da8f"
+    },
+    {
+      "archive": "trace.jsonl.gz",
+      "archive_sha256": "9538e436ef20a6f8852517bcc1a4ae1fc5165b4344c34f4d72e6b03bdc888a92",
+      "path": "trace.jsonl",
+      "sha256": "5052bf0f850ad494d7ea9119369bb029332db2a39fd2e3106c7b9b31f2e787fa"
+    },
+    {
+      "archive": "keys.log.gz",
+      "archive_sha256": "6ffdf76c4635777ebe169986d526ce3bc3d3dccc3aaf9e0e52b48701357b5aaa",
+      "path": "keys.log",
+      "sha256": "e3ba73cb8de0882241a141cd53c532ec8b2c4c47c07b4a0d8a130ac735ff1f13"
+    },
+    {
+      "archive": "messages.log.gz",
+      "archive_sha256": "d9b051b02803281fe237d84ff33d10009097a15258eed1eab7dbe495274fa1a5",
+      "path": "messages.log",
+      "sha256": "e9ae80c8839e7e6325a3cefc2ca2b2d8393e16781c86206eb16ec81bf3c3eb59"
+    },
+    {
+      "archive": "state.log.gz",
+      "archive_sha256": "71ecb691263b84c2933e3655dacda0df2d005e90222f638ae3310a6ee137afce",
+      "path": "state.log",
+      "sha256": "14c33bff19306565a9d05192d72a3cc46597262025158715d1990e8f7160a434"
+    }
+  ],
+  "seed": 1010030,
+  "status": "death",
+  "summary": {
+    "borg_decisions": 5188,
+    "borg_rng": 2135587861,
+    "calendar": "fixed",
+    "class": "Mage",
+    "class_idx": 1,
+    "clevel": 4,
+    "dead": true,
+    "death_cause": "a fatal wound",
+    "depth": 2,
+    "effective_settings": {},
+    "exact_turns": false,
+    "game_options": {
+      "animate_flicker": false,
+      "auto_more": true,
+      "autoexplore_commands": false,
+      "birth_ai_learn": true,
+      "birth_connect_stairs": true,
+      "birth_feelings": true,
+      "birth_force_descend": false,
+      "birth_know_flavors": false,
+      "birth_know_runes": false,
+      "birth_levels_persist": false,
+      "birth_lose_arts": false,
+      "birth_no_artifacts": false,
+      "birth_no_recall": false,
+      "birth_no_selling": true,
+      "birth_percent_damage": false,
+      "birth_randarts": false,
+      "birth_stacking": true,
+      "birth_start_kit": true,
+      "center_player": false,
+      "cheat_hear": false,
+      "cheat_live": false,
+      "cheat_room": false,
+      "cheat_xtra": false,
+      "disturb_near": true,
+      "effective_speed": false,
+      "highlight_player": false,
+      "hp_changes_color": true,
+      "hybrid_walls": false,
+      "mouse_movement": true,
+      "notify_recharge": false,
+      "pickup_always": false,
+      "pickup_inven": true,
+      "purple_uniques": false,
+      "rogue_like_commands": false,
+      "score_hear": false,
+      "score_live": false,
+      "score_room": false,
+      "score_xtra": false,
+      "show_damage": false,
+      "show_flavors": false,
+      "show_target": true,
+      "solid_walls": false,
+      "use_old_target": false,
+      "use_sound": false,
+      "view_yellow_light": false
+    },
+    "game_rng": {
+      "quick": false,
+      "quick_rng": 1430143507,
+      "rng": "75e14070bfe73e64983d97973bfcddd5316bb49368b58d691157eb358ca9ef0ca936b0cfa61d39bb70ff58f8c0f102bb09083c38cf8a491089a58500900cbf36e7290089d9b0a1834f88363560f5d93c08a52d8530f02b0b07ec07225b67e28ed626b96d0523bdfb62bb6111edce5cf13cc20f05158101167d8d8d01a17702be",
+      "rng_index": 24
+    },
+    "game_turns": 54500,
+    "hp": -1,
+    "keys": 10979,
+    "loaded": false,
+    "max_clevel": 4,
+    "max_depth": 2,
+    "max_hp": 25,
+    "menu_letters": true,
+    "player_energy": 545230,
+    "player_turns": 5452,
+    "race": "Half-Troll",
+    "race_idx": 7,
+    "resting_turns": 164,
+    "seed": 1010030,
+    "stop_reason": "death",
+    "wall_seconds": 28.48
+  }
+}

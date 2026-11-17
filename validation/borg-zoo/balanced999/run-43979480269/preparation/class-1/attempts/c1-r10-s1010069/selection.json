@@ -1,0 +1,77 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 16600,
+        "file": "checkpoint-000153-t0000016603.save",
+        "game_turn": 16603,
+        "keys": 3145,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1010069
+      },
+      "selection": {
+        "first_visible_turn": 16623,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 15,
+        "monster_kind": "grey mold",
+        "no_omniscient_trigger": true,
+        "observation_line": 1504,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 16623
+      },
+      "status": "candidate",
+      "turn": 16673,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 1509,
+          "max_hp": 16,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 17
+            }
+          ],
+          "sp": 1,
+          "turn": 16673
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 1509,
+          "max_hp": 16,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 17
+            }
+          ],
+          "sp": 1,
+          "turn": 16673
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 16,
+          "level": 2,
+          "line": 1511,
+          "max_hp": 16,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 1,
+          "turn": 16693
+        }
+      }
+    }
+  ]
+}

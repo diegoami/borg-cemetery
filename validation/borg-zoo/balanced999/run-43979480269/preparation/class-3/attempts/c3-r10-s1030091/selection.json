@@ -1,0 +1,103 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 27600,
+        "file": "checkpoint-000276-t0000027604.save",
+        "game_turn": 27604,
+        "keys": 5584,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1030091
+      },
+      "selection": {
+        "first_visible_turn": 27604,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "scout",
+        "no_omniscient_trigger": true,
+        "observation_line": 2750,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 27604
+      },
+      "status": "candidate",
+      "turn": 27794,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 6,
+          "level": 3,
+          "line": 2763,
+          "max_hp": 26,
+          "max_sp": 5,
+          "monsters": [],
+          "sp": 5,
+          "turn": 27784
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 3,
+          "line": 2764,
+          "max_hp": 26,
+          "max_sp": 5,
+          "monsters": [],
+          "sp": 5,
+          "turn": 27794
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 26,
+          "level": 3,
+          "line": 2765,
+          "max_hp": 26,
+          "max_sp": 5,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 71
+            }
+          ],
+          "sp": 5,
+          "turn": 27804
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 27800,
+        "file": "checkpoint-000278-t0000027804.save",
+        "game_turn": 27804,
+        "keys": 5621,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1030091
+      },
+      "selection": {
+        "first_visible_turn": 27804,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "scout",
+        "no_omniscient_trigger": true,
+        "observation_line": 2765,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 27804
+      },
+      "status": "candidate",
+      "turn": 27847,
+      "type": "death",
+      "witness": {
+        "cause": "a scout"
+      }
+    }
+  ]
+}

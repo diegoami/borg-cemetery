@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1010051",
+  "run_kind": "harness",
+  "character": "Half-Orc Mage",
+  "raw_cause": "a green glutton ghost",
+  "terminal": {
+    "cause": "a green glutton ghost",
+    "dead": true,
+    "depth": 3,
+    "max_depth": 3,
+    "level": 6,
+    "turn": 77420,
+    "race_idx": 6,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1010051,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "a4869cfa09896aa7f56f176acb1b8dca4330748a50b6659437dbdd48ebe1ae0f",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 7232
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c1-r6-s1010051",
+      "result_sha256": "caee536e1722ae90ce04149c8686e29db068af54857472ad003d92edd05e5b58",
+      "raw_sha256": {
+        "keys.log": "caee536e1722ae90ce04149c8686e29db068af54857472ad003d92edd05e5b58",
+        "messages.log": "df2429b38325691f08ded955fd6c07bd43a34a6510419ab9a93642c519f94632",
+        "state.log": "c914040d725b9c7320ec8084796ee29c5a4ff90ef98db5b692d9f187e2abe59d"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-27d644b82a80e4a886848ad809fe1891b2a3eba177794674dc7fabdb342d3784",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "43c690d2115cae8b51518ec4dbfedc1c8796153c6885b84d220000e75260e370",
+    "depths.json": "7fbeba0be2f0c8dd2a9dd62eefb6e7c523ade802847fa2ccea9709c8722b7975",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "35c19cf2e4ca9d5946471ebd82b4914570b2eb18a7dca52750680e88976804aa",
+    "trace-tail.jsonl": "cd76ee42b37850f8d92fa9f10e40614648a7611fd2e5e8d89f5e6cc0367321ff"
+  },
+  "investigation": null,
+  "issue": null
+}

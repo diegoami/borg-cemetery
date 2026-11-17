@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1010086",
+  "run_kind": "harness",
+  "character": "Dunadan Mage",
+  "raw_cause": "poison",
+  "terminal": {
+    "cause": "poison",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 58660,
+    "race_idx": 8,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1010086,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "078cebfc514599458971cae8a64f45ef417c064e6f4dc15d319f058fbd892189",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 5543
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c1-r8-s1010086",
+      "result_sha256": "bb3f96f7c099a9433571b34b3534b54e4d2d311014caeb5b08e6283843c7efee",
+      "raw_sha256": {
+        "keys.log": "bb3f96f7c099a9433571b34b3534b54e4d2d311014caeb5b08e6283843c7efee",
+        "messages.log": "c46109bf498b5d878e2fc50f7b18d30d6de263ce906d52775f76ee4d04af430f",
+        "state.log": "7b9330a8ce883f77099fd4e7e279520c0def10a553038a043b878e37422c04d4"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-bf0dcc42f83cb3bea921a24f36dce9fbb0129bfa2c99d452b278bbb44a8793e3",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "c89e88f6c3a27cd1ba648f85b8e3548a8d96d3b77b9433f60eee0787a9792063",
+    "depths.json": "0ad0f794df4eed1d44eb17ca327ae4989d30e7065e8cef99d3026f292a1bcdd4",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "0cb91f3c1f588c0f7ae193b05b0a4edfb226161600cdbacc240b3bf58f4748a8",
+    "trace-tail.jsonl": "d90fb1e5508cda39be48d7e05dbc21ba7472dcb9bee184a0a890fb25f898a4e2"
+  },
+  "investigation": null,
+  "issue": null
+}

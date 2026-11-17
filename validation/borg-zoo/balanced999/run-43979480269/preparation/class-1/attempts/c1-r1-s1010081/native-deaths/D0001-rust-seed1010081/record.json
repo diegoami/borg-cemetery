@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1010081",
+  "run_kind": "harness",
+  "character": "Half-Elf Mage",
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 37965,
+    "race_idx": 1,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1010081,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "7f9bef402d84926eda64a918ee4883135ad9c62c6e9ce0bf8951b84880de017a",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 3625
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c1-r1-s1010081",
+      "result_sha256": "b312de4f92cd817888cc07d75ffcc9207905794a19cb2bf9bfb48367defe6a16",
+      "raw_sha256": {
+        "keys.log": "b312de4f92cd817888cc07d75ffcc9207905794a19cb2bf9bfb48367defe6a16",
+        "messages.log": "a67bafa82aec6766fabac1bfa821874156c088780e40d914d59aefa8e64d69f7",
+        "state.log": "9ea23c2102ac567c53c7d44258f1be1906c4ef20110b554c14d84ff11244c020"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-214d93f121a4621311ee6ef33680cbcd0ea6e2b06662743b5a223ed2bd53794a",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "4bb36c0d586c80582f06c31a5c3b8caf5613d170e928b017ada925f69d154921",
+    "depths.json": "57280a79023978912b0bc75558a75af5aaa5d216d8079525911467213d47c805",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "19decab9c99bf0b27d968657a867084e0d2234a4518e0e4a65a017a212b075c9",
+    "trace-tail.jsonl": "51f17d3b8044b70f9dd0f6f54ba356d312211a98cd126cb43db25d10ab8c8438"
+  },
+  "investigation": null,
+  "issue": null
+}

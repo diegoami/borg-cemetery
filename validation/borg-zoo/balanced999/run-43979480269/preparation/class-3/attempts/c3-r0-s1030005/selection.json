@@ -1,0 +1,129 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 1700,
+        "file": "checkpoint-000017-t0000001702.save",
+        "game_turn": 1702,
+        "keys": 390,
+        "max_depth": 1,
+        "race_idx": 0,
+        "seed": 1030005
+      },
+      "selection": {
+        "first_visible_turn": 1792,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 17,
+        "monster_kind": "fruit bat",
+        "no_omniscient_trigger": true,
+        "observation_line": 187,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 1792
+      },
+      "status": "candidate",
+      "turn": 1862,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 193,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 23,
+              "race": 27
+            },
+            {
+              "index": 17,
+              "race": 31
+            },
+            {
+              "index": 1,
+              "race": 47
+            }
+          ],
+          "sp": 2,
+          "turn": 1852
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 4,
+          "line": 194,
+          "max_hp": 34,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 23,
+              "race": 27
+            },
+            {
+              "index": 17,
+              "race": 31
+            }
+          ],
+          "sp": 2,
+          "turn": 1862
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 20,
+          "level": 4,
+          "line": 195,
+          "max_hp": 34,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 23,
+              "race": 27
+            },
+            {
+              "index": 17,
+              "race": 31
+            }
+          ],
+          "sp": 2,
+          "turn": 1872
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 6,
+        "depth": 2,
+        "due_turn": 28600,
+        "file": "checkpoint-000265-t0000028605.save",
+        "game_turn": 28605,
+        "keys": 5323,
+        "max_depth": 2,
+        "race_idx": 0,
+        "seed": 1030005
+      },
+      "selection": {
+        "first_visible_turn": 28695,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 12,
+        "monster_kind": "gallant",
+        "no_omniscient_trigger": true,
+        "observation_line": 2612,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 28695
+      },
+      "status": "candidate",
+      "turn": 28859,
+      "type": "death",
+      "witness": {
+        "cause": "a gallant"
+      }
+    }
+  ]
+}

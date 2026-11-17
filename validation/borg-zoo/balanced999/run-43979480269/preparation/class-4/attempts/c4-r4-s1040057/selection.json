@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 4100,
+        "file": "checkpoint-000041-t0000004100.save",
+        "game_turn": 4100,
+        "keys": 922,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1040057
+      },
+      "selection": {
+        "first_visible_turn": 4150,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 21,
+        "monster_kind": "small kobold",
+        "no_omniscient_trigger": true,
+        "observation_line": 419,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 4150
+      },
+      "status": "candidate",
+      "turn": 4200,
+      "type": "death",
+      "witness": {
+        "cause": "a small kobold"
+      }
+    }
+  ]
+}

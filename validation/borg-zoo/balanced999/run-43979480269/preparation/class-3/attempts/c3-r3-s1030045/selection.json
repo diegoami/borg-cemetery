@@ -1,0 +1,171 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 24000,
+        "file": "checkpoint-000235-t0000024001.save",
+        "game_turn": 24001,
+        "keys": 4871,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1030045
+      },
+      "selection": {
+        "first_visible_turn": 24001,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 17,
+        "monster_kind": "small kobold",
+        "no_omniscient_trigger": true,
+        "observation_line": 2359,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 24001
+      },
+      "status": "candidate",
+      "turn": 24922,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 3,
+          "line": 2452,
+          "max_hp": 24,
+          "max_sp": 6,
+          "monsters": [],
+          "sp": 6,
+          "turn": 24922
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 3,
+          "level": 3,
+          "line": 2452,
+          "max_hp": 24,
+          "max_sp": 6,
+          "monsters": [],
+          "sp": 6,
+          "turn": 24922
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 22,
+          "level": 3,
+          "line": 2532,
+          "max_hp": 24,
+          "max_sp": 6,
+          "monsters": [],
+          "sp": 6,
+          "turn": 26125
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 40400,
+        "file": "checkpoint-000391-t0000040403.save",
+        "game_turn": 40403,
+        "keys": 8175,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1030045
+      },
+      "selection": {
+        "first_visible_turn": 40493,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 14,
+        "monster_kind": "metallic red centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 3962,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 40493
+      },
+      "status": "candidate",
+      "turn": 40593,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 6,
+          "level": 3,
+          "line": 3971,
+          "max_hp": 24,
+          "max_sp": 6,
+          "monsters": [
+            {
+              "index": 14,
+              "race": 65
+            }
+          ],
+          "sp": 6,
+          "turn": 40583
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 6,
+          "level": 4,
+          "line": 3972,
+          "max_hp": 28,
+          "max_sp": 7,
+          "monsters": [],
+          "sp": 6,
+          "turn": 40593
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 23,
+          "level": 4,
+          "line": 3976,
+          "max_hp": 28,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 26,
+              "race": 18
+            }
+          ],
+          "sp": 7,
+          "turn": 41373
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 49200,
+        "file": "checkpoint-000466-t0000049203.save",
+        "game_turn": 49203,
+        "keys": 9653,
+        "max_depth": 2,
+        "race_idx": 3,
+        "seed": 1030045
+      },
+      "selection": {
+        "first_visible_turn": 49253,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 12,
+        "monster_kind": "wild cat",
+        "no_omniscient_trigger": true,
+        "observation_line": 4686,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 49253
+      },
+      "status": "candidate",
+      "turn": 49361,
+      "type": "death",
+      "witness": {
+        "cause": "a wild cat"
+      }
+    }
+  ]
+}

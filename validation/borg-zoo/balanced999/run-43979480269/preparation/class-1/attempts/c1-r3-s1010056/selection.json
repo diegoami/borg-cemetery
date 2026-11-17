@@ -1,0 +1,172 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 6000,
+        "file": "checkpoint-000060-t0000006002.save",
+        "game_turn": 6002,
+        "keys": 1297,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1010056
+      },
+      "selection": {
+        "first_visible_turn": 6002,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 19,
+        "monster_kind": "large white snake",
+        "no_omniscient_trigger": true,
+        "observation_line": 614,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 6002
+      },
+      "status": "candidate",
+      "turn": 7312,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 1,
+          "level": 1,
+          "line": 744,
+          "max_hp": 7,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 19,
+              "race": 24
+            }
+          ],
+          "sp": 0,
+          "turn": 7312
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 1,
+          "level": 1,
+          "line": 744,
+          "max_hp": 7,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 19,
+              "race": 24
+            }
+          ],
+          "sp": 0,
+          "turn": 7312
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 7,
+          "level": 1,
+          "line": 751,
+          "max_hp": 7,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 1,
+          "turn": 8162
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 23751,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 2,
+          "line": 2168,
+          "max_hp": 12,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 47
+            }
+          ],
+          "sp": 0,
+          "turn": 23751
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 2,
+          "line": 2168,
+          "max_hp": 12,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 47
+            }
+          ],
+          "sp": 0,
+          "turn": 23751
+        },
+        "recovery": {
+          "depth": 0,
+          "hp": 10,
+          "level": 2,
+          "line": 2172,
+          "max_hp": 12,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 14
+            },
+            {
+              "index": 3,
+              "race": 6
+            },
+            {
+              "index": 2,
+              "race": 10
+            }
+          ],
+          "sp": 3,
+          "turn": 24521
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 40600,
+        "file": "checkpoint-000380-t0000040609.save",
+        "game_turn": 40609,
+        "keys": 7943,
+        "max_depth": 2,
+        "race_idx": 3,
+        "seed": 1010056
+      },
+      "selection": {
+        "first_visible_turn": 40669,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 15,
+        "monster_kind": "wild cat",
+        "no_omniscient_trigger": true,
+        "observation_line": 3803,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 40669
+      },
+      "status": "candidate",
+      "turn": 40718,
+      "type": "death",
+      "witness": {
+        "cause": "a wild cat"
+      }
+    }
+  ]
+}

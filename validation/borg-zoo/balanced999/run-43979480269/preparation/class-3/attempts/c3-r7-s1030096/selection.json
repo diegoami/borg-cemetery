@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 7,
+        "depth": 3,
+        "due_turn": 60800,
+        "file": "checkpoint-000582-t0000060806.save",
+        "game_turn": 60806,
+        "keys": 11832,
+        "max_depth": 3,
+        "race_idx": 7,
+        "seed": 1030096
+      },
+      "selection": {
+        "first_visible_turn": 60876,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 31,
+        "monster_kind": "green worm mass",
+        "no_omniscient_trigger": true,
+        "observation_line": 5784,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 60876
+      },
+      "status": "candidate",
+      "turn": 61020,
+      "type": "death",
+      "witness": {
+        "cause": "a green worm mass"
+      }
+    }
+  ]
+}

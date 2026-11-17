@@ -1,0 +1,98 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 2500,
+        "file": "checkpoint-000025-t0000002507.save",
+        "game_turn": 2507,
+        "keys": 596,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1020013
+      },
+      "selection": {
+        "first_visible_turn": 2567,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 15,
+        "monster_kind": "soldier ant",
+        "no_omniscient_trigger": true,
+        "observation_line": 269,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 2558
+      },
+      "status": "candidate",
+      "turn": 2607,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 272,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 2597
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 1,
+          "level": 1,
+          "line": 273,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 2607
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 9,
+          "level": 1,
+          "line": 286,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 3735
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 7700,
+        "file": "checkpoint-000067-t0000007701.save",
+        "game_turn": 7701,
+        "keys": 1481,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1020013
+      },
+      "selection": {
+        "first_visible_turn": 7751,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "apprentice",
+        "no_omniscient_trigger": true,
+        "observation_line": 667,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 7751
+      },
+      "status": "candidate",
+      "turn": 7771,
+      "type": "death",
+      "witness": {
+        "cause": "an apprentice"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 52100,
+        "file": "checkpoint-000506-t0000052109.save",
+        "game_turn": 52109,
+        "keys": 10747,
+        "max_depth": 3,
+        "race_idx": 5,
+        "seed": 1010028
+      },
+      "selection": {
+        "first_visible_turn": 52169,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "apprentice",
+        "no_omniscient_trigger": true,
+        "observation_line": 5089,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 52169
+      },
+      "status": "candidate",
+      "turn": 52220,
+      "type": "death",
+      "witness": {
+        "cause": "an apprentice"
+      }
+    }
+  ]
+}

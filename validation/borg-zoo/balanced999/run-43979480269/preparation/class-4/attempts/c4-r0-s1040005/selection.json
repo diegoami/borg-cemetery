@@ -1,0 +1,108 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 15200,
+        "file": "checkpoint-000144-t0000015529.save",
+        "game_turn": 15529,
+        "keys": 3097,
+        "max_depth": 3,
+        "race_idx": 0,
+        "seed": 1040005
+      },
+      "selection": {
+        "first_visible_turn": 15789,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 1,
+        "monster_kind": "floating eye",
+        "no_omniscient_trigger": true,
+        "observation_line": 1420,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 15783
+      },
+      "status": "candidate",
+      "turn": 15789,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 3,
+          "level": 4,
+          "line": 1420,
+          "max_hp": 28,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 1,
+              "race": 27
+            }
+          ],
+          "sp": 5,
+          "turn": 15789
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 3,
+          "level": 4,
+          "line": 1420,
+          "max_hp": 28,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 1,
+              "race": 27
+            }
+          ],
+          "sp": 5,
+          "turn": 15789
+        },
+        "recovery": {
+          "depth": 2,
+          "hp": 20,
+          "level": 4,
+          "line": 1422,
+          "max_hp": 28,
+          "max_sp": 7,
+          "monsters": [],
+          "sp": 7,
+          "turn": 16549
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 5,
+        "depth": 2,
+        "due_turn": 20800,
+        "file": "checkpoint-000182-t0000020802.save",
+        "game_turn": 20802,
+        "keys": 3841,
+        "max_depth": 3,
+        "race_idx": 0,
+        "seed": 1040005
+      },
+      "selection": {
+        "first_visible_turn": 20840,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 13,
+        "monster_kind": "wild cat",
+        "no_omniscient_trigger": true,
+        "observation_line": 1770,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 20840
+      },
+      "status": "candidate",
+      "turn": 21045,
+      "type": "death",
+      "witness": {
+        "cause": "a wild cat"
+      }
+    }
+  ]
+}

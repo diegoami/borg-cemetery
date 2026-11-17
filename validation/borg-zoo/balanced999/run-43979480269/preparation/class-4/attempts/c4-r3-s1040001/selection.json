@@ -1,0 +1,103 @@
+{
+  "incidents": [
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 351,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 48,
+          "max_hp": 9,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 1,
+              "race": 47
+            },
+            {
+              "index": 2,
+              "race": 41
+            }
+          ],
+          "sp": 0,
+          "turn": 351
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 48,
+          "max_hp": 9,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 1,
+              "race": 47
+            },
+            {
+              "index": 2,
+              "race": 41
+            }
+          ],
+          "sp": 0,
+          "turn": 351
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 9,
+          "level": 1,
+          "line": 49,
+          "max_hp": 9,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 1,
+              "race": 47
+            },
+            {
+              "index": 2,
+              "race": 41
+            }
+          ],
+          "sp": 0,
+          "turn": 361
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 9100,
+        "file": "checkpoint-000084-t0000009108.save",
+        "game_turn": 9108,
+        "keys": 1845,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1040001
+      },
+      "selection": {
+        "first_visible_turn": 9128,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 25,
+        "monster_kind": "grey mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 859,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 9128
+      },
+      "status": "candidate",
+      "turn": 9177,
+      "type": "death",
+      "witness": {
+        "cause": "a grey mushroom patch"
+      }
+    }
+  ]
+}

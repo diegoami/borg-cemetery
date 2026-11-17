@@ -1,0 +1,113 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 37000,
+        "file": "checkpoint-000350-t0000037005.save",
+        "game_turn": 37005,
+        "keys": 7236,
+        "max_depth": 2,
+        "race_idx": 5,
+        "seed": 1020050
+      },
+      "selection": {
+        "first_visible_turn": 37045,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 35,
+        "monster_kind": "acolyte",
+        "no_omniscient_trigger": true,
+        "observation_line": 3477,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 37045
+      },
+      "status": "candidate",
+      "turn": 37155,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 8,
+          "level": 4,
+          "line": 3487,
+          "max_hp": 33,
+          "max_sp": 8,
+          "monsters": [
+            {
+              "index": 35,
+              "race": 38
+            }
+          ],
+          "sp": 1,
+          "turn": 37145
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 4,
+          "level": 4,
+          "line": 3488,
+          "max_hp": 33,
+          "max_sp": 8,
+          "monsters": [
+            {
+              "index": 35,
+              "race": 38
+            }
+          ],
+          "sp": 1,
+          "turn": 37155
+        },
+        "recovery": {
+          "depth": 2,
+          "hp": 20,
+          "level": 4,
+          "line": 3515,
+          "max_hp": 33,
+          "max_sp": 8,
+          "monsters": [
+            {
+              "index": 33,
+              "race": 39
+            }
+          ],
+          "sp": 3,
+          "turn": 37955
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 45500,
+        "file": "checkpoint-000425-t0000045506.save",
+        "game_turn": 45506,
+        "keys": 8718,
+        "max_depth": 3,
+        "race_idx": 5,
+        "seed": 1020050
+      },
+      "selection": {
+        "first_visible_turn": 45556,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 13,
+        "monster_kind": "soldier",
+        "no_omniscient_trigger": true,
+        "observation_line": 4192,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 45556
+      },
+      "status": "candidate",
+      "turn": 45619,
+      "type": "death",
+      "witness": {
+        "cause": "a soldier"
+      }
+    }
+  ]
+}

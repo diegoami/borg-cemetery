@@ -1,0 +1,113 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 7700,
+        "file": "checkpoint-000076-t0000007703.save",
+        "game_turn": 7703,
+        "keys": 1570,
+        "max_depth": 1,
+        "race_idx": 9,
+        "seed": 1030010
+      },
+      "selection": {
+        "first_visible_turn": 7743,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 22,
+        "monster_kind": "grey mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 757,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 7743
+      },
+      "status": "candidate",
+      "turn": 7803,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 763,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 22,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 7803
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 763,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 22,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 7803
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 12,
+          "level": 1,
+          "line": 766,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 22,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 8673
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 7700,
+        "file": "checkpoint-000076-t0000007703.save",
+        "game_turn": 7703,
+        "keys": 1570,
+        "max_depth": 1,
+        "race_idx": 9,
+        "seed": 1030010
+      },
+      "selection": {
+        "first_visible_turn": 7743,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 22,
+        "monster_kind": "grey mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 757,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 7743
+      },
+      "status": "duplicate_saved_start",
+      "turn": 8751,
+      "type": "death",
+      "witness": {
+        "cause": "a grey mushroom patch"
+      }
+    }
+  ]
+}

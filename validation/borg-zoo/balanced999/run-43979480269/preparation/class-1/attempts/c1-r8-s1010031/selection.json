@@ -1,0 +1,160 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 4300,
+        "file": "checkpoint-000043-t0000004301.save",
+        "game_turn": 4301,
+        "keys": 954,
+        "max_depth": 1,
+        "race_idx": 8,
+        "seed": 1010031
+      },
+      "selection": {
+        "first_visible_turn": 4361,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 24,
+        "monster_kind": "small kobold",
+        "no_omniscient_trigger": true,
+        "observation_line": 437,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 4361
+      },
+      "status": "candidate",
+      "turn": 4551,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 1,
+          "level": 1,
+          "line": 455,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 24,
+              "race": 25
+            },
+            {
+              "index": 25,
+              "race": 17
+            },
+            {
+              "index": 5,
+              "race": 27
+            },
+            {
+              "index": 2,
+              "race": 20
+            },
+            {
+              "index": 21,
+              "race": 68
+            }
+          ],
+          "sp": 0,
+          "turn": 4541
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 1,
+          "level": 2,
+          "line": 456,
+          "max_hp": 17,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 25,
+              "race": 17
+            },
+            {
+              "index": 2,
+              "race": 20
+            },
+            {
+              "index": 5,
+              "race": 27
+            },
+            {
+              "index": 21,
+              "race": 68
+            }
+          ],
+          "sp": 0,
+          "turn": 4551
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 9,
+          "level": 2,
+          "line": 475,
+          "max_hp": 17,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 0,
+          "turn": 5241
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 11982,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 2,
+          "line": 1051,
+          "max_hp": 17,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 37,
+              "race": 26
+            }
+          ],
+          "sp": 0,
+          "turn": 11962
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 1,
+          "level": 2,
+          "line": 1053,
+          "max_hp": 17,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 0,
+          "turn": 11982
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 15,
+          "level": 2,
+          "line": 1065,
+          "max_hp": 17,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 2,
+          "turn": 12992
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 38590,
+      "type": "death",
+      "witness": {
+        "cause": "poison"
+      }
+    }
+  ]
+}
