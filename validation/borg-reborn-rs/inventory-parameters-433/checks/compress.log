@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/tmp/t433-compress-traces.py", line 14, in <module>
+    os.replace(tmp,out);f.unlink();receipt[str(root.name)+'/'+run.name]={'bytes':size,'gzip_bytes':out.stat().st_size}
+    ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/work/t433-baseline-full.partial.61101/full-7-ranger-2/trace-core.jsonl.gz.tmp' -> '/workspace/work/t433-baseline-full.partial.61101/full-7-ranger-2/trace-core.jsonl.gz'
+Losslessly compressed 45 completed traces

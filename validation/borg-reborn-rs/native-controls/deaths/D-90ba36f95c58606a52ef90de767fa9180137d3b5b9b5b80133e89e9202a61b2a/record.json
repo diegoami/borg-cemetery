@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-90ba36f95c58606a52ef90de767fa9180137d3b5b9b5b80133e89e9202a61b2a",
+  "run_kind": "harness",
+  "character": "Elf Druid",
+  "raw_cause": "a kobold",
+  "terminal": {
+    "cause": "a kobold",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 2,
+    "turn": 45752,
+    "race_idx": 2,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020,
+    "flags": "menu",
+    "git_rev": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754",
+    "borg_txt_sha256": "03f3285c30f69eef7d1842a9c3771e01c6aefb615e8ac14b4a0b02431f7ae170",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 4669
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-2-druid-0",
+      "result_sha256": "d574a925f2e597d6cb44a80cff6f47fb9e6fca7ad143fa7d50386d5641d9295d",
+      "raw_sha256": {
+        "keys.log": "d574a925f2e597d6cb44a80cff6f47fb9e6fca7ad143fa7d50386d5641d9295d",
+        "messages.log": "52f20de71c2cbcf351fd3db500ae491bfb23e785df8a133fdb8e6b167e2175c5",
+        "state.log": "8d66e2c3e3efcbe059b138a77b7945c058d3a58871200dd134da221577cdfb6e"
+      },
+      "source_commit": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+      "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754"
+    }
+  ],
+  "encounter_family": "start-adb9fefb4a35a8cca1f9738a81390c2348ed1ab6849ae9a0ca09d00f2757e423",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ef1139f17dd2e346ba14aad23d7f7648327b75ddc4081aeb3c95429f1ed7d18b",
+    "config.txt": "5be6642ef0d67ea58863bad493db58245132e83f681ff1ba031ae92a17d3180e",
+    "depths.json": "2b0524823bbc0b4e2d6ef02b9d8bd0e7171cbd1dde4b91d3a5950bba4557a6a9",
+    "params-core.json": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca",
+    "summary.json": "2ab18f39bb4f45cb4e6b3cef9568bf298017905642e222978a2ec51a16566f9a",
+    "trace-core-tail.jsonl": "da7e6103c07f7ed5bf2be0dd1aa5fc1f1cb2666f57cbf4d6dc6b3eafccb40abb"
+  },
+  "investigation": null,
+  "issue": null
+}
