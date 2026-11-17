@@ -90,6 +90,9 @@ def settings(config, case_dir=None):
 # borg-zoo's runner (zoo/borgrs.py config_text/command): the settings it
 # forces before the profile's, and the argument form of a value.
 ZOO_FORCED = ('borg_respawn_race', 'borg_respawn_class', 'borg_cheat_death', 'borg_respawn_winners')
+# Observation-only record paths a retained-evidence or town-shadow Zoo cell
+# set (zoo/borgrs.py run_cell); config.txt names them in zoo_record_streams.
+ZOO_RECORD_STREAMS = {'BORG_TOWN_PLAN_RECORD': 'town-plan.jsonl', 'BORG_TRIP_RECORD': 'trip.jsonl'}
 
 
 def zoo_override(text, name, value):
@@ -113,16 +116,26 @@ def zoo_plan(config, case_dir, race, cls):
         if name == 'borg_errands_plan':
             # Zoo's profile names it borg_plan; the cell got it as user/NAME.
             plan_file = case_dir / 'errands_plan.txt'
+            # Zoo dossiers record the hash as errands_plan_sha256 (borg-zoo
+            # zoo/deaths.py, and the 58 hand-made Zoo dossiers); the harness
+            # path's key, borg_errands_plan_sha256, is accepted too.
             want = config.get('errands_plan_sha256') or config.get('borg_errands_plan_sha256')
+            if not want:
+                raise SystemExit('rerun-death: the Zoo cell read an errands plan, but config.txt records '
+                                 'no plan hash (errands_plan_sha256): the plan cannot be verified')
             have = hashlib.sha256(plan_file.read_bytes()).hexdigest() if plan_file.exists() else None
             if have != want:
-                raise SystemExit(f'rerun-death: the Zoo cell read errands plan {str(want)[:12]}; '
-                                 f'the dossier copy is {"missing" if have is None else have[:12]}')
+                raise SystemExit(f'rerun-death: the Zoo cell read errands plan {want[:12]} (expected); '
+                                 f'the dossier copy is {"missing" if have is None else have[:12]} (actual)')
             settings['borg_plan'] = Path(value).name
         else:
             settings[name] = value
     forced = dict(zip(ZOO_FORCED, (str(race), str(cls), 'FALSE', 'FALSE')))
-    return {'forced': forced, 'settings': settings, 'plan_file': plan_file,
+    streams = [name for name in config.get('zoo_record_streams', '').split(',') if name]
+    unknown = sorted(set(streams) - set(ZOO_RECORD_STREAMS))
+    if unknown:
+        raise SystemExit(f'rerun-death: unknown Zoo record streams {", ".join(unknown)}')
+    return {'forced': forced, 'settings': settings, 'plan_file': plan_file, 'streams': streams,
             'borg_txt_sha256': config.get('borg_txt_sha256'),
             'turns': int(config['turns']), 'exact': config.get('exact_turns') == '1'}
 
@@ -196,6 +209,11 @@ def run_zoo(p, out, logs_env, checkpoint_every):
     # Zoo cleared every ambient BORG_* variable; only this tool's logs are set.
     env = {k: v for k, v in os.environ.items() if not k.startswith('BORG_')}
     env.update({k: v for k, v in logs_env.items() if k in ('BORG_OBSERVATION_LOG', 'BORG_WORLD_LOG', 'BORG_KNOWLEDGE_LOG')})
+    # The cell's own record streams, if it set any, so the rerun is the cell's
+    # process configuration and not only its key stream.
+    for name in zoo.get('streams', ()):
+        env[name] = str(run / ZOO_RECORD_STREAMS[name])
+        (run / ZOO_RECORD_STREAMS[name]).touch()
     env.update(TZ='UTC', LANG='C.UTF-8', LC_ALL='C.UTF-8')
     with (run / 'stderr.log').open('w') as err:
         return subprocess.run(cmd, cwd=game, env=env, stdout=subprocess.DEVNULL, stderr=err, text=True)

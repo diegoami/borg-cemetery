@@ -185,7 +185,7 @@ class ZooTest(unittest.TestCase):
     BASE = 'borg_respawn_race = -1\nborg_respawn_class = -1\nborg_cheat_death = TRUE\n' \
            'borg_respawn_winners = TRUE\nborg_town_plan = 0\n[BEGIN FORMULA SECTION]\n'
 
-    def cell(self, t, borg_txt_sha256, plan='/dive 3\n'):
+    def cell(self, t, borg_txt_sha256, plan='/dive 3\n', hash_key='errands_plan_sha256', extra_config=''):
         src = Path(t) / 'src'
         (src / 'harness').mkdir(parents=True)
         (src / 'harness/borg.txt').write_text(self.BASE)
@@ -193,8 +193,8 @@ class ZooTest(unittest.TestCase):
                 f'borg_txt_sha256={borg_txt_sha256}\n'
         if plan is not None:
             extra += 'borg_errands_plan=user/errands_plan.txt\n' \
-                     f'errands_plan_sha256={rd.hashlib.sha256(plan.encode()).hexdigest()}\n'
-        d = dossier(t, config_extra=extra)
+                     + (f'{hash_key}={rd.hashlib.sha256(plan.encode()).hexdigest()}\n' if hash_key else '')
+        d = dossier(t, config_extra=extra + extra_config)
         if plan is not None:
             (d / 'errands_plan.txt').write_text(plan)
         return src, d
@@ -229,6 +229,32 @@ class ZooTest(unittest.TestCase):
             with self.assertRaises(SystemExit) as e:
                 rd.zoo_borg_txt(rd.plan(d)['zoo'], src)
         self.assertIn('cannot be restored', str(e.exception))
+
+    def test_both_plan_hash_keys_are_read(self):
+        want = self.expected()
+        for key in ('errands_plan_sha256', 'borg_errands_plan_sha256'):
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as t:
+                src, d = self.cell(t, rd.hashlib.sha256(want.encode()).hexdigest(), hash_key=key)
+                self.assertEqual(rd.zoo_borg_txt(rd.plan(d)['zoo'], src), want)
+
+    def test_a_zoo_plan_without_a_recorded_hash_is_refused(self):
+        with tempfile.TemporaryDirectory() as t:
+            _, d = self.cell(t, 'f' * 64, hash_key=None)
+            with self.assertRaises(SystemExit) as e:
+                rd.plan(d)
+        self.assertIn('no plan hash', str(e.exception))
+
+    def test_record_streams_come_back(self):
+        with tempfile.TemporaryDirectory() as t:
+            _, d = self.cell(t, 'f' * 64, extra_config='zoo_record_streams=BORG_TOWN_PLAN_RECORD\n')
+            self.assertEqual(rd.plan(d)['zoo']['streams'], ['BORG_TOWN_PLAN_RECORD'])
+        with tempfile.TemporaryDirectory() as t:
+            _, d = self.cell(t, 'f' * 64)
+            self.assertEqual(rd.plan(d)['zoo']['streams'], [])
+        with tempfile.TemporaryDirectory() as t:
+            _, d = self.cell(t, 'f' * 64, extra_config='zoo_record_streams=BORG_ANYTHING\n')
+            with self.assertRaises(SystemExit):
+                rd.plan(d)
 
     def test_a_changed_zoo_plan_is_refused(self):
         with tempfile.TemporaryDirectory() as t:
