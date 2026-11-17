@@ -113,6 +113,9 @@ def zoo_plan(config, case_dir, race, cls):
     for name, value in config.items():
         if not name.startswith('borg_') or name.endswith('_sha256'):
             continue
+        if name == 'borg_scary_list' and value in ('', 'none'):
+            settings[name] = value  # the compiled C list: no file (borg-zoo#228)
+            continue
         if name == 'borg_scary_list':
             # borg-zoo#228: the named scary list the cell read as user/NAME.
             scary_file = case_dir / 'scary_list.txt'

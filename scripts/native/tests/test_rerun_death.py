@@ -272,6 +272,13 @@ class ZooTest(unittest.TestCase):
             self.assertEqual(zoo['settings']['borg_scary_list'], 'scary_monsters.txt')
             self.assertEqual(zoo['scary_file'].read_bytes(), self.SCARY)
 
+    def test_a_zoo_cell_on_the_compiled_list_needs_no_file(self):
+        with tempfile.TemporaryDirectory() as t:
+            _, d = self.cell(t, 'f' * 64, extra_config='borg_scary_list=none\n')
+            zoo = rd.plan(d)['zoo']
+            self.assertEqual(zoo['settings']['borg_scary_list'], 'none')
+            self.assertIsNone(zoo['scary_file'])
+
     def test_a_missing_or_changed_scary_list_is_refused(self):
         for write, data in ((False, None), (True, b'edited\n')):
             with self.subTest(write=write), tempfile.TemporaryDirectory() as t:
