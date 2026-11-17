@@ -43,7 +43,7 @@ def override(text, name, value):
     return text.rstrip('\n') + '\n' + line + '\n'
 
 
-def configured_adapter(template, plan=None):
+def configured_adapter(template, plan=None, exact_turns=False):
     original = template.read_text()
     requested = settings(original)
     if requested.get('borg_plan') and plan is None:
@@ -70,6 +70,8 @@ def configured_adapter(template, plan=None):
         argv += ['-uBorg', '--', '-seed', str(scenario['birth_seed']), '-race', str(scenario['race_idx']),
                  '-class', str(scenario['class_idx']), '-turns', str(cap), '-menu-letters', '-screen',
                  '-load', str(save), '-keep-load-rng', '-summary', str(raw / 'summary.json')]
+        if exact_turns:
+            argv += ['-exact-turns']
         for flag, filename in (('-keylog', 'keys.log'), ('-msglog', 'messages.log'), ('-statelog', 'state.log')):
             argv += [flag, str(raw / filename)]
         rc = command([sys.executable, source / 'harness/supervise.py', '--receipt', raw / 'process.json',
@@ -118,6 +120,6 @@ def configured_adapter(template, plan=None):
     return execute
 
 
-def run_configured(source, scenario, out, template, plan=None, turns=1000, wall_seconds=5):
+def run_configured(source, scenario, out, template, plan=None, turns=1000, wall_seconds=5, exact_turns=False):
     return run_scenario(source, scenario, out, turns, wall_seconds,
-                        execution_adapter=configured_adapter(template, plan))
+                        execution_adapter=configured_adapter(template, plan, exact_turns=exact_turns))
