@@ -133,6 +133,18 @@ class ImportZooDeathsTest(unittest.TestCase):
         with self.assertRaises(SystemExit):
             importer.main(['--run', '1', '--run-id', '2'])
 
+    def test_a_scary_list_stays_with_the_dossier(self):
+        # borg-zoo#228: the list the cell read is kept, so the death reruns with the same bytes.
+        def build(base):
+            bundle(base, 'suite/s/p/1', 1)
+            out = base / 'suite/s/p/1'
+            (out / 'user/scary_monsters.txt').write_bytes(b'Grip | 5 | - | -\n')
+            with (out / 'config.txt').open('a') as f:
+                f.write('borg_scary_list=scary_monsters.txt\nscary_list_sha256=x\n')
+        _, deaths, _, records = self.run_import(build)
+        (record,) = records.values()
+        self.assertIn('scary_list.txt', record['files_sha256'])
+
     def test_the_same_death_twice_is_a_repeat(self):
         def build(base):
             bundle(base, 'suite/s/p/1', 1)

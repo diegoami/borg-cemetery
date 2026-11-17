@@ -109,9 +109,22 @@ def zoo_override(text, name, value):
 
 def zoo_plan(config, case_dir, race, cls):
     """A Zoo cell's borg.txt settings and plan, from its config.txt."""
-    settings, plan_file = {}, None
+    settings, plan_file, scary_file = {}, None, None
     for name, value in config.items():
         if not name.startswith('borg_') or name.endswith('_sha256'):
+            continue
+        if name == 'borg_scary_list':
+            # borg-zoo#228: the named scary list the cell read as user/NAME.
+            scary_file = case_dir / 'scary_list.txt'
+            want = config.get('scary_list_sha256')
+            if not want:
+                raise SystemExit('rerun-death: the Zoo cell read a scary list, but config.txt records no '
+                                 'scary_list_sha256: the list cannot be verified')
+            have = hashlib.sha256(scary_file.read_bytes()).hexdigest() if scary_file.exists() else None
+            if have != want:
+                raise SystemExit(f'rerun-death: the Zoo cell read scary list {want[:12]} (expected); '
+                                 f'the dossier copy is {"missing" if have is None else have[:12]} (actual)')
+            settings[name] = value
             continue
         if name == 'borg_errands_plan':
             # Zoo's profile names it borg_plan; the cell got it as user/NAME.
@@ -135,7 +148,7 @@ def zoo_plan(config, case_dir, race, cls):
     unknown = sorted(set(streams) - set(ZOO_RECORD_STREAMS))
     if unknown:
         raise SystemExit(f'rerun-death: unknown Zoo record streams {", ".join(unknown)}')
-    return {'forced': forced, 'settings': settings, 'plan_file': plan_file, 'streams': streams,
+    return {'forced': forced, 'settings': settings, 'plan_file': plan_file, 'scary_file': scary_file, 'streams': streams,
             'borg_txt_sha256': config.get('borg_txt_sha256'),
             'turns': int(config['turns']), 'exact': config.get('exact_turns') == '1'}
 
@@ -198,6 +211,8 @@ def run_zoo(p, out, logs_env, checkpoint_every, extra=()):
     (run / 'user/borg.txt').write_text(text)
     if zoo['plan_file']:
         shutil.copy(zoo['plan_file'], run / 'user' / zoo['settings']['borg_plan'])
+    if zoo.get('scary_file'):
+        shutil.copy(zoo['scary_file'], run / 'user' / zoo['settings']['borg_scary_list'])
     game = ROOT / 'build/rust/game'
     cmd = [str(game / 'angband'), '-mborgh', '-n', '-uBorg'] + \
         [f'-d{d}={run / d}' for d in ('user', 'save', 'archive', 'panic', 'scores')] + \

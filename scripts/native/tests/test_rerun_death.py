@@ -256,6 +256,29 @@ class ZooTest(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 rd.plan(d)
 
+    SCARY = b'Grip | 5 | - | -\n'
+
+    def scary_cell(self, t, write=True, data=None):
+        sha = rd.hashlib.sha256(self.SCARY).hexdigest()
+        _, d = self.cell(t, 'f' * 64, extra_config=f'borg_scary_list=scary_monsters.txt\nscary_list_sha256={sha}\n')
+        if write:
+            (d / 'scary_list.txt').write_bytes(self.SCARY if data is None else data)
+        return d
+
+    def test_a_zoo_scary_list_is_restored_with_its_name(self):
+        # borg-zoo#228: the setting goes into borg.txt and the file comes back as user/NAME.
+        with tempfile.TemporaryDirectory() as t:
+            zoo = rd.plan(self.scary_cell(t))['zoo']
+            self.assertEqual(zoo['settings']['borg_scary_list'], 'scary_monsters.txt')
+            self.assertEqual(zoo['scary_file'].read_bytes(), self.SCARY)
+
+    def test_a_missing_or_changed_scary_list_is_refused(self):
+        for write, data in ((False, None), (True, b'edited\n')):
+            with self.subTest(write=write), tempfile.TemporaryDirectory() as t:
+                with self.assertRaises(SystemExit) as e:
+                    rd.plan(self.scary_cell(t, write, data))
+                self.assertIn('scary list', str(e.exception))
+
     def test_a_changed_zoo_plan_is_refused(self):
         with tempfile.TemporaryDirectory() as t:
             _, d = self.cell(t, 'f' * 64)
