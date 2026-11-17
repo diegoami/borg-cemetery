@@ -66,11 +66,15 @@ def configured_adapter(template, plan=None, exact_turns=False):
                 env[name] = inherited[name]
         env.update(BORG_CORE='borg-rs', BORG_CORE_OVERRIDES='on', BORG_RUN_DIR=str(raw),
                    TZ='UTC', LANG='C.UTF-8', LC_ALL='C.UTF-8')
+        # The engine may autosave the loaded file; preserve the original input
+        # for save identity and give execution its own mutable private copy.
+        execution_save = raw / 'save/input.save'
+        shutil.copyfile(save, execution_save)
         argv = [str(binary), '-mborgh']
         argv += ['-d' + name + '=' + str(raw / name) for name in ('user', 'save', 'archive', 'panic', 'scores')]
         argv += ['-uBorg', '--', '-seed', str(scenario['birth_seed']), '-race', str(scenario['race_idx']),
                  '-class', str(scenario['class_idx']), '-turns', str(cap), '-menu-letters', '-screen',
-                 '-load', str(save), '-keep-load-rng', '-summary', str(raw / 'summary.json')]
+                 '-load', str(execution_save), '-keep-load-rng', '-summary', str(raw / 'summary.json')]
         if exact_turns:
             argv += ['-exact-turns']
         for flag, filename in (('-keylog', 'keys.log'), ('-msglog', 'messages.log'), ('-statelog', 'state.log')):
