@@ -1,0 +1,1766 @@
+{
+  "attempted_lives": 152,
+  "bank_frozen": false,
+  "classes": [
+    {
+      "attempts": 24,
+      "class_idx": 0,
+      "historical_types": {
+        "death": 1,
+        "observed_critical_recovery": 1
+      },
+      "natural_deaths": 2,
+      "selected": 2,
+      "statuses": {
+        "death": 2,
+        "survived_cap": 22
+      }
+    },
+    {
+      "attempts": 8,
+      "class_idx": 1,
+      "historical_types": {
+        "death": 1,
+        "observed_critical_recovery": 1
+      },
+      "natural_deaths": 2,
+      "selected": 2,
+      "statuses": {
+        "death": 2,
+        "survived_cap": 6
+      }
+    },
+    {
+      "attempts": 12,
+      "class_idx": 2,
+      "historical_types": {
+        "death": 1,
+        "observed_critical_recovery": 1
+      },
+      "natural_deaths": 1,
+      "selected": 2,
+      "statuses": {
+        "death": 1,
+        "survived_cap": 11
+      }
+    },
+    {
+      "attempts": 24,
+      "class_idx": 3,
+      "historical_types": {
+        "death": 1,
+        "observed_critical_recovery": 1
+      },
+      "natural_deaths": 1,
+      "selected": 2,
+      "statuses": {
+        "death": 1,
+        "survived_cap": 23
+      }
+    },
+    {
+      "attempts": 20,
+      "class_idx": 4,
+      "historical_types": {
+        "death": 2
+      },
+      "natural_deaths": 2,
+      "selected": 2,
+      "statuses": {
+        "death": 2,
+        "survived_cap": 18
+      }
+    },
+    {
+      "attempts": 8,
+      "class_idx": 5,
+      "historical_types": {
+        "death": 1,
+        "observed_critical_recovery": 1
+      },
+      "natural_deaths": 3,
+      "selected": 2,
+      "statuses": {
+        "death": 3,
+        "survived_cap": 5
+      }
+    },
+    {
+      "attempts": 12,
+      "class_idx": 6,
+      "historical_types": {
+        "death": 1,
+        "observed_critical_recovery": 1
+      },
+      "natural_deaths": 1,
+      "selected": 2,
+      "statuses": {
+        "death": 1,
+        "survived_cap": 11
+      }
+    },
+    {
+      "attempts": 12,
+      "class_idx": 7,
+      "historical_types": {
+        "death": 1,
+        "observed_critical_recovery": 1
+      },
+      "natural_deaths": 1,
+      "selected": 2,
+      "statuses": {
+        "death": 1,
+        "survived_cap": 11
+      }
+    },
+    {
+      "attempts": 32,
+      "class_idx": 8,
+      "historical_types": {},
+      "natural_deaths": 0,
+      "selected": 0,
+      "statuses": {
+        "survived_cap": 32
+      }
+    }
+  ],
+  "controller": "borg-rs",
+  "expected_smoke_starts": 18,
+  "native_death_streams": {
+    "files": [
+      {
+        "path": "class-2/c2-r0-s3020005/stderr.log",
+        "sha256": "3b858d83cf5a54e1681ac5ac78909cc22985c03b9801ff0f9e23a85daeabd945",
+        "size": 1978
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/checkpoints.tar.gz",
+        "sha256": "22e8841c602589e64e3860da3cb6df25f673c419559e4e5e665ca3dcedd04fd5",
+        "size": 1168233
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/depths.json",
+        "sha256": "9361c51e1845c1cff44e8731a781e798add096118849cc1d4905b6ae9a2490dc",
+        "size": 340
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/trace-core.jsonl.gz",
+        "sha256": "b5cdf9393dde06d8afe7d667b7b222a5533e74d4a02a674160a51157537fbe8e",
+        "size": 679668
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/process.json",
+        "sha256": "592acd4fb9043be231fdc61190e6292b4f44b8d8c3991b6fb25edbb4f185b7e8",
+        "size": 4025
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/launcher.log",
+        "sha256": "225544d77ee0e02fc920aa56e1811cc533b449fdc6e45542f025de7085540542",
+        "size": 145
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/save/Borg",
+        "sha256": "b6d1340ded9c3f17bacfebc585934eb5521ae66ad53a6d3fbcf6fe90d53bdaa3",
+        "size": 62320
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/selection.json",
+        "sha256": "8499e2aa40827ddba8935e2cbe0381f785693ac91ad9d2f72cc2c357afa523c1",
+        "size": 892
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/summary.json",
+        "sha256": "eb5cd4810c78d02abb3e54baa737c3da4e61c1bcb3c1e2b7f8d976a52f6de7ee",
+        "size": 1992
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/messages.log.gz",
+        "sha256": "ecfc26f14a10c8cb3d1ab870ccb5f1daf352a55e95d0a1ee0e8773b115b72036",
+        "size": 26982
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/config.txt",
+        "sha256": "2432bfa7ed8af0e48bbe91ab9c9a12f2011af5d5c25b9003e6250ec91597f594",
+        "size": 339
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/user/borg.txt",
+        "sha256": "a087da286db0b901f832b3de2a8702d58e94a2dfbc20b71e63c2b2c218424a60",
+        "size": 80998
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/user/lore.txt",
+        "sha256": "9d8504602ed49647e5e2d3598febbfc40196b46ccc8a7915d5facea66be9e482",
+        "size": 9260
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/user/CharOutput.txt",
+        "sha256": "030c337dba2914993034e887b8175337334cd0d168032e41b4a0e7d1e9d3bd5a",
+        "size": 118
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/state.log.gz",
+        "sha256": "c2c3af4811daf1f361f902e3a7ab5be048f0df4ab81b5b074d6bda09535ae3d9",
+        "size": 16203
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/checkpoint-archive.json",
+        "sha256": "44eb9e89d5118d34263c9857d0dc87e637b35d145613665811f09b0e989ef4d9",
+        "size": 28377
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/keys.log.gz",
+        "sha256": "2903222f473b26d080c4a2523fc5b9fa54032c5ddf76c28171007baf3f731dd5",
+        "size": 7303
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/archive/borg.dat",
+        "sha256": "017482dfddb0396046ec6821963ea0e933356b8261daa820a5b5c861049c0165",
+        "size": 48
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/archive/Borg.map",
+        "sha256": "6562801c5d02cb578c1083e01739b9390d7fe868ed9cdc5a1c1559fe955f7710",
+        "size": 33617
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/archive/borg-log.txt",
+        "sha256": "8475c22d9e8d6ec703be8db9d2745c82a0d347d8c2d05333df84891c9ef900d8",
+        "size": 169
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/checkpoints.json",
+        "sha256": "a3bab33cd1ce006d502a00ac1a197d915de13df437f727746959b3877ab494c5",
+        "size": 80220
+      },
+      {
+        "path": "class-2/c2-r0-s3020005/encounters.jsonl.gz",
+        "sha256": "3f5359a9254cca49611e6c4f0c6017e1592947607ad99fc3515ad5fb091481ff",
+        "size": 13051
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/stderr.log",
+        "sha256": "5133cc8160d5a69a111f1372731805950ea28b82f499df1d49519ede3ede145d",
+        "size": 1978
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/checkpoints.tar.gz",
+        "sha256": "cac72f61df252ea929df3f3d686a021af185cf2a478949c00619913b49389131",
+        "size": 411120
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/depths.json",
+        "sha256": "36c9aabb1e16285438410bb8c719f146beb84c9610ced88cf7819a6463775013",
+        "size": 339
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/trace-core.jsonl.gz",
+        "sha256": "29a5afdddcefa705a5ba8de9f9dc496c555a5833e3e562ca4c2652a63f7d86a4",
+        "size": 107031
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/process.json",
+        "sha256": "dd0ccd6413f7568790ed99e426210873d535b555c95368d01ff624d3646562aa",
+        "size": 4024
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/launcher.log",
+        "sha256": "a8fcc7d0f6001f675ba7f53bd1ad00599d14e519a65428c7d95a8da558700983",
+        "size": 145
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/save/Borg",
+        "sha256": "f328bf0b1433dd17bdd34767fa1eb6ff43c8c9941001e5bd628550a8f8d4ea7f",
+        "size": 52680
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/selection.json",
+        "sha256": "0397cdc9943bb22f1d2350976b2a57aea5d0d451c290e819a1799736972f91c3",
+        "size": 2702
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/summary.json",
+        "sha256": "a3bbf2ff711dce237e971f1bb3975bee2627382e1d6d472ff5efcb8e289e9c61",
+        "size": 1986
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/messages.log.gz",
+        "sha256": "99597c15b6cc8b3f8e1288adbde7740e1a84250055e429cfadb7e494227af9d9",
+        "size": 7881
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/config.txt",
+        "sha256": "d7e20108f8c9e1ce84d5a238c5094433467684d3b9dc5ebccd4d1563320a1817",
+        "size": 339
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/user/borg.txt",
+        "sha256": "3baae28a5e5b587dd36bbbe964dd91dea7f2eefce3cac22f1955fd50e8e6ccf5",
+        "size": 80998
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/user/lore.txt",
+        "sha256": "a04c1a2e3fe7cd1c02182f670e492ac1d886f8da064632ce4206c6b383653aab",
+        "size": 4487
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/user/CharOutput.txt",
+        "sha256": "91b7596bf533d78a8681b968dde84ee81d2a7ee52119897aa57461b4302c14f5",
+        "size": 121
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/state.log.gz",
+        "sha256": "afb272a90aef2b99691524b7130b4b1f957701dca40ac11b14b040a6383ad871",
+        "size": 6101
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/checkpoint-archive.json",
+        "sha256": "3a41d81002160878f371f13514abd0cdcc4ddcccd8caf9180bdd66993ea1e6ab",
+        "size": 11061
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/keys.log.gz",
+        "sha256": "9888fee0aa3a143d5a889fb48cdce3bb471c34e58052eaf95612e0ce6e57ce09",
+        "size": 2630
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/archive/borg.dat",
+        "sha256": "d1c1d1abf0cf532f203d733b6002cb62cb68343272ade360545f44890841347c",
+        "size": 47
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/archive/Borg.map",
+        "sha256": "fd3e540c9867b200ba0076bda78845cafd0ae7049c06e880c6a3ff14bbcc28e9",
+        "size": 31935
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/archive/borg-log.txt",
+        "sha256": "80629aee75160517b5f77a91019faf2d97b5a91f4389d1b879e82783a24bc3d3",
+        "size": 167
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/checkpoints.json",
+        "sha256": "7e46d4aff662bd7831f459af0f9a71155a6437fde97a6b74da817032007ad2ea",
+        "size": 30767
+      },
+      {
+        "path": "class-5/c5-r3-s3050001/encounters.jsonl.gz",
+        "sha256": "203751942b0ca653ec9860d23c20e08bbf09b2861cb0f8f6fb37439c219fff9b",
+        "size": 8157
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/stderr.log",
+        "sha256": "20463f2751eec3da7be90399fb2268a833281e5dfa0007fa405202763c7e1b5a",
+        "size": 1978
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/checkpoints.tar.gz",
+        "sha256": "d2ab40792c3402235a22f30c6a0de633c41912ea5a1f278d193ce098a870c368",
+        "size": 392983
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/depths.json",
+        "sha256": "ed4b83c4bdb2e079bdce05fa2dc976d994364447e4b27fa3cad44a8d4ca5aeee",
+        "size": 337
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/trace-core.jsonl.gz",
+        "sha256": "d1ba2593881083941b49058a9da871457e6b853d730ee5c5603668c1e6187829",
+        "size": 326131
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/process.json",
+        "sha256": "3d56a9b0ada6a7c0edd92526bc8f495be6850600448cc755ed8bd97355aa573f",
+        "size": 4025
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/launcher.log",
+        "sha256": "292b4151d215e19fc0145799f7322201b91a22d8ba528b94eb8b27756546f32b",
+        "size": 145
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/save/Borg",
+        "sha256": "1021e4562e687360caf3a0bb72713d5a2361f1189a07169af14460a066e8c027",
+        "size": 62236
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/selection.json",
+        "sha256": "546c8fd493c3f31f08cff070b23f5edac1b48f85f8665af922265a1243c3e8ee",
+        "size": 870
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/summary.json",
+        "sha256": "e3934380fc2a0afb56b31d4c2aa3cceb893e2e9eb4407f32c26357d319ff12d1",
+        "size": 1981
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/messages.log.gz",
+        "sha256": "f3b57a729a9732bdd882b2c7ef4a56c425ee617939e86413ebd4d2545646e1c0",
+        "size": 9148
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/config.txt",
+        "sha256": "2dfc400fd11ffc9686d3c092cd35e6c394169bcf4ee23ec506335929e2499e8d",
+        "size": 339
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/user/borg.txt",
+        "sha256": "59f7bbb07d56e6fdeff6c60c0bfe3f7ef0bf0e048084f49a845d4a44617ed6a3",
+        "size": 80998
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/user/lore.txt",
+        "sha256": "32c085eb6b4efa5b44a704b0c9e453530dd8e943bbae4febbfb5f249c50ffebd",
+        "size": 4838
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/user/CharOutput.txt",
+        "sha256": "69052707e504422a3d26dc45b2a1cfcd9e613750af288ea3afe7df1fe5281bb3",
+        "size": 120
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/state.log.gz",
+        "sha256": "62e0216bdd26f25cb86f3f33b63346eab0f1cf095a689541bc1524ca6ed80da2",
+        "size": 5408
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/checkpoint-archive.json",
+        "sha256": "58830ad392bfaf262d258e3c1ca163e4d2fda22615ec540a4525113eebd510bf",
+        "size": 9433
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/keys.log.gz",
+        "sha256": "4b0e182d036027d1df3235632e4719e59715e4eb59323b144d41e610ba45c888",
+        "size": 2256
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/archive/borg.dat",
+        "sha256": "f91e88327e96a8fddc309a2f4eda9b83a09985044b8774d2a8e169478f22bbcc",
+        "size": 42
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/archive/Borg.map",
+        "sha256": "9fce90b91b0d4063bccab184e3d3b686f81bf5b48678693965c59cf9a45d80b0",
+        "size": 34743
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/archive/borg-log.txt",
+        "sha256": "212ef5cec5ef23a09c1cf8aa948bfc536671992ee04a9f30a2afb7d0e3f9f68c",
+        "size": 162
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/checkpoints.json",
+        "sha256": "628a364a0f0cbe283b1a8ad77c51bdb9744a068f9f469df5340785fe409fc4bd",
+        "size": 26138
+      },
+      {
+        "path": "class-5/c5-r0-s3050005/encounters.jsonl.gz",
+        "sha256": "820157b16b71131a198893a28251f9c9ce5680cd63f42c3bf1c8f7fc7ea6942a",
+        "size": 8512
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/stderr.log",
+        "sha256": "255ca2f4b2f94230256f277a4fdfd3633cd73f9bd20569992af9093722ed6483",
+        "size": 1978
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/checkpoints.tar.gz",
+        "sha256": "5207d0bf4a89c718b1e1c54f80ae00717e653af70d15a5c31d345a00e4b3c67e",
+        "size": 527215
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/depths.json",
+        "sha256": "bac58071bbbbf0f3e339053361e6a71e7508c7f6ceb71c534d8d673d65f8e8eb",
+        "size": 341
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/trace-core.jsonl.gz",
+        "sha256": "044df5b45d2e39e66eb8d04214bfee07b998487a15ad6c61846c492a95914bf4",
+        "size": 194966
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/process.json",
+        "sha256": "0d54889d61c411461cb692477a1a2d394b20621395dfbaa6fb578ca034b6e834",
+        "size": 4024
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/launcher.log",
+        "sha256": "e7497def0e08473ee3e363e70668ae55c2515a1110733af58b20141abbd2b39b",
+        "size": 145
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/save/Borg",
+        "sha256": "60da412f10584efb60f6ddbf750d29cc97749b53cbd8cd1bf7b238a1c72804af",
+        "size": 56620
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/selection.json",
+        "sha256": "5201672f26c34042351e59094fa1b2466560f5b3f6a6bdf55c871a3a48f2574b",
+        "size": 892
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/summary.json",
+        "sha256": "288ac497e0ba29918af0c835eeee8390988e051caf242b6e5ba6547089c37374",
+        "size": 1993
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/messages.log.gz",
+        "sha256": "1e385fb679bd95f527d1be6d9dd747455d35ca534f177f24815a7bf0f72b6931",
+        "size": 11243
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/config.txt",
+        "sha256": "fc3382e0115c3a0cd927b4b4d0a9976d86b5cea8a8b989c88cd47562268d23cc",
+        "size": 339
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/user/borg.txt",
+        "sha256": "b8de3588373626059c9bb889d122eb8a213d339f26c96ee01058b571547c703f",
+        "size": 80998
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/user/lore.txt",
+        "sha256": "7faecf672ac25474d38ff80145e5d48b6e66d65218a3ca58307eb03b5b78710c",
+        "size": 6340
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/user/CharOutput.txt",
+        "sha256": "1fb8a3e4de9cd0b5f3632cbd8d951630dc6c7fe86e021409b3dff2009e3a4691",
+        "size": 120
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/state.log.gz",
+        "sha256": "f579810853cfc7af2d06e2ab57d34e5b3677f68aa8e731d0aba7acb3b3f0d1fa",
+        "size": 7594
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/checkpoint-archive.json",
+        "sha256": "c1583e912037c20fbd94ec6caafd8486827fb77897c3a8a10d4f2642e025ca80",
+        "size": 12541
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/keys.log.gz",
+        "sha256": "0cb5844d92ceeaa3a5905e723d573d0313a5b5f93e25a05e9ccdb13328325c24",
+        "size": 2992
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/archive/borg.dat",
+        "sha256": "03d9776d3cd43189510b6cb9072202e2a2116322dd775dea153afaa38d5607d7",
+        "size": 50
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/archive/Borg.map",
+        "sha256": "9fe0ad54426a812675164dd19cc17b02147aaa78772747c560fb32022977551e",
+        "size": 34068
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/archive/borg-log.txt",
+        "sha256": "2205d4cbce584ec1a2dc775ec256220dd7a53d6bb19c5357ef7125918e70603b",
+        "size": 173
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/checkpoints.json",
+        "sha256": "18f92145b2da5a8281f338a6186f2db7a95b8b8bf9cb4b4335b22a06b227876d",
+        "size": 34998
+      },
+      {
+        "path": "class-5/c5-r5-s3050006/encounters.jsonl.gz",
+        "sha256": "2cd91a9dc3dc9b08816a72bea9c69c1bc61081319e7cf0c7c144faab1744b245",
+        "size": 8528
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/launcher.log",
+        "sha256": "02dfaad9d22723711311aee3ccdfc542785c8bfb26458808f014ef1a35c92a9d",
+        "size": 145
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/encounters.jsonl.gz",
+        "sha256": "242f96b367ea21277c1cefd3391efc459ef054014f320029bc3cd020704e333f",
+        "size": 12614
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/checkpoints.tar.gz",
+        "sha256": "a995e53913955cf3b1a8c93c529a094b181882f1e2e1754791a02bb53bd79ba0",
+        "size": 1082085
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/stderr.log",
+        "sha256": "8df8abe2345d0b29a876845252ef8bfd5ebb8942739a07534e4ecc34445cefad",
+        "size": 1978
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/config.txt",
+        "sha256": "38634685e3e8f50dfe51fdb8710379a745ffd33d9f3a9966136292b0727c0193",
+        "size": 339
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/user/CharOutput.txt",
+        "sha256": "c4d194e09b97ba2894d0638fb9ca7bd7f4b3f22136fcf583a8e767af45947267",
+        "size": 119
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/user/borg.txt",
+        "sha256": "9f87d4cf55f8960af94e1a9c115e7055a865a10178edec41970d93aae5456855",
+        "size": 80998
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/user/lore.txt",
+        "sha256": "e905d0e9c333a87b81df1739aa6a82163f14c47ce3b9c40d2f39950f8acd7c36",
+        "size": 9412
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/summary.json",
+        "sha256": "efd1bddfefa0ab143da722ae389c850f8aa60787d5561fc6d5a39033f00b9267",
+        "size": 1999
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/trace-core.jsonl.gz",
+        "sha256": "07ba77b2067b562b52d122a533dee3c36b506359264836043656a17ce87f651c",
+        "size": 738153
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/messages.log.gz",
+        "sha256": "b38c537d0b27a7e9497e0e595ee99abf6fa8249a4571639a52de212ba711eecf",
+        "size": 35218
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/checkpoints.json",
+        "sha256": "0d8aa6b29059259ab823ee72c5811a4b4546bdc3a6b200335703b6a5b3689c0b",
+        "size": 73132
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/depths.json",
+        "sha256": "3a751bbbd0ae4336d1b6f2054a87f63b4e458d7cc76806886d78173e79017492",
+        "size": 340
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/state.log.gz",
+        "sha256": "88f47dc4356a599fbb74cff8852705641fa64ff38ca4e2c9d1836639770b0223",
+        "size": 10621
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/keys.log.gz",
+        "sha256": "9f52a5bcc6f9f41466f4fe749fd2e607b787eecd83ae744359409c1e451f771b",
+        "size": 5600
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/process.json",
+        "sha256": "93bbb2a548598101c85a1795f192d55b39d5a98d1127f7ac0705e420914e92e1",
+        "size": 4027
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/archive/borg.dat",
+        "sha256": "b721b0be765bef12a78eb8046436a62f269077e6ecae020ca7ebdbfa1804cd97",
+        "size": 54
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/archive/borg-log.txt",
+        "sha256": "9b6cdb98fb58c50868b5c088ff4a7c799d6d8074d7c66f5ae4925ede3365ec18",
+        "size": 176
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/archive/Borg.map",
+        "sha256": "2ed71cbde205ee3842f90583880ab31a430118ae21aff126b22da2adc7c0ec26",
+        "size": 36503
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/selection.json",
+        "sha256": "ff6ba788953e62551185881b1201c037fef3a70a58a25891d759d949bc362834",
+        "size": 903
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/save/Borg",
+        "sha256": "b5607659cc5d95e242f84f18eb6d963e68eaa46c582f4a711357661ad8feeecb",
+        "size": 54888
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/checkpoint-archive.json",
+        "sha256": "93c1f85d2129883e2869b3993af3bc12b1042a4431faf7eecbe57097ae29ec12",
+        "size": 25861
+      },
+      {
+        "path": "class-3/c3-r4-s3030002/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/stderr.log",
+        "sha256": "8d111b989ec87bf276c70930a880707116d605d78bdb3f0866ecda1463b6f190",
+        "size": 1978
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/checkpoints.tar.gz",
+        "sha256": "4a458862948cab0fde56f857e2dffdc5d4dd473c6b2a1ee68c45307a1c7bc462",
+        "size": 3873124
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/depths.json",
+        "sha256": "ba6f963fd8637ada408f8c52830d0b98c99e97e012ef49545e4a998f8b60e9c2",
+        "size": 355
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/trace-core.jsonl.gz",
+        "sha256": "ecffbc544cf5ef91b5e5ea00da4762a2f1cec7d03e93a7e641938ca3d22e6ccb",
+        "size": 1119581
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/process.json",
+        "sha256": "b868a431f64d76ac69101f889ef767b5ebdbfde17fe124728b11a2cbe7ae1766",
+        "size": 4027
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/launcher.log",
+        "sha256": "e7e5e1e7a5ae6221ac6621b5880e8f51a822585c21296144b52179985296ea65",
+        "size": 145
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/save/Borg",
+        "sha256": "5a25e3743a770c33aa6234ee44ed5b40b0158cc345b075927a3791796f3443e9",
+        "size": 67716
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/selection.json",
+        "sha256": "35e022c9b3ec7448fcc83ccf9f18e7e48f593a6a3ce883a0ab1ccd401161150a",
+        "size": 883
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/summary.json",
+        "sha256": "fa216e44fb9fba5ad7fc4aa8122b3dcf61ec541f821b5f1573c7faf0cdc98909",
+        "size": 1986
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/messages.log.gz",
+        "sha256": "2a48313fe4dc34b2cee0a8161e8ff83b8427c74a592b444aac6c2e1410d5a69f",
+        "size": 52509
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/config.txt",
+        "sha256": "2dad3a3cdf3eacda6774a314c78a8750b264f7ed57838598caa1ebefda826fc0",
+        "size": 339
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/user/borg.txt",
+        "sha256": "4d172b0c8ef1a642103fe126ced9e85a15bf2288a92961dd826dcaf553568f77",
+        "size": 80998
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/user/lore.txt",
+        "sha256": "a9e3edab754980d8f1e9fa1e9fa8b3de3daacc4d60b0002212b2290a5af3da13",
+        "size": 15815
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/user/CharOutput.txt",
+        "sha256": "344d79eee4098f35e4c3f30976e0f05866b5dc0bcf7b9d94d8d0cd8b8515d2a1",
+        "size": 120
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/state.log.gz",
+        "sha256": "48fc4511703a8faac9caa057545130ef529c717ceb9865961c7581281b717962",
+        "size": 45294
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/checkpoint-archive.json",
+        "sha256": "1c1f2991f92e5a72265dedef5f7234bd118f933e4be1f81b69491f080273e742",
+        "size": 75293
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/keys.log.gz",
+        "sha256": "d1b47baa9c9904588f882b5052df6fcd66553320bddbf19a2a100908ef72cdc2",
+        "size": 15575
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/archive/borg.dat",
+        "sha256": "8ba964de61a82b87f1e13bc48e46f69e3957dd1a1394c2d78c0609607f16b47c",
+        "size": 42
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/archive/Borg.map",
+        "sha256": "c637a63c2f5b0ae148b55c5d63bff284d93d3e610f84c06a258f638f93b479c7",
+        "size": 32003
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/archive/borg-log.txt",
+        "sha256": "3a4c11b68aebd3d2e53b3682a475e167825723414976008aa20f6c5bb32f29cd",
+        "size": 165
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/checkpoints.json",
+        "sha256": "cc7d925a7439a067845bec727146cbfb363ddb666efdb20b3b670ecfcecc477c",
+        "size": 214298
+      },
+      {
+        "path": "class-0/c0-r4-s3000013/encounters.jsonl.gz",
+        "sha256": "38a81e794d79b01f4eeb31040948e5377f3fed9e2f521c1e4638b60634c8851e",
+        "size": 22581
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/stderr.log",
+        "sha256": "af8f5ec2b3988ab3351bc7e7a6427edfa97a1866c2c7c8a60809be1b7dbfa94e",
+        "size": 1978
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/checkpoints.tar.gz",
+        "sha256": "35a306746595dfc455330ac2691502b300c73bf9660bf08b27166043ce1e5911",
+        "size": 7056535
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/depths.json",
+        "sha256": "3d3fd7606c571397fff25f797f250de53768373a327f8bcd6db64d53e80c052c",
+        "size": 402
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/trace-core.jsonl.gz",
+        "sha256": "ed28ab0bd280c2d371906d1671927f46f0dc36ea46a2d1b2bf6af66289241cfe",
+        "size": 1432067
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/process.json",
+        "sha256": "17d69e99b89bb6f44bc9e50d11f9a872b570ff7f9f1c39787ae2b581f84a7c1f",
+        "size": 4028
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/launcher.log",
+        "sha256": "58043677ef5c2a49ac8e2d61aa3661c763e71eede92c4d61ce0d5c64fa059907",
+        "size": 145
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/save/Borg",
+        "sha256": "39319f5f25a494d853a1a91042778703461f9bf1b8997fc4d6d095dd47ae03b9",
+        "size": 70304
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/selection.json",
+        "sha256": "b60f2bff650e98175a7e2ed09ec85d29397dfab7d72e8a60e18064acfe4b8bb5",
+        "size": 3450
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/summary.json",
+        "sha256": "41a84087ac9436c971243d866f2c18275ba1c78453fe73846e0d304b040fac80",
+        "size": 1989
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/messages.log.gz",
+        "sha256": "ae1e173ed3dd92f870aec9fbb794423f6755d254e4fa59a9bfeefdf611b6d9f2",
+        "size": 103347
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/config.txt",
+        "sha256": "0befd0eefe151ff4ec30ef7985a573af6b4f383af3fcf96227322fa5628bc0aa",
+        "size": 339
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/user/borg.txt",
+        "sha256": "b02cc287b6ad72e7e9e39fe55e9b2648b4bcb5f6e937e524198124c93a59f790",
+        "size": 80998
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/user/lore.txt",
+        "sha256": "0f988f2f630d12ed1941da319a184207113ae66793714f16ab4ff8c75a2a1a6a",
+        "size": 27605
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/user/CharOutput.txt",
+        "sha256": "dd4edab3803e4dc707efd91f06edbc9e7923fb3199ec26b5f43d777f476a578e",
+        "size": 118
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/state.log.gz",
+        "sha256": "37f8dfc87b57487c2d4ae6517ef676c48e3c79a4957c1aef3fd768bdb467213b",
+        "size": 80796
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/checkpoint-archive.json",
+        "sha256": "a09476ab61d92122e54f4ac7d94fab82a799d81e227004d6a96c55b929f79b3b",
+        "size": 131681
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/keys.log.gz",
+        "sha256": "2cf2b33968b05376a9d6acc4c741c0c48b980364f8b483130d6564408dd13700",
+        "size": 29831
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/archive/borg.dat",
+        "sha256": "45754f645c324721d1d92d042a871e111cf32a29e56c55fac89eed4c1df9486d",
+        "size": 43
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/archive/Borg.map",
+        "sha256": "70d7ad126e22bcdbea2a1d3ad807930743feab0821874890e5f51374d6aa26d8",
+        "size": 30872
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/archive/borg-log.txt",
+        "sha256": "c33b01cf4cb80bdbdaada50c4858fccfdcc6be81648d11e91954fdd2696c062a",
+        "size": 167
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/checkpoints.json",
+        "sha256": "56ecd3ce3e8e5ec901b62415be0a925e8892bc59d462d2761d7745e9e180eb33",
+        "size": 375705
+      },
+      {
+        "path": "class-0/c0-r2-s3000022/encounters.jsonl.gz",
+        "sha256": "ed9d1c5281208f5ffaa53563a4e8c22e2e46c25f32fa7d138662ce7bea245b7a",
+        "size": 34822
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/launcher.log",
+        "sha256": "33fc76ec81ebe464b63ac17a29385e809ee1c871b042810f602942e1f7e4ac4b",
+        "size": 145
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/encounters.jsonl.gz",
+        "sha256": "b2e3578452b35ebc7ee1c2d4ca0eb6e79fd5169aefad6356ef9cf548566aef07",
+        "size": 13926
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/checkpoints.tar.gz",
+        "sha256": "cf39ee082d43a4ebd53bc7aeb5777d39d2ae506b143876223370075a1e816b97",
+        "size": 1534627
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/stderr.log",
+        "sha256": "1efaab657379f9ccf7cb5c7c1d8fe88a3fabe7f4d39532c84655de642085bca9",
+        "size": 1978
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/config.txt",
+        "sha256": "729574d463e92fca0dac0b1522e372fd53da35a9ef7266ab81c37876538d96a1",
+        "size": 339
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/user/CharOutput.txt",
+        "sha256": "a3d5922edc45d6516182c05dc074c4e2ef9b585283897a31557ec0949754b31f",
+        "size": 117
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/user/borg.txt",
+        "sha256": "56172d90b53ec6016235bc6e8a2adfc8b8b1a84708e101f1db546f0c2919138a",
+        "size": 80998
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/user/lore.txt",
+        "sha256": "2348a1f70ad2291d5255e28cdea0a52aa5df2d2a85dce38bfdd705608cea13d0",
+        "size": 11770
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/summary.json",
+        "sha256": "f0992930d5670623ad338a76c08e3ad15b290d98c5e54f041aed86eb9a892f44",
+        "size": 1994
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/trace-core.jsonl.gz",
+        "sha256": "fe9929f9b40a94a36b9cb93b1caa7885b77e5c396886f995ed5963417d551308",
+        "size": 536209
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/messages.log.gz",
+        "sha256": "9452031c93ef72bf34b256825c6611e3f0123d40c9014a6a5a533b88a989bc9d",
+        "size": 29251
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/checkpoints.json",
+        "sha256": "41ddee72c20f0f416eb136a48b79a7f22932bdadde5dac08672703a09d136ae0",
+        "size": 93818
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/depths.json",
+        "sha256": "465a45014331171df293eecdd902295554597d0c55abc0f977875555a33b0705",
+        "size": 356
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/state.log.gz",
+        "sha256": "14944de69cd6a6c2677f9aeb3300e64d3045faaa1049968dc4fc679d81bf4986",
+        "size": 17793
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/keys.log.gz",
+        "sha256": "c22ec560fe487f5bd6444a91ca5f8802bb2afa0b7c5a7a3a79ef935f6d5780ef",
+        "size": 8334
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/process.json",
+        "sha256": "ef7bff0d1e4065e661da5a1a72278d4a7895f3dd41dbaa801f0098ee147fd968",
+        "size": 4026
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/archive/borg.dat",
+        "sha256": "9c96d53d7fe89d70355b84744b067aa684be9fcdc7dd54df2c0fd6f9366be6e9",
+        "size": 50
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/archive/borg-log.txt",
+        "sha256": "c490d624a512949054d0d50fcf2e563af79ce94cb0134cbf3df39e1c5062b66e",
+        "size": 171
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/archive/Borg.map",
+        "sha256": "d007eee8c170accc10094372a044caf6226d16b97299b70822baf673c4e87642",
+        "size": 32760
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/selection.json",
+        "sha256": "c9475af9923779151206b2a024449d892f1b64e845be50496e4c2f633fac1c30",
+        "size": 5369
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/save/Borg",
+        "sha256": "d55506382155638f8a1144f44ece35fa322e373eef3cb90150a7f3e6415862b5",
+        "size": 62016
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/checkpoint-archive.json",
+        "sha256": "3276747a442439dee5eb5f5b8ca63bb1cccd8ed7ca9f0a97375f310b71182bae",
+        "size": 33113
+      },
+      {
+        "path": "class-1/c1-r0-s3010005/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/launcher.log",
+        "sha256": "7064d76a53b324a95c8afd7bf73b8ed9be223c290dc3ec4950ed447036ad7c01",
+        "size": 145
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/encounters.jsonl.gz",
+        "sha256": "793cf527c77090a2d879ae5f0887a0101c5de330d344ce8118c08e3c8e126389",
+        "size": 8348
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/checkpoints.tar.gz",
+        "sha256": "d5a8ef9f615a60c08467ede8fdf9c7be8ef560d92c56c1d0a1f2550b37c91c7c",
+        "size": 499912
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/stderr.log",
+        "sha256": "bbde277ad81adc58457eb3d6d8c45fb329370e7d1d9fd3d2134973170cdb85c5",
+        "size": 1978
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/config.txt",
+        "sha256": "eab1c5878fefc71db1edf0ba8c3788985c4764bb6885ec8f9790365b0e87b05c",
+        "size": 339
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/user/CharOutput.txt",
+        "sha256": "5ff172b9f6857631ab2b243af2d90e5a49be0d570d4c6ec321683c2a50dcd2cc",
+        "size": 120
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/user/borg.txt",
+        "sha256": "7b3a7c2bc3756060566483eaf43a373469c8f036077e51c5e5447ee3564bdd0e",
+        "size": 80998
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/user/lore.txt",
+        "sha256": "99caa9785c65690155b5293771045b6e86a9f8dda234d20691c2e9aff0cffa5b",
+        "size": 5002
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/summary.json",
+        "sha256": "3ca9d3537de457e471e1b8e28e814bfa4d77db1472fcbfa734d8de77efbecc74",
+        "size": 2004
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/trace-core.jsonl.gz",
+        "sha256": "e46b3f97b914973c9d0d257804c3cf785d791c695e4ca1278aefa8f16c93ee71",
+        "size": 146756
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/messages.log.gz",
+        "sha256": "91e01e27c5726e2c632000fe7407adbc3fa6dd8ce05116ff68392ead1ba36449",
+        "size": 10509
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/checkpoints.json",
+        "sha256": "cb41f11709cbe4bb24825fb3389f34c177a67d811011ce0d38b4dac706b11ab7",
+        "size": 32932
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/depths.json",
+        "sha256": "559d5013ec0407f64bdfb646f22c5f6fab679807c54cba09528368a1e9a916d8",
+        "size": 341
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/state.log.gz",
+        "sha256": "1465c3196b2b0d09389e71b0533b3a77614a85a375b5c0857e7f6a69826d1efb",
+        "size": 6776
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/keys.log.gz",
+        "sha256": "4fcbd63443c632ee5790477c57bb15aeb4ff6c0b23f1561e68be5e3aa10ea141",
+        "size": 3049
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/process.json",
+        "sha256": "e6a2f33c0a2f9c58afe94eccc9f69214c1a835d92f272d64e4f441659656338e",
+        "size": 4025
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/archive/borg.dat",
+        "sha256": "d7383931df301f5b0f77d3415de3e6d1846b125b6759d983e18c99e867a0606d",
+        "size": 61
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/archive/borg-log.txt",
+        "sha256": "9d0bb720abc1446f2d9210c1280ab9f8dd4813f4650265827dfab4a33679477a",
+        "size": 182
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/archive/Borg.map",
+        "sha256": "a877794b5f2509fdc1150234230b4e4bf87dc29b2ccb5f9b3dcf486420db853e",
+        "size": 34376
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/selection.json",
+        "sha256": "e5c476176cf719908201265a1c7d305fb200112ee9c6532e0ebea80fe85fc962",
+        "size": 2080
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/save/Borg",
+        "sha256": "7332022a6df13acd1015ca2d0dd7ef2a3bfc5732befd9691fb91995369ff7c2a",
+        "size": 57412
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/checkpoint-archive.json",
+        "sha256": "e7692872df4d68bd7b974fa52f4808441eeca4af66eead42932ab24e9b51223e",
+        "size": 11801
+      },
+      {
+        "path": "class-1/c1-r1-s3010004/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/launcher.log",
+        "sha256": "117c249df80bdf8383d9a6d65a4f66b724baa541a2a1c2681c565378c0e2f9d0",
+        "size": 146
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/encounters.jsonl.gz",
+        "sha256": "dcceb79a39b98a8949de29e8f578c5d090ca1aa4e29a83dddf784899658e5a61",
+        "size": 16469
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/checkpoints.tar.gz",
+        "sha256": "25e1e11cbcc43b34839ec360d4fa2bf3c5e51d6ed8c977441271c287118a9827",
+        "size": 2274484
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/stderr.log",
+        "sha256": "fe3322e8ca072cc75d257956c925c8f91388d0380160c4922f3c72dc29bc0d30",
+        "size": 1978
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/config.txt",
+        "sha256": "e6850cc6a8697fb08984ef6a7bb957c67ef1f2249ea8f4e739ced6a8a190e739",
+        "size": 339
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/user/CharOutput.txt",
+        "sha256": "8c82a994585d35557b15c86a87415187712236ca7c35302dea2a4059c2ed7aef",
+        "size": 125
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/user/borg.txt",
+        "sha256": "4e1d35a6db6c6a2e0135a4c98df651f4b8c9429dc0e52331d0e6432ea17a12ca",
+        "size": 80999
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/user/lore.txt",
+        "sha256": "9e27795ba55a4dcc0179f6263d5ada266826b8b3b38bfc64d7c2260bde4a5d76",
+        "size": 12908
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/summary.json",
+        "sha256": "a939fab78e638db244582ca38dfe32b3656d59842cd8331047553928824bedeb",
+        "size": 2013
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/trace-core.jsonl.gz",
+        "sha256": "a04aa5b5249a8ab78dde04a98a79a84bed72c903ff32e98690aa79f7ee35b1da",
+        "size": 516622
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/messages.log.gz",
+        "sha256": "64a96a0b5238c3922079ab7c69e82f2abef2668893b519c9dfde7927a5787f39",
+        "size": 33318
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/checkpoints.json",
+        "sha256": "8fa9d94c0cf4799174e2719b328897f99e9abba6ebc5a446096f85dc270aecf0",
+        "size": 136011
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/depths.json",
+        "sha256": "d29cd0aa74c27174334a83102cafa4b44cec9f97c53f953354abd8f8c2002a06",
+        "size": 338
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/state.log.gz",
+        "sha256": "0cc3848c71eb0990d59086506b303822a608cc533481f96efc01e1eea755c178",
+        "size": 18372
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/keys.log.gz",
+        "sha256": "7624fa27b3503bc21103eac8e33544ca577184f0c2916359984a7db5d59648ac",
+        "size": 10523
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/process.json",
+        "sha256": "9890a933f5571a580bb5e7cf5008db5af9154e34fc98724b5f40509057a7f01e",
+        "size": 4037
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/archive/borg.dat",
+        "sha256": "be1a5cb267228573f2e40860fd579a871891a6c102aef43e392a5e04d51393e7",
+        "size": 66
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/archive/borg-log.txt",
+        "sha256": "44c830ed6730419549271956962725ecea10db928ab3fafcdd00591fc7c97f9b",
+        "size": 188
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/archive/Borg.map",
+        "sha256": "f0c6210fa0ee2981f9ed7a018fd76e953c534daedf355d1ec42ccc29b3adeb7f",
+        "size": 34602
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/selection.json",
+        "sha256": "d51b6e448f68214d2f326bca906e8b6589eab46a002ffb2305d91758c94422da",
+        "size": 917
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/save/Borg",
+        "sha256": "235770502c9cd1c5484c9c1adbfcc75aeed7d000b2b518fb1d4ff874786368de",
+        "size": 60548
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/checkpoint-archive.json",
+        "sha256": "b5bd90a8bf18170c669b5f961b7f1fda2615c2f8bfdaf55eeefd636b64bfecfc",
+        "size": 47765
+      },
+      {
+        "path": "class-4/c4-r10-s3040003/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/launcher.log",
+        "sha256": "e7460937649444b41894cbc7cd8f36674f7b031d89ab0bf160f9a9b651dd6c64",
+        "size": 145
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/encounters.jsonl.gz",
+        "sha256": "ed3c3105bde02ec86c06ce4152dc2115614381df1ed443e2f69148996befd934",
+        "size": 10665
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/checkpoints.tar.gz",
+        "sha256": "91d5d013cb107afdfad28658f800d86d282b3ddc95904d16236680a2a36ef55a",
+        "size": 689571
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/stderr.log",
+        "sha256": "7dc13cad07e1bca2056d554faf6b61a06584bf5e35414c3597c0ba82b23065fc",
+        "size": 1978
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/config.txt",
+        "sha256": "13c88063b4a572bffb1e2c0e69c7adabece26fb8f58dee1fdce8b1e457bfed11",
+        "size": 339
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/user/CharOutput.txt",
+        "sha256": "9b03e7fb915e551d03a3862079eff7221519e00bed6dbb74f011c4241209cfaf",
+        "size": 124
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/user/borg.txt",
+        "sha256": "d3750c432fd621054bdf6444d0843ad49a8172496969e7bb2f8f2c5744d585e5",
+        "size": 80998
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/user/lore.txt",
+        "sha256": "d35b86d6b8a82b57d610313221328a4855f61447cc84909c5f7fde620b78d7d1",
+        "size": 5991
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/summary.json",
+        "sha256": "27f8e1009aeb55660bb1f65ba197302313ba65b34eca7073f7ba40f8a85bcd76",
+        "size": 2006
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/trace-core.jsonl.gz",
+        "sha256": "0dedc409201d6db81cbbb0cf395f4f568378c6f45dba7b483e48540371e440b5",
+        "size": 385700
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/messages.log.gz",
+        "sha256": "ae751e77a2263accd6a613ecd527a1a00b88e17ead1cb25e1d373ea4eda8428b",
+        "size": 14980
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/checkpoints.json",
+        "sha256": "0356fb183e2da9e2d6ed98d891229d035b83d5c015e3c6a50936dd7b398f3739",
+        "size": 58620
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/depths.json",
+        "sha256": "b98810521d6d5448d910e2e8102882b982fb1aa03c99d71aa7df0efdc78312db",
+        "size": 341
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/state.log.gz",
+        "sha256": "fdf0f45509ca7a7f90f8a6befecff714130f39b09061499f59b0cfe706a6c59a",
+        "size": 9323
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/keys.log.gz",
+        "sha256": "bc09ba21186510895bb219f126b2b3f91a21ed19848591570826d393df0c64dc",
+        "size": 4579
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/process.json",
+        "sha256": "2fd8c674654552cdf749d394e10d337a81a6035627b3deee453eeab1179ebf19",
+        "size": 4025
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/archive/borg.dat",
+        "sha256": "cbebf2b9703e517358de03076e4abe7c84128e6ef5a71c18f58f98f29090399a",
+        "size": 65
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/archive/borg-log.txt",
+        "sha256": "cdb9c1ad0c44cf25147d99801b833dcf0f43bbea2f959f00a9f4a8c7560e6f78",
+        "size": 188
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/archive/Borg.map",
+        "sha256": "43aef508b3a3df8474b6efe843e5b168e3ad84634baa2e6885d1c36d452e2171",
+        "size": 34160
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/selection.json",
+        "sha256": "0b2cd7c51f00c9684ff99f2786bf58664c9f1be073dcaf964c2cfa5694f14d52",
+        "size": 6705
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/save/Borg",
+        "sha256": "1e08817c47ac847eb31b97a5f8deff95869e82fea6ae80a47a094e674c07fed1",
+        "size": 56224
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/checkpoint-archive.json",
+        "sha256": "fff754226ca927dda179fb6ec0117e4036d92455347d9cf071044a2addc7041c",
+        "size": 20829
+      },
+      {
+        "path": "class-4/c4-r0-s3040016/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/launcher.log",
+        "sha256": "689e4d1851f528d3363d8c1435c5317a2dd899758d2706e8515eed200a5e840f",
+        "size": 145
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/encounters.jsonl.gz",
+        "sha256": "c50fe5d54dc282488ae8ab4756aacb18db69646bb9ef67d527c4e9883d416909",
+        "size": 7343
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/checkpoints.tar.gz",
+        "sha256": "86c04ed8de3756da682ce9c92468b92609fd3cab5b600378d9ff51c3e819f547",
+        "size": 327241
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/stderr.log",
+        "sha256": "8e476e0d0cecae1250edc3c69da51baaa1688b8c55e2fb73b975686bad1320f1",
+        "size": 1978
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/config.txt",
+        "sha256": "837d8a4f3aadd1f259aa96047f934e54185592157e647f7b1eb330a3e02ce77b",
+        "size": 339
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/user/CharOutput.txt",
+        "sha256": "4fa6159af569d9a8c30c7dde7e4fb87cd14dd543206b93b33151c1b705253a5e",
+        "size": 119
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/user/borg.txt",
+        "sha256": "6caf03d14f25c523e119ee6002fe875723cf298d9147a33f3bfc20b73a7b3982",
+        "size": 80998
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/user/lore.txt",
+        "sha256": "719acf9d44a479f627ba76d46eb4cdb09e8c26d7c4518f9f76a8695746d5aa02",
+        "size": 4876
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/summary.json",
+        "sha256": "2121f99dd366143de77159bdde280677ca63c7fe2f12eb0c7c3f84e66cba57f3",
+        "size": 1999
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/trace-core.jsonl.gz",
+        "sha256": "c2ed2b87e72a3f5d352068fea0955da88ce7025dd45117b6c5135cb1d4e6a8d1",
+        "size": 64082
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/messages.log.gz",
+        "sha256": "8778ba348eb05622804fe5e7d042897fe9c230dfc06eae4a769939f62cbae6c2",
+        "size": 7554
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/checkpoints.json",
+        "sha256": "b48656efacd212b518b1e6e405f2a38dc6d9f78e50d2c371963e9dc1df9c0b4e",
+        "size": 21098
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/depths.json",
+        "sha256": "553ba27346c21692534bfd3c17a40ea95766e08dec7f114655379f783296cab8",
+        "size": 338
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/state.log.gz",
+        "sha256": "129b7a098bbe78b834ec79a6b10a74c394185951b075d3286899c2964d6169aa",
+        "size": 4492
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/keys.log.gz",
+        "sha256": "309998c30f2f250b3726da0473c2d3045a6820b7e9b07379f079a80539f1cddb",
+        "size": 1855
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/process.json",
+        "sha256": "2670e01b3ab39d9ab0c3f7f35127452fd12a5aaa5973830548bb0d1bf3e48b6b",
+        "size": 4025
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/archive/borg.dat",
+        "sha256": "963e724b14b8e64244dc6eb0e1fa8a1931f6d3d98933c2555d09f923259fc949",
+        "size": 60
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/archive/borg-log.txt",
+        "sha256": "387d85be1a89ad9c7e3fd51db21f34f9798b86ab95a0a2663419ed60947f5b6b",
+        "size": 180
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/archive/Borg.map",
+        "sha256": "32f1f87f24411fb3c40a357b84c650e6c0cf6b81e96188137b6ebdfb7ef90a87",
+        "size": 33062
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/selection.json",
+        "sha256": "0f2f9028dea12160288678d436d6711f3bddf8f11fe95f78430a584aac281b90",
+        "size": 909
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/save/Borg",
+        "sha256": "45243bdbfb6411215837bc842d7fd72d9d10b35f39577c82ca2c150e0b5b8597",
+        "size": 55292
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/checkpoint-archive.json",
+        "sha256": "f7a8f423910db07c8b827850795e3b3be7c68c8207b442399245381f523a290c",
+        "size": 7657
+      },
+      {
+        "path": "class-7/c7-r0-s3070005/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/launcher.log",
+        "sha256": "16a75811e90a7987685bde28139176de5d7b4b9081b50b29c0f52bc883190224",
+        "size": 145
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/params-core.json",
+        "sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+        "size": 520450
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/encounters.jsonl.gz",
+        "sha256": "bcd8c069f8d34262a4862c001e7a2f2af08be60db8fc48248b101e79acfd0c06",
+        "size": 8607
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/checkpoints.tar.gz",
+        "sha256": "43e6feaedeb75ee170baf2f589adce19fb5ed06529231a6faa9d85d013d784ce",
+        "size": 484453
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/stderr.log",
+        "sha256": "96676674893d92ee475863555f1717942750fd29be7f39882ba6dbc5c9d1ed5d",
+        "size": 1978
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/config.txt",
+        "sha256": "7fb55867a79e2c967c14e2eff541a9f7ab9d738057515b27cc7487bccc2e64f5",
+        "size": 339
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/user/CharOutput.txt",
+        "sha256": "a4f4c945afa9b90c13c046ee6397545a07ca8e208ffea9337dad96c788c60a3d",
+        "size": 116
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/user/borg.txt",
+        "sha256": "3cc4455051713a89754f103251220ecb60c25263e4781db98f6b6b15165726ec",
+        "size": 80998
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/user/lore.txt",
+        "sha256": "400671f36d2c8d68b3fe45e906800fbb518132a6531a74b3441a87cc4039dbb2",
+        "size": 5648
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/user/window.prf",
+        "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5",
+        "size": 393
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/summary.json",
+        "sha256": "2f51f1207c84b67d28b9bce225a8cba82d1c8da55559ff36661276ac60ddfcdf",
+        "size": 1979
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/trace-core.jsonl.gz",
+        "sha256": "0882650e5fe57c9bdfad37869db7b3859084753ac42166691a8b5d245a0575b7",
+        "size": 291273
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/messages.log.gz",
+        "sha256": "081a55831d8ffe13da171abef458ba5a48ce2b90f1114c6f8c62cf1b0c428598",
+        "size": 11480
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/checkpoints.json",
+        "sha256": "286ec0908e2e5d2197e4ba9efaa9a289574ffc6f79bd7c463aec0322961b68a5",
+        "size": 29083
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/depths.json",
+        "sha256": "46cda226235e8bce09ceceb1af453686a6c90163f4b551f97bc1a681a5745a14",
+        "size": 340
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/state.log.gz",
+        "sha256": "858c4d17d1c0815b663be25e0b9b464a27957f48c60bf93848a241e82322676a",
+        "size": 6353
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/keys.log.gz",
+        "sha256": "e7d76157955129471c589f240708c28c6ec6ab9d27af462097764a7693ea9445",
+        "size": 2578
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/process.json",
+        "sha256": "745f5ad2d65856f36bb58680f7f1d40b88c0b980e424693c22e736ddecc279ed",
+        "size": 4026
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/archive/borg.dat",
+        "sha256": "5adf6bd67d296adf2a344239a00cb0431054bc4be86bb72e9e1acb14ca809827",
+        "size": 41
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/archive/borg-log.txt",
+        "sha256": "976708ca9de0923bfd4f13781ec22fccd35287cbda7d8e7b7852c44ed58162bb",
+        "size": 161
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/archive/Borg.map",
+        "sha256": "4510334663d031981683cde92aa19b156e82215c966dfb606540905179d87d6a",
+        "size": 33034
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/selection.json",
+        "sha256": "c6e8dcc01aecd8bd7e2f4a33c5e5531e5b2c7229f59e72a8101dfa4da923aad5",
+        "size": 877
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/save/Borg",
+        "sha256": "d5ead8b55097611b15037a230a266f394cdcbf1e65b5a9f3fd16c1ab7f9fd1d8",
+        "size": 63700
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/checkpoint-archive.json",
+        "sha256": "35bbfa52bd1d347c0321cf84ee27d27589128962c3e7f2c279ae1ea2fd5c4391",
+        "size": 10469
+      },
+      {
+        "path": "class-6/c6-r2-s3060011/knowledge.json",
+        "sha256": "b83666037dbaa154119c47ab51a09ff881dddf0afc52e197765464cac56f0168",
+        "size": 752965
+      }
+    ],
+    "path": "native-death-streams.tgz",
+    "sha256": "c5c86b7b8571a4f88ee09db20b9f41145a81bb35257a0cd6a9d8717efc75e48b"
+  },
+  "natural_deaths": 13,
+  "run_url": "https://github.com/diegoami/borg-zoo/actions/runs/44129811981",
+  "schema": "borg-cemetery/incident-preparation-summary@1",
+  "selected_starts": 16,
+  "source": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+  "status": "class_shortage"
+}

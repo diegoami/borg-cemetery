@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed3050006",
+  "run_kind": "harness",
+  "character": "Dwarf Paladin",
+  "raw_cause": "a small kobold",
+  "terminal": {
+    "cause": "a small kobold",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 10224,
+    "race_idx": 5,
+    "class_idx": 5
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 3050006,
+    "flags": "menu",
+    "git_rev": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+    "git_dirty": "no",
+    "source_sha256": "2d2b5d1e9570cbda939fcf4a446ce1a0aaf94df0a3b5c8fff5219b3a1caa8724",
+    "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d",
+    "borg_txt_sha256": "b8de3588373626059c9bb889d122eb8a213d339f26c96ee01058b571547c703f",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 864
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c5-r5-s3050006",
+      "result_sha256": "b9cfaaf3439a6ef086d28e7df62e8dbee3bb0c51d2315e647fe2a3e55eda79d7",
+      "raw_sha256": {
+        "keys.log": "b9cfaaf3439a6ef086d28e7df62e8dbee3bb0c51d2315e647fe2a3e55eda79d7",
+        "messages.log": "79f5c217e58cc0dcb8b3a46f64a8defa086c861d7627519429bb6fbff002e2c2",
+        "state.log": "de2f1bb0c144d064eb337b734f7895986366a2d39c757f1c557044915964f9b8"
+      },
+      "source_commit": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+      "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d"
+    }
+  ],
+  "encounter_family": "start-ba329ad6a24019119e0ce240174cbd74cdc245dc1a3b19da95010709c92a5bd1",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "a4e92ea734d40327f7af07baceed91564b521de26685e00d176c9f802c47e11d",
+    "config.txt": "fc3382e0115c3a0cd927b4b4d0a9976d86b5cea8a8b989c88cd47562268d23cc",
+    "depths.json": "bac58071bbbbf0f3e339053361e6a71e7508c7f6ceb71c534d8d673d65f8e8eb",
+    "params-core.json": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+    "summary.json": "288ac497e0ba29918af0c835eeee8390988e051caf242b6e5ba6547089c37374",
+    "trace-core-tail.jsonl": "34e442d41640e05329bce3f0b00acc5629da949a45ecb2a1eec99232873f1649"
+  },
+  "investigation": null,
+  "issue": null
+}

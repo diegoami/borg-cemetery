@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed3050001",
+  "run_kind": "harness",
+  "character": "Hobbit Paladin",
+  "raw_cause": "a wild cat",
+  "terminal": {
+    "cause": "a wild cat",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 8742,
+    "race_idx": 3,
+    "class_idx": 5
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 3050001,
+    "flags": "menu",
+    "git_rev": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+    "git_dirty": "no",
+    "source_sha256": "2d2b5d1e9570cbda939fcf4a446ce1a0aaf94df0a3b5c8fff5219b3a1caa8724",
+    "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d",
+    "borg_txt_sha256": "3baae28a5e5b587dd36bbbe964dd91dea7f2eefce3cac22f1955fd50e8e6ccf5",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 752
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c5-r3-s3050001",
+      "result_sha256": "20be78bd52fdc14fde4f25466cc8b4afe74dad4b658dec74dffcaf99d4192115",
+      "raw_sha256": {
+        "keys.log": "20be78bd52fdc14fde4f25466cc8b4afe74dad4b658dec74dffcaf99d4192115",
+        "messages.log": "4647ad4e0db0d863dc6a920d3006bb09d78c188caf7bf8068deb154179ac2ea4",
+        "state.log": "acdb2be7733fd0460ae99dae893854342837dfcf2156989817b3652c293e0b56"
+      },
+      "source_commit": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+      "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d"
+    }
+  ],
+  "encounter_family": "start-f12dd36e8d279fcd5fe0cbb09ab75775cb91d67e527e49365b731a7538570886",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "a4e92ea734d40327f7af07baceed91564b521de26685e00d176c9f802c47e11d",
+    "config.txt": "d7e20108f8c9e1ce84d5a238c5094433467684d3b9dc5ebccd4d1563320a1817",
+    "depths.json": "36c9aabb1e16285438410bb8c719f146beb84c9610ced88cf7819a6463775013",
+    "params-core.json": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+    "summary.json": "a3bbf2ff711dce237e971f1bb3975bee2627382e1d6d472ff5efcb8e289e9c61",
+    "trace-core-tail.jsonl": "c9f1e387346feb2081971e918bbeff5b1c25b284312122676cc5d20898d1afb6"
+  },
+  "investigation": null,
+  "issue": null
+}

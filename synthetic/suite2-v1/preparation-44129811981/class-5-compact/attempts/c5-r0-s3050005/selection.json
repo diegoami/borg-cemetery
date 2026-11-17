@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 5,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 6200,
+        "file": "checkpoint-000061-t0000006202.save",
+        "game_turn": 6202,
+        "keys": 1016,
+        "max_depth": 1,
+        "race_idx": 0,
+        "seed": 3050005
+      },
+      "selection": {
+        "first_visible_turn": 6292,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 1,
+        "monster_kind": "crow",
+        "no_omniscient_trigger": true,
+        "observation_line": 782,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 6292
+      },
+      "status": "candidate",
+      "turn": 6321,
+      "type": "death",
+      "witness": {
+        "cause": "a crow"
+      }
+    }
+  ]
+}

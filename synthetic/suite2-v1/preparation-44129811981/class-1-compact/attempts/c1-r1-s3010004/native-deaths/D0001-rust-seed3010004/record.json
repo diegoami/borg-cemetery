@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed3010004",
+  "run_kind": "harness",
+  "character": "Half-Elf Mage",
+  "raw_cause": "Grip, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Grip, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 12427,
+    "race_idx": 1,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 3010004,
+    "flags": "menu",
+    "git_rev": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+    "git_dirty": "no",
+    "source_sha256": "2d2b5d1e9570cbda939fcf4a446ce1a0aaf94df0a3b5c8fff5219b3a1caa8724",
+    "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d",
+    "borg_txt_sha256": "7b3a7c2bc3756060566483eaf43a373469c8f036077e51c5e5447ee3564bdd0e",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 793
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c1-r1-s3010004",
+      "result_sha256": "5a1f2ca71877a503e833ca70a735a9ff2c39047fc2385287932ddc04b0417f9c",
+      "raw_sha256": {
+        "keys.log": "5a1f2ca71877a503e833ca70a735a9ff2c39047fc2385287932ddc04b0417f9c",
+        "messages.log": "6207803330a29d949638bb78506e596def07a4deea5c5a5d4a3f34d13bb054f3",
+        "state.log": "5be6260ae14b7229f9c0085647f0c9cab4f76bdc930276d08729d02945c38e52"
+      },
+      "source_commit": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+      "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d"
+    }
+  ],
+  "encounter_family": "start-3170b8be771b0729045e2589eb2357c9667cf51bb95f15512bb060c03b677b29",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "a4e92ea734d40327f7af07baceed91564b521de26685e00d176c9f802c47e11d",
+    "config.txt": "eab1c5878fefc71db1edf0ba8c3788985c4764bb6885ec8f9790365b0e87b05c",
+    "depths.json": "559d5013ec0407f64bdfb646f22c5f6fab679807c54cba09528368a1e9a916d8",
+    "params-core.json": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+    "summary.json": "3ca9d3537de457e471e1b8e28e814bfa4d77db1472fcbfa734d8de77efbecc74",
+    "trace-core-tail.jsonl": "c677a12d18f1af53e8568511b23b25f41d2eb2fe23ba5d1575910f6b38c5d907"
+  },
+  "investigation": null,
+  "issue": null
+}

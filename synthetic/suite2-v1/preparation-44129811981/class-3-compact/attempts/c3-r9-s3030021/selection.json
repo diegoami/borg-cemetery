@@ -1,0 +1,98 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 9700,
+        "file": "checkpoint-000086-t0000009703.save",
+        "game_turn": 9703,
+        "keys": 1052,
+        "max_depth": 1,
+        "race_idx": 9,
+        "seed": 3030021
+      },
+      "selection": {
+        "first_visible_turn": 9733,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 16,
+        "monster_kind": "giant white centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 927,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 9733
+      },
+      "status": "candidate",
+      "turn": 9753,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 931,
+          "max_hp": 16,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 16,
+              "race": 20
+            },
+            {
+              "index": 13,
+              "race": 31
+            }
+          ],
+          "sp": 2,
+          "turn": 9753
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 931,
+          "max_hp": 16,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 16,
+              "race": 20
+            },
+            {
+              "index": 13,
+              "race": 31
+            }
+          ],
+          "sp": 2,
+          "turn": 9753
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 12,
+          "level": 2,
+          "line": 933,
+          "max_hp": 16,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 16,
+              "race": 20
+            },
+            {
+              "index": 5,
+              "race": 37
+            },
+            {
+              "index": 13,
+              "race": 31
+            }
+          ],
+          "sp": 2,
+          "turn": 9763
+        }
+      }
+    }
+  ]
+}
