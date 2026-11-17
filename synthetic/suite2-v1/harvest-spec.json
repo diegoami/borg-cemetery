@@ -16,7 +16,7 @@
     "borg_txt_sha256": "386be998321da46dfcbb025a83c40cc7082d1951f39000fe224e4ed4b980de0f",
     "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91"
   },
-  "core": "reborn",
+  "core": "borg-rs",
   "exclusion": {
     "path": "exclude-suite1.json",
     "sha256": "5be7993eef6c5f762e47f1a25c05ce8ef9a9bc113d0515212e1f206b95a35a01"
@@ -24,6 +24,7 @@
   "frame_sampling": "Native game-command boundary; full initial native state before first played key",
   "horizon_engine_turns": 2000,
   "max_attempts_per_class": 1024,
+  "max_retained_bytes_per_class": 3221225472,
   "minimum_capture_level": 1,
   "native_tools_commit": "09225018dd5f2d4336a16b29478793d902c70dc3",
   "near_death_definition": {
@@ -32,7 +33,7 @@
     "max_hp_fraction": 0.25,
     "recovery_hp_fraction": 0.5
   },
-  "preparation_controller_reason": "Match Suite 1 preparation controller on new source HEAD; stock borg-rs smoke found zero Blackguard incidents in 32 lives. All source lives/seeds and later run configurations stay separate and fully identified.",
+  "preparation_controller_reason": "Owner requires the current borg-reborn-rs default borg-core controller; experimental reborn is excluded. Expand the seed search and report actual class shortages without weakening incident criteria.",
   "races": [
     2,
     3,
@@ -49,7 +50,7 @@
   "schema": "borg-cemetery/balanced-incident-harvest-spec@1",
   "seed_base": 2000000,
   "smoke": {
-    "max_attempts_per_class": 32,
+    "max_attempts_per_class": 256,
     "target_per_class": 2
   },
   "smoke_seed_base": 3000000,

@@ -103,3 +103,21 @@ The full seed allocation, exclusions, class quotas, incident definitions,
 level-1 capture, initial-save deduplication, 2,000-turn horizon and 5-second
 restart bounds are unchanged. Freeze this recipe before the next all-class
 smoke, and dispatch the full requested harvest only after it succeeds.
+
+
+## Owner correction: resume with default borg-core
+
+The owner rejected the experimental reborn controller and instructed the
+harvest to resume with borg-reborn-rs's default `borg-rs` / vendored borg-core.
+This supersedes the collection-controller choice above. The source remains
+capture-enabled candidate `ba26c2ab`, with its own unchanged shipped settings.
+The expanded all-class smoke searches up to 256 lives per class for two
+qualified starts. The requested full harvest retains a maximum 1,024 lives
+per class and the exact 111-save quota. A 3 GiB retained-evidence bound leaves
+room for the final raw upload; exhausting a bound is a reported shortage,
+never permission to duplicate starts or change the <=25% recovery criterion.
+
+Zoo's `resume` dispatch runs the expanded smoke and its native restart gate,
+then automatically starts the full harvest on the same pins only if that
+smoke succeeds. The experimental-controller smoke is preserved as historical
+validation and is not an acceptance gate or input bank for this resumed run.

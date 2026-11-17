@@ -198,6 +198,13 @@ def run(spec_path, source, root, cls, tools, smoke=False):
         fcntl.flock(lock, fcntl.LOCK_EX)
         with ThreadPoolExecutor(max_workers=spec['workers']) as pool:
             for offset in range(0, spec['max_attempts_per_class'], spec['workers']):
+                # Leave room for the final evidence archive on hosted runners.
+                # Stop cleanly with a partial journal instead of losing evidence
+                # to an out-of-space failure during the final upload.
+                budget = spec.get('max_retained_bytes_per_class')
+                if budget is not None and sum(p.stat().st_size for p in root.rglob('*') if p.is_file()) >= budget:
+                    document['stop_reason'] = 'retained_evidence_budget'
+                    break
                 # Selection uses prespecified seed order, never completion speed.
                 futures = [pool.submit(one, source, root, cls, ordinal, spec) for ordinal in range(offset, min(offset + spec['workers'], spec['max_attempts_per_class']))]
                 batch = [future.result() for future in futures]

@@ -37,3 +37,17 @@ class Suite2HarvestTests(unittest.TestCase):
                 h.require_capture_support(source,{'suite_id':'suite2-v1','core':'borg-rs'})
             # Legacy definitions retain their historical execution path.
             h.require_capture_support(source,{})
+
+    def test_storage_bound_preserves_shortage_journal_without_starting_game(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);source=root/'source';tools=root/'tools';out=root/'out'
+            binary=source/'build/rust/game/angband';binary.parent.mkdir(parents=True);binary.write_bytes(b'fake')
+            build=source/'build/rust/BUILD_ID';build.write_text('git_rev='+('a'*40)+'\nsource_sha256='+('b'*64)+'\nbinary_sha256='+h.sha(binary)+'\n')
+            spec=root/'spec.json';spec.write_text(json.dumps(dict(source_commit='a'*40,native_tools_commit='c'*40,
+                target_per_class=111,workers=1,seed_base=2000000,max_attempts_per_class=1024,max_retained_bytes_per_class=1)))
+            with patch.object(h.subprocess,'check_output',side_effect=['c'*40+'\n','a'*40+'\n','b'*64+'\n']),patch.object(h,'one') as game:
+                result=h.run(spec,source,out,0,tools)
+            game.assert_not_called()
+            self.assertEqual(result['selected'],[])
+            self.assertEqual(result['stop_reason'],'retained_evidence_budget')
+            self.assertEqual(json.loads((out/'harvest.json').read_text())['target'],111)
