@@ -20,7 +20,7 @@ output, else --build-id (default build/rust/BUILD_ID).
 An unchanged game is not a new death (borg-reborn-rs #464, RULES 12 as
 amended by the owner on 2026-11-16): a temporary dossier is KNOWN when the
 registry retains a death with the same start (implementation, seed, race,
-class, flags, borg.txt and save; not the build) and the same key stream,
+class and save; not the build, borg.txt or flags) and the same key stream,
 whatever source built it. A different key stream, or the same keys from
 another start, is still UNRECORDED. --exact restores the build-qualified
 match (encounter family and key stream).
@@ -50,14 +50,17 @@ def keys(reg):
 
 def start_of(case_dir, rec):
     """The run's inputs without its build, or None when the record does not
-    state them (such a death is matched exactly). The core parameter table
-    is left out: its hash changes whenever the source adds a parameter."""
+    state them (such a death is matched exactly). The core parameter table,
+    borg.txt and the flags are left out: their hashes change whenever the
+    source adds a setting, and a setting that changes play changes the key
+    stream too (borg-reborn-rs #465: one new borg.txt line made every control
+    game UNRECORDED)."""
     i, t = rec.get('identity') or {}, rec.get('terminal') or {}
     if not i.get('impl') or 'seed' not in i or 'race_idx' not in t or 'class_idx' not in t:
         return None
     config = case_dir / 'config.txt'
     save = exporter().read_kv(config).get('save_sha256') if config.exists() else None
-    return (i['impl'], i['seed'], t['race_idx'], t['class_idx'], i.get('flags'), i.get('borg_txt_sha256'), save)
+    return (i['impl'], i['seed'], t['race_idx'], t['class_idx'], save)
 
 
 def games(reg):

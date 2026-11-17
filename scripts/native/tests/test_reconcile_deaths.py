@@ -159,11 +159,18 @@ class UnchangedGameTest(unittest.TestCase):
             self.assertIn('UNRECORDED', out)
 
     def test_the_same_keys_from_another_start_are_a_new_death(self):
-        for other in [{'seed': 1012}, {'race': 3}, {'cls': 2}, {'borg_txt': 'b1'}]:
+        for other in [{'seed': 1012}, {'race': 3}, {'cls': 2}]:
             with self.subTest(other=other), tempfile.TemporaryDirectory() as t:
                 stated(Path(t) / 'reg', 'D0000-qold', 'k' * 64, source='old', **other)
                 stated(Path(t) / 'temp', 'D0001-rust-seed1011', 'k' * 64, source='new')
                 self.assertEqual(self.check(Path(t) / 'temp', Path(t) / 'reg')[0], 1)
+
+    def test_another_borg_txt_is_the_same_start(self):
+        # borg-reborn-rs #465: adding a borg.txt setting changes its hash, not the game
+        with tempfile.TemporaryDirectory() as t:
+            stated(Path(t) / 'reg', 'D0000-qold', 'k' * 64, source='old', borg_txt='b0')
+            stated(Path(t) / 'temp', 'D0001-rust-seed1011', 'k' * 64, source='new', borg_txt='b1')
+            self.assertEqual(self.check(Path(t) / 'temp', Path(t) / 'reg')[0], 0)
 
     def test_a_record_without_its_start_is_matched_exactly(self):
         with tempfile.TemporaryDirectory() as t:
