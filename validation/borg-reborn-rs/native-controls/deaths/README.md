@@ -9,12 +9,30 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 141; distinct starting conditions: 140; retained process attempts: 140 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 159; distinct starting conditions: 158; retained process attempts: 158 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
+| [D-04b4287cf61460671cdfab21257bc9fd529cd527bffd8b9b93bd6513f3d3aeaa](D-04b4287cf61460671cdfab21257bc9fd529cd527bffd8b9b93bd6513f3d3aeaa/report.md) | unassigned | `e6446749f1e5` | 1010 | Fang, Farmer Maggot's Dog | 9650 | unassessed |
 | [D-0db02e6e7510ac437d517d6a5c475699cca14665ff38a1f58318630d17e46ded](D-0db02e6e7510ac437d517d6a5c475699cca14665ff38a1f58318630d17e46ded/report.md) | unassigned | `4a7a851902b0` | 1020 | a giant white mouse | 8922 | unassessed |
+| [D-13cd52e8f4b1762114a98a3c2d31e1c24b969adaac9833752d05e75dd94d83df](D-13cd52e8f4b1762114a98a3c2d31e1c24b969adaac9833752d05e75dd94d83df/report.md) | unassigned | `e6446749f1e5` | 1021 | Grip, Farmer Maggot's Dog | 3139 | unassessed |
 | [D-170652b5c20ab11efaba78134a6e014824e9192d12387bb8354792fb6e47d178](D-170652b5c20ab11efaba78134a6e014824e9192d12387bb8354792fb6e47d178/report.md) | unassigned | `4a7a851902b0` | 102 | Fang, Farmer Maggot's Dog | 3640 | unassessed |
+| [D-1c770144e34fb4444d5591e899e38ce7e97fcee8884bbff25b42a5d3b475d24a](D-1c770144e34fb4444d5591e899e38ce7e97fcee8884bbff25b42a5d3b475d24a/report.md) | unassigned | `e6446749f1e5` | 1042 | a cutpurse | 23577 | unassessed |
+| [D-4989529c3003e8072b815f9c21fb9c6db8f4b9f23292011f7eea342a8d3c45eb](D-4989529c3003e8072b815f9c21fb9c6db8f4b9f23292011f7eea342a8d3c45eb/report.md) | unassigned | `68e39b7e8480` | 1010 | Fang, Farmer Maggot's Dog | 9650 | unassessed |
+| [D-768af75b51b219f9f7474ef65e31a9b6b63b1d3559c255cc8537598d846c829a](D-768af75b51b219f9f7474ef65e31a9b6b63b1d3559c255cc8537598d846c829a/report.md) | unassigned | `e6446749f1e5` | 1031 | a crow | 3785 | unassessed |
+| [D-77c9b934e3953ff89e932b3f3930c932aa519fc4feebda141eb261e459711b72](D-77c9b934e3953ff89e932b3f3930c932aa519fc4feebda141eb261e459711b72/report.md) | unassigned | `e6446749f1e5` | 1020 | a kobold | 45752 | unassessed |
+| [D-90ba36f95c58606a52ef90de767fa9180137d3b5b9b5b80133e89e9202a61b2a](D-90ba36f95c58606a52ef90de767fa9180137d3b5b9b5b80133e89e9202a61b2a/report.md) | unassigned | `68e39b7e8480` | 1020 | a kobold | 45752 | unassessed |
+| [D-931243a2d75b6a83ac62e6e97274bfd941cc1defe59ddf8274012e450fd49b7c](D-931243a2d75b6a83ac62e6e97274bfd941cc1defe59ddf8274012e450fd49b7c/report.md) | unassigned | `68e39b7e8480` | 1042 | a cutpurse | 23577 | unassessed |
+| [D-93cb4a65e83c2e4d1621ba85cbde6cdddf6d75de2c9a066ceb1c1e95c43b541e](D-93cb4a65e83c2e4d1621ba85cbde6cdddf6d75de2c9a066ceb1c1e95c43b541e/report.md) | unassigned | `68e39b7e8480` | 1044 | a wild cat | 47367 | unassessed |
+| [D-9578300bf8d5c573ce93416c8a0fbf7e35893e0b877acd94745071ffd98743d1](D-9578300bf8d5c573ce93416c8a0fbf7e35893e0b877acd94745071ffd98743d1/report.md) | unassigned | `e6446749f1e5` | 1071 | a gallant | 54788 | unassessed |
+| [D-97512514298b2fb40f3ae10eb9728f2fe85ffe2d5eab6d0de38978036a94a94f](D-97512514298b2fb40f3ae10eb9728f2fe85ffe2d5eab6d0de38978036a94a94f/report.md) | unassigned | `68e39b7e8480` | 1031 | a crow | 3785 | unassessed |
+| [D-98bd7dc4f45defde70b12aeb5be17e4121678924814bbe544eee6caf6f1b88c0](D-98bd7dc4f45defde70b12aeb5be17e4121678924814bbe544eee6caf6f1b88c0/report.md) | unassigned | `e6446749f1e5` | 1024 | Fang, Farmer Maggot's Dog | 15673 | unassessed |
+| [D-b442f698797d568fd386bf61edea8cb45b95d21fbe0f605251d3a7b76b90275e](D-b442f698797d568fd386bf61edea8cb45b95d21fbe0f605251d3a7b76b90275e/report.md) | unassigned | `e6446749f1e5` | 1040 | a salamander | 4816 | unassessed |
+| [D-bc1b22fc1490a595039e8df87926d78d7b6f752d38ca588737e242f79228eb06](D-bc1b22fc1490a595039e8df87926d78d7b6f752d38ca588737e242f79228eb06/report.md) | unassigned | `68e39b7e8480` | 1024 | Fang, Farmer Maggot's Dog | 15673 | unassessed |
+| [D-ca05d8af700ac4976a4c7823327ff0c3f401e7dc60ae0fe2e25995ec067a57fe](D-ca05d8af700ac4976a4c7823327ff0c3f401e7dc60ae0fe2e25995ec067a57fe/report.md) | unassigned | `68e39b7e8480` | 1071 | a gallant | 54788 | unassessed |
+| [D-d94eeb911c8d6ae0cc2a50cce142fa95cab7a7871f93b8d7eb6027dd18ef40b4](D-d94eeb911c8d6ae0cc2a50cce142fa95cab7a7871f93b8d7eb6027dd18ef40b4/report.md) | unassigned | `e6446749f1e5` | 1044 | a wild cat | 47367 | unassessed |
+| [D-e25b67cbdbb9bd1abd70c317e6f78180e68074b0805b040f161f52a9d082aa1e](D-e25b67cbdbb9bd1abd70c317e6f78180e68074b0805b040f161f52a9d082aa1e/report.md) | unassigned | `68e39b7e8480` | 1021 | Grip, Farmer Maggot's Dog | 3139 | unassessed |
+| [D-ed6dcba433caa741a1162470a888093e62b4201002228cb87b7b6967f9259d0f](D-ed6dcba433caa741a1162470a888093e62b4201002228cb87b7b6967f9259d0f/report.md) | unassigned | `68e39b7e8480` | 1040 | a salamander | 4816 | unassessed |
 | [D-fcdd03438b03c9cc5dab2b04278bf74bafc33a077818ce30015b770625bd2e29](D-fcdd03438b03c9cc5dab2b04278bf74bafc33a077818ce30015b770625bd2e29/report.md) | unassigned | `4a7a851902b0` | 1011 | a cave spider | 18903 | unassessed |
 | [D-430ea89cd11a946bd126e0c7dbae3c0b324c55fc9bbca3e24ec66460afac7879](D0000-q02e753f3bfb81ef805fcc305e84beac6883209806b3afafc1ae58870d1a1185e/report.md) | unassigned | `60a506b689ff` | 1050 | a grey mold | 24096 | unassessed |
 | [D-4aabc0ddf5623e5e8d03fb09883192c8f65c12df45c61098770f109fb6f66e7a](D0000-q0423f191041628be29d880c0b1d26707829b967b43c38f0d8a4e8c6e0f3724e4/report.md) | unassigned | `baee81efcfea` | 102 | Fang, Farmer Maggot's Dog | 3640 | unassessed |

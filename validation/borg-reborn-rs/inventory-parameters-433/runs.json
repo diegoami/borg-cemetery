@@ -1,0 +1,1799 @@
+{
+  "attempts_and_limits": [
+    {
+      "detail": "Initial temporary native test reached a source/Cemetery native-tool pin mismatch (reconcile-deaths.py); corrected checkout to source pin 09225018 and reran successfully. Original temporary game files were removed by unittest cleanup; no endpoint or raw-stream claim is made for that setup attempt.",
+      "kind": "local native test setup failure"
+    },
+    {
+      "detail": "First compressor encountered the suite atomic partial-directory rename; originals were preserved and compression retried. All final complete decision traces are retained losslessly in stream payloads.",
+      "kind": "trace archival retry"
+    },
+    {
+      "detail": "An initial unpublished canonical export lacked compressed trace tails. Re-exported to a fresh working registry with exact decompressed trace bytes; retained dossiers all include the real trace tail and original line count.",
+      "kind": "dossier archival retry"
+    },
+    {
+      "detail": "No GUI interaction, population tuning, default changes or effectiveness claim. Native override demonstrates one real configured policy change only.",
+      "kind": "coverage boundary"
+    }
+  ],
+  "baseline_commit": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+  "bounded_override_records": 2,
+  "builds": {
+    "baseline": {
+      "binary": "/workspace/work/p351/build/rust/game/angband",
+      "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754",
+      "built_utc": "2026-11-17T02:40:27Z",
+      "cc": "cc (Debian 14.2.0-19) 14.2.0",
+      "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+      "git_dirty": "no",
+      "git_rev": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+      "impl": "rust",
+      "inputs_dirty": "no",
+      "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+      "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0"
+    },
+    "candidate": {
+      "binary": "/workspace/work/p351/build/rust/game/angband",
+      "binary_sha256": "700541f5d1ebe268b3d794ddf4d248be11d9e7b972552788e8f6e3c602f37af4",
+      "built_utc": "2026-11-17T02:43:52Z",
+      "cc": "cc (Debian 14.2.0-19) 14.2.0",
+      "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+      "git_dirty": "no",
+      "git_rev": "e6446749f1e58367101f4b7b806319b465f68b89",
+      "impl": "rust",
+      "inputs_dirty": "no",
+      "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+      "source_sha256": "9bc92dbf216e33f8950970cf161b0fbc34d01643bf5a02640bf5536245039b97"
+    }
+  },
+  "full_run_records": 90,
+  "implementation_commit": "e6446749f1e58367101f4b7b806319b465f68b89",
+  "issue": "https://github.com/diegoami/borg-reborn-rs/issues/433",
+  "paired_full_cells": 45,
+  "payloads": {
+    "0a3cf444c17a69b8dc187460207c9f15996bf460d95598a501b67993bb213654": {
+      "bytes": 294184,
+      "path": "streams/0a3cf444c17a69b8dc187460207c9f15996bf460d95598a501b67993bb213654.zip",
+      "sha256": "dde6b4c31833ed0c3ffd1619673fbfbe6980473f7a748d3dba7923a1aabc2662",
+      "streams_sha256": {
+        "keys.log": "7060e7ee6a5e04a62c9a6a865364c9012c5804589c7af8349553768499216e53",
+        "messages.log": "a9ac036a22991e1db9ef81be592c994bf1586333138567f62e028b6d23dc524a",
+        "state.log": "efb55bafac8e75c9e7fc5253c540526ac26c2d78d638447ffe2ea88cfd29a444",
+        "trace-core.jsonl": "237763ef6d685487a48e69b39c67314d14a70e525d7eb6db5bebb52eed40e2ff"
+      }
+    },
+    "0b03140ebf35fdb2d2f0a8292f2a8f4920c120ca585de9e72b9073dd9bcc7a30": {
+      "bytes": 1247205,
+      "path": "streams/0b03140ebf35fdb2d2f0a8292f2a8f4920c120ca585de9e72b9073dd9bcc7a30.zip",
+      "sha256": "25a239bb3d383879592e0d4afc12ea93647a59c36e963cbfe2bea5a83506e32c",
+      "streams_sha256": {
+        "keys.log": "364d3549c49e254164a091bf1b0f6d7366ef66a012a2fb6725b31449030d9f61",
+        "messages.log": "9ce6f927d76ff8e91ccec0ef50d538a441aa376db099bf218a51e09caae0aaf2",
+        "state.log": "aff5246bd97c5b7d0ea6be909fe97950dc0a03976c5b232de03554bdd6fcfca1",
+        "trace-core.jsonl": "2315342b810e945098c8ea56f05613c7e27100363933bbdd4b376b8af108214b"
+      }
+    },
+    "1309684d6ded292cd9334968a52553e3c9a29bcfc8c2e5bc93367b01a78ff000": {
+      "bytes": 2570893,
+      "path": "streams/1309684d6ded292cd9334968a52553e3c9a29bcfc8c2e5bc93367b01a78ff000.zip",
+      "sha256": "5711fe4c457042b93f84b10f4c2bbccbe633117e65223e1ea8039d2055126321",
+      "streams_sha256": {
+        "keys.log": "473e01431e12344d2ceefadff6c6167f4504e1844b446a4803d995bb18e433de",
+        "messages.log": "367312ceeee4c34265b5c775c961361519c008f71deb400a61f2417cac0abf7a",
+        "state.log": "ae2c4e195c2089f26ccbecf78b94ae022a93160470302a0d04ac5f7fbde554b2",
+        "trace-core.jsonl": "1a24df7d2ae11dc4bae4a05e2b00f6ed23545c1691807f756a93e05867ed00a8"
+      }
+    },
+    "15754819c1d20a7ed02f92cbff047e4331288706e9fce3df56b223b2f9152a15": {
+      "bytes": 3182724,
+      "path": "streams/15754819c1d20a7ed02f92cbff047e4331288706e9fce3df56b223b2f9152a15.zip",
+      "sha256": "6d8d6a78f7bfd9d3e8749678cb6b0d72c48faa94a36545810bb6198b1ccd1c0f",
+      "streams_sha256": {
+        "keys.log": "fe199ae3c6af0b8868965f7978ade6be192ee3838a1f30b70a82fc52236ead15",
+        "messages.log": "e3da9ab3a4b4da743694529e41e0b3847f0f2e987b6e9992be92f7346b23e4f1",
+        "state.log": "1d1172bac045251dc7627f9122ffdf7de872e1cded7cff02336f024c63b02557",
+        "trace-core.jsonl": "19c5d15d8927d796b8e46c9ed7f5b42a3d084df68c111d6cbd71c4ad3339ce8e"
+      }
+    },
+    "242867eae0acc02235b908636869d18b9fe85ec102a5c4e9b9651d9d4ed79ba5": {
+      "bytes": 230208,
+      "path": "streams/242867eae0acc02235b908636869d18b9fe85ec102a5c4e9b9651d9d4ed79ba5.zip",
+      "sha256": "88da7b78fbf4fdb453290f0ce419e37b52310f27ce611a422b6973e75f8fec8e",
+      "streams_sha256": {
+        "keys.log": "0667070317586f99eb19163aa9804f496f8e2701b340ffc850c8ee0ced028b5a",
+        "messages.log": "f0d4f45377ef2bbfcf2a55650a56e4d91c0362362e05b1e2fad8bb233f9c44fc",
+        "state.log": "fb8fdaabff1cefcc391a42dae984b17bf3b227658087c3dc1ecd33b16b634e3f",
+        "trace-core.jsonl": "ad73739a9c91d940acbf0dd48a2bf356fa9bfbfe56f7f7f61ca3089e0b209381"
+      }
+    },
+    "253ff3a2dceddcb32c9c2e8501788cf18654a58a673d0a2a2f488f6b2e732d2d": {
+      "bytes": 2692115,
+      "path": "streams/253ff3a2dceddcb32c9c2e8501788cf18654a58a673d0a2a2f488f6b2e732d2d.zip",
+      "sha256": "cd4ce49ca4c0da430b3f2b413f78d665d76ef65cdde159aa7c20f55db7fa76b0",
+      "streams_sha256": {
+        "keys.log": "21b8545895d4ccb71b1cb98b7b6cc8e5721ec14f5ef3d6482d5d014e27f70809",
+        "messages.log": "e94e4881e621a33b067240869205724042f2f794af3f7db9684ef7efb9e4d59f",
+        "state.log": "09851751d6784a8ba32cbf2693c9ea6fde6980f05f675f12d866eb31282c22a6",
+        "trace-core.jsonl": "54e4b0fd02b8352e2c894efac7898e22c8ed675965c8718a064775bbc6f863dc"
+      }
+    },
+    "26f1405481475256591cbb20d793ab69a3358d0b5597b598caf051fae0c8f27a": {
+      "bytes": 1110269,
+      "path": "streams/26f1405481475256591cbb20d793ab69a3358d0b5597b598caf051fae0c8f27a.zip",
+      "sha256": "281aac6386f712c4c7135f0982a7305f02a148520b82e054ad35dcabceb76620",
+      "streams_sha256": {
+        "keys.log": "e4bfbd59ca3584c1a2429a501ace6da8963f96b24fa0ea1f45beb60ad5160d29",
+        "messages.log": "9b39e36291e0188e9ce1abf3550f401724fd2acfed3270ec9653ac0701658197",
+        "state.log": "3ba197c20392dae69e55da5e2fe10d3b5cdc6effa91eb8f70eed906174e9044c",
+        "trace-core.jsonl": "f8394059201948d2e2fdf2bb19628a0a01fa41661fed4f36d003d35f1c14f3b9"
+      }
+    },
+    "2ceb64c781f3ba57a2bfb963e9d19510ca0201dade4aea07680a498625c30d68": {
+      "bytes": 1486297,
+      "path": "streams/2ceb64c781f3ba57a2bfb963e9d19510ca0201dade4aea07680a498625c30d68.zip",
+      "sha256": "9db4288aa44a534dd50db891e1413e18044be077fd9fe48f064d8151c52e07a7",
+      "streams_sha256": {
+        "keys.log": "d574a925f2e597d6cb44a80cff6f47fb9e6fca7ad143fa7d50386d5641d9295d",
+        "messages.log": "52f20de71c2cbcf351fd3db500ae491bfb23e785df8a133fdb8e6b167e2175c5",
+        "state.log": "8d66e2c3e3efcbe059b138a77b7945c058d3a58871200dd134da221577cdfb6e",
+        "trace-core.jsonl": "8a9f1bf9637c1a4cb7b6acb4df2aadc54a4706e2a90e16e4f943e5003c2c3164"
+      }
+    },
+    "3d3763f5876c772b1f5f7bb848cde68fd02f57249ac7e10a704297a794ca8a1b": {
+      "bytes": 178583,
+      "path": "streams/3d3763f5876c772b1f5f7bb848cde68fd02f57249ac7e10a704297a794ca8a1b.zip",
+      "sha256": "ecf61c6ff311471bd4933f73e26f49d124499350f4ccadcff936f225b487722d",
+      "streams_sha256": {
+        "keys.log": "922f9b94dcb78245534a2a24d0d07444891dc9897dccd4a72667528530f4ce2d",
+        "messages.log": "50f5768e35a1fed3e2a7030cea9f5b9a5dc67003c96735a34664686f4ed61f80",
+        "state.log": "03a2c8e78d1835a72648ec93d13e1a0f78143c7c1fa4648a0c401740840c5292",
+        "trace-core.jsonl": "f8457adb76c8bfa27370fb44e48c9df871e27046b6ac0fc476c68d242a85086d"
+      }
+    },
+    "44fadab1b1ee94d22be760801f21e94d856b6db2b0b5ef531fae09f7423f0f10": {
+      "bytes": 3941650,
+      "path": "streams/44fadab1b1ee94d22be760801f21e94d856b6db2b0b5ef531fae09f7423f0f10.zip",
+      "sha256": "eb8c6c64f6a84e769b9599f300c1948370834417a22f526a28819a7fcdf9c1c8",
+      "streams_sha256": {
+        "keys.log": "6e3ca9861485fef7335117156742f197891408e2d8ef3a09b2ccc8d45837566b",
+        "messages.log": "4efce5fea0413bc2b6fb6f4f45151ecd28f09db3829bda90baa2f10eb4208789",
+        "state.log": "94fc96b2b5cb5bea0bce592a40f4b26d640d8e6b6073b5621cd212a8aeaf7f22",
+        "trace-core.jsonl": "95939f9f4df1c2860d810e2eb1200e4d7312b7781572a12f53927435444f06ee"
+      }
+    },
+    "468cfd6c86a846118f8d83ed0b043de7ef6568b5012a34dc310a9e2100c46aa6": {
+      "bytes": 2398895,
+      "path": "streams/468cfd6c86a846118f8d83ed0b043de7ef6568b5012a34dc310a9e2100c46aa6.zip",
+      "sha256": "eed8d5fd597d0bce507ccc8318a726cc56dab02b5fc8660e5ee65bf634b6ce5b",
+      "streams_sha256": {
+        "keys.log": "fa5707f6bba55aba2b24b4fbf336a92d6c517ca38928f0bb124c549edfacb3bf",
+        "messages.log": "cd59b6675778d4ee022377e6339455ee36a4b10879f617601463db3a81fd4f70",
+        "state.log": "4b1a9913b92e2c16ac136b0d36022f4ad6fc3fc38116aaed8cf9dca8fef91014",
+        "trace-core.jsonl": "4588a953e930df20419e5c8c3b27e9fcef8616b309cc0de6fce0da5e268180b8"
+      }
+    },
+    "483ab546128a944dd0364d81788a25511e6b0cc4dbf0b781cd51ffe042f73f46": {
+      "bytes": 1057174,
+      "path": "streams/483ab546128a944dd0364d81788a25511e6b0cc4dbf0b781cd51ffe042f73f46.zip",
+      "sha256": "3984b7cb0080b7b5278ab4013f3efbb3eb5538030aac9350e32ba0009e436e40",
+      "streams_sha256": {
+        "keys.log": "35305690d6150a7f044c2aac546d35bf6cc75a93eb760830687bb1779b6e1663",
+        "messages.log": "dc18674ecb49dcd3c51e957ca4dd5828907c14ca95d760105200e61f58944748",
+        "state.log": "26954ffea8381e2927e4b13ee8117ee3625ad1801058eb6fe40700906d2d860f",
+        "trace-core.jsonl": "f1f9ca8a818382791556260fa29a525be11e46eee73eec22ef983ac79457b648"
+      }
+    },
+    "4b0727f28b0c0aa0e1133accb0458d23042a058eefb7918f86e34fd6ecce3934": {
+      "bytes": 584657,
+      "path": "streams/4b0727f28b0c0aa0e1133accb0458d23042a058eefb7918f86e34fd6ecce3934.zip",
+      "sha256": "a96815e91c816aafca9f39cf13bd32b9f5bfefb38c8dde70c44e3c5e0e0c51c3",
+      "streams_sha256": {
+        "keys.log": "fb17b18869e7b1878aba82da09b4c00780bbda915a43fbdcf7233a92bff1b6b4",
+        "messages.log": "ca9f102859887ac97e9ad4438195614c913706e01b3cb9e7d5e4b0aee5501ec8",
+        "state.log": "c3f45ed14e8c3e620c6cfce1b71f83a52a1bcde73ffb3ae566a436674d8a0cc1",
+        "trace-core.jsonl": "777619498956d95bee0f63d9ef00136dd5150ade887fb7fe41056c1f596dda36"
+      }
+    },
+    "4b38f8e3be52b1dcb18da8168d48d9bfdfdb70d8bc8d316e43c56cf48ed5f0ba": {
+      "bytes": 186192,
+      "path": "streams/4b38f8e3be52b1dcb18da8168d48d9bfdfdb70d8bc8d316e43c56cf48ed5f0ba.zip",
+      "sha256": "c5bde586e05fe1ebeb85eafdc9da530375781bf077c70d9722ee580af45544a4",
+      "streams_sha256": {
+        "keys.log": "610f97f19274f51760a0ae13c7350aab9330835c64fc554210be297b40cf4e9a",
+        "messages.log": "1960dca5a495affe5e284169ec5173ad8c56ce4fd367aaece50a392e17f06fcc",
+        "state.log": "1a1eb49e180afef8fa112110b4dabff9cefccfac21d7f6af19380ecb44162e93",
+        "trace-core.jsonl": "e6c2de69c1f06f3bce130b2089951a1830fe81b0e50d8eebaae58a13df94590c"
+      }
+    },
+    "541d40b2a2946b7ee312e377b29c59c9b7a66f8937ce3aa4657b1303742475d8": {
+      "bytes": 3793927,
+      "path": "streams/541d40b2a2946b7ee312e377b29c59c9b7a66f8937ce3aa4657b1303742475d8.zip",
+      "sha256": "b4ca1b0aea9baeba883c616d94ffd0e2f36f05dee7bf192a48c621abf9e389b0",
+      "streams_sha256": {
+        "keys.log": "39605a127b0cf63453cba9400c2f103b2d37386f45a56c9ac1e4f63eab22c7c3",
+        "messages.log": "38e0b26fdd3b58e21cbedcee723fa092a0a48227bb5cb60af912bdc3905c7aa3",
+        "state.log": "93533f8233738e227f03512bac2a41f257f558a5d7169f791db1780e899c2fb5",
+        "trace-core.jsonl": "a68d3dc5c5e43609f65326e7479f3f85c21c73d5da8e0b3ceba73097e1d9c808"
+      }
+    },
+    "54e02b0b6c10bc06c5e1771e948d03e2872c8ccac228159196122676a142eb33": {
+      "bytes": 1517606,
+      "path": "streams/54e02b0b6c10bc06c5e1771e948d03e2872c8ccac228159196122676a142eb33.zip",
+      "sha256": "34a93947c70ad6130ed0e991c34407c5f087af4152edd294def8e861608219ee",
+      "streams_sha256": {
+        "keys.log": "e5f6d92947e1dca927a16aec4b1ca1438adc92a1c7be5c9c41fb0ef743901c27",
+        "messages.log": "282e49b24455958af0bb41713cbce7a0230cae07605fbe75d2423697b6c2f403",
+        "state.log": "fa3c5502f41967e706469c2d445e0bc91253e5966aff0f13cb11e5daf75a330d",
+        "trace-core.jsonl": "769948247fd2127d859bc019287cc9831970f0034b75a7121578ce5bc6bb573c"
+      }
+    },
+    "66f60d9e2f71b4c6c5d6e3a4abb012f7fccff1604e5d68be1a6afe7cc22f34fd": {
+      "bytes": 1096084,
+      "path": "streams/66f60d9e2f71b4c6c5d6e3a4abb012f7fccff1604e5d68be1a6afe7cc22f34fd.zip",
+      "sha256": "b0c77e5e6cbff985c942b9f56a82e392ed0c18a09c570bda2f003c0f7ebaa2fd",
+      "streams_sha256": {
+        "keys.log": "52bbed9d8676bff720ccf2573e3568d3d7eefde6fadc4a733b38f518af707765",
+        "messages.log": "69e9efe43716544e5d945d834a429ce9ea830ec7fe6b8278f6256ae027c7950e",
+        "state.log": "5f78d47cc70c6fa2c804117cdb5017a6ac46133f81817054049c425a7df35ee0",
+        "trace-core.jsonl": "eaee1bf7b77949f12898801189e4c6f8fc7d5d2fd770f80b2a09e099081c6f31"
+      }
+    },
+    "6e1419eba8dbcc41b0487f13f7bedfaa758dbdae5ec88a76776d1a0b7db7f6b7": {
+      "bytes": 1228278,
+      "path": "streams/6e1419eba8dbcc41b0487f13f7bedfaa758dbdae5ec88a76776d1a0b7db7f6b7.zip",
+      "sha256": "fbebc080fb815741227a772f2b7624b70d18c7fe83b63e71d29c52ce6bc42c47",
+      "streams_sha256": {
+        "keys.log": "b695dcd8d0c50c9c520f30dee1e4cde47c4283fe004212f360c4104b82e1f12a",
+        "messages.log": "4718cb03631ac6591181bb552718a3f812e1b7796426e1c36f638e80721188dd",
+        "state.log": "a98f189a2a0e031f89e02cd33b312f3a4b295903c67ae6e23246268354537e3f",
+        "trace-core.jsonl": "5231340ac28eca6f0bc877fc9f93711ff17fe468e9db75d02c88c8f25e7d4387"
+      }
+    },
+    "6e2fe658ad9df11b832c2b17e71ed7de7d4da21a8f400e92274885ca6c45d6e9": {
+      "bytes": 592549,
+      "path": "streams/6e2fe658ad9df11b832c2b17e71ed7de7d4da21a8f400e92274885ca6c45d6e9.zip",
+      "sha256": "4ea9b2544cd927d2d819b49e64981cfaf0f3b4e0a453cd1f15fccee8ac683975",
+      "streams_sha256": {
+        "keys.log": "ce82fc9b85d993d40025a1f55058c9d0fd6a875e76103ae3c3a5322a8184396f",
+        "messages.log": "2046a40e9fd58d775e3d7f03f687045c09bf5cf53525d04beb15952ff4a6e8e0",
+        "state.log": "cb323df66a64ab56d7d093a07b905112e2cb76f8cf1e98045ee94f97dda3af39",
+        "trace-core.jsonl": "69f3dc8b6ba7884576c07f61971185ce9cf269be52faf6589894c7918946e688"
+      }
+    },
+    "78f0c0d4d98af7fa590bd088e11e6c828ecc7078075bbde15a98e690c0523d51": {
+      "bytes": 32443,
+      "path": "streams/78f0c0d4d98af7fa590bd088e11e6c828ecc7078075bbde15a98e690c0523d51.zip",
+      "sha256": "26f76d541e73996194ef7d97f367e77542009e6328b291a80ed10e0b66f0ca34",
+      "streams_sha256": {
+        "keys.log": "c9ea4e48c2c3dd749930c3a92e52d35ca3234d08dfad89f78db5487c951f726c",
+        "messages.log": "5c5ce9d6b6d36a4f832a37869a5bb0f869292a21a1f83713f418f2f4be1d3f09",
+        "state.log": "a1ea15c07ebc116b9fdcdec92b71afa94c72a4228f42534c8ab389c057c89b44",
+        "trace-core.jsonl": "20cb06d4d75cc4aa4cfb1db501d717334a4eab85af4bddea0904787321132935"
+      }
+    },
+    "794838abccfaf059a9fd6f25eabdd88f523e7c57d684da157f49af9784c5e29f": {
+      "bytes": 1145225,
+      "path": "streams/794838abccfaf059a9fd6f25eabdd88f523e7c57d684da157f49af9784c5e29f.zip",
+      "sha256": "00be19b7d1c92d9eb0531e5b3f7811adc89c5bb7f083b3e8c9b235c44bdd6fb2",
+      "streams_sha256": {
+        "keys.log": "60b1b91b619d31341c0373968965c581ddbf0c78827bb66284494bbe7d0b6334",
+        "messages.log": "559e8239407fe0c0f18a6382b719f8b3057b99604aa594a667c957ee2494ae0a",
+        "state.log": "38d3c72a55211edeacfd3b655713895884d6c08244280b93f59d18e1fe315a44",
+        "trace-core.jsonl": "01ab40bb92945e3cb33fcc4effdf4b5e06fac7be8053f61c5f7f3211e5774b75"
+      }
+    },
+    "833e83defddfa38e47750b31771f3f476f7740b2e9c165f0c8ac0a2ab2e67e20": {
+      "bytes": 3103203,
+      "path": "streams/833e83defddfa38e47750b31771f3f476f7740b2e9c165f0c8ac0a2ab2e67e20.zip",
+      "sha256": "7bea3ec74c2ae0bf7bc2b923525a0d631783640ed9fb31b7571762769cfc9b22",
+      "streams_sha256": {
+        "keys.log": "ee91a022e8efd65d92b546a1ccb743ff1531333ace46cd16b99800cfa3dd5f39",
+        "messages.log": "b3b1217af1c78408376e3da97c44f77c173bdb0e035d06b9d8eff983c6fbc2f1",
+        "state.log": "b1bbfbe08523ff1699dc2c3afb9c61e8e0ed603706b393181f42e0b942410c62",
+        "trace-core.jsonl": "e0887b17f1494989723a85d446e6c2afc0316e0a77216281d7bdc389dddc3624"
+      }
+    },
+    "8b2fc4cec8b9a3ff0411484b4ef5276063a3629c5c8fc5e2c4fb63bfec22991d": {
+      "bytes": 2275553,
+      "path": "streams/8b2fc4cec8b9a3ff0411484b4ef5276063a3629c5c8fc5e2c4fb63bfec22991d.zip",
+      "sha256": "cd1ccdb004fe2893b60f2f769efcaac70c56c17d4584d78e267fce7a2d633695",
+      "streams_sha256": {
+        "keys.log": "ffa4103e4289128a8a96a70f639691e79de7fd903e0fe7eb15d95d32bd4211c4",
+        "messages.log": "ce3552d8748214cae204475306413b609a5a570e4706857e4c5e3f5bef638a0d",
+        "state.log": "3792a31916c21ac75207322b17bd630538b94fc87cd56ec6049156084fbbfaef",
+        "trace-core.jsonl": "76b49ab646e15d246a91ad6776513c8bb73f140df52e70a6c4e062d4088161ed"
+      }
+    },
+    "9182d423386d24cbb99dd5edb85bf7f6611a86c3ee762597e58a79a43dff24f4": {
+      "bytes": 956756,
+      "path": "streams/9182d423386d24cbb99dd5edb85bf7f6611a86c3ee762597e58a79a43dff24f4.zip",
+      "sha256": "828bcb658116c5f6523135eae2cadc71f60f39a1902ecd12d58105609d2fa112",
+      "streams_sha256": {
+        "keys.log": "fde303e8424354a85a01019c691908c86631b274ddf1efdc600d65105a58a879",
+        "messages.log": "22b9fd5b72f622cd36a26294e356ec27f81794341581d330ae4e5078aa926f74",
+        "state.log": "031f95a5be4c85905d72031b4f29badfe21b92296254e27e35305053945ce0b2",
+        "trace-core.jsonl": "56fa9fd15a5301a0288004d546f78726dd615809d688859a3df5022bddfd0998"
+      }
+    },
+    "92796d982211762150127ebb1b934a86982e9f58c414511ac40997676129200a": {
+      "bytes": 1960442,
+      "path": "streams/92796d982211762150127ebb1b934a86982e9f58c414511ac40997676129200a.zip",
+      "sha256": "b3309aeb20464fc59dd0667d68f379772bede212a4f9df0ab2f1f6bcf432db89",
+      "streams_sha256": {
+        "keys.log": "a3bb58537bff367cc9b51f188a3f0197934af9dcfebb30f5ea61566f3b8449e8",
+        "messages.log": "f1c6ac56ce737620380a5ff3acd5e4dba6de1259b8ab3f4605dcab7db53c62d1",
+        "state.log": "1b4c8dc21834b7fc144795790cf335bdbf69e7329bb55d0e45f28667a3e57a3d",
+        "trace-core.jsonl": "af03dbe707ecdf1064bd29972f06a4a1186467ef847e3e009892e29345089942"
+      }
+    },
+    "92b9c099bf2a2e18dcf6d603981205491fb707937bf04f2bd49628ca05e30bf1": {
+      "bytes": 2671492,
+      "path": "streams/92b9c099bf2a2e18dcf6d603981205491fb707937bf04f2bd49628ca05e30bf1.zip",
+      "sha256": "cd44c6c2d88294d4cd640c275d27c4c017c4a2b31245878822806ecf7546fa44",
+      "streams_sha256": {
+        "keys.log": "87ec564834d5bc4bb4d78b64139bb61d777e4619a107f7a9ed9a86ed8c9f2aae",
+        "messages.log": "9bb2d2843cffc629f7554340fdf9b78c6eed974c13bb1c3b9fb31b2cf2a10eaf",
+        "state.log": "f3731b86977d4b72f45758b2c822e78ef50da6aea573852dadbd3ecad44f0ca1",
+        "trace-core.jsonl": "2be7d97aedb43e6eb31c9845d181d6cba6709cb85fb7f498b6db94730206f6bf"
+      }
+    },
+    "9520216709cda4fb655e2b344d1146071723cbec4ae1d73d3b07c2403db0299f": {
+      "bytes": 1933453,
+      "path": "streams/9520216709cda4fb655e2b344d1146071723cbec4ae1d73d3b07c2403db0299f.zip",
+      "sha256": "dbc21e5e8f35182c1daa25d60d40a9c4ba721885ef1b313063aae4cbeaedcdc4",
+      "streams_sha256": {
+        "keys.log": "6f29d05d5e2960ea81546dd66f178e8225f23e2ac5f6fcaa27a1b4015d1b5d08",
+        "messages.log": "8f56ed6775ef26f468f4f79b2e502a8577a60b7ad0232e284fbac01c495cb6ce",
+        "state.log": "9a8709465579baeb05c912f85c43d1fce23a78e9293423e34a2ef4f60dfa35a9",
+        "trace-core.jsonl": "b5a03afb1f85c9b55347a86373b2ce788a396401f99066c221048ffe3d718b08"
+      }
+    },
+    "9ef7921964faeb1bd1cf30682adab00317b190914cd81fa5b2cd7e17ce6601d3": {
+      "bytes": 1818316,
+      "path": "streams/9ef7921964faeb1bd1cf30682adab00317b190914cd81fa5b2cd7e17ce6601d3.zip",
+      "sha256": "799a6315b7589590b129f18821a5789a4dee1cee3f6f721ab9a9e0560f08ebc7",
+      "streams_sha256": {
+        "keys.log": "0aca3e9302d119e21048b542f8d8f594148b9d63465df9fe37961fe7d8df3dab",
+        "messages.log": "016eed870bda532c1f6ae598e635ae18af083774fd7f5a59ad9495f3787e402c",
+        "state.log": "49489ed29a8d9d4f1b9888c263b735e30b706ccfdbb00e736625bf2ec27b36f1",
+        "trace-core.jsonl": "55bf09b35e893eceee7edfceb394505ce6b620438ddb3582476c02a0d225ae0f"
+      }
+    },
+    "a3f184a87566f3c9ee306520c3e1866420d43c46cba4957bcfbf09f543ab20ff": {
+      "bytes": 3290181,
+      "path": "streams/a3f184a87566f3c9ee306520c3e1866420d43c46cba4957bcfbf09f543ab20ff.zip",
+      "sha256": "c915a86130b1aea2253e45bfdc8acaef4000cdd1b6004ac9fae4301c5e91a8a9",
+      "streams_sha256": {
+        "keys.log": "06186a9ffceb5e91084db0d91ae0f4ba509afc77fbe8e60255367e900f59def1",
+        "messages.log": "a3c61682ae7ae7f9e3b9e7befa6b89150dfc6248d99b934167ad4b33b3339c08",
+        "state.log": "f7939a0bcf8dee91e9f9ab387fa2cb4e4c43dfccb3c049eb283342c176e43bac",
+        "trace-core.jsonl": "9aaf73544d480c1bd4da9e23a7b0cac7974fcf9951d0f13fcffed44a8e0dea7d"
+      }
+    },
+    "a53797af8654008fe9beb0fd1464099c1826cbcc8bd582be6db0d318e13b1a70": {
+      "bytes": 1382002,
+      "path": "streams/a53797af8654008fe9beb0fd1464099c1826cbcc8bd582be6db0d318e13b1a70.zip",
+      "sha256": "79f50c4e65f15de60c239e48fde229bd26b50ca1452a4933e9a12305838e6d8a",
+      "streams_sha256": {
+        "keys.log": "660a401594cdd5009bb4cc0e0cea408217374136456a65f1d90517eb023073d8",
+        "messages.log": "c179c72f0f18e1c8a5448b5722497751e6a0d3174a7c7456d02b930a9a0fd71c",
+        "state.log": "a9ee54e8391338347eeeb8940672bd145e7231cfe8be7cbcea00ad582ffd8b67",
+        "trace-core.jsonl": "7fb5b1e58691f2e86c56460108298fc02dbe9e0dabe5451c7bfc5b33a3259955"
+      }
+    },
+    "b56633cb5f83d65f73e2b11d0606ba4e936536c06b566089a8cf33c10f3e4c28": {
+      "bytes": 1926288,
+      "path": "streams/b56633cb5f83d65f73e2b11d0606ba4e936536c06b566089a8cf33c10f3e4c28.zip",
+      "sha256": "120a4180d2e0268f8f941aa512272a4b1229118c6a6ad2be98648f5bc45e0d2a",
+      "streams_sha256": {
+        "keys.log": "8f9201a8a3ed13f43b5caef1cde7eae73889bb3db4e376114d7ed56e09469b3a",
+        "messages.log": "3973617ada4b9813679deb82c6ce178cf84654e02b81474f5216e32d3ca16eae",
+        "state.log": "19bae82d51eb54066c02a5bf86ad9880f12b908b92fe7dbc5212052385da812a",
+        "trace-core.jsonl": "08955a4a366e657b007df19924ee8cf0a4e85198746554a8d2a55365f172c77f"
+      }
+    },
+    "b7f0b3bec04aa4003918c0d5a88299cd69ca50d5570c75d9937c4ac061213109": {
+      "bytes": 1224414,
+      "path": "streams/b7f0b3bec04aa4003918c0d5a88299cd69ca50d5570c75d9937c4ac061213109.zip",
+      "sha256": "1b54b2f68bcef4cd8d7369a210737b499814bafbb9f65e405c50aff777e42304",
+      "streams_sha256": {
+        "keys.log": "02c418e5ac98cae1ce2bfc8e66ec4769880c1089fd6d066ca520cafdce4bd531",
+        "messages.log": "dba73ebb5923748422c363aea847c692c5dc64504ee90b12878af09b64bd0661",
+        "state.log": "ad5c23cd8190a5306d15a2146c56be29f0c2cf7a9070496a74c3e4d36f73b3b1",
+        "trace-core.jsonl": "e3326faf62acbc8b38fb7b5296fc478cb2c2fa68c667b0ad593138423c47dd7b"
+      }
+    },
+    "bce51627c1fc253c10c8e1ded753f62625faaa57e92759363b355f37ada0fbe4": {
+      "bytes": 557197,
+      "path": "streams/bce51627c1fc253c10c8e1ded753f62625faaa57e92759363b355f37ada0fbe4.zip",
+      "sha256": "6e51a53baaeb750570c10f1f13053c8bb1f00c0e136e400d07d6fcc6aaa1a848",
+      "streams_sha256": {
+        "keys.log": "0ed77edae9f062a33992fd09526d89542eff65a7aaee70b6f64343a5c4faea00",
+        "messages.log": "48fa9b32660a4ae9f483a979b9cf29d7af20bb22cca1bc1bc10ec84ca3d0e919",
+        "state.log": "a851bbc98f9c2642f856c09572871fdaa2e2268c2025b5d19bd351e5fc7cb4fe",
+        "trace-core.jsonl": "16b7cc44e837d78e65c3855eb4b23154d96b7abf34752240cd943db2aacabf6c"
+      }
+    },
+    "c84b81f916b3a6407ff9af769918f5a37758fd477215de4d73feec6b498a6266": {
+      "bytes": 1991717,
+      "path": "streams/c84b81f916b3a6407ff9af769918f5a37758fd477215de4d73feec6b498a6266.zip",
+      "sha256": "cf0d0515e221f903a1939acb74bab11d8d395604e4a684325f3ee5ce478f9a3e",
+      "streams_sha256": {
+        "keys.log": "b8db157b859e2c72946cf04e22ddedfabeb92b4daaa6c559b032bb7ebc6df4a8",
+        "messages.log": "12e3be60bc4e1cf41a011a3421f71304e6f0c9dcb0855c6d2e805faf72394ab4",
+        "state.log": "cb1e83f1e25461700b2234f0e8627ca043712da638a37b22819a32b924f257f6",
+        "trace-core.jsonl": "e440a5f40492b0f02acb37ab4a9920297d92161bff25844933a37e0fa5515c35"
+      }
+    },
+    "cbf22339a6bb757bf3a667991391e6d54d7d886ed478fc75a7872245f88f61a7": {
+      "bytes": 1865161,
+      "path": "streams/cbf22339a6bb757bf3a667991391e6d54d7d886ed478fc75a7872245f88f61a7.zip",
+      "sha256": "996194d2a706a72d537fbb98ae0badbbac14fee4c2598ca28e0c96d0f2b45dca",
+      "streams_sha256": {
+        "keys.log": "571f7b47e0ca67ad0b544eb8bc12c9e29787d25b055bea8c68a5b72b2203aaab",
+        "messages.log": "bcd5ad104defcb396ac1e698946ef629b79f5629cc6de4e7eee40c4864932356",
+        "state.log": "ac9684c6384c620271281c517798a81d54c437f3a749012cd4c4cfc643ee8734",
+        "trace-core.jsonl": "e9864117dcaae00ec2f29122dc1187a4f3b000151803f02074fe14bc353b3564"
+      }
+    },
+    "cc473b1901bd560f01e0806d5b758fcdcd95423f82211d248c3edeb8dccd979b": {
+      "bytes": 1551068,
+      "path": "streams/cc473b1901bd560f01e0806d5b758fcdcd95423f82211d248c3edeb8dccd979b.zip",
+      "sha256": "b7eb1da8685f00af1a5d71faafb659e6a61e7f2e1a2d5141a552c871d9c66dce",
+      "streams_sha256": {
+        "keys.log": "d8e7161c9e5950d8d07be8885f2abf2e17cd333305a41a254d21e062324661d2",
+        "messages.log": "a8c79e5fa952b9346e07efe71988d68dec10dda2fbf99c16d9a783fab435353e",
+        "state.log": "6b44bf06687cfdb85a3a0a86ca0a346e9c1bc9227f1cb5264356f4818c03a625",
+        "trace-core.jsonl": "2ffb85f32e2c523c0913e4f882a3191b12d0432ed4c3da970dd17317ac8fc039"
+      }
+    },
+    "cd98452458d716b5f52eef6a8d929c6e4df4124fefc0b80173bfc50fdc126756": {
+      "bytes": 3138059,
+      "path": "streams/cd98452458d716b5f52eef6a8d929c6e4df4124fefc0b80173bfc50fdc126756.zip",
+      "sha256": "1421745a23ecc6e9885e79424bf779aaca5532a3336c819813527168298f33a1",
+      "streams_sha256": {
+        "keys.log": "b4a8b9a78a3bc208ad07b4235bf8e16725d761d65add0ddbf7fec18d653d9208",
+        "messages.log": "e5c6f9212a1e1ce562d04b9c808a668a098634cd4d00e15df548b632ec1a101d",
+        "state.log": "84fdb4a4f4dcd1dc620af09dd29351368a07b14eb62fbb64aa778fc62cf5f7a1",
+        "trace-core.jsonl": "b2b21559fdfffb015f95b2519a3cb5fc6bd61908f550feb1bed1e4ab797e87ed"
+      }
+    },
+    "d5d5d0b9d43f44b6c6cf6b7db7f593b89bc9de29395579867d8762d198ee754a": {
+      "bytes": 2984190,
+      "path": "streams/d5d5d0b9d43f44b6c6cf6b7db7f593b89bc9de29395579867d8762d198ee754a.zip",
+      "sha256": "baacc2982f5f349de2b9be901edc69fff199e400c3d167e28e26aa8ecbaf1cdb",
+      "streams_sha256": {
+        "keys.log": "1f8ce990067069c64a50799fb7030c7d2a973102d41219b69ddd4d808aa6296a",
+        "messages.log": "9b88d2d712c4ce011391b0f24aabc9be7912dfc48685a18fdb33d096485e525c",
+        "state.log": "264b159f9c7146a895f7ab03903e68a24a76ed951f6ab3dbccd9462192ea8517",
+        "trace-core.jsonl": "583a665486fd0f287ff5c94e61ce2efd367d7910f7ae7a6775a1ae0a506482c5"
+      }
+    },
+    "e034027c63b8711b7929a6ddf4bea20e82d00a57d3158dbfee1bf8ecc9a764ce": {
+      "bytes": 1379536,
+      "path": "streams/e034027c63b8711b7929a6ddf4bea20e82d00a57d3158dbfee1bf8ecc9a764ce.zip",
+      "sha256": "32ae4627fee7c722d5fe7e528d6d054e9da49dd57e5b12d606e094391fa68b0d",
+      "streams_sha256": {
+        "keys.log": "27bc3e73361427c3045109790e678ba89e94f48d62525c83fce686a5b82589ef",
+        "messages.log": "aeb2ca4b871769f7d0b4dc2d96f0bf83e60a8354b37e776e8c324708504a6607",
+        "state.log": "8956b85ff4d33e9db87b55c09b2e7d49a5e9f86b4dfaf6ea0a15b553ea2e9259",
+        "trace-core.jsonl": "a050aae445a6da13aeca9e480caab6e242e54f21c229fa417c4314fbe8b7af02"
+      }
+    },
+    "e3922ba33364cacb341ba99ce1874d88bd69a331bb63bd76455fa278031e8532": {
+      "bytes": 539950,
+      "path": "streams/e3922ba33364cacb341ba99ce1874d88bd69a331bb63bd76455fa278031e8532.zip",
+      "sha256": "fbb4f6e31eeac1950ee64c10c6617fd8f476eeb1b4d82a9f600a5093a525dcf2",
+      "streams_sha256": {
+        "keys.log": "13ee209ad5adbc30d773919a30c7002a3557a729cc917efbf51dd79cff5ae220",
+        "messages.log": "498a421a3ac28915c00696727034bc2b17d319ff8da7ca6ed8a0a953a165800f",
+        "state.log": "5e36b29633617b138e06421f43f279f8e112a7cedadbc15a64235d3a1d8d14b7",
+        "trace-core.jsonl": "7f08a50a9801b452636d8de68fb5face2d3365348f3424942bf409fe2aebe1e4"
+      }
+    },
+    "eec3ed015037f065b6df19f8761ac4783f45875e63b11f7a198cdd4a85a5af4c": {
+      "bytes": 910390,
+      "path": "streams/eec3ed015037f065b6df19f8761ac4783f45875e63b11f7a198cdd4a85a5af4c.zip",
+      "sha256": "dbc3b911806d014ac136bdfc7788c81ec2767e14cbadff9cc7097e2456f3dce0",
+      "streams_sha256": {
+        "keys.log": "a17d8359faab05e66327a0cba828d34a2788f4d52fde2c58c95c09d142b45746",
+        "messages.log": "0d6372db52c375c16cfdaeb945a41a7c23e5df5ed210940d8706e42e30cb704e",
+        "state.log": "8958e84c9ed0d9911d8d1e4fed1973717ee4f378c1b3563182970355f81068f0",
+        "trace-core.jsonl": "2970a71cb0e82f95044762d58be2c8a9f0d5dba137801b38ac64945904a6cf9e"
+      }
+    },
+    "f09212dfa516a82c64bb1cb224edf5f555c8af721138ad07a8b53cc2e64a220a": {
+      "bytes": 2920823,
+      "path": "streams/f09212dfa516a82c64bb1cb224edf5f555c8af721138ad07a8b53cc2e64a220a.zip",
+      "sha256": "4d5362b4a6c4488d87f9f5873485e7c52060ce9ad8f1a70ed17bfe3185abbd27",
+      "streams_sha256": {
+        "keys.log": "a4d72c781275e1699c2274668aafc612cac816311ce29fab0f1c761de071bfd0",
+        "messages.log": "118bde53dcd255b1f172194ea95948ddbc73751ce855d68ccc9a4222bd4e8aab",
+        "state.log": "1d31085e52d24b398bf7ba9d632078d4fec9f28d070abb21419c75fe1004d111",
+        "trace-core.jsonl": "aef3bf60091faf72c7fedf3fd68605414e4fb7512ee877f46dfe332311ce2dbc"
+      }
+    },
+    "f287de09dd59afd043371da79910e19bf043f91602fbeb66cad5037599344c8b": {
+      "bytes": 253903,
+      "path": "streams/f287de09dd59afd043371da79910e19bf043f91602fbeb66cad5037599344c8b.zip",
+      "sha256": "06aca14ddfa1ace4cbc590d9e8e4b77018b596fe319b07ba99d6917fa25b49bf",
+      "streams_sha256": {
+        "keys.log": "d417f08b10fd81aeed1fd4a05112393ac1b4a7bc277173556ea99d31599d376e",
+        "messages.log": "fc48f2e30a560b8817b3fe032ef9cc489f9ecf1b13432ee4d8914737ef3de14f",
+        "state.log": "2eff6653fbb8051bf222ca633a0cbbc06b00ec8141e75297153d554e1db19ab2",
+        "trace-core.jsonl": "b27cb90fafa5a5ac39b5c9fcb20587a4917b76f6e3ee86a74c115e02769e636f"
+      }
+    },
+    "f2aaae72b48cbef2403ea1bf70d59ab62aadedb8c9dead6a00175c2f5cb0a247": {
+      "bytes": 2080251,
+      "path": "streams/f2aaae72b48cbef2403ea1bf70d59ab62aadedb8c9dead6a00175c2f5cb0a247.zip",
+      "sha256": "0d5b12f232b1fac2c66719a5e7abfc03c9cff77705be81dfe2fc4e19eccf9022",
+      "streams_sha256": {
+        "keys.log": "683d81a7e978b12eb59dfc587946c79a0130aac13a4783db9003a4c67c7816c1",
+        "messages.log": "5b1d845321efba58d001fbe0b6dcec2590ece537f703c264dc20a3b23c064b5d",
+        "state.log": "36192d7fd067111890a7402cb7540c403f11a1c03bc2e35d08123f04dfe70042",
+        "trace-core.jsonl": "6f0e73cbc41228e3552189812c7cf7299f700ac8a731ce0643c22bb36eaedfab"
+      }
+    },
+    "f43b828fe34b8f0c25a409b2519e3707164c8927c7eeffc9c9fde293e5a80124": {
+      "bytes": 1377963,
+      "path": "streams/f43b828fe34b8f0c25a409b2519e3707164c8927c7eeffc9c9fde293e5a80124.zip",
+      "sha256": "6191474d0c2a0b2847ca9680fb39da9fc26cc723efb2dc80e2346976a0e3f34a",
+      "streams_sha256": {
+        "keys.log": "e36f4e621f4cc8a584fa9a2578520cbb5ce38a37f8aaec889d3b6504047b9cab",
+        "messages.log": "4100501cf4009b1f1d06a821d2319a5e0b988e886e010e2c7a4da59f3e05bc81",
+        "state.log": "16ad50d5ba8f66967c99afd959401dc3162d73aa138f3da975eee7d68f91f621",
+        "trace-core.jsonl": "70e7a1d759f659150b59aeca787e953a731730677ae7f85418bacff15c5ab9c9"
+      }
+    },
+    "f540dfca75b7e51e9e7d23242503c0871c7c37ff5771096080419b0f28153196": {
+      "bytes": 1764918,
+      "path": "streams/f540dfca75b7e51e9e7d23242503c0871c7c37ff5771096080419b0f28153196.zip",
+      "sha256": "6c17436537411a69cf8b1892db7c0afe7595426a54f22435ca2490c30e7d3d0e",
+      "streams_sha256": {
+        "keys.log": "be2a0b7c19126049b22645475238728fbf86bc84e65f2dd265cf462d982a4c0c",
+        "messages.log": "f846a3f11f66b4e94669d12b9c1ccba7b2de66a3085f6954b519921479fbce2f",
+        "state.log": "7b49d5fc4b24f61aa540e4d5413db042eb3d62138154e27d76a92b86d4e51676",
+        "trace-core.jsonl": "768cf82d27e23b304fb044d2f6235b8eae4e2db9f2901d607c1585075f10ac7b"
+      }
+    },
+    "fc5edea0eb69f23140dc54270b2c280bca21bcf00ac50afc3c00f92236c77136": {
+      "bytes": 2203829,
+      "path": "streams/fc5edea0eb69f23140dc54270b2c280bca21bcf00ac50afc3c00f92236c77136.zip",
+      "sha256": "eea365c90f321638a9f5d2dd432cfa4edfe191dc22f1289bc07e3bb92e9f8738",
+      "streams_sha256": {
+        "keys.log": "1b3e4ecfbd48b53cb1c5c38909de3474f95572c57dcf6d3b7d2ed504f7c03fa6",
+        "messages.log": "70acecbbaa36c37f99c4507eea3476dd6227c4d8a9446ce78653e00f8eaa5c44",
+        "state.log": "e8fbd2bde29b030e4392265a8d794824fbc9588814db7a9f0da81e019153afef",
+        "trace-core.jsonl": "61c0a8cbd3bc8151e08c75dbae612e5444d7b45ed9d7ac3f7ed5900b7b75c65a"
+      }
+    }
+  },
+  "retained_source_qualified_death_records": [
+    "D-04b4287cf61460671cdfab21257bc9fd529cd527bffd8b9b93bd6513f3d3aeaa",
+    "D-13cd52e8f4b1762114a98a3c2d31e1c24b969adaac9833752d05e75dd94d83df",
+    "D-1c770144e34fb4444d5591e899e38ce7e97fcee8884bbff25b42a5d3b475d24a",
+    "D-4989529c3003e8072b815f9c21fb9c6db8f4b9f23292011f7eea342a8d3c45eb",
+    "D-768af75b51b219f9f7474ef65e31a9b6b63b1d3559c255cc8537598d846c829a",
+    "D-77c9b934e3953ff89e932b3f3930c932aa519fc4feebda141eb261e459711b72",
+    "D-90ba36f95c58606a52ef90de767fa9180137d3b5b9b5b80133e89e9202a61b2a",
+    "D-931243a2d75b6a83ac62e6e97274bfd941cc1defe59ddf8274012e450fd49b7c",
+    "D-93cb4a65e83c2e4d1621ba85cbde6cdddf6d75de2c9a066ceb1c1e95c43b541e",
+    "D-9578300bf8d5c573ce93416c8a0fbf7e35893e0b877acd94745071ffd98743d1",
+    "D-97512514298b2fb40f3ae10eb9728f2fe85ffe2d5eab6d0de38978036a94a94f",
+    "D-98bd7dc4f45defde70b12aeb5be17e4121678924814bbe544eee6caf6f1b88c0",
+    "D-b442f698797d568fd386bf61edea8cb45b95d21fbe0f605251d3a7b76b90275e",
+    "D-bc1b22fc1490a595039e8df87926d78d7b6f752d38ca588737e242f79228eb06",
+    "D-ca05d8af700ac4976a4c7823327ff0c3f401e7dc60ae0fe2e25995ec067a57fe",
+    "D-d94eeb911c8d6ae0cc2a50cce142fa95cab7a7871f93b8d7eb6027dd18ef40b4",
+    "D-e25b67cbdbb9bd1abd70c317e6f78180e68074b0805b040f161f52a9d082aa1e",
+    "D-ed6dcba433caa741a1162470a888093e62b4201002228cb87b7b6967f9259d0f"
+  ],
+  "runs": [
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-0",
+      "config_sha256": "231f870307e396b2fb12cc38401765df45bfa1ba3082011c4f4cda3aedcd7a14",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "253ff3a2dceddcb32c9c2e8501788cf18654a58a673d0a2a2f488f6b2e732d2d",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-0-warrior-0",
+      "receipt_path": "runs/baseline/full-0-warrior-0",
+      "source_build": "baseline",
+      "summary_sha256": "426b3dcfe0878ac077340f8288cb5727de107825c432b635e07e35575b3471f7"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-1",
+      "config_sha256": "0fd7a77da6d5e2327dd76f18775c1b9323b6a47cb77d4e15235f2ba0fd77d902",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "b56633cb5f83d65f73e2b11d0606ba4e936536c06b566089a8cf33c10f3e4c28",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-0-warrior-1",
+      "receipt_path": "runs/baseline/full-0-warrior-1",
+      "source_build": "baseline",
+      "summary_sha256": "6a5409129c7998f96521437efddb9b725c3e79d716fb2c987ebfd3aa2aa43c30"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-2",
+      "config_sha256": "6731d600fc10e40455f170246311da146f5ee383e580a6a19cb1f44e59062287",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "15754819c1d20a7ed02f92cbff047e4331288706e9fce3df56b223b2f9152a15",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-0-warrior-2",
+      "receipt_path": "runs/baseline/full-0-warrior-2",
+      "source_build": "baseline",
+      "summary_sha256": "7e61df676078ff512d325cef066a65855566b598df31dfefdfe48a0de22d8d6e"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-3",
+      "config_sha256": "5b8267eadd3d4aff150cd10f49feabdeb93594324cb65ce93d34ab2519d94290",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "cbf22339a6bb757bf3a667991391e6d54d7d886ed478fc75a7872245f88f61a7",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-0-warrior-3",
+      "receipt_path": "runs/baseline/full-0-warrior-3",
+      "source_build": "baseline",
+      "summary_sha256": "e53c03e711f557a1addab3625e366a1d8e3298ddffcadabbe2b919c7e53eebe8"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-4",
+      "config_sha256": "09651257a897865810e25634d9eb8578876461f94250791ca9c8effaa296c0d5",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "f09212dfa516a82c64bb1cb224edf5f555c8af721138ad07a8b53cc2e64a220a",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-0-warrior-4",
+      "receipt_path": "runs/baseline/full-0-warrior-4",
+      "source_build": "baseline",
+      "summary_sha256": "1400ef8772037e140638758c011ba1acbf9a45ee72906a3455c3eab67f9ee02a"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": "D-4989529c3003e8072b815f9c21fb9c6db8f4b9f23292011f7eea342a8d3c45eb",
+      "case": "full-1-mage-0",
+      "config_sha256": "577b15cd0ba535936c2555665beb511124b938bac6517a7285bd3a89dcef43ff",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "0a3cf444c17a69b8dc187460207c9f15996bf460d95598a501b67993bb213654",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-1-mage-0",
+      "receipt_path": "runs/baseline/full-1-mage-0",
+      "source_build": "baseline",
+      "summary_sha256": "0efd81835c2fd0bd32f0bf12a62c79e5d897f3e1e4753f04a617068e4cac00f7"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-1-mage-1",
+      "config_sha256": "2027c9f199335f00c48512508204abe0004c4cbd527be9c80078fd0c774de4c9",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "66f60d9e2f71b4c6c5d6e3a4abb012f7fccff1604e5d68be1a6afe7cc22f34fd",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-1-mage-1",
+      "receipt_path": "runs/baseline/full-1-mage-1",
+      "source_build": "baseline",
+      "summary_sha256": "2ea38b25f2780ac74b7545e4a1d43369632b7e63f94d9152b434de6cfcfaf6fd"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-1-mage-2",
+      "config_sha256": "a7cfc75744d9a0478fcd85d6abbbb0dddf4e743519741e1c201fff3d3cf65c99",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "6e1419eba8dbcc41b0487f13f7bedfaa758dbdae5ec88a76776d1a0b7db7f6b7",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-1-mage-2",
+      "receipt_path": "runs/baseline/full-1-mage-2",
+      "source_build": "baseline",
+      "summary_sha256": "2bc22c8b14b80018c836828853d9144599639205f37b0c836697581bd4fa9892"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-1-mage-3",
+      "config_sha256": "eefff5b6966825b13113d19f26a39299c24b140cd0f38a0f009a9f1d6d5dc9ff",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "9182d423386d24cbb99dd5edb85bf7f6611a86c3ee762597e58a79a43dff24f4",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-1-mage-3",
+      "receipt_path": "runs/baseline/full-1-mage-3",
+      "source_build": "baseline",
+      "summary_sha256": "41ed73e7860d92bb8265727b6022632fc92e1af8dab591d589b7bc89c3fef6c6"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-1-mage-4",
+      "config_sha256": "cda0e8d39f410261e95d2e3c7687ce6d00f8db0d0e2b70fc3a8d720b07d3b046",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "eec3ed015037f065b6df19f8761ac4783f45875e63b11f7a198cdd4a85a5af4c",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-1-mage-4",
+      "receipt_path": "runs/baseline/full-1-mage-4",
+      "source_build": "baseline",
+      "summary_sha256": "f1e023d1f65c0607b66023e26e2cf9c2da7768212f05f21d76c259b7a02c0c8a"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": "D-90ba36f95c58606a52ef90de767fa9180137d3b5b9b5b80133e89e9202a61b2a",
+      "case": "full-2-druid-0",
+      "config_sha256": "5be6642ef0d67ea58863bad493db58245132e83f681ff1ba031ae92a17d3180e",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "2ceb64c781f3ba57a2bfb963e9d19510ca0201dade4aea07680a498625c30d68",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-2-druid-0",
+      "receipt_path": "runs/baseline/full-2-druid-0",
+      "source_build": "baseline",
+      "summary_sha256": "2ab18f39bb4f45cb4e6b3cef9568bf298017905642e222978a2ec51a16566f9a"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": "D-e25b67cbdbb9bd1abd70c317e6f78180e68074b0805b040f161f52a9d082aa1e",
+      "case": "full-2-druid-1",
+      "config_sha256": "4da3866b64a862db07365224de12951ce940d1f233f4bf2e72ede974f452ef0a",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "242867eae0acc02235b908636869d18b9fe85ec102a5c4e9b9651d9d4ed79ba5",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-2-druid-1",
+      "receipt_path": "runs/baseline/full-2-druid-1",
+      "source_build": "baseline",
+      "summary_sha256": "adbe494f04c1dcb819b6662dd0b73b6a82a1606c25d403660424fd2b73672881"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-2-druid-2",
+      "config_sha256": "e1c71958f0f72f30256db65992ad380395a7801ebb9d984c3e9317c2766ff6ab",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "92b9c099bf2a2e18dcf6d603981205491fb707937bf04f2bd49628ca05e30bf1",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-2-druid-2",
+      "receipt_path": "runs/baseline/full-2-druid-2",
+      "source_build": "baseline",
+      "summary_sha256": "c6fc55cded294d8edee9bf8574a791bfa0c78bd29cfd7acbb9a1c527c5a17ac5"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-2-druid-3",
+      "config_sha256": "2b2e038b41710cc880a8b68f32ce1d5f24a18d7935e70b1ee26584eb6c4e0002",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "92796d982211762150127ebb1b934a86982e9f58c414511ac40997676129200a",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-2-druid-3",
+      "receipt_path": "runs/baseline/full-2-druid-3",
+      "source_build": "baseline",
+      "summary_sha256": "5bc600eae33f140169a741d3d9a1b4a6a7900fd0a89e7dd83d31138b57240042"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": "D-bc1b22fc1490a595039e8df87926d78d7b6f752d38ca588737e242f79228eb06",
+      "case": "full-2-druid-4",
+      "config_sha256": "4124da1bc12eede993e3434ce774705c586206cf22bd956c4a5edb8e60b18cd3",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "e3922ba33364cacb341ba99ce1874d88bd69a331bb63bd76455fa278031e8532",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-2-druid-4",
+      "receipt_path": "runs/baseline/full-2-druid-4",
+      "source_build": "baseline",
+      "summary_sha256": "2eaa9539d6596d746e10f84f97f3d7de284f46af5bec082ac962237e2c09f30d"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-3-priest-0",
+      "config_sha256": "4a2da597eb1ac51f5c9abf83d061bcca83371eac7d41d28ad7fcdc31e5642c12",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "9ef7921964faeb1bd1cf30682adab00317b190914cd81fa5b2cd7e17ce6601d3",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-3-priest-0",
+      "receipt_path": "runs/baseline/full-3-priest-0",
+      "source_build": "baseline",
+      "summary_sha256": "e3f8a25f0ffaeeb43117b5c4806d474ed3410430cd517aeda28eaed247bc08fa"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": "D-97512514298b2fb40f3ae10eb9728f2fe85ffe2d5eab6d0de38978036a94a94f",
+      "case": "full-3-priest-1",
+      "config_sha256": "33bdf630998ee43b24eb34b6d1559dfc58a0e063fbed6f6990ab2fc59b5d13d2",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "4b38f8e3be52b1dcb18da8168d48d9bfdfdb70d8bc8d316e43c56cf48ed5f0ba",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-3-priest-1",
+      "receipt_path": "runs/baseline/full-3-priest-1",
+      "source_build": "baseline",
+      "summary_sha256": "7a04a0ff1653894b36f36978406856fc5aad1175ff01562ac8b8101d6f4d857d"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-3-priest-2",
+      "config_sha256": "88beb408f0201d966b5ddade7880725de9ee3ce188816728347830dec4c72736",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "e034027c63b8711b7929a6ddf4bea20e82d00a57d3158dbfee1bf8ecc9a764ce",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-3-priest-2",
+      "receipt_path": "runs/baseline/full-3-priest-2",
+      "source_build": "baseline",
+      "summary_sha256": "f9e625a6c80543088279938163c6b18052c82870c27803a54c134c0288db68f3"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-3-priest-3",
+      "config_sha256": "9d2fce00d6c16fca32b68191884912f93b8a80fad47e525354dbb63627ec2c74",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "26f1405481475256591cbb20d793ab69a3358d0b5597b598caf051fae0c8f27a",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-3-priest-3",
+      "receipt_path": "runs/baseline/full-3-priest-3",
+      "source_build": "baseline",
+      "summary_sha256": "0869c98c03ff4bd465fd65b4b4a4eeb55a2dfc56cbb718714124f2248cc7f1a3"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-3-priest-4",
+      "config_sha256": "ee58a3ea2079babc26a89280f9f2481d19a13be6938799995da35f097699b833",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "54e02b0b6c10bc06c5e1771e948d03e2872c8ccac228159196122676a142eb33",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-3-priest-4",
+      "receipt_path": "runs/baseline/full-3-priest-4",
+      "source_build": "baseline",
+      "summary_sha256": "b9295bca713b0bcbba2e51c99ede3575c7c4ced1f60547dd1759c3e5bf319bf7"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": "D-ed6dcba433caa741a1162470a888093e62b4201002228cb87b7b6967f9259d0f",
+      "case": "full-4-necro-0",
+      "config_sha256": "d75e63713a5170aa04a7f0555354582467a0512dc5e41be03a82b3002aa464cd",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "f287de09dd59afd043371da79910e19bf043f91602fbeb66cad5037599344c8b",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-4-necro-0",
+      "receipt_path": "runs/baseline/full-4-necro-0",
+      "source_build": "baseline",
+      "summary_sha256": "300db741055f57f95b04de6c1dc6fac818287497fa8e980b889a89df4eb29e3a"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-4-necro-1",
+      "config_sha256": "ea60e572447dba30a6a85a12a678c57691c7b35b22b0f56c402ee0bbccdf6121",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "bce51627c1fc253c10c8e1ded753f62625faaa57e92759363b355f37ada0fbe4",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-4-necro-1",
+      "receipt_path": "runs/baseline/full-4-necro-1",
+      "source_build": "baseline",
+      "summary_sha256": "a7057c83d46e9e928e0bcf1f925ea821f91ef183be207237ca1c16f4afa24363"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": "D-931243a2d75b6a83ac62e6e97274bfd941cc1defe59ddf8274012e450fd49b7c",
+      "case": "full-4-necro-2",
+      "config_sha256": "1e77f9ff28212956457b5215bc7d4132f5712b8180b74d8af6151c438811d480",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "4b0727f28b0c0aa0e1133accb0458d23042a058eefb7918f86e34fd6ecce3934",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-4-necro-2",
+      "receipt_path": "runs/baseline/full-4-necro-2",
+      "source_build": "baseline",
+      "summary_sha256": "d1af7dc700b1e1e1aee540ecd77b49185d17e8cf68281889fa0564c92589f33c"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-4-necro-3",
+      "config_sha256": "7422eb511497fef21d5608e50465e4a0db33981bb2f330312b5c142e6db97826",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "cc473b1901bd560f01e0806d5b758fcdcd95423f82211d248c3edeb8dccd979b",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-4-necro-3",
+      "receipt_path": "runs/baseline/full-4-necro-3",
+      "source_build": "baseline",
+      "summary_sha256": "8d6f0b0556207d570ac27bb2971bc8ff2f906f63c16d89d66d5624fbec50f8db"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": "D-93cb4a65e83c2e4d1621ba85cbde6cdddf6d75de2c9a066ceb1c1e95c43b541e",
+      "case": "full-4-necro-4",
+      "config_sha256": "7785b6e99c2ca7f7c05113c39207628adfd38a6947efc34e304ab19353e29059",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "6e2fe658ad9df11b832c2b17e71ed7de7d4da21a8f400e92274885ca6c45d6e9",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-4-necro-4",
+      "receipt_path": "runs/baseline/full-4-necro-4",
+      "source_build": "baseline",
+      "summary_sha256": "b66a9c48a94ba8f2a6b66b70278eecdfc1197aa5b59fb1c226938ec8d82aaae0"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-0",
+      "config_sha256": "8d629ad1727c1cd93639880cfbb7f0b50d002edda7e56836887a7d007a2b3897",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "a53797af8654008fe9beb0fd1464099c1826cbcc8bd582be6db0d318e13b1a70",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-5-paladin-0",
+      "receipt_path": "runs/baseline/full-5-paladin-0",
+      "source_build": "baseline",
+      "summary_sha256": "67e74c47bbe9144a2c7d76bc39286668c76929a710f1f4d4cc230a881ea281b8"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-1",
+      "config_sha256": "837b40524ac152806891f9022d8299b30d48085e5967f2219232329d5bc31700",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "794838abccfaf059a9fd6f25eabdd88f523e7c57d684da157f49af9784c5e29f",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-5-paladin-1",
+      "receipt_path": "runs/baseline/full-5-paladin-1",
+      "source_build": "baseline",
+      "summary_sha256": "8f77abd0ad94bf35233ea770681e8407fc8650ab2cb04f7924e4e95cd6201eed"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-2",
+      "config_sha256": "b90e9382af6c4af5e8ef0fdfcd6f730831709691e41efb3f77ff05b91cf34834",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "9520216709cda4fb655e2b344d1146071723cbec4ae1d73d3b07c2403db0299f",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-5-paladin-2",
+      "receipt_path": "runs/baseline/full-5-paladin-2",
+      "source_build": "baseline",
+      "summary_sha256": "ace1d062e7008c12ee781e5fa43153f1296571f2f28cf11f7277cf6a4d54d37f"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-3",
+      "config_sha256": "32b065d8252af9291bdd9ee9cec8c931aabff67de0721224ed1b4fde90fa5a9f",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "0b03140ebf35fdb2d2f0a8292f2a8f4920c120ca585de9e72b9073dd9bcc7a30",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-5-paladin-3",
+      "receipt_path": "runs/baseline/full-5-paladin-3",
+      "source_build": "baseline",
+      "summary_sha256": "255bef1007b586c48ade2647098a1c7b8169943cfcb471cad7eb54bf527e11f1"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-4",
+      "config_sha256": "a09a9f6bdee9f2078646463f43a7f8dc3458223e9236ce5a84962639e3ac021c",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "f43b828fe34b8f0c25a409b2519e3707164c8927c7eeffc9c9fde293e5a80124",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-5-paladin-4",
+      "receipt_path": "runs/baseline/full-5-paladin-4",
+      "source_build": "baseline",
+      "summary_sha256": "59a254ae4ab60755c030bb769738873a906ad445ebf3e12c34c96a1be0f4026e"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-0",
+      "config_sha256": "5fd5119cff8359e5eaaa0f23d35d5da69f9b0630113337deba7687f52c6fdb83",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "1309684d6ded292cd9334968a52553e3c9a29bcfc8c2e5bc93367b01a78ff000",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-6-rogue-0",
+      "receipt_path": "runs/baseline/full-6-rogue-0",
+      "source_build": "baseline",
+      "summary_sha256": "95a3373f781ae527478db0ad853e05d2fdee514d85565bdc0f5f344378e51df1"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-1",
+      "config_sha256": "c2ecba9fcc8e82ee72efc48e8c44c1a5dbf36235904081853c6bfa11e956a27c",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "d5d5d0b9d43f44b6c6cf6b7db7f593b89bc9de29395579867d8762d198ee754a",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-6-rogue-1",
+      "receipt_path": "runs/baseline/full-6-rogue-1",
+      "source_build": "baseline",
+      "summary_sha256": "98c8ca81eb55ef222f4781f2da76abb1e3aef213159bf75c9614bede5235546a"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-2",
+      "config_sha256": "d3e1ba20f4acac4bca4940744027119036f34c094947294a08a16be8efb54fc4",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "a3f184a87566f3c9ee306520c3e1866420d43c46cba4957bcfbf09f543ab20ff",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-6-rogue-2",
+      "receipt_path": "runs/baseline/full-6-rogue-2",
+      "source_build": "baseline",
+      "summary_sha256": "e0dd84ff0e6336d46654d5781d0e14292d326af70ea3c8d3a29efecc03f4e815"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-3",
+      "config_sha256": "4ab84fa84bc44d44f0544423c15f116b96f6334599142c7af48b5fc828fbe8f1",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "8b2fc4cec8b9a3ff0411484b4ef5276063a3629c5c8fc5e2c4fb63bfec22991d",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-6-rogue-3",
+      "receipt_path": "runs/baseline/full-6-rogue-3",
+      "source_build": "baseline",
+      "summary_sha256": "82c2862d499040fa2a2557a037df5ffc18d0f23336050881eecfabcfbecf2f49"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-4",
+      "config_sha256": "c39170562e0a618128d972988ff79ab2570d2f1dddfd36b3f3314a91f65610bc",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "cd98452458d716b5f52eef6a8d929c6e4df4124fefc0b80173bfc50fdc126756",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-6-rogue-4",
+      "receipt_path": "runs/baseline/full-6-rogue-4",
+      "source_build": "baseline",
+      "summary_sha256": "6eaa67e8c13f529865b1dba5cef7f55b44138c5d6ce5f5adcb94ce11b153a487"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-7-ranger-0",
+      "config_sha256": "47d3c46c06becfa03dd5fe0e0025b953d37948981bb468495c6897389d1245cf",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "fc5edea0eb69f23140dc54270b2c280bca21bcf00ac50afc3c00f92236c77136",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-7-ranger-0",
+      "receipt_path": "runs/baseline/full-7-ranger-0",
+      "source_build": "baseline",
+      "summary_sha256": "d821e2ad38964c6cd40e91929b61c508c434b7f3fefe020aaabe124aea775aa5"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": "D-ca05d8af700ac4976a4c7823327ff0c3f401e7dc60ae0fe2e25995ec067a57fe",
+      "case": "full-7-ranger-1",
+      "config_sha256": "be136253a9b8bfc30a2941b3184898210d7312add0beeaccd43a2760e9fdeacd",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "b7f0b3bec04aa4003918c0d5a88299cd69ca50d5570c75d9937c4ac061213109",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-7-ranger-1",
+      "receipt_path": "runs/baseline/full-7-ranger-1",
+      "source_build": "baseline",
+      "summary_sha256": "59902a44a4ac73735a09950748cb8a8ca48a2f9a5688c3b4ee6f8fda5066b2d5"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-7-ranger-2",
+      "config_sha256": "df9adf57f453c73b3a9635aac6ad11cfb694925d74bee74f5e75699555bf8b99",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "44fadab1b1ee94d22be760801f21e94d856b6db2b0b5ef531fae09f7423f0f10",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-7-ranger-2",
+      "receipt_path": "runs/baseline/full-7-ranger-2",
+      "source_build": "baseline",
+      "summary_sha256": "918e9ab411a4b3b7bdda5ff81f3ea30c41bcef08ceb3a3bd144ba01e7ab30b7b"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-7-ranger-3",
+      "config_sha256": "d6b00c46557a1dd01f7a7fc15e94bc28f09371bdd5748db5d95e32e16e431634",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "541d40b2a2946b7ee312e377b29c59c9b7a66f8937ce3aa4657b1303742475d8",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-7-ranger-3",
+      "receipt_path": "runs/baseline/full-7-ranger-3",
+      "source_build": "baseline",
+      "summary_sha256": "0422c5e127e42ae48211526716437f804a1cebdd599bdddc73fc6384c843a15d"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-7-ranger-4",
+      "config_sha256": "27c1a07e833c1a63340fd0df78be0af1fa97349c0ec26f0540a5b61a714dd296",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "c84b81f916b3a6407ff9af769918f5a37758fd477215de4d73feec6b498a6266",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-7-ranger-4",
+      "receipt_path": "runs/baseline/full-7-ranger-4",
+      "source_build": "baseline",
+      "summary_sha256": "0da4561f95d4d2ec28f10ae9f1b41ec36cab16aa06004639b62b95c157dd3101"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-0",
+      "config_sha256": "3c82ad04c2837de062f0cf81d12798cf44f292c4f973dd212c954debd72e952a",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "f2aaae72b48cbef2403ea1bf70d59ab62aadedb8c9dead6a00175c2f5cb0a247",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-8-blackguard-0",
+      "receipt_path": "runs/baseline/full-8-blackguard-0",
+      "source_build": "baseline",
+      "summary_sha256": "6df16cd9fdb92cb4cb0092fa7a68b54011da215f1b9baacf5069654355d833ad"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-1",
+      "config_sha256": "80a95bc4392137c7f12878ac2b0059a0fd9202db11785279174587e62ec5daa5",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "f540dfca75b7e51e9e7d23242503c0871c7c37ff5771096080419b0f28153196",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-8-blackguard-1",
+      "receipt_path": "runs/baseline/full-8-blackguard-1",
+      "source_build": "baseline",
+      "summary_sha256": "c86ac7e2bd3f4fe3e03565bafa9f0645c460e94edf4e5389c46ee1a99281698f"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-2",
+      "config_sha256": "e8b087dd0f138e9d4018e7cddec82d4e8579cdd0c85e01e1e01b625c17266746",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "833e83defddfa38e47750b31771f3f476f7740b2e9c165f0c8ac0a2ab2e67e20",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-8-blackguard-2",
+      "receipt_path": "runs/baseline/full-8-blackguard-2",
+      "source_build": "baseline",
+      "summary_sha256": "d06eb67bb857c66c6bdac6592ecb30e75ee941f496b125cf73336ef5d8e57ff3"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-3",
+      "config_sha256": "c260df457d72e898a84fd071a3731208814dcd14a4c0f0c9278e2d53c4629a03",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "468cfd6c86a846118f8d83ed0b043de7ef6568b5012a34dc310a9e2100c46aa6",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-8-blackguard-3",
+      "receipt_path": "runs/baseline/full-8-blackguard-3",
+      "source_build": "baseline",
+      "summary_sha256": "722823821a507a3da2a90bca62e4d13f6628021b8a1653233e7dae6383c6f11c"
+    },
+    {
+      "arm": "baseline",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-4",
+      "config_sha256": "bc26256465df38f7c85ae75bbd0ef27b45fb9b1531ba9adbef4b92e6ca49472f",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/baseline/params-core.json",
+      "payload": "483ab546128a944dd0364d81788a25511e6b0cc4dbf0b781cd51ffe042f73f46",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-8-blackguard-4",
+      "receipt_path": "runs/baseline/full-8-blackguard-4",
+      "source_build": "baseline",
+      "summary_sha256": "99de564bebf2271b699df409e5af6903b71c0de2f77994414ead29a64a8ee659"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-0",
+      "config_sha256": "bd67d005a85f13a5e52806c43ea50dda2f057aee5f605e9e8fab10c1bb5e0140",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "253ff3a2dceddcb32c9c2e8501788cf18654a58a673d0a2a2f488f6b2e732d2d",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-0-warrior-0",
+      "receipt_path": "runs/candidate/full-0-warrior-0",
+      "source_build": "candidate",
+      "summary_sha256": "621dd671e0d877d8768d525bc7e629bbdf8ade45fb28aa65fa73309e9980c028"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-1",
+      "config_sha256": "502968bf1959f48754a1207c02432ec9544341d3c685eac7d850f9787e5a6c73",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "b56633cb5f83d65f73e2b11d0606ba4e936536c06b566089a8cf33c10f3e4c28",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-0-warrior-1",
+      "receipt_path": "runs/candidate/full-0-warrior-1",
+      "source_build": "candidate",
+      "summary_sha256": "885968a01fc59853e2f800152ce1bcc80df40e36d96aa4fbc4e2590d131c1417"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-2",
+      "config_sha256": "9f54789afe8183ac08a25c0661f995e80a894b6a240d296a79e7cbba2374fe7b",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "15754819c1d20a7ed02f92cbff047e4331288706e9fce3df56b223b2f9152a15",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-0-warrior-2",
+      "receipt_path": "runs/candidate/full-0-warrior-2",
+      "source_build": "candidate",
+      "summary_sha256": "9455f9437d384b26cdd1b82fd00060f4079754f1f53e9e1d4e249482d05e58c1"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-3",
+      "config_sha256": "422355f89aab0473def11cfdf510871e3567b0d34260799913886f0bc678a317",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "cbf22339a6bb757bf3a667991391e6d54d7d886ed478fc75a7872245f88f61a7",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-0-warrior-3",
+      "receipt_path": "runs/candidate/full-0-warrior-3",
+      "source_build": "candidate",
+      "summary_sha256": "13cdf6a97fdacf6b2031dcea1a3e9a8edac191a21d475ccce92aa8c8ba6ebc75"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-0-warrior-4",
+      "config_sha256": "2b0086c9fa50d18c312926aef58d559aff382086e54ec70dc2587acd7372c43e",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "f09212dfa516a82c64bb1cb224edf5f555c8af721138ad07a8b53cc2e64a220a",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-0-warrior-4",
+      "receipt_path": "runs/candidate/full-0-warrior-4",
+      "source_build": "candidate",
+      "summary_sha256": "817f246d3a8eb7f5cae17485973d2284d927675dc56ccbebcf2690ff0c5f004a"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": "D-04b4287cf61460671cdfab21257bc9fd529cd527bffd8b9b93bd6513f3d3aeaa",
+      "case": "full-1-mage-0",
+      "config_sha256": "afe2a70a65e518eb04dc81e179b64a9c2cff17a2eee8203f32bb065f9ef68f70",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "0a3cf444c17a69b8dc187460207c9f15996bf460d95598a501b67993bb213654",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-1-mage-0",
+      "receipt_path": "runs/candidate/full-1-mage-0",
+      "source_build": "candidate",
+      "summary_sha256": "fea72e6762487f54ce361e2b50a64a3bb174fb1787270c27cc9de1f7398fd786"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-1-mage-1",
+      "config_sha256": "7d16a4a6916df72eb7747cc68616059b9303518aa8d1753cfeba0681c2ab27e9",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "66f60d9e2f71b4c6c5d6e3a4abb012f7fccff1604e5d68be1a6afe7cc22f34fd",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-1-mage-1",
+      "receipt_path": "runs/candidate/full-1-mage-1",
+      "source_build": "candidate",
+      "summary_sha256": "0b1038f4dc89ecb971e8145b13856ceb71ac60dd83c45829aed4c2bb56d55008"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-1-mage-2",
+      "config_sha256": "3fcb1777b7f8491e5a9659c03642143f73d319b4934038ea5308643d320f7e80",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "6e1419eba8dbcc41b0487f13f7bedfaa758dbdae5ec88a76776d1a0b7db7f6b7",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-1-mage-2",
+      "receipt_path": "runs/candidate/full-1-mage-2",
+      "source_build": "candidate",
+      "summary_sha256": "898076da88db224357c3edc74fcdaceebb2b800e59427006fd2924e0f2c1622b"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-1-mage-3",
+      "config_sha256": "e2c9db62c6c337a909407d37eac0370f96e07d7843df13465236c7debad6bd78",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "9182d423386d24cbb99dd5edb85bf7f6611a86c3ee762597e58a79a43dff24f4",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-1-mage-3",
+      "receipt_path": "runs/candidate/full-1-mage-3",
+      "source_build": "candidate",
+      "summary_sha256": "7ad6aeda1742a2da94f6135689847dbb34bd48fb07c51689ed386b2f7e9f44dd"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-1-mage-4",
+      "config_sha256": "fd2c7397cf42b060338e00ca57f89e95b36355c43f5a5cd59c45410676e75948",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "eec3ed015037f065b6df19f8761ac4783f45875e63b11f7a198cdd4a85a5af4c",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-1-mage-4",
+      "receipt_path": "runs/candidate/full-1-mage-4",
+      "source_build": "candidate",
+      "summary_sha256": "e587ad961acecec8d768ac7886a566df10ab625595fb3036cbe9d6143eb3c2ef"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": "D-77c9b934e3953ff89e932b3f3930c932aa519fc4feebda141eb261e459711b72",
+      "case": "full-2-druid-0",
+      "config_sha256": "f68ca36a09c544b620a66d56cc40c18536f3229d54fd534b6060d77228934d89",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "2ceb64c781f3ba57a2bfb963e9d19510ca0201dade4aea07680a498625c30d68",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-2-druid-0",
+      "receipt_path": "runs/candidate/full-2-druid-0",
+      "source_build": "candidate",
+      "summary_sha256": "6b2726b3106af1f9c8110460a77bbb065ae4ee2f79a28df5f84c119ffc4300b7"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": "D-13cd52e8f4b1762114a98a3c2d31e1c24b969adaac9833752d05e75dd94d83df",
+      "case": "full-2-druid-1",
+      "config_sha256": "04d5128180e214978f71ad5e23995491e3c3c6414b34f7a1a11e6f9ac8c00e75",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "242867eae0acc02235b908636869d18b9fe85ec102a5c4e9b9651d9d4ed79ba5",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-2-druid-1",
+      "receipt_path": "runs/candidate/full-2-druid-1",
+      "source_build": "candidate",
+      "summary_sha256": "c84de87e93df6a5cc73426d666f31cd0ff9713e33768f48bbdea9beee29d5827"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-2-druid-2",
+      "config_sha256": "41ecc0cf5fe439fb1cb6c839e15c7172f32ac3c39920d2a2dc8b3f405c094924",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "92b9c099bf2a2e18dcf6d603981205491fb707937bf04f2bd49628ca05e30bf1",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-2-druid-2",
+      "receipt_path": "runs/candidate/full-2-druid-2",
+      "source_build": "candidate",
+      "summary_sha256": "4242a5d00c09445ce11cb077b5c69678e2515002cb52ae4f0726ad7a3d946bc8"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-2-druid-3",
+      "config_sha256": "03ad62ba5685b26ae0be40fdc08fb17de21843ce0a7ce5b15e3184dfc2054038",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "92796d982211762150127ebb1b934a86982e9f58c414511ac40997676129200a",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-2-druid-3",
+      "receipt_path": "runs/candidate/full-2-druid-3",
+      "source_build": "candidate",
+      "summary_sha256": "c3eccb8ad6a525cf8dbe99c39a807414c299e61a690b5433c083b53e07dba3f9"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": "D-98bd7dc4f45defde70b12aeb5be17e4121678924814bbe544eee6caf6f1b88c0",
+      "case": "full-2-druid-4",
+      "config_sha256": "03651f2777fb5118f2782277ab659aa7784e7276a44579b71ab222e0720b53f3",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "e3922ba33364cacb341ba99ce1874d88bd69a331bb63bd76455fa278031e8532",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-2-druid-4",
+      "receipt_path": "runs/candidate/full-2-druid-4",
+      "source_build": "candidate",
+      "summary_sha256": "62eb77334b82ac968efde56fd505586c9787c6e72bb456ec8fb076d221e211d7"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-3-priest-0",
+      "config_sha256": "973c5a943d88da696eef2cfa496fc1b8963ce259001d899b4074e7efb6c45e68",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "9ef7921964faeb1bd1cf30682adab00317b190914cd81fa5b2cd7e17ce6601d3",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-3-priest-0",
+      "receipt_path": "runs/candidate/full-3-priest-0",
+      "source_build": "candidate",
+      "summary_sha256": "3ab04cd97384b74ccab7bf3aaa077bfbcfe2a2637e98473d1bc9261fdc110f4e"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": "D-768af75b51b219f9f7474ef65e31a9b6b63b1d3559c255cc8537598d846c829a",
+      "case": "full-3-priest-1",
+      "config_sha256": "582221860026816f4220c9ec43f038877db2e2b5cb84f179a4010ebb68a11472",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "4b38f8e3be52b1dcb18da8168d48d9bfdfdb70d8bc8d316e43c56cf48ed5f0ba",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-3-priest-1",
+      "receipt_path": "runs/candidate/full-3-priest-1",
+      "source_build": "candidate",
+      "summary_sha256": "aa97716b134fe2128f13e8ea3332d25af09c36bcb18c674880d81169f568edb4"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-3-priest-2",
+      "config_sha256": "d86390a7f64e3cf85cfd1d2d9724352878a9dfa88835d009bed669f51ab3b38e",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "e034027c63b8711b7929a6ddf4bea20e82d00a57d3158dbfee1bf8ecc9a764ce",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-3-priest-2",
+      "receipt_path": "runs/candidate/full-3-priest-2",
+      "source_build": "candidate",
+      "summary_sha256": "243ac79a238be13c2209bd5487afe4fe1e99ef324caee2c944294f0714c7e1c0"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-3-priest-3",
+      "config_sha256": "6972f30e6d9bcad630ea4b123b32a1bffc6e9f6106ea7b2b567008df1b076085",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "26f1405481475256591cbb20d793ab69a3358d0b5597b598caf051fae0c8f27a",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-3-priest-3",
+      "receipt_path": "runs/candidate/full-3-priest-3",
+      "source_build": "candidate",
+      "summary_sha256": "f865085ae95cb23ed5ae37255dfb6adeb44399169abb74d4c1bb5e480a7cabe0"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-3-priest-4",
+      "config_sha256": "356ea175d95b6bbca6de9149a613e1bc6f5b5899bd34d9da16475a4546550912",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "54e02b0b6c10bc06c5e1771e948d03e2872c8ccac228159196122676a142eb33",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-3-priest-4",
+      "receipt_path": "runs/candidate/full-3-priest-4",
+      "source_build": "candidate",
+      "summary_sha256": "5a997ed6fc22092bd3d281f773367f755e1ee1489fd3a2dd0674ea64deb85aed"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": "D-b442f698797d568fd386bf61edea8cb45b95d21fbe0f605251d3a7b76b90275e",
+      "case": "full-4-necro-0",
+      "config_sha256": "3728e16c46ecbd0bb8240b5a463496d52cf6e0a4485bf7b17d1e1d046b0db78d",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "f287de09dd59afd043371da79910e19bf043f91602fbeb66cad5037599344c8b",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-4-necro-0",
+      "receipt_path": "runs/candidate/full-4-necro-0",
+      "source_build": "candidate",
+      "summary_sha256": "800a0dfef1bbe80c51dfdddc19211ee827e4547daa8aae01ab8aa7638ef465f5"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-4-necro-1",
+      "config_sha256": "91bc1feea18c84f7ed9ad43722cf528ea6e485d5e722235ca206825672bdade6",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "bce51627c1fc253c10c8e1ded753f62625faaa57e92759363b355f37ada0fbe4",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-4-necro-1",
+      "receipt_path": "runs/candidate/full-4-necro-1",
+      "source_build": "candidate",
+      "summary_sha256": "70658ab17c4b20a6eca44b3f08554e509edcb0e31b092fa8e73934875d71d82c"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": "D-1c770144e34fb4444d5591e899e38ce7e97fcee8884bbff25b42a5d3b475d24a",
+      "case": "full-4-necro-2",
+      "config_sha256": "0e6a058708cb668b045eb01e1a467a0f033b8aaed447434b9d38bf1a7466f72a",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "4b0727f28b0c0aa0e1133accb0458d23042a058eefb7918f86e34fd6ecce3934",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-4-necro-2",
+      "receipt_path": "runs/candidate/full-4-necro-2",
+      "source_build": "candidate",
+      "summary_sha256": "5652c36e1543691a13a47521ccd6f5a5717e6c9278ac86b70038a8d748a040fc"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-4-necro-3",
+      "config_sha256": "4de2939dba199d2186c36251ac9cff06f4bed90bb69d54e1442b636e28bd56eb",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "cc473b1901bd560f01e0806d5b758fcdcd95423f82211d248c3edeb8dccd979b",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-4-necro-3",
+      "receipt_path": "runs/candidate/full-4-necro-3",
+      "source_build": "candidate",
+      "summary_sha256": "88643baf31bf3d2a2154e6396f1cecd11f01454ee82d4c4ca938f47cdbf071c5"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": "D-d94eeb911c8d6ae0cc2a50cce142fa95cab7a7871f93b8d7eb6027dd18ef40b4",
+      "case": "full-4-necro-4",
+      "config_sha256": "12b9ad786253ca31c5a7669949299e81a9f9c31976a7b872811e1e46ed60cde1",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "6e2fe658ad9df11b832c2b17e71ed7de7d4da21a8f400e92274885ca6c45d6e9",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-4-necro-4",
+      "receipt_path": "runs/candidate/full-4-necro-4",
+      "source_build": "candidate",
+      "summary_sha256": "2295f0bc1c460e5f7a96b5b7be10d96e21d4dbc259f2bf741440616ee013ff5b"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-0",
+      "config_sha256": "8f27b9421529c21658c7dae0ec3165045cc0ec247565b0c7c551f828b0c2a6b1",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "a53797af8654008fe9beb0fd1464099c1826cbcc8bd582be6db0d318e13b1a70",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-5-paladin-0",
+      "receipt_path": "runs/candidate/full-5-paladin-0",
+      "source_build": "candidate",
+      "summary_sha256": "4edb9a38f3dac3e68ede4c409d4efc8af27fc8c57fb0112a34d20b11a5a75748"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-1",
+      "config_sha256": "29f55991f916569e0bd67e8d932847e8591f36fce65a166e59f8b5ada1e35fd3",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "794838abccfaf059a9fd6f25eabdd88f523e7c57d684da157f49af9784c5e29f",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-5-paladin-1",
+      "receipt_path": "runs/candidate/full-5-paladin-1",
+      "source_build": "candidate",
+      "summary_sha256": "9cec765b5b38935a8b34fea42ccc3e99e2373a59886db7e290805436ba8504e7"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-2",
+      "config_sha256": "6023ea6d588158a64174707a8dcf2acd5a99539a0312d4e9702a4a6b3c4b0284",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "9520216709cda4fb655e2b344d1146071723cbec4ae1d73d3b07c2403db0299f",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-5-paladin-2",
+      "receipt_path": "runs/candidate/full-5-paladin-2",
+      "source_build": "candidate",
+      "summary_sha256": "bda95a3377869b456ca5088df373b8c2b8df6bba0d31fd3c285007b3386ddd94"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-3",
+      "config_sha256": "04c0a9a3e8299d0023ccaab78a6e685de8551544f6c6b508d40c55c102122a94",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "0b03140ebf35fdb2d2f0a8292f2a8f4920c120ca585de9e72b9073dd9bcc7a30",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-5-paladin-3",
+      "receipt_path": "runs/candidate/full-5-paladin-3",
+      "source_build": "candidate",
+      "summary_sha256": "c516523fc94a30208b45945c9deb3e4163f409cd8ddd553bec70c51946062401"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-5-paladin-4",
+      "config_sha256": "a5dacea1025b7b9fb5ad185f85baf9d26e5010ce333ea224a884a2a1f3a18926",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "f43b828fe34b8f0c25a409b2519e3707164c8927c7eeffc9c9fde293e5a80124",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-5-paladin-4",
+      "receipt_path": "runs/candidate/full-5-paladin-4",
+      "source_build": "candidate",
+      "summary_sha256": "9422c32235723ea6b27d448a5265cf0ce22a1df7d26fa4c55a6d6c5518a85252"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-0",
+      "config_sha256": "6728d5491951e50897eacf41fa9244d6836c2204cedb0009ccd5cc94fd938006",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "1309684d6ded292cd9334968a52553e3c9a29bcfc8c2e5bc93367b01a78ff000",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-6-rogue-0",
+      "receipt_path": "runs/candidate/full-6-rogue-0",
+      "source_build": "candidate",
+      "summary_sha256": "1d0cbbb1c4b139859e80940b23858f91340072b0f03ba47d34a6403e73bb521a"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-1",
+      "config_sha256": "f7e1604d3729cc10c93f54763eea9c9e83473daa67677ed98c6b5c7ee2ae5e19",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "d5d5d0b9d43f44b6c6cf6b7db7f593b89bc9de29395579867d8762d198ee754a",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-6-rogue-1",
+      "receipt_path": "runs/candidate/full-6-rogue-1",
+      "source_build": "candidate",
+      "summary_sha256": "f67ce910626f5806d75d29912b2ffd5282cd7823a1e5c123675f4a9a7f28989f"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-2",
+      "config_sha256": "12ad21e994c48381437ebd08ee422de2aa769cc31c7ed26fab8c107735ba38a9",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "a3f184a87566f3c9ee306520c3e1866420d43c46cba4957bcfbf09f543ab20ff",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-6-rogue-2",
+      "receipt_path": "runs/candidate/full-6-rogue-2",
+      "source_build": "candidate",
+      "summary_sha256": "af895f26c3d21c0d0671a323f793611468c51082dc2c9d57bd90699f40583c0a"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-3",
+      "config_sha256": "8d15be2802a2dc595b13f4bc6edc1da319794f538983d8921be2757d65b7cd2f",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "8b2fc4cec8b9a3ff0411484b4ef5276063a3629c5c8fc5e2c4fb63bfec22991d",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-6-rogue-3",
+      "receipt_path": "runs/candidate/full-6-rogue-3",
+      "source_build": "candidate",
+      "summary_sha256": "e54b922b31a0a7096031c484b5aa17848994b32843f1e60d19a75fc986907996"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-6-rogue-4",
+      "config_sha256": "7fe96f16b7f027c54a6295ec81728e815b3785093ade9a37b80d47682a75a193",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "cd98452458d716b5f52eef6a8d929c6e4df4124fefc0b80173bfc50fdc126756",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-6-rogue-4",
+      "receipt_path": "runs/candidate/full-6-rogue-4",
+      "source_build": "candidate",
+      "summary_sha256": "90e3cd2cdcc2f3811fed3ce98620ab114785b7a2c085eea873db1c3b783b0ffb"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-7-ranger-0",
+      "config_sha256": "93ddc14c277ecb061e49dd2eb869c9f943464e62c0bf14a9d12b9a23cc4de2ff",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "fc5edea0eb69f23140dc54270b2c280bca21bcf00ac50afc3c00f92236c77136",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-7-ranger-0",
+      "receipt_path": "runs/candidate/full-7-ranger-0",
+      "source_build": "candidate",
+      "summary_sha256": "ca52f8913c7405f0545856536f39ffad0c091d5fda8ab19352da929abd1451f3"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": "D-9578300bf8d5c573ce93416c8a0fbf7e35893e0b877acd94745071ffd98743d1",
+      "case": "full-7-ranger-1",
+      "config_sha256": "5d79f1f4fe9bf446622c0fe002933e7b518f0e5e97d0aefc83bbbea1c6165948",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "b7f0b3bec04aa4003918c0d5a88299cd69ca50d5570c75d9937c4ac061213109",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-7-ranger-1",
+      "receipt_path": "runs/candidate/full-7-ranger-1",
+      "source_build": "candidate",
+      "summary_sha256": "bb58051a0352f319626232e8a06ec13ba128af6f334ab2c860b9f67960a56c9e"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-7-ranger-2",
+      "config_sha256": "59256e02964be33ef7dd9d09aabdbf54396ddd10ac3e64a1ddb083a9e6013418",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "44fadab1b1ee94d22be760801f21e94d856b6db2b0b5ef531fae09f7423f0f10",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-7-ranger-2",
+      "receipt_path": "runs/candidate/full-7-ranger-2",
+      "source_build": "candidate",
+      "summary_sha256": "d4249949074b5a0825ca54b23acb36d3aedc74ddcb57023207925412cbe3e778"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-7-ranger-3",
+      "config_sha256": "24ec07078e6a3f245f3be618dd6b47f24d01b06bed670d52b2bfc58ba5956664",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "541d40b2a2946b7ee312e377b29c59c9b7a66f8937ce3aa4657b1303742475d8",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-7-ranger-3",
+      "receipt_path": "runs/candidate/full-7-ranger-3",
+      "source_build": "candidate",
+      "summary_sha256": "9ce5b1eb0faf06e1ab334ca73bea6126a35ec8621a65ee079782c80f1e450a5b"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-7-ranger-4",
+      "config_sha256": "6cdd8e940b53ecdcfc70df8432e2dc1054d5da35ded1bc538ecc7ac25e2ad9a3",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "c84b81f916b3a6407ff9af769918f5a37758fd477215de4d73feec6b498a6266",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-7-ranger-4",
+      "receipt_path": "runs/candidate/full-7-ranger-4",
+      "source_build": "candidate",
+      "summary_sha256": "151d53a580e1473e211b3e0fb4d6c9901404919785ff9758c331aa997b3765cc"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-0",
+      "config_sha256": "94a420eba177a054751b3af21a4a7a00857d5d145678a8afb7f8d0f697b89af1",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "f2aaae72b48cbef2403ea1bf70d59ab62aadedb8c9dead6a00175c2f5cb0a247",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-8-blackguard-0",
+      "receipt_path": "runs/candidate/full-8-blackguard-0",
+      "source_build": "candidate",
+      "summary_sha256": "c827b4265b4998b206cd30b8a09552e77ba03b5a8cbd9a78c4c8d4685e4da21b"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-1",
+      "config_sha256": "69d9f4ca0907665315dc54582f562505d04dbe3202db22d3f17d7ed39a755fb4",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "f540dfca75b7e51e9e7d23242503c0871c7c37ff5771096080419b0f28153196",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-8-blackguard-1",
+      "receipt_path": "runs/candidate/full-8-blackguard-1",
+      "source_build": "candidate",
+      "summary_sha256": "a7baf29eb72a7564b2bc1959e8b9fc4c0322b139d7fad3e04d633bcb12304a6d"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-2",
+      "config_sha256": "430eeb2112d5c82623bfe40f3692ebb9ba718bab7f2165f2a0fb8273c065ecc3",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "833e83defddfa38e47750b31771f3f476f7740b2e9c165f0c8ac0a2ab2e67e20",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-8-blackguard-2",
+      "receipt_path": "runs/candidate/full-8-blackguard-2",
+      "source_build": "candidate",
+      "summary_sha256": "ba3a853f876941109623f2abcae982462284a2e85b8664f5a26796870afd90c9"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-3",
+      "config_sha256": "2de7865f1b277e9443c771f323f7f8ce1679e416d9690245abde8b59ef7fdb41",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "468cfd6c86a846118f8d83ed0b043de7ef6568b5012a34dc310a9e2100c46aa6",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-8-blackguard-3",
+      "receipt_path": "runs/candidate/full-8-blackguard-3",
+      "source_build": "candidate",
+      "summary_sha256": "fad6dc6cd3fd0a1e39d1713f2a519887d18e4e4df91295a7117bb7c1a8b7d443"
+    },
+    {
+      "arm": "candidate",
+      "canonical_death_id": null,
+      "case": "full-8-blackguard-4",
+      "config_sha256": "44adce007f7f54b8fcf9e7b3f547978278f1a4c3905ef22c3ca7d717a05fc95e",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/candidate/params-core.json",
+      "payload": "483ab546128a944dd0364d81788a25511e6b0cc4dbf0b781cd51ffe042f73f46",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-8-blackguard-4",
+      "receipt_path": "runs/candidate/full-8-blackguard-4",
+      "source_build": "candidate",
+      "summary_sha256": "41e14d6209a329f912866613db0a4a3681f7bb6b35573e8cd9014069c8f75cff"
+    },
+    {
+      "arm": "native-default",
+      "canonical_death_id": null,
+      "case": "native-default",
+      "config_sha256": "bd67d005a85f13a5e52806c43ea50dda2f057aee5f605e9e8fab10c1bb5e0140",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/native-default/params-core.json",
+      "payload": "3d3763f5876c772b1f5f7bb848cde68fd02f57249ac7e10a704297a794ca8a1b",
+      "raw_directory": "/workspace/work/t433-native-default",
+      "receipt_path": "runs/native-default/native-default",
+      "source_build": "candidate",
+      "summary_sha256": "16913a342ca15f2465a662847599589c3562ba1b91f1f365efb8d9ca4fac734a"
+    },
+    {
+      "arm": "native-tight",
+      "canonical_death_id": null,
+      "case": "native-tight",
+      "config_sha256": "9aedb289a2ef1749057e98c99eb9b0cb4e7a9c87677ca94b2973a249b9ad5b49",
+      "control_relationship": "paired compatibility cell; same-seed attempts are not independent lives",
+      "params_path": "runs/native-tight/params-core.json",
+      "payload": "78f0c0d4d98af7fa590bd088e11e6c828ecc7078075bbde15a98e690c0523d51",
+      "raw_directory": "/workspace/work/t433-native-tight",
+      "receipt_path": "runs/native-tight/native-tight",
+      "source_build": "candidate",
+      "summary_sha256": "bc8144e728b614e98a35c7a48cf7fb860be60e3f07ea6b5edcaff94997f84f9c"
+    }
+  ],
+  "sampling_note": "Compatibility/scenario checks only; paired same-seed/source-qualified records are not independent samples or a survival comparison.",
+  "schema": "borg-reborn-rs/inventory-calibration-validation@1",
+  "streams_identical_in_all_full_cells": [
+    "keys.log",
+    "messages.log",
+    "state.log",
+    "trace-core.jsonl"
+  ]
+}
