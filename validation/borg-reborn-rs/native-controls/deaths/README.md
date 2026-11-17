@@ -9,7 +9,7 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 109; distinct starting conditions: 108; retained process attempts: 108 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 110; distinct starting conditions: 109; retained process attempts: 109 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -23,6 +23,7 @@ Dossiers: 109; distinct starting conditions: 108; retained process attempts: 108
 | [D0000-q11c603aec73c2c485e7b1186e721e6590c7cfffe781d110d5e5733389997bb54](D0000-q11c603aec73c2c485e7b1186e721e6590c7cfffe781d110d5e5733389997bb54/report.md) | unassigned | `60a506b689ff` | 1021 | a fruit bat | 30109 | unassessed |
 | [D0000-q13b3026dbd645caf2a5ad4f980da8fa6751d3c8c54d8a1fbde500c545876f2a5](D0000-q13b3026dbd645caf2a5ad4f980da8fa6751d3c8c54d8a1fbde500c545876f2a5/report.md) | unassigned | `401597cafd16` | 102 | Fang, Farmer Maggot's Dog | 3640 | unassessed |
 | [D0000-q13eeaebe421d34585c93b498421b554fc6c8b973281fea66a0c1f5c0cd3e8fdd](D0000-q13eeaebe421d34585c93b498421b554fc6c8b973281fea66a0c1f5c0cd3e8fdd/report.md) | unassigned | `79ec0591248d` | 1050 | a grey mold | 24096 | unassessed |
+| [D0000-q17f7c0d03052c1509c6f2d789dad862c0884548b314340374c950ab8f21d4350](D0000-q17f7c0d03052c1509c6f2d789dad862c0884548b314340374c950ab8f21d4350/report.md) | unassigned | `404e267fab34` | 1016 | an apprentice | 23211 | unassessed |
 | [D0000-q1c05af555bc06bf7d7f1e2815e076be974b33bf3ea577de06763ebe2f170aac0](D0000-q1c05af555bc06bf7d7f1e2815e076be974b33bf3ea577de06763ebe2f170aac0/report.md) | unassigned | `4fa86ac995e9` | 1011 | a wild dog | 17759 | unassessed |
 | [D0000-q1cca14eef3826d180caab1ff8a268e6a0f1eaef076b61a60018645c20bd4bb26](D0000-q1cca14eef3826d180caab1ff8a268e6a0f1eaef076b61a60018645c20bd4bb26/report.md) | unassigned | `ce3b66f0c3df` | 1020 | a giant white mouse | 8922 | unassessed |
 | [D0000-q20a76ff4e42b93204edd1d086647bb83ba5c62fc49e2af2a1c6ea1f268398e21](D0000-q20a76ff4e42b93204edd1d086647bb83ba5c62fc49e2af2a1c6ea1f268398e21/report.md) | unassigned | `c310d0185990` | 1010 | Fang, Farmer Maggot's Dog | 12701 | unassessed |
