@@ -1,0 +1,63 @@
+{
+  "attempts": [
+    {
+      "id": "mage-r1-s304",
+      "natural_status": "survived_cap",
+      "reason": "no incoming attack near observed HP minimum",
+      "status": "excluded"
+    },
+    {
+      "coverage": {
+        "depth": 0,
+        "equipment": [
+          {
+            "description": "Whip (1d3) (+0,+0)",
+            "kind": 47,
+            "slot": 1
+          },
+          {
+            "description": "Wooden Torch (5000 turns)",
+            "kind": 4,
+            "slot": 5
+          }
+        ],
+        "equipment_kind_signature": "85c02c5b3eb730b04d3579f990b8978618d626962fe9be478576dff9a8201273",
+        "hp": 11,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Book of Nature Magics [Lesser Charms]",
+            "kind": 381
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 1,
+            "description": "Scroll of Word of Recall",
+            "kind": 208
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 1,
+        "mana_state": "full",
+        "max_hp": 11,
+        "max_sp": 2,
+        "sp": 2
+      },
+      "id": "druid-r2-s303",
+      "natural_status": "death",
+      "parent_death_id": "D-96e700983fb6863426308b0eafd70b1a703733e6e6848ba74ee7ae90c77c70ce",
+      "scenario": "synthetic/caster-encounters-v2/additional-cases/druid-r2-s303/scenario.json",
+      "sha256": "76d3267952224a0267756d006fd36b34acded43e7f66b244c2c65b2646d23330",
+      "status": "selected"
+    }
+  ],
+  "schema": "borg-cemetery/encounter-selection@1"
+}

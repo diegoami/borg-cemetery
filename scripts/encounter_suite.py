@@ -2,12 +2,14 @@
 """Fast encounter smoke: load curated starts into an already-built Borg."""
 import argparse
 import fcntl
+import json
 import os
 from pathlib import Path
 import subprocess
 import time
 
 from run_scenario import run_scenario
+from curate_encounters import coverage
 from synthetic_suite import COMMIT, STATE, integer, local_file, read, sha, write
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -106,6 +108,14 @@ def run_suite(path, source, output, target_commit=None, adapter=run_scenario, ro
                         values = [expected_start[k] for k in ('hp', 'max_hp', 'sp', 'max_sp')]
                         if not state or list(map(int, state.groups()[3:])) != values:
                             raise ValueError('loaded resource state differs from scenario')
+                        expected_coverage = read(scenario / 'scenario.json').get('coverage')
+                        if expected_coverage:
+                            with (dest / 'run/observations.jsonl').open() as stream:
+                                actual_coverage = coverage(json.loads(next(stream)))
+                            row['loaded_coverage'] = actual_coverage
+                            for field in ('level', 'depth', 'equipment_kind_signature', 'inventory'):
+                                if actual_coverage[field] != expected_coverage[field]:
+                                    raise ValueError('loaded coverage differs: ' + field)
                 except Exception as error:
                     row = dict(id=name, status='harness_failure', reason=str(error))
                 row['elapsed_seconds'] = time.monotonic() - case_start

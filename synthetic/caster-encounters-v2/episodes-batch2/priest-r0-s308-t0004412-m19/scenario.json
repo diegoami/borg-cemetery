@@ -1,0 +1,119 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 308,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 3,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 4400,
+    "file": "checkpoint-000037-t0000004402.save",
+    "game_turn": 4402,
+    "keys": 744,
+    "max_depth": 1,
+    "race_idx": 0,
+    "seed": 308
+  },
+  "class_idx": 3,
+  "compressed_sha256": "f03bd4c4b9dcde715547410120661b37d54f32493d7ab30df8e565dece0253dd",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Mace (2d4) (+0,+0)",
+        "kind": 52,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (4585 turns)",
+        "kind": 4,
+        "slot": 5
+      }
+    ],
+    "equipment_kind_signature": "d9df93b11d86787f1bfe90ecf85c92b75d3c8975ae7e0c34c7cf1c118dc0e254",
+    "hp": 20,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Holy Book of Prayers [Novice's Handbook]",
+        "kind": 386
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 2,
+        "description": "Potions of Cure Serious Wounds",
+        "kind": 232
+      },
+      {
+        "count": 2,
+        "description": "Vespertine Potions",
+        "kind": 237
+      },
+      {
+        "count": 1,
+        "description": "Light Blue Potion",
+        "kind": 250
+      },
+      {
+        "count": 1,
+        "description": "Scroll titled \"pero nas moleo\"",
+        "kind": 211
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "full",
+    "max_hp": 20,
+    "max_sp": 4,
+    "sp": 4
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "priest-r0-s308-t0004412-m19",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 20,
+    "max_hp": 20,
+    "max_sp": 4,
+    "sp": 4
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-384ba9ef8d23b25b096e75d2b5b4e57f9d50a1756ec40f67b54fcf2ea099f2d5",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 308,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20005,
+  "race_idx": 0,
+  "save": "start.save.gz",
+  "save_sha256": "9dbb373526cd2476b05e6cd4c5980d98c02bf5fb3182d5a22821728698b3fe1b",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 4412,
+    "first_visible_turn": 4412,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 10,
+    "monster_index": 19,
+    "monster_kind": "fruit bat",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "ec67b275fa14fe4907907ea136e52d1dfbbd4683e9e7a72306e2904c6ca35aa1",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 4412
+  },
+  "start_turn": 4402,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

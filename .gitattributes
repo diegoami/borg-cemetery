@@ -6,3 +6,6 @@ validation/borg-reborn-rs/caster-build-v2/reproduction/**/borg.txt -whitespace
 synthetic/fast-caster-encounters/evidence/expansion-source-runs/**/user/borg.txt -whitespace
 # Native message streams include blank messages; hashes cover their padding.
 studies/fast-caster-config/evidence/**/run/messages.log -whitespace
+synthetic/caster-encounters-v2/evidence/**/borg.txt -whitespace
+# Native death screens in literal harvest stderr retain rectangular padding.
+synthetic/caster-encounters-v2/evidence/harvest*/**/stderr.log -whitespace

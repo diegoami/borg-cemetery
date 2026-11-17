@@ -98,3 +98,15 @@ living 100k checkpoint/continuation requirements. The
 This selects the architecture direction and planning task; the database and
 alternate executor are not implemented. M1/M2 acceptance and review pins are
 unchanged; no new implementation milestone has started.
+
+## Owner-requested large caster bank (2026-11-16)
+
+The owner clarified that the saved-encounter bank needs hundreds of cases.
+Prepare a larger bank from distinct observed encounter starts, preserving parent
+life families, all natural deaths and equipment/resource coverage. Cemetery
+owns canonical inputs/evidence; Zoo owns orchestration and comparison reports.
+Keep bounded fast shards and a small smoke subset. A full-bank run has its own
+measured duration; hundreds of correlated encounters are not hundreds of
+independent lives. This follow-up is stacked on the frozen PR #35 implementation
+`0e156d804519a937c32e9a70f6b847f384cd9351`; it does not move that review pin,
+merge main or accept a milestone/population experiment.

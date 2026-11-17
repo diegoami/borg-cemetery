@@ -1,0 +1,109 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 308,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 2,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 2700,
+    "file": "checkpoint-000027-t0000002709.save",
+    "game_turn": 2709,
+    "keys": 619,
+    "max_depth": 1,
+    "race_idx": 10,
+    "seed": 308
+  },
+  "class_idx": 2,
+  "compressed_sha256": "dd423e15da08f86c54884da1f5aaac945b7060e8dddb8230911690360be65415",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Whip (1d3) (+0,+0)",
+        "kind": 47,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (4755 turns)",
+        "kind": 4,
+        "slot": 5
+      },
+      {
+        "description": "Set of Leather Gloves [1,+5]",
+        "kind": 127,
+        "slot": 10
+      }
+    ],
+    "equipment_kind_signature": "a97033aeb450bd70b3ca61e9b54b86fbf4254bcf1df58f37db83c4e6df3fe95e",
+    "hp": 18,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Book of Nature Magics [Lesser Charms]",
+        "kind": 381
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "partial",
+    "max_hp": 18,
+    "max_sp": 4,
+    "sp": 2
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "druid-r10-s308-t0002809-m46",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 18,
+    "max_hp": 18,
+    "max_sp": 4,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-4f668e331bd666a3974cc6d19a235fa951db0960404dec60e3865eb52b2cbfa1",
+    "parent_death_id": "D-0fb367cd4fb75a82467ca9f1a46aecf464958f6c81191d57d9ce6ee11f5e95e6",
+    "program": "borg-reborn-rs",
+    "seed": 308,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 3002,
+  "race_idx": 10,
+  "save": "start.save.gz",
+  "save_sha256": "af020262e9afba8df774648bdd11045621a1660ef2010617ca92c46046ee98b6",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 2809,
+    "first_visible_turn": 2809,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 100,
+    "monster_index": 46,
+    "monster_kind": "white worm mass",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "61cf6b37c18d09646150e10ffea8236c328e779e048cdf5e1c7b4b4a0d7ce9cc",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 2809
+  },
+  "start_turn": 2709,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

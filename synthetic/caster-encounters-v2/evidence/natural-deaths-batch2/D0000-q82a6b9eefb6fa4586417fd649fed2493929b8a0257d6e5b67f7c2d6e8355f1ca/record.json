@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-harvest-v2-batch2/necromancer-r2-s306",
+      "raw_sha256": {
+        "keys.log": "7c7e622ee74445aa9147dd1493e05505ea34a79f8f19acc6261af430727f8c10",
+        "messages.log": "d2afbdf423e059ea4dab5c1d4bde8928f2e3582af447675f9523cc214a520f96",
+        "state.log": "c0e5021b9b915f812305c71e33ebc0fe5bd53b1ca6169f5aca68daedcac9db55"
+      },
+      "result_sha256": "7c7e622ee74445aa9147dd1493e05505ea34a79f8f19acc6261af430727f8c10",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Elf Necromancer",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 1338
+  },
+  "encounter_family": "start-9fd88b07a03269114f540d74d2031f375b9d4d1726449343f88f422ef844dc5e",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "3ab992e03774f63390c68224637bdc05c5fa0b54ed07be78f425d121d891c7e6",
+    "depths.json": "d906435e54931895ad2226e092f1c45696325fcd7fd442edf6098ef7f950d110",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "85595f2c9367b3961587edd10c7b34ca27060b2331c35f21c515937b76836156",
+    "trace-tail.jsonl": "f739593a4bb27f47b7bc954029a059a25178008edc3a9b9e415036db738f9162"
+  },
+  "id": "D0000-q82a6b9eefb6fa4586417fd649fed2493929b8a0257d6e5b67f7c2d6e8355f1ca",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "78c41c7c57afcafc61818354a6f1c581c61dec9b0d5dd0107af118453327fe41",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 306,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a giant yellow centipede",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "class_idx": 4,
+    "dead": true,
+    "depth": 1,
+    "level": 2,
+    "max_depth": 1,
+    "race_idx": 2,
+    "turn": 13430
+  }
+}

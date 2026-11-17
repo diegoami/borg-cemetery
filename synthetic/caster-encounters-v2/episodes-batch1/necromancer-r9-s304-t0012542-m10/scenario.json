@@ -1,0 +1,119 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 304,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 4,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 12500,
+    "file": "checkpoint-000125-t0000012502.save",
+    "game_turn": 12502,
+    "keys": 2721,
+    "max_depth": 1,
+    "race_idx": 9,
+    "seed": 304
+  },
+  "class_idx": 4,
+  "compressed_sha256": "cce418954ad6556c5b8cd68321c3f508eb532dd1b7c9a55a63213697faedde96",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Main Gauche (1d5) (+0,+0)",
+        "kind": 34,
+        "slot": 1
+      }
+    ],
+    "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+    "hp": 14,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Necromantic Tome [Into the Shadows]",
+        "kind": 391
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 3,
+        "description": "Potions of Cure Light Wounds",
+        "kind": 231
+      },
+      {
+        "count": 1,
+        "description": "Metallic Purple Potion",
+        "kind": 250
+      },
+      {
+        "count": 1,
+        "description": "Black Potion",
+        "kind": 258
+      },
+      {
+        "count": 3,
+        "description": "Scrolls of Phase Door",
+        "kind": 185
+      },
+      {
+        "count": 3,
+        "description": "Scrolls titled \"na ineo corrio\"",
+        "kind": 207
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "partial",
+    "max_hp": 14,
+    "max_sp": 4,
+    "sp": 3
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "necromancer-r9-s304-t0012542-m10",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 14,
+    "max_hp": 14,
+    "max_sp": 4,
+    "sp": 3
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-24f0ad4ac22daefd82db90f76e605cd334b0d6acc6a6d1bba5e765816a07e3fb",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 304,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20008,
+  "race_idx": 9,
+  "save": "start.save.gz",
+  "save_sha256": "be2cad0868eecff881bb278a8d00f6d48e204d237129129cd1c004df98a3ab81",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 12542,
+    "first_visible_turn": 12542,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 40,
+    "monster_index": 10,
+    "monster_kind": "fruit bat",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "f4175c1996264b876d41e49d54deea24bb1c66f8885f953a42b18bf5bbd77b03",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 12542
+  },
+  "start_turn": 12502,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

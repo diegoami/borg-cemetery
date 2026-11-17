@@ -1,0 +1,114 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 304,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 4,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 3200,
+    "file": "checkpoint-000032-t0000003202.save",
+    "game_turn": 3202,
+    "keys": 740,
+    "max_depth": 1,
+    "race_idx": 9,
+    "seed": 304
+  },
+  "class_idx": 4,
+  "compressed_sha256": "7bde5b4e4bafc5779917e262fb094db1618dad6d87d81aac21e78e3bf20a5a2b",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Main Gauche (1d5) (+0,+0)",
+        "kind": 34,
+        "slot": 1
+      }
+    ],
+    "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+    "hp": 12,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Necromantic Tome [Into the Shadows]",
+        "kind": 391
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 3,
+        "description": "Potions of Cure Light Wounds",
+        "kind": 231
+      },
+      {
+        "count": 1,
+        "description": "Metallic Purple Potion",
+        "kind": 250
+      },
+      {
+        "count": 3,
+        "description": "Scrolls of Phase Door",
+        "kind": 185
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 1,
+    "mana_state": "full",
+    "max_hp": 12,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "necromancer-r9-s304-t0003252-m3",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 12,
+    "max_hp": 12,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-24f0ad4ac22daefd82db90f76e605cd334b0d6acc6a6d1bba5e765816a07e3fb",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 304,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20008,
+  "race_idx": 9,
+  "save": "start.save.gz",
+  "save_sha256": "b54c8d7b33f0a78bbf6f3ddb061d487836692698523c3825d36dc4e4a4141716",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 3272,
+    "first_visible_turn": 3252,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 50,
+    "monster_index": 3,
+    "monster_kind": "rock lizard",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "f4175c1996264b876d41e49d54deea24bb1c66f8885f953a42b18bf5bbd77b03",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 3252
+  },
+  "start_turn": 3202,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

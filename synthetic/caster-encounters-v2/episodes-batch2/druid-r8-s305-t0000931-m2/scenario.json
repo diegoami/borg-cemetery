@@ -1,0 +1,114 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 305,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 2,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 900,
+    "file": "checkpoint-000009-t0000000901.save",
+    "game_turn": 901,
+    "keys": 256,
+    "max_depth": 1,
+    "race_idx": 8,
+    "seed": 305
+  },
+  "class_idx": 2,
+  "compressed_sha256": "21058ab8a2818b374d465f0ec569ca3ff52e6a15ae1dd24c3e97fafc48e4bb1c",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Whip (1d3) (+0,+0)",
+        "kind": 47,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (4963 turns)",
+        "kind": 4,
+        "slot": 5
+      }
+    ],
+    "equipment_kind_signature": "85c02c5b3eb730b04d3579f990b8978618d626962fe9be478576dff9a8201273",
+    "hp": 13,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Book of Nature Magics [Lesser Charms]",
+        "kind": 381
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 3,
+        "description": "Potions of Cure Light Wounds",
+        "kind": 231
+      },
+      {
+        "count": 4,
+        "description": "Scrolls of Phase Door",
+        "kind": 185
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 1,
+    "mana_state": "full",
+    "max_hp": 13,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "druid-r8-s305-t0000931-m2",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 13,
+    "max_hp": 13,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-9d6ee5e79e41b6f0962910f67765d45823854bfdce50b409cabcd55967de3384",
+    "parent_death_id": "D-ffc67700aad2f873f1260b26196b88d22ae1c85f69c13ae39d2d6a2b01e76c65",
+    "program": "borg-reborn-rs",
+    "seed": 305,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 3319,
+  "race_idx": 8,
+  "save": "start.save.gz",
+  "save_sha256": "77d7405fc88dc4f49343c6e56aa5094d101a860f25d0dcfd9888cf019bb1ca66",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 931,
+    "first_visible_turn": 931,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 30,
+    "monster_index": 2,
+    "monster_kind": "giant white mouse",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "54cb3795f4577f5cd17fe26f4de3c6b35631b14c95204b1d8a00f54975a909d2",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 931
+  },
+  "start_turn": 901,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

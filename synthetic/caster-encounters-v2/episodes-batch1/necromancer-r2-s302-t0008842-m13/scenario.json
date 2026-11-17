@@ -1,0 +1,109 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 302,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 4,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 8800,
+    "file": "checkpoint-000088-t0000008802.save",
+    "game_turn": 8802,
+    "keys": 1883,
+    "max_depth": 1,
+    "race_idx": 2,
+    "seed": 302
+  },
+  "class_idx": 4,
+  "compressed_sha256": "93256528b7a5b57ed5df06c3082a13c8d8b6cf00ca4b617eaf01dcd0dabda2dd",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Main Gauche (1d5) (+0,+0)",
+        "kind": 34,
+        "slot": 1
+      }
+    ],
+    "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+    "hp": 11,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Necromantic Tome [Into the Shadows]",
+        "kind": 391
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 2,
+        "description": "Potions of Cure Light Wounds",
+        "kind": 231
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 1,
+        "description": "Scroll titled \"inva antas spe\"",
+        "kind": 222
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 1,
+    "mana_state": "full",
+    "max_hp": 11,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "necromancer-r2-s302-t0008842-m13",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 11,
+    "max_hp": 11,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-a367ff56c555d3aab61b3f4a5cacb50dd3816c85dc784df97ba115923e5ad777",
+    "parent_death_id": "D-1e58f0f284677e5886b74d62675e30b4abe26d78cbbc54c5841adfbf6aa69108",
+    "program": "borg-reborn-rs",
+    "seed": 302,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 9790,
+  "race_idx": 2,
+  "save": "start.save.gz",
+  "save_sha256": "597e62770347994a247f4f305f3d5d9fd15aa5121e83c742da0415f1821b414b",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 8902,
+    "first_visible_turn": 8842,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 40,
+    "monster_index": 13,
+    "monster_kind": "scruffy looking hobbit",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "dcd909bf2a421188db9b087eb35d2b5001b461f4a0637b324d1ba1cf9965a5dd",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 8842
+  },
+  "start_turn": 8802,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

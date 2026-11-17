@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-harvest-v2/necromancer-r6-s301",
+      "raw_sha256": {
+        "keys.log": "c76647a75af6f9ef655d8fd895836ff5769de7310e8c311a6db7f3708ad3ccf3",
+        "messages.log": "118c192bd59e74dcba8a8b475f6df78242da6e38f736609ea5555bf83070dfab",
+        "state.log": "def49f522ea3fb40249c5676f2895d8873f12082002857a30043e87c616b3c9d"
+      },
+      "result_sha256": "c76647a75af6f9ef655d8fd895836ff5769de7310e8c311a6db7f3708ad3ccf3",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Half-Orc Necromancer",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 1150
+  },
+  "encounter_family": "start-412a4416f1ed36c4435ef4f379bc5cf140a0bb1bed9fb3fd9026b026ebf76ee9",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "9287e3580c859584d6883bc2fc649ab9a1d51c4f691a0ae6f56d0f055796674c",
+    "depths.json": "fd5628517d245763079259965cbe18cdf4ffff3c7b104761b67217461a8d4942",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "a5b8f50ad293b90aa3a17ecc67f93a6b0f6598b86b4d5958d2fe429921acf592",
+    "trace-tail.jsonl": "f17be9b1c448a1660631a3bc813ccdf6f178050d72afb7297f260d6ff13c161a"
+  },
+  "id": "D0000-q84f9ba49c2976e32e9bbb252ce7d8d29528404954b9741bdc3b856ef6a6d432e",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "1df53d29d600b3cdfec566f46c7410ea3d4194f1deda82bb85362eed76e4930f",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 301,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a grey mold",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a grey mold",
+    "class_idx": 4,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 6,
+    "turn": 13547
+  }
+}
