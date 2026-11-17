@@ -1,0 +1,164 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 15200,
+        "file": "checkpoint-000152-t0000015202.save",
+        "game_turn": 15202,
+        "keys": 3210,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1010025
+      },
+      "selection": {
+        "first_visible_turn": 15252,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 19,
+        "monster_kind": "grey mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 1540,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 15252
+      },
+      "status": "candidate",
+      "turn": 15302,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 2,
+          "line": 1545,
+          "max_hp": 12,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 19,
+              "race": 18
+            }
+          ],
+          "sp": 1,
+          "turn": 15302
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 2,
+          "line": 1545,
+          "max_hp": 12,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 19,
+              "race": 18
+            }
+          ],
+          "sp": 1,
+          "turn": 15302
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 12,
+          "level": 2,
+          "line": 1547,
+          "max_hp": 12,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 1,
+          "turn": 15322
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 32200,
+        "file": "checkpoint-000307-t0000032861.save",
+        "game_turn": 32861,
+        "keys": 6297,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1010025
+      },
+      "selection": {
+        "first_visible_turn": 33121,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 11,
+        "monster_kind": "floating eye",
+        "no_omniscient_trigger": true,
+        "observation_line": 3029,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 33111
+      },
+      "status": "candidate",
+      "turn": 33121,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 0,
+          "level": 3,
+          "line": 3029,
+          "max_hp": 18,
+          "max_sp": 5,
+          "monsters": [
+            {
+              "index": 11,
+              "race": 27
+            }
+          ],
+          "sp": 5,
+          "turn": 33121
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 3,
+          "line": 3029,
+          "max_hp": 18,
+          "max_sp": 5,
+          "monsters": [
+            {
+              "index": 11,
+              "race": 27
+            }
+          ],
+          "sp": 5,
+          "turn": 33121
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 12,
+          "level": 3,
+          "line": 3030,
+          "max_hp": 18,
+          "max_sp": 5,
+          "monsters": [
+            {
+              "index": 11,
+              "race": 27
+            }
+          ],
+          "sp": 5,
+          "turn": 33211
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 36061,
+      "type": "death",
+      "witness": {
+        "cause": "a floating eye"
+      }
+    }
+  ]
+}

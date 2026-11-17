@@ -1,0 +1,141 @@
+{
+  "cases": [
+    {
+      "directory": "c4-r2-s1040022-i000",
+      "id": "c4-r2-s1040022-i000",
+      "incident_turn": 2231,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 2101,
+      "save_sha256": "ba12c0a9b9f67fb351f9f74595d57bebec23f76f10e2faabc626ab060db318c2"
+    },
+    {
+      "directory": "c4-r2-s1040022-i001",
+      "id": "c4-r2-s1040022-i001",
+      "incident_turn": 3519,
+      "incident_type": "death",
+      "initial_turn": 3400,
+      "save_sha256": "ea84437308a4d9757046db544d200152b427fd34262168ae0efce55d3e978783"
+    }
+  ],
+  "cls": 4,
+  "elapsed_seconds": 1.939271759999997,
+  "id": "c4-r2-s1040022",
+  "ordinal": 22,
+  "race": 2,
+  "retention": [
+    {
+      "archive": "encounters.jsonl.gz",
+      "archive_sha256": "5914cb4d11aee320bc619df8cb843c3e2f67bcc0bd59484543d2d8e8fe3b208d",
+      "path": "encounters.jsonl",
+      "sha256": "b8a959c6d1175163de3683cc01b847a5f9df63b04d9e9aa7675f6fbae320896e"
+    },
+    {
+      "archive": "trace.jsonl.gz",
+      "archive_sha256": "931838229d1f4e1a153c2dd5b1d047be47795ba9591b9c66de72eccd38612cff",
+      "path": "trace.jsonl",
+      "sha256": "edebc191c1bcfe8c20287373c20a2b1211fc75f0e6884731e887f9755a25d7de"
+    },
+    {
+      "archive": "keys.log.gz",
+      "archive_sha256": "6e1afc2d617d703763590dbec7943fb1abba22710e4d80dfa1ca34699415c5e3",
+      "path": "keys.log",
+      "sha256": "f5e78809ea67b4adb5de2c793bcfcb4745d49d2e6693eded7a1fb07295d2b4ed"
+    },
+    {
+      "archive": "messages.log.gz",
+      "archive_sha256": "4fb64fb94f4d31b582e91f7c307ec0947e5d50a694cd76066df10477d8d3edae",
+      "path": "messages.log",
+      "sha256": "9355bd7c30568a146cf3893365793464be00bf6664ac74b402ef63ae80cecce9"
+    },
+    {
+      "archive": "state.log.gz",
+      "archive_sha256": "ec51bf3a53b91e2fbe8869b547e7510210255109bd3fe278306515a688463106",
+      "path": "state.log",
+      "sha256": "aee40ca9d8827e55042b52c0be0362e357b5e687fdfc3ba85ae2135b3293f821"
+    }
+  ],
+  "seed": 1040022,
+  "status": "death",
+  "summary": {
+    "borg_decisions": 371,
+    "borg_rng": 2135587861,
+    "calendar": "fixed",
+    "class": "Necromancer",
+    "class_idx": 4,
+    "clevel": 1,
+    "dead": true,
+    "death_cause": "Grip, Farmer Maggot's Dog",
+    "depth": 1,
+    "effective_settings": {},
+    "exact_turns": false,
+    "game_options": {
+      "animate_flicker": false,
+      "auto_more": true,
+      "autoexplore_commands": false,
+      "birth_ai_learn": true,
+      "birth_connect_stairs": true,
+      "birth_feelings": true,
+      "birth_force_descend": false,
+      "birth_know_flavors": false,
+      "birth_know_runes": false,
+      "birth_levels_persist": false,
+      "birth_lose_arts": false,
+      "birth_no_artifacts": false,
+      "birth_no_recall": false,
+      "birth_no_selling": true,
+      "birth_percent_damage": false,
+      "birth_randarts": false,
+      "birth_stacking": true,
+      "birth_start_kit": true,
+      "center_player": false,
+      "cheat_hear": false,
+      "cheat_live": false,
+      "cheat_room": false,
+      "cheat_xtra": false,
+      "disturb_near": true,
+      "effective_speed": false,
+      "highlight_player": false,
+      "hp_changes_color": true,
+      "hybrid_walls": false,
+      "mouse_movement": true,
+      "notify_recharge": false,
+      "pickup_always": false,
+      "pickup_inven": true,
+      "purple_uniques": false,
+      "rogue_like_commands": false,
+      "score_hear": false,
+      "score_live": false,
+      "score_room": false,
+      "score_xtra": false,
+      "show_damage": false,
+      "show_flavors": false,
+      "show_target": true,
+      "solid_walls": false,
+      "use_old_target": false,
+      "use_sound": false,
+      "view_yellow_light": false
+    },
+    "game_rng": {
+      "quick": false,
+      "quick_rng": 2806015564,
+      "rng": "d125e30e477809e55def2215e8c1790182e5eba285d86f38290f86e780e39749aa9b1e55fbca0408a7adb2ae3672eb2ee7cd4643f2100304447b56af237c685b9df8ba4496b3032cde89b70e604681fc0abdc8cca351578d40843814b2bf73c43cca7adc6fcd47e1eba8ab64cc05b30c0367949983ce6e943a4d8c467d2ff12b",
+      "rng_index": 9
+    },
+    "game_turns": 3519,
+    "hp": -2,
+    "keys": 865,
+    "loaded": false,
+    "max_clevel": 1,
+    "max_depth": 1,
+    "max_hp": 11,
+    "menu_letters": true,
+    "player_energy": 35475,
+    "player_turns": 354,
+    "race": "Elf",
+    "race_idx": 2,
+    "resting_turns": 0,
+    "seed": 1040022,
+    "stop_reason": "death",
+    "wall_seconds": 0.863
+  }
+}

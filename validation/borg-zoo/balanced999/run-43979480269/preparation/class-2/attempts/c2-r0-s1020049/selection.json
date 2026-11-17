@@ -1,0 +1,175 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 6500,
+        "file": "checkpoint-000051-t0000006501.save",
+        "game_turn": 6501,
+        "keys": 1098,
+        "max_depth": 1,
+        "race_idx": 0,
+        "seed": 1020049
+      },
+      "selection": {
+        "first_visible_turn": 6571,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 12,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 516,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 6570
+      },
+      "status": "candidate",
+      "turn": 6571,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 512,
+          "max_hp": 12,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 31
+            }
+          ],
+          "sp": 2,
+          "turn": 6531
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 516,
+          "max_hp": 12,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 12,
+              "race": 19
+            }
+          ],
+          "sp": 2,
+          "turn": 6571
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 9,
+          "level": 1,
+          "line": 522,
+          "max_hp": 12,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 7371
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 10800,
+        "file": "checkpoint-000088-t0000010831.save",
+        "game_turn": 10831,
+        "keys": 1799,
+        "max_depth": 1,
+        "race_idx": 0,
+        "seed": 1020049
+      },
+      "selection": {
+        "kind": "first_observable_unseen_contact",
+        "monster_index": null,
+        "monster_kind": "unseen attacker",
+        "no_omniscient_trigger": true,
+        "observation_line": null,
+        "terminal_individual_identity": "unavailable",
+        "trigger_turn": 11083
+      },
+      "status": "candidate",
+      "turn": 11351,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 869,
+          "max_hp": 12,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 11351
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 869,
+          "max_hp": 12,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 11351
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 8,
+          "level": 1,
+          "line": 889,
+          "max_hp": 12,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 19
+            }
+          ],
+          "sp": 2,
+          "turn": 12051
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 11800,
+        "file": "checkpoint-000096-t0000012051.save",
+        "game_turn": 12051,
+        "keys": 1885,
+        "max_depth": 1,
+        "race_idx": 0,
+        "seed": 1020049
+      },
+      "selection": {
+        "first_visible_turn": 12051,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 15,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 889,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 12051
+      },
+      "status": "candidate",
+      "turn": 12084,
+      "type": "death",
+      "witness": {
+        "cause": "a giant yellow centipede"
+      }
+    }
+  ]
+}

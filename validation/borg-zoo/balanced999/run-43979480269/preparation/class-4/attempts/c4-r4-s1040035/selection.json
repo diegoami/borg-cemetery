@@ -1,0 +1,116 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 32200,
+        "file": "checkpoint-000309-t0000032200.save",
+        "game_turn": 32200,
+        "keys": 6445,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1040035
+      },
+      "selection": {
+        "first_visible_turn": 32279,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 10,
+        "monster_kind": "giant white centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 3077,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 32279
+      },
+      "status": "candidate",
+      "turn": 32445,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 5,
+          "level": 3,
+          "line": 3093,
+          "max_hp": 21,
+          "max_sp": 6,
+          "monsters": [
+            {
+              "index": 10,
+              "race": 20
+            },
+            {
+              "index": 9,
+              "race": 23
+            }
+          ],
+          "sp": 0,
+          "turn": 32435
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 3,
+          "line": 3094,
+          "max_hp": 21,
+          "max_sp": 6,
+          "monsters": [
+            {
+              "index": 10,
+              "race": 20
+            },
+            {
+              "index": 9,
+              "race": 23
+            }
+          ],
+          "sp": 0,
+          "turn": 32445
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 21,
+          "level": 3,
+          "line": 3116,
+          "max_hp": 21,
+          "max_sp": 6,
+          "monsters": [],
+          "sp": 0,
+          "turn": 32653
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 32700,
+        "file": "checkpoint-000314-t0000032703.save",
+        "game_turn": 32703,
+        "keys": 6555,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1040035
+      },
+      "selection": {
+        "first_visible_turn": 32783,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "acolyte",
+        "no_omniscient_trigger": true,
+        "observation_line": 3128,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 32783
+      },
+      "status": "candidate",
+      "turn": 32878,
+      "type": "death",
+      "witness": {
+        "cause": "an acolyte"
+      }
+    }
+  ]
+}

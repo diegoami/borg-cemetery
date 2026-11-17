@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 3000,
+        "file": "checkpoint-000030-t0000003002.save",
+        "game_turn": 3002,
+        "keys": 693,
+        "max_depth": 1,
+        "race_idx": 1,
+        "seed": 1020015
+      },
+      "selection": {
+        "first_visible_turn": 3002,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 8,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 312,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 3002
+      },
+      "status": "candidate",
+      "turn": 3108,
+      "type": "death",
+      "witness": {
+        "cause": "a giant yellow centipede"
+      }
+    }
+  ]
+}

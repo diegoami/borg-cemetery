@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 8100,
+        "file": "checkpoint-000081-t0000008102.save",
+        "game_turn": 8102,
+        "keys": 1719,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1020047
+      },
+      "selection": {
+        "first_visible_turn": 8181,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 5,
+        "monster_kind": "soldier",
+        "no_omniscient_trigger": true,
+        "observation_line": 827,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 8181
+      },
+      "status": "candidate",
+      "turn": 8191,
+      "type": "death",
+      "witness": {
+        "cause": "a soldier"
+      }
+    }
+  ]
+}

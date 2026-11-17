@@ -1,0 +1,91 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 17500,
+        "file": "checkpoint-000169-t0000017532.save",
+        "game_turn": 17532,
+        "keys": 3530,
+        "max_depth": 1,
+        "race_idx": 6,
+        "seed": 1020040
+      },
+      "selection": {
+        "first_visible_turn": 17552,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 2,
+        "monster_kind": "cave spider",
+        "no_omniscient_trigger": true,
+        "observation_line": 1697,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 17552
+      },
+      "status": "candidate",
+      "turn": 17602,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 1702,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 50
+            }
+          ],
+          "sp": 2,
+          "turn": 17602
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 1702,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 50
+            }
+          ],
+          "sp": 2,
+          "turn": 17602
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 9,
+          "level": 1,
+          "line": 1703,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 50
+            }
+          ],
+          "sp": 2,
+          "turn": 17612
+        }
+      }
+    },
+    {
+      "reason": "environmental death needs a separate observable-trigger adapter",
+      "status": "excluded",
+      "turn": 17630,
+      "type": "death",
+      "witness": {
+        "cause": "a fatal wound"
+      }
+    }
+  ]
+}

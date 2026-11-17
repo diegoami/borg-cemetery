@@ -1,0 +1,86 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 9200,
+        "file": "checkpoint-000086-t0000009203.save",
+        "game_turn": 9203,
+        "keys": 1733,
+        "max_depth": 1,
+        "race_idx": 2,
+        "seed": 1030066
+      },
+      "selection": {
+        "first_visible_turn": 9213,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 15,
+        "monster_kind": "rock lizard",
+        "no_omniscient_trigger": true,
+        "observation_line": 830,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 9213
+      },
+      "status": "candidate",
+      "turn": 9323,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 841,
+          "max_hp": 17,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 28
+            }
+          ],
+          "sp": 2,
+          "turn": 9323
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 841,
+          "max_hp": 17,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 28
+            }
+          ],
+          "sp": 2,
+          "turn": 9323
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 15,
+          "level": 2,
+          "line": 847,
+          "max_hp": 17,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 4,
+          "turn": 10123
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 35230,
+      "type": "death",
+      "witness": {
+        "cause": "poison"
+      }
+    }
+  ]
+}

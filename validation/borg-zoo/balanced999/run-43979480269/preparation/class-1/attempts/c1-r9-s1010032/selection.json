@@ -1,0 +1,113 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 1200,
+        "file": "checkpoint-000012-t0000001202.save",
+        "game_turn": 1202,
+        "keys": 310,
+        "max_depth": 1,
+        "race_idx": 9,
+        "seed": 1010032
+      },
+      "selection": {
+        "first_visible_turn": 1242,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 16,
+        "monster_kind": "grey mold",
+        "no_omniscient_trigger": true,
+        "observation_line": 134,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 1238
+      },
+      "status": "candidate",
+      "turn": 1252,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 1,
+          "level": 1,
+          "line": 135,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 16,
+              "race": 17
+            }
+          ],
+          "sp": 2,
+          "turn": 1252
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 1,
+          "level": 1,
+          "line": 135,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 16,
+              "race": 17
+            }
+          ],
+          "sp": 2,
+          "turn": 1252
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 10,
+          "level": 1,
+          "line": 137,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 18,
+              "race": 25
+            }
+          ],
+          "sp": 2,
+          "turn": 1272
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 66100,
+        "file": "checkpoint-000660-t0000066104.save",
+        "game_turn": 66104,
+        "keys": 13693,
+        "max_depth": 1,
+        "race_idx": 9,
+        "seed": 1010032
+      },
+      "selection": {
+        "first_visible_turn": 66154,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 2,
+        "monster_kind": "wild dog",
+        "no_omniscient_trigger": true,
+        "observation_line": 6596,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 66154
+      },
+      "status": "candidate",
+      "turn": 66163,
+      "type": "death",
+      "witness": {
+        "cause": "a wild dog"
+      }
+    }
+  ]
+}

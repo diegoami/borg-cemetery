@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1030034",
+  "run_kind": "harness",
+  "character": "Hobbit Priest",
+  "raw_cause": "a giant yellow centipede",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 12738,
+    "race_idx": 3,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1030034,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "3e22fca470eff118ffde0c096fa65d9cf79a6f9b14a151674833cae6292b7ad7",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 1268
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c3-r3-s1030034",
+      "result_sha256": "18f990b517142e7031b2e5738fb9f4112e8fa08a9ca31dd6ffb84bee92b96969",
+      "raw_sha256": {
+        "keys.log": "18f990b517142e7031b2e5738fb9f4112e8fa08a9ca31dd6ffb84bee92b96969",
+        "messages.log": "fa84e1f8ece4283bdee329ec3228206f8e4e885493613e1bcbd8caaa4f422b38",
+        "state.log": "bff11ec87f288cf6af9a6e0f1e9fa3322ce98b18b99e54d40abd3159ca9e864f"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-c20d20f22f839c94f8fcfd515b9b3e7efecb6972dff791a8d3e8b929983c0e74",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "9d9fe0e3ebc060487bc1b3f69e4e769cce98027a382d561f68226cb81018b051",
+    "depths.json": "7db9acef483887eea345b258aa75233bd2cb8c565c81c22e490c6f6135bc3b33",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "a91f5396fc23447dac619a66817153f3e27e906975b99e8567cfc625b23cab25",
+    "trace-tail.jsonl": "5f3e906d693ac45340a51910e5adadb61398d7dc9e5bd133c3d62706e6e1e30a"
+  },
+  "investigation": null,
+  "issue": null
+}

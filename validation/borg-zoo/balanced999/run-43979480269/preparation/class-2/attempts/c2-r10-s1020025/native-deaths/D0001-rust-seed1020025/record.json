@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1020025",
+  "run_kind": "harness",
+  "character": "Kobold Druid",
+  "raw_cause": "a clear icky thing",
+  "terminal": {
+    "cause": "a clear icky thing",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 12178,
+    "race_idx": 10,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020025,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "7ef4c3a614440795a859cc733db093ade40a80c70607347f7fd4bff2b4df6afb",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 1074
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c2-r10-s1020025",
+      "result_sha256": "46377c0551a98e061b5aeabb82b16a5338524f326226a6b0d4d1a2c3504342f7",
+      "raw_sha256": {
+        "keys.log": "46377c0551a98e061b5aeabb82b16a5338524f326226a6b0d4d1a2c3504342f7",
+        "messages.log": "07d6001ec90c1383500b53ee72370e8b531c585992ec1c61b4ed53641b6478ce",
+        "state.log": "bff2e92b4fa84817581b7fbd077eca29cbf876ef65d3f3c7561793a0f47fa42c"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-8f4fdc531193c5fdd6b37a2d6b7f87a8c89c0570ff4cfd661dc5877b5412e1ce",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "acba60c193ff7f1b0027b295007aff3b72f38c743666d8d6458623a1ad88fe26",
+    "depths.json": "fc818086d355b33ec681b7854bf1e7275d12f6f4b12d9dc6b4019f67c80edfe6",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "d9b33412fb8dc7322bd93159b0683ed7f963044e151d6745267d6e3016217bdf",
+    "trace-tail.jsonl": "a7aa1c71483d827c4a3639dbc42b08c39f3f4f2e8d719880992806ef2a0fe26f"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -1,0 +1,113 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 0,
+        "due_turn": 17100,
+        "file": "checkpoint-000171-t0000017101.save",
+        "game_turn": 17101,
+        "keys": 3582,
+        "max_depth": 1,
+        "race_idx": 6,
+        "seed": 1020018
+      },
+      "selection": {
+        "first_visible_turn": 17181,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 2,
+        "monster_kind": "battle-scarred veteran",
+        "no_omniscient_trigger": true,
+        "observation_line": 1733,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 17181
+      },
+      "status": "candidate",
+      "turn": 17201,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 0,
+          "hp": 1,
+          "level": 1,
+          "line": 1735,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 14
+            }
+          ],
+          "sp": 2,
+          "turn": 17201
+        },
+        "minimum": {
+          "depth": 0,
+          "hp": 1,
+          "level": 1,
+          "line": 1735,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 14
+            }
+          ],
+          "sp": 2,
+          "turn": 17201
+        },
+        "recovery": {
+          "depth": 0,
+          "hp": 13,
+          "level": 1,
+          "line": 1737,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 14
+            }
+          ],
+          "sp": 2,
+          "turn": 17221
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 0,
+        "due_turn": 17200,
+        "file": "checkpoint-000172-t0000017201.save",
+        "game_turn": 17201,
+        "keys": 3602,
+        "max_depth": 1,
+        "race_idx": 6,
+        "seed": 1020018
+      },
+      "selection": {
+        "first_visible_turn": 17271,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 2,
+        "monster_kind": "battle-scarred veteran",
+        "no_omniscient_trigger": true,
+        "observation_line": 1742,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 17271
+      },
+      "status": "candidate",
+      "turn": 17387,
+      "type": "death",
+      "witness": {
+        "cause": "a battle-scarred veteran"
+      }
+    }
+  ]
+}

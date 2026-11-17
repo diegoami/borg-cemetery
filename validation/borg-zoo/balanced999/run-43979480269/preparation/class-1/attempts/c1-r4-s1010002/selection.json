@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 81600,
+        "file": "checkpoint-000800-t0000081607.save",
+        "game_turn": 81607,
+        "keys": 16403,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1010002
+      },
+      "selection": {
+        "first_visible_turn": 81617,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 57,
+        "monster_kind": "giant white mouse",
+        "no_omniscient_trigger": true,
+        "observation_line": 7958,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 81610
+      },
+      "status": "candidate",
+      "turn": 82082,
+      "type": "death",
+      "witness": {
+        "cause": "a giant white mouse"
+      }
+    }
+  ]
+}

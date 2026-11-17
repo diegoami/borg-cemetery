@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 1500,
+        "file": "checkpoint-000015-t0000001501.save",
+        "game_turn": 1501,
+        "keys": 405,
+        "max_depth": 1,
+        "race_idx": 0,
+        "seed": 1010082
+      },
+      "selection": {
+        "first_visible_turn": 1511,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 2,
+        "monster_kind": "cutpurse",
+        "no_omniscient_trigger": true,
+        "observation_line": 163,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 1511
+      },
+      "status": "candidate",
+      "turn": 1568,
+      "type": "death",
+      "witness": {
+        "cause": "a cutpurse"
+      }
+    }
+  ]
+}

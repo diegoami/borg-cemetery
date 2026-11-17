@@ -1,0 +1,98 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 0,
+        "due_turn": 9800,
+        "file": "checkpoint-000086-t0000009801.save",
+        "game_turn": 9801,
+        "keys": 1843,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1020068
+      },
+      "selection": {
+        "first_visible_turn": 9891,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 8,
+        "monster_kind": "spotted mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 848,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 9891
+      },
+      "status": "candidate",
+      "turn": 9921,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 850,
+          "max_hp": 19,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 2,
+          "turn": 9911
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 3,
+          "level": 2,
+          "line": 851,
+          "max_hp": 19,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 2,
+          "turn": 9921
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 15,
+          "level": 2,
+          "line": 853,
+          "max_hp": 19,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 4,
+          "turn": 10681
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 46800,
+        "file": "checkpoint-000438-t0000046804.save",
+        "game_turn": 46804,
+        "keys": 8972,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1020068
+      },
+      "selection": {
+        "first_visible_turn": 46844,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 13,
+        "monster_kind": "rock lizard",
+        "no_omniscient_trigger": true,
+        "observation_line": 4317,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 46844
+      },
+      "status": "candidate",
+      "turn": 47750,
+      "type": "death",
+      "witness": {
+        "cause": "poison"
+      }
+    }
+  ]
+}

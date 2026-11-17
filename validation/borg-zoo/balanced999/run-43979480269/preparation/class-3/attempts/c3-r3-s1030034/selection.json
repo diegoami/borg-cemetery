@@ -1,0 +1,137 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 12500,
+        "file": "checkpoint-000125-t0000012502.save",
+        "game_turn": 12502,
+        "keys": 2549,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1030034
+      },
+      "selection": {
+        "first_visible_turn": 12582,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 30,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 1253,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 12582
+      },
+      "status": "candidate",
+      "turn": 12712,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 1266,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 16,
+              "race": 27
+            },
+            {
+              "index": 22,
+              "race": 24
+            },
+            {
+              "index": 30,
+              "race": 19
+            }
+          ],
+          "sp": 2,
+          "turn": 12712
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 1266,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 16,
+              "race": 27
+            },
+            {
+              "index": 22,
+              "race": 24
+            },
+            {
+              "index": 30,
+              "race": 19
+            }
+          ],
+          "sp": 2,
+          "turn": 12712
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 5,
+          "level": 1,
+          "line": 1267,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 16,
+              "race": 27
+            },
+            {
+              "index": 22,
+              "race": 24
+            },
+            {
+              "index": 30,
+              "race": 19
+            }
+          ],
+          "sp": 2,
+          "turn": 12722
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 12500,
+        "file": "checkpoint-000125-t0000012502.save",
+        "game_turn": 12502,
+        "keys": 2549,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1030034
+      },
+      "selection": {
+        "first_visible_turn": 12582,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 30,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 1253,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 12582
+      },
+      "status": "duplicate_saved_start",
+      "turn": 12738,
+      "type": "death",
+      "witness": {
+        "cause": "a giant yellow centipede"
+      }
+    }
+  ]
+}

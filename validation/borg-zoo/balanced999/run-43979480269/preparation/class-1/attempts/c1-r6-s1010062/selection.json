@@ -1,0 +1,103 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 2300,
+        "file": "checkpoint-000023-t0000002301.save",
+        "game_turn": 2301,
+        "keys": 616,
+        "max_depth": 1,
+        "race_idx": 6,
+        "seed": 1010062
+      },
+      "selection": {
+        "first_visible_turn": 2311,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 8,
+        "monster_kind": "grey mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 250,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 2311
+      },
+      "status": "candidate",
+      "turn": 2361,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 254,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 8,
+              "race": 18
+            }
+          ],
+          "sp": 1,
+          "turn": 2351
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 2,
+          "line": 255,
+          "max_hp": 15,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 1,
+          "turn": 2361
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 15,
+          "level": 2,
+          "line": 256,
+          "max_hp": 15,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 1,
+          "turn": 2371
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 27300,
+        "file": "checkpoint-000267-t0000027301.save",
+        "game_turn": 27301,
+        "keys": 5599,
+        "max_depth": 1,
+        "race_idx": 6,
+        "seed": 1010062
+      },
+      "selection": {
+        "first_visible_turn": 27391,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 22,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 2670,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 27391
+      },
+      "status": "candidate",
+      "turn": 27429,
+      "type": "death",
+      "witness": {
+        "cause": "a giant yellow centipede"
+      }
+    }
+  ]
+}

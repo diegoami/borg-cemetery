@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 16600,
+        "file": "checkpoint-000159-t0000016651.save",
+        "game_turn": 16651,
+        "keys": 3430,
+        "max_depth": 1,
+        "race_idx": 2,
+        "seed": 1010099
+      },
+      "selection": {
+        "first_visible_turn": 16691,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 11,
+        "monster_kind": "grey mold",
+        "no_omniscient_trigger": true,
+        "observation_line": 1609,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 16683
+      },
+      "status": "candidate",
+      "turn": 16694,
+      "type": "death",
+      "witness": {
+        "cause": "a grey mold"
+      }
+    }
+  ]
+}

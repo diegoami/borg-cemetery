@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 0,
+        "due_turn": 100,
+        "file": "checkpoint-000001-t0000000101.save",
+        "game_turn": 101,
+        "keys": 22,
+        "max_depth": 0,
+        "race_idx": 10,
+        "seed": 1010003
+      },
+      "selection": {
+        "first_visible_turn": 161,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 1,
+        "monster_kind": "battle-scarred veteran",
+        "no_omniscient_trigger": true,
+        "observation_line": 17,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 161
+      },
+      "status": "candidate",
+      "turn": 1167,
+      "type": "death",
+      "witness": {
+        "cause": "a battle-scarred veteran"
+      }
+    }
+  ]
+}

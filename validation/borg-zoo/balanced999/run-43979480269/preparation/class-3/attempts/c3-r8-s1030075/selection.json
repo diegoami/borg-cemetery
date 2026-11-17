@@ -1,0 +1,136 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 4,
+        "depth": 1,
+        "due_turn": 59500,
+        "file": "checkpoint-000588-t0000059505.save",
+        "game_turn": 59505,
+        "keys": 12043,
+        "max_depth": 1,
+        "race_idx": 8,
+        "seed": 1030075
+      },
+      "selection": {
+        "first_visible_turn": 59553,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 32,
+        "monster_kind": "giant white mouse",
+        "no_omniscient_trigger": true,
+        "observation_line": 5847,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 59543
+      },
+      "status": "candidate",
+      "turn": 59553,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 11,
+          "level": 4,
+          "line": 5835,
+          "max_hp": 47,
+          "max_sp": 8,
+          "monsters": [
+            {
+              "index": 75,
+              "race": 23
+            },
+            {
+              "index": 53,
+              "race": 23
+            },
+            {
+              "index": 82,
+              "race": 23
+            },
+            {
+              "index": 81,
+              "race": 23
+            },
+            {
+              "index": 58,
+              "race": 23
+            },
+            {
+              "index": 57,
+              "race": 23
+            },
+            {
+              "index": 63,
+              "race": 23
+            },
+            {
+              "index": 50,
+              "race": 23
+            }
+          ],
+          "sp": 8,
+          "turn": 59437
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 8,
+          "level": 5,
+          "line": 5847,
+          "max_hp": 51,
+          "max_sp": 10,
+          "monsters": [
+            {
+              "index": 32,
+              "race": 23
+            }
+          ],
+          "sp": 8,
+          "turn": 59553
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 26,
+          "level": 5,
+          "line": 5947,
+          "max_hp": 51,
+          "max_sp": 10,
+          "monsters": [],
+          "sp": 10,
+          "turn": 60545
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 5,
+        "depth": 1,
+        "due_turn": 65300,
+        "file": "checkpoint-000646-t0000065306.save",
+        "game_turn": 65306,
+        "keys": 13347,
+        "max_depth": 1,
+        "race_idx": 8,
+        "seed": 1030075
+      },
+      "selection": {
+        "first_visible_turn": 65345,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 5,
+        "monster_kind": "giant white mouse",
+        "no_omniscient_trigger": true,
+        "observation_line": 6433,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 65345
+      },
+      "status": "candidate",
+      "turn": 65751,
+      "type": "death",
+      "witness": {
+        "cause": "a giant white mouse"
+      }
+    }
+  ]
+}

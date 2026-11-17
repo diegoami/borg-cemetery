@@ -1,0 +1,141 @@
+{
+  "cases": [
+    {
+      "directory": "c1-r3-s1010056-i000",
+      "id": "c1-r3-s1010056-i000",
+      "incident_turn": 7312,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 6002,
+      "save_sha256": "41789f9b8948615c8dfa6973e3c38aa0093d19cd8cf2d26b2a545b286c325375"
+    },
+    {
+      "directory": "c1-r3-s1010056-i002",
+      "id": "c1-r3-s1010056-i002",
+      "incident_turn": 40718,
+      "incident_type": "death",
+      "initial_turn": 40609,
+      "save_sha256": "4c0970cefd9741ebfb17a1199a95b5ba94c601740f7f9cfbf74f1f75d98636d5"
+    }
+  ],
+  "cls": 1,
+  "elapsed_seconds": 20.58253426600004,
+  "id": "c1-r3-s1010056",
+  "ordinal": 56,
+  "race": 3,
+  "retention": [
+    {
+      "archive": "encounters.jsonl.gz",
+      "archive_sha256": "8b3097c3f1a571d021295dea753d9fb102f26c1f92baee882fe7f9c8195e91d4",
+      "path": "encounters.jsonl",
+      "sha256": "8db11caadb3a7b3afb0a11a32e52c12e252dadb53c5b8ede01a6dc63e2d21c88"
+    },
+    {
+      "archive": "trace.jsonl.gz",
+      "archive_sha256": "ba1d7e21a16aeb09388770be6408acb9b9742d35f828c7a675b4794672ce2d57",
+      "path": "trace.jsonl",
+      "sha256": "363d632e9d15ded375ca67b66fb212250c4829ce936bce0431dc54267d53b766"
+    },
+    {
+      "archive": "keys.log.gz",
+      "archive_sha256": "c258383abcafc900b0486d177104724cd1ec8bf628e0dbaf89906b5c4414b9d5",
+      "path": "keys.log",
+      "sha256": "445af8571a14bd38b92b503ccae58c513823cb6b7dbefb2735313340094188ba"
+    },
+    {
+      "archive": "messages.log.gz",
+      "archive_sha256": "1abe63aea9d3c01b1d7cb279ca89343ac1893cd2218c7cad626d75675c53a719",
+      "path": "messages.log",
+      "sha256": "b2f8481d6f63ac8b974ffbe7a3d051b3a7750b037e069159c4711a4da9779aea"
+    },
+    {
+      "archive": "state.log.gz",
+      "archive_sha256": "ca072feea60d4dc5be564f2935f5e996f4b8d06f382a74f963ec380814c5cbe5",
+      "path": "state.log",
+      "sha256": "fa07b07ffc2773fd62dd932f8d5662ec2dd17a74e874748d33a769236ca0ec18"
+    }
+  ],
+  "seed": 1010056,
+  "status": "death",
+  "summary": {
+    "borg_decisions": 3807,
+    "borg_rng": 2135587861,
+    "calendar": "fixed",
+    "class": "Mage",
+    "class_idx": 1,
+    "clevel": 4,
+    "dead": true,
+    "death_cause": "a wild cat",
+    "depth": 2,
+    "effective_settings": {},
+    "exact_turns": false,
+    "game_options": {
+      "animate_flicker": false,
+      "auto_more": true,
+      "autoexplore_commands": false,
+      "birth_ai_learn": true,
+      "birth_connect_stairs": true,
+      "birth_feelings": true,
+      "birth_force_descend": false,
+      "birth_know_flavors": false,
+      "birth_know_runes": false,
+      "birth_levels_persist": false,
+      "birth_lose_arts": false,
+      "birth_no_artifacts": false,
+      "birth_no_recall": false,
+      "birth_no_selling": true,
+      "birth_percent_damage": false,
+      "birth_randarts": false,
+      "birth_stacking": true,
+      "birth_start_kit": true,
+      "center_player": false,
+      "cheat_hear": false,
+      "cheat_live": false,
+      "cheat_room": false,
+      "cheat_xtra": false,
+      "disturb_near": true,
+      "effective_speed": false,
+      "highlight_player": false,
+      "hp_changes_color": true,
+      "hybrid_walls": false,
+      "mouse_movement": true,
+      "notify_recharge": false,
+      "pickup_always": false,
+      "pickup_inven": true,
+      "purple_uniques": false,
+      "rogue_like_commands": false,
+      "score_hear": false,
+      "score_live": false,
+      "score_room": false,
+      "score_xtra": false,
+      "show_damage": false,
+      "show_flavors": false,
+      "show_target": true,
+      "solid_walls": false,
+      "use_old_target": false,
+      "use_sound": false,
+      "view_yellow_light": false
+    },
+    "game_rng": {
+      "quick": false,
+      "quick_rng": 1803165179,
+      "rng": "eb127919d5e33c1cf24c3334a1589066659139bfab6c2ce1ece9fb7f5df2bc3a654e668b7a1e8499ab9e8999e373ac3006e16c9aee741793811bfdec62299402517e16bcf46f9c1d5b708f2a81eceaf02c2e3db80026818ef0ce84729f376e5033f96acdedb92999475d7226fc64370586441124d161a289af156976ef909430",
+      "rng_index": 4
+    },
+    "game_turns": 40718,
+    "hp": -1,
+    "keys": 7969,
+    "loaded": false,
+    "max_clevel": 4,
+    "max_depth": 2,
+    "max_hp": 25,
+    "menu_letters": true,
+    "player_energy": 408230,
+    "player_turns": 4082,
+    "race": "Hobbit",
+    "race_idx": 3,
+    "resting_turns": 310,
+    "seed": 1010056,
+    "stop_reason": "death",
+    "wall_seconds": 17.706
+  }
+}

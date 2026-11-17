@@ -1,0 +1,34 @@
+{
+  "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+  "borg_txt": {
+    "path": "validation/borg-zoo/balanced999/run-43979480269/reproduction-inputs/borg-configs/race6-class4.txt",
+    "sha256": "1df53d29d600b3cdfec566f46c7410ea3d4194f1deda82bb85362eed76e4930f"
+  },
+  "class_idx": 4,
+  "environment": {
+    "BORG_CORE": "reborn"
+  },
+  "flags": "menu",
+  "independent_life": false,
+  "original_continuation_verified": false,
+  "profile": {
+    "path": "validation/borg-zoo/balanced999/run-43979480269/reproduction-inputs/profile.txt",
+    "sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91"
+  },
+  "race_idx": 6,
+  "record": {
+    "path": "validation/borg-zoo/balanced999/run-43979480269/preparation/class-4/attempts/c4-r6-s1040018/native-deaths/D0001-rust-seed1040018/record.json",
+    "sha256": "46bdd42fc3e5ebb01d4f2e1f9662d4c2ecd7209049c4e26bb952a1dd8f89defd"
+  },
+  "repository": "diegoami/borg-reborn-rs",
+  "runtime": {
+    "path": "validation/borg-zoo/balanced999/run-43979480269/reproduction-inputs/runtime.json",
+    "sha256": "d30ef87bcd2215f4d84166db653a2dc52ac2b6983499c988043e71f502137ca8"
+  },
+  "schema": "borg-cemetery/native-death-recipe@1",
+  "seed": 1040018,
+  "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+  "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+  "start": "birth",
+  "turn_cap": 100000
+}
