@@ -61,8 +61,9 @@ def configured_adapter(template, plan=None, exact_turns=False):
             text = override(text, 'borg_plan', 'selected-plan.txt')
         (raw / 'user/borg.txt').write_text(text)
         env = {k: v for k, v in inherited.items() if not k.startswith(('BORG_', 'ANGBAND_'))}
-        if 'BORG_CEMETERY_DIR' in inherited:
-            env['BORG_CEMETERY_DIR'] = inherited['BORG_CEMETERY_DIR']
+        for name in ('BORG_CEMETERY_DIR', 'BORG_OBSERVATION_LOG'):
+            if name in inherited:
+                env[name] = inherited[name]
         env.update(BORG_CORE='borg-rs', BORG_CORE_OVERRIDES='on', BORG_RUN_DIR=str(raw),
                    TZ='UTC', LANG='C.UTF-8', LC_ALL='C.UTF-8')
         argv = [str(binary), '-mborgh']
