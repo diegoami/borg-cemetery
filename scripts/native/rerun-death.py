@@ -187,8 +187,10 @@ def plan(case_dir):
     }
 
 
-def run_zoo(p, out, logs_env, checkpoint_every):
-    """Start the game as borg-zoo's runner did (zoo/borgrs.py run_cell/command)."""
+def run_zoo(p, out, logs_env, checkpoint_every, extra=()):
+    """Start the game as borg-zoo's runner did (zoo/borgrs.py run_cell/command).
+    EXTRA borgh options (e.g. -keys N -screen, scripts/animate_death.py) are
+    appended; the caller checks that they leave the key stream unchanged."""
     zoo, run = p['zoo'], out / 'run'
     text = zoo_borg_txt(zoo, ROOT)
     for d in ('user', 'save', 'archive', 'panic', 'scores'):
@@ -206,6 +208,7 @@ def run_zoo(p, out, logs_env, checkpoint_every):
     cmd += ['-statelog', str(run / 'state.log'), '-msglog', str(run / 'messages.log')]
     if checkpoint_every:
         cmd += ['-checkpoint-every', str(checkpoint_every), '-checkpoint-dir', str(run / 'checkpoints')]
+    cmd += [str(x) for x in extra]
     # Zoo cleared every ambient BORG_* variable; only this tool's logs are set.
     env = {k: v for k, v in os.environ.items() if not k.startswith('BORG_')}
     env.update({k: v for k, v in logs_env.items() if k in ('BORG_OBSERVATION_LOG', 'BORG_WORLD_LOG', 'BORG_KNOWLEDGE_LOG')})

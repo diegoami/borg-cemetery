@@ -26,6 +26,14 @@ Core decision trace: the last 200 of 2694 thinks in `trace-core-tail.jsonl`, wit
 
 **Unassessed.** Basic dossier written by `tools/export-death.py` at the end of the run (RULES 12). Upgrade it with the full death tooling (T1.6) before investigating.
 
+## Last turns before the death
+
+One frame per turn in which the Borg acted, each a rerun from birth stopped there whose keys match the original game (`scripts/animate_death.py`). The receipt beside each animation lists every frame.
+
+**Last 50 turns** · [receipt](media/last-50-turns.json)
+
+![Last 50 turns](media/last-50-turns.gif)
+
 ## Read and replay
 
 - [Original written report](report.md)
