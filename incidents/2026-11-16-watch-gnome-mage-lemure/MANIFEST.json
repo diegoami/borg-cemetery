@@ -1,0 +1,29 @@
+{
+  "kind": "watched-game working save (not a recording, not a measured run)",
+  "date": "2026-11-16",
+  "launcher": "watch-borg.sh --name RustBorg (X11, recorder off)",
+  "source_repo": "diegoami/borg-reborn-rs",
+  "source_commit": "f02cd2940a7439a8965b3883270a9a73df7e0bf5",
+  "source_tree_clean_at_launch": true,
+  "watch_binary_sha256": "906a3995cef841dc9d7c8f953eb2e9592ef3dfc7323b3208e0ff599f26cb268b",
+  "watch_binary_note": "executable stays local (build/watch/game/angband); rebuild from source_commit with ./watch-borg.sh --build-only",
+  "character": "RustBorg, Gnome Mage",
+  "outcome": "killed by a lemure on dungeon level 13 at character level 9/9, exp 1728, gold 4225, game turn 848506 (from archive/borg-log.txt)",
+  "config": "borg.txt = harness/borg.txt at source_commit with borg_reborn_core=borg-rs, borg_town_plan=1, borg_trip_policy=1, borg_trip_unknown_stacks=5, borg_trip_pack_slack=1, borg_param_* attack-preference and caution_heal values, borg_plan=errands_plan.txt (appended)",
+  "plan": "errands_plan.txt = harness/plans/errands_plan.txt (mage: level 9 -> max-depth 4)",
+  "open_question": "death at DL13 is far below the plan's cap for a level 9 mage (max-depth 4); not yet explained",
+  "limits": [
+    "no recording: input/key stream and birth seed unknown",
+    "save was copied while the game process was still running",
+    "borg.dat/save header read isDead=0 '(saved)' while borg-log.txt records the death"
+  ],
+  "files_sha256": {
+    "CharOutput.txt": "4509b873754574e0f7b6e1c35a8cdcda98faf824048fa94a29563a00c8d57a1d",
+    "RustBorg.map": "d776e85b2a906bb91d3a6441a8f75fc337fc6393ffa0b019dca191f23c36b4e7",
+    "RustBorg.save": "c3f51cebca308fd5506ac21ab9eda9cd7dc1311667cd8812f36cdaf9bd721c89",
+    "borg-log.txt": "cf20e7ba024dc79f62587924619f838cdd9fcc8515d5cfc45d79268474d72e81",
+    "borg.dat": "b36e0c88a961948b5691687d4acd7245d7796fdee6279e96e4ceb6b74083464c",
+    "borg.txt": "ef215f24dc5636344da904fe1902dcc06fa968181b8b2a2d4fdc1d40867b2ff1",
+    "errands_plan.txt": "084bc3e8999697bd8edf7fd302ea75d65b50ef2714afdd3a47354a1f24137e87"
+  }
+}
