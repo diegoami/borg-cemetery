@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1970010",
+  "run_kind": "harness",
+  "character": "High-Elf Ranger",
+  "raw_cause": "a cutpurse",
+  "terminal": {
+    "cause": "a cutpurse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 14517,
+    "race_idx": 9,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1970010,
+    "flags": "menu",
+    "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+    "git_dirty": "no",
+    "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5",
+    "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+    "borg_txt_sha256": "14982da09449ed07d7afc8ca74ceee14ec5e4aa1c48852a5bc6e05d32c07728a",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1562
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c7-r9-s1970010",
+      "result_sha256": "a84b29c8d512444c3bf08166641cb092257dd0ab5219aa86735090ca65562b61",
+      "raw_sha256": {
+        "keys.log": "a84b29c8d512444c3bf08166641cb092257dd0ab5219aa86735090ca65562b61",
+        "messages.log": "1e76f52859e9977e9e0b12c3498b076b0443c29c543f78a1461979a7d5a288de",
+        "state.log": "dc36f013eb12d70addf2826412686ed2a9ab72d6da0b9fcfa6ac14bb9114116c"
+      },
+      "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+      "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e"
+    }
+  ],
+  "encounter_family": "start-06157b24cdac4bb90b6ebb0f9424852de189bc5a386b168edc3ad30022cd5e24",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+    "config.txt": "ba39bf35fe69b0ff9fd010e3177f0bdb1d7a92ecdd20ae3beb8f408ede685af3",
+    "depths.json": "267990e5121f822e127ccfcbb98b3f0b832485c8f279356206c5613fc7791405",
+    "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+    "summary.json": "93db14220f6fb85009f3a0e51af210a923a74eb8bf48bdd2d704b60e656255bd",
+    "trace-core-tail.jsonl": "e8bbada30883a7f09fa7d323f4c48d711d7a371b65d451244cfe222bf25c5af6"
+  },
+  "investigation": null,
+  "issue": null
+}

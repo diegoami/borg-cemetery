@@ -140,6 +140,19 @@ def one(source, root, cls, ordinal, spec):
     return row
 
 
+def require_capture_support(source, spec):
+    """Refuse the known missing capture interface before scheduling natural lives.
+
+    This source check is only a negative capability check. A real smoke still
+    has to validate emitted streams, native saved starts and bounded restarts.
+    """
+    if 'suite_id' not in spec:
+        return
+    code = list((source / 'borg-reborn-rs/src').glob('*.rs')) + list((source / 'engine/frontend').glob('*.c'))
+    if not any('BORG_ENCOUNTER_LOG' in path.read_text() for path in code):
+        raise ValueError('preparation source lacks BORG_ENCOUNTER_LOG; cannot qualify observable encounter onset or native coverage for this suite')
+
+
 def run(spec_path, source, root, cls, tools, smoke=False):
     spec = read(spec_path)
     original_spec_sha256 = sha(spec_path)
@@ -157,6 +170,7 @@ def run(spec_path, source, root, cls, tools, smoke=False):
         if (sha(source / 'harness/borg.txt') != spec['configuration']['borg_txt_sha256'] or
                 sha(source / 'harness/profiles/reborn-default.txt') != spec['configuration']['profile_sha256']):
             raise ValueError('preparation configuration changed')
+    require_capture_support(source, spec)
     goal = spec['smoke']['target_per_class'] if smoke else spec['target_per_class']
     if smoke:
         spec.update(seed_base=spec['smoke_seed_base'], max_attempts_per_class=spec['smoke']['max_attempts_per_class'])

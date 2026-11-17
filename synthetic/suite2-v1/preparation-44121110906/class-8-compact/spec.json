@@ -1,0 +1,60 @@
+{
+  "checkpoint_every": 100,
+  "classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "configuration": {
+    "borg_txt_sha256": "498475fafe7c84ef4ba19c8e29e4644ad0c47ff9c3431781e601e366cd3169f9",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91"
+  },
+  "core": "borg-rs",
+  "exclusion": {
+    "path": "exclude-suite1.json",
+    "sha256": "5be7993eef6c5f762e47f1a25c05ce8ef9a9bc113d0515212e1f206b95a35a01"
+  },
+  "horizon_engine_turns": 2000,
+  "max_attempts_per_class": 12,
+  "minimum_capture_level": 1,
+  "native_tools_commit": "09225018dd5f2d4336a16b29478793d902c70dc3",
+  "near_death_definition": {
+    "actual_hp_loss_required": true,
+    "counterfactual_qualification": "unavailable",
+    "max_hp_fraction": 0.25,
+    "recovery_hp_fraction": 0.5
+  },
+  "races": [
+    2,
+    3,
+    4,
+    10,
+    1,
+    0,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "schema": "borg-cemetery/balanced-incident-harvest-spec@1",
+  "seed_base": 1900000,
+  "smoke": {
+    "max_attempts_per_class": 12,
+    "target_per_class": 2
+  },
+  "smoke_seed_base": 1900000,
+  "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+  "suite_id": "suite2-v1",
+  "target_per_class": 111,
+  "tools_directory": "/home/runner/work/borg-zoo/borg-zoo/native-tools",
+  "turn_cap": 100000,
+  "wall_seconds": 120,
+  "workers": 4
+}

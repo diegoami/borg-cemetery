@@ -29,3 +29,11 @@ class Suite2HarvestTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError,'source seeds overlap'):
                     h.run(spec,root/'source',root/'out',0,root/'tools')
                 one.assert_not_called()
+
+    def test_missing_capture_interface_rejected_before_gameplay(self):
+        with tempfile.TemporaryDirectory() as temp:
+            source=Path(temp)
+            with self.assertRaisesRegex(ValueError,'lacks BORG_ENCOUNTER_LOG'):
+                h.require_capture_support(source,{'suite_id':'suite2-v1','core':'borg-rs'})
+            # Legacy definitions retain their historical execution path.
+            h.require_capture_support(source,{})
