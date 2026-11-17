@@ -53,12 +53,18 @@ def download(run_id, repo, dest):
     return dest
 
 
+def artifact_of(root, path):
+    """The artifact a path under ROOT belongs to: the download directory holds
+    one directory per artifact; a shard directory given alone is its own."""
+    rel = Path(path).relative_to(root).parts
+    return Path(root).name if (Path(root) / 'index.jsonl').exists() or len(rel) < 2 else rel[0]
+
+
 def entries(root):
     """(artifact name, bundle base dir, index entry) for every index.jsonl under ROOT."""
     root = Path(root)
     for index in sorted(root.rglob('index.jsonl')):
-        rel = index.relative_to(root).parts
-        artifact = rel[0] if len(rel) > 1 else root.name
+        artifact = artifact_of(root, index)
         for line in index.read_text().splitlines():
             if line.strip():
                 yield artifact, index.parent, json.loads(line)
@@ -85,7 +91,7 @@ def unindexed(root, found):
         rel = bundle.relative_to(root).parts
         cell = manifest.get('cell') or '/'.join(rel[-4:])
         row = {k: manifest.get(k) for k in ('seed', 'specimen', 'profile', 'character', 'cause', 'status', 'experiment')}
-        row.update(cell=cell, artifact=rel[0], imported='skipped',
+        row.update(cell=cell, artifact=artifact_of(root, bundle), imported='skipped',
                    final={k: (manifest.get('final') or {}).get(k) for k in ('turn', 'level', 'depth', 'max_depth')},
                    reason='not imported: no index entry (the shard stopped before indexing this bundle)')
         if row['seed'] is None and rel[-1].isdigit():

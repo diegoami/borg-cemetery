@@ -112,6 +112,23 @@ class ImportZooDeathsTest(unittest.TestCase):
         (record,) = records.values()
         self.assertEqual(record['core_decision_trace']['of'], 5)
 
+    def test_artifact_names_agree_for_indexed_and_unindexed_bundles(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            # gh run download: <dest>/<artifact>/<specimen>-<shard>/index.jsonl
+            shard = tmp / 'dl' / 'deaths-s-0' / 's-0'
+            shard.mkdir(parents=True)
+            bundle(shard, 'suite/s/p/1', 1)
+            (shard / 'suite/s/p/2/user').mkdir(parents=True)
+            (shard / 'suite/s/p/2/user/borg.txt').write_text('x\n')
+            found = list(importer.entries(tmp / 'dl'))
+            self.assertEqual(found[0][0], 'deaths-s-0')
+            self.assertEqual(importer.unindexed(tmp / 'dl', found)[0]['artifact'], 'deaths-s-0')
+            # one shard directory given alone is its own artifact
+            found = list(importer.entries(shard))
+            self.assertEqual(found[0][0], 's-0')
+            self.assertEqual(importer.unindexed(shard, found)[0]['artifact'], 's-0')
+
     def test_run_and_run_id_together_are_refused(self):
         with self.assertRaises(SystemExit):
             importer.main(['--run', '1', '--run-id', '2'])
