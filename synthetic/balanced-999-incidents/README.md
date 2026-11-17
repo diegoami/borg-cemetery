@@ -1,3 +1,14 @@
+# Frozen balanced999 saved bank
+
+The completed bank has999 distinct saved starts,111 per class:611 historical
+deaths and388 critical-HP recoveries,758 source lives and178 equipment combinations.
+`bank-43979480269.tgz` retains the exact original archive with SHA256
+`186066b039ccc8451642cbcbd77e714c6615c20d99d0de4b18963289c5748cbf`.
+Unpack it into a private Cemetery checkout before native execution. Metadata
+is in `bank-artifact.json`; [run one scenario](../../docs/RUN-A-SCENARIO.md).
+Zoo owns aggregate comparisons and dashboard presentation. Historical preparation
+instructions follow; the bank inputs and earlier source/evidence pins are frozen.
+
 # Balanced999 death/critical-recovery bank: preparation contract
 
 Owner target: **999 distinct starts,111 per each of the nine classes**. This

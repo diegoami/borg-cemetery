@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-9de43757722b5616036b99c318e3c4c325a947027b1c4fbb483a523f66a4a7b1",
+  "run_kind": "harness",
+  "character": "Kobold Ranger",
+  "raw_cause": "Grip, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Grip, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 56084,
+    "race_idx": 10,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1070003,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "fde9315dc99ce39df127299ca40cf879264131224e978759524b7d0b7e25ee01",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 13,
+    "of": 13
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/paired-smoke-44045219309/speed30/attempt/native/c7-r10-s1070003-i000/run",
+      "result_sha256": "f26f34a66f06a2447d465119f14de10aa2d8c99f2898506b37f87bce1e9a5dad",
+      "raw_sha256": {
+        "keys.log": "f26f34a66f06a2447d465119f14de10aa2d8c99f2898506b37f87bce1e9a5dad",
+        "messages.log": "b3226869be18f4a5229495362ee971a5822685e170924306e0321d7860babf96",
+        "state.log": "1b6ab720fe8361b9a8cd232168c004e681796253b036e25393a5e3d468e088d8"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-d3b5b43f185529739e31a70dfe0909242ac6c224b9615eaf119a3547f58b9055",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0886111fa50f194c366b486cc0b5e8935ac5b2e71a138e8bbb15be1b8c3bde0f",
+    "config.txt": "1e41ffa2cc3e9462b608c5dc466a94b1558cfa3ad50cb3882631b3e6b603bb7c",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "82c5d2e6262abf0c315cd49f8c46efbb7b58622eecd173be40a2c0aee431e279",
+    "trace-core-tail.jsonl": "92bbc9a612fd7899e2c4e53198a89dff5108f0bf8562782d375911c22ea38089"
+  },
+  "investigation": null,
+  "issue": null
+}

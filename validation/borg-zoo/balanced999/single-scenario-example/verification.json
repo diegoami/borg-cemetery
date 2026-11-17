@@ -1,0 +1,24 @@
+{
+  "case": "c2-r2-s1020000-i000",
+  "independent_life": false,
+  "matches": {
+    "keys.log": {
+      "byte_identical": true,
+      "original_sha256": "d874ae7911743f9a613d778763d55569da1bcfa065d52fd9ef4036b1eb3ac58a",
+      "single_sha256": "d874ae7911743f9a613d778763d55569da1bcfa065d52fd9ef4036b1eb3ac58a"
+    },
+    "messages.log": {
+      "byte_identical": false,
+      "original_sha256": "7859729e2d17db3e9489e16c630124c5c91a1086b5f593a5d81fb5884bb54998",
+      "single_sha256": "6c222564f4d648baf6e040b937da4370e2d486c4dc2645d47395770067ceb09e"
+    },
+    "state.log": {
+      "byte_identical": true,
+      "original_sha256": "34411a423c026c0912954c64b5d87d0cca7016fb5d9f860f9c94686f736a80ac",
+      "single_sha256": "34411a423c026c0912954c64b5d87d0cca7016fb5d9f860f9c94686f736a80ac"
+    }
+  },
+  "messages_equal_after_run_root_normalization": true,
+  "original_zoo_run": 44046247609,
+  "reason": "One Plan diagnostic includes absolute user/selected-plan.txt path; moving output directories changes that diagnostic but not gameplay."
+}

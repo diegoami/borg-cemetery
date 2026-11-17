@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1080003",
+  "run_kind": "harness",
+  "character": "Kobold Blackguard",
+  "raw_cause": "a metallic red centipede",
+  "terminal": {
+    "cause": "a metallic red centipede",
+    "dead": true,
+    "depth": 3,
+    "max_depth": 3,
+    "level": 6,
+    "turn": 77298,
+    "race_idx": 10,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1080003,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "3e467fa8d7e9da6766be10dd7af15d7a08dedf1a33f93c339125a0177895d8fe",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 12,
+    "of": 12
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c8-r10-s1080003-i000/run",
+      "result_sha256": "b2eca773716d144d6db170d07e97efa9d001651f31e740dcdd0883f903a73a39",
+      "raw_sha256": {
+        "keys.log": "b2eca773716d144d6db170d07e97efa9d001651f31e740dcdd0883f903a73a39",
+        "messages.log": "ed224a3475ec7524640aec9aeb446ff3934581b40f5b507279d0fcf4bfed83e0",
+        "state.log": "a79869c3f9217ab69023f7271677e80186449ec6678138b3e8edc5cea87ec946"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-86e3a79fad000df953edea8a04d53eb2aa1737da5a2499121363dee3ed652eee",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4259a76cadce40fa2671b0473f6a5bd5df7b9ab1198bf4d006d3dded095a3993",
+    "config.txt": "eea1cbe418298c577f7a780d3f3a7759b64eaf421d2fac49aa940496c8782493",
+    "depths.json": "9d83987522be77738335f1f92047f0f4860dc366e5be34820368fd80ee61c5d6",
+    "params.json": "bd35f44702709d65cadf77c3701ffd79de8a820f1049e35f491a4618a85292ad",
+    "summary.json": "c9de5f8255a67f91e7566e8aeeb59a9e9c3c39c2a159855b7a1017b1eced0dab",
+    "trace-tail.jsonl": "02ab06bbc718db2b17268ceb7e687c60a2c2bbaa4295e08f720bae6d8c29785a"
+  },
+  "investigation": null,
+  "issue": null
+}
