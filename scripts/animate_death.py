@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Animate the last game turns before a zoo death, from verified replays.
+"""Animate the last turns before a zoo death, every turn, from verified replays.
 
-  python3 scripts/animate_death.py CASE --turns 1000 --source-root SRC
+  python3 scripts/animate_death.py CASE              # the last 50 turns, all of them
+  python3 scripts/animate_death.py CASE --turns 200 --every 4
 
 CASE is a death dossier exported from a borg-zoo run: a directory, a case ID
 or ID prefix (D-02cc...), or an alias. --source-root is optional: by default
@@ -12,10 +13,12 @@ the case's ./build.sh makes, and it is built on first use exactly as
 1. The game is rerun once from birth, the way the zoo ran it (the zoo path of
    scripts/native/rerun-death.py). Its keys.log must equal the dossier's
    recorded key stream, otherwise nothing is drawn.
-2. Up to --frames key positions are chosen evenly, one per distinct game turn,
-   among the keys played in the last --turns game turns. The death is the
-   final frame. Game turns are the unit the dossier reports: at normal speed
-   one player turn is 10 game turns.
+2. A turn is a game turn at which the Borg pressed keys, as the state log
+   records it. At normal speed that is one player turn, 10 game turns apart;
+   speed changes the spacing, not the count. The last --turns turns (default
+   50) are drawn, each one as a frame after its last key, and the death is the
+   final frame. Nothing is skipped unless --every K asks for every K-th turn
+   (the turns nearest the death are kept).
 3. Each frame is a separate rerun that stops after that many keys and dumps the
    terminal (borgh -keys N -screen). Its keys.log must be exactly that prefix
    of the verified stream, otherwise the frame is dropped and the reason is
@@ -23,7 +26,7 @@ the case's ./build.sh makes, and it is built on first use exactly as
 4. The GIF shows each screen with the game messages up to that key, beside
    the turn, depth, HP and level from the state log.
 
-Output (default CASE/media/): last-<X>-turns.gif and last-<X>-turns.json, the
+Output (default CASE/media/): last-<N>-turns.gif and last-<N>-turns.json, the
 receipt with every frame's key position, turn and hashes, and every dropped
 frame. The dossier's README links them after `scripts/register_deaths.py`.
 A replay and its original are the same life, not another sample.
@@ -41,7 +44,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from extract_scenarios import states  # noqa: E402
-from capture_episode_media import screen, sample  # noqa: E402
+from capture_episode_media import screen  # noqa: E402
 
 
 def rerun_module():
@@ -94,10 +97,18 @@ def messages(path):
     return out
 
 
-def select(rows, death_turn, turns, frames):
-    """Key positions to draw: the last TURNS game turns, one per distinct turn."""
-    window = [r for r in rows if r['turn'] >= death_turn - turns]
-    return sample(window, max(1, frames - 1)) if window else []
+def select(rows, turns, every=1):
+    """Key positions to draw: the last key of each of the last TURNS turns
+    (game turns at which keys were played), the death's own turn left out
+    because the death is the final frame; with EVERY > 1, every EVERY-th turn
+    counted back from the death."""
+    last = {}
+    for row in rows:
+        last[row['turn']] = row
+    ordered = [last[t] for t in sorted(last)]
+    before = ordered[:-1] if ordered else []
+    window = before[-(turns - 1):] if turns > 1 else []
+    return window[::-1][::every][::-1]
 
 
 def render(frames, target, title, notes):
@@ -110,7 +121,7 @@ def render(frames, target, title, notes):
         draw = ImageDraw.Draw(canvas)
         state = frame.get('state') or {}
         draw.text((16, 12), title, font=font, fill='#71d9ff')
-        draw.text((16, 34), f"Turn {frame['turn']} ({frame['before_death']} before death) | key {frame['key_position']} | "
+        draw.text((16, 34), (f"{frame['turns_before_death']} turns before death" if frame['turns_before_death'] else 'Death') + f" (game turn {frame['turn']}) | key {frame['key_position']} | "
                             f"depth {state.get('depth', '?')} | HP {state.get('hp', '?')}/{state.get('max_hp', '?')} | "
                             f"{frame['phase']}", font=font, fill='#ffd787')
         for row, line in enumerate(frame['screen'].splitlines()[:26]):
@@ -126,14 +137,15 @@ def render(frames, target, title, notes):
                   font=font, fill='#a8b4c3')
         images.append(canvas.convert('P', palette=Image.Palette.ADAPTIVE))
     images[0].save(target, save_all=True, append_images=images[1:],
-                   duration=[700] * (len(images) - 1) + [2500], loop=0, disposal=2)
+                   duration=[600] * (len(images) - 1) + [3000], loop=0, disposal=2)
 
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('case', help='dossier directory, case ID or ID prefix')
-    ap.add_argument('--turns', type=int, required=True, help='game turns before the death to animate')
-    ap.add_argument('--frames', type=int, default=24, help='frames, the death included (3..60)')
+    ap.add_argument('--turns', type=int, default=50,
+                    help='the last N turns at which the Borg acted, the death included (default 50)')
+    ap.add_argument('--every', type=int, default=1, help='draw every K-th of those turns (default 1: all)')
     ap.add_argument('--source-root', type=Path,
                     help='borg-reborn-rs checkout at the dossier commit with build/rust built '
                          '(default: the cache checkout ./build.sh makes, built if needed)')
@@ -141,8 +153,10 @@ def main(argv=None):
     ap.add_argument('--out', type=Path, help='output directory (default CASE/media)')
     ap.add_argument('--jobs', type=int, default=os.cpu_count() or 1)
     a = ap.parse_args(argv)
-    if not 3 <= a.frames <= 60 or a.turns < 1:
-        ap.error('--frames must be 3..60 and --turns at least 1')
+    if not 2 <= a.turns <= 1000 or a.every < 1:
+        ap.error('--turns must be 2..1000 and --every at least 1')
+    if a.turns // a.every > 300:
+        ap.error('more than 300 frames: use --every to thin a long window')
     case = resolve_case(a.case)
     rd = rerun_module()
     p = rd.plan(case)
@@ -155,8 +169,9 @@ def main(argv=None):
                          f"{str(p['source_sha256'])[:12]}: check out {p['git_rev']} and run harness/build.sh")
     record = json.loads((case / 'record.json').read_text())
     out = (a.out or case / 'media').resolve()
-    name = f'last-{a.turns}-turns'
-    receipt = {'schema': 'borg-cemetery/last-turns-animation@1', 'case': case.name, 'turns': a.turns,
+    name = f'last-{a.turns}-turns' + (f'-every-{a.every}' if a.every > 1 else '')
+    receipt = {'schema': 'borg-cemetery/last-turns-animation@2', 'case': case.name, 'turns': a.turns,
+               'every': a.every, 'turn_unit': 'a game turn at which the Borg pressed keys (state log)',
                'seed': p['seed'], 'source_commit': p['git_rev'], 'keys_sha256': p['keys_sha256'],
                'method': 'zoo rerun from birth, stopped after N keys (-keys N -screen); each frame\'s keys '
                          'are the verified original prefix', 'frames': [], 'dropped': []}
@@ -172,7 +187,9 @@ def main(argv=None):
         rows = states(run / 'state.log')
         notes = messages(run / 'messages.log')
         death_turn = record['terminal'].get('turn') or rows[-1]['turn']
-        chosen = [r for r in select(rows, death_turn, a.turns, a.frames) if r['line'] < len(keys)]
+        distinct = sorted({r['turn'] for r in rows})
+        turns_before = {t: len(distinct) - 1 - i for i, t in enumerate(distinct)}
+        chosen = [r for r in select(rows, a.turns, a.every) if r['line'] < len(keys)]
 
         def frame(row):
             where = tmp / f"key-{row['line']}"
@@ -184,6 +201,7 @@ def main(argv=None):
             if terminal is None:
                 return None, f"key {row['line']}: no terminal dump"
             return {'key_position': row['line'], 'turn': row['turn'], 'before_death': death_turn - row['turn'],
+                    'turns_before_death': turns_before[row['turn']],
                     'phase': 'verified replay', 'state': {k: row[k] for k in ('depth', 'hp', 'max_hp')},
                     'screen': terminal, 'keys_sha256': hashlib.sha256(got).hexdigest()}, None
 
@@ -196,6 +214,7 @@ def main(argv=None):
         last = screen(run / 'stderr.log')
         if last:
             receipt['frames'].append({'key_position': len(keys), 'turn': death_turn, 'before_death': 0,
+                                      'turns_before_death': 0,
                                       'phase': 'death (full verified rerun)', 'screen': last,
                                       'state': {k: rows[-1][k] for k in ('depth', 'hp', 'max_hp')} if rows else {},
                                       'keys_sha256': p['keys_sha256']})
@@ -203,7 +222,7 @@ def main(argv=None):
             raise SystemExit(f"animate_death: no frame could be verified: {receipt['dropped'][:3]}")
         out.mkdir(parents=True, exist_ok=True)
         title = (f"{record.get('character', 'Borg')} | seed {p['seed']} | {record.get('raw_cause')} at turn {death_turn} "
-                 f"| last {a.turns} game turns")
+                 f"| last {a.turns} turns" + (f", every {a.every}" if a.every > 1 else ''))
         render(receipt['frames'], out / f'{name}.gif', title, notes)
     receipt.update(gif=f'{name}.gif', gif_sha256=sha256(out / f'{name}.gif'),
                    status='partial' if receipt['dropped'] else 'complete')

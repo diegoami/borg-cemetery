@@ -1,12 +1,13 @@
 ---
 name: animate-death
-description: Make an animated GIF of the last X game turns before a death in a borg-zoo run - screens from verified replays, with game messages and Borg notes. Use when the owner asks to animate, show or watch the last turns of a game/death from a zoo run, or types /animate-death.
+description: Make an animated GIF of the last turns (default 50, every turn) before a death in a borg-zoo run - screens from verified replays, with game messages and Borg notes. Use when the owner asks to animate, show or watch the last turns of a game/death from a zoo run, or types /animate-death.
 ---
 
 # /animate-death
 
-Arguments: the game and the number of turns, e.g. `/animate-death run 44051234567 seed 934061548 profile reborn-heal1-trip0-plan 1000`
-or `/animate-death D-02cc 500`. The tool is `scripts/animate_death.py`;
+Arguments: the game, and optionally the number of turns (default 50) and a thinning
+step, e.g. `/animate-death run 44051234567 seed 934061548 profile reborn-heal1-trip0-plan`,
+`/animate-death D-02cc 100` or `/animate-death D-02cc 300 every 5`. The tool is `scripts/animate_death.py`;
 README "Animate the last turns of a zoo death" documents it.
 
 1. **Find the dossier.**
@@ -20,12 +21,14 @@ README "Animate the last turns of a zoo death" documents it.
      then use `<scratch>/deaths/<case>`. Say that the dossier is not in the cemetery yet.
    - A game whose row says `skipped`, or a game that did not die, cannot be
      animated. Report the reason from the run page.
-2. **Turns.** X is in game turns, the unit of the dossier's death turn: at
-   normal speed, one player turn is 10 game turns. If the owner says "player
-   turns" or "moves", multiply by 10 and say so. Use 24 frames unless asked otherwise.
+2. **Turns.** N counts the turns in which the Borg acted, the death included: one
+   frame each, nothing skipped. That is one player turn each, 10 game turns
+   apart at normal speed. Default 50. Use `--every K` only when asked, or when N
+   is above 300 (the limit). A GIF is about 60 KB per frame, so warn above
+   100 frames.
 3. **Run it** under the shared lock, Pillow installed (`requirements-media.txt`):
    ```bash
-   flock /tmp/angband-validation.lock python3 scripts/animate_death.py CASE --turns X [--frames N]
+   flock /tmp/angband-validation.lock python3 scripts/animate_death.py CASE [--turns N] [--every K]
    ```
    The first use of a commit builds it into the cemetery cache, as the case's `./build.sh`
    would, which takes a few minutes. Use `--out <scratch>` when the dossier

@@ -28,11 +28,11 @@ Core decision trace: the last 200 of 2694 thinks in `trace-core-tail.jsonl`, wit
 
 ## Last turns before the death
 
-Each frame is a rerun from birth stopped at that key, with keys matching the original game (`scripts/animate_death.py`). The receipt beside each animation lists every frame.
+One frame per turn in which the Borg acted, each a rerun from birth stopped there whose keys match the original game (`scripts/animate_death.py`). The receipt beside each animation lists every frame.
 
-**Last 1000 game turns** · [receipt](media/last-1000-turns.json)
+**Last 50 turns** · [receipt](media/last-50-turns.json)
 
-![Last 1000 game turns](media/last-1000-turns.gif)
+![Last 50 turns](media/last-50-turns.gif)
 
 ## Read and replay
 

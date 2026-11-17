@@ -181,19 +181,29 @@ or open its [GIF](scenarios/S0003/media/episode.gif).
 
 ### Animate the last turns of a zoo death
 
-Any death imported from a borg-zoo run can be animated over its last X game
-turns. At normal speed, one player turn is 10 game turns.
+Any death imported from a borg-zoo run can be animated over its last turns.
+By default these are the last 50 turns, every one of them, the death included.
 
 ```bash
 python3 -m pip install -r requirements-media.txt
-flock /tmp/angband-validation.lock python3 scripts/animate_death.py D-02cc --turns 1000
+flock /tmp/angband-validation.lock python3 scripts/animate_death.py D-02cc                      # last 50 turns, all
+flock /tmp/angband-validation.lock python3 scripts/animate_death.py D-02cc --turns 200 --every 4
 ```
+
+| Parameter | Default | Meaning |
+| --- | --- | --- |
+| `CASE` | required | dossier directory, case ID or ID prefix |
+| `--turns N` | 50 | the last N turns, the death included; a turn is a game turn at which the Borg pressed keys (one player turn, 10 game turns apart at normal speed) |
+| `--every K` | 1 | draw every K-th of those turns, counted back from the death; 1 draws all of them (at most 300 frames) |
+| `--source-root` | the cache checkout `./build.sh` makes | borg-reborn-rs at the dossier's commit, with `build/rust` built |
+| `--out` | `CASE/media/` | where the GIF and receipt go |
+| `--jobs` | all CPUs | frames replayed in parallel |
 
 The game is rerun from birth and must reproduce the dossier's key stream. Each
 frame is another rerun stopped at that key, and its keys must match the
 original prefix. Beside each screen are the game messages and the Borg's own
 notes up to that moment. The output is the dossier's
-`media/last-1000-turns.gif`, with a JSON receipt listing every frame and every
+`media/last-50-turns.gif`, with a JSON receipt listing every frame and every
 dropped one. The source build is the one the case's `./build.sh` makes, built
 on first use. `scripts/register_deaths.py` then shows the animation on the
 death's page. In Claude Code, the `/animate-death` skill finds the game from a

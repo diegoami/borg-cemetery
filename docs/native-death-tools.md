@@ -107,11 +107,13 @@ path of `rerun-death.py` (#59).
 
 ### Animate a zoo death's last turns
 
-`scripts/animate_death.py CASE --turns X [--frames N]` reruns a zoo dossier the
+`scripts/animate_death.py CASE [--turns N] [--every K]` reruns a zoo dossier the
 way the zoo ran it, through the zoo path of `rerun-death.py` with its `extra`
 borgh options. It refuses to draw unless the rerun reproduces the recorded key
-stream. It then replays to up to N key positions in the last X game turns
-(`-keys K -screen`). A frame whose keys are not exactly the original prefix is
-dropped and listed in the receipt. The GIF and its receipt go to
-`CASE/media/last-X-turns.{gif,json}`, and the death page embeds them. Only zoo
+stream. It then replays to the last key of each of the last N turns (default
+50, every turn; `--every K` thins them), using `-keys K -screen`. A turn is a
+game turn at which the Borg pressed keys. A frame whose keys are not exactly
+the original prefix is dropped and listed in the receipt. The GIF and its
+receipt go to `CASE/media/last-N-turns.{gif,json}`, and the death page embeds
+them. Only zoo
 dossiers are supported. Batch episodes use `capture_episode_media.py`.
