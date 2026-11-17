@@ -76,3 +76,30 @@ requested full bank's seeds at 2,000,000. The old failed preparation and all
 nine natural-death packets/streams remain under `preparation-44121110906/`.
 No source PR merge or review acceptance is implied. This is an explicitly
 pinned candidate preparation, not a claim that the candidate is main.
+
+
+## Final collection-controller choice
+
+The capture-enabled stock borg-rs smoke (Zoo run 44129811981) found two
+qualified starts in each of eight classes, but none in 32 Blackguard lives.
+Those 32 Blackguards all reached 100,000 turns, at levels 2–8 and depths 1–5,
+without a death or observed <=25%-HP recovery. This is a coverage shortage,
+not a capture-interface failure. A separate one-million-turn Blackguard pilot
+ended in starvation at turn 982,010; the first starvation warning was at
+914,500, so it is not a qualifying 2,000-turn encounter. Its natural death
+and complete raw evidence are retained under
+`validation/borg-reborn-rs/encounter-capture-506/blackguard-long-pilot/`.
+
+For Suite 2 **preparation**, use the same `reborn` controller used to harvest
+Suite 1, on new source candidate `ba26c2abc378302c7d37d4337775d3bd5fe5ad30`,
+with its own default reborn parameter profile. This explicit controller
+override is recorded in the manifest and native receipts; it is not described
+as the shipped borg-rs configuration. It changes how the bank is collected,
+not the supported controller of a subsequent suite run. Stock borg-rs can be
+run on these exact saved starts with its separately pinned configuration.
+Do not compare outcomes across the two preparation banks as paired results.
+
+The full seed allocation, exclusions, class quotas, incident definitions,
+level-1 capture, initial-save deduplication, 2,000-turn horizon and 5-second
+restart bounds are unchanged. Freeze this recipe before the next all-class
+smoke, and dispatch the full requested harvest only after it succeeds.

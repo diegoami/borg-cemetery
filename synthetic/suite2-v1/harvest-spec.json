@@ -16,7 +16,7 @@
     "borg_txt_sha256": "386be998321da46dfcbb025a83c40cc7082d1951f39000fe224e4ed4b980de0f",
     "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91"
   },
-  "core": "borg-rs",
+  "core": "reborn",
   "exclusion": {
     "path": "exclude-suite1.json",
     "sha256": "5be7993eef6c5f762e47f1a25c05ce8ef9a9bc113d0515212e1f206b95a35a01"
@@ -32,6 +32,7 @@
     "max_hp_fraction": 0.25,
     "recovery_hp_fraction": 0.5
   },
+  "preparation_controller_reason": "Match Suite 1 preparation controller on new source HEAD; stock borg-rs smoke found zero Blackguard incidents in 32 lives. All source lives/seeds and later run configurations stay separate and fully identified.",
   "races": [
     2,
     3,
