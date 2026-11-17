@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0049-rust-seed255960706",
+  "run_kind": "harness",
+  "character": "Dunadan Blackguard",
+  "raw_cause": "burning to a cinder in lava",
+  "terminal": {
+    "cause": "burning to a cinder in lava",
+    "dead": true,
+    "depth": 0,
+    "max_depth": 2,
+    "level": 5,
+    "turn": 84053,
+    "race_idx": 8,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 255960706,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "f89b26d0fee0b979a9a468f251c5ae11c79f97a2e8359f3ae5f89f7ea8e53190",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 8049
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-town/255960706",
+      "result_sha256": "7fce3000646a7e092b21f6d3199fccc23419ad0a105d2abed4ce9a6d3ad742ae",
+      "raw_sha256": {
+        "keys.log": "7fce3000646a7e092b21f6d3199fccc23419ad0a105d2abed4ce9a6d3ad742ae",
+        "messages.log": "90ef3c4c70384169e733081c0df60bff1a61c19ff923744a9961097c9119e2e8",
+        "state.log": "ba4ea2ecff3102d3d8abc7bbd8a4881d15b8e2c1f5fc71a7addef9bc8187edbb"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-dc361d65a4bb7ecf17c7c706f0000c628c9f2136e39c7d8e13aea17d7582063b",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "44657021af6344eb125e1e199dd19cfd08ac1662415eb2c41427704e9929bc00",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "774b98c91c173d4ababa566243b99fab9e62016d31e26808e5899b74d23b3a46",
+    "trace-core-tail.jsonl": "ac0c2a91b02a74c72304d5dd3b3af0fd58fa23c2e479b397ca8ad1a3e54a2be2"
+  },
+  "investigation": null,
+  "issue": null
+}

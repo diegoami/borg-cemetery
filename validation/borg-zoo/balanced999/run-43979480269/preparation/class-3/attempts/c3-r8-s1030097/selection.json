@@ -1,0 +1,125 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 5,
+        "depth": 2,
+        "due_turn": 33100,
+        "file": "checkpoint-000305-t0000033111.save",
+        "game_turn": 33111,
+        "keys": 6263,
+        "max_depth": 2,
+        "race_idx": 8,
+        "seed": 1030097
+      },
+      "selection": {
+        "first_visible_turn": 33111,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 2,
+        "monster_kind": "soldier",
+        "no_omniscient_trigger": true,
+        "observation_line": 3035,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 33111
+      },
+      "status": "candidate",
+      "turn": 33211,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 6,
+          "level": 5,
+          "line": 3045,
+          "max_hp": 55,
+          "max_sp": 10,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 36
+            },
+            {
+              "index": 9,
+              "race": 40
+            }
+          ],
+          "sp": 10,
+          "turn": 33211
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 6,
+          "level": 5,
+          "line": 3045,
+          "max_hp": 55,
+          "max_sp": 10,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 36
+            },
+            {
+              "index": 9,
+              "race": 40
+            }
+          ],
+          "sp": 10,
+          "turn": 33211
+        },
+        "recovery": {
+          "depth": 2,
+          "hp": 33,
+          "level": 5,
+          "line": 3053,
+          "max_hp": 55,
+          "max_sp": 10,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 38
+            },
+            {
+              "index": 9,
+              "race": 40
+            }
+          ],
+          "sp": 10,
+          "turn": 34001
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 6,
+        "depth": 2,
+        "due_turn": 36700,
+        "file": "checkpoint-000337-t0000036703.save",
+        "game_turn": 36703,
+        "keys": 6870,
+        "max_depth": 2,
+        "race_idx": 8,
+        "seed": 1030097
+      },
+      "selection": {
+        "first_visible_turn": 36743,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 100,
+        "monster_kind": "giant white louse",
+        "no_omniscient_trigger": true,
+        "observation_line": 3322,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 36743
+      },
+      "status": "candidate",
+      "turn": 36770,
+      "type": "death",
+      "witness": {
+        "cause": "a giant white louse"
+      }
+    }
+  ]
+}

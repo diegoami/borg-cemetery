@@ -1,0 +1,108 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 9600,
+        "file": "checkpoint-000090-t0000009606.save",
+        "game_turn": 9606,
+        "keys": 1911,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1020025
+      },
+      "selection": {
+        "first_visible_turn": 9696,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 6,
+        "monster_kind": "grey mold",
+        "no_omniscient_trigger": true,
+        "observation_line": 899,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 9696
+      },
+      "status": "candidate",
+      "turn": 9726,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 902,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 6,
+              "race": 17
+            }
+          ],
+          "sp": 2,
+          "turn": 9726
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 902,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 6,
+              "race": 17
+            }
+          ],
+          "sp": 2,
+          "turn": 9726
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 7,
+          "level": 1,
+          "line": 905,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 10495
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 12000,
+        "file": "checkpoint-000108-t0000012006.save",
+        "game_turn": 12006,
+        "keys": 2248,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1020025
+      },
+      "selection": {
+        "first_visible_turn": 12076,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "clear icky thing",
+        "no_omniscient_trigger": true,
+        "observation_line": 1064,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 12076
+      },
+      "status": "candidate",
+      "turn": 12178,
+      "type": "death",
+      "witness": {
+        "cause": "a clear icky thing"
+      }
+    }
+  ]
+}

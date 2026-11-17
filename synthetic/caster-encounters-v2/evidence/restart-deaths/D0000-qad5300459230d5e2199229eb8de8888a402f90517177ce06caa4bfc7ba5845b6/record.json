@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-bank-v2-first-actual/shard-24/necromancer-r2-s302-t0009479-m35/run",
+      "raw_sha256": {
+        "keys.log": "223705dbddf85d9f1caa33d8aa743cfb28544aab8cee6fe78039122b42c65d54",
+        "messages.log": "9ef5cbaed8d4f7d103048c03908a154e9805fb2b6f11297730300435d4a14eb3",
+        "state.log": "f1dfb7a64429c22d660dcf4bcfe3973c8594019e34b19caa419e168252941a71"
+      },
+      "result_sha256": "223705dbddf85d9f1caa33d8aa743cfb28544aab8cee6fe78039122b42c65d54",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Elf Necromancer",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 32,
+    "of": 32
+  },
+  "encounter_family": "start-bdad60d72b7726aa97ab5e07a0781feb42a5bc7800772c441c7d802302e07fcb",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "4dc4372d718e8b4bf08897a992c735bc6b06d00ca603fd92a2e4ccc10747199b",
+    "depths.json": "4634dc46040535579baf8166e1873b2c5ec34cb557e259873d368f220504bc6f",
+    "params.json": "1138064d0499df54a5d82b80f9e2187d01cc7f73f74c335912baea4c3efb2152",
+    "summary.json": "fd67b68e40a2da91c60ff7c04df1cde31b3ec9707de819115702ee6ba01b71f2",
+    "trace-tail.jsonl": "0439a08aea998c225f11fdfd7fca8d642af0e112b327707f1fba4cc360541576"
+  },
+  "id": "D0000-qad5300459230d5e2199229eb8de8888a402f90517177ce06caa4bfc7ba5845b6",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "78c41c7c57afcafc61818354a6f1c581c61dec9b0d5dd0107af118453327fe41",
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 302,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "poison",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "poison",
+    "class_idx": 4,
+    "dead": true,
+    "depth": 1,
+    "level": 2,
+    "max_depth": 1,
+    "race_idx": 2,
+    "turn": 9710
+  }
+}

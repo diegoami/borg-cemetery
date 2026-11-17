@@ -53,6 +53,6 @@ cemetery: 1 dossiers.
 
 | Registry | Case report | Seed | Seed basis | Character | Cause | Turn | Depth | Level | Settings | Start family |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| cemetery | [D0008-collected](../../../deaths/D0008-collected/README.md) | Unknown | saved RNG | Measure Human Priest | a grey mold | 10940 | Unknown | Unknown | [settings](#settings-cemetery-98cc6261449f) | start-8a7977170aea7f057fe101e8c7071e6f7a3fd3c0f0afe74816fb5c3b8681d1d6 |
+| cemetery | [D-eda46eb24c1b1b1e6a4c87f96fbf9432645ef09cbd574b0d6a02f94c4e30e8cc](../../../deaths/D0008-collected/README.md) | Unknown | saved RNG | Measure Human Priest | a grey mold | 10940 | Unknown | Unknown | [settings](#settings-cemetery-98cc6261449f) | start-8a7977170aea7f057fe101e8c7071e6f7a3fd3c0f0afe74816fb5c3b8681d1d6 |
 
 [Statistics index](../../README.md)

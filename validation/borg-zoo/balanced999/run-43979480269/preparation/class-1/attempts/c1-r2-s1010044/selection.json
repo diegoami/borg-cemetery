@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 58500,
+        "file": "checkpoint-000576-t0000058506.save",
+        "game_turn": 58506,
+        "keys": 11900,
+        "max_depth": 2,
+        "race_idx": 2,
+        "seed": 1010044
+      },
+      "selection": {
+        "first_visible_turn": 58586,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "blue yeek",
+        "no_omniscient_trigger": true,
+        "observation_line": 5736,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 58586
+      },
+      "status": "candidate",
+      "turn": 58652,
+      "type": "death",
+      "witness": {
+        "cause": "a blue yeek"
+      }
+    }
+  ]
+}

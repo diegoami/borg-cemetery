@@ -1,0 +1,154 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 3700,
+        "file": "checkpoint-000037-t0000003702.save",
+        "game_turn": 3702,
+        "keys": 805,
+        "max_depth": 1,
+        "race_idx": 7,
+        "seed": 1030041
+      },
+      "selection": {
+        "first_visible_turn": 3782,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 15,
+        "monster_kind": "grey mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 389,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 3782
+      },
+      "status": "candidate",
+      "turn": 4052,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 416,
+          "max_hp": 16,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 4052
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 416,
+          "max_hp": 16,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 4052
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 16,
+          "level": 1,
+          "line": 429,
+          "max_hp": 16,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 4962
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 5,
+        "depth": 2,
+        "due_turn": 59100,
+        "file": "checkpoint-000556-t0000059103.save",
+        "game_turn": 59103,
+        "keys": 11333,
+        "max_depth": 3,
+        "race_idx": 7,
+        "seed": 1030041
+      },
+      "selection": {
+        "first_visible_turn": 59153,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 22,
+        "monster_kind": "soldier",
+        "no_omniscient_trigger": true,
+        "observation_line": 5492,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 59153
+      },
+      "status": "candidate",
+      "turn": 59233,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 8,
+          "level": 5,
+          "line": 5498,
+          "max_hp": 55,
+          "max_sp": 8,
+          "monsters": [
+            {
+              "index": 22,
+              "race": 36
+            }
+          ],
+          "sp": 8,
+          "turn": 59204
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 5,
+          "level": 5,
+          "line": 5501,
+          "max_hp": 55,
+          "max_sp": 8,
+          "monsters": [],
+          "sp": 8,
+          "turn": 59233
+        },
+        "recovery": {
+          "depth": 2,
+          "hp": 55,
+          "level": 5,
+          "line": 5502,
+          "max_hp": 55,
+          "max_sp": 8,
+          "monsters": [],
+          "sp": 8,
+          "turn": 59983
+        }
+      }
+    },
+    {
+      "reason": "environmental death needs a separate observable-trigger adapter",
+      "status": "excluded",
+      "turn": 86880,
+      "type": "death",
+      "witness": {
+        "cause": "starvation"
+      }
+    }
+  ]
+}

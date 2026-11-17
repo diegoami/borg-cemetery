@@ -1,0 +1,125 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 5500,
+        "file": "checkpoint-000050-t0000005501.save",
+        "game_turn": 5501,
+        "keys": 1148,
+        "max_depth": 1,
+        "race_idx": 7,
+        "seed": 1030052
+      },
+      "selection": {
+        "first_visible_turn": 5541,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 9,
+        "monster_kind": "wild cat",
+        "no_omniscient_trigger": true,
+        "observation_line": 507,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 5541
+      },
+      "status": "candidate",
+      "turn": 5591,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 512,
+          "max_hp": 16,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 9,
+              "race": 51
+            },
+            {
+              "index": 10,
+              "race": 47
+            }
+          ],
+          "sp": 2,
+          "turn": 5591
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 512,
+          "max_hp": 16,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 9,
+              "race": 51
+            },
+            {
+              "index": 10,
+              "race": 47
+            }
+          ],
+          "sp": 2,
+          "turn": 5591
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 10,
+          "level": 1,
+          "line": 513,
+          "max_hp": 16,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 9,
+              "race": 51
+            },
+            {
+              "index": 10,
+              "race": 47
+            }
+          ],
+          "sp": 2,
+          "turn": 5601
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 5500,
+        "file": "checkpoint-000050-t0000005501.save",
+        "game_turn": 5501,
+        "keys": 1148,
+        "max_depth": 1,
+        "race_idx": 7,
+        "seed": 1030052
+      },
+      "selection": {
+        "first_visible_turn": 5521,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 10,
+        "monster_kind": "Grip, Farmer Maggot's Dog",
+        "no_omniscient_trigger": true,
+        "observation_line": 505,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 5521
+      },
+      "status": "duplicate_saved_start",
+      "turn": 5640,
+      "type": "death",
+      "witness": {
+        "cause": "Grip, Farmer Maggot's Dog"
+      }
+    }
+  ]
+}

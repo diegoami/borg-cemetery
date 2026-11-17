@@ -1,0 +1,24 @@
+{
+  "arms": [
+    {
+      "borg_txt": "studies/fast-caster-config/base-borg.txt",
+      "errands_plan": "studies/fast-caster-config/depth-1.plan",
+      "id": "base"
+    },
+    {
+      "borg_txt": "studies/fast-caster-config/earlier-heal-borg.txt",
+      "errands_plan": "studies/fast-caster-config/depth-1.plan",
+      "id": "earlier-heal"
+    },
+    {
+      "borg_txt": "studies/fast-caster-config/base-borg.txt",
+      "errands_plan": "studies/fast-caster-config/depth-2.plan",
+      "id": "deeper-plan"
+    }
+  ],
+  "core": "borg-rs",
+  "id": "fast-caster-config-smoke",
+  "schema": "borg-cemetery/encounter-comparison-spec@1",
+  "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+  "suite": "synthetic/fast-caster-encounters/plan-suite.json"
+}

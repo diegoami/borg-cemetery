@@ -1,0 +1,96 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 12600,
+        "file": "checkpoint-000111-t0000012602.save",
+        "game_turn": 12602,
+        "keys": 2271,
+        "max_depth": 1,
+        "race_idx": 0,
+        "seed": 1030049
+      },
+      "selection": {
+        "kind": "first_observable_unseen_contact",
+        "monster_index": null,
+        "monster_kind": "unseen attacker",
+        "no_omniscient_trigger": true,
+        "observation_line": null,
+        "terminal_individual_identity": "unavailable",
+        "trigger_turn": 12623
+      },
+      "status": "candidate",
+      "turn": 13202,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 1122,
+          "max_hp": 18,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 4,
+          "turn": 13102
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 2,
+          "line": 1125,
+          "max_hp": 18,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 4,
+          "turn": 13202
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 18,
+          "level": 2,
+          "line": 1126,
+          "max_hp": 18,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 4,
+          "turn": 13212
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 5,
+        "depth": 2,
+        "due_turn": 67100,
+        "file": "checkpoint-000628-t0000067107.save",
+        "game_turn": 67107,
+        "keys": 12448,
+        "max_depth": 2,
+        "race_idx": 0,
+        "seed": 1030049
+      },
+      "selection": {
+        "kind": "first_observable_unseen_contact",
+        "monster_index": null,
+        "monster_kind": "unseen attacker",
+        "no_omniscient_trigger": true,
+        "observation_line": null,
+        "terminal_individual_identity": "unavailable",
+        "trigger_turn": 67143
+      },
+      "status": "candidate",
+      "turn": 67227,
+      "type": "death",
+      "witness": {
+        "cause": "a wild cat"
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed308",
+  "run_kind": "harness",
+  "character": "Half-Elf Mage",
+  "raw_cause": "a grey mushroom patch",
+  "terminal": {
+    "cause": "a grey mushroom patch",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 2910,
+    "race_idx": 1,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 308,
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "7f9bef402d84926eda64a918ee4883135ad9c62c6e9ce0bf8951b84880de017a",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 17,
+    "of": 17
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-bank-v2-final-actual/shard-11/mage-r1-s308-t0002034-m4/run",
+      "result_sha256": "6b9bc0276d04a2c00f1d104ece5615719ff6695334edd13a229bfcc57752ad62",
+      "raw_sha256": {
+        "keys.log": "6b9bc0276d04a2c00f1d104ece5615719ff6695334edd13a229bfcc57752ad62",
+        "messages.log": "14bf6e727066d54867bc781769e2509db6f567f506519881666a1d0fd34a4d46",
+        "state.log": "b52e6ccb6c9b5436c12f23c93efa377cf7b98095c4b0b5f57d0ae2dd21372586"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776"
+    }
+  ],
+  "encounter_family": "start-9c21c71a5701bdffb426bb681b2cb19050095f0c27853dadb86292e2c57531be",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "2edaf14401a46d5b57945ee860215b6546027ed49513e576e3b70399b97f9a77",
+    "depths.json": "b18a943bc78f1a8318906f62e5ce17bae09e9479aa4624e8b8ab178b6ef1e5a8",
+    "params.json": "276f297006bf414e9edca73b611049c2016ab3c3c74dc89e50493a91707c30bc",
+    "summary.json": "6d6789aa02334e132287757f51fb89a95deeb8a648b376fe33d424fcf05731df",
+    "trace-tail.jsonl": "4ac0c384a342f336cecabb25cecaa4b04231d1802e14ec0f99bdcec083afd803"
+  },
+  "investigation": null,
+  "issue": null
+}

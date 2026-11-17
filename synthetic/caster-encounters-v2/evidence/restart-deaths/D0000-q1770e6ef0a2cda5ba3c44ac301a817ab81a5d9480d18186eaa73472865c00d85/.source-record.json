@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed302",
+  "run_kind": "harness",
+  "character": "Half-Elf Druid",
+  "raw_cause": "a metallic blue centipede",
+  "terminal": {
+    "cause": "a metallic blue centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 7051,
+    "race_idx": 1,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 302,
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "d0741903a11c5eb84a7c18b64dace76db8d46cbe5717ecde5d1bf2250ddd472e",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 5,
+    "of": 5
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-bank-v2-smoke-repeat/druid-r1-s302/run",
+      "result_sha256": "68319e728865c44647ae4ff8e30766fad02b6b2497bb966ac77cd1a5619fec67",
+      "raw_sha256": {
+        "keys.log": "68319e728865c44647ae4ff8e30766fad02b6b2497bb966ac77cd1a5619fec67",
+        "messages.log": "c922cb6c869f55b283ccebf56adbb27150db597bf807df96ee21336a26d84eed",
+        "state.log": "f6c823ac28c725fd01bd85abb676072dfa723cd4c67bc46326945070b483cfa4"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776"
+    }
+  ],
+  "encounter_family": "start-81886d192cbef2b1edb292ed88756fd46b7b6d2387132680a166ee9c5d96d6f3",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "4b355607bb960956d39d4c22987d8b2e3d239645e1f3eddea4a659ce1642b59c",
+    "depths.json": "bb2c83b6e1a456a1f84603d5eb9683599951e7cb1236c7230f777384a7ff7c82",
+    "params.json": "18cd22cc4c555bd0439f434056beff8d74a39f94e927f053a4b84a87b5b82752",
+    "summary.json": "72b2b4c98c44a527b6f74c02673e2e41e71c6a0e3ca7e43d773527814da75532",
+    "trace-tail.jsonl": "e6871970eb425fab21aa6429766aa42d123861374b4413317849b8e3a6a22127"
+  },
+  "investigation": null,
+  "issue": null
+}

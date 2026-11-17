@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 57600,
+        "file": "checkpoint-000550-t0000057606.save",
+        "game_turn": 57606,
+        "keys": 11297,
+        "max_depth": 2,
+        "race_idx": 8,
+        "seed": 1010086
+      },
+      "selection": {
+        "first_visible_turn": 57707,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 44,
+        "monster_kind": "giant white mouse",
+        "no_omniscient_trigger": true,
+        "observation_line": 5448,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 57705
+      },
+      "status": "candidate",
+      "turn": 58660,
+      "type": "death",
+      "witness": {
+        "cause": "poison"
+      }
+    }
+  ]
+}

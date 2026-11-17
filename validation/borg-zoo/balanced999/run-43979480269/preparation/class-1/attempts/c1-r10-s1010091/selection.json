@@ -1,0 +1,108 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 7500,
+        "file": "checkpoint-000075-t0000007501.save",
+        "game_turn": 7501,
+        "keys": 1611,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1010091
+      },
+      "selection": {
+        "first_visible_turn": 7541,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "wild dog",
+        "no_omniscient_trigger": true,
+        "observation_line": 767,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 7541
+      },
+      "status": "candidate",
+      "turn": 7601,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 773,
+          "max_hp": 8,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 29
+            }
+          ],
+          "sp": 0,
+          "turn": 7601
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 773,
+          "max_hp": 8,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 29
+            }
+          ],
+          "sp": 0,
+          "turn": 7601
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 8,
+          "level": 1,
+          "line": 784,
+          "max_hp": 8,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 1,
+          "turn": 8451
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 17800,
+        "file": "checkpoint-000165-t0000017803.save",
+        "game_turn": 17803,
+        "keys": 3407,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1010091
+      },
+      "selection": {
+        "first_visible_turn": 17843,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 2,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 1621,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 17843
+      },
+      "status": "candidate",
+      "turn": 17904,
+      "type": "death",
+      "witness": {
+        "cause": "a giant yellow centipede"
+      }
+    }
+  ]
+}

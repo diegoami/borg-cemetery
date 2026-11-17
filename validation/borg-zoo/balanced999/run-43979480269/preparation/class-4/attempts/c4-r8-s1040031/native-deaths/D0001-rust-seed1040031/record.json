@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040031",
+  "run_kind": "harness",
+  "character": "Dunadan Necromancer",
+  "raw_cause": "a soldier ant",
+  "terminal": {
+    "cause": "a soldier ant",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 4,
+    "turn": 64687,
+    "race_idx": 8,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040031,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "52bb03f757fec695a9fc2d4a66b28eedfed0dc165e0794727f79824a64d20c19",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 5813
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c4-r8-s1040031",
+      "result_sha256": "9ef39d5c2c3353d9723722c72e4bf5133829df3c4327769af6ac22b6066dae63",
+      "raw_sha256": {
+        "keys.log": "9ef39d5c2c3353d9723722c72e4bf5133829df3c4327769af6ac22b6066dae63",
+        "messages.log": "51ef0f1af86795b0d1ca3462e6e446be13d30945feef5c001bfb6dad1ab532ed",
+        "state.log": "ea0db8412bd115c620321142140bed34d5af9b589884bd29e9b910531a708979"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-df4df3aa9086298b6e85a66bfdd4bb39318b302acff47c00196359bd8e4709ef",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "b93612025893038d83a489a3938063df1a7c4383fac6a5df34b8b5aa7a389e6a",
+    "depths.json": "70cf4b321545e38b64e0d5ee805b3629f0f10a59d5d3039f7c409ac241608015",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "0e7ecdf327a326a20bc58b7643d6b79b966351ab33830564ca3fa7ddfb3dec3a",
+    "trace-tail.jsonl": "1064201aa4714ca3c967eda30134a745cc21e18ad14e1608e7604f2d90558af2"
+  },
+  "investigation": null,
+  "issue": null
+}

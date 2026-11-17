@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 7300,
+        "file": "checkpoint-000054-t0000007305.save",
+        "game_turn": 7305,
+        "keys": 1144,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1010014
+      },
+      "selection": {
+        "first_visible_turn": 7355,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 26,
+        "monster_kind": "kobold shaman",
+        "no_omniscient_trigger": true,
+        "observation_line": 527,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 7355
+      },
+      "status": "candidate",
+      "turn": 8123,
+      "type": "death",
+      "witness": {
+        "cause": "a kobold shaman"
+      }
+    }
+  ]
+}

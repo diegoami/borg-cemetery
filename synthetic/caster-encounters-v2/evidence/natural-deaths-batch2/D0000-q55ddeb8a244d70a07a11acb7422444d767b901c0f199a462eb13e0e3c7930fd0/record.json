@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-harvest-v2-batch2/druid-r2-s307",
+      "raw_sha256": {
+        "keys.log": "d52a998db350e0426fe4628c8ac3d02fb0f5e69eb04df460acdb5d27b3a2854b",
+        "messages.log": "2b7c91e812cdc3fbee316cde0aa8d1d8d085500d067be69ecbdab9f70c531464",
+        "state.log": "ad3f19deeef7cbc4cffb1962f8f50981a8da17a989c705032b40adf61c523e04"
+      },
+      "result_sha256": "d52a998db350e0426fe4628c8ac3d02fb0f5e69eb04df460acdb5d27b3a2854b",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Elf Druid",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 461
+  },
+  "encounter_family": "start-db694ea43fcbc8bb103163fc54771ac77929ba30c69bd96f18d2906e76bdfb45",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "079f2addccca0cfd515dee4de88bd06f300d4c9c6c561708a6e7ea1245510bb8",
+    "depths.json": "5abde612ad333f20ef98d2ae39601d4513812b8b6fc647b935d94eec2a295fce",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "765f06eebeaa25f20e42df9e0b6cfae00c65a5501ca7e1f2049594e085041905",
+    "trace-tail.jsonl": "a1afc30fc06b38bcc82cbad3b1e6aa5cff9efe297d40c3d2279e22675171a711"
+  },
+  "id": "D0000-q55ddeb8a244d70a07a11acb7422444d767b901c0f199a462eb13e0e3c7930fd0",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "761cdd15caa7baf58d226006449221d9f3f7de4f5df5a79f483f8e121f8e1e77",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 307,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a cave spider",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a cave spider",
+    "class_idx": 2,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 2,
+    "turn": 5735
+  }
+}

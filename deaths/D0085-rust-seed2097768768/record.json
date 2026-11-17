@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0085-rust-seed2097768768",
+  "run_kind": "harness",
+  "character": "Human Mage",
+  "raw_cause": "a cutpurse",
+  "terminal": {
+    "cause": "a cutpurse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 11891,
+    "race_idx": 0,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 2097768768,
+    "flags": "-",
+    "git_rev": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+    "git_dirty": "no",
+    "source_sha256": "2317021cfad2c97c840903ba95eb10cb0b5831d8ada93574b62ceac4d2e15b4c",
+    "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254",
+    "borg_txt_sha256": "9b0f2214154f60df6c87d8ce3fc74d1964d7e8a9c338c9d4239c1ccb20f523c0",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1024
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths4ec/classes-1800-small/4.2.6-reborn-rust-plans-m13-survival/reborn-m13-plan-town/2097768768",
+      "result_sha256": "fffbdc340efdc53676ae855c71bbdd498d8736c1b1b01f974cbc0ae114369136",
+      "raw_sha256": {
+        "keys.log": "fffbdc340efdc53676ae855c71bbdd498d8736c1b1b01f974cbc0ae114369136",
+        "messages.log": "0cc01c8724d6a8d3869633dd7b4b2b8bd05501b91a338a1802236223aa56649f",
+        "state.log": "3ee4e20ca452be8d5d5d3b3ada60c8a0462549f76b7d2c74d7e8fad5fed6f283"
+      },
+      "source_commit": "4ecb93d77c625e03d2b838837da597d07bfbabe2",
+      "binary_sha256": "f5891f15a85cfe33fcc8ce85fc5659627a273790fac3df156ac871f211693254"
+    }
+  ],
+  "encounter_family": "start-709780a7d7562c43f6d1ed345eb20a45dbbe3277c02bf8c473daf8ab4dfcd910",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "87648232ca281819594e3f4706df902fee13024cbc8f670ebce42b1c696bf543",
+    "config.txt": "6adc79b42fb57d143f46c3eeefec4fb8519af8ebe76ad6cb9c94f5a94ff13233",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "17e3b057e2e350e53ef5aa15bac1c2a49726691dc873d6fa5e668bae1cb479bb",
+    "trace-core-tail.jsonl": "44825af20a73a278092c0e2eded69337f2e18d9e9d28ffc69627f3bd3285eb79"
+  },
+  "investigation": null,
+  "issue": null
+}

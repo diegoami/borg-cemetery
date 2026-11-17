@@ -53,6 +53,6 @@ cemetery: 1 dossiers.
 
 | Registry | Case report | Seed | Seed basis | Character | Cause | Turn | Depth | Level | Settings | Start family |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| cemetery | [D0007](../../../deaths/D0007/README.md) | 102 | recorded input | Elf Mage | Fang, Farmer Maggot's Dog | 3640 | 1 | 1 | [settings](#settings-cemetery-89d2155de9d6) | start-172b11c13aeaa7c07947910ec654efe1b27ed16d71bd8dd6e6b0faee994e4ab8 |
+| cemetery | [D-13c6183d9188403524c33eba596a613f0e3c9a926a974cc8e5f45a8b72e04047](../../../deaths/D0007/README.md) | 102 | recorded input | Elf Mage | Fang, Farmer Maggot's Dog | 3640 | 1 | 1 | [settings](#settings-cemetery-89d2155de9d6) | start-172b11c13aeaa7c07947910ec654efe1b27ed16d71bd8dd6e6b0faee994e4ab8 |
 
 [Statistics index](../../README.md)

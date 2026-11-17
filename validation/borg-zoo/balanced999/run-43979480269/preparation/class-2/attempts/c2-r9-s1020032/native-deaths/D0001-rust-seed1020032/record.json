@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1020032",
+  "run_kind": "harness",
+  "character": "High-Elf Druid",
+  "raw_cause": "a giant white mouse",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 17477,
+    "race_idx": 9,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020032,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "05ccf2e923e7b23d8c2bdc133ebfe55c748c63d3337886751500ca7c3efbabe1",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 1687
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c2-r9-s1020032",
+      "result_sha256": "79f9714b4d70f063ea1f19692758a5a5ec76ebee1eb904a9ceaf03cc7a486aa3",
+      "raw_sha256": {
+        "keys.log": "79f9714b4d70f063ea1f19692758a5a5ec76ebee1eb904a9ceaf03cc7a486aa3",
+        "messages.log": "5ca81c9721a7d8226492a2fc2e9667817fd0cb7fb5594065e51294a225fd0b9e",
+        "state.log": "5c465b45a802786e54871839197289753003dcef81bbb909abcf4622f60f0703"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-8d316cf9b80284de27bed3877d52ee7f0550e7f1af3fe15953ca986fbe8f934e",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "19bfe0089369556468777b82de2d9bcfbbde33cad9ecebdb80de30cad0828c85",
+    "depths.json": "0e30174aad64c85956719013a3620e7b2c8470bd509734466f5be740ee164b94",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "f755cea499c7d49fea44eb5e6a0609b4ee55867f226602451dd222ed6ec3730d",
+    "trace-tail.jsonl": "d2076f2ab3d905e74a78539a50d9f97bc6888adf33f1cb576773366076d0e824"
+  },
+  "investigation": null,
+  "issue": null
+}

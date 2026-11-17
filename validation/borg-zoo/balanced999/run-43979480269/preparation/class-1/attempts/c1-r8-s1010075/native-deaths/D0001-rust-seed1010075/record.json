@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1010075",
+  "run_kind": "harness",
+  "character": "Dunadan Mage",
+  "raw_cause": "a wild cat",
+  "terminal": {
+    "cause": "a wild cat",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 2289,
+    "race_idx": 8,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1010075,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "078cebfc514599458971cae8a64f45ef417c064e6f4dc15d319f058fbd892189",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 227
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c1-r8-s1010075",
+      "result_sha256": "a1ea45beb5b8398de0a0ff808a5f78e6ba873aee699bcf5b48ce64b7a075fd68",
+      "raw_sha256": {
+        "keys.log": "a1ea45beb5b8398de0a0ff808a5f78e6ba873aee699bcf5b48ce64b7a075fd68",
+        "messages.log": "ecee0639a04e41e0f514a481f22c7cd5bf1a52abc66ebf3cd34a2bb738b01cb3",
+        "state.log": "1768183e91420ed1007f90b49a34983797e6df4a2c1d872e1fe88e1e7b63721d"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-c2ce4220a94f37d9082d8a2c3b74bb2ad2311bd1bbb0744f9bedd5d8b94d8c01",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "c89e88f6c3a27cd1ba648f85b8e3548a8d96d3b77b9433f60eee0787a9792063",
+    "depths.json": "8e1021b88bb35d959a36270f796a6330eae73e6ce398c01ffc58e896ef33706f",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "b576fc99e667624ac61dfc3c37ce51e8ebaa5e7c032dbfdd5387e3b1ff758901",
+    "trace-tail.jsonl": "a81d09c039536c4becbf29a470f24675d16642c80503d6eb1cfa4e48e37daa20"
+  },
+  "investigation": null,
+  "issue": null
+}

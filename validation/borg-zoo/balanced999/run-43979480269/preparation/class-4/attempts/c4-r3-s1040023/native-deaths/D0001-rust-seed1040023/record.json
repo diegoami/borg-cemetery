@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040023",
+  "run_kind": "harness",
+  "character": "Hobbit Necromancer",
+  "raw_cause": "a small kobold",
+  "terminal": {
+    "cause": "a small kobold",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 68166,
+    "race_idx": 3,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040023,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "ea4f8dcc99b7d6fcb6452d8a88591588497af97d245e4d48e3b569207621f073",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 6556
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c4-r3-s1040023",
+      "result_sha256": "9e74fc7d45c4ed7e5c9b968eafbaa240e0090417c13dec53f4682a8fc1b9b19c",
+      "raw_sha256": {
+        "keys.log": "9e74fc7d45c4ed7e5c9b968eafbaa240e0090417c13dec53f4682a8fc1b9b19c",
+        "messages.log": "264359d1e8e5e990125259fd2f40ce94c6b256fc5871fb1017d3099912e29726",
+        "state.log": "0eabde4df569629b8de8a232e859b9f7771bccdef39343e00b9dcd5a376576bf"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-b38726576a3210bd5adf0d38252c65baa4c7eb4e5f8f3118ce9b3e3d1ddb9434",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "725443ba8815a41b3cb8c9bf4278ce68e834ac3c7f89d2c62994da6e681b0dee",
+    "depths.json": "d1af5777da56ba808b9e032571b497268c231ee20ffdd54c2de58d1aa756e68d",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "f6740604f4857ba765645df0088fc5655ba74cb6c42f5f407a192c84c48fbbd9",
+    "trace-tail.jsonl": "8cf1f668bd2c7ec1359d8cb00787635194350e922e3a40e80d9fb172910f8586"
+  },
+  "investigation": null,
+  "issue": null
+}

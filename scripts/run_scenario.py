@@ -11,7 +11,7 @@ import sys
 from run_batch import command, digest, git, kv, read_json, write_json
 
 
-def run_scenario(source, scenario_dir, out, turns=1000, wall_seconds=120, profile=None):
+def run_scenario(source, scenario_dir, out, turns=1000, wall_seconds=120, profile=None, execution_adapter=None):
     source, scenario_dir, out = source.resolve(), scenario_dir.resolve(), out.resolve()
     out.mkdir(parents=True, exist_ok=False)
     scenario_file = scenario_dir / 'scenario.json'
@@ -51,14 +51,14 @@ def run_scenario(source, scenario_dir, out, turns=1000, wall_seconds=120, profil
             raise ValueError('target build inputs have changed')
         env = dict(os.environ, BORG_IMPL='rust', TZ='UTC', LANG='C.UTF-8', LC_ALL='C.UTF-8',
                    RUN_TIMEOUT_SECONDS=str(wall_seconds), CHECKPOINT_EVERY='0',
-                   BORG_CEMETERY_DIR=str(Path(__file__).resolve().parents[1]),
+                   BORG_CEMETERY_DIR=os.environ.get('BORG_CEMETERY_DIR', str(Path(__file__).resolve().parents[1])),
                    BORG_DEATH_RECORDS_DIR=str(out / 'native-deaths'))
         for key in ('ANGBAND_BIN', 'BORG_PROFILE', 'BORGH_DATA_ROOT', 'BORG_TEST_FEATURES',
                     'STALL_TIMEOUT_SECONDS', 'SAVE_ROOT'):
             env.pop(key, None)
         env['SAVE_ROOT'] = str(out)
         env['BORG_OBSERVATION_LOG'] = str(out / 'run/observations.jsonl')
-        if profile is None and head == scenario.get('origin', {}).get('source_commit') and scenario.get('baseline_profile'):
+        if execution_adapter is None and profile is None and head == scenario.get('origin', {}).get('source_commit') and scenario.get('baseline_profile'):
             name = scenario['baseline_profile']
             if Path(name).name != name:
                 raise ValueError('baseline profile must be a local filename')
@@ -75,11 +75,15 @@ def run_scenario(source, scenario_dir, out, turns=1000, wall_seconds=120, profil
                        start_turn=start, cap_turn=cap)
         write_json(out / 'trial.json', receipt)
         raw = out / 'run'
-        rc = command(['bash', 'harness/run.sh', str(raw), str(scenario['birth_seed']),
-                      str(scenario['race_idx']), str(scenario['class_idx']), str(cap),
-                      'menu,keep-load-rng,save=input.save'],
-                     cwd=source, env=env, log=out / 'launcher.log', timeout=wall_seconds + 30)
-        summary, process = read_json(raw / 'summary.json'), read_json(raw / 'process.json')
+        if execution_adapter:
+            rc = execution_adapter(source, binary, raw, save, scenario, cap, env, wall_seconds)
+        else:
+            rc = command(['bash', 'harness/run.sh', str(raw), str(scenario['birth_seed']),
+                          str(scenario['race_idx']), str(scenario['class_idx']), str(cap),
+                          'menu,keep-load-rng,save=input.save'],
+                         cwd=source, env=env, log=out / 'launcher.log', timeout=wall_seconds + 30)
+        summary = read_json(raw / 'summary.json') if (raw / 'summary.json').exists() else {}
+        process = read_json(raw / 'process.json')
         status = 'harness_failure'
         if rc == 124 or process.get('status') == 'timeout':
             status = 'timeout'
@@ -102,8 +106,10 @@ def run_scenario(source, scenario_dir, out, turns=1000, wall_seconds=120, profil
             status = 'config_error'
         if profile and not rc and kv(raw / 'config.txt').get('profile_sha256') != receipt['profile_sha256']:
             status = 'config_error'
+        if (raw / 'configuration.json').exists():
+            receipt['configuration'] = read_json(raw / 'configuration.json')
         receipt.update(status=status, exit_code=rc, summary=summary, process=process)
-        return int(status not in ('death', 'survived_horizon'))
+        return int(status not in ('death', 'survived_horizon', 'stopped'))
     except Exception as exc:
         receipt.update(status='failed', error=str(exc))
         print(str(exc), file=sys.stderr)

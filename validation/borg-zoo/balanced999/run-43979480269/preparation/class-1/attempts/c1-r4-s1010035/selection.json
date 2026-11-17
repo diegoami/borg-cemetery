@@ -1,0 +1,137 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 3900,
+        "file": "checkpoint-000039-t0000003902.save",
+        "game_turn": 3902,
+        "keys": 871,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1010035
+      },
+      "selection": {
+        "first_visible_turn": 3962,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 13,
+        "monster_kind": "wild dog",
+        "no_omniscient_trigger": true,
+        "observation_line": 408,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 3962
+      },
+      "status": "candidate",
+      "turn": 4302,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 442,
+          "max_hp": 8,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 13,
+              "race": 29
+            },
+            {
+              "index": 8,
+              "race": 27
+            },
+            {
+              "index": 21,
+              "race": 48
+            }
+          ],
+          "sp": 0,
+          "turn": 4302
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 442,
+          "max_hp": 8,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 13,
+              "race": 29
+            },
+            {
+              "index": 8,
+              "race": 27
+            },
+            {
+              "index": 21,
+              "race": 48
+            }
+          ],
+          "sp": 0,
+          "turn": 4302
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 8,
+          "level": 1,
+          "line": 443,
+          "max_hp": 8,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 13,
+              "race": 29
+            },
+            {
+              "index": 8,
+              "race": 27
+            },
+            {
+              "index": 21,
+              "race": 48
+            }
+          ],
+          "sp": 0,
+          "turn": 4312
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 4100,
+        "file": "checkpoint-000041-t0000004102.save",
+        "game_turn": 4102,
+        "keys": 911,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1010035
+      },
+      "selection": {
+        "first_visible_turn": 4112,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 21,
+        "monster_kind": "Fang, Farmer Maggot's Dog",
+        "no_omniscient_trigger": true,
+        "observation_line": 423,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 4112
+      },
+      "status": "candidate",
+      "turn": 4391,
+      "type": "death",
+      "witness": {
+        "cause": "Fang, Farmer Maggot's Dog"
+      }
+    }
+  ]
+}

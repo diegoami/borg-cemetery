@@ -1,0 +1,114 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 301,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 3,
+    "clevel": 3,
+    "depth": 1,
+    "due_turn": 19300,
+    "file": "checkpoint-000193-t0000019303.save",
+    "game_turn": 19303,
+    "keys": 3910,
+    "max_depth": 1,
+    "race_idx": 5,
+    "seed": 301
+  },
+  "class_idx": 3,
+  "compressed_sha256": "ad397234ed41739d29e6e5a5346279c1d4f6d18f3860cf0402d94a261324501c",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Mace (2d4) (+0,+0)",
+        "kind": 52,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (3105 turns)",
+        "kind": 4,
+        "slot": 5
+      }
+    ],
+    "equipment_kind_signature": "d9df93b11d86787f1bfe90ecf85c92b75d3c8975ae7e0c34c7cf1c118dc0e254",
+    "hp": 33,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Holy Book of Prayers [Novice's Handbook]",
+        "kind": 386
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 2,
+        "description": "Potions of Cure Serious Wounds",
+        "kind": 232
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 3,
+        "description": "Scrolls titled \"mestuna ine sa\"",
+        "kind": 190
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 3,
+    "mana_state": "full",
+    "max_hp": 33,
+    "max_sp": 6,
+    "sp": 6
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "priest-r5-s301-t0019363-m21",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 33,
+    "max_hp": 33,
+    "max_sp": 6,
+    "sp": 6
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-08c80c8ae7ec2937f52d763baaca81098128f2f5b37ae5fc1b90bbe24a454af8",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 301,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20003,
+  "race_idx": 5,
+  "save": "start.save.gz",
+  "save_sha256": "dbb83e9381f1c2e8fe6c92b6c0a934dcb45d265e826f9d067b1c50e851582310",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 19413,
+    "first_visible_turn": 19363,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 60,
+    "monster_index": 21,
+    "monster_kind": "wild dog",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "cfddbee92be8379c46f9eafb98a59ca1bc2a239448da0fdefa63cf2e547255dc",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 19363
+  },
+  "start_turn": 19303,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

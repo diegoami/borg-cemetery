@@ -1,0 +1,86 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 4700,
+        "file": "checkpoint-000047-t0000004702.save",
+        "game_turn": 4702,
+        "keys": 1052,
+        "max_depth": 1,
+        "race_idx": 7,
+        "seed": 1010030
+      },
+      "selection": {
+        "first_visible_turn": 4732,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 19,
+        "monster_kind": "metallic blue centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 483,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 4732
+      },
+      "status": "candidate",
+      "turn": 4862,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 496,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 19,
+              "race": 56
+            }
+          ],
+          "sp": 0,
+          "turn": 4862
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 496,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 19,
+              "race": 56
+            }
+          ],
+          "sp": 0,
+          "turn": 4862
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 21,
+          "level": 3,
+          "line": 506,
+          "max_hp": 21,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 4,
+          "turn": 5702
+        }
+      }
+    },
+    {
+      "reason": "environmental death needs a separate observable-trigger adapter",
+      "status": "excluded",
+      "turn": 54500,
+      "type": "death",
+      "witness": {
+        "cause": "a fatal wound"
+      }
+    }
+  ]
+}

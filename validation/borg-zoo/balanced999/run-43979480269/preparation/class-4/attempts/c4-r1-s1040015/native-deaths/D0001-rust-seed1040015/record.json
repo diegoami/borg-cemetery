@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040015",
+  "run_kind": "harness",
+  "character": "Half-Elf Necromancer",
+  "raw_cause": "a mean-looking mercenary",
+  "terminal": {
+    "cause": "a mean-looking mercenary",
+    "dead": true,
+    "depth": 0,
+    "max_depth": 0,
+    "level": 1,
+    "turn": 642,
+    "race_idx": 1,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040015,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "50d4eff6537a3259c021cd67d7d9d581e8e3021883a1373975a83990029a19e9",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 67,
+    "of": 67
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c4-r1-s1040015",
+      "result_sha256": "1539d74c16ffb22c6b41e8db43ee8fbe7dc764fb8c1a565c7b51e4f193644b8d",
+      "raw_sha256": {
+        "keys.log": "1539d74c16ffb22c6b41e8db43ee8fbe7dc764fb8c1a565c7b51e4f193644b8d",
+        "messages.log": "92ad131ea3c557a2b3e7f49a43bfa1dab01025ff2a8692e345a5ebf73a019753",
+        "state.log": "263f7752acebd9e2b094d074e76401c85cc2dbbc0b7548deb55176bcbefd7f8e"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-1024be4ae65cf5f64d56e8e24391a3dec7df159a90181be6fe5f993d09607c1c",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "5d24c1f1bbd9dd53e5f7f261d663ea06024c691b43407e0623570862adcd85ac",
+    "depths.json": "e9caf4c2721f7833d3bdc3505c27df5cc6526676bfd8ced3f9d490ba91f0770e",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "218cc96457b6d8c98d6bc578e1f3da147c23f8b1540e16ffb34e6df80795b4e2",
+    "trace-tail.jsonl": "fadfb45fd4a1e41ed3524a1c5cfb2f696f8362d01bb48f3fe1582698ad26bf98"
+  },
+  "investigation": null,
+  "issue": null
+}

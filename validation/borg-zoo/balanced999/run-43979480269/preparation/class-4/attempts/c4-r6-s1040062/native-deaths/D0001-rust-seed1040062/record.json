@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040062",
+  "run_kind": "harness",
+  "character": "Half-Orc Necromancer",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 6,
+    "turn": 68313,
+    "race_idx": 6,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040062,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "1df53d29d600b3cdfec566f46c7410ea3d4194f1deda82bb85362eed76e4930f",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 6339
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c4-r6-s1040062",
+      "result_sha256": "118e133360d96b00b0a7e70eec01330ad0a6f66a50ddd95a8854bafa866d928f",
+      "raw_sha256": {
+        "keys.log": "118e133360d96b00b0a7e70eec01330ad0a6f66a50ddd95a8854bafa866d928f",
+        "messages.log": "1f3de6c2bc9851984fe7ec5d8d4f68d3c3d039a4e3639daa42d9961d8d99c78c",
+        "state.log": "516c83b8c1ada08dbdaac53ba39735c2a1aa9886f4ff883f52662b10d0fd521d"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-1bf06f2b5015602da9d93c28de2b6b4c5aa6b191d1f51ce9352d9f774e028533",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "9287e3580c859584d6883bc2fc649ab9a1d51c4f691a0ae6f56d0f055796674c",
+    "depths.json": "8ebf2d2b2131fd36f029a5a7720881d12882081a015e77ffe5483b020ce360dc",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "7d9626f21e70af4b9934d5972392fb9faca8189bec57d8ed00a3def7e67651dd",
+    "trace-tail.jsonl": "8a80b01cc241184b9e8e0bf034dd8bd2eea618a89f3187fe3fefded05ba3ecca"
+  },
+  "investigation": null,
+  "issue": null
+}

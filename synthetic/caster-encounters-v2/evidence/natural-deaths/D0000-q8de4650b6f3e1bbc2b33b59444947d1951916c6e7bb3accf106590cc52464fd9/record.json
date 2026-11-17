@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-harvest-v2/necromancer-r4-s303",
+      "raw_sha256": {
+        "keys.log": "615c19fa1e9fd23d9b6f383cffcbb3218587d9294b12d567d3b305c1ab77fe96",
+        "messages.log": "0a1061be08dfdfdd64b6991e0827629fcc72a9756e3d7d61d66a734ef115acdf",
+        "state.log": "39d02767ac4133c6168febe7ad5921aae520c444612ae9923d0fcb361f400e89"
+      },
+      "result_sha256": "615c19fa1e9fd23d9b6f383cffcbb3218587d9294b12d567d3b305c1ab77fe96",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Gnome Necromancer",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 1044
+  },
+  "encounter_family": "start-53382ea8da25ff98fbb9b1af5b3f93e9b1c720583fe92850f1430a22cd22fc84",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "a88c4b5fccfe1d669ae9c11af77288f0dcefd50645487ee05ac8e8c994445122",
+    "depths.json": "a2ef62cbc92bdfb1cb04481f7342d14949261cd0f93f31e78c9365084230040c",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "0874bc4ce025cf41e7381da93cc1a9d49570f4526dc52c0d6b82b5883a0562ee",
+    "trace-tail.jsonl": "6bc222a4191eceafcf0c8a0dda94413e6be27a89e89081b65f75faa36e796185"
+  },
+  "id": "D0000-q8de4650b6f3e1bbc2b33b59444947d1951916c6e7bb3accf106590cc52464fd9",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "46c3b04c1d843851205c9f5b03b91ece989007a59d73b8b1b6cef60b89385981",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 303,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a soldier",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a soldier",
+    "class_idx": 4,
+    "dead": true,
+    "depth": 1,
+    "level": 2,
+    "max_depth": 1,
+    "race_idx": 4,
+    "turn": 11710
+  }
+}

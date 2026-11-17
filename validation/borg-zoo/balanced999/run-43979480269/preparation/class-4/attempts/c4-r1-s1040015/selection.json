@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 0,
+        "due_turn": 100,
+        "file": "checkpoint-000001-t0000000101.save",
+        "game_turn": 101,
+        "keys": 40,
+        "max_depth": 0,
+        "race_idx": 1,
+        "seed": 1040015
+      },
+      "selection": {
+        "first_visible_turn": 131,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "mean-looking mercenary",
+        "no_omniscient_trigger": true,
+        "observation_line": 16,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 131
+      },
+      "status": "candidate",
+      "turn": 642,
+      "type": "death",
+      "witness": {
+        "cause": "a mean-looking mercenary"
+      }
+    }
+  ]
+}

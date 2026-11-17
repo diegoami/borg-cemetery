@@ -1,0 +1,98 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 7100,
+        "file": "checkpoint-000071-t0000007350.save",
+        "game_turn": 7350,
+        "keys": 1463,
+        "max_depth": 1,
+        "race_idx": 1,
+        "seed": 1030015
+      },
+      "selection": {
+        "first_visible_turn": 7370,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 19,
+        "monster_kind": "scruffy looking hobbit",
+        "no_omniscient_trigger": true,
+        "observation_line": 700,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 7370
+      },
+      "status": "candidate",
+      "turn": 7380,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 701,
+          "max_hp": 12,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 7380
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 701,
+          "max_hp": 12,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 7380
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 12,
+          "level": 1,
+          "line": 702,
+          "max_hp": 12,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 7390
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 15700,
+        "file": "checkpoint-000155-t0000015701.save",
+        "game_turn": 15701,
+        "keys": 3141,
+        "max_depth": 1,
+        "race_idx": 1,
+        "seed": 1030015
+      },
+      "selection": {
+        "first_visible_turn": 15751,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 2,
+        "monster_kind": "grey mold",
+        "no_omniscient_trigger": true,
+        "observation_line": 1539,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 15751
+      },
+      "status": "candidate",
+      "turn": 16167,
+      "type": "death",
+      "witness": {
+        "cause": "a grey mold"
+      }
+    }
+  ]
+}

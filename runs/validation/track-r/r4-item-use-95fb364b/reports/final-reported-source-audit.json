@@ -1,0 +1,232 @@
+{
+  "schema": "borg-reborn-rs/r435-source-audit@1",
+  "native_sha256": "5cb9c23b13ee3789f96f317580ae5ef4dc68192518b0888ae44f0ba1bdeb0b2a",
+  "port_sha256": "3ba25ded8a37ed6efd29d954d8485f343e370138e5b487b44b9deb3aff53457e",
+  "scope": "All 37 policy function bodies and module constants; imports and memory definitions require separate review.",
+  "identical_declarations": [],
+  "normalization": "Named Read projections, API type paths, entry markers, native suffix/visibility, rustfmt trailing commas and braces around a single match-arm expression only. Quoted string and character sequences compared separately.",
+  "functions": [
+    {
+      "function": "letter",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "key",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "desc",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "note_desc",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "clear_shop_goals",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "device_skill",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "device_fail",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "last_unaware",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_quaff_crit",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_quaff_potion",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_quaff_unknown",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_read_scroll",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_read_unknown",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_eat",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_eat_unknown",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_eat_food_any",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_equips_rod",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_zap_rod",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_use_staff",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_use_unknown",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_use_staff_fail",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_equips_staff_fail",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_aim_wand",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "inven_right",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "inven_left",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "inven_body",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "inven_total",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_equips_ring",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_activate_ring",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "dragon_ready",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_equips_dragon",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_activate_dragon",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_activate_item",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_equips_item",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_activate_failure",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_use_things",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    },
+    {
+      "function": "borg_recharging",
+      "normalized_tokens_equal": true,
+      "quoted_literals_equal": true,
+      "character_literals_equal": true
+    }
+  ]
+}

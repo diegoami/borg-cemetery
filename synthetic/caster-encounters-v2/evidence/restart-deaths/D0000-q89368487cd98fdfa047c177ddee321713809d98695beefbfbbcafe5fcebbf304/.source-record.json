@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed308",
+  "run_kind": "harness",
+  "character": "Kobold Druid",
+  "raw_cause": "a small kobold",
+  "terminal": {
+    "cause": "a small kobold",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 3002,
+    "race_idx": 10,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 308,
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "7ef4c3a614440795a859cc733db093ade40a80c70607347f7fd4bff2b4df6afb",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 42,
+    "of": 42
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-bank-v2-final-actual/shard-18/druid-r10-s308-t0002669-m44/run",
+      "result_sha256": "bd55b72946c08525e123be34d731f50b4fd9a029579b8a9a96765ec4e4761401",
+      "raw_sha256": {
+        "keys.log": "bd55b72946c08525e123be34d731f50b4fd9a029579b8a9a96765ec4e4761401",
+        "messages.log": "5483d86942f5849101b63bc5eb7f15c4f47f8924fa89cd637ad62407f24cdac6",
+        "state.log": "3521c05fe1bd49eb49e83b9d1e5427c511572f819899db475ac67a14edddf08f"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776"
+    }
+  ],
+  "encounter_family": "start-d9724ccf6f3116af24ea9f4ed6620a831e02aa85a6c1e4c274093621d4185a59",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "576b897ce2222ff338acacda4ef8c7d3a8004d184a44cc822f0091dc27d266a6",
+    "depths.json": "849daa78a41f4bb3997e79e9b521544f425d5bb4e6ea66a1e90f02ce9afbca67",
+    "params.json": "70641cd6fa234f7c768232949db6641a1c3eac5105280d2ac848f371bef4bd77",
+    "summary.json": "a442f55c8e28c46d4611dbcc79ac606dfd64fa0cf499496c947fd32a8ad86ef7",
+    "trace-tail.jsonl": "e88219709dabb6d98b4b45f31559fe6bef19e3d487a383b9908d666563f56cb5"
+  },
+  "investigation": null,
+  "issue": null
+}

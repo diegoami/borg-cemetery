@@ -1,11 +1,14 @@
-# Death analysis and tuning pipeline
+# Death and battle analysis pipeline
 
-The [controlled-experiment redesign](cemetery-redesign.md) is the proposed next
-architecture: fixed cohorts, exact build/configuration variants, independently
-qualified near-deaths, bounded external storage and on-demand investigation.
-Its storage/retention model supersedes the permanent archive direction in this
-earlier plan. The implemented CI stages below still describe current behavior;
-the redesign has not been implemented or accepted as a new milestone.
+The [battle-scenario architecture proposal](cemetery-redesign.md) defines the
+current proposed direction: study fatal and surviving encounters, retain
+portable scenarios, independently qualify near-deaths and revalidate relevance
+when tracked builds change. Borg-zoo owns population experiments; automated
+parameter optimization and the new evaluation cohort suggested by the earlier
+redesign are outside cemetery's scope. The proposal supersedes this earlier
+plan's permanent archive direction and speculative tuning/population pipeline.
+Implemented commands and CI stages described below still exist; architecture
+changes have not been implemented or accepted as a new milestone.
 
 Human entry points are the death and scenario README pages, written reports,
 inventory/spell tables, animations and REPLAY guides. Serialized observations

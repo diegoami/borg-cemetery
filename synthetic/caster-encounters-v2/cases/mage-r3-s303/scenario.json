@@ -1,0 +1,134 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 303,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 1,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 17000,
+    "file": "checkpoint-000170-t0000017001.save",
+    "game_turn": 17001,
+    "keys": 3604,
+    "max_depth": 1,
+    "race_idx": 3,
+    "seed": 303
+  },
+  "class_idx": 1,
+  "compressed_sha256": "e12597f6c0030764e69364044a1df68440cc059faba685508eea990d37750999",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Rapier (1d6) (+0,+0)",
+        "kind": 35,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (3387 turns)",
+        "kind": 4,
+        "slot": 5
+      }
+    ],
+    "equipment_kind_signature": "581551ca0bcdca9b672352c4f8216ed34c6ca525fdd287635612ab011afa74d6",
+    "hp": 9,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Book of Magic Spells [First Spells]",
+        "kind": 376
+      },
+      {
+        "count": 4,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Potion of Cure Light Wounds",
+        "kind": 231
+      },
+      {
+        "count": 4,
+        "description": "Metallic Blue Potions",
+        "kind": 259
+      },
+      {
+        "count": 6,
+        "description": "Cloudy Potions",
+        "kind": 261
+      },
+      {
+        "count": 1,
+        "description": "Purple Speckled Potion",
+        "kind": 248
+      },
+      {
+        "count": 7,
+        "description": "Scrolls of Phase Door",
+        "kind": 185
+      },
+      {
+        "count": 1,
+        "description": "Scroll titled \"pro ilemo\"",
+        "kind": 190
+      },
+      {
+        "count": 2,
+        "description": "Scrolls titled \"audo aditase\"",
+        "kind": 189
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "partial",
+    "max_hp": 9,
+    "max_sp": 4,
+    "sp": 3
+  },
+  "event_kind": "surviving_encounter",
+  "id": "mage-r3-s303",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 9,
+    "max_hp": 9,
+    "max_sp": 4,
+    "sp": 3
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-6d515bc25404f1840d9e5c27f18d0bb7e09a12ea16e3abfd89eddb4e48772f91",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 303,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20001,
+  "race_idx": 3,
+  "save": "start.save.gz",
+  "save_sha256": "6ef21906329ab2242f2da3f02e20e303d8be9a02c4db661d23a28ecd15a7c3e4",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_visible_turn": 17081,
+    "kind": "first_visible_kind_in_selected_episode",
+    "lead_engine_turns": 75,
+    "monster_index": 6,
+    "monster_kind": "wild cat",
+    "no_omniscient_trigger": true,
+    "observation_line": 1722,
+    "observation_sha256": "caeedeb99ccd27966b1f52f86b4f719b338047a98fcb40e38c69d06efc476827",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 17076
+  },
+  "start_turn": 17001,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

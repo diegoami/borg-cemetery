@@ -1,0 +1,1281 @@
+{
+  "borg_memory_restored": false,
+  "core": "reborn",
+  "elapsed_seconds": 4.846421756010386,
+  "expected_count": 8,
+  "invalid_count": 0,
+  "manifest_sha256": "d611f73de3e9c40959845919c8e2adf35a02bfa95197f47065b247f7471accdd",
+  "results": [
+    {
+      "elapsed_seconds": 0.5226994679978816,
+      "id": "mage-r4-s301",
+      "loaded_coverage": {
+        "depth": 1,
+        "equipment": [
+          {
+            "description": "Rapier (1d6) (+0,+0)",
+            "kind": 35,
+            "slot": 1
+          },
+          {
+            "description": "Wooden Torch (4448 turns)",
+            "kind": 4,
+            "slot": 5
+          }
+        ],
+        "equipment_kind_signature": "581551ca0bcdca9b672352c4f8216ed34c6ca525fdd287635612ab011afa74d6",
+        "hp": 8,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Book of Magic Spells [First Spells]",
+            "kind": 376
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 1,
+            "description": "Light Green Potion",
+            "kind": 247
+          },
+          {
+            "count": 1,
+            "description": "Indigo Potion",
+            "kind": 250
+          },
+          {
+            "count": 1,
+            "description": "Scroll of Phase Door",
+            "kind": 185
+          },
+          {
+            "count": 1,
+            "description": "Scroll of Word of Recall",
+            "kind": 208
+          },
+          {
+            "count": 3,
+            "description": "Scrolls titled \"pro sinqueo ma\"",
+            "kind": 212
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 1,
+        "mana_state": "empty",
+        "max_hp": 8,
+        "max_sp": 2,
+        "sp": 0
+      },
+      "source_build": {
+        "binary": "/workspace/work/reborn-fast-main-runtime/build/rust/game/angband",
+        "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+        "built_utc": "2026-11-16T18:10:05Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+      },
+      "status": "death",
+      "streams": {
+        "keys.log": "db6ba27e9aca335a989e214335a793e3df54ce48ff2d2b32627ea589a55f3676",
+        "messages.log": "19f8ec73d12912c47613ec0dffc79d584e6db5f9ab311f35d9e6fc1b462cc1a5",
+        "state.log": "3f83e3360c34ac0c4fd8a21f7574651226daf92f059307f6174f16605fa77d6b"
+      },
+      "summary": {
+        "borg_decisions": 13,
+        "borg_rng": 2135587861,
+        "calendar": "fixed",
+        "class": "Mage",
+        "class_idx": 1,
+        "clevel": 1,
+        "dead": true,
+        "death_cause": "a wild dog",
+        "depth": 1,
+        "effective_settings": {},
+        "exact_turns": false,
+        "game_options": {
+          "animate_flicker": false,
+          "auto_more": true,
+          "autoexplore_commands": false,
+          "birth_ai_learn": true,
+          "birth_connect_stairs": true,
+          "birth_feelings": true,
+          "birth_force_descend": false,
+          "birth_know_flavors": false,
+          "birth_know_runes": false,
+          "birth_levels_persist": false,
+          "birth_lose_arts": false,
+          "birth_no_artifacts": false,
+          "birth_no_recall": false,
+          "birth_no_selling": true,
+          "birth_percent_damage": false,
+          "birth_randarts": false,
+          "birth_stacking": true,
+          "birth_start_kit": true,
+          "center_player": false,
+          "cheat_hear": false,
+          "cheat_live": false,
+          "cheat_room": false,
+          "cheat_xtra": false,
+          "disturb_near": true,
+          "effective_speed": false,
+          "highlight_player": false,
+          "hp_changes_color": true,
+          "hybrid_walls": false,
+          "mouse_movement": true,
+          "notify_recharge": false,
+          "pickup_always": false,
+          "pickup_inven": true,
+          "purple_uniques": false,
+          "rogue_like_commands": false,
+          "score_hear": false,
+          "score_live": false,
+          "score_room": false,
+          "score_xtra": false,
+          "show_damage": false,
+          "show_flavors": false,
+          "show_target": true,
+          "solid_walls": false,
+          "use_old_target": false,
+          "use_sound": false,
+          "view_yellow_light": false
+        },
+        "game_rng": {
+          "quick": false,
+          "quick_rng": 177067742,
+          "rng": "7c138a2e406cc9b9ad99a6e6df61493f12c3a3e8654441d869218c6aaeb272f285547d621dcf6db3ba1a25bfd452227c391ee8744a54fbbe1b8f6384eb0d0db524db84a0e8b5c296c0cf485fc201b3a791c0cc132d45599c4d1fa907c97943d6919318cab3b93c7764234ad6f21fdc604d889938c62b141e6db627f7952b507e",
+          "rng_index": 24
+        },
+        "game_turns": 6329,
+        "hp": -1,
+        "keys": 28,
+        "loaded": true,
+        "loaded_turn": 6204,
+        "max_clevel": 1,
+        "max_depth": 1,
+        "max_hp": 8,
+        "menu_letters": true,
+        "player_energy": 63430,
+        "player_turns": 634,
+        "race": "Gnome",
+        "race_idx": 4,
+        "resting_turns": 0,
+        "seed": 301,
+        "stop_reason": "death",
+        "wall_seconds": 0.046
+      },
+      "trial_sha256": "80f9f260aaf6ac0291e0eb69e00fe4eec719c7db624e614124fa8889c89bdad4"
+    },
+    {
+      "elapsed_seconds": 0.5808794119948288,
+      "id": "mage-r9-s302",
+      "loaded_coverage": {
+        "depth": 1,
+        "equipment": [
+          {
+            "description": "Rapier (1d6) (+0,+0)",
+            "kind": 35,
+            "slot": 1
+          },
+          {
+            "description": "Wooden Torch (4956 turns)",
+            "kind": 4,
+            "slot": 5
+          }
+        ],
+        "equipment_kind_signature": "581551ca0bcdca9b672352c4f8216ed34c6ca525fdd287635612ab011afa74d6",
+        "hp": 10,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Book of Magic Spells [First Spells]",
+            "kind": 376
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 3,
+            "description": "Potions of Cure Light Wounds",
+            "kind": 231
+          },
+          {
+            "count": 4,
+            "description": "Scrolls of Phase Door",
+            "kind": 185
+          },
+          {
+            "count": 1,
+            "description": "Scroll of Word of Recall",
+            "kind": 208
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 1,
+        "mana_state": "full",
+        "max_hp": 10,
+        "max_sp": 2,
+        "sp": 2
+      },
+      "source_build": {
+        "binary": "/workspace/work/reborn-fast-main-runtime/build/rust/game/angband",
+        "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+        "built_utc": "2026-11-16T18:10:05Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+      },
+      "status": "survived_horizon",
+      "streams": {
+        "keys.log": "2a6f37eb42d13a53062f70c6cddf89e874b9d08866e146500cb90410c80f8b64",
+        "messages.log": "1b51e48cf025bf10bb7a785cb5b560bb47de5d528f694de91459f62805a84f84",
+        "state.log": "3177289e973b628b5cfd48b562c7495eca3bdfd4830eddd4dada8b23d3e3894f"
+      },
+      "summary": {
+        "borg_decisions": 27,
+        "borg_rng": 2135587861,
+        "calendar": "fixed",
+        "class": "Mage",
+        "class_idx": 1,
+        "clevel": 1,
+        "dead": false,
+        "death_cause": "",
+        "depth": 1,
+        "effective_settings": {},
+        "exact_turns": false,
+        "game_options": {
+          "animate_flicker": false,
+          "auto_more": true,
+          "autoexplore_commands": false,
+          "birth_ai_learn": true,
+          "birth_connect_stairs": true,
+          "birth_feelings": true,
+          "birth_force_descend": false,
+          "birth_know_flavors": false,
+          "birth_know_runes": false,
+          "birth_levels_persist": false,
+          "birth_lose_arts": false,
+          "birth_no_artifacts": false,
+          "birth_no_recall": false,
+          "birth_no_selling": true,
+          "birth_percent_damage": false,
+          "birth_randarts": false,
+          "birth_stacking": true,
+          "birth_start_kit": true,
+          "center_player": false,
+          "cheat_hear": false,
+          "cheat_live": false,
+          "cheat_room": false,
+          "cheat_xtra": false,
+          "disturb_near": true,
+          "effective_speed": false,
+          "highlight_player": false,
+          "hp_changes_color": true,
+          "hybrid_walls": false,
+          "mouse_movement": true,
+          "notify_recharge": false,
+          "pickup_always": false,
+          "pickup_inven": true,
+          "purple_uniques": false,
+          "rogue_like_commands": false,
+          "score_hear": false,
+          "score_live": false,
+          "score_room": false,
+          "score_xtra": false,
+          "show_damage": false,
+          "show_flavors": false,
+          "show_target": true,
+          "solid_walls": false,
+          "use_old_target": false,
+          "use_sound": false,
+          "view_yellow_light": false
+        },
+        "game_rng": {
+          "quick": false,
+          "quick_rng": 2177165019,
+          "rng": "4169a191f227af21bac5d6d6f81109fe6efb587c3cf44a3079c30d1d9345115acd049dc77969aeeba2bce4f47a3383ebabf079252300ab03d29e20285140b6830c53123effa57400c911158710c09d6ab74191fc712b12bd259f067971651f2c7fd5525f6af1444b715c272542d89112c3e44c569dead884b9cf99cbed37d770",
+          "rng_index": 25
+        },
+        "game_turns": 2201,
+        "hp": 10,
+        "keys": 56,
+        "loaded": true,
+        "loaded_turn": 1201,
+        "max_clevel": 1,
+        "max_depth": 1,
+        "max_hp": 10,
+        "menu_letters": true,
+        "player_energy": 22100,
+        "player_turns": 221,
+        "race": "High-Elf",
+        "race_idx": 9,
+        "resting_turns": 75,
+        "seed": 302,
+        "stop_reason": "turns",
+        "wall_seconds": 0.081
+      },
+      "trial_sha256": "9866396d15f832d7ab4ec3354c211b028b9c9f6d875af8e83f1b38ea644ac4fc"
+    },
+    {
+      "elapsed_seconds": 0.5743760659970576,
+      "id": "druid-r8-s301",
+      "loaded_coverage": {
+        "depth": 1,
+        "equipment": [
+          {
+            "description": "Whip (1d3) (+0,+0)",
+            "kind": 47,
+            "slot": 1
+          },
+          {
+            "description": "Wooden Torch (3735 turns)",
+            "kind": 4,
+            "slot": 5
+          }
+        ],
+        "equipment_kind_signature": "85c02c5b3eb730b04d3579f990b8978618d626962fe9be478576dff9a8201273",
+        "hp": 12,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Book of Nature Magics [Lesser Charms]",
+            "kind": 381
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 1,
+            "description": "Scroll of Word of Recall",
+            "kind": 208
+          },
+          {
+            "count": 3,
+            "description": "Scrolls titled \"lam intia\"",
+            "kind": 199
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 2,
+        "mana_state": "full",
+        "max_hp": 25,
+        "max_sp": 4,
+        "sp": 4
+      },
+      "source_build": {
+        "binary": "/workspace/work/reborn-fast-main-runtime/build/rust/game/angband",
+        "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+        "built_utc": "2026-11-16T18:10:05Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+      },
+      "status": "death",
+      "streams": {
+        "keys.log": "b627186b79ed2a5474c1e480ce5437a259fc65862cc7d1321268d92f9b847f46",
+        "messages.log": "e65e59e1e5852da668ffa2e6c76ec87ce7a8b55b989c61528df59b2b2a2db2d1",
+        "state.log": "8b2dd683cf16a0fa31570b0c7d639773cf818b2cc62fa48b975e31055fd6edc6"
+      },
+      "summary": {
+        "borg_decisions": 8,
+        "borg_rng": 2135587861,
+        "calendar": "fixed",
+        "class": "Druid",
+        "class_idx": 2,
+        "clevel": 2,
+        "dead": true,
+        "death_cause": "Fang, Farmer Maggot's Dog",
+        "depth": 1,
+        "effective_settings": {},
+        "exact_turns": false,
+        "game_options": {
+          "animate_flicker": false,
+          "auto_more": true,
+          "autoexplore_commands": false,
+          "birth_ai_learn": true,
+          "birth_connect_stairs": true,
+          "birth_feelings": true,
+          "birth_force_descend": false,
+          "birth_know_flavors": false,
+          "birth_know_runes": false,
+          "birth_levels_persist": false,
+          "birth_lose_arts": false,
+          "birth_no_artifacts": false,
+          "birth_no_recall": false,
+          "birth_no_selling": true,
+          "birth_percent_damage": false,
+          "birth_randarts": false,
+          "birth_stacking": true,
+          "birth_start_kit": true,
+          "center_player": false,
+          "cheat_hear": false,
+          "cheat_live": false,
+          "cheat_room": false,
+          "cheat_xtra": false,
+          "disturb_near": true,
+          "effective_speed": false,
+          "highlight_player": false,
+          "hp_changes_color": true,
+          "hybrid_walls": false,
+          "mouse_movement": true,
+          "notify_recharge": false,
+          "pickup_always": false,
+          "pickup_inven": true,
+          "purple_uniques": false,
+          "rogue_like_commands": false,
+          "score_hear": false,
+          "score_live": false,
+          "score_room": false,
+          "score_xtra": false,
+          "show_damage": false,
+          "show_flavors": false,
+          "show_target": true,
+          "solid_walls": false,
+          "use_old_target": false,
+          "use_sound": false,
+          "view_yellow_light": false
+        },
+        "game_rng": {
+          "quick": false,
+          "quick_rng": 177067742,
+          "rng": "37e0644c14597fd28986a400ca39e525fd2980e232b517229b406568338cfc84137f682d8911891d81f99d2ea9e816ac9dc4f134126afcdba157c038b8894bcc5658f73c6db819f3a651aa901d00a26c804232025a14e5d7e58e615857014fdbf8bd0fcf6324fdcaa23846b361365c2000fcb7619c00ec2994605f7edf52eb0f",
+          "rng_index": 29
+        },
+        "game_turns": 13674,
+        "hp": -1,
+        "keys": 20,
+        "loaded": true,
+        "loaded_turn": 13602,
+        "max_clevel": 2,
+        "max_depth": 1,
+        "max_hp": 25,
+        "menu_letters": true,
+        "player_energy": 136885,
+        "player_turns": 1368,
+        "race": "Dunadan",
+        "race_idx": 8,
+        "resting_turns": 448,
+        "seed": 301,
+        "stop_reason": "death",
+        "wall_seconds": 0.041
+      },
+      "trial_sha256": "f2a3b86a68e9354978f4f917374d7474aeb1eda09ef38a681c54318dcb541971"
+    },
+    {
+      "elapsed_seconds": 0.5383674360055011,
+      "id": "druid-r1-s302",
+      "loaded_coverage": {
+        "depth": 1,
+        "equipment": [
+          {
+            "description": "Whip (1d3) (+0,+0)",
+            "kind": 47,
+            "slot": 1
+          },
+          {
+            "description": "Wooden Torch (4337 turns)",
+            "kind": 4,
+            "slot": 5
+          },
+          {
+            "description": "Cloak [1,+0]",
+            "kind": 123,
+            "slot": 7
+          }
+        ],
+        "equipment_kind_signature": "960eddd7305a7e91103bd8d26d6434c53bf7d3e0e1d41b54076f52290e744156",
+        "hp": 12,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Book of Nature Magics [Lesser Charms]",
+            "kind": 381
+          },
+          {
+            "count": 1,
+            "description": "Necromantic Tome [Into the Shadows]",
+            "kind": 391
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 1,
+            "description": "Scroll of Word of Recall",
+            "kind": 208
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 1,
+        "mana_state": "full",
+        "max_hp": 12,
+        "max_sp": 2,
+        "sp": 2
+      },
+      "source_build": {
+        "binary": "/workspace/work/reborn-fast-main-runtime/build/rust/game/angband",
+        "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+        "built_utc": "2026-11-16T18:10:05Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+      },
+      "status": "death",
+      "streams": {
+        "keys.log": "68319e728865c44647ae4ff8e30766fad02b6b2497bb966ac77cd1a5619fec67",
+        "messages.log": "c922cb6c869f55b283ccebf56adbb27150db597bf807df96ee21336a26d84eed",
+        "state.log": "f6c823ac28c725fd01bd85abb676072dfa723cd4c67bc46326945070b483cfa4"
+      },
+      "summary": {
+        "borg_decisions": 5,
+        "borg_rng": 2135587861,
+        "calendar": "fixed",
+        "class": "Druid",
+        "class_idx": 2,
+        "clevel": 1,
+        "dead": true,
+        "death_cause": "a metallic blue centipede",
+        "depth": 1,
+        "effective_settings": {},
+        "exact_turns": false,
+        "game_options": {
+          "animate_flicker": false,
+          "auto_more": true,
+          "autoexplore_commands": false,
+          "birth_ai_learn": true,
+          "birth_connect_stairs": true,
+          "birth_feelings": true,
+          "birth_force_descend": false,
+          "birth_know_flavors": false,
+          "birth_know_runes": false,
+          "birth_levels_persist": false,
+          "birth_lose_arts": false,
+          "birth_no_artifacts": false,
+          "birth_no_recall": false,
+          "birth_no_selling": true,
+          "birth_percent_damage": false,
+          "birth_randarts": false,
+          "birth_stacking": true,
+          "birth_start_kit": true,
+          "center_player": false,
+          "cheat_hear": false,
+          "cheat_live": false,
+          "cheat_room": false,
+          "cheat_xtra": false,
+          "disturb_near": true,
+          "effective_speed": false,
+          "highlight_player": false,
+          "hp_changes_color": true,
+          "hybrid_walls": false,
+          "mouse_movement": true,
+          "notify_recharge": false,
+          "pickup_always": false,
+          "pickup_inven": true,
+          "purple_uniques": false,
+          "rogue_like_commands": false,
+          "score_hear": false,
+          "score_live": false,
+          "score_room": false,
+          "score_xtra": false,
+          "show_damage": false,
+          "show_flavors": false,
+          "show_target": true,
+          "solid_walls": false,
+          "use_old_target": false,
+          "use_sound": false,
+          "view_yellow_light": false
+        },
+        "game_rng": {
+          "quick": false,
+          "quick_rng": 3991829696,
+          "rng": "5b852a5c5f28dca212cd67a1faf9e8a26474656d7bce62eb7346461c1145e7d0c8bc0a60e81f01eabc67857935a4ea3d748922f4654c8cc54aaf57c158f961ab40bf357e80b283cbe870d03d01e47a99522534c6029e487f0d59121ef3207d6614e20211d2de238d640b0b534d0ccbf064fc9ea41b7ed7aa8d74262fc0b50746",
+          "rng_index": 23
+        },
+        "game_turns": 7051,
+        "hp": -1,
+        "keys": 11,
+        "loaded": true,
+        "loaded_turn": 7003,
+        "max_clevel": 1,
+        "max_depth": 1,
+        "max_hp": 12,
+        "menu_letters": true,
+        "player_energy": 70620,
+        "player_turns": 706,
+        "race": "Half-Elf",
+        "race_idx": 1,
+        "resting_turns": 0,
+        "seed": 302,
+        "stop_reason": "death",
+        "wall_seconds": 0.043
+      },
+      "trial_sha256": "f9871c606f412f0ee2ae891c61738b16084ffbe89b9e605056ebd779e5e90c5f"
+    },
+    {
+      "elapsed_seconds": 0.6789656449982431,
+      "id": "priest-r5-s301",
+      "loaded_coverage": {
+        "depth": 1,
+        "equipment": [
+          {
+            "description": "Mace (2d4) (+0,+0)",
+            "kind": 52,
+            "slot": 1
+          },
+          {
+            "description": "Wooden Torch (3435 turns)",
+            "kind": 4,
+            "slot": 5
+          }
+        ],
+        "equipment_kind_signature": "d9df93b11d86787f1bfe90ecf85c92b75d3c8975ae7e0c34c7cf1c118dc0e254",
+        "hp": 21,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Holy Book of Prayers [Novice's Handbook]",
+            "kind": 386
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 2,
+            "description": "Potions of Cure Serious Wounds",
+            "kind": 232
+          },
+          {
+            "count": 1,
+            "description": "Scroll of Word of Recall",
+            "kind": 208
+          },
+          {
+            "count": 3,
+            "description": "Scrolls titled \"mestuna ine sa\"",
+            "kind": 190
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 2,
+        "mana_state": "full",
+        "max_hp": 21,
+        "max_sp": 4,
+        "sp": 4
+      },
+      "source_build": {
+        "binary": "/workspace/work/reborn-fast-main-runtime/build/rust/game/angband",
+        "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+        "built_utc": "2026-11-16T18:10:05Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+      },
+      "status": "survived_horizon",
+      "streams": {
+        "keys.log": "0dccc8a3caa2e185ef7674da5b435c04e42e4bbabcea4d9c3aefd43077479d5c",
+        "messages.log": "26d323afea83d6a1625e3a3bb817bb04af8120c52169ec76b9ef7c53dd0f7e61",
+        "state.log": "d41873aa95a685386f40ea0ea152e5988cbb57082e323c8c0ab14986b4ef81d6"
+      },
+      "summary": {
+        "borg_decisions": 101,
+        "borg_rng": 2135587861,
+        "calendar": "fixed",
+        "class": "Priest",
+        "class_idx": 3,
+        "clevel": 3,
+        "dead": false,
+        "death_cause": "",
+        "depth": 1,
+        "effective_settings": {},
+        "exact_turns": false,
+        "game_options": {
+          "animate_flicker": false,
+          "auto_more": true,
+          "autoexplore_commands": false,
+          "birth_ai_learn": true,
+          "birth_connect_stairs": true,
+          "birth_feelings": true,
+          "birth_force_descend": false,
+          "birth_know_flavors": false,
+          "birth_know_runes": false,
+          "birth_levels_persist": false,
+          "birth_lose_arts": false,
+          "birth_no_artifacts": false,
+          "birth_no_recall": false,
+          "birth_no_selling": true,
+          "birth_percent_damage": false,
+          "birth_randarts": false,
+          "birth_stacking": true,
+          "birth_start_kit": true,
+          "center_player": false,
+          "cheat_hear": false,
+          "cheat_live": false,
+          "cheat_room": false,
+          "cheat_xtra": false,
+          "disturb_near": true,
+          "effective_speed": false,
+          "highlight_player": false,
+          "hp_changes_color": true,
+          "hybrid_walls": false,
+          "mouse_movement": true,
+          "notify_recharge": false,
+          "pickup_always": false,
+          "pickup_inven": true,
+          "purple_uniques": false,
+          "rogue_like_commands": false,
+          "score_hear": false,
+          "score_live": false,
+          "score_room": false,
+          "score_xtra": false,
+          "show_damage": false,
+          "show_flavors": false,
+          "show_target": true,
+          "solid_walls": false,
+          "use_old_target": false,
+          "use_sound": false,
+          "view_yellow_light": false
+        },
+        "game_rng": {
+          "quick": false,
+          "quick_rng": 2506738840,
+          "rng": "b832ef287404859b15fc2366fd48e6c5dc36c925699340a204d3b531ea8f7443c8ce6650554253a2ed3d7474b58f9c94fe9cfe03be9481e55ee60caf8416558c64b6e052c6e5b678be7762bdb05625d272649ee482e2ab5316e5bdd4a20531f6a2a9793dd5f9066e079bbcadc6ef38688fb06da49f89a9f663aedfd8c5ab371d",
+          "rng_index": 16
+        },
+        "game_turns": 17003,
+        "hp": 32,
+        "keys": 202,
+        "loaded": true,
+        "loaded_turn": 16003,
+        "max_clevel": 3,
+        "max_depth": 1,
+        "max_hp": 33,
+        "menu_letters": true,
+        "player_energy": 170120,
+        "player_turns": 1701,
+        "race": "Dwarf",
+        "race_idx": 5,
+        "resting_turns": 0,
+        "seed": 301,
+        "stop_reason": "turns",
+        "wall_seconds": 0.169
+      },
+      "trial_sha256": "ed7353291acc4b0b5864460391ca7736a7f6f6e12ce2c4867f241ee815fbc732"
+    },
+    {
+      "elapsed_seconds": 0.736461178996251,
+      "id": "priest-r3-s302",
+      "loaded_coverage": {
+        "depth": 1,
+        "equipment": [
+          {
+            "description": "Mace (2d4) (+0,+0)",
+            "kind": 52,
+            "slot": 1
+          },
+          {
+            "description": "Wooden Torch (4530 turns)",
+            "kind": 4,
+            "slot": 5
+          }
+        ],
+        "equipment_kind_signature": "d9df93b11d86787f1bfe90ecf85c92b75d3c8975ae7e0c34c7cf1c118dc0e254",
+        "hp": 10,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Holy Book of Prayers [Novice's Handbook]",
+            "kind": 386
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 1,
+            "description": "Potion of Cure Light Wounds",
+            "kind": 231
+          },
+          {
+            "count": 2,
+            "description": "Potions of Cure Serious Wounds",
+            "kind": 232
+          },
+          {
+            "count": 1,
+            "description": "Scroll of Word of Recall",
+            "kind": 208
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 1,
+        "mana_state": "full",
+        "max_hp": 10,
+        "max_sp": 2,
+        "sp": 2
+      },
+      "source_build": {
+        "binary": "/workspace/work/reborn-fast-main-runtime/build/rust/game/angband",
+        "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+        "built_utc": "2026-11-16T18:10:05Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+      },
+      "status": "survived_horizon",
+      "streams": {
+        "keys.log": "47a39c409a38cff8b06e41a7a1ebb9b794cba62d9d68fecef15fbbe2b4cb14bd",
+        "messages.log": "a78bcf3966d9c6de1f44ef3aaab7a1454b41c3668dba3fb24dfdcfdd095affb9",
+        "state.log": "31f03b227f73656fe3aa5499d74ff051276f01cbcff6a264ded602a19611ac43"
+      },
+      "summary": {
+        "borg_decisions": 101,
+        "borg_rng": 2135587861,
+        "calendar": "fixed",
+        "class": "Priest",
+        "class_idx": 3,
+        "clevel": 2,
+        "dead": false,
+        "death_cause": "",
+        "depth": 1,
+        "effective_settings": {},
+        "exact_turns": false,
+        "game_options": {
+          "animate_flicker": false,
+          "auto_more": true,
+          "autoexplore_commands": false,
+          "birth_ai_learn": true,
+          "birth_connect_stairs": true,
+          "birth_feelings": true,
+          "birth_force_descend": false,
+          "birth_know_flavors": false,
+          "birth_know_runes": false,
+          "birth_levels_persist": false,
+          "birth_lose_arts": false,
+          "birth_no_artifacts": false,
+          "birth_no_recall": false,
+          "birth_no_selling": true,
+          "birth_percent_damage": false,
+          "birth_randarts": false,
+          "birth_stacking": true,
+          "birth_start_kit": true,
+          "center_player": false,
+          "cheat_hear": false,
+          "cheat_live": false,
+          "cheat_room": false,
+          "cheat_xtra": false,
+          "disturb_near": true,
+          "effective_speed": false,
+          "highlight_player": false,
+          "hp_changes_color": true,
+          "hybrid_walls": false,
+          "mouse_movement": true,
+          "notify_recharge": false,
+          "pickup_always": false,
+          "pickup_inven": true,
+          "purple_uniques": false,
+          "rogue_like_commands": false,
+          "score_hear": false,
+          "score_live": false,
+          "score_room": false,
+          "score_xtra": false,
+          "show_damage": false,
+          "show_flavors": false,
+          "show_target": true,
+          "solid_walls": false,
+          "use_old_target": false,
+          "use_sound": false,
+          "view_yellow_light": false
+        },
+        "game_rng": {
+          "quick": false,
+          "quick_rng": 2671664152,
+          "rng": "6a830382dab30216f55a2a66a1edf48bcad5d841da999b911829644a60fa869e4cd1c6161c2788a87b167d4d3479f3a9d80be90f80313e1531c3738a5f112d0b6e0ac210a354fe8043252bdf53c37ea358ead80a45f1d2e1d7872b03e91058155d540f58768ee919f49199aca9c074e1ea49e890598bf0a161820d55756401b7",
+          "rng_index": 1
+        },
+        "game_turns": 5901,
+        "hp": 19,
+        "keys": 203,
+        "loaded": true,
+        "loaded_turn": 4901,
+        "max_clevel": 2,
+        "max_depth": 1,
+        "max_hp": 19,
+        "menu_letters": true,
+        "player_energy": 59100,
+        "player_turns": 591,
+        "race": "Hobbit",
+        "race_idx": 3,
+        "resting_turns": 0,
+        "seed": 302,
+        "stop_reason": "turns",
+        "wall_seconds": 0.215
+      },
+      "trial_sha256": "8b846eea0caf26b97b8c6836f5d46fecceb3aeefeee38b68daa91797977f7a1f"
+    },
+    {
+      "elapsed_seconds": 0.6118857249966823,
+      "id": "necromancer-r4-s303",
+      "loaded_coverage": {
+        "depth": 1,
+        "equipment": [
+          {
+            "description": "Main Gauche (1d5) (+0,+0)",
+            "kind": 34,
+            "slot": 1
+          }
+        ],
+        "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+        "hp": 12,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Necromantic Tome [Into the Shadows]",
+            "kind": 391
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 1,
+            "description": "Pink Potion",
+            "kind": 250
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 2,
+        "mana_state": "empty",
+        "max_hp": 12,
+        "max_sp": 4,
+        "sp": 0
+      },
+      "source_build": {
+        "binary": "/workspace/work/reborn-fast-main-runtime/build/rust/game/angband",
+        "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+        "built_utc": "2026-11-16T18:10:05Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+      },
+      "status": "death",
+      "streams": {
+        "keys.log": "8a65a22cd05c2b3944941379fb1f252df83a1057dcd4c16d956f300ecc949283",
+        "messages.log": "3e9e8d77f3848b271230a809ee3e7b2c86acb419d86dc3d493db0b4b8c6872d8",
+        "state.log": "20c21c680d38e7bd73b3df5cb5029a7cf074b1606488322c006d509b13473dff"
+      },
+      "summary": {
+        "borg_decisions": 11,
+        "borg_rng": 2135587861,
+        "calendar": "fixed",
+        "class": "Necromancer",
+        "class_idx": 4,
+        "clevel": 2,
+        "dead": true,
+        "death_cause": "a soldier",
+        "depth": 1,
+        "effective_settings": {},
+        "exact_turns": false,
+        "game_options": {
+          "animate_flicker": false,
+          "auto_more": true,
+          "autoexplore_commands": false,
+          "birth_ai_learn": true,
+          "birth_connect_stairs": true,
+          "birth_feelings": true,
+          "birth_force_descend": false,
+          "birth_know_flavors": false,
+          "birth_know_runes": false,
+          "birth_levels_persist": false,
+          "birth_lose_arts": false,
+          "birth_no_artifacts": false,
+          "birth_no_recall": false,
+          "birth_no_selling": true,
+          "birth_percent_damage": false,
+          "birth_randarts": false,
+          "birth_stacking": true,
+          "birth_start_kit": true,
+          "center_player": false,
+          "cheat_hear": false,
+          "cheat_live": false,
+          "cheat_room": false,
+          "cheat_xtra": false,
+          "disturb_near": true,
+          "effective_speed": false,
+          "highlight_player": false,
+          "hp_changes_color": true,
+          "hybrid_walls": false,
+          "mouse_movement": true,
+          "notify_recharge": false,
+          "pickup_always": false,
+          "pickup_inven": true,
+          "purple_uniques": false,
+          "rogue_like_commands": false,
+          "score_hear": false,
+          "score_live": false,
+          "score_room": false,
+          "score_xtra": false,
+          "show_damage": false,
+          "show_flavors": false,
+          "show_target": true,
+          "solid_walls": false,
+          "use_old_target": false,
+          "use_sound": false,
+          "view_yellow_light": false
+        },
+        "game_rng": {
+          "quick": false,
+          "quick_rng": 649468592,
+          "rng": "67d5e554e8c26ddf1479198e7e087dc023f3a82ff3c14bce6a237da730116be6b4b258cee2895952008706dd153106e6aa4781f178babb5cc1df5edf286190cc29be32c7cd4bf86e8fe8e6a2fb12c0b6f92ef90c144af2f6650b22ee3f32a2f06933d478bf4f807c2993604d2e18a3b1ce90a47128f9d04181d901251d528955",
+          "rng_index": 10
+        },
+        "game_turns": 11710,
+        "hp": -1,
+        "keys": 23,
+        "loaded": true,
+        "loaded_turn": 11608,
+        "max_clevel": 2,
+        "max_depth": 1,
+        "max_hp": 12,
+        "menu_letters": true,
+        "player_energy": 117470,
+        "player_turns": 1174,
+        "race": "Gnome",
+        "race_idx": 4,
+        "resting_turns": 152,
+        "seed": 303,
+        "stop_reason": "death",
+        "wall_seconds": 0.067
+      },
+      "trial_sha256": "dcd165ec9f86f5ded48c5dee99f3ae8483de0e210b01cd3e0179f8e587e210c8"
+    },
+    {
+      "elapsed_seconds": 0.5962302580010146,
+      "id": "necromancer-r6-s301",
+      "loaded_coverage": {
+        "depth": 1,
+        "equipment": [
+          {
+            "description": "Main Gauche (1d5) (+0,+0)",
+            "kind": 34,
+            "slot": 1
+          }
+        ],
+        "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+        "hp": 12,
+        "inventory": [
+          {
+            "count": 1,
+            "description": "Necromantic Tome [Into the Shadows]",
+            "kind": 391
+          },
+          {
+            "count": 3,
+            "description": "Rations of Food",
+            "kind": 11
+          },
+          {
+            "count": 1,
+            "description": "Bubbling Potion",
+            "kind": 248
+          },
+          {
+            "count": 1,
+            "description": "Scroll of Word of Recall",
+            "kind": 208
+          },
+          {
+            "count": 2,
+            "description": "Wooden Torches (5000 turns)",
+            "kind": 4
+          }
+        ],
+        "level": 1,
+        "mana_state": "full",
+        "max_hp": 12,
+        "max_sp": 2,
+        "sp": 2
+      },
+      "source_build": {
+        "binary": "/workspace/work/reborn-fast-main-runtime/build/rust/game/angband",
+        "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+        "built_utc": "2026-11-16T18:10:05Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+      },
+      "status": "death",
+      "streams": {
+        "keys.log": "b4d242ec142754b8ffc2cecf03cfe20babb16a4f9435e5c06a4cef3b1ab0b29f",
+        "messages.log": "19fb534dcbc436d2067265704c6f3b2e42c1e2fe5be40e2b4e0900b0d955e024",
+        "state.log": "0a0ebb352734fe5f56d0b7d2c10339daf4723b1f0ad3d2d6ee2107c74c0dc45c"
+      },
+      "summary": {
+        "borg_decisions": 14,
+        "borg_rng": 2135587861,
+        "calendar": "fixed",
+        "class": "Necromancer",
+        "class_idx": 4,
+        "clevel": 1,
+        "dead": true,
+        "death_cause": "a grey mold",
+        "depth": 1,
+        "effective_settings": {},
+        "exact_turns": false,
+        "game_options": {
+          "animate_flicker": false,
+          "auto_more": true,
+          "autoexplore_commands": false,
+          "birth_ai_learn": true,
+          "birth_connect_stairs": true,
+          "birth_feelings": true,
+          "birth_force_descend": false,
+          "birth_know_flavors": false,
+          "birth_know_runes": false,
+          "birth_levels_persist": false,
+          "birth_lose_arts": false,
+          "birth_no_artifacts": false,
+          "birth_no_recall": false,
+          "birth_no_selling": true,
+          "birth_percent_damage": false,
+          "birth_randarts": false,
+          "birth_stacking": true,
+          "birth_start_kit": true,
+          "center_player": false,
+          "cheat_hear": false,
+          "cheat_live": false,
+          "cheat_room": false,
+          "cheat_xtra": false,
+          "disturb_near": true,
+          "effective_speed": false,
+          "highlight_player": false,
+          "hp_changes_color": true,
+          "hybrid_walls": false,
+          "mouse_movement": true,
+          "notify_recharge": false,
+          "pickup_always": false,
+          "pickup_inven": true,
+          "purple_uniques": false,
+          "rogue_like_commands": false,
+          "score_hear": false,
+          "score_live": false,
+          "score_room": false,
+          "score_xtra": false,
+          "show_damage": false,
+          "show_flavors": false,
+          "show_target": true,
+          "solid_walls": false,
+          "use_old_target": false,
+          "use_sound": false,
+          "view_yellow_light": false
+        },
+        "game_rng": {
+          "quick": false,
+          "quick_rng": 2506738840,
+          "rng": "0bb58d7ca8c320c0e0f833631e8052407af7877469bcc1c5bd2fd867c53b5696202236bbcf76e1a607021d9d54eb6a056d69c3ffc11f5ce063101dd39ae2300940d133767556131a489b48e370936d0a06fe605a550262a737892d254a435d372f405fc86b05fe0a3f952bb8e0ed5958ceb09945132510521a3a6e2df0c16536",
+          "rng_index": 1
+        },
+        "game_turns": 13547,
+        "hp": -1,
+        "keys": 29,
+        "loaded": true,
+        "loaded_turn": 13409,
+        "max_clevel": 1,
+        "max_depth": 1,
+        "max_hp": 12,
+        "menu_letters": true,
+        "player_energy": 135580,
+        "player_turns": 1355,
+        "race": "Half-Orc",
+        "race_idx": 6,
+        "resting_turns": 75,
+        "seed": 301,
+        "stop_reason": "death",
+        "wall_seconds": 0.07
+      },
+      "trial_sha256": "56d3f91c305e4e6f80eec6d064d4cf7a351f70af38ae8a9abbc3fd7a10f859e0"
+    }
+  ],
+  "schema": "borg-cemetery/encounter-suite-results@1",
+  "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+  "suite_id": "caster-bank-v2-smoke"
+}

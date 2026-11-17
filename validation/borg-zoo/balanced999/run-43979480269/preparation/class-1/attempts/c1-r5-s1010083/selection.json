@@ -1,0 +1,167 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 16000,
+        "file": "checkpoint-000160-t0000016004.save",
+        "game_turn": 16004,
+        "keys": 3429,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1010083
+      },
+      "selection": {
+        "first_visible_turn": 16044,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "cave spider",
+        "no_omniscient_trigger": true,
+        "observation_line": 1605,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 16044
+      },
+      "status": "candidate",
+      "turn": 16084,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 1,
+          "level": 2,
+          "line": 1609,
+          "max_hp": 13,
+          "max_sp": 3,
+          "monsters": [
+            {
+              "index": 22,
+              "race": 27
+            },
+            {
+              "index": 7,
+              "race": 50
+            }
+          ],
+          "sp": 0,
+          "turn": 16084
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 1,
+          "level": 2,
+          "line": 1609,
+          "max_hp": 13,
+          "max_sp": 3,
+          "monsters": [
+            {
+              "index": 22,
+              "race": 27
+            },
+            {
+              "index": 7,
+              "race": 50
+            }
+          ],
+          "sp": 0,
+          "turn": 16084
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 9,
+          "level": 2,
+          "line": 1610,
+          "max_hp": 13,
+          "max_sp": 3,
+          "monsters": [
+            {
+              "index": 22,
+              "race": 27
+            },
+            {
+              "index": 7,
+              "race": 50
+            }
+          ],
+          "sp": 0,
+          "turn": 16094
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 25000,
+        "file": "checkpoint-000249-t0000025007.save",
+        "game_turn": 25007,
+        "keys": 5199,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1010083
+      },
+      "selection": {
+        "first_visible_turn": 25027,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 6,
+        "monster_kind": "cave spider",
+        "no_omniscient_trigger": true,
+        "observation_line": 2424,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 25027
+      },
+      "status": "candidate",
+      "turn": 25057,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 5,
+          "level": 3,
+          "line": 2427,
+          "max_hp": 20,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 6,
+              "race": 50
+            }
+          ],
+          "sp": 1,
+          "turn": 25057
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 5,
+          "level": 3,
+          "line": 2427,
+          "max_hp": 20,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 6,
+              "race": 50
+            }
+          ],
+          "sp": 1,
+          "turn": 25057
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 18,
+          "level": 3,
+          "line": 2432,
+          "max_hp": 20,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 3,
+          "turn": 25847
+        }
+      }
+    }
+  ]
+}

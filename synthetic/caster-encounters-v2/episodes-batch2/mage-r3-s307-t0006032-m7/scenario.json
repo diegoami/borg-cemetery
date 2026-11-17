@@ -1,0 +1,119 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 307,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 1,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 6000,
+    "file": "checkpoint-000060-t0000006002.save",
+    "game_turn": 6002,
+    "keys": 1307,
+    "max_depth": 1,
+    "race_idx": 3,
+    "seed": 307
+  },
+  "class_idx": 1,
+  "compressed_sha256": "35808dd6dac9393b426bad34ec3f71fad7ae45e92c89796a33edd5e181645fee",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Rapier (1d6) (+0,+0)",
+        "kind": 35,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (4432 turns)",
+        "kind": 4,
+        "slot": 5
+      }
+    ],
+    "equipment_kind_signature": "581551ca0bcdca9b672352c4f8216ed34c6ca525fdd287635612ab011afa74d6",
+    "hp": 9,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Book of Magic Spells [First Spells]",
+        "kind": 376
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Potion of Cure Light Wounds",
+        "kind": 231
+      },
+      {
+        "count": 1,
+        "description": "Viscous Pink Potion",
+        "kind": 247
+      },
+      {
+        "count": 3,
+        "description": "Scrolls of Phase Door",
+        "kind": 185
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "partial",
+    "max_hp": 9,
+    "max_sp": 4,
+    "sp": 2
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "mage-r3-s307-t0006032-m7",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 9,
+    "max_hp": 9,
+    "max_sp": 4,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-2103bf263fdff64e72f3da7bc1be1ade18999efc09ba982efe784610091e97ed",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 307,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20002,
+  "race_idx": 3,
+  "save": "start.save.gz",
+  "save_sha256": "c52fd30d29812dbc5aa6ab834e94f5961088e8edb670d92bc85e583b8848b141",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 6032,
+    "first_visible_turn": 6032,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 30,
+    "monster_index": 7,
+    "monster_kind": "wild dog",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "c6d87457837b1d64412f0cbab90be3444fdc982a3a98102c63b523c412e314c1",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 6032
+  },
+  "start_turn": 6002,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

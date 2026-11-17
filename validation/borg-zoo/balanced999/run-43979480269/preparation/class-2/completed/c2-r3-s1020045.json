@@ -1,0 +1,133 @@
+{
+  "cases": [
+    {
+      "directory": "c2-r3-s1020045-i000",
+      "id": "c2-r3-s1020045-i000",
+      "incident_turn": 19056,
+      "incident_type": "death",
+      "initial_turn": 18902,
+      "save_sha256": "97083beb1467bf8686f674f8fbd426a2c394c8cc48b94017eaf2ee95bf4023ff"
+    }
+  ],
+  "cls": 2,
+  "elapsed_seconds": 12.711473963000003,
+  "id": "c2-r3-s1020045",
+  "ordinal": 45,
+  "race": 3,
+  "retention": [
+    {
+      "archive": "encounters.jsonl.gz",
+      "archive_sha256": "c4ae995e2a5fbd72d3266977d6df8a058ef2424ac2d1b5677307a68b2677956e",
+      "path": "encounters.jsonl",
+      "sha256": "1de030febd74a89d2f19bce876d0dde537b6562ae50fb0273a80b51a8802279b"
+    },
+    {
+      "archive": "trace.jsonl.gz",
+      "archive_sha256": "4a98f6006bee7d5e6d57fe0c0113756413f562a7ee4f0c9a0ba88c884b832b3d",
+      "path": "trace.jsonl",
+      "sha256": "5680dc30bebb742de230c75830cb6b727d2dab6227e88320c026f66113c2ff9f"
+    },
+    {
+      "archive": "keys.log.gz",
+      "archive_sha256": "3bde1f978864f568dda9ec697461d107832a559892d74637b5a3ad7f900c0f39",
+      "path": "keys.log",
+      "sha256": "f57309f41baac16c5008da0e3d7eb7f1ef33d8d04952b4530115aea98ea007f4"
+    },
+    {
+      "archive": "messages.log.gz",
+      "archive_sha256": "587327ed4674c4074401c66eb3daeafde67a7938e79b5701b8248d2efde0bd79",
+      "path": "messages.log",
+      "sha256": "2382d323a5e46dc27f780055850a7ab30c852cdcbfb5ab0152e9b1158faa403b"
+    },
+    {
+      "archive": "state.log.gz",
+      "archive_sha256": "a03d0b6e27ff312af1244c74432bf5b9c2b579ccdb0321dace0c5e40045f2099",
+      "path": "state.log",
+      "sha256": "b7f21664e418eccf985603de6eaa9e34c7328159d7c14a7944860b758ee2b6c2"
+    }
+  ],
+  "seed": 1020045,
+  "status": "death",
+  "summary": {
+    "borg_decisions": 1678,
+    "borg_rng": 2135587861,
+    "calendar": "fixed",
+    "class": "Druid",
+    "class_idx": 2,
+    "clevel": 1,
+    "dead": true,
+    "death_cause": "Fang, Farmer Maggot's Dog",
+    "depth": 1,
+    "effective_settings": {},
+    "exact_turns": false,
+    "game_options": {
+      "animate_flicker": false,
+      "auto_more": true,
+      "autoexplore_commands": false,
+      "birth_ai_learn": true,
+      "birth_connect_stairs": true,
+      "birth_feelings": true,
+      "birth_force_descend": false,
+      "birth_know_flavors": false,
+      "birth_know_runes": false,
+      "birth_levels_persist": false,
+      "birth_lose_arts": false,
+      "birth_no_artifacts": false,
+      "birth_no_recall": false,
+      "birth_no_selling": true,
+      "birth_percent_damage": false,
+      "birth_randarts": false,
+      "birth_stacking": true,
+      "birth_start_kit": true,
+      "center_player": false,
+      "cheat_hear": false,
+      "cheat_live": false,
+      "cheat_room": false,
+      "cheat_xtra": false,
+      "disturb_near": true,
+      "effective_speed": false,
+      "highlight_player": false,
+      "hp_changes_color": true,
+      "hybrid_walls": false,
+      "mouse_movement": true,
+      "notify_recharge": false,
+      "pickup_always": false,
+      "pickup_inven": true,
+      "purple_uniques": false,
+      "rogue_like_commands": false,
+      "score_hear": false,
+      "score_live": false,
+      "score_room": false,
+      "score_xtra": false,
+      "show_damage": false,
+      "show_flavors": false,
+      "show_target": true,
+      "solid_walls": false,
+      "use_old_target": false,
+      "use_sound": false,
+      "view_yellow_light": false
+    },
+    "game_rng": {
+      "quick": false,
+      "quick_rng": 730596867,
+      "rng": "3a4560089e4c5db0ddb3c3e8013afb6e9c4592261f2c056b91afe261e04697716cab7265fbce8ae47b6cbaf80e87a62c1d7cbf456b1668d5ac621c78b5ecdaf3b77b5186e08044acf1ffe7103e29569fd40d9c81197043f7e8090391bfd60c78b01c86a22920565e53d8d580acc53ca133a9119fb57183399a31a5c9d71ecf8d",
+      "rng_index": 27
+    },
+    "game_turns": 19056,
+    "hp": -2,
+    "keys": 3517,
+    "loaded": false,
+    "max_clevel": 1,
+    "max_depth": 1,
+    "max_hp": 10,
+    "menu_letters": true,
+    "player_energy": 190865,
+    "player_turns": 1908,
+    "race": "Hobbit",
+    "race_idx": 3,
+    "resting_turns": 235,
+    "seed": 1020045,
+    "stop_reason": "death",
+    "wall_seconds": 11.013
+  }
+}

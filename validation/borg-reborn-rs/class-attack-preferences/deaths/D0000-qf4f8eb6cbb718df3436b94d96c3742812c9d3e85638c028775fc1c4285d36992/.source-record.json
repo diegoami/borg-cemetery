@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1011",
+  "run_kind": "harness",
+  "character": "Elf Mage",
+  "raw_cause": "a fruit bat",
+  "terminal": {
+    "cause": "a fruit bat",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 1979,
+    "race_idx": 2,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1011,
+    "flags": "menu",
+    "git_rev": "300f4716f34e92e2186d86652d3cf49fee589529",
+    "git_dirty": "no",
+    "source_sha256": "9bec1ff5eee8cb1683a1e30d4ddba7291af48e58119e582a3d8c9a023a2a92bd",
+    "binary_sha256": "37d9f8f7e6bd6455eef864be597054e9e413dd322700288d3d70a45e1cdad2d0",
+    "borg_txt_sha256": "3e5f27a2ee1e424776e585af9fd43efe2e427a695fb92b6225832392e3cd801e",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "e2ab02d6ddf1a6124465179504cd8c9793564cd44b863fabcd8d8e367b64987b"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 161,
+    "of": 161
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/tmpztqy778s/on",
+      "result_sha256": "da1c7108b7a227ba2a4774cd11d271880c1494b5e42cd2f8801d89b858619729",
+      "raw_sha256": {
+        "keys.log": "da1c7108b7a227ba2a4774cd11d271880c1494b5e42cd2f8801d89b858619729",
+        "messages.log": "e6c4dde7fe3f5f8f3dbcfa005e9510d452986fe8cdfd8f5ac96a0b69caadef74",
+        "state.log": "bb0ce3938afff4b831f0c0c60f4cd40a2346616577b4116af401b962226e09c1"
+      },
+      "source_commit": "300f4716f34e92e2186d86652d3cf49fee589529",
+      "binary_sha256": "37d9f8f7e6bd6455eef864be597054e9e413dd322700288d3d70a45e1cdad2d0"
+    }
+  ],
+  "encounter_family": "start-43c62d0f0a550ab8ad533fb1f25b4625f2e6bc2b4633178184d99b28915f4a95",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "9a77994d49aa197bdb2e6d9c60b334b227d5cf4fc086e9c61a63804c78412a39",
+    "config.txt": "a1888d6d6c7c831f74ff8fa555b5a3d409ba05cbca8e5450a0ef1a46cd647658",
+    "depths.json": "e3700df30b10ec0a3a1c966821dd8635e4d6a94132b128dd078ef5e1382cae80",
+    "params-core.json": "e2ab02d6ddf1a6124465179504cd8c9793564cd44b863fabcd8d8e367b64987b",
+    "summary.json": "6bc6c0408e3258f64c4c69ae95e851e421ca6387bde58ac2aac60bdd343e9d06",
+    "trace-core-tail.jsonl": "4576e25674b0ccd4c968d8909a3c9eb4d12942ce55b89a156fdbcc81ec45005e"
+  },
+  "investigation": null,
+  "issue": null
+}

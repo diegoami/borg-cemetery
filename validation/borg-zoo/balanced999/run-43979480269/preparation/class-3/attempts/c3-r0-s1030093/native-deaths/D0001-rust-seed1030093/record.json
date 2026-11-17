@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1030093",
+  "run_kind": "harness",
+  "character": "Human Priest",
+  "raw_cause": "a green worm mass",
+  "terminal": {
+    "cause": "a green worm mass",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 6,
+    "turn": 25037,
+    "race_idx": 0,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1030093,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "68f42f96e9f7fad35032e8cdc6dae0b7226c8d7776cc94a9ce6327eb019704e1",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 2103
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c3-r0-s1030093",
+      "result_sha256": "f94880a094e68fa7378cba04a7253c50b1a143c9c17a97a6a629cd620dee3b5d",
+      "raw_sha256": {
+        "keys.log": "f94880a094e68fa7378cba04a7253c50b1a143c9c17a97a6a629cd620dee3b5d",
+        "messages.log": "ac840845fc1049825960a43f83b47b6956929092ddf77c2f3997eadb0c3b6577",
+        "state.log": "d8835af77c189c9912791b07019760e18755710c7de8c3f3e4fc3441bd74e4db"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-96a9105f30ff49be582e3a8a1fe534907a12d0c07f075315c4686d0e8b22d58a",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "f4d9b1f0617392147bdfbcce0414eea932638b49e2c17b8b038503f104902987",
+    "depths.json": "a83eae5ca2390dfe9838f8ee8450901f6a77ea355fa8f11b81a480ee457ce9cc",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "3b80d49a97fd518f6a374d23bd9d0331efba8b2aca081dab638fdbd56d96ea86",
+    "trace-tail.jsonl": "a47bc05250369ef3dbd366ff7c6eeb565338b7807c5fc3091ce3807b446c5b45"
+  },
+  "investigation": null,
+  "issue": null
+}

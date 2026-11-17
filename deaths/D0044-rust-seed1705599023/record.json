@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0044-rust-seed1705599023",
+  "run_kind": "harness",
+  "character": "Dwarf Druid",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 3,
+    "level": 6,
+    "turn": 90541,
+    "race_idx": 5,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1705599023,
+    "flags": "-",
+    "git_rev": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+    "git_dirty": "no",
+    "source_sha256": "9a4ea3756fb1b5664384e98888f400be4617160ab66b218ef6f696fc8bfde3b8",
+    "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2",
+    "borg_txt_sha256": "0ead0eaeed9943e151d172522f4a8c32b5460d8a299815590f45e375d25de532",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 5582
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-zoo/6cd3035e-765d-4b69-81a5-d98d908392d5/scratchpad/deaths/classes-1800-small/4.2.6-reborn-rust-plans-m13-fix90/reborn-m13-plan-town/1705599023",
+      "result_sha256": "d2f945a9cde8b174d7df11afde7aedcbd83fc42176a6aae7ce589ed99c934ddc",
+      "raw_sha256": {
+        "keys.log": "d2f945a9cde8b174d7df11afde7aedcbd83fc42176a6aae7ce589ed99c934ddc",
+        "messages.log": "c8d7fd12e64301ea0e6425014c2567ab4da16950963bd1bd41f8d06474dcd747",
+        "state.log": "f2770b8cc74cb600f8ecc611c931d2c6a3cecbefccbb1480a9b051f79bd0ec2a"
+      },
+      "source_commit": "8a0b57c85700abd48981c2f41a65a0a637f7dc48",
+      "binary_sha256": "7e80a55984ffe5159146525c1c0ce6a93eeeb979ba966a221e9eb387af2d30b2"
+    }
+  ],
+  "encounter_family": "start-55dd3db71bb8a53980100858d399aa7cf348f1d088c4d174fa6e1b840b07bdd8",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2be92536b9ae64dbd09db75821c9bc3025499c9fbd3d2bc5b36878498e546d7c",
+    "config.txt": "bf0372968ac79dbcf9e4249ef5a95053f7460e71033a5a94f5895290833818ce",
+    "errands_plan.txt": "922372ba849489c579449f8cd6f827b29ed65b6e8e0f67bd0fe8be2f3cb160cd",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "4e00f3771d74b35a9e1fdf7f32d898f4ac88dcadb2bb91bf3cf59bdef3434ee2",
+    "trace-core-tail.jsonl": "f3d193b8d111df8b62a804061d61902cdc4240cfb799d232122d239edf0d1e2d"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 5,
+        "depth": 3,
+        "due_turn": 80600,
+        "file": "checkpoint-000764-t0000080604.save",
+        "game_turn": 80604,
+        "keys": 15752,
+        "max_depth": 3,
+        "race_idx": 7,
+        "seed": 1020008
+      },
+      "selection": {
+        "first_visible_turn": 80604,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 19,
+        "monster_kind": "acolyte",
+        "no_omniscient_trigger": true,
+        "observation_line": 7578,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 80604
+      },
+      "status": "candidate",
+      "turn": 80981,
+      "type": "death",
+      "witness": {
+        "cause": "an acolyte"
+      }
+    }
+  ]
+}

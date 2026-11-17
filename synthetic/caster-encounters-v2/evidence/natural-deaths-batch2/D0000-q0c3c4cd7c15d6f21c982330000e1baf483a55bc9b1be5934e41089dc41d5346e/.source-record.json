@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0006-rust-seed308",
+  "run_kind": "harness",
+  "character": "High-Elf Necromancer",
+  "raw_cause": "a giant white mouse",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 9285,
+    "race_idx": 9,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 308,
+    "flags": "menu",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "dc3477fc55436dce0c3ee738108751843c4fad36cec3c4542db08a88e76d5a00",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 870
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-harvest-v2-batch2/necromancer-r9-s308",
+      "result_sha256": "8cd71b6c74ed96c3c33ad3808f6c6a6fc6d27ccf2838ad40ade63480bc5e9ab2",
+      "raw_sha256": {
+        "keys.log": "8cd71b6c74ed96c3c33ad3808f6c6a6fc6d27ccf2838ad40ade63480bc5e9ab2",
+        "messages.log": "5899f1a21fbfb99a9358721e984891e055481772a16ad5d4d7d59240a273568d",
+        "state.log": "b4d8617697f26b2121562721bfe71f67792d8c6c257e11b78871ab819cc2355c"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776"
+    }
+  ],
+  "encounter_family": "start-8b3b9f587083e0e2538b211c18696a6df2abcb41c4077455347aa807156e4bc5",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "a858cdac5b7edf8b758de671b51e62a6688d7c65470b2686775694c60e358951",
+    "depths.json": "2cf7e27c2f02ba43e50e2f72617e763a4e30c397f3e4cc86164afa460e5a352f",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "91497e511f15850552d13cc1725be96dcbb89e974d538cbaef7a14fae7c341c1",
+    "trace-tail.jsonl": "0df4d86d2397caf398d8f853e087bae3926b2859367b056e7eab8dafe4e1571c"
+  },
+  "investigation": null,
+  "issue": null
+}

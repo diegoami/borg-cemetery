@@ -1,5 +1,15 @@
 # Milestones
 
+## Owner-directed caster bank (2026-11-16)
+
+The owner requested continued scenario work, prioritizing low-level casters,
+different equipment combinations, and extraction from deaths/near deaths.
+`synthetic/low-level-casters/` adds a provenance-checked incident candidate index
+and a bounded four-class birth matrix. This instruction authorizes that scoped
+bank work without changing the frozen M2 Warrior review packet or accepting M1/M2.
+Caster equipment application remains reborn #382; unsupported records are
+explicitly untested. No P2/P3 population experiment or acceptance tag is implied.
+
 | Milestone | Scope | State |
 | --- | --- | --- |
 | M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | Prepared for owner-run review; **not accepted** |
@@ -68,3 +78,62 @@ The broader database/service redesign remains planning, not an implementation
 commitment. Only the bounded synthetic P1 subset selected above is authorized. M1 remains unaccepted; its implementation pin and
 existing evidence are unchanged. The proposal includes delivery slices and
 acceptance criteria for a later owner decision.
+
+
+## Owner-selected execution/storage direction (2026-11-16)
+
+[Cemetery #32](https://github.com/diegoami/borg-cemetery/issues/32) records a
+Cemetery-first database/artifact design followed by an alternate saved-scenario
+executor: local CLI or optional Cemetery CI retains runs and intermediate
+checkpoints, while Zoo ingests pinned result snapshots, aggregates them and
+owns report presentation. Zoo-executed pinned Cemetery inputs remain supported.
+Both modes share one scenario/save/run identity and storage contract.
+
+Joint architecture coordination remains in
+[Zoo #114](https://github.com/diegoami/borg-zoo/issues/114); both executor modes
+feed [Zoo #144](https://github.com/diegoami/borg-zoo/issues/144).
+[Cemetery #31](https://github.com/diegoami/borg-cemetery/issues/31) supplies
+living 100k checkpoint/continuation requirements. The
+[updated design](docs/cemetery-redesign.md) records the ownership and sequence.
+This selects the architecture direction and planning task; the database and
+alternate executor are not implemented. M1/M2 acceptance and review pins are
+unchanged; no new implementation milestone has started.
+
+## Owner-requested large caster bank (2026-11-16)
+
+The owner clarified that the saved-encounter bank needs hundreds of cases.
+Prepare a larger bank from distinct observed encounter starts, preserving parent
+life families, all natural deaths and equipment/resource coverage. Cemetery
+owns canonical inputs/evidence; Zoo owns orchestration and comparison reports.
+Keep bounded fast shards and a small smoke subset. A full-bank run has its own
+measured duration; hundreds of correlated encounters are not hundreds of
+independent lives. This follow-up is stacked on the frozen PR #35 implementation
+`0e156d804519a937c32e9a70f6b847f384cd9351`; it does not move that review pin,
+merge main or accept a milestone/population experiment.
+
+## Owner-requested balanced999 incident bank (2026-11-16)
+
+The owner explicitly requests around1,000 death/near-death scenarios run through
+Zoo, corrected to equal class weighting:999 starts,111 each for all nine
+classes. Do not retain the earlier proposed caster weighting. Mine actual
+fatal encounters and observed damage-to-critical-HP/recovery episodes; preserve
+all attempts/deaths, no duplicate-save padding or invented independent lives.
+Low-HP recovery is an observed screen, not qualified counterfactual lethality.
+Prepare with compact read-only telemetry on source a8355137 (same game/engine
+as6d1bca10, mixed-class parity checked), execute saved starts on accepted6d1bca10.
+A bounded parallel Zoo harvest supplies the frozen bank, followed by Zoo's
+mixed-class smoke and the explicitly requested full999 execution. Baseline
+builds are reused across execution shards. No policy/main/milestone promotion
+is implied by this owner-directed corpus/execution increment.
+
+
+## Integrated architecture proposal
+
+The [shared scenario architecture](docs/cemetery-redesign.md),
+[scenario contract](docs/architecture/scenario-contract.md) and
+[Firebase backend proposal](docs/architecture/firebase-backend.md) from PR #2
+are retained as design documents. The [six-finding response](docs/architecture/review-response.md)
+and [review prompt](docs/architecture/review-prompt.md) remain available.
+Integration preserves the newer Cemetery-storage/Zoo-reporting ownership above;
+it does not deploy Firebase, select a new implementation milestone or accept
+M1/M2. The historical review pins remain available in their original commits.

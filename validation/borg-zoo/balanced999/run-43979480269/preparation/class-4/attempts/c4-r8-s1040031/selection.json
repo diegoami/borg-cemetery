@@ -1,0 +1,121 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 16800,
+        "file": "checkpoint-000161-t0000016802.save",
+        "game_turn": 16802,
+        "keys": 3407,
+        "max_depth": 1,
+        "race_idx": 8,
+        "seed": 1040031
+      },
+      "selection": {
+        "first_visible_turn": 16812,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 1,
+        "monster_kind": "wild cat",
+        "no_omniscient_trigger": true,
+        "observation_line": 1614,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 16812
+      },
+      "status": "candidate",
+      "turn": 16852,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 1618,
+          "max_hp": 24,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 1,
+              "race": 51
+            },
+            {
+              "index": 12,
+              "race": 30
+            }
+          ],
+          "sp": 3,
+          "turn": 16852
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 1618,
+          "max_hp": 24,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 1,
+              "race": 51
+            },
+            {
+              "index": 12,
+              "race": 30
+            }
+          ],
+          "sp": 3,
+          "turn": 16852
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 14,
+          "level": 2,
+          "line": 1632,
+          "max_hp": 24,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 12,
+              "race": 30
+            }
+          ],
+          "sp": 1,
+          "turn": 17432
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 64500,
+        "file": "checkpoint-000593-t0000064509.save",
+        "game_turn": 64509,
+        "keys": 12114,
+        "max_depth": 1,
+        "race_idx": 8,
+        "seed": 1040031
+      },
+      "selection": {
+        "first_visible_turn": 64579,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 6,
+        "monster_kind": "soldier ant",
+        "no_omniscient_trigger": true,
+        "observation_line": 5805,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 64579
+      },
+      "status": "candidate",
+      "turn": 64687,
+      "type": "death",
+      "witness": {
+        "cause": "a soldier ant"
+      }
+    }
+  ]
+}

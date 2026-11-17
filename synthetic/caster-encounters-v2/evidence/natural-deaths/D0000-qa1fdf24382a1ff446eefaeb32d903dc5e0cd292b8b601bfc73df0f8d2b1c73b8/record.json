@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-harvest-v2/mage-r4-s301",
+      "raw_sha256": {
+        "keys.log": "749ccd46822427a3ba7aef4724e04a37d463042ceaf2505f071a89fe447ac3fa",
+        "messages.log": "fd4b58073f240395b6426c0ae776fdf326e68f7795ad0c72863f6628c76bd3ee",
+        "state.log": "c2cb3bddb595f027e2ae6fafd4d0045c93f5f5db9c08b68d6bd8542b7e79f584"
+      },
+      "result_sha256": "749ccd46822427a3ba7aef4724e04a37d463042ceaf2505f071a89fe447ac3fa",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Gnome Mage",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 619
+  },
+  "encounter_family": "start-b1e57db144a54c579f5914ee9b1fc368c961929b39d45a3ba16189f07696d052",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "8b6144f9435c6ee851595c663e1d6e6cf9615308c875f865a12cc2cbe9efc809",
+    "depths.json": "c9cfa06b0311252d9d645046c8628882285faddb5af13cb8777a8c7d74a89ea3",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "8d7b0d7c8bd64507c478d0eb5d589175b7a9785ad7fd470887412d83dbfbce04",
+    "trace-tail.jsonl": "e791f296ef901269640ba0578f1b5689fbd9102c90762b401d4c4d1f330b70c9"
+  },
+  "id": "D0000-qa1fdf24382a1ff446eefaeb32d903dc5e0cd292b8b601bfc73df0f8d2b1c73b8",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "26a33bfed614dbd8d46a9fe3600a862edcff7b960423a05bd99829516f070153",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 301,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a wild dog",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a wild dog",
+    "class_idx": 1,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 4,
+    "turn": 6329
+  }
+}

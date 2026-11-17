@@ -1,0 +1,36 @@
+{
+  "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+  "borg_txt": {
+    "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/mage-seed1011/borg.txt",
+    "sha256": "3e5f27a2ee1e424776e585af9fd43efe2e427a695fb92b6225832392e3cd801e"
+  },
+  "canonical_death_id": "D-944ef5a0e577803a2f554cf23cd2eccc1de69f76d0128bf3aec712ca67507946",
+  "class_idx": 1,
+  "configuration_materialized_from_verified_stream_match": "/workspace/work/caster-natural-validation/core-trace-death",
+  "diagnostic_capture_omitted": true,
+  "environment": {
+    "BORG_CORE": "borg-rs",
+    "BORG_CORE_OVERRIDES": "off"
+  },
+  "flags": "menu",
+  "profile": {
+    "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/mage-seed1011/profile.txt",
+    "sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91"
+  },
+  "race_idx": 2,
+  "record": {
+    "path": "validation/borg-reborn-rs/native-controls/deaths/D0000-q15eb544447edd5b6f1f467a004580a76f6680667b1f71135949bc904836a9078/record.json",
+    "sha256": "54f815fd79c022155b797a6e6b7f549ec745f0ba9313087c06585cde80007a65"
+  },
+  "repository": "diegoami/borg-reborn-rs",
+  "runtime": {
+    "path": "validation/borg-reborn-rs/caster-build-v2/runtime.json",
+    "sha256": "a10c926d97574d0922dbcf5f3e52e85aea2f7902f57b5898cbbb32c2ed1ab099"
+  },
+  "schema": "borg-cemetery/native-death-recipe@1",
+  "seed": 1011,
+  "source_commit": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+  "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1",
+  "start": "birth",
+  "turn_cap": 100000
+}

@@ -1,0 +1,104 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 301,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 2,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 2100,
+    "file": "checkpoint-000021-t0000002106.save",
+    "game_turn": 2106,
+    "keys": 505,
+    "max_depth": 1,
+    "race_idx": 8,
+    "seed": 301
+  },
+  "class_idx": 2,
+  "compressed_sha256": "c8b98b4915fa8da2b36dd8a367dc5b14db820d071b576fd62c351c0ab8759b94",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Whip (1d3) (+0,+0)",
+        "kind": 47,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (4885 turns)",
+        "kind": 4,
+        "slot": 5
+      }
+    ],
+    "equipment_kind_signature": "85c02c5b3eb730b04d3579f990b8978618d626962fe9be478576dff9a8201273",
+    "hp": 12,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Book of Nature Magics [Lesser Charms]",
+        "kind": 381
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 1,
+    "mana_state": "full",
+    "max_hp": 13,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "druid-r8-s301-t0002196-m23",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 12,
+    "max_hp": 13,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-e915caf388ed1ad3efaa0a2d8b18be6723e86f527785f1a2b393e984c3c3f495",
+    "parent_death_id": "D-0862f232deb2edb436729f9eba948b2432cab22e7a03f59354ecbedef1f1c88c",
+    "program": "borg-reborn-rs",
+    "seed": 301,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 13674,
+  "race_idx": 8,
+  "save": "start.save.gz",
+  "save_sha256": "9aa805f081bdc9ed3f361332f94573e02da2b5fe2cce276d54c23665a2c5af12",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 2196,
+    "first_visible_turn": 2196,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 90,
+    "monster_index": 23,
+    "monster_kind": "fruit bat",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "9eb3f5e69194f4ba505fc11e5a1c626d3cfab7aee6b172b384e695842f098eb0",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 2196
+  },
+  "start_turn": 2106,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

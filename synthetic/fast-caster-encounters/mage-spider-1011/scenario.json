@@ -1,0 +1,56 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 1011,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 1,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 18800,
+    "file": "checkpoint-000117-t0000018803.save",
+    "game_turn": 18803,
+    "keys": 1907,
+    "max_depth": 1,
+    "race_idx": 2,
+    "seed": 1011
+  },
+  "class_idx": 1,
+  "compressed_sha256": "d7662fb3e257e87f353c0c33dd85218dcdfb660a008eb660f848fbce0ff4b6cf",
+  "event_kind": "death",
+  "id": "mage-spider-1011",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 7,
+    "max_hp": 10,
+    "max_sp": 4,
+    "sp": 0
+  },
+  "origin": {
+    "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+    "parent_death_id": "D-944ef5a0e577803a2f554cf23cd2eccc1de69f76d0128bf3aec712ca67507946",
+    "program": "borg-reborn-rs",
+    "seed": 1011,
+    "source_commit": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+    "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 18903,
+  "race_idx": 2,
+  "save": "start.save.gz",
+  "save_sha256": "b6e003f1fc6c92d34b7887cd9ad24f294f21ce7f4857057d3b8202fcec1cccee",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "evidence_file": "/workspace/work/caster-natural-validation/mage-1011-encounter/messages.log",
+    "evidence_sha256": "e7e746305a86b3ed391460fb114ae90b280ae206ac8536ae21c1245d7380d180",
+    "kind": "first_borg_monster_sighting",
+    "lead_engine_turns": 20,
+    "monster_index": 50,
+    "no_omniscient_trigger": true,
+    "trigger_turn": 18823
+  },
+  "start_turn": 18803,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

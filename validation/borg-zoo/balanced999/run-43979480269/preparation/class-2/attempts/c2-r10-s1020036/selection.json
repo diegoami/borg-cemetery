@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 2800,
+        "file": "checkpoint-000028-t0000002801.save",
+        "game_turn": 2801,
+        "keys": 693,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1020036
+      },
+      "selection": {
+        "first_visible_turn": 2899,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 5,
+        "monster_kind": "rock lizard",
+        "no_omniscient_trigger": true,
+        "observation_line": 303,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 2899
+      },
+      "status": "candidate",
+      "turn": 2936,
+      "type": "death",
+      "witness": {
+        "cause": "a rock lizard"
+      }
+    }
+  ]
+}

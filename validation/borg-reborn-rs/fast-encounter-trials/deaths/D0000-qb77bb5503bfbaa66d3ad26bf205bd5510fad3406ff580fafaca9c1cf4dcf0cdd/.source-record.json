@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1020",
+  "run_kind": "harness",
+  "character": "Human Druid",
+  "raw_cause": "a small kobold",
+  "terminal": {
+    "cause": "a small kobold",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 1207,
+    "race_idx": 0,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020,
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "429d6d9f0e414af3fa5d20ffcacdd1d3dd3a4a7b6dc5fb6eb5b56d88afb7b689",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 47,
+    "of": 47
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/fast-caster-main-final/druid-kobold-1020/run",
+      "result_sha256": "56332d2e545e45d5fb04a40cac47940ebe464aaf79169b50497f1f8c2b39e2fb",
+      "raw_sha256": {
+        "keys.log": "56332d2e545e45d5fb04a40cac47940ebe464aaf79169b50497f1f8c2b39e2fb",
+        "messages.log": "637f999e7ff50b73c2057d4c624f9bb1b8d7cb6253dd56319f1311b9cdb8b63f",
+        "state.log": "94af4935b66c90d064bdafd3a5769e044db1a7e86f869a162a0abd8ab3f12a2d"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776"
+    }
+  ],
+  "encounter_family": "start-c7671f582d8b0f4f1a4bfe5622d7781b21f5f6a29396a6bc77c1ebc35df4ae07",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "0ea63020d1bbcc0a327997416615a98831027327da3d598871b80848706b98c0",
+    "depths.json": "dfaa84761fdcd1030e6aedc226fc7db7ad06abf91f367635faf6bac2f1e8acc8",
+    "params.json": "95a14a00bed5358d3c78d5cd0cae7b9840e0f1e9206fa180cf9606729141cdb0",
+    "summary.json": "f909e4675bf8f545b63520a3d8d60285658f22656361a353b03cf041fb3b1f67",
+    "trace-tail.jsonl": "002ee9667e1483213626a49ad35b3239f427da51e7010e0f1ce3dcddbcd24e98"
+  },
+  "investigation": null,
+  "issue": null
+}

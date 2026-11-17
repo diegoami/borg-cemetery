@@ -1,0 +1,124 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 308,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 1,
+    "clevel": 3,
+    "depth": 1,
+    "due_turn": 12500,
+    "file": "checkpoint-000118-t0000012501.save",
+    "game_turn": 12501,
+    "keys": 2594,
+    "max_depth": 1,
+    "race_idx": 1,
+    "seed": 308
+  },
+  "class_idx": 1,
+  "compressed_sha256": "f14e87dc17f123745e1d4cd095bcd8cafaf70d8a58ae6e5880ec3ce454bc7b1f",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Dagger (1d4) (+4,+4)",
+        "kind": 33,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (3787 turns)",
+        "kind": 4,
+        "slot": 5
+      },
+      {
+        "description": "Robe [2,+0]",
+        "kind": 106,
+        "slot": 6
+      }
+    ],
+    "equipment_kind_signature": "a37ca14d67d7fa42c205d083c82b181744ec20264ddc8a3ac13d2fe01d99bba6",
+    "hp": 22,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Book of Magic Spells [First Spells]",
+        "kind": 376
+      },
+      {
+        "count": 2,
+        "description": "Apples",
+        "kind": 8
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Deep Descent",
+        "kind": 211
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      },
+      {
+        "count": 1,
+        "description": "Rapier (1d6) (+0,+0)",
+        "kind": 35
+      }
+    ],
+    "level": 3,
+    "mana_state": "empty",
+    "max_hp": 22,
+    "max_sp": 6,
+    "sp": 0
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "mage-r1-s308-t0012591-m30",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 22,
+    "max_hp": 22,
+    "max_sp": 6,
+    "sp": 0
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-0e193e2df00dc0615f6ed8bf410d82984a33fd9566d923567f233e248e40c652",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 308,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20001,
+  "race_idx": 1,
+  "save": "start.save.gz",
+  "save_sha256": "1a129a611db5569753a5304c455973c3edab69fdbf970ddc25d7c98699a529c8",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 12811,
+    "first_visible_turn": 12591,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 90,
+    "monster_index": 30,
+    "monster_kind": "white worm mass",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "49f16227cf2188e199d56378346909edbbc09604c291b7a5438704a8e20a8b82",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 12591
+  },
+  "start_turn": 12501,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}
