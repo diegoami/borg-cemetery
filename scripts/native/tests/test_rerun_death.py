@@ -180,5 +180,64 @@ class PlanTest(unittest.TestCase):
             self.assertIn('check out f00', str(e.exception))
 
 
+class ZooTest(unittest.TestCase):
+    """A Zoo cell: its borg.txt is rebuilt from config.txt and checked."""
+    BASE = 'borg_respawn_race = -1\nborg_respawn_class = -1\nborg_cheat_death = TRUE\n' \
+           'borg_respawn_winners = TRUE\nborg_town_plan = 0\n[BEGIN FORMULA SECTION]\n'
+
+    def cell(self, t, borg_txt_sha256, plan='/dive 3\n'):
+        src = Path(t) / 'src'
+        (src / 'harness').mkdir(parents=True)
+        (src / 'harness/borg.txt').write_text(self.BASE)
+        extra = 'zoo_profile=x\nturns=100000\nexact_turns=1\nborg_town_plan=1\nborg_reborn_core=borg-rs\n' \
+                f'borg_txt_sha256={borg_txt_sha256}\n'
+        if plan is not None:
+            extra += 'borg_errands_plan=user/errands_plan.txt\n' \
+                     f'errands_plan_sha256={rd.hashlib.sha256(plan.encode()).hexdigest()}\n'
+        d = dossier(t, config_extra=extra)
+        if plan is not None:
+            (d / 'errands_plan.txt').write_text(plan)
+        return src, d
+
+    def expected(self, plan=True):
+        text = 'borg_respawn_race = 2\nborg_respawn_class = 1\nborg_cheat_death = FALSE\n' \
+               'borg_respawn_winners = FALSE\nborg_town_plan = 1\n'
+        # Zoo applies the settings sorted by name: borg_plan before borg_reborn_core.
+        text += ('borg_plan = errands_plan.txt\n\n' if plan else '') + 'borg_reborn_core = borg-rs\n\n'
+        return text + '[BEGIN FORMULA SECTION]\n'
+
+    def test_zoo_settings_rebuild_the_recorded_borg_txt(self):
+        want = self.expected()
+        with tempfile.TemporaryDirectory() as t:
+            src, d = self.cell(t, rd.hashlib.sha256(want.encode()).hexdigest())
+            p = rd.plan(d)
+            self.assertEqual(p['env'], {}, 'Zoo settings go into borg.txt, not the environment')
+            self.assertEqual((p['zoo']['turns'], p['zoo']['exact']), (100000, True))
+            self.assertEqual(rd.zoo_borg_txt(p['zoo'], src), want)
+
+    def test_a_zoo_cell_without_a_plan(self):
+        want = self.expected(plan=False)
+        with tempfile.TemporaryDirectory() as t:
+            src, d = self.cell(t, rd.hashlib.sha256(want.encode()).hexdigest(), plan=None)
+            p = rd.plan(d)
+            self.assertIsNone(p['zoo']['plan_file'])
+            self.assertEqual(rd.zoo_borg_txt(p['zoo'], src), want)
+
+    def test_a_different_borg_txt_is_refused(self):
+        with tempfile.TemporaryDirectory() as t:
+            src, d = self.cell(t, 'f' * 64)
+            with self.assertRaises(SystemExit) as e:
+                rd.zoo_borg_txt(rd.plan(d)['zoo'], src)
+        self.assertIn('cannot be restored', str(e.exception))
+
+    def test_a_changed_zoo_plan_is_refused(self):
+        with tempfile.TemporaryDirectory() as t:
+            _, d = self.cell(t, 'f' * 64)
+            (d / 'errands_plan.txt').write_text('/dive 9\n')
+            with self.assertRaises(SystemExit) as e:
+                rd.plan(d)
+        self.assertIn('errands plan', str(e.exception))
+
+
 if __name__ == '__main__':
     unittest.main()

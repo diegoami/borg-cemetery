@@ -22,6 +22,12 @@ root; canonical catalogue updates use `scripts/register_deaths.py` instead of
 overwriting the historical README/index; arbitrary temporary registries retain
 their original native index behaviour. No game policy, RNG or engine code moved.
 
+Cemetery addition (2026-11-17): `rerun-death.py` also reruns Zoo cells
+(`config.txt` with `zoo_profile`). It rebuilds their `borg.txt` from the
+recorded `borg_*` settings as borg-zoo's runner wrote it, refuses a
+`borg_txt_sha256` mismatch and starts the game with Zoo's arguments instead
+of `harness/run.sh`. All 58 Zoo dossiers rebuild their recorded `borg.txt`.
+
 `API_VERSION` declares forwarding API 1. borg-reborn-rs keeps thin compatibility
 pointers at its old command paths and pins this toolkit in CI. It continues to
 own game instrumentation, the measured harness and source builds. Normal exports
