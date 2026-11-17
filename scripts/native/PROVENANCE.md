@@ -60,3 +60,11 @@ identity metadata. This changes storage identity, not family calculation,
 natural-death eligibility, gameplay or independence rules. Original donor
 hashes above remain the historical baseline. See `docs/death-identity.md`
 in the Cemetery repository. Consumer pins must advance explicitly to adopt it.
+
+## Zoo death bundles (2026-11-17, #63)
+
+`export-death.py` takes an optional `raw_location` for the dossier's
+`raw_directory`, so zoo dossiers name the borg-zoo artifact instead of a
+temporary directory. It reads a `trace-core.lines` file, when one is present,
+for the full length of a core trace of which the bundle kept only the tail.
+Identity, eligibility and dossier contents are otherwise unchanged.
