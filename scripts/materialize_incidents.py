@@ -45,6 +45,9 @@ def materialize(inputs, output, tools, baseline, root=ROOT, per_class=111, suite
             path = root / 'synthetic' / spec['suite_id'] / spec['exclusion']['path']
             if sha(path) != spec['exclusion']['sha256']:raise ValueError('exclusion identity differs')
             prior = read(path);exclusions.update(prior['save_sha256']);prior_seeds.update(prior['source_seeds'])
+    cores={read(directory / 'spec.json').get('core','reborn') for directory, _ in harvests.values()}
+    if len(cores)!=1:raise ValueError('preparation controllers differ')
+    preparation_core=next(iter(cores))
     for cls in range(9):
         directory, document = harvests[cls]
         build = read(directory / 'build.json')
@@ -107,7 +110,7 @@ def materialize(inputs, output, tools, baseline, root=ROOT, per_class=111, suite
     for offset in range(0, len(entries), 8):
         path = output / 'shards' / f'{offset//8:03d}.json'
         write(path, dict(schema='borg-cemetery/saved-encounter-suite@1', suite_id=f'{suite_id}-{offset//8:03d}',
-                         core='reborn', baseline_source_commit=baseline, engine_commit='42cd156ac9f95ddf4311e88dd7ad462292d6d1d6',
+                         core=preparation_core, baseline_source_commit=baseline, engine_commit='42cd156ac9f95ddf4311e88dd7ad462292d6d1d6',
                          horizon_engine_turns=2000, wall_seconds=5, scenarios=entries[offset:offset+8]))
         shards.append(dict(manifest=path.relative_to(root).as_posix(), sha256=sha(path)))
     write(output / 'bank.json', dict(schema='borg-cemetery/encounter-bank@1', id=suite_id, expected_cases=per_class*9, shards=shards))

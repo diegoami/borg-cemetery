@@ -18,7 +18,7 @@ VALID = {'death', 'survived_horizon', 'stopped'}
 
 def prepare(path, root=ROOT):
     manifest = read(path)
-    if manifest.get('schema') != 'borg-cemetery/saved-encounter-suite@1' or manifest.get('core') != 'reborn':
+    if manifest.get('schema') != 'borg-cemetery/saved-encounter-suite@1' or manifest.get('core') not in ('reborn', 'borg-rs'):
         raise ValueError('unsupported encounter suite')
     for key in ('baseline_source_commit', 'engine_commit'):
         if not COMMIT.fullmatch(manifest.get(key, '')):
@@ -54,6 +54,8 @@ def prepare(path, root=ROOT):
 
 def run_suite(path, source, output, target_commit=None, adapter=run_scenario, root=ROOT):
     manifest, cases = prepare(path, root)
+    if manifest['core'] != 'reborn':
+        raise ValueError('borg-rs banks require explicit configured execution; use single_encounter.py with --core borg-rs and --borg-txt')
     if output.exists():
         raise ValueError('use a fresh output directory; never overwrite attempts')
     expected = target_commit or manifest['baseline_source_commit']

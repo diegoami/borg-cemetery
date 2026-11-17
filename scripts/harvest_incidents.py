@@ -53,6 +53,9 @@ def execute(source, out, seed, race, cls, spec, save=None, turns=None):
                BORG_ENCOUNTER_LOG=str(out / 'encounters.jsonl'), BORG_KNOWLEDGE_LOG=str(out / 'knowledge.json'),
                BORG_DEATH_RECORDS_DIR=str(out / 'native-deaths'), RUN_TIMEOUT_SECONDS=str(spec['wall_seconds']),
                CHECKPOINT_EVERY='0' if save else str(spec['checkpoint_every']))
+    if spec.get('capture_api') == 'native-command-encounter@1':
+        env.pop('BORG_KNOWLEDGE_LOG', None)
+        if not save:env['BORG_ENCOUNTER_KNOWLEDGE_LOG'] = str(out / 'knowledge.json')
     if save:
         env.pop('BORG_KNOWLEDGE_LOG', None)
     flags = 'menu'
@@ -121,7 +124,7 @@ def one(source, root, cls, ordinal, spec):
         write(run / 'selection.json', dict(incidents=incidents))
         for info in row['cases']:
             probe = root / 'cases' / info['directory'] / 'probe'
-            for filename in ('encounters.jsonl', 'trace.jsonl', 'keys.log', 'messages.log', 'state.log'):
+            for filename in ('encounters.jsonl', 'trace.jsonl', 'trace-core.jsonl', 'keys.log', 'messages.log', 'state.log'):
                 if (probe / filename).exists():
                     compress(probe / filename)
     except Exception as error:
@@ -129,7 +132,7 @@ def one(source, root, cls, ordinal, spec):
     finally:
         if run.exists():
             retention = []
-            for filename in ('encounters.jsonl', 'trace.jsonl', 'keys.log', 'messages.log', 'state.log'):
+            for filename in ('encounters.jsonl', 'trace.jsonl', 'trace-core.jsonl', 'keys.log', 'messages.log', 'state.log'):
                 if (run / filename).exists():
                     retention.append(compress(run / filename))
             if (run / 'checkpoints').exists():
@@ -207,6 +210,8 @@ def run(spec_path, source, root, cls, tools, smoke=False):
                         seen.add(case['save_sha256'])
                         if len(selected) < goal:
                             selected.append(dict(**case, source_attempt=row['id']))
+                        else:
+                            document['rejected'].append(dict(case,reason='quota_complete'))
                 document['selected'] = selected
                 # Completed attempt journals are immutable; the replaceable
                 # progress pointer is bounded instead of quadratic snapshots.

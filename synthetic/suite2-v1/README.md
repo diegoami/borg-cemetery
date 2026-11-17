@@ -57,3 +57,22 @@ Before a new preparation:
 The harvest preflight now rejects this known missing capture interface before
 starting more natural lives. It remains a negative capability check; detecting
 an interface name in source is not a replacement for native smoke validation.
+
+
+## Capture-enabled continuation authorized by the owner
+
+The owner authorized source capture support after the failed smoke. The next
+preparation pins borg-reborn-rs candidate `ba26c2abc378302c7d37d4337775d3bd5fe5ad30`
+([source PR #508](https://github.com/diegoami/borg-reborn-rs/pull/508)), based on
+main `28360152`, with that commit's own stock settings. Capture-on/off native
+checks preserve full keys/state/messages and final engine RNG on both
+controllers; native compact/full channels also match. The first native state
+of four saved-start loads is captured at exactly the saved turn.
+
+The updated immutable Git snapshot of `harvest-spec.json` records this source,
+configuration and the core-independent capture interface. Its smoke uses new
+seeds starting at 3,000,000, separate from the earlier failed smoke and the
+requested full bank's seeds at 2,000,000. The old failed preparation and all
+nine natural-death packets/streams remain under `preparation-44121110906/`.
+No source PR merge or review acceptance is implied. This is an explicitly
+pinned candidate preparation, not a claim that the candidate is main.
