@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1960011",
+  "run_kind": "harness",
+  "character": "Elf Rogue",
+  "raw_cause": "a crow",
+  "terminal": {
+    "cause": "a crow",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 6158,
+    "race_idx": 2,
+    "class_idx": 6
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1960011,
+    "flags": "menu",
+    "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+    "git_dirty": "no",
+    "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5",
+    "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+    "borg_txt_sha256": "f972c5c577d0b98558b3b647fb39cdae7d44457de0ee148f1660abff0834e45a",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 693
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c6-r2-s1960011",
+      "result_sha256": "de4e318c16c0af07088fbac98c8f55db6fcdb2cdff0449343ab7c6e08f6a012f",
+      "raw_sha256": {
+        "keys.log": "de4e318c16c0af07088fbac98c8f55db6fcdb2cdff0449343ab7c6e08f6a012f",
+        "messages.log": "0e249bc36756273e12890e312627134a4f036f788ea65bc6f3a03abb2d5573cd",
+        "state.log": "12d35a1a129626e991228b1772a3cc69ac67f1074fb20c8f48e2dddf600905e7"
+      },
+      "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+      "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e"
+    }
+  ],
+  "encounter_family": "start-89c31fd5adf04ec56f356340971a72b257935f1ac858f252d4671953722acf8b",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+    "config.txt": "c145c387f880a72d51a9493049c5419acb57920930a1bef13e412e70d0f58b4f",
+    "depths.json": "7a8f20b18714607756ec2fe05e5eea2805d0d541f7cb55d3123b1f28a7e81a61",
+    "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+    "summary.json": "1b80578f6d43c82e66a866b6f57134546a9f9078a24be7f827a9dd0f0c4769bc",
+    "trace-core-tail.jsonl": "8c6b50166c7f15b4ddeb56ba45617d34726f6bdbd24706d1f068f7eccd41ba3b"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 0,
+        "clevel": 5,
+        "depth": 1,
+        "due_turn": 50800,
+        "file": "checkpoint-000500-t0000050809.save",
+        "game_turn": 50809,
+        "keys": 6162,
+        "max_depth": 2,
+        "race_idx": 4,
+        "seed": 3000013
+      },
+      "selection": {
+        "first_visible_turn": 50839,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "white jelly",
+        "no_omniscient_trigger": true,
+        "observation_line": 5412,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 50830
+      },
+      "status": "candidate",
+      "turn": 51600,
+      "type": "death",
+      "witness": {
+        "cause": "poison"
+      }
+    }
+  ]
+}

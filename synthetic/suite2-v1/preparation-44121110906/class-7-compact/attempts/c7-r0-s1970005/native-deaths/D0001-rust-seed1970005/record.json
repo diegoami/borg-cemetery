@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1970005",
+  "run_kind": "harness",
+  "character": "Human Ranger",
+  "raw_cause": "a floating eye",
+  "terminal": {
+    "cause": "a floating eye",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 19596,
+    "race_idx": 0,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1970005,
+    "flags": "menu",
+    "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+    "git_dirty": "no",
+    "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5",
+    "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+    "borg_txt_sha256": "060f5e7702e92e053a4e3b7f282b7b7e35fc45d92b3faecd70101a21b6c32c91",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1942
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c7-r0-s1970005",
+      "result_sha256": "715e5c267846fe9df29696b930fed115f035bd1d7a5f749ea9db54cfca380d77",
+      "raw_sha256": {
+        "keys.log": "715e5c267846fe9df29696b930fed115f035bd1d7a5f749ea9db54cfca380d77",
+        "messages.log": "e03839e8809667858daf84508005627ca349918fb4ff610814e87262298e7541",
+        "state.log": "d0af6df4d7c4ceb5e2a8ef7793504befc51b61519108d0b3e971368566afa15d"
+      },
+      "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+      "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e"
+    }
+  ],
+  "encounter_family": "start-d25498a47238338d3afbc2961c006c8180b4a77c98c820d50d52bd2a28ecf237",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+    "config.txt": "1a72a26c8a3a317a1d1e6b17ef16fb4ef7abb15a3a82880ada918e86379cce06",
+    "depths.json": "476b63aee96c3592cefb959e6fd3156acb1d7c9d73d10bcac2b399ed61f370bc",
+    "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+    "summary.json": "62275188e5efee53bf66ef8c5b8e4a8d5372ae5e959789041dbcf3b0882f98bd",
+    "trace-core-tail.jsonl": "625e98fd2b6176cc1ba6989446978988979b05de75025eca7c4c1b47149da8e8"
+  },
+  "investigation": null,
+  "issue": null
+}

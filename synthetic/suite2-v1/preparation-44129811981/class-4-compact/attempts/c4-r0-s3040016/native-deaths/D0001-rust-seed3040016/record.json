@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed3040016",
+  "run_kind": "harness",
+  "character": "Human Necromancer",
+  "raw_cause": "Grip, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Grip, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 13906,
+    "race_idx": 0,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 3040016,
+    "flags": "menu",
+    "git_rev": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+    "git_dirty": "no",
+    "source_sha256": "2d2b5d1e9570cbda939fcf4a446ce1a0aaf94df0a3b5c8fff5219b3a1caa8724",
+    "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d",
+    "borg_txt_sha256": "d3750c432fd621054bdf6444d0843ad49a8172496969e7bb2f8f2c5744d585e5",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1463
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c4-r0-s3040016",
+      "result_sha256": "74d88862b950ca5233a36d08c521303fdee053890a679adedb0e381d9f7a6d75",
+      "raw_sha256": {
+        "keys.log": "74d88862b950ca5233a36d08c521303fdee053890a679adedb0e381d9f7a6d75",
+        "messages.log": "cbcd0bc11ecd9295e14148327da095b1a0ff513ea7c26b78a929e22f2e866641",
+        "state.log": "af168e70734cc01b05f77bfe2fd9c73d13a25afd7dd6e47241c32496568baf4e"
+      },
+      "source_commit": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+      "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d"
+    }
+  ],
+  "encounter_family": "start-3d34ae45c5410853e85ad74cafcfe4ed6a34297e5a009f9d2729bd2261398e35",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "a4e92ea734d40327f7af07baceed91564b521de26685e00d176c9f802c47e11d",
+    "config.txt": "13c88063b4a572bffb1e2c0e69c7adabece26fb8f58dee1fdce8b1e457bfed11",
+    "depths.json": "b98810521d6d5448d910e2e8102882b982fb1aa03c99d71aa7df0efdc78312db",
+    "params-core.json": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+    "summary.json": "27f8e1009aeb55660bb1f65ba197302313ba65b34eca7073f7ba40f8a85bcd76",
+    "trace-core-tail.jsonl": "30fc81b0637491bd77f7f12cf9b11bad592ebfff25101c4408620323380fb2ac"
+  },
+  "investigation": null,
+  "issue": null
+}

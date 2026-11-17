@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1930007",
+  "run_kind": "harness",
+  "character": "Half-Orc Priest",
+  "raw_cause": "a giant white louse",
+  "terminal": {
+    "cause": "a giant white louse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 7,
+    "turn": 18482,
+    "race_idx": 6,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1930007,
+    "flags": "menu",
+    "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+    "git_dirty": "no",
+    "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5",
+    "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+    "borg_txt_sha256": "3e0652ec446951eff6acd09b5bb44d5f92d8388df6d86746e7642e18de3c29de",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1476
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c3-r6-s1930007",
+      "result_sha256": "2d2fdaaed810471d86e34cca60c59131a489d2ea36025c95fba9561f898a7ec1",
+      "raw_sha256": {
+        "keys.log": "2d2fdaaed810471d86e34cca60c59131a489d2ea36025c95fba9561f898a7ec1",
+        "messages.log": "29abbb2da8ad1deb340e2a71ff7cca8c3ba649075132fdbc9e8079b1c915aa1f",
+        "state.log": "3e2e341e0d708acf278647e647d765495ace9452247168857ea9e8b6f5db8757"
+      },
+      "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+      "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e"
+    }
+  ],
+  "encounter_family": "start-7ab66a67443ecc41dbdcae37ce48433159492221ae0b158cc4eeee8dd97814fd",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+    "config.txt": "027a1e3e187259c26ca01fad5fe2433bb78350b65bbb7002d1b7d1bcc7b28a5d",
+    "depths.json": "3b1e9d1ec30edf2cfdf792dbc4bba9fe7943d4562dc5442198630536d3efe36c",
+    "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+    "summary.json": "5138cfcceb9ed3f2902cdb51d69d0e1bf42e3852b05f98487c71e4bb04679a06",
+    "trace-core-tail.jsonl": "425790928fd257cdf00521dee5ac20cb4ff54d17bac9366f15ad35d479604123"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -1,0 +1,157 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 7,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 6200,
+        "file": "checkpoint-000059-t0000006208.save",
+        "game_turn": 6208,
+        "keys": 1033,
+        "max_depth": 1,
+        "race_idx": 9,
+        "seed": 3070010
+      },
+      "selection": {
+        "first_visible_turn": 6218,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 5,
+        "monster_kind": "cutpurse",
+        "no_omniscient_trigger": true,
+        "observation_line": 735,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 6218
+      },
+      "status": "candidate",
+      "turn": 6326,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 6,
+          "level": 2,
+          "line": 748,
+          "max_hp": 24,
+          "max_sp": 0,
+          "monsters": [],
+          "sp": 0,
+          "turn": 6306
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 750,
+          "max_hp": 24,
+          "max_sp": 0,
+          "monsters": [],
+          "sp": 0,
+          "turn": 6326
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 24,
+          "level": 2,
+          "line": 776,
+          "max_hp": 24,
+          "max_sp": 0,
+          "monsters": [],
+          "sp": 0,
+          "turn": 7366
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 7,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 24300,
+        "file": "checkpoint-000224-t0000024300.save",
+        "game_turn": 24300,
+        "keys": 4038,
+        "max_depth": 2,
+        "race_idx": 9,
+        "seed": 3070010
+      },
+      "selection": {
+        "first_visible_turn": 24340,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 2,
+        "monster_kind": "crow",
+        "no_omniscient_trigger": true,
+        "observation_line": 2840,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 24340
+      },
+      "status": "candidate",
+      "turn": 24440,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 10,
+          "level": 4,
+          "line": 2858,
+          "max_hp": 44,
+          "max_sp": 3,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 52
+            },
+            {
+              "index": 20,
+              "race": 17
+            }
+          ],
+          "sp": 2,
+          "turn": 24440
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 10,
+          "level": 4,
+          "line": 2858,
+          "max_hp": 44,
+          "max_sp": 3,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 52
+            },
+            {
+              "index": 20,
+              "race": 17
+            }
+          ],
+          "sp": 2,
+          "turn": 24440
+        },
+        "recovery": {
+          "depth": 2,
+          "hp": 23,
+          "level": 4,
+          "line": 2860,
+          "max_hp": 44,
+          "max_sp": 3,
+          "monsters": [
+            {
+              "index": 2,
+              "race": 52
+            },
+            {
+              "index": 20,
+              "race": 17
+            }
+          ],
+          "sp": 2,
+          "turn": 24450
+        }
+      }
+    }
+  ]
+}

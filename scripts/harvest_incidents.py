@@ -7,6 +7,7 @@ import gzip
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -48,10 +49,13 @@ def archive_checkpoints(directory):
 def execute(source, out, seed, race, cls, spec, save=None, turns=None):
     env = {k: v for k, v in os.environ.items() if not k.startswith(('BORG_', 'ANGBAND_', 'BORGH_'))
            and k not in ('SAVE_ROOT', 'STALL_TIMEOUT_SECONDS', 'CHECKPOINT_EVERY')}
-    env.update(BORG_CORE='reborn', BORG_CEMETERY_DIR=spec['tools_directory'],
+    env.update(BORG_CORE=spec.get('core', 'reborn'), BORG_CEMETERY_DIR=spec['tools_directory'],
                BORG_ENCOUNTER_LOG=str(out / 'encounters.jsonl'), BORG_KNOWLEDGE_LOG=str(out / 'knowledge.json'),
                BORG_DEATH_RECORDS_DIR=str(out / 'native-deaths'), RUN_TIMEOUT_SECONDS=str(spec['wall_seconds']),
                CHECKPOINT_EVERY='0' if save else str(spec['checkpoint_every']))
+    if spec.get('capture_api') == 'native-command-encounter@1':
+        env.pop('BORG_KNOWLEDGE_LOG', None)
+        if not save:env['BORG_ENCOUNTER_KNOWLEDGE_LOG'] = str(out / 'knowledge.json')
     if save:
         env.pop('BORG_KNOWLEDGE_LOG', None)
     flags = 'menu'
@@ -113,13 +117,14 @@ def one(source, root, cls, ordinal, spec):
                 shutil.copyfile(source / 'harness/profiles/reborn-default.txt', dest / 'profile.txt')
                 write(dest / 'incident.json', incident)
                 row['cases'].append(dict(id=case_id, directory=case_id, save_sha256=digest, incident_type=incident['type'],
-                                         incident_turn=incident['turn'], initial_turn=initial['turn']))
+                                         incident_turn=incident['turn'], initial_turn=initial['turn'],
+                                         initial_state=(probe / 'state.log').read_text().splitlines()[0]))
             except Exception as error:
                 incident.update(status='unusable_initial_state', reason=str(error))
         write(run / 'selection.json', dict(incidents=incidents))
         for info in row['cases']:
             probe = root / 'cases' / info['directory'] / 'probe'
-            for filename in ('encounters.jsonl', 'trace.jsonl', 'keys.log', 'messages.log', 'state.log'):
+            for filename in ('encounters.jsonl', 'trace.jsonl', 'trace-core.jsonl', 'keys.log', 'messages.log', 'state.log'):
                 if (probe / filename).exists():
                     compress(probe / filename)
     except Exception as error:
@@ -127,7 +132,7 @@ def one(source, root, cls, ordinal, spec):
     finally:
         if run.exists():
             retention = []
-            for filename in ('encounters.jsonl', 'trace.jsonl', 'keys.log', 'messages.log', 'state.log'):
+            for filename in ('encounters.jsonl', 'trace.jsonl', 'trace-core.jsonl', 'keys.log', 'messages.log', 'state.log'):
                 if (run / filename).exists():
                     retention.append(compress(run / filename))
             if (run / 'checkpoints').exists():
@@ -138,9 +143,40 @@ def one(source, root, cls, ordinal, spec):
     return row
 
 
-def run(spec_path, source, root, cls, tools):
+def require_capture_support(source, spec):
+    """Refuse the known missing capture interface before scheduling natural lives.
+
+    This source check is only a negative capability check. A real smoke still
+    has to validate emitted streams, native saved starts and bounded restarts.
+    """
+    if 'suite_id' not in spec:
+        return
+    code = list((source / 'borg-reborn-rs/src').glob('*.rs')) + list((source / 'engine/frontend').glob('*.c'))
+    if not any('BORG_ENCOUNTER_LOG' in path.read_text() for path in code):
+        raise ValueError('preparation source lacks BORG_ENCOUNTER_LOG; cannot qualify observable encounter onset or native coverage for this suite')
+
+
+def run(spec_path, source, root, cls, tools, smoke=False):
     spec = read(spec_path)
     original_spec_sha256 = sha(spec_path)
+    excluded = set()
+    if 'exclusion' in spec:
+        exclusion = spec_path.parent / spec['exclusion']['path']
+        if sha(exclusion) != spec['exclusion']['sha256']:
+            raise ValueError('exclusion inventory changed')
+        inventory = read(exclusion)
+        excluded = set(inventory['save_sha256'])
+        seeds = {spec['seed_base'] + c * 10000 + i for c in range(9) for i in range(spec['max_attempts_per_class'])}
+        if seeds.intersection(inventory['source_seeds']):
+            raise ValueError('source seeds overlap earlier suite')
+    if 'configuration' in spec:
+        if (sha(source / 'harness/borg.txt') != spec['configuration']['borg_txt_sha256'] or
+                sha(source / 'harness/profiles/reborn-default.txt') != spec['configuration']['profile_sha256']):
+            raise ValueError('preparation configuration changed')
+    require_capture_support(source, spec)
+    goal = spec['smoke']['target_per_class'] if smoke else spec['target_per_class']
+    if smoke:
+        spec.update(seed_base=spec['smoke_seed_base'], max_attempts_per_class=spec['smoke']['max_attempts_per_class'])
     tools_head = subprocess.check_output(['git', '-C', str(tools), 'rev-parse', 'HEAD'], text=True).strip()
     if tools_head != spec['native_tools_commit']:
         raise ValueError('native tools differ from pin')
@@ -156,12 +192,19 @@ def run(spec_path, source, root, cls, tools):
     write(root / 'spec.json', spec)
     write(root / 'build.json', build)
     document = dict(schema='borg-cemetery/balanced-incident-harvest@1', spec_sha256=original_spec_sha256,
-                    class_idx=cls, target=111, attempts=[], selected=[], independent_life=False)
-    seen, selected = set(), []
+                    class_idx=cls, target=goal, stage='smoke' if smoke else 'harvest', attempts=[], selected=[], rejected=[], independent_life=False)
+    seen, selected = set(excluded), []
     with open('/tmp/angband-validation.lock', 'a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         with ThreadPoolExecutor(max_workers=spec['workers']) as pool:
             for offset in range(0, spec['max_attempts_per_class'], spec['workers']):
+                # Leave room for the final evidence archive on hosted runners.
+                # Stop cleanly with a partial journal instead of losing evidence
+                # to an out-of-space failure during the final upload.
+                budget = spec.get('max_retained_bytes_per_class')
+                if budget is not None and sum(p.stat().st_size for p in root.rglob('*') if p.is_file()) >= budget:
+                    document['stop_reason'] = 'retained_evidence_budget'
+                    break
                 # Selection uses prespecified seed order, never completion speed.
                 futures = [pool.submit(one, source, root, cls, ordinal, spec) for ordinal in range(offset, min(offset + spec['workers'], spec['max_attempts_per_class']))]
                 batch = [future.result() for future in futures]
@@ -169,18 +212,21 @@ def run(spec_path, source, root, cls, tools):
                     document['attempts'].append(row)
                     for case in row['cases']:
                         if case['save_sha256'] in seen:
+                            document['rejected'].append(dict(case, reason='duplicate_suite1' if case['save_sha256'] in excluded else 'duplicate_in_suite'))
                             continue
                         seen.add(case['save_sha256'])
-                        if len(selected) < 111:
+                        if len(selected) < goal:
                             selected.append(dict(**case, source_attempt=row['id']))
+                        else:
+                            document['rejected'].append(dict(case,reason='quota_complete'))
                 document['selected'] = selected
                 # Completed attempt journals are immutable; the replaceable
                 # progress pointer is bounded instead of quadratic snapshots.
                 progress = root / 'harvest-progress.json.tmp'
                 progress.write_text(json.dumps(document, indent=2, sort_keys=True) + '\n')
                 os.replace(progress, root / 'harvest-progress.json')
-                print('class', cls, 'attempts', len(document['attempts']), 'usable', len(selected), '/111', flush=True)
-                if len(selected) == 111:
+                print('class', cls, 'attempts', len(document['attempts']), 'usable', len(selected), '/' + str(goal), flush=True)
+                if len(selected) == goal:
                     break
     write(root / 'harvest.json', document)
     return document
@@ -193,6 +239,7 @@ if __name__ == '__main__':
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--class-index', type=int, required=True)
     parser.add_argument('--tools', type=Path, required=True)
+    parser.add_argument('--smoke', action='store_true')
     args = parser.parse_args()
-    result = run(args.spec.resolve(), args.source.resolve(), args.out.resolve(), args.class_index, args.tools.resolve())
-    raise SystemExit(int(len(result['selected']) != 111))
+    result = run(args.spec.resolve(), args.source.resolve(), args.out.resolve(), args.class_index, args.tools.resolve(), args.smoke)
+    raise SystemExit(int(len(result['selected']) != result['target']))

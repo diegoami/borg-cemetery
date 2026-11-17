@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed3010005",
+  "run_kind": "harness",
+  "character": "Human Mage",
+  "raw_cause": "a clear worm mass",
+  "terminal": {
+    "cause": "a clear worm mass",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 40582,
+    "race_idx": 0,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 3010005,
+    "flags": "menu",
+    "git_rev": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+    "git_dirty": "no",
+    "source_sha256": "2d2b5d1e9570cbda939fcf4a446ce1a0aaf94df0a3b5c8fff5219b3a1caa8724",
+    "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d",
+    "borg_txt_sha256": "56172d90b53ec6016235bc6e8a2adfc8b8b1a84708e101f1db546f0c2919138a",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 2030
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c1-r0-s3010005",
+      "result_sha256": "bb7d650101fb488b8e8cdfea86bcd813fb1dcf86d08702cbcadcae6b1ff8be7f",
+      "raw_sha256": {
+        "keys.log": "bb7d650101fb488b8e8cdfea86bcd813fb1dcf86d08702cbcadcae6b1ff8be7f",
+        "messages.log": "ed80ae042710a2dcc146688ad284496fb9602b8efee3acaf7e00f05ed4ec05ce",
+        "state.log": "a77bebee0ac19cb883ca752a7d3fff9abc8da6a6d07800e0ac82be4bf51c476e"
+      },
+      "source_commit": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+      "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d"
+    }
+  ],
+  "encounter_family": "start-3112beab596a460db449997d78d8b7683e5f817f5ec7f947a313d7368ab815af",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "a4e92ea734d40327f7af07baceed91564b521de26685e00d176c9f802c47e11d",
+    "config.txt": "729574d463e92fca0dac0b1522e372fd53da35a9ef7266ab81c37876538d96a1",
+    "depths.json": "465a45014331171df293eecdd902295554597d0c55abc0f977875555a33b0705",
+    "params-core.json": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+    "summary.json": "f0992930d5670623ad338a76c08e3ad15b290d98c5e54f041aed86eb9a892f44",
+    "trace-core-tail.jsonl": "4c737e777ffa380d171487258cdf065b45b7795b1cbb0bd45fb520ef54bd93da"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed3030002",
+  "run_kind": "harness",
+  "character": "Gnome Priest",
+  "raw_cause": "a giant white mouse",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 47319,
+    "race_idx": 4,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 3030002,
+    "flags": "menu",
+    "git_rev": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+    "git_dirty": "no",
+    "source_sha256": "2d2b5d1e9570cbda939fcf4a446ce1a0aaf94df0a3b5c8fff5219b3a1caa8724",
+    "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d",
+    "borg_txt_sha256": "9f87d4cf55f8960af94e1a9c115e7055a865a10178edec41970d93aae5456855",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1365
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c3-r4-s3030002",
+      "result_sha256": "0232de53e696459d72d9db93878ae9f6256529a3cb31e3fcf27e2d688b348f88",
+      "raw_sha256": {
+        "keys.log": "0232de53e696459d72d9db93878ae9f6256529a3cb31e3fcf27e2d688b348f88",
+        "messages.log": "b490b72f1133fd96821bcc982d19651291109073b7e7c524d9c7f72dff5fb1cd",
+        "state.log": "fb586ed6e9a8e0fbdf1c3eae6060b0ec8f5a6efa26eb220d34b6f5412ef960aa"
+      },
+      "source_commit": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+      "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d"
+    }
+  ],
+  "encounter_family": "start-3bb948638d7f9511ccbb65c30b3365d6c2a762f42f99413d834f343cced9f2a5",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "a4e92ea734d40327f7af07baceed91564b521de26685e00d176c9f802c47e11d",
+    "config.txt": "38634685e3e8f50dfe51fdb8710379a745ffd33d9f3a9966136292b0727c0193",
+    "depths.json": "3a751bbbd0ae4336d1b6f2054a87f63b4e458d7cc76806886d78173e79017492",
+    "params-core.json": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+    "summary.json": "efd1bddfefa0ab143da722ae389c850f8aa60787d5561fc6d5a39033f00b9267",
+    "trace-core-tail.jsonl": "cf402d9f9385dfbcc7fe39e6437d233ee7ccdfc4b00de485d97b52c981761786"
+  },
+  "investigation": null,
+  "issue": null
+}

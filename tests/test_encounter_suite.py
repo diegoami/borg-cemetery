@@ -34,6 +34,12 @@ class EncounterTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 e.prepare(self.path, self.root)
 
+    def test_borg_rs_manifest_is_valid_but_requires_configured_execution(self):
+        write(self.path,dict(self.manifest,core='borg-rs'))
+        self.assertEqual(len(e.prepare(self.path,self.root)[1]),4)
+        with self.assertRaisesRegex(ValueError,'explicit configured execution'):
+            e.run_suite(self.path,self.root/'source',self.root/'out',root=self.root)
+
     def test_start_after_contact_or_tampered_save_is_rejected(self):
         entry = self.manifest['scenarios'][0]
         scenario = self.root / entry['scenario']

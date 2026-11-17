@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed3080000",
+  "run_kind": "harness",
+  "character": "Elf Blackguard",
+  "raw_cause": "starvation",
+  "terminal": {
+    "cause": "starvation",
+    "dead": true,
+    "depth": 4,
+    "max_depth": 4,
+    "level": 13,
+    "turn": 982010,
+    "race_idx": 2,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 3080000,
+    "flags": "menu",
+    "git_rev": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+    "git_dirty": "no",
+    "source_sha256": "2d2b5d1e9570cbda939fcf4a446ce1a0aaf94df0a3b5c8fff5219b3a1caa8724",
+    "binary_sha256": "af28d42191e4f28598bdc9ad10dbb9fb0715b581eff45f6d531e1631b00ed4a0",
+    "borg_txt_sha256": "a2dd1ec13e3c86f9ea779b4244a54f74b007f5adc0b9dfc6d9700044fd634d42",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 61904
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/184-blackguard-long-pilot/attempts/c8-r2-s3080000",
+      "result_sha256": "0d703c7d93ed481d73b828d09f6c222b0673b46a94ec0e8e98e7a66d9b83a2c4",
+      "raw_sha256": {
+        "keys.log": "0d703c7d93ed481d73b828d09f6c222b0673b46a94ec0e8e98e7a66d9b83a2c4",
+        "messages.log": "34afb287aac5d8212e1a4c1258020e0a68a2f639aa1fafae1801969250fd1265",
+        "state.log": "459b2b9a39a824b2823c4cce113ae87e847dc405f4f80797003fee71a3d99583"
+      },
+      "source_commit": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+      "binary_sha256": "af28d42191e4f28598bdc9ad10dbb9fb0715b581eff45f6d531e1631b00ed4a0"
+    }
+  ],
+  "encounter_family": "start-90a98bc595b1e5db7e15140fd2abeab5c2744a4c8f6663f9bd0e74e6277732eb",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0e156bce0411a76be595ab692ebf700ee8e86befd23c2444916be72e446713b6",
+    "config.txt": "bbb2f13e7f0d5e0457bfe39173c22d6456f33781e3d78f269a581fe8c3019fa1",
+    "depths.json": "517bb05d5d6b61129b0c75898d8e1924b8cfd91a5bffaa3476368b0684acbc44",
+    "params-core.json": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+    "summary.json": "79da2dd02b14d5c36ba322d247d56bc7e7856e0c4668492f75edbdc6f74ea0ec",
+    "trace-core-tail.jsonl": "701978bcb03216b3a942f580452e79ea4fb18177191dfd18d3db10d71a507522"
+  },
+  "investigation": null,
+  "issue": null
+}

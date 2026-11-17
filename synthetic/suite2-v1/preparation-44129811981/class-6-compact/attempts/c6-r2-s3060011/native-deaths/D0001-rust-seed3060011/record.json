@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed3060011",
+  "run_kind": "harness",
+  "character": "Elf Rogue",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 7632,
+    "race_idx": 2,
+    "class_idx": 6
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 3060011,
+    "flags": "menu",
+    "git_rev": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+    "git_dirty": "no",
+    "source_sha256": "2d2b5d1e9570cbda939fcf4a446ce1a0aaf94df0a3b5c8fff5219b3a1caa8724",
+    "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d",
+    "borg_txt_sha256": "3cc4455051713a89754f103251220ecb60c25263e4781db98f6b6b15165726ec",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 722
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c6-r2-s3060011",
+      "result_sha256": "b4322aa1465ebaae25304173a0b58ba437de39244ca9692e2977f59f73630692",
+      "raw_sha256": {
+        "keys.log": "b4322aa1465ebaae25304173a0b58ba437de39244ca9692e2977f59f73630692",
+        "messages.log": "20c4b230af5b6374f391f0383311567e4f86849823ebdbbc25487fc2782ee24a",
+        "state.log": "3b7bba68a1bdb945f52857c4205238856db363361523e0d7108fee61a4d5bcff"
+      },
+      "source_commit": "ba26c2abc378302c7d37d4337775d3bd5fe5ad30",
+      "binary_sha256": "3293eff43a1602aab4098b7bf7e8c2dcb9dda9ee6d8b44e0240ff77a452a8f9d"
+    }
+  ],
+  "encounter_family": "start-e2ea9ef07147ce193141eb5d7bb265b99e94c467a1354221a024a472bfe6940f",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "a4e92ea734d40327f7af07baceed91564b521de26685e00d176c9f802c47e11d",
+    "config.txt": "7fb55867a79e2c967c14e2eff541a9f7ab9d738057515b27cc7487bccc2e64f5",
+    "depths.json": "46cda226235e8bce09ceceb1af453686a6c90163f4b551f97bc1a681a5745a14",
+    "params-core.json": "61a18324fa7c64cbf40bbdc71640141682b2df23c8c2ce27669323f074bc04ef",
+    "summary.json": "2f51f1207c84b67d28b9bce225a8cba82d1c8da55559ff36661276ac60ddfcdf",
+    "trace-core-tail.jsonl": "6f52c818c54e0bb032fba6d259a8dd4efa5d1a28ba9b3e8dc181827bab60f8e7"
+  },
+  "investigation": null,
+  "issue": null
+}

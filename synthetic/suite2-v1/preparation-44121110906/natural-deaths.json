@@ -1,0 +1,596 @@
+[
+  {
+    "archive": "harvest-class-1.tgz",
+    "path": "harvest/attempts/c1-r0-s1910005/native-deaths/D0001-rust-seed1910005/record.json",
+    "record": {
+      "attempts": [
+        {
+          "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+          "outcome": "death",
+          "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c1-r0-s1910005",
+          "raw_sha256": {
+            "keys.log": "2155bac2dec29d3b267ae1bcc6384a54323cadd286102f32ebf4c9bd15e4360b",
+            "messages.log": "2e9730a00c575c6b8bdc3905f2295b7ed18c178bda997aaa05c9f84df712fa1c",
+            "state.log": "a406334b4f797e3c210fcd01d74e348e2425416f625bac0ef08248d7265d370d"
+          },
+          "result_sha256": "2155bac2dec29d3b267ae1bcc6384a54323cadd286102f32ebf4c9bd15e4360b",
+          "role": "original",
+          "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f"
+        }
+      ],
+      "character": "Human Mage",
+      "core_decision_trace": {
+        "file": "trace-core-tail.jsonl",
+        "lines": 200,
+        "of": 2350
+      },
+      "decision_trace": null,
+      "encounter_family": "start-00d9ebc60428d438a86c6aab289e51ffea238b61a1cada5203ecb71964edb005",
+      "files_sha256": {
+        "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+        "config.txt": "dbd3ec9c4ec13523db3812878719af0f5771fdb98df971302794746fecfd0c68",
+        "depths.json": "c95e31aa06381c67398e35db293d8862fb0297bb6f434204a41c7669780cc63c",
+        "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "summary.json": "81e0e47b7f8a9ff333ab20da2df66cdc3d529dcca4a649b876a378dbef1c9943",
+        "trace-core-tail.jsonl": "66de035c53489148f2e35f0140996ed6ac84cea19712cb515144f40150c7ddc4"
+      },
+      "id": "D0001-rust-seed1910005",
+      "identity": {
+        "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+        "borg_txt_sha256": "97deb7b5cae371f8f49da02db89c109a7eb87411107b6586bb23a49f311ca0b1",
+        "flags": "menu",
+        "git_dirty": "no",
+        "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+        "impl": "rust",
+        "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "seed": 1910005,
+        "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5"
+      },
+      "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+      "investigation": null,
+      "issue": null,
+      "raw_cause": "Grip, Farmer Maggot's Dog",
+      "run_kind": "harness",
+      "schema": "borg-reborn-rs/death-record@1",
+      "terminal": {
+        "cause": "Grip, Farmer Maggot's Dog",
+        "class_idx": 1,
+        "dead": true,
+        "depth": 1,
+        "level": 3,
+        "max_depth": 1,
+        "race_idx": 0,
+        "turn": 56123
+      }
+    }
+  },
+  {
+    "archive": "harvest-class-2.tgz",
+    "path": "harvest/attempts/c2-r2-s1920000/native-deaths/D0001-rust-seed1920000/record.json",
+    "record": {
+      "attempts": [
+        {
+          "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+          "outcome": "death",
+          "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c2-r2-s1920000",
+          "raw_sha256": {
+            "keys.log": "45ccf7c14a69e6888c3f193fddca1cb0e1303f5701b7a5686c5c6656a65bbfb6",
+            "messages.log": "ee3c621e2a64dc58b6212b21a8ea7ad45b4f499207460d6b7b20a4eabcb78d9e",
+            "state.log": "45ab68b645ea5b78d1924e2376f2cf2b973ae21abf342820e88f6c79791eeaf4"
+          },
+          "result_sha256": "45ccf7c14a69e6888c3f193fddca1cb0e1303f5701b7a5686c5c6656a65bbfb6",
+          "role": "original",
+          "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f"
+        }
+      ],
+      "character": "Elf Druid",
+      "core_decision_trace": {
+        "file": "trace-core-tail.jsonl",
+        "lines": 200,
+        "of": 3485
+      },
+      "decision_trace": null,
+      "encounter_family": "start-d0607ce8d0a0c65aca9c191555415ca55c860259d8357e4fd2a686c348d26523",
+      "files_sha256": {
+        "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+        "config.txt": "a7031ecb288f969ec8c17767be54d50f60d07c2bedc342c14ecbb0ec37db38fc",
+        "depths.json": "81341289b1099d431af5d3f9d290562d00f67c288be5aef3751b905f73225f5b",
+        "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "summary.json": "60bcd6607f6c89afe79c6430815790d3ec2602dc4ea4ecd5a7b98393f2752b89",
+        "trace-core-tail.jsonl": "611532b8a5fa6a5c9bcd10203e77d80aaa479570cfa2772141a846c5b0294617"
+      },
+      "id": "D0001-rust-seed1920000",
+      "identity": {
+        "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+        "borg_txt_sha256": "fb718d7b92a0e7e5da44ab39b73c43f424a3d70d0500663fadb466400dc2953d",
+        "flags": "menu",
+        "git_dirty": "no",
+        "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+        "impl": "rust",
+        "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "seed": 1920000,
+        "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5"
+      },
+      "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+      "investigation": null,
+      "issue": null,
+      "raw_cause": "Fang, Farmer Maggot's Dog",
+      "run_kind": "harness",
+      "schema": "borg-reborn-rs/death-record@1",
+      "terminal": {
+        "cause": "Fang, Farmer Maggot's Dog",
+        "class_idx": 2,
+        "dead": true,
+        "depth": 1,
+        "level": 3,
+        "max_depth": 2,
+        "race_idx": 2,
+        "turn": 38706
+      }
+    }
+  },
+  {
+    "archive": "harvest-class-3.tgz",
+    "path": "harvest/attempts/c3-r6-s1930007/native-deaths/D0001-rust-seed1930007/record.json",
+    "record": {
+      "attempts": [
+        {
+          "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+          "outcome": "death",
+          "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c3-r6-s1930007",
+          "raw_sha256": {
+            "keys.log": "2d2fdaaed810471d86e34cca60c59131a489d2ea36025c95fba9561f898a7ec1",
+            "messages.log": "29abbb2da8ad1deb340e2a71ff7cca8c3ba649075132fdbc9e8079b1c915aa1f",
+            "state.log": "3e2e341e0d708acf278647e647d765495ace9452247168857ea9e8b6f5db8757"
+          },
+          "result_sha256": "2d2fdaaed810471d86e34cca60c59131a489d2ea36025c95fba9561f898a7ec1",
+          "role": "original",
+          "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f"
+        }
+      ],
+      "character": "Half-Orc Priest",
+      "core_decision_trace": {
+        "file": "trace-core-tail.jsonl",
+        "lines": 200,
+        "of": 1476
+      },
+      "decision_trace": null,
+      "encounter_family": "start-7ab66a67443ecc41dbdcae37ce48433159492221ae0b158cc4eeee8dd97814fd",
+      "files_sha256": {
+        "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+        "config.txt": "027a1e3e187259c26ca01fad5fe2433bb78350b65bbb7002d1b7d1bcc7b28a5d",
+        "depths.json": "3b1e9d1ec30edf2cfdf792dbc4bba9fe7943d4562dc5442198630536d3efe36c",
+        "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "summary.json": "5138cfcceb9ed3f2902cdb51d69d0e1bf42e3852b05f98487c71e4bb04679a06",
+        "trace-core-tail.jsonl": "425790928fd257cdf00521dee5ac20cb4ff54d17bac9366f15ad35d479604123"
+      },
+      "id": "D0001-rust-seed1930007",
+      "identity": {
+        "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+        "borg_txt_sha256": "3e0652ec446951eff6acd09b5bb44d5f92d8388df6d86746e7642e18de3c29de",
+        "flags": "menu",
+        "git_dirty": "no",
+        "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+        "impl": "rust",
+        "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "seed": 1930007,
+        "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5"
+      },
+      "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+      "investigation": null,
+      "issue": null,
+      "raw_cause": "a giant white louse",
+      "run_kind": "harness",
+      "schema": "borg-reborn-rs/death-record@1",
+      "terminal": {
+        "cause": "a giant white louse",
+        "class_idx": 3,
+        "dead": true,
+        "depth": 1,
+        "level": 7,
+        "max_depth": 1,
+        "race_idx": 6,
+        "turn": 18482
+      }
+    }
+  },
+  {
+    "archive": "harvest-class-4.tgz",
+    "path": "harvest/attempts/c4-r6-s1940007/native-deaths/D0001-rust-seed1940007/record.json",
+    "record": {
+      "attempts": [
+        {
+          "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+          "outcome": "death",
+          "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c4-r6-s1940007",
+          "raw_sha256": {
+            "keys.log": "dbe58a6bc82b4ba5c219173605edc289a7b8b9a593cb08b5643e4edbcbe0f061",
+            "messages.log": "58ba5a336c6991ad1d51d2cb2752be4a2a692f8a4df85f30caed13ae5de97218",
+            "state.log": "70e43b71d6195c60c86a4b44b1b20ae16d01ea9c5d96df9d86b6b7010c96024d"
+          },
+          "result_sha256": "dbe58a6bc82b4ba5c219173605edc289a7b8b9a593cb08b5643e4edbcbe0f061",
+          "role": "original",
+          "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f"
+        }
+      ],
+      "character": "Half-Orc Necromancer",
+      "core_decision_trace": {
+        "file": "trace-core-tail.jsonl",
+        "lines": 200,
+        "of": 286
+      },
+      "decision_trace": null,
+      "encounter_family": "start-08252098c4235e442e7254c092851623494bab0fb60d9796b826600ef9d4fe6a",
+      "files_sha256": {
+        "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+        "config.txt": "367ec91287acbb04daf33917fc49048771c651c9b78637707c81000be695876f",
+        "depths.json": "c7db3e3488501e3255820b601762ebb7350227565d246286df693d4003dc476d",
+        "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "summary.json": "d07b4d53f5968adbaa0dafc05fd73eea36c5dcc1fc2466bb0b25420171642661",
+        "trace-core-tail.jsonl": "b552a627e70c9762ce7e9232d1b3f4ee9429ab0e9440b3ca3ff10b27b656d0e4"
+      },
+      "id": "D0001-rust-seed1940007",
+      "identity": {
+        "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+        "borg_txt_sha256": "063e5063035482e64dec67f6ef2a082de175865dc77d1e88ca7e5bf37004e3f8",
+        "flags": "menu",
+        "git_dirty": "no",
+        "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+        "impl": "rust",
+        "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "seed": 1940007,
+        "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5"
+      },
+      "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+      "investigation": null,
+      "issue": null,
+      "raw_cause": "Fang, Farmer Maggot's Dog",
+      "run_kind": "harness",
+      "schema": "borg-reborn-rs/death-record@1",
+      "terminal": {
+        "cause": "Fang, Farmer Maggot's Dog",
+        "class_idx": 4,
+        "dead": true,
+        "depth": 1,
+        "level": 1,
+        "max_depth": 1,
+        "race_idx": 6,
+        "turn": 2219
+      }
+    }
+  },
+  {
+    "archive": "harvest-class-6.tgz",
+    "path": "harvest/attempts/c6-r2-s1960011/native-deaths/D0001-rust-seed1960011/record.json",
+    "record": {
+      "attempts": [
+        {
+          "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+          "outcome": "death",
+          "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c6-r2-s1960011",
+          "raw_sha256": {
+            "keys.log": "de4e318c16c0af07088fbac98c8f55db6fcdb2cdff0449343ab7c6e08f6a012f",
+            "messages.log": "0e249bc36756273e12890e312627134a4f036f788ea65bc6f3a03abb2d5573cd",
+            "state.log": "12d35a1a129626e991228b1772a3cc69ac67f1074fb20c8f48e2dddf600905e7"
+          },
+          "result_sha256": "de4e318c16c0af07088fbac98c8f55db6fcdb2cdff0449343ab7c6e08f6a012f",
+          "role": "original",
+          "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f"
+        }
+      ],
+      "character": "Elf Rogue",
+      "core_decision_trace": {
+        "file": "trace-core-tail.jsonl",
+        "lines": 200,
+        "of": 693
+      },
+      "decision_trace": null,
+      "encounter_family": "start-89c31fd5adf04ec56f356340971a72b257935f1ac858f252d4671953722acf8b",
+      "files_sha256": {
+        "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+        "config.txt": "c145c387f880a72d51a9493049c5419acb57920930a1bef13e412e70d0f58b4f",
+        "depths.json": "7a8f20b18714607756ec2fe05e5eea2805d0d541f7cb55d3123b1f28a7e81a61",
+        "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "summary.json": "1b80578f6d43c82e66a866b6f57134546a9f9078a24be7f827a9dd0f0c4769bc",
+        "trace-core-tail.jsonl": "8c6b50166c7f15b4ddeb56ba45617d34726f6bdbd24706d1f068f7eccd41ba3b"
+      },
+      "id": "D0001-rust-seed1960011",
+      "identity": {
+        "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+        "borg_txt_sha256": "f972c5c577d0b98558b3b647fb39cdae7d44457de0ee148f1660abff0834e45a",
+        "flags": "menu",
+        "git_dirty": "no",
+        "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+        "impl": "rust",
+        "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "seed": 1960011,
+        "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5"
+      },
+      "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+      "investigation": null,
+      "issue": null,
+      "raw_cause": "a crow",
+      "run_kind": "harness",
+      "schema": "borg-reborn-rs/death-record@1",
+      "terminal": {
+        "cause": "a crow",
+        "class_idx": 6,
+        "dead": true,
+        "depth": 1,
+        "level": 1,
+        "max_depth": 1,
+        "race_idx": 2,
+        "turn": 6158
+      }
+    }
+  },
+  {
+    "archive": "harvest-class-6.tgz",
+    "path": "harvest/attempts/c6-r7-s1960008/native-deaths/D0001-rust-seed1960008/record.json",
+    "record": {
+      "attempts": [
+        {
+          "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+          "outcome": "death",
+          "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c6-r7-s1960008",
+          "raw_sha256": {
+            "keys.log": "32e58665525cb5ba900e03bf3a92aaacb7fc3b7aef211b6b1b208286090cee41",
+            "messages.log": "1251474987437e6e1d3ec89ff1238e83a984255b662974421e3feb4d1f93347d",
+            "state.log": "f0f98810635cd5063a3b98bc27d6b255e161d3ee2d0a56d4f472b12cd69cd0d0"
+          },
+          "result_sha256": "32e58665525cb5ba900e03bf3a92aaacb7fc3b7aef211b6b1b208286090cee41",
+          "role": "original",
+          "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f"
+        }
+      ],
+      "character": "Half-Troll Rogue",
+      "core_decision_trace": {
+        "file": "trace-core-tail.jsonl",
+        "lines": 200,
+        "of": 9043
+      },
+      "decision_trace": null,
+      "encounter_family": "start-22627eff13bc4e23b34a3667a2a3f19bb665376be39328311c1927618153b126",
+      "files_sha256": {
+        "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+        "config.txt": "e9a04d96df115d6445750bb751a919f3923679e5844b1b56e2d2c0bd7aa9e3d4",
+        "depths.json": "a886b03e0321a2001e74168cf8ebeabd19d3ebac99a8765bc74df0561897b9fb",
+        "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "summary.json": "ac9306f5f3ca9e1c29e93912d554c3aced22485f43648d24ff902f5ea6399ac6",
+        "trace-core-tail.jsonl": "b4de86e0a70feb9ecde8b75b21718d7821cf748bbcfcfe0a2eeb2e17b9f14fdc"
+      },
+      "id": "D0001-rust-seed1960008",
+      "identity": {
+        "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+        "borg_txt_sha256": "ac5d2cc3c1c92772e17de9516cabd7c49010dae0d88534302052d19e1dc59110",
+        "flags": "menu",
+        "git_dirty": "no",
+        "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+        "impl": "rust",
+        "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "seed": 1960008,
+        "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5"
+      },
+      "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+      "investigation": null,
+      "issue": null,
+      "raw_cause": "a soldier",
+      "run_kind": "harness",
+      "schema": "borg-reborn-rs/death-record@1",
+      "terminal": {
+        "cause": "a soldier",
+        "class_idx": 6,
+        "dead": true,
+        "depth": 2,
+        "level": 4,
+        "max_depth": 2,
+        "race_idx": 7,
+        "turn": 86238
+      }
+    }
+  },
+  {
+    "archive": "harvest-class-7.tgz",
+    "path": "harvest/attempts/c7-r0-s1970005/native-deaths/D0001-rust-seed1970005/record.json",
+    "record": {
+      "attempts": [
+        {
+          "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+          "outcome": "death",
+          "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c7-r0-s1970005",
+          "raw_sha256": {
+            "keys.log": "715e5c267846fe9df29696b930fed115f035bd1d7a5f749ea9db54cfca380d77",
+            "messages.log": "e03839e8809667858daf84508005627ca349918fb4ff610814e87262298e7541",
+            "state.log": "d0af6df4d7c4ceb5e2a8ef7793504befc51b61519108d0b3e971368566afa15d"
+          },
+          "result_sha256": "715e5c267846fe9df29696b930fed115f035bd1d7a5f749ea9db54cfca380d77",
+          "role": "original",
+          "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f"
+        }
+      ],
+      "character": "Human Ranger",
+      "core_decision_trace": {
+        "file": "trace-core-tail.jsonl",
+        "lines": 200,
+        "of": 1942
+      },
+      "decision_trace": null,
+      "encounter_family": "start-d25498a47238338d3afbc2961c006c8180b4a77c98c820d50d52bd2a28ecf237",
+      "files_sha256": {
+        "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+        "config.txt": "1a72a26c8a3a317a1d1e6b17ef16fb4ef7abb15a3a82880ada918e86379cce06",
+        "depths.json": "476b63aee96c3592cefb959e6fd3156acb1d7c9d73d10bcac2b399ed61f370bc",
+        "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "summary.json": "62275188e5efee53bf66ef8c5b8e4a8d5372ae5e959789041dbcf3b0882f98bd",
+        "trace-core-tail.jsonl": "625e98fd2b6176cc1ba6989446978988979b05de75025eca7c4c1b47149da8e8"
+      },
+      "id": "D0001-rust-seed1970005",
+      "identity": {
+        "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+        "borg_txt_sha256": "060f5e7702e92e053a4e3b7f282b7b7e35fc45d92b3faecd70101a21b6c32c91",
+        "flags": "menu",
+        "git_dirty": "no",
+        "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+        "impl": "rust",
+        "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "seed": 1970005,
+        "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5"
+      },
+      "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+      "investigation": null,
+      "issue": null,
+      "raw_cause": "a floating eye",
+      "run_kind": "harness",
+      "schema": "borg-reborn-rs/death-record@1",
+      "terminal": {
+        "cause": "a floating eye",
+        "class_idx": 7,
+        "dead": true,
+        "depth": 1,
+        "level": 2,
+        "max_depth": 1,
+        "race_idx": 0,
+        "turn": 19596
+      }
+    }
+  },
+  {
+    "archive": "harvest-class-7.tgz",
+    "path": "harvest/attempts/c7-r2-s1970000/native-deaths/D0001-rust-seed1970000/record.json",
+    "record": {
+      "attempts": [
+        {
+          "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+          "outcome": "death",
+          "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c7-r2-s1970000",
+          "raw_sha256": {
+            "keys.log": "c253a7de3e6f7b3dd49af8b946b38f1630f4094e8e610236f98d591d842e8ae1",
+            "messages.log": "0b7faab2e815ea43b5c3fa5877472c833fa703392bf054fb24dc5b9612f4b247",
+            "state.log": "65fc0d0e662d7f944320908a0dab54c57849c50b47e204f06ac6873017a270f4"
+          },
+          "result_sha256": "c253a7de3e6f7b3dd49af8b946b38f1630f4094e8e610236f98d591d842e8ae1",
+          "role": "original",
+          "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f"
+        }
+      ],
+      "character": "Elf Ranger",
+      "core_decision_trace": {
+        "file": "trace-core-tail.jsonl",
+        "lines": 200,
+        "of": 3153
+      },
+      "decision_trace": null,
+      "encounter_family": "start-a415d4e827defb1ca51b8f330ccfa35245304ac4f847f7ad81cfa47b4c6b11c3",
+      "files_sha256": {
+        "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+        "config.txt": "86c8359e654798c46d1f800aa1d92f8da42598d810673584f3c5360e1162cf66",
+        "depths.json": "45ec0a12931860ba37fbe5cf5e9a5a841a63b2b8602c5b07d86843e1d3448f9d",
+        "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "summary.json": "f0bec6078d00feeb8a658d5febdf744ea2c2e008765a21d6c05597187a5e236f",
+        "trace-core-tail.jsonl": "de6825c80dbc9d22298b0ab5f78db0499e0b3debcfc3c48eada07d5f96d079e0"
+      },
+      "id": "D0001-rust-seed1970000",
+      "identity": {
+        "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+        "borg_txt_sha256": "5d231c1cbde0b2488a01178230b4bf4852efb75ce7d94a0cef6a438021b39c72",
+        "flags": "menu",
+        "git_dirty": "no",
+        "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+        "impl": "rust",
+        "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "seed": 1970000,
+        "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5"
+      },
+      "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+      "investigation": null,
+      "issue": null,
+      "raw_cause": "a cutpurse",
+      "run_kind": "harness",
+      "schema": "borg-reborn-rs/death-record@1",
+      "terminal": {
+        "cause": "a cutpurse",
+        "class_idx": 7,
+        "dead": true,
+        "depth": 2,
+        "level": 4,
+        "max_depth": 3,
+        "race_idx": 2,
+        "turn": 34530
+      }
+    }
+  },
+  {
+    "archive": "harvest-class-7.tgz",
+    "path": "harvest/attempts/c7-r9-s1970010/native-deaths/D0001-rust-seed1970010/record.json",
+    "record": {
+      "attempts": [
+        {
+          "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+          "outcome": "death",
+          "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c7-r9-s1970010",
+          "raw_sha256": {
+            "keys.log": "a84b29c8d512444c3bf08166641cb092257dd0ab5219aa86735090ca65562b61",
+            "messages.log": "1e76f52859e9977e9e0b12c3498b076b0443c29c543f78a1461979a7d5a288de",
+            "state.log": "dc36f013eb12d70addf2826412686ed2a9ab72d6da0b9fcfa6ac14bb9114116c"
+          },
+          "result_sha256": "a84b29c8d512444c3bf08166641cb092257dd0ab5219aa86735090ca65562b61",
+          "role": "original",
+          "source_commit": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f"
+        }
+      ],
+      "character": "High-Elf Ranger",
+      "core_decision_trace": {
+        "file": "trace-core-tail.jsonl",
+        "lines": 200,
+        "of": 1562
+      },
+      "decision_trace": null,
+      "encounter_family": "start-06157b24cdac4bb90b6ebb0f9424852de189bc5a386b168edc3ad30022cd5e24",
+      "files_sha256": {
+        "build.json": "3cac32a608a28f700fbadbe051293b62406997aba19f1402e5dad9619735c578",
+        "config.txt": "ba39bf35fe69b0ff9fd010e3177f0bdb1d7a92ecdd20ae3beb8f408ede685af3",
+        "depths.json": "267990e5121f822e127ccfcbb98b3f0b832485c8f279356206c5613fc7791405",
+        "params-core.json": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "summary.json": "93db14220f6fb85009f3a0e51af210a923a74eb8bf48bdd2d704b60e656255bd",
+        "trace-core-tail.jsonl": "e8bbada30883a7f09fa7d323f4c48d711d7a371b65d451244cfe222bf25c5af6"
+      },
+      "id": "D0001-rust-seed1970010",
+      "identity": {
+        "binary_sha256": "dfa4fe11f28be2c7f5e71e5e5e26446aeb05e34d256d41c67fddf69cee38e61e",
+        "borg_txt_sha256": "14982da09449ed07d7afc8ca74ceee14ec5e4aa1c48852a5bc6e05d32c07728a",
+        "flags": "menu",
+        "git_dirty": "no",
+        "git_rev": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+        "impl": "rust",
+        "params_core_sha256": "32f6986fe6597f1494c1abb73c69f8f630cfd213f327530deb2587faa9a2fc41",
+        "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "seed": 1970010,
+        "source_sha256": "028e2de4917c0dfd3c32dfa57e765015dba675056bfe5dab2e40fcf4a85963f5"
+      },
+      "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+      "investigation": null,
+      "issue": null,
+      "raw_cause": "a cutpurse",
+      "run_kind": "harness",
+      "schema": "borg-reborn-rs/death-record@1",
+      "terminal": {
+        "cause": "a cutpurse",
+        "class_idx": 7,
+        "dead": true,
+        "depth": 1,
+        "level": 2,
+        "max_depth": 1,
+        "race_idx": 9,
+        "turn": 14517
+      }
+    }
+  }
+]

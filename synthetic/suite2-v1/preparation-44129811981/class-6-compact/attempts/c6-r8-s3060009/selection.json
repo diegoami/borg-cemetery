@@ -1,0 +1,93 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 6,
+        "clevel": 4,
+        "depth": 1,
+        "due_turn": 57800,
+        "file": "checkpoint-000554-t0000057803.save",
+        "game_turn": 57803,
+        "keys": 7774,
+        "max_depth": 2,
+        "race_idx": 8,
+        "seed": 3060009
+      },
+      "selection": {
+        "first_visible_turn": 57833,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 15,
+        "monster_kind": "soldier",
+        "no_omniscient_trigger": true,
+        "observation_line": 6343,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 57833
+      },
+      "status": "candidate",
+      "turn": 57853,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 8,
+          "level": 4,
+          "line": 6347,
+          "max_hp": 37,
+          "max_sp": 0,
+          "monsters": [
+            {
+              "index": 14,
+              "race": 39
+            },
+            {
+              "index": 16,
+              "race": 38
+            },
+            {
+              "index": 15,
+              "race": 36
+            }
+          ],
+          "sp": 0,
+          "turn": 57853
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 8,
+          "level": 4,
+          "line": 6347,
+          "max_hp": 37,
+          "max_sp": 0,
+          "monsters": [
+            {
+              "index": 14,
+              "race": 39
+            },
+            {
+              "index": 16,
+              "race": 38
+            },
+            {
+              "index": 15,
+              "race": 36
+            }
+          ],
+          "sp": 0,
+          "turn": 57853
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 19,
+          "level": 4,
+          "line": 6358,
+          "max_hp": 37,
+          "max_sp": 0,
+          "monsters": [],
+          "sp": 0,
+          "turn": 57913
+        }
+      }
+    }
+  ]
+}
