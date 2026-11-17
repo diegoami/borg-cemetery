@@ -1,5 +1,4 @@
 {
-  "archive_location": "https://github.com/diegoami/borg-cemetery/releases/tag/suite2-preparation-44121110906",
   "archives": [
     {
       "file": "harvest-class-1.tgz",
@@ -155,8 +154,13 @@
       "selected": 0
     }
   ],
+  "native_death_streams": {
+    "archive": "native-death-streams.tgz",
+    "sha256": "ba1408739680cf5e518102730c459ddae2e37f7e9e71a49b8a468c60d53686fd"
+  },
   "natural_deaths": 9,
   "preparation_source": "50ae902a68a8732d56a6e1adf47deca4a9db7d7f",
+  "raw_archive_retention": "Original Actions artifacts expire after 90 days. Canonical native death packets and complete raw streams/checkpoints for all 9 measured deaths are retained in this directory.",
   "run_url": "https://github.com/diegoami/borg-zoo/actions/runs/44121110906",
   "status": "blocked_capture_interface",
   "suite_id": "suite2-v1",

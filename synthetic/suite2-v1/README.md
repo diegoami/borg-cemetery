@@ -22,9 +22,11 @@ was absent. No full harvest or new suite execution was dispatched.
 `preparation-44121110906/` retains every attempted-life journal, configuration,
 build and process receipt, and every native natural-death packet (including
 payload bytes and canonical death IDs). `evidence.json` records class counts
-and original archive hashes. All nine complete raw archives, including every
-checkpoint and stream, are retained as release assets at
-[the failed preparation release](https://github.com/diegoami/borg-cemetery/releases/tag/suite2-preparation-44121110906).
+and original archive hashes. The complete original raw Actions artifacts are retained for 90 days.
+`native-death-streams.tgz` permanently retains every raw file and checkpoint
+from all nine measured natural deaths; its member hashes and archive digest
+are in `native-death-streams.json`. The corresponding compact native packets
+retain their original payload hashes and canonical death IDs.
 These are failed preparation inputs, not runnable bank cases, not observed
 critical recoveries, and not a completed 999-encounter suite.
 
