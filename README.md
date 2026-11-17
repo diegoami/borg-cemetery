@@ -179,6 +179,26 @@ explicitly unavailable, and a time budget can produce a partial preview.
 See the [Fang landing page with inventory and animation](scenarios/S0003/README.md)
 or open its [GIF](scenarios/S0003/media/episode.gif).
 
+### Animate the last turns of a zoo death
+
+Any death imported from a borg-zoo run can be animated over its last X game
+turns. At normal speed, one player turn is 10 game turns.
+
+```bash
+python3 -m pip install -r requirements-media.txt
+flock /tmp/angband-validation.lock python3 scripts/animate_death.py D-02cc --turns 1000
+```
+
+The game is rerun from birth and must reproduce the dossier's key stream. Each
+frame is another rerun stopped at that key, and its keys must match the
+original prefix. Beside each screen are the game messages and the Borg's own
+notes up to that moment. The output is the dossier's
+`media/last-1000-turns.gif`, with a JSON receipt listing every frame and every
+dropped one. The source build is the one the case's `./build.sh` makes, built
+on first use. `scripts/register_deaths.py` then shows the animation on the
+death's page. In Claude Code, the `/animate-death` skill finds the game from a
+zoo run and seed and does all of this.
+
 For a reborn parameter experiment, commit a candidate profile to this checkout
 and supply its path in the optional `profile` input. Unknown or invalid keys
 must be rejected by the pinned Borg. The profile is copied into the run records.

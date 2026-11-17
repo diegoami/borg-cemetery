@@ -68,3 +68,10 @@ in the Cemetery repository. Consumer pins must advance explicitly to adopt it.
 temporary directory. It reads a `trace-core.lines` file, when one is present,
 for the full length of a core trace of which the bundle kept only the tail.
 Identity, eligibility and dossier contents are otherwise unchanged.
+
+## Extra borgh options for zoo reruns (2026-11-17)
+
+`rerun-death.py`'s `run_zoo` takes optional `extra` borgh options appended to
+the zoo command line. `scripts/animate_death.py` uses them for `-keys N
+-screen` frames and checks every frame's keys against the verified original
+prefix. Without `extra` the command is unchanged.

@@ -186,6 +186,16 @@ def dossier_page(directory):
         body = original.read_text().split('\n', 1)[-1].strip()
         body = re.sub(r'\[([^]]+)\]\([^)]*\.jsonl?[^)]*\)', r'\1 (machine evidence retained separately)', body)
         content += [body, '']
+    animations = sorted((directory / 'media').glob('last-*-turns.gif'),
+                        key=lambda g: int(g.stem.split('-')[1]) if g.stem.split('-')[1].isdigit() else 0)
+    if animations:
+        content += ['## Last turns before the death', '',
+                    'Each frame is a rerun from birth stopped at that key, with keys matching the original game '
+                    '(`scripts/animate_death.py`). The receipt beside each animation lists every frame.', '']
+        for gif in animations:
+            turns = gif.stem.split('-')[1]
+            content += [f'**Last {turns} game turns** · [receipt](media/{gif.stem}.json)', '',
+                        f'![Last {turns} game turns](media/{gif.name})', '']
     content += ['## Read and replay', '']
     content += links(directory, [('inventory.md', 'Human-readable inventory'), ('report.md', 'Original written report'),
                                  ('analysis.md', 'Survival analysis, hypotheses and proposed experiments'),
