@@ -1,0 +1,56 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 1020,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 2,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 600,
+    "file": "checkpoint-000006-t0000000602.save",
+    "game_turn": 602,
+    "keys": 225,
+    "max_depth": 1,
+    "race_idx": 0,
+    "seed": 1020
+  },
+  "class_idx": 2,
+  "compressed_sha256": "893fefbd8c0d73271e09c8508f4b722e4b90bd8da528d805bb1754fb2583237a",
+  "event_kind": "death",
+  "id": "druid-kobold-1020",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 12,
+    "max_hp": 12,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+    "parent_death_id": "D-6aa9588a85e311d83901c694a8d96d8167a20b3ebe24fc9510566ba57b524570",
+    "program": "borg-reborn-rs",
+    "seed": 1020,
+    "source_commit": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+    "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 1207,
+  "race_idx": 0,
+  "save": "start.save.gz",
+  "save_sha256": "847b280d2b670a701a805ad5e3eac1afdc67f2b996332f97d6b634896f7ce501",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "evidence_file": "/workspace/work/caster-natural-validation/druid-1020-encounter/observations.jsonl",
+    "evidence_sha256": "e30f09b6d5935c4cc9f62a9b53837337b23830093481b7cc5216899882ce0238",
+    "kind": "first_visible_killer_kind",
+    "lead_engine_turns": 0,
+    "monster_index": 25,
+    "no_omniscient_trigger": true,
+    "trigger_turn": 602
+  },
+  "start_turn": 602,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

@@ -1,0 +1,67 @@
+{
+  "incoming_messages": [
+    "862 4411 0 The small kobold is targeted.",
+    "862 4411 0 The small kobold resists somewhat.",
+    "862 4418 34 The small kobold hits you.",
+    "867 4421 0 The small kobold is targeted.",
+    "867 4421 0 The small kobold resists somewhat.",
+    "867 4421 4 The small kobold flees in terror!",
+    "867 4428 34 The small kobold hits you.",
+    "869 4431 2 You hit the small kobold.",
+    "869 4431 6 You have slain the small kobold."
+  ],
+  "selection": {
+    "checkpoint": {
+      "capture_method": "fork_private_engine",
+      "class_idx": 4,
+      "clevel": 1,
+      "depth": 1,
+      "due_turn": 4400,
+      "file": "checkpoint-000034-t0000004401.save",
+      "game_turn": 4401,
+      "keys": 855,
+      "max_depth": 1,
+      "race_idx": 6,
+      "seed": 204
+    },
+    "id": "necromancer-half-orc-204",
+    "monster_index": 16,
+    "monster_kind": "small kobold",
+    "race": 25,
+    "trigger": {
+      "depth": 1,
+      "hp": 12,
+      "line": 336,
+      "max_hp": 12,
+      "max_sp": 2,
+      "monsters": [
+        {
+          "attr": 11,
+          "hp": 7,
+          "index": 16,
+          "max_hp": 7,
+          "mimicking": false,
+          "race": 25,
+          "speed": 111,
+          "timed": [
+            26,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "x": 71,
+          "y": 51
+        }
+      ],
+      "sp": 2,
+      "turn": 4411
+    },
+    "worst_turn": 4431
+  }
+}

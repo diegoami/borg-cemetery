@@ -1,0 +1,769 @@
+{
+  "auxiliary_probes": [
+    {
+      "evidence": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 3903,
+          "sha256": "4648acf84fd5676341363793251bb68b1fdd20703940b02a93145e6067bdd7b6"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2002,
+          "sha256": "3dcd9b9a2225fdc05595096f0ba1d5e7a5bd7939247280afdd689d1f2f3fbb4e"
+        }
+      },
+      "id": "druid-recorded-reproduction",
+      "independent_life": false,
+      "receipt_directory": "receipts/druid-recorded-reproduction",
+      "role": "optional recorder qualification probe, superseded by owner instruction that recording is unnecessary",
+      "status": "success",
+      "used_for_scenarios": false
+    },
+    {
+      "evidence": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "messages.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "process.json": {
+          "bytes": 1878,
+          "sha256": "682030a705a8299b386a4fa891c837c48b1b9e8c8ce58b357d992b5c840f5844"
+        },
+        "state.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "id": "druid-verified-replay",
+      "independent_life": false,
+      "receipt_directory": "receipts/druid-verified-replay",
+      "role": "optional recorder qualification probe, superseded by owner instruction that recording is unnecessary",
+      "status": "exit_failure",
+      "used_for_scenarios": false
+    },
+    {
+      "evidence": {
+        "config.txt": {
+          "bytes": 238,
+          "sha256": "c2d312cdf406cf33f0c98e7f985de78f9d72c5e2e7612a6dfa63b59487127f48"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 4053,
+          "sha256": "5512ae398200e7b6ef22a449d6694dec3c11d297de978ac3508c163f3cb2961e"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2002,
+          "sha256": "091786e8377500a8d3bc0c3f39291c6c4855d8bcb3f494209bfcad12ccadd79e"
+        }
+      },
+      "id": "druid-headless-reproduction",
+      "independent_life": false,
+      "receipt_directory": "receipts/druid-headless-reproduction",
+      "role": "optional recorder qualification probe, superseded by owner instruction that recording is unnecessary",
+      "status": "success",
+      "used_for_scenarios": false
+    },
+    {
+      "evidence": {
+        "config.txt": {
+          "bytes": 238,
+          "sha256": "c2d312cdf406cf33f0c98e7f985de78f9d72c5e2e7612a6dfa63b59487127f48"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 3992,
+          "sha256": "56af5347c58622daac8006c9205d41d5a73ad781e18a92cc111cc3d41dc6d90d"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2002,
+          "sha256": "307f3d760a76fa3a19619555d338e40329d8f5aa58f7b8bcc01f79ec3b9c1d19"
+        }
+      },
+      "id": "druid-headless-replay",
+      "independent_life": false,
+      "receipt_directory": "receipts/druid-headless-replay",
+      "role": "optional recorder qualification probe, superseded by owner instruction that recording is unnecessary",
+      "status": "success",
+      "used_for_scenarios": false
+    }
+  ],
+  "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+  "build_identity": "build.json",
+  "death_collection": {
+    "class_filter": null,
+    "level_capture": "optional schema validation only, never death collection eligibility",
+    "level_filter": null,
+    "mode": "all_natural_deaths",
+    "recording_required": false
+  },
+  "initial_suite_failures": [
+    {
+      "gameplay_runs": [
+        {
+          "evidence": {
+            "config.txt": {
+              "bytes": 216,
+              "sha256": "d5439b26006c1ea4161869f22aac16dfec75b6d299aeed11526fa02366812143"
+            },
+            "keys.log": {
+              "bytes": 10766,
+              "sha256": "50491fa139246c688f04bb21dd925a97efdc5c7a4e4a44fee52dd2a00417e5ac"
+            },
+            "messages.log": {
+              "bytes": 3695,
+              "sha256": "8a7a8c4dfd5303863802060057369eae88a2f05649b656eb517e2428d55724fa"
+            },
+            "state.log": {
+              "bytes": 102904,
+              "sha256": "b1b82d28736d7546e7234f268c10fe6d7ca7da59b99034f164e2ef3fd65276b7"
+            },
+            "summary.json": {
+              "bytes": 2001,
+              "sha256": "b99942c62ac1ea1492f989fb93b2d4cfad7b76b4ac40c3cf99d4d4e3ac15c9e5"
+            }
+          },
+          "id": "smoke-mage-2"
+        },
+        {
+          "evidence": {
+            "config.txt": {
+              "bytes": 216,
+              "sha256": "d839f2bdeb169c7aedd6873d5029922ca3c447835b2d7532381fb1a748d538b6"
+            },
+            "keys.log": {
+              "bytes": 55518,
+              "sha256": "5f2d8beddf7f44e08e0b44160535406ca2eaafb52fb6e8c55b1f96b4bcd43812"
+            },
+            "messages.log": {
+              "bytes": 39389,
+              "sha256": "b6ccdcd89c7c809dfece802b8d5c6d604dcadef76d381381b022947dc3c42d9e"
+            },
+            "state.log": {
+              "bytes": 505611,
+              "sha256": "3f4b11308ebddd58374892f1103719e5f09e44ce1c77892e5adc72d74513ce02"
+            },
+            "summary.json": {
+              "bytes": 1988,
+              "sha256": "f7dea7aed30bca0d2cb19af49125562dfbcc227094b2e72bf2fd31f60130f421"
+            }
+          },
+          "id": "smoke-warrior-1"
+        },
+        {
+          "evidence": {
+            "config.txt": {
+              "bytes": 216,
+              "sha256": "78b0f792f0ef1746eb60f64598e8a47389206d067ced331acbbf096059426739"
+            },
+            "keys.log": {
+              "bytes": 52118,
+              "sha256": "fd43db01385c0df2ef3763aca8c451cb6965ab62b67fdc9da530a6c776c64aea"
+            },
+            "messages.log": {
+              "bytes": 7620,
+              "sha256": "12db0d8516b1d55f291cf0d11cbc327d669feaf48c8d194e04c074ff3d427662"
+            },
+            "state.log": {
+              "bytes": 479194,
+              "sha256": "5b84b64ac19d9cddb7f7f3496d43ad373df9a31677b8f902e48492d49cf6fa74"
+            },
+            "summary.json": {
+              "bytes": 1987,
+              "sha256": "95909022070c59fcffcd5fe3f94b618d0d23f64d2cb94cd6e0e70af3982852dc"
+            }
+          },
+          "id": "smoke-priest-3"
+        }
+      ],
+      "raw_directory": "/workspace/work/caster-natural-validation/smoke.partial.59605",
+      "status": "infrastructure_failure_missing_bc",
+      "suite": "smoke"
+    },
+    {
+      "gameplay_runs": [
+        {
+          "evidence": {
+            "config.txt": {
+              "bytes": 222,
+              "sha256": "91844097f4eb9e7c3d238af6a172b139923ff1d18ba723b8bbc3b2f3e122180c"
+            },
+            "keys.log": {
+              "bytes": 10766,
+              "sha256": "50491fa139246c688f04bb21dd925a97efdc5c7a4e4a44fee52dd2a00417e5ac"
+            },
+            "messages.log": {
+              "bytes": 3695,
+              "sha256": "8a7a8c4dfd5303863802060057369eae88a2f05649b656eb517e2428d55724fa"
+            },
+            "state.log": {
+              "bytes": 102904,
+              "sha256": "b1b82d28736d7546e7234f268c10fe6d7ca7da59b99034f164e2ef3fd65276b7"
+            },
+            "summary.json": {
+              "bytes": 2000,
+              "sha256": "c529320bfd9d7570672edf95ee61d0f58671f738b137782490b88a7730c80735"
+            }
+          },
+          "id": "smoke-mage-2"
+        },
+        {
+          "evidence": {
+            "config.txt": {
+              "bytes": 222,
+              "sha256": "547169416dbf3e8d13c543db0e9c9376a5e4dd2258bb3bbb1dd4cc8569e99c6f"
+            },
+            "keys.log": {
+              "bytes": 55503,
+              "sha256": "271670c43a3ebffa0a3efd7a95e405942641361e9892fda560da5957cea57ec8"
+            },
+            "messages.log": {
+              "bytes": 39389,
+              "sha256": "b6ccdcd89c7c809dfece802b8d5c6d604dcadef76d381381b022947dc3c42d9e"
+            },
+            "state.log": {
+              "bytes": 505488,
+              "sha256": "d8cbd6fb7d547851fbab26b22823f532f0dd7782b13a1e16034be44883678c75"
+            },
+            "summary.json": {
+              "bytes": 1987,
+              "sha256": "32c44302ef4a88b74685747e26a83c43822b1219194fe5b4772500d8f7e63497"
+            }
+          },
+          "id": "smoke-warrior-1"
+        },
+        {
+          "evidence": {
+            "config.txt": {
+              "bytes": 222,
+              "sha256": "5929794371911ed4d4b28946ae9d92d9524cad1abf94848cd60567565c1bb97d"
+            },
+            "keys.log": {
+              "bytes": 52103,
+              "sha256": "ee7e8bf76aed2718115a1e2a4a056c33a5d11c5ca93043c8f013fa8c1e1288cc"
+            },
+            "messages.log": {
+              "bytes": 7620,
+              "sha256": "12db0d8516b1d55f291cf0d11cbc327d669feaf48c8d194e04c074ff3d427662"
+            },
+            "state.log": {
+              "bytes": 479069,
+              "sha256": "886126b0047d5fbf55b93b1cfd8aab054e57624dd88216908ca88d38a0e2fcdb"
+            },
+            "summary.json": {
+              "bytes": 1986,
+              "sha256": "383ee1e92601a0e71d16571718da77619812f93889ae4367ad4926e55083bba6"
+            }
+          },
+          "id": "smoke-priest-3"
+        }
+      ],
+      "raw_directory": "/workspace/work/caster-natural-validation/smoke-exact.partial.59809",
+      "status": "infrastructure_failure_missing_bc",
+      "suite": "smoke-exact"
+    }
+  ],
+  "limitations": [
+    "Source records project state, not original Borg memory.",
+    "Three observed level-2 kits do not establish a population average.",
+    "Druid level-2 capture absent: death at level1; both capture/control outcomes retained.",
+    "Repeated executions of one condition are not independent natural lives.",
+    "Portable Cemetery build parser still requires @2 implementation."
+  ],
+  "natural_capture_controls": [
+    {
+      "capture": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "0179fa165f61b3c7fb8a3da64e8a8a8bec73fe86b05cb46a7a361efbb65c5845"
+        },
+        "keys.log": {
+          "bytes": 53653,
+          "sha256": "952bec4b7c1ac3e20ba1f7e8756bd7f34ac38868e6789172d0b487bdbacf4ff0"
+        },
+        "messages.log": {
+          "bytes": 7137,
+          "sha256": "08c3dd7ddb372959afd849c6bc8dd0286bb263b521c5f128b9ea7d715802482f"
+        },
+        "process.json": {
+          "bytes": 1925,
+          "sha256": "ed92fc8040d00381943d3662d32ee62417a826179fab380ae82263d5e97d3f87"
+        },
+        "state.log": {
+          "bytes": 488291,
+          "sha256": "06cf6e9313c5647b4192274271105911e63cd4559e65851c026228d46739d52e"
+        },
+        "summary.json": {
+          "bytes": 2213,
+          "sha256": "6c58629887fc4f4ebc2293faabd5b30d3081c418562dfdf981afd58f751aea04"
+        }
+      },
+      "capture_status": "captured",
+      "control": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "0179fa165f61b3c7fb8a3da64e8a8a8bec73fe86b05cb46a7a361efbb65c5845"
+        },
+        "keys.log": {
+          "bytes": 53653,
+          "sha256": "952bec4b7c1ac3e20ba1f7e8756bd7f34ac38868e6789172d0b487bdbacf4ff0"
+        },
+        "messages.log": {
+          "bytes": 7137,
+          "sha256": "08c3dd7ddb372959afd849c6bc8dd0286bb263b521c5f128b9ea7d715802482f"
+        },
+        "process.json": {
+          "bytes": 1799,
+          "sha256": "d55472628175d5c532083a87f51c5dc54198dc489a5cceaa50102c1e705ef999"
+        },
+        "state.log": {
+          "bytes": 488291,
+          "sha256": "06cf6e9313c5647b4192274271105911e63cd4559e65851c026228d46739d52e"
+        },
+        "summary.json": {
+          "bytes": 1984,
+          "sha256": "7a1066b459c22917e7f579ed6c5125ddcc0204247cdfce3c7d676cc64512d831"
+        }
+      },
+      "id": "gnome-mage",
+      "streams_match": true
+    },
+    {
+      "capture": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 3975,
+          "sha256": "74b6f07c76281950575b0f27a641b8eefd65b6f74481738168aeceac5c9dd55f"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2076,
+          "sha256": "9ba6da14f0c34eb661fd86f3d49d65ec84f5bc236393a3497c7d5a3b4c11802a"
+        }
+      },
+      "capture_status": "absent",
+      "control": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 3848,
+          "sha256": "48a551968bc3279f4e91479003b869703041fcff96841dbebb4375f60aa33461"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2002,
+          "sha256": "67727039a5f83de2b63cdece5920c39e52b115933f67d7ffb2bab9b31ed2fd62"
+        }
+      },
+      "id": "dunadan-druid",
+      "streams_match": true
+    },
+    {
+      "capture": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "52d623bd371b377417ef99900b2c6ccbb6c7cef8eb004255a80624ea67d5a51f"
+        },
+        "keys.log": {
+          "bytes": 51602,
+          "sha256": "2d24a86d48abeb4b50f7493c27ae7c797817f2aa94888f46548886cc49248a8d"
+        },
+        "messages.log": {
+          "bytes": 14134,
+          "sha256": "ab39358156d0dc9de414f58e4bd22961f82a7930ee0396c399ee3e4c1a04f364"
+        },
+        "process.json": {
+          "bytes": 1945,
+          "sha256": "56216debf6e2df783c47965c0dbcae67748210c0b20e5c02c32001f97cdd4867"
+        },
+        "state.log": {
+          "bytes": 471123,
+          "sha256": "1acab804d5cc4623aebfdc8f05e13b0f47dbe2642249d4272de90e83ffeb9302"
+        },
+        "summary.json": {
+          "bytes": 2215,
+          "sha256": "63acc00b2807e3d86381fa96b2d8f9ec5ea10fa0a5c559268a8e5b1bdf139d78"
+        }
+      },
+      "capture_status": "captured",
+      "control": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "52d623bd371b377417ef99900b2c6ccbb6c7cef8eb004255a80624ea67d5a51f"
+        },
+        "keys.log": {
+          "bytes": 51602,
+          "sha256": "2d24a86d48abeb4b50f7493c27ae7c797817f2aa94888f46548886cc49248a8d"
+        },
+        "messages.log": {
+          "bytes": 14134,
+          "sha256": "ab39358156d0dc9de414f58e4bd22961f82a7930ee0396c399ee3e4c1a04f364"
+        },
+        "process.json": {
+          "bytes": 1818,
+          "sha256": "2344712165d3345740015b700dbd77ad10dd2c13931fcf9ad7803759d97a1f3d"
+        },
+        "state.log": {
+          "bytes": 471123,
+          "sha256": "1acab804d5cc4623aebfdc8f05e13b0f47dbe2642249d4272de90e83ffeb9302"
+        },
+        "summary.json": {
+          "bytes": 1987,
+          "sha256": "b9116bcc0b05bcb68406ab73b1e93ba3410a662bfdf07be4f794b061f5189433"
+        }
+      },
+      "id": "human-priest",
+      "streams_match": true
+    },
+    {
+      "capture": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "72343295feb11315657091a408a20c2db55cb25abd0a92822e32badda5ab643c"
+        },
+        "keys.log": {
+          "bytes": 54021,
+          "sha256": "d93992a94e7e153848755a42f275524ec42c99e0b897c4e8c319fe18c83c07ad"
+        },
+        "messages.log": {
+          "bytes": 12745,
+          "sha256": "e08b1bf409ec450791079260a91ba7577e3e45fb94f5f155cafc0660b35d7ac5"
+        },
+        "process.json": {
+          "bytes": 1975,
+          "sha256": "180394e6c1666864765566a5914c236d13edd2d3384cc384f025a17d5be8c7ec"
+        },
+        "state.log": {
+          "bytes": 466181,
+          "sha256": "78c1d854de523547737635bb84b7d41e189b04c35ef32ea4f17040eb6faae673"
+        },
+        "summary.json": {
+          "bytes": 2218,
+          "sha256": "d6fa49ad603ed754b3cc6058669b66f02b41fefb446f6aefb122ddeb8175283a"
+        }
+      },
+      "capture_status": "captured",
+      "control": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "72343295feb11315657091a408a20c2db55cb25abd0a92822e32badda5ab643c"
+        },
+        "keys.log": {
+          "bytes": 54021,
+          "sha256": "d93992a94e7e153848755a42f275524ec42c99e0b897c4e8c319fe18c83c07ad"
+        },
+        "messages.log": {
+          "bytes": 12745,
+          "sha256": "e08b1bf409ec450791079260a91ba7577e3e45fb94f5f155cafc0660b35d7ac5"
+        },
+        "process.json": {
+          "bytes": 1845,
+          "sha256": "157d99bfb7c61822913b3e086e9eb23a746b0d6ab2737369200b18cf9e77215f"
+        },
+        "state.log": {
+          "bytes": 466181,
+          "sha256": "78c1d854de523547737635bb84b7d41e189b04c35ef32ea4f17040eb6faae673"
+        },
+        "summary.json": {
+          "bytes": 1989,
+          "sha256": "bb5f3437f1397000f93abd5382063cbc472f022944ddde41f90b46fc1544fb3c"
+        }
+      },
+      "id": "elf-necromancer",
+      "streams_match": true
+    },
+    {
+      "capture": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 4044,
+          "sha256": "e0a54a8e9df62bd864e80c8777d5db09fd284395e3ac3b32e99dc52eeafe96c0"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2227,
+          "sha256": "ab03654d401d64926580ccbb47e722eb02f95d02be1ec444ba77153f3c9fbfee"
+        }
+      },
+      "capture_status": "captured",
+      "control": {
+        "config.txt": {
+          "bytes": 216,
+          "sha256": "22d119c317dec1762e2ce752afa29faaf35ff528e945244360fd90226217dcac"
+        },
+        "keys.log": {
+          "bytes": 19055,
+          "sha256": "1dc12dede77d8372bd3f5de3e0effe8e7e298cd1e32268771544200856149f45"
+        },
+        "messages.log": {
+          "bytes": 4140,
+          "sha256": "38bd24e5f3b069254df283ea91f045051f2ae4f3782cdd16868dbdca865fe758"
+        },
+        "process.json": {
+          "bytes": 3848,
+          "sha256": "48a551968bc3279f4e91479003b869703041fcff96841dbebb4375f60aa33461"
+        },
+        "state.log": {
+          "bytes": 182157,
+          "sha256": "1ba36746bcc15ed7cfa3b3a711520b1c3cb1bff114e4c754a51e6842bdac475a"
+        },
+        "summary.json": {
+          "bytes": 2002,
+          "sha256": "67727039a5f83de2b63cdece5920c39e52b115933f67d7ffb2bab9b31ed2fd62"
+        }
+      },
+      "id": "dunadan-druid-level1",
+      "streams_match": true
+    }
+  ],
+  "new_natural_packages": [
+    {
+      "canonical_identity": "D-944ef5a0e577803a2f554cf23cd2eccc1de69f76d0128bf3aec712ca67507946",
+      "path": "validation/borg-reborn-rs/native-controls/deaths/D0000-q15eb544447edd5b6f1f467a004580a76f6680667b1f71135949bc904836a9078",
+      "record_sha256": "54f815fd79c022155b797a6e6b7f549ec745f0ba9313087c06585cde80007a65"
+    },
+    {
+      "canonical_identity": "D-6aa9588a85e311d83901c694a8d96d8167a20b3ebe24fc9510566ba57b524570",
+      "path": "validation/borg-reborn-rs/native-controls/deaths/D0000-q7ee3292b458193140ad56b52a744c99552f7430fb6cdd4d0ebbc3457d76b3eb1",
+      "record_sha256": "9979206f54168a570bfba737766fb4a5a172fb59a8c8f919a3e1ebeda3e9a29a"
+    },
+    {
+      "canonical_identity": "D-de1f995eb6795becdc8e036b2ee438c30963b9fa208e621a4b94c41602d12ed8",
+      "path": "validation/borg-reborn-rs/native-controls/deaths/D0000-qa1e63cd1490ee34834d834b813ad36f333ebeaabbe081b27ad748629721a2c6d",
+      "record_sha256": "66cf329bc0e7cb4699f7c1e26a60fc0fdc952e5ad2e973ee75ae474761f2526d"
+    },
+    {
+      "canonical_identity": "D-3ce2f34744f726c18d28cb39379326f0acd9e41cb76e639084a28e2a3f70c1e7",
+      "path": "validation/borg-reborn-rs/native-controls/deaths/D0000-qc84c185c8af39579c10508f83ccdd6e54c7f28cb4156f060ea1d3b9e73dfb12f",
+      "record_sha256": "3c917d4a8e43d9571101b03db93bc0d9148b2d8eebe37cf53b79ab2ddef4eade"
+    }
+  ],
+  "raw_root": "/workspace/work/caster-natural-validation",
+  "records": [
+    {
+      "application_status": "native_harness_validated",
+      "id": "gnome-mage-level2",
+      "observed": "observed:11322:6:1",
+      "portable_suite_status": "requires_cemetery_v2_adapter",
+      "record": "records/gnome-mage.build",
+      "record_sha256": "6a7601736727f412b14e4f954155f9150ca2a6071aee08ee8abd90c6cd58ea6b",
+      "source_identity": {
+        "binary": "/workspace/work/reborn-caster-builds/build/rust/game/angband",
+        "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+        "built_utc": "2026-11-16T17:25:21Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1"
+      },
+      "source_run": "gnome-mage-capture"
+    },
+    {
+      "application_status": "native_harness_validated",
+      "id": "human-priest-level2",
+      "observed": "observed:2005:13:2",
+      "portable_suite_status": "requires_cemetery_v2_adapter",
+      "record": "records/human-priest.build",
+      "record_sha256": "6c0a89c406b910ca58ee707fb7cd8df58fa86166fa59d097b34a44c7fddb92fc",
+      "source_identity": {
+        "binary": "/workspace/work/reborn-caster-builds/build/rust/game/angband",
+        "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+        "built_utc": "2026-11-16T17:25:21Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1"
+      },
+      "source_run": "human-priest-capture"
+    },
+    {
+      "application_status": "native_harness_validated",
+      "id": "elf-necromancer-level2",
+      "observed": "observed:11679:11:1",
+      "portable_suite_status": "requires_cemetery_v2_adapter",
+      "record": "records/elf-necromancer.build",
+      "record_sha256": "0a31d91e19190140b79c88987af26f97c7cf2314f5d001e6b0869c10dd044f63",
+      "source_identity": {
+        "binary": "/workspace/work/reborn-caster-builds/build/rust/game/angband",
+        "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+        "built_utc": "2026-11-16T17:25:21Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1"
+      },
+      "source_run": "elf-necromancer-capture"
+    },
+    {
+      "application_status": "native_harness_validated",
+      "id": "dunadan-druid-level1",
+      "observed": "observed:1:13:2",
+      "portable_suite_status": "requires_cemetery_v2_adapter",
+      "record": "records/dunadan-druid-level1.build",
+      "record_sha256": "bc16245aa21ce954af0e83bbd7727310b2f932b25260aba4b5f81bbafb3bc073",
+      "source_identity": {
+        "binary": "/workspace/work/reborn-caster-builds/build/rust/game/angband",
+        "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+        "built_utc": "2026-11-16T17:25:21Z",
+        "cc": "cc (Debian 14.2.0-19) 14.2.0",
+        "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+        "git_dirty": "no",
+        "git_rev": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+        "impl": "rust",
+        "inputs_dirty": "no",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+        "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1"
+      },
+      "source_run": "dunadan-druid-level1-capture"
+    }
+  ],
+  "reproduction_recipes": [
+    {
+      "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/mage-seed1011/recipe.json",
+      "sha256": "4866a09c99ac401ce6df1cc30c641724224f74b70be0c61f4387e249443658a3"
+    },
+    {
+      "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/druid-seed1020/recipe.json",
+      "sha256": "9b2e630e619726a01dd85b5533867a8872adbc3776dc767068415c935deb2bb5"
+    },
+    {
+      "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/mage-seed102/recipe.json",
+      "sha256": "624d221d88e7b7bf884248efca48b4833a04715cc44af5e082bacf0e5252dca2"
+    },
+    {
+      "path": "validation/borg-reborn-rs/caster-build-v2/reproduction/druid-seed202/recipe.json",
+      "sha256": "7a186f9151c35a83be38a281e2ba09410f5bc87fdc3fa6ecb17512642a635a6d"
+    }
+  ],
+  "schema": "borg-cemetery/caster-native-validation@1",
+  "smoke_checks": {
+    "smoke": {
+      "report": "A: /workspace/work/caster-natural-validation/smoke-complete: impl=rust (BORG_IMPL=rust; executable rust, CMakeCache unknown, BUILD_ID rust) binary_sha256=20bdfe9161b17eae\nA:   built from aae2c194a18b (dirty=no, inputs dirty=no) source_sha256=c97ca9f2a5c8371a; run at aae2c194a18b (dirty=no) overrides=none\nB: harness/reference/smoke-rust: reference (no manifest)\n3/3 runs identical (expected 3)\nmessages.log compared in 3 run(s)\nstate.log compared in 3 run(s)\n"
+    },
+    "smoke-exact": {
+      "report": "A: /workspace/work/caster-natural-validation/smoke-exact-complete: impl=rust (BORG_IMPL=rust; executable rust, CMakeCache unknown, BUILD_ID rust) binary_sha256=20bdfe9161b17eae\nA:   built from aae2c194a18b (dirty=no, inputs dirty=no) source_sha256=c97ca9f2a5c8371a; run at aae2c194a18b (dirty=no) overrides=none\nB: harness/reference/smoke-exact-rust: reference (no manifest)\n3/3 runs identical (expected 3)\nmessages.log compared in 3 run(s)\nstate.log compared in 3 run(s)\n"
+    }
+  },
+  "source_commit": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+  "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1",
+  "verified_birth_reproductions": [
+    {
+      "id": "druid-seed1020",
+      "receipt": "reproduction/druid-seed1020/verified.json",
+      "sha256": "72e1751cbf067ac51a7765186252ef92d66e233d1a57524fd56f0ba33e5acc1c"
+    },
+    {
+      "id": "druid-seed202",
+      "receipt": "reproduction/druid-seed202/verified.json",
+      "sha256": "83d590e7f131d8de785e172fee2e1725b1df0a18cf55da9f406480bf39c8a6e9"
+    },
+    {
+      "id": "mage-seed1011",
+      "receipt": "reproduction/mage-seed1011/verified.json",
+      "sha256": "b3fff490cec364c958fdc0dd6f14fe5342764d21cfed88d3d7dff3292c55b7e1"
+    },
+    {
+      "id": "mage-seed102",
+      "receipt": "reproduction/mage-seed102/verified.json",
+      "sha256": "47f7b7b3ef39cc26bf032c734aa7b58ca4200558b54c64ffdfe5bea2a4f0fad2"
+    }
+  ]
+}

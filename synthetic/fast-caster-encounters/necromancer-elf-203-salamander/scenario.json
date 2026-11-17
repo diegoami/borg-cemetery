@@ -1,0 +1,60 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 203,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 4,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 16100,
+    "file": "checkpoint-000159-t0000016102.save",
+    "game_turn": 16102,
+    "keys": 3342,
+    "max_depth": 1,
+    "race_idx": 2,
+    "seed": 203
+  },
+  "class_idx": 4,
+  "compressed_sha256": "1bf2e1c86688138f6501d1463222ea4d69482e65688ffc7885bdd1792a0fbe16",
+  "event_kind": "surviving_encounter",
+  "id": "necromancer-elf-203-salamander",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 11,
+    "max_hp": 11,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-8227238b821e9d64b3241e8cf87683dcd72bc3f260bd7dff06159e6fc29bdb48",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 203,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20001,
+  "race_idx": 2,
+  "save": "start.save.gz",
+  "save_sha256": "7182560d8622288552ecd441db92fd3668a1141d8710e37e3e7e548b8de42b4a",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "episode_basis": "latest uninterrupted visibility episode of the attacker before the observed HP minimum; earlier attack message wins",
+    "first_visible_in_episode_turn": 16152,
+    "kind": "first_observable_contact_in_selected_fight",
+    "lead_engine_turns": 46,
+    "monster_index": 1,
+    "monster_kind": "salamander",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "2fb2ba895c8e70a7492c620d882c49c5f95e810bcfd704e0e77efd44108d696e",
+    "observation_source": "/workspace/work/caster-expansion/necromancer-elf-203/observations.jsonl",
+    "trigger_turn": 16148
+  },
+  "start_turn": 16102,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

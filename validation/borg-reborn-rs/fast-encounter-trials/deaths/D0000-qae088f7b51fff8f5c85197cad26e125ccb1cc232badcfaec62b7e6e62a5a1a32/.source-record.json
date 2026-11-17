@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed102",
+  "run_kind": "harness",
+  "character": "Elf Mage",
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 3640,
+    "race_idx": 2,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 102,
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_rev": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+    "git_dirty": "no",
+    "source_sha256": "c97ca9f2a5c8371a3366dc806268880edf29f3c413dbfc3d56f72b5f4c0564a1",
+    "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94",
+    "borg_txt_sha256": "5f53296441769ec37d1e8fc6019110e8c0b7ac1f39f69520ff9218d0ce0dad92",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 23,
+    "of": 23
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/fast-caster-encounters-attempt-3/mage-fang-102/run",
+      "result_sha256": "c8638e86b7ae6830fff8ba44c36c2c418f6cf705d21c5f7751c3601616749494",
+      "raw_sha256": {
+        "keys.log": "c8638e86b7ae6830fff8ba44c36c2c418f6cf705d21c5f7751c3601616749494",
+        "messages.log": "adf13d71a7d2d9f7013105efd4e10307b614ba28b0bbfaec476114f87517f288",
+        "state.log": "37db945eb82eb4126e96324b8ff1d8df2698f61763481094f85a02aac09c1735"
+      },
+      "source_commit": "aae2c194a18b9ff943e94aa97a60214f2a231dc2",
+      "binary_sha256": "20bdfe9161b17eae949251acb6b66d0f88653c5a133374d9ed348142fda3ca94"
+    }
+  ],
+  "encounter_family": "start-4418f0ec46f371216d4ddb126682a49fde552815aede8ab5a5b90786d15ea909",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "82dd231bd725eb65a22644e0ed5d27cbf58aaa0e606d62d9b4b1be6e0897e0b4",
+    "config.txt": "caaaafdddeb9afe8380168d06495b242f263b000e2dd26637ca598b92a2e714c",
+    "depths.json": "7ddf59dbf7ac308d9762cde73986aa1936274c8bc419828833531dc27c1fbc1e",
+    "params.json": "d8f0b53d7992bc27027551c004838c51e82fa63b4fc937f0e03f91189c87534f",
+    "summary.json": "2f5b2227826e6f31ab033e656ae2004213fb5ad912e0f7baad32640fa90d25d9",
+    "trace-tail.jsonl": "c60ac2393d4ab0018df75b68bb3ada778ca32e231a1ab0bc57cb9ec958e0dad9"
+  },
+  "investigation": null,
+  "issue": null
+}
