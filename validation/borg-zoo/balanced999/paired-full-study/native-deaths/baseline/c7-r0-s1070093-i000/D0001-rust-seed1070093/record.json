@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1070093",
+  "run_kind": "harness",
+  "character": "Human Ranger",
+  "raw_cause": "a clear icky thing",
+  "terminal": {
+    "cause": "a clear icky thing",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 1953,
+    "race_idx": 0,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1070093,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "90f20b5b26735ac723ab580f9d33f0b88478216993a7e833c46ad4efc283383a",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 58,
+    "of": 58
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c7-r0-s1070093-i000/run",
+      "result_sha256": "2ccc9afc5399cd9b8980317bde000fd72439e4b1c9b3a3a4523edefe8f09fa12",
+      "raw_sha256": {
+        "keys.log": "2ccc9afc5399cd9b8980317bde000fd72439e4b1c9b3a3a4523edefe8f09fa12",
+        "messages.log": "169967272028096906930ecd52185346f1f26b9e571b4d2b51bb24e8a60d2dc1",
+        "state.log": "5158e67f57a262b4944ca22efb5a30c9692001d08e383d55e46292b1945ae6c5"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-ee1438070cb4b66a79a82159024675a1b53e4d808723a551342ad0a981870a9c",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "4dda9a0cac144c7330589886e5c50f05c11db93d6d163cd146f452d4418e2fce",
+    "depths.json": "37b1878f29145b20c9bd8d9b60b0a28fc2df781652908949d40cc8ae1134e05d",
+    "params.json": "3942070e7057ec1ee1b6559aa7069fc4b05fcb6cb0e5f349f96eed4f49c6514d",
+    "summary.json": "7fb92676a2e00b5d9da45339bb0a60fc9f87dcfc28b288836df4259060cdd261",
+    "trace-tail.jsonl": "333a9d887ed2eb92af2f01c1f289e720ee77cd7e383c00d5c284c1941cebb7b0"
+  },
+  "investigation": null,
+  "issue": null
+}

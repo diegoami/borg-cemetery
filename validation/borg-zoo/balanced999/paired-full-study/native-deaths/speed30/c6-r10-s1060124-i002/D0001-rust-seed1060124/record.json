@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1060124",
+  "run_kind": "harness",
+  "character": "Kobold Rogue",
+  "raw_cause": "a baby red dragon",
+  "terminal": {
+    "cause": "a baby red dragon",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 60955,
+    "race_idx": 10,
+    "class_idx": 6
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1060124,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "345f1aa05f5f8758f9fc9e627aa70289463d479bea4826548b6f80796411e520",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 6,
+    "of": 6
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c6-r10-s1060124-i002/run",
+      "result_sha256": "d42dd53dcdd18fca583fcf7952b578ce4b67c16c7e6e75095f60085dca6115ef",
+      "raw_sha256": {
+        "keys.log": "d42dd53dcdd18fca583fcf7952b578ce4b67c16c7e6e75095f60085dca6115ef",
+        "messages.log": "166fc404e82b07c260dd9c63a716d1044010d5c91df0bd7315fbca42c347e6b3",
+        "state.log": "cfca719c546e8dbff0ae9e206932c80143f333495ffd44cd26dacebc191a5802"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-e4f84e56d255c9bd4f089dcf5df5d37cfbeeabf18918ada9386b7b83c9fe9a4e",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "70213e10556638e357daf2a838c8cb8ed4d696c45495366f5b2af5a85367bb64",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "141406af044bd3fb181a427c4fa225d798dcef13b46bb33afc71f154eb6cc3a6",
+    "trace-core-tail.jsonl": "51aef64f4411dbdf51cc12bb0b95f1c0c004e1d0702cbf4cac25dbaffb3e2292"
+  },
+  "investigation": null,
+  "issue": null
+}

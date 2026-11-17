@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1080056",
+  "run_kind": "harness",
+  "character": "Hobbit Blackguard",
+  "raw_cause": "a cave spider",
+  "terminal": {
+    "cause": "a cave spider",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 4,
+    "turn": 40788,
+    "race_idx": 3,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1080056,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "5d6705df75ced7357781fcfde974787735d50b1b2cbfcf63f5ced7000ecaaeeb",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 32,
+    "of": 32
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c8-r3-s1080056-i000/run",
+      "result_sha256": "830fc526cdc05d3d9931bebdcdd0f5d67561261fa147bba99ee7ebb069811eb8",
+      "raw_sha256": {
+        "keys.log": "830fc526cdc05d3d9931bebdcdd0f5d67561261fa147bba99ee7ebb069811eb8",
+        "messages.log": "b69964456c916c104b92ec2f915ac687156eed615c72aa3a46bbc885388e887c",
+        "state.log": "51e35c580954a7647ea3db25df406fd1d88f87b45340984325fef8a7e57154b8"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-96bb68f5a17b1871bd8ecb522e52d95f2d53d36aff8d0ea7f2581617e8e7e5bc",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "b2c119d4e444763c69130f4e2633c76c52ed4352de595a65968517731968793b",
+    "depths.json": "ce43ba3a98fc569fceefabc66907118509de6c71ae6ee75be15af95367d60674",
+    "params.json": "916c3271c8f8a1c3f7d25024eb63290ff8ebba92d373a0c80acb8e31127920c6",
+    "summary.json": "e618e2fe7ecf524681e040f9f294795e3e0599ce6f9e9b3ef1452717fe5fd9f7",
+    "trace-tail.jsonl": "c884c358cfd931e772e4e23ae83b0d688a205d9ca20edc8ccfd180fd7319a6a8"
+  },
+  "investigation": null,
+  "issue": null
+}

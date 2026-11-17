@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1010091",
+  "run_kind": "harness",
+  "character": "Kobold Mage",
+  "raw_cause": "a giant yellow centipede",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 17877,
+    "race_idx": 10,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1010091,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "57232ccbb69ef1fd5861e5c646547b22cbae7f104dfee532c4096e86fcd5f0c8",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 8,
+    "of": 8
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c1-r10-s1010091-i001/run",
+      "result_sha256": "fd0bd3dc9b161b1c7d51998d799e55fdfa2fef63fa08c451593b74c8b043ea1c",
+      "raw_sha256": {
+        "keys.log": "fd0bd3dc9b161b1c7d51998d799e55fdfa2fef63fa08c451593b74c8b043ea1c",
+        "messages.log": "15c266d295eee94937e879db196910e9e1dd67bfab329a70f62cef9b6940ab5e",
+        "state.log": "cd4dd0aba2032999300ba985e780304dd6848c51bc0b2a8c621682471bb04982"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-ce559e9cf4e42ac7acf5809455deba09973c49c5ac87717a93775619cbca69b7",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "cce90d8210cc13cf9d531e4b6b26544c611623070d0c8a772e1f287242598cce",
+    "depths.json": "c4ff2d35f3bdb07cdddf4dd78ddaa20a343ffee5da0e8e63466b1493faafef81",
+    "params.json": "b427a61797239ca08031dab3377408c22272994702f572d51694e27a5888d1ea",
+    "summary.json": "9bd862275fdae1fcef39e696910757ec814847b706edc089b0955e1fff96c144",
+    "trace-tail.jsonl": "bed441eb1a5f4e716dce0a7d1bb5393ddd48ccb3dfe7c96e567340ad79215b32"
+  },
+  "investigation": null,
+  "issue": null
+}

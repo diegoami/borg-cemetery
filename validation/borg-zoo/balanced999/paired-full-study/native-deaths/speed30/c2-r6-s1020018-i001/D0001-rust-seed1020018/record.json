@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1020018",
+  "run_kind": "harness",
+  "character": "Half-Orc Druid",
+  "raw_cause": "a battle-scarred veteran",
+  "terminal": {
+    "cause": "a battle-scarred veteran",
+    "dead": true,
+    "depth": 0,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 17296,
+    "race_idx": 6,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020018,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "ca19e9233f173493d8d403f2522e87f0477b81b2dab0206c3a09f70d3260447a",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 10,
+    "of": 10
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c2-r6-s1020018-i001/run",
+      "result_sha256": "161df49a5b4a8c81d12c5d18149c3972daef6430ff3c6dfacdb3838989c755e3",
+      "raw_sha256": {
+        "keys.log": "161df49a5b4a8c81d12c5d18149c3972daef6430ff3c6dfacdb3838989c755e3",
+        "messages.log": "44889d682748cbd11128853793e655dcd92f926246d23509f82caf750d8cf26b",
+        "state.log": "a03c129805194f3aeedfb162ca7319c47db4a12d11a9860d9a29d4c28afc22e6"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-9c93ee47639ca5bf900c4c60ffe9ef1367a639c33d1b92a1bf8cf9100c47acb2",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "5211a587c04e6efaac3df07c43b1b2a6f29dd000a7b7bc244fc9ae9db4a7e7e3",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "7e7cb71f7ba02230a79842ff1a75adedca7bc10e2ef583aaf7bef1135e826fdc",
+    "trace-core-tail.jsonl": "fa291181a71ead27ad838354772c9707ab3e999c484219f68d6c315574220b00"
+  },
+  "investigation": null,
+  "issue": null
+}

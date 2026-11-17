@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1060141",
+  "run_kind": "harness",
+  "character": "Dunadan Rogue",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 5,
+    "turn": 51394,
+    "race_idx": 8,
+    "class_idx": 6
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1060141,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "8d283ba331a58f6b157fdaad7af6f6bd4b4a40b4539b78aedcb2b6912925e036",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 11,
+    "of": 11
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c6-r8-s1060141-i000/run",
+      "result_sha256": "a394d694e01a2bea20d56086398699c39e93bc671b8674698ddcff3b1bb9dcd8",
+      "raw_sha256": {
+        "keys.log": "a394d694e01a2bea20d56086398699c39e93bc671b8674698ddcff3b1bb9dcd8",
+        "messages.log": "e0aeda731a20cd35fce28ff6e3ed0d9fee13ebe3654fdec0a5ae423843e17693",
+        "state.log": "fa4e8c3e9cd324dc42207e5a28ce0995ad2512e9f67bf27d543ad568f7c75a2b"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-352593e17b60cc043835a9aeab2ba7dc83c317951449cc8b981e2e5cc2b271e8",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "63461bc9fa23568a710b634a429e721ce3f035c890f49602635e534471b5b6aa",
+    "depths.json": "ef3d929522754adf8a1c66ed1fecc7a34b62b4c9ade50b1761be280b6a603ec5",
+    "params.json": "675de8e77538d95cf045393d1958dd8fd587521c2e142147a021fa62608422a1",
+    "summary.json": "b777e09c8f54b6ebb8a33787d13df8923bb83138ccf312891192217e52282034",
+    "trace-tail.jsonl": "e2e43410393b53ffbe22182b99438c3c2f5e558359916c359cb46c034246a820"
+  },
+  "investigation": null,
+  "issue": null
+}

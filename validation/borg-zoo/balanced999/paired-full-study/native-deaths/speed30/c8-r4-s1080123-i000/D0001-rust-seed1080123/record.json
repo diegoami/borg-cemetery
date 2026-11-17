@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1080123",
+  "run_kind": "harness",
+  "character": "Gnome Blackguard",
+  "raw_cause": "Grip, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Grip, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 8019,
+    "race_idx": 4,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1080123,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "e28e37ab056d6905a949d27957f0f7080974b5c5ac884650cc41c7fc0bb9798f",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 2,
+    "of": 2
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c8-r4-s1080123-i000/run",
+      "result_sha256": "2d9d3d9ab9f4559a087895a271f985210e22512a167b4b99eba5d3f7ba8de58a",
+      "raw_sha256": {
+        "keys.log": "2d9d3d9ab9f4559a087895a271f985210e22512a167b4b99eba5d3f7ba8de58a",
+        "messages.log": "3a6f27b1910a841267ad6235bc7a90efb5cfb756d5e4f30e4ddb662a2abcb5bc",
+        "state.log": "2ff0e3b4ea4a636e5221230b72728afabefaa687e63f2526d8c4c1a0336d8a99"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-5cef7abdaa7da4ce3ca96b5dc8fa29455c5d7465765cfad55e2382c1d2fc23b3",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "6e2a3d6bf394f1f3c076b5d420f65954c49ce3704bf43d73c196cb842270784b",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "973ab07edc250e7f20dff2812b5772bd40f654a50a8b0256e6907af412ff8441",
+    "trace-core-tail.jsonl": "992e3586be1d5f023dd133f2f824739e1826358d88f41fd25c142ce72f1fb7d4"
+  },
+  "investigation": null,
+  "issue": null
+}

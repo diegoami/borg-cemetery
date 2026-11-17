@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1030083",
+  "run_kind": "harness",
+  "character": "Dwarf Priest",
+  "raw_cause": "a giant white mouse",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 8,
+    "turn": 77528,
+    "race_idx": 5,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1030083,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "19b09215053f6738f15daf3370e9a940a5c60f80ae08aaef97e2c1fb89e04e65",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 13,
+    "of": 13
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c3-r5-s1030083-i001/run",
+      "result_sha256": "4839b700d64d4e7fec392f343dc061503b0e90e2bfff4b1d766c4a668e81db60",
+      "raw_sha256": {
+        "keys.log": "4839b700d64d4e7fec392f343dc061503b0e90e2bfff4b1d766c4a668e81db60",
+        "messages.log": "b03bf900e185bccfc8bdd92df556ec117500be4a2dd74bd9c6f9765dcad08359",
+        "state.log": "0c17a666c83ce4a644e3599efdb61a140f56b0353a20e5574fde83e6d171f08f"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-6fd3e19470c0afc9e198d023f78e933a283ca63a71281b6033c675c33d879164",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "126934f5e012e45732ac14532b075167cec95eeb9470a474aa6085fe9d9af007",
+    "depths.json": "1d2bd27fefac74dd5d6592c24cae7ecb719b4ac2de8d19b74ecf99e679429cd5",
+    "params.json": "ee81cebca84b628817721baf3bfd750b754fdb7be0e594bad8d48df9acd313b2",
+    "summary.json": "6e68e6cd3d60f36c9b638fc906aab12554fb8f1994f75496b1f4c794f90daa00",
+    "trace-tail.jsonl": "d84463e9e8fcd0c49944fe2e7e50edd59d2eb392497eef7019927e9c1119e58b"
+  },
+  "investigation": null,
+  "issue": null
+}

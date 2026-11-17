@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1080069",
+  "run_kind": "harness",
+  "character": "Kobold Blackguard",
+  "raw_cause": "a green worm mass",
+  "terminal": {
+    "cause": "a green worm mass",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 7,
+    "turn": 41211,
+    "race_idx": 10,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1080069,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "3e467fa8d7e9da6766be10dd7af15d7a08dedf1a33f93c339125a0177895d8fe",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 220
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c8-r10-s1080069-i001/run",
+      "result_sha256": "3991b5c93564079817495f379dadabdbda8bb1e732a71dc7db7e0d8d1d174e03",
+      "raw_sha256": {
+        "keys.log": "3991b5c93564079817495f379dadabdbda8bb1e732a71dc7db7e0d8d1d174e03",
+        "messages.log": "80d2919c9daa518fe154e3ef822cd99f3cb0f4b609fda99de6ff07925c9b36e2",
+        "state.log": "35fc37cfaebecaba9cf52b56fdf8ca292d8280e71c7945db5797708c40cafd3a"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-b3a27fbe7b372ac1747a92c96822173f8ba0c9f8e627ea352ec703f98dee89d4",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "79eee32bc5ba4be283294f10bac40d65946a4c96851da80333d8bfd948aec902",
+    "depths.json": "bd71da4ac471cb609a716f54bae5f111b23d07861c7a9b4ebe3edde8697a3692",
+    "params.json": "d0aca80749576b33117edd691e6cc2168123db4236c503783b3c06e74e3e6f8e",
+    "summary.json": "bfd3749241338ac7860ad0525fa906631c5e0f710fa8ad3a3c9dd944c3240f33",
+    "trace-tail.jsonl": "1179f14ca27847da6d704dd6a9b37e3c874dc75a9f52b896054babf301a6d766"
+  },
+  "investigation": null,
+  "issue": null
+}

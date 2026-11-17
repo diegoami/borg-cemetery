@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1080079",
+  "run_kind": "harness",
+  "character": "Gnome Blackguard",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 15748,
+    "race_idx": 4,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1080079,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "e28e37ab056d6905a949d27957f0f7080974b5c5ac884650cc41c7fc0bb9798f",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 15,
+    "of": 15
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c8-r4-s1080079-i000/run",
+      "result_sha256": "5e7db62082ec6cc242065ace82d11b605d5ec48553cc7c03d87157a3abe08066",
+      "raw_sha256": {
+        "keys.log": "5e7db62082ec6cc242065ace82d11b605d5ec48553cc7c03d87157a3abe08066",
+        "messages.log": "6b567915671ec1190e5495c9550e9ed4464e0179f4bf15751333072c3af57f6e",
+        "state.log": "8a200cf1972bffbad6fdbe822475b6804223509510dcef2ef03155c631cb7cb4"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-50fbd4edb200920d1cdab2b5f8d1770118ec739314010f158340fdcc7079a7cd",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "f04c42cd51370aaf3cb3104944e335dee38a2e39bd98295b731a92e3371466ef",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "84f3b4c78c23e06fac58443640e6123b58a508ac1c08836fb7bfe327dbeee60d",
+    "trace-core-tail.jsonl": "296cf69d7a6cfc1a245cc1ea2b9f694f8b76aacdd4681a51c1a308979cc5e0cc"
+  },
+  "investigation": null,
+  "issue": null
+}

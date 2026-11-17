@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040076",
+  "run_kind": "harness",
+  "character": "High-Elf Necromancer",
+  "raw_cause": "a cave spider",
+  "terminal": {
+    "cause": "a cave spider",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 5,
+    "turn": 70984,
+    "race_idx": 9,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040076,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "edc6f16fc4cf39ab8e6642d550e5ce302b0c7d7734920b1f53ab08f174c341ba",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 10,
+    "of": 10
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c4-r9-s1040076-i002/run",
+      "result_sha256": "4bd2d68069366fe0548945059e6e9ef5d5b8661587f6d6a42a54b5c3a5b484e4",
+      "raw_sha256": {
+        "keys.log": "4bd2d68069366fe0548945059e6e9ef5d5b8661587f6d6a42a54b5c3a5b484e4",
+        "messages.log": "7933feea59cf170e639c37e7228d77def79f9af86d99f57480bc499c98f6836d",
+        "state.log": "968a7a85756cde17c5b7700d65bbb9f4b177d8ebbece2eb0279722efb6fd839b"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-bb906e0ed1010e1c89c8500925ab0bb15693dc435a69e7b26df75b07e7f3f8a8",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "d5dc85677ef71f04298c7cdc3eb9cb12f7be0fa8dd050c2295961480fa8117e8",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "37a27813fbcd6bbf85d9d47a7b60dbe49487fc178ef429f3df0bf749c3128a06",
+    "trace-core-tail.jsonl": "4cc0c5f7ba1b7bf997eda67c511880b4d6fa3b73683eff601a3b870b59419bf9"
+  },
+  "investigation": null,
+  "issue": null
+}
