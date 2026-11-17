@@ -1,0 +1,198 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 5100,
+        "file": "checkpoint-000050-t0000005101.save",
+        "game_turn": 5101,
+        "keys": 1155,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1040003
+      },
+      "selection": {
+        "first_visible_turn": 5141,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 14,
+        "monster_kind": "grey mold",
+        "no_omniscient_trigger": true,
+        "observation_line": 527,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 5141
+      },
+      "status": "candidate",
+      "turn": 5340,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 547,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 14,
+              "race": 17
+            }
+          ],
+          "sp": 0,
+          "turn": 5340
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 547,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 14,
+              "race": 17
+            }
+          ],
+          "sp": 0,
+          "turn": 5340
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 7,
+          "level": 1,
+          "line": 550,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 6110
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 11000,
+        "file": "checkpoint-000102-t0000011000.save",
+        "game_turn": 11000,
+        "keys": 2287,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1040003
+      },
+      "selection": {
+        "first_visible_turn": 11080,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 5,
+        "monster_kind": "metallic red centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 1058,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 11080
+      },
+      "status": "candidate",
+      "turn": 11199,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 1070,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 5,
+              "race": 65
+            },
+            {
+              "index": 11,
+              "race": 27
+            }
+          ],
+          "sp": 0,
+          "turn": 11199
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 1070,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 5,
+              "race": 65
+            },
+            {
+              "index": 11,
+              "race": 27
+            }
+          ],
+          "sp": 0,
+          "turn": 11199
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 10,
+          "level": 1,
+          "line": 1071,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 5,
+              "race": 65
+            },
+            {
+              "index": 11,
+              "race": 27
+            }
+          ],
+          "sp": 0,
+          "turn": 11209
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 11000,
+        "file": "checkpoint-000102-t0000011000.save",
+        "game_turn": 11000,
+        "keys": 2287,
+        "max_depth": 1,
+        "race_idx": 10,
+        "seed": 1040003
+      },
+      "selection": {
+        "first_visible_turn": 11080,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 5,
+        "monster_kind": "metallic red centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 1058,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 11080
+      },
+      "status": "duplicate_saved_start",
+      "turn": 11454,
+      "type": "death",
+      "witness": {
+        "cause": "a metallic red centipede"
+      }
+    }
+  ]
+}

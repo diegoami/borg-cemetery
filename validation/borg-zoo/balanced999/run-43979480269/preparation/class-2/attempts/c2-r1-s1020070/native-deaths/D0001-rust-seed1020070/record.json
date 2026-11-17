@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1020070",
+  "run_kind": "harness",
+  "character": "Half-Elf Druid",
+  "raw_cause": "a wild cat",
+  "terminal": {
+    "cause": "a wild cat",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 5387,
+    "race_idx": 1,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020070,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "d0741903a11c5eb84a7c18b64dace76db8d46cbe5717ecde5d1bf2250ddd472e",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 441
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c2-r1-s1020070",
+      "result_sha256": "95aa810b8b68a03e60d04581b133c227f4662cac6cb9f013d4f48e2aacfb2826",
+      "raw_sha256": {
+        "keys.log": "95aa810b8b68a03e60d04581b133c227f4662cac6cb9f013d4f48e2aacfb2826",
+        "messages.log": "02997250eb4b2f4ac6a66df0ae777d6ebc5402049ce530d336dcff84c0a7a4e4",
+        "state.log": "c904876052ec652858509889d61d61cf41788e0f8c00c6b54649a226f7d01dda"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-dc94e43023c0e180542ad7528c42c7e4a0e8e8a9993f1c919367d37de04b66f3",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "691fe6dc8adefeb1150ce636e174f86a52f42df671996f5a46fcc4c7327ca7b4",
+    "depths.json": "c221c81351375f939b2d6f280c2ff6163c45815d825f672984d4ae32eddbb1d5",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "d37f88c79190351c0707aeed060e69bb84492bea4286b2ec1aa244592eab0077",
+    "trace-tail.jsonl": "04a580d78dac39640f975b662b08f949e6b6c3464d9003b7f364dc7f84ca9fbd"
+  },
+  "investigation": null,
+  "issue": null
+}

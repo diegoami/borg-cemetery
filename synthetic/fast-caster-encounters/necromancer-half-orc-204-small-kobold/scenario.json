@@ -1,0 +1,60 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 204,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 4,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 4400,
+    "file": "checkpoint-000034-t0000004401.save",
+    "game_turn": 4401,
+    "keys": 855,
+    "max_depth": 1,
+    "race_idx": 6,
+    "seed": 204
+  },
+  "class_idx": 4,
+  "compressed_sha256": "f82de1ef1e404bb51ca5cf811bf37834a90699db1728c4c6971d4c6b5b2ff6e8",
+  "event_kind": "surviving_encounter",
+  "id": "necromancer-half-orc-204-small-kobold",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 12,
+    "max_hp": 12,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-eae691a6648b4c9f6a04ce814e7223f9cd80dc341bcdd8689725dec97415f213",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 204,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20001,
+  "race_idx": 6,
+  "save": "start.save.gz",
+  "save_sha256": "e6215419ff3d3ac1ff67c523ecb79a223ff589f3cac3402234dccf2b5b5b6e8a",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "episode_basis": "latest uninterrupted visibility episode of the attacker before the observed HP minimum; earlier attack message wins",
+    "first_visible_in_episode_turn": 4411,
+    "kind": "first_observable_contact_in_selected_fight",
+    "lead_engine_turns": 10,
+    "monster_index": 16,
+    "monster_kind": "small kobold",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "5b12e07e376430a35d141caf3f08f17fb7c8f6749a398a16a6791290569473db",
+    "observation_source": "/workspace/work/caster-expansion/necromancer-half-orc-204/observations.jsonl",
+    "trigger_turn": 4411
+  },
+  "start_turn": 4401,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

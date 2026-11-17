@@ -1,0 +1,26 @@
+{
+  "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+  "command": [
+    "bash",
+    "/workspace/work/reborn-fast-main-runtime/harness/run.sh",
+    "/workspace/work/caster-reproductions-v2/druid-r10-s304",
+    "304",
+    "10",
+    "2",
+    "20000",
+    "menu"
+  ],
+  "independent_life": false,
+  "original_binary_match": true,
+  "recipe_sha256": "e1f96b2b6e2f91c7e1b78af57f04bcf5731b447b9497ee640d904d076b42e764",
+  "returncode": 0,
+  "schema": "borg-cemetery/native-death-reproduction@1",
+  "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+  "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+  "status": "reproduced",
+  "streams": {
+    "keys.log": "fae0022aac5f52459086233c440ca6426e8330669f0d39835381eeb4d5b53fab",
+    "messages.log": "67507c5a6457f1731c1e73c562395e1601d38bdaacb2a37abeb74209064d793c",
+    "state.log": "e6c618ea97291e90e8f7f0c06e414ad51057329503f84d29638592fec7d947dc"
+  }
+}

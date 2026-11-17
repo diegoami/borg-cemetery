@@ -1,0 +1,86 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 13300,
+        "file": "checkpoint-000131-t0000013302.save",
+        "game_turn": 13302,
+        "keys": 2730,
+        "max_depth": 1,
+        "race_idx": 1,
+        "seed": 1010015
+      },
+      "selection": {
+        "first_visible_turn": 13392,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "small kobold",
+        "no_omniscient_trigger": true,
+        "observation_line": 1287,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 13384
+      },
+      "status": "candidate",
+      "turn": 13412,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 1,
+          "level": 2,
+          "line": 1289,
+          "max_hp": 15,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 25
+            }
+          ],
+          "sp": 1,
+          "turn": 13412
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 1,
+          "level": 2,
+          "line": 1289,
+          "max_hp": 15,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 25
+            }
+          ],
+          "sp": 1,
+          "turn": 13412
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 11,
+          "level": 2,
+          "line": 1294,
+          "max_hp": 15,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 4,
+          "turn": 14202
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 33940,
+      "type": "death",
+      "witness": {
+        "cause": "poison"
+      }
+    }
+  ]
+}

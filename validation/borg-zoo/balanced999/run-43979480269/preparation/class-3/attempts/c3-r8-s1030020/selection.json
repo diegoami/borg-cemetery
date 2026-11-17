@@ -1,0 +1,81 @@
+{
+  "incidents": [
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 12913,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 4,
+          "level": 2,
+          "line": 1129,
+          "max_hp": 17,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 10,
+              "race": 47
+            }
+          ],
+          "sp": 4,
+          "turn": 12683
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 6,
+          "level": 4,
+          "line": 1140,
+          "max_hp": 36,
+          "max_sp": 8,
+          "monsters": [],
+          "sp": 4,
+          "turn": 12913
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 28,
+          "level": 4,
+          "line": 1145,
+          "max_hp": 36,
+          "max_sp": 8,
+          "monsters": [],
+          "sp": 8,
+          "turn": 13703
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 5,
+        "depth": 2,
+        "due_turn": 22600,
+        "file": "checkpoint-000199-t0000022603.save",
+        "game_turn": 22603,
+        "keys": 3994,
+        "max_depth": 2,
+        "race_idx": 8,
+        "seed": 1030020
+      },
+      "selection": {
+        "first_visible_turn": 22693,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 32,
+        "monster_kind": "soldier",
+        "no_omniscient_trigger": true,
+        "observation_line": 1967,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 22693
+      },
+      "status": "candidate",
+      "turn": 22731,
+      "type": "death",
+      "witness": {
+        "cause": "a soldier"
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 7200,
+        "file": "checkpoint-000066-t0000007206.save",
+        "game_turn": 7206,
+        "keys": 1415,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1020046
+      },
+      "selection": {
+        "first_visible_turn": 7276,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 15,
+        "monster_kind": "rock lizard",
+        "no_omniscient_trigger": true,
+        "observation_line": 667,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 7276
+      },
+      "status": "candidate",
+      "turn": 7372,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 676,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 28
+            }
+          ],
+          "sp": 2,
+          "turn": 7363
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 1,
+          "line": 677,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 28
+            }
+          ],
+          "sp": 2,
+          "turn": 7372
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 7,
+          "level": 1,
+          "line": 705,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 15,
+              "race": 28
+            }
+          ],
+          "sp": 2,
+          "turn": 8182
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 18600,
+        "file": "checkpoint-000167-t0000018602.save",
+        "game_turn": 18602,
+        "keys": 3480,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1020046
+      },
+      "selection": {
+        "first_visible_turn": 18652,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 25,
+        "monster_kind": "giant white centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 1658,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 18652
+      },
+      "status": "candidate",
+      "turn": 20219,
+      "type": "death",
+      "witness": {
+        "cause": "a giant white centipede"
+      }
+    }
+  ]
+}

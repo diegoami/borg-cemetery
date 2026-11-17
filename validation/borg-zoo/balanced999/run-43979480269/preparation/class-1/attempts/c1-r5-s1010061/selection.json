@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 24700,
+        "file": "checkpoint-000238-t0000024705.save",
+        "game_turn": 24705,
+        "keys": 4930,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1010061
+      },
+      "selection": {
+        "first_visible_turn": 24775,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "cave spider",
+        "no_omniscient_trigger": true,
+        "observation_line": 2387,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 24775
+      },
+      "status": "candidate",
+      "turn": 24810,
+      "type": "death",
+      "witness": {
+        "cause": "a cave spider"
+      }
+    }
+  ]
+}

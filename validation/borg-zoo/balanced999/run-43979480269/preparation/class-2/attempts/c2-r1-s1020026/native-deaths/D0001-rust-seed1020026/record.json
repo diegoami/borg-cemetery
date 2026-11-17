@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1020026",
+  "run_kind": "harness",
+  "character": "Half-Elf Druid",
+  "raw_cause": "a giant white centipede",
+  "terminal": {
+    "cause": "a giant white centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 12050,
+    "race_idx": 1,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020026,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "d0741903a11c5eb84a7c18b64dace76db8d46cbe5717ecde5d1bf2250ddd472e",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 1025
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c2-r1-s1020026",
+      "result_sha256": "47b20c72d08c54737c3e0464b862a62d307f0f5fd08b285cd04c453720c66768",
+      "raw_sha256": {
+        "keys.log": "47b20c72d08c54737c3e0464b862a62d307f0f5fd08b285cd04c453720c66768",
+        "messages.log": "ae7325e78f3e2f80dd5c11da7e6d3224bf2cd19de1f53d0a0f6ceea087815b2c",
+        "state.log": "b1f21c4da37562aeee089bbc02965dcb27ebb2244ca6746f518a3166b9ee0911"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-632fd57c139d1e30921c73c6c4d805bea6deb11902e80e22c27b7283ccb861e2",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "691fe6dc8adefeb1150ce636e174f86a52f42df671996f5a46fcc4c7327ca7b4",
+    "depths.json": "8a0c5de51e89bc8f7fac41425d292e9f1225cf23506b5a619387588b1a052a2b",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "5c2368078f5fe2af4b9d4282885e78d1a8b040ec75485007bfb29cbfde2f9165",
+    "trace-tail.jsonl": "ff9ff2706c146fbba2980736697e51b6f87019128600a83088581d64a83a7bfe"
+  },
+  "investigation": null,
+  "issue": null
+}

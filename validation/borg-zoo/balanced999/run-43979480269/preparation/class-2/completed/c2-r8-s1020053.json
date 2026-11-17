@@ -1,0 +1,149 @@
+{
+  "cases": [
+    {
+      "directory": "c2-r8-s1020053-i000",
+      "id": "c2-r8-s1020053-i000",
+      "incident_turn": 23658,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 23109,
+      "save_sha256": "6d6407d2d3af5c69531917b792f9660cb051dffe38ca3ce69f952f3eef8bc741"
+    },
+    {
+      "directory": "c2-r8-s1020053-i001",
+      "id": "c2-r8-s1020053-i001",
+      "incident_turn": 29729,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 29641,
+      "save_sha256": "bc8727a58dc3fdbe01d787c35838b302f765d12d33364f5b0b454bdf8360dbf9"
+    },
+    {
+      "directory": "c2-r8-s1020053-i002",
+      "id": "c2-r8-s1020053-i002",
+      "incident_turn": 37281,
+      "incident_type": "death",
+      "initial_turn": 37207,
+      "save_sha256": "98f167ac8137a659eef70e38dc619c37dbf36775281763e19c4048ce63db2105"
+    }
+  ],
+  "cls": 2,
+  "elapsed_seconds": 16.334837916000026,
+  "id": "c2-r8-s1020053",
+  "ordinal": 53,
+  "race": 8,
+  "retention": [
+    {
+      "archive": "encounters.jsonl.gz",
+      "archive_sha256": "c5c39022bca9a7f59b068f2b8a18a9b2b504bca42d97f48320d560b31abbbbd9",
+      "path": "encounters.jsonl",
+      "sha256": "76708b679c37b5f77569da9f821fc191e99f7fd3c3baff5f77b64e86904c9651"
+    },
+    {
+      "archive": "trace.jsonl.gz",
+      "archive_sha256": "fb6205caca35a740ad2a2f5407a30d80cb43e55b138150939230c2b7dd70db6e",
+      "path": "trace.jsonl",
+      "sha256": "0253918be897c00c58877851d4b34f7b2c1448905c422b93f37e1359f5940d40"
+    },
+    {
+      "archive": "keys.log.gz",
+      "archive_sha256": "9c821d788cfdc196f72364d70ec8f60266d658425369ee36ff3d8052587cde17",
+      "path": "keys.log",
+      "sha256": "9a21ebd4e3d51e6a00f5cab034238006f91989b3a5625fbf98926138bca5382c"
+    },
+    {
+      "archive": "messages.log.gz",
+      "archive_sha256": "4693858c3d85b10774413a528aacd959c0e5cd2ec2e0cdd4e8333cf32415ff07",
+      "path": "messages.log",
+      "sha256": "699fa73cdc4f23f6efccdec6402872446d4573021188f2bb990575f42f51d0f7"
+    },
+    {
+      "archive": "state.log.gz",
+      "archive_sha256": "a4a30076d1ea8a05682f5cefa408de9ec87b0b32158c173a842d9830626d10da",
+      "path": "state.log",
+      "sha256": "c7baa62697d1b0793ea4b89644b168716ccaf2f5890d5d221884748d8cb7249b"
+    }
+  ],
+  "seed": 1020053,
+  "status": "death",
+  "summary": {
+    "borg_decisions": 3005,
+    "borg_rng": 2135587861,
+    "calendar": "fixed",
+    "class": "Druid",
+    "class_idx": 2,
+    "clevel": 4,
+    "dead": true,
+    "death_cause": "Fang, Farmer Maggot's Dog",
+    "depth": 2,
+    "effective_settings": {},
+    "exact_turns": false,
+    "game_options": {
+      "animate_flicker": false,
+      "auto_more": true,
+      "autoexplore_commands": false,
+      "birth_ai_learn": true,
+      "birth_connect_stairs": true,
+      "birth_feelings": true,
+      "birth_force_descend": false,
+      "birth_know_flavors": false,
+      "birth_know_runes": false,
+      "birth_levels_persist": false,
+      "birth_lose_arts": false,
+      "birth_no_artifacts": false,
+      "birth_no_recall": false,
+      "birth_no_selling": true,
+      "birth_percent_damage": false,
+      "birth_randarts": false,
+      "birth_stacking": true,
+      "birth_start_kit": true,
+      "center_player": false,
+      "cheat_hear": false,
+      "cheat_live": false,
+      "cheat_room": false,
+      "cheat_xtra": false,
+      "disturb_near": true,
+      "effective_speed": false,
+      "highlight_player": false,
+      "hp_changes_color": true,
+      "hybrid_walls": false,
+      "mouse_movement": true,
+      "notify_recharge": false,
+      "pickup_always": false,
+      "pickup_inven": true,
+      "purple_uniques": false,
+      "rogue_like_commands": false,
+      "score_hear": false,
+      "score_live": false,
+      "score_room": false,
+      "score_xtra": false,
+      "show_damage": false,
+      "show_flavors": false,
+      "show_target": true,
+      "solid_walls": false,
+      "use_old_target": false,
+      "use_sound": false,
+      "view_yellow_light": false
+    },
+    "game_rng": {
+      "quick": false,
+      "quick_rng": 3693947421,
+      "rng": "9b59666f19026174ae53fc142cfaa196e0bbcc9bff64408f8e379b49a06c91326c995b1b70ebb46bae5e91e9d00a2552d17d6e2be1d421cd83ef10d24aecac3e78cad9e62f0eb96eec74e06951fdf5efb16b89f5a4cd46b4a579f48b88a2bfdd4c56788aece72b8852d0c10d01fbcba60db52e786d88794aaf1a4b24f3e9964b",
+      "rng_index": 26
+    },
+    "game_turns": 37281,
+    "hp": -1,
+    "keys": 6338,
+    "loaded": false,
+    "max_clevel": 4,
+    "max_depth": 2,
+    "max_hp": 33,
+    "menu_letters": true,
+    "player_energy": 373295,
+    "player_turns": 3732,
+    "race": "Dunadan",
+    "race_idx": 8,
+    "resting_turns": 761,
+    "seed": 1020053,
+    "stop_reason": "death",
+    "wall_seconds": 13.296
+  }
+}

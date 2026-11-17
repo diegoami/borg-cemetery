@@ -1,0 +1,108 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 5600,
+        "file": "checkpoint-000056-t0000005601.save",
+        "game_turn": 5601,
+        "keys": 1243,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1040006
+      },
+      "selection": {
+        "first_visible_turn": 5631,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 9,
+        "monster_kind": "small kobold",
+        "no_omniscient_trigger": true,
+        "observation_line": 571,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 5631
+      },
+      "status": "candidate",
+      "turn": 5721,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 1,
+          "line": 579,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 9,
+              "race": 25
+            }
+          ],
+          "sp": 0,
+          "turn": 5711
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 1,
+          "level": 1,
+          "line": 580,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 9,
+              "race": 25
+            }
+          ],
+          "sp": 0,
+          "turn": 5721
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 10,
+          "level": 1,
+          "line": 584,
+          "max_hp": 13,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 6501
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 39100,
+        "file": "checkpoint-000325-t0000039101.save",
+        "game_turn": 39101,
+        "keys": 7135,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1040006
+      },
+      "selection": {
+        "first_visible_turn": 39161,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 62,
+        "monster_kind": "giant white mouse",
+        "no_omniscient_trigger": true,
+        "observation_line": 3199,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 39161
+      },
+      "status": "candidate",
+      "turn": 39246,
+      "type": "death",
+      "witness": {
+        "cause": "a giant white mouse"
+      }
+    }
+  ]
+}

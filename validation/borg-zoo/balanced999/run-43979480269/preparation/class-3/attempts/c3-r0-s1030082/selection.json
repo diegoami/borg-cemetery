@@ -1,0 +1,149 @@
+{
+  "incidents": [
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 44401,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 3,
+          "line": 3807,
+          "max_hp": 22,
+          "max_sp": 5,
+          "monsters": [
+            {
+              "index": 23,
+              "race": 47
+            }
+          ],
+          "sp": 5,
+          "turn": 44401
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 3,
+          "line": 3807,
+          "max_hp": 22,
+          "max_sp": 5,
+          "monsters": [
+            {
+              "index": 23,
+              "race": 47
+            }
+          ],
+          "sp": 5,
+          "turn": 44401
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 21,
+          "level": 4,
+          "line": 3820,
+          "max_hp": 32,
+          "max_sp": 7,
+          "monsters": [],
+          "sp": 7,
+          "turn": 45281
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 6,
+        "depth": 3,
+        "due_turn": 84400,
+        "file": "checkpoint-000765-t0000084402.save",
+        "game_turn": 84402,
+        "keys": 15511,
+        "max_depth": 3,
+        "race_idx": 0,
+        "seed": 1030082
+      },
+      "selection": {
+        "first_visible_turn": 84472,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 62,
+        "monster_kind": "giant white louse",
+        "no_omniscient_trigger": true,
+        "observation_line": 7506,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 84472
+      },
+      "status": "candidate",
+      "turn": 84472,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 3,
+          "hp": 9,
+          "level": 6,
+          "line": 7483,
+          "max_hp": 38,
+          "max_sp": 10,
+          "monsters": [
+            {
+              "index": 31,
+              "race": 57
+            }
+          ],
+          "sp": 10,
+          "turn": 84242
+        },
+        "minimum": {
+          "depth": 3,
+          "hp": 8,
+          "level": 7,
+          "line": 7506,
+          "max_hp": 48,
+          "max_sp": 12,
+          "monsters": [
+            {
+              "index": 62,
+              "race": 57
+            }
+          ],
+          "sp": 10,
+          "turn": 84472
+        },
+        "recovery": {
+          "depth": 3,
+          "hp": 24,
+          "level": 7,
+          "line": 7691,
+          "max_hp": 48,
+          "max_sp": 12,
+          "monsters": [
+            {
+              "index": 141,
+              "race": 57
+            },
+            {
+              "index": 134,
+              "race": 57
+            },
+            {
+              "index": 136,
+              "race": 57
+            },
+            {
+              "index": 142,
+              "race": 57
+            },
+            {
+              "index": 125,
+              "race": 57
+            }
+          ],
+          "sp": 12,
+          "turn": 86732
+        }
+      }
+    }
+  ]
+}

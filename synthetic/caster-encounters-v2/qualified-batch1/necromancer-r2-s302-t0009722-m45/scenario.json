@@ -1,0 +1,100 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 302,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 4,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 9700,
+    "file": "checkpoint-000097-t0000009703.save",
+    "game_turn": 9703,
+    "keys": 2077,
+    "max_depth": 1,
+    "race_idx": 2,
+    "seed": 302
+  },
+  "class_idx": 4,
+  "compressed_sha256": "c525b730edcc6bd451be7a1c0e8c3f2807d0f8af30e8071f2fa3268ea5c294e8",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Main Gauche (1d5) (+0,+0)",
+        "kind": 34,
+        "slot": 1
+      }
+    ],
+    "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+    "hp": 3,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Necromantic Tome [Into the Shadows]",
+        "kind": 391
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Scroll titled \"inva antas spe\"",
+        "kind": 222
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "empty",
+    "max_hp": 20,
+    "max_sp": 4,
+    "sp": 0
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "necromancer-r2-s302-t0009722-m45",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 3,
+    "max_hp": 20,
+    "max_sp": 4,
+    "sp": 0
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-a367ff56c555d3aab61b3f4a5cacb50dd3816c85dc784df97ba115923e5ad777",
+    "parent_death_id": "D-1e58f0f284677e5886b74d62675e30b4abe26d78cbbc54c5841adfbf6aa69108",
+    "program": "borg-reborn-rs",
+    "seed": 302,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 9790,
+  "race_idx": 2,
+  "save": "start.save.gz",
+  "save_sha256": "2f8f3df27f3d9963b77f784a96678b5319caa8bda120854433240b6aa86932ce",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "association_window": "first visible think through last visible think plus10 engine ticks",
+    "first_contact_turn": 9752,
+    "first_visible_turn": 9742,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 39,
+    "monster_index": 45,
+    "monster_kind": "white worm mass",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "dcd909bf2a421188db9b087eb35d2b5001b461f4a0637b324d1ba1cf9965a5dd",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 9742
+  },
+  "start_turn": 9703,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

@@ -1,0 +1,54 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 203,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 3,
+    "clevel": 1,
+    "depth": 0,
+    "due_turn": 100,
+    "file": "checkpoint-000001-t0000000101.save",
+    "game_turn": 101,
+    "keys": 22,
+    "max_depth": 0,
+    "race_idx": 0,
+    "seed": 203
+  },
+  "class_idx": 3,
+  "compressed_sha256": "a944fb2c85acb09041c7221d7a2ab83d9775d270f6c82efc9d4930c0f13e949e",
+  "event_kind": "town_departure",
+  "id": "town-departure-priest-human-203",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 13,
+    "max_hp": 13,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-3f6e603243a6c8eff691431b049d65ac4ac59197d46fcc5ca2adf27a7c370ec7",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 203,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20005,
+  "race_idx": 0,
+  "save": "start.save.gz",
+  "save_sha256": "1b54b26e6d4a292699c68ece66cff06c5d9c72913bce83f0d2147375537fac3e",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "kind": "before_first_town_to_dungeon_departure",
+    "lead_engine_turns": 90,
+    "no_omniscient_trigger": true,
+    "trigger_turn": 191
+  },
+  "start_turn": 101,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

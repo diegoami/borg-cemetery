@@ -1,0 +1,43 @@
+{
+  "checkpoint_every": 100,
+  "classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "horizon_engine_turns": 2000,
+  "max_attempts_per_class": 1024,
+  "native_tools_commit": "1afd9423d7f8a1340eca9d74cff85443e769b1a9",
+  "near_death_definition": {
+    "actual_hp_loss_required": true,
+    "counterfactual_qualification": "unavailable",
+    "max_hp_fraction": 0.25,
+    "recovery_hp_fraction": 0.5
+  },
+  "races": [
+    2,
+    3,
+    4,
+    10,
+    1,
+    0,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "schema": "borg-cemetery/balanced-incident-harvest-spec@1",
+  "seed_base": 1000000,
+  "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+  "target_per_class": 111,
+  "turn_cap": 100000,
+  "wall_seconds": 120,
+  "workers": 4
+}

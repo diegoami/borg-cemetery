@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 27000,
+        "file": "checkpoint-000263-t0000027002.save",
+        "game_turn": 27002,
+        "keys": 5524,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1010050
+      },
+      "selection": {
+        "first_visible_turn": 27042,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 37,
+        "monster_kind": "white worm mass",
+        "no_omniscient_trigger": true,
+        "observation_line": 2648,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 27042
+      },
+      "status": "candidate",
+      "turn": 27595,
+      "type": "death",
+      "witness": {
+        "cause": "a white worm mass"
+      }
+    }
+  ]
+}

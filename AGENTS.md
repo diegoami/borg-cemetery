@@ -33,6 +33,23 @@ tag or start another milestone without the owner's acceptance/instruction.
 Owner-requested fixes during preparation are included before the review freeze;
 later fixes must update the review's pinned head and validation evidence.
 
+# Death reproduction and fast scenarios (owner, 2026-11-16)
+
+Retain every natural death regardless of class or level, including early caster
+deaths. A requested character-build capture level is only a projection diagnostic,
+never a death-collection filter. Preserve source/build, game data, seed,
+race/class, complete configuration, lineage and expected outcome/stream hashes.
+For deterministic birth runs, a verified seed/build/configuration reproduction
+recipe is sufficient; recorder capture is not required. Mark reproduction as
+verified only after the endpoint and key/state/message streams match.
+
+Prepare encounter starts separately from routine testing. Prefer when the
+eventual killer or near-lethal threat first becomes observable, with a nearby
+earlier checkpoint; for invisible enemies use first observable contact. Do not
+select only the last desperate action. Fast suites load those states into an
+already-built Borg with short bounded horizons. Declare fresh-Borg memory and
+saved engine RNG semantics, missing state, incompatibility and all failures.
+
 # Canonical gameplay evidence ownership (owner, 2026-11-16)
 
 Latest owner clarification: Cemetery owns saves, scenarios, run/continuation

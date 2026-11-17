@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1030098",
+  "run_kind": "harness",
+  "character": "High-Elf Priest",
+  "raw_cause": "a giant white louse",
+  "terminal": {
+    "cause": "a giant white louse",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 5,
+    "turn": 79614,
+    "race_idx": 9,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1030098,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "4d30d172f32d36e6018995d35d7c339ebc27d7c23409645eb5a22db6d510690d",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 7968
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c3-r9-s1030098",
+      "result_sha256": "42a522da632d1f03f46114905a95ef6658411b59e495daf05607e49d761da60c",
+      "raw_sha256": {
+        "keys.log": "42a522da632d1f03f46114905a95ef6658411b59e495daf05607e49d761da60c",
+        "messages.log": "5a0b6a75a7e03bf67342a7a0b25bad31498c96d73f09362bc78fb3efa123b09a",
+        "state.log": "9b8f9ef5d39913d31199cbc03ff9a01f900fa19de93bdd527cc94f490ad0df41"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-51a91808b318d32ada5facc18206dd6b862db720267d5289eee0f3e231307265",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "e942c763a3980cf11975fc2b2c0fcb310afce3b38ac2aed35b1c24590e16d813",
+    "depths.json": "361da30782a29cc6e9113551a9e14304232ccbada03b77600a614870428f6bc2",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "9762f405e89e30e51bb9026e9a3f80d130dcb2d282cbda2b9409e4ab5cdb38cd",
+    "trace-tail.jsonl": "ddbb76d1059606bd6aeae225dbcc159ef050c5bb1a8b807a168af527307b454a"
+  },
+  "investigation": null,
+  "issue": null
+}

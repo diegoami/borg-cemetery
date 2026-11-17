@@ -1,0 +1,119 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 306,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 1,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 18600,
+    "file": "checkpoint-000172-t0000018606.save",
+    "game_turn": 18606,
+    "keys": 3573,
+    "max_depth": 1,
+    "race_idx": 9,
+    "seed": 306
+  },
+  "class_idx": 1,
+  "compressed_sha256": "2a0027c9948d525f075c8964659ffb102c0b6c891783d08c69de610f333c12c2",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Rapier (1d6) (+0,+0)",
+        "kind": 35,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (3238 turns)",
+        "kind": 4,
+        "slot": 5
+      }
+    ],
+    "equipment_kind_signature": "581551ca0bcdca9b672352c4f8216ed34c6ca525fdd287635612ab011afa74d6",
+    "hp": 18,
+    "inventory": [
+      {
+        "count": 2,
+        "description": "Books of Magic Spells [First Spells]",
+        "kind": 376
+      },
+      {
+        "count": 5,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 6,
+        "description": "Potions of Cure Light Wounds",
+        "kind": 231
+      },
+      {
+        "count": 1,
+        "description": "Orange Potion",
+        "kind": 237
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 3,
+        "description": "Scrolls titled \"mo sa decus\"",
+        "kind": 207
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "partial",
+    "max_hp": 18,
+    "max_sp": 4,
+    "sp": 2
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "mage-r9-s306-t0018606-m9",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 18,
+    "max_hp": 18,
+    "max_sp": 4,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-6435dc30b38491aa6f64ac34f91e6c34dbbdb0a1b14f1efde0077bd2ba87dfbb",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 306,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20006,
+  "race_idx": 9,
+  "save": "start.save.gz",
+  "save_sha256": "442e107b70b3d295d7b9e16cebcb1f68c32fe94c54e7c21643c35a91425369ab",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 18616,
+    "first_visible_turn": 18606,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 0,
+    "monster_index": 9,
+    "monster_kind": "fruit bat",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "93fc059a59cf2c5cd519f55de9f137c4643833a49f8f5d01964eb68a481a15a7",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 18606
+  },
+  "start_turn": 18606,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

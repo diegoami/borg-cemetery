@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1030064",
+  "run_kind": "harness",
+  "character": "Dunadan Priest",
+  "raw_cause": "a wild cat",
+  "terminal": {
+    "cause": "a wild cat",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 7960,
+    "race_idx": 8,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1030064,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "872a839189a50aea4f0d624a5b787a424834971e163cd9ac3cbaff67d3d7777b",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 802
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c3-r8-s1030064",
+      "result_sha256": "595aa60f9e61500794c315bb19d800427eb577f2dc06d787ad29349316d004e3",
+      "raw_sha256": {
+        "keys.log": "595aa60f9e61500794c315bb19d800427eb577f2dc06d787ad29349316d004e3",
+        "messages.log": "ba8f0569a31b8181bdff34dfa2a9b8e2b67e0e90d8329e8855f054602f262c22",
+        "state.log": "6c81607199596e176170f56bd370d0fa588e1490de71db834b5abea4da19fb61"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-8eee63140a2e33cc31f0c8c8f31f0e37a537b66eebd570ef699cb4a3aba9ab12",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "65655fab43cefcf259d3920f81f278d2df3f223f6f7b07d67c979a105aac6441",
+    "depths.json": "7ff90cd6aede8b5d5a70b4d68b56e5179702cc6a1ff956343a1b299cd0a5d15e",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "c2852239b24287faa6964713229d157b6670cc297b9f7af8ad46ef106b6f1883",
+    "trace-tail.jsonl": "45d8cf5cb760de7ca87aad6906786d2043a36eb37187c16c896d6cf244037526"
+  },
+  "investigation": null,
+  "issue": null
+}

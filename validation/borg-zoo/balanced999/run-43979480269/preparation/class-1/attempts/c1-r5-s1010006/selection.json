@@ -1,0 +1,98 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 7500,
+        "file": "checkpoint-000068-t0000007501.save",
+        "game_turn": 7501,
+        "keys": 1528,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1010006
+      },
+      "selection": {
+        "first_visible_turn": 7551,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 3,
+        "monster_kind": "cave spider",
+        "no_omniscient_trigger": true,
+        "observation_line": 699,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 7548
+      },
+      "status": "candidate",
+      "turn": 7551,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 2,
+          "line": 698,
+          "max_hp": 16,
+          "max_sp": 3,
+          "monsters": [
+            {
+              "index": 8,
+              "race": 18
+            },
+            {
+              "index": 7,
+              "race": 50
+            }
+          ],
+          "sp": 1,
+          "turn": 7541
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 2,
+          "line": 699,
+          "max_hp": 16,
+          "max_sp": 3,
+          "monsters": [
+            {
+              "index": 8,
+              "race": 18
+            },
+            {
+              "index": 3,
+              "race": 50
+            },
+            {
+              "index": 5,
+              "race": 50
+            }
+          ],
+          "sp": 0,
+          "turn": 7551
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 16,
+          "level": 2,
+          "line": 701,
+          "max_hp": 16,
+          "max_sp": 3,
+          "monsters": [],
+          "sp": 0,
+          "turn": 7571
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 13170,
+      "type": "death",
+      "witness": {
+        "cause": "poison"
+      }
+    }
+  ]
+}

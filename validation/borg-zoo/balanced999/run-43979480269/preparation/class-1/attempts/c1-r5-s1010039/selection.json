@@ -1,0 +1,123 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 24800,
+        "file": "checkpoint-000235-t0000024802.save",
+        "game_turn": 24802,
+        "keys": 4976,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1010039
+      },
+      "selection": {
+        "first_visible_turn": 24802,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 8,
+        "monster_kind": "giant yellow centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 2346,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 24802
+      },
+      "status": "candidate",
+      "turn": 24922,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 6,
+          "level": 3,
+          "line": 2345,
+          "max_hp": 31,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 36
+            }
+          ],
+          "sp": 0,
+          "turn": 24792
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 3,
+          "line": 2358,
+          "max_hp": 31,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 8,
+              "race": 19
+            }
+          ],
+          "sp": 0,
+          "turn": 24922
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 16,
+          "level": 3,
+          "line": 2376,
+          "max_hp": 31,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 36
+            }
+          ],
+          "sp": 2,
+          "turn": 25602
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 44665,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 10,
+          "level": 5,
+          "line": 4047,
+          "max_hp": 42,
+          "max_sp": 7,
+          "monsters": [],
+          "sp": 0,
+          "turn": 44605
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 4,
+          "level": 5,
+          "line": 4053,
+          "max_hp": 42,
+          "max_sp": 7,
+          "monsters": [],
+          "sp": 1,
+          "turn": 44665
+        },
+        "recovery": {
+          "depth": 2,
+          "hp": 27,
+          "level": 5,
+          "line": 4054,
+          "max_hp": 42,
+          "max_sp": 7,
+          "monsters": [],
+          "sp": 4,
+          "turn": 45415
+        }
+      }
+    }
+  ]
+}

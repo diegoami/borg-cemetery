@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-bank-v2-final-actual/shard-33/priest-r0-s308-t0002443-m28/run",
+      "raw_sha256": {
+        "keys.log": "b31c2690a4886f6c6b3de77a220cd2b5017d3276f0e5492ba712289c3dec9518",
+        "messages.log": "03a71fb03acd8a93a6a28e141a6eeeb4942090f5b4b2f2771b1a40308bd3d4bc",
+        "state.log": "28f9f0927b06c63c97d72547cfea30733c3821f30814ec6941582384feafeb06"
+      },
+      "result_sha256": "b31c2690a4886f6c6b3de77a220cd2b5017d3276f0e5492ba712289c3dec9518",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Human Priest",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 53,
+    "of": 53
+  },
+  "encounter_family": "start-d1cf8e09990076b63e98b05b0772948fb8b2125f699ba319de343a0a407b0f62",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "4cac5f39259f58950321e42c3993cf1b044bc9ca7785e64e4ab3f8e2df5d0db0",
+    "depths.json": "df878efa383030190a5ca85eaa152664789f2139aa18d749fb6c3f3b5167e126",
+    "params.json": "e1435674e9586447dc934394b1601110a6df56a8ef43a8783dacb915ca896153",
+    "summary.json": "f12a41be318db1e4a96634b43e936a8d267125c57677a2b1ed9d8b72dabcc75a",
+    "trace-tail.jsonl": "31d4ea8c438b63cea9b6713c4879c2f1701c1ab0d1949da898e2b6a5562d1d02"
+  },
+  "id": "D0000-q8c405908d3c0ceaad97afc493aaf3182f12814a9b0bdec6893c45669bfbc0a95",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "68f42f96e9f7fad35032e8cdc6dae0b7226c8d7776cc94a9ce6327eb019704e1",
+    "flags": "menu,keep-load-rng,save=input.save",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 308,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a giant white louse",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a giant white louse",
+    "class_idx": 3,
+    "dead": true,
+    "depth": 1,
+    "level": 3,
+    "max_depth": 1,
+    "race_idx": 0,
+    "turn": 2959
+  }
+}

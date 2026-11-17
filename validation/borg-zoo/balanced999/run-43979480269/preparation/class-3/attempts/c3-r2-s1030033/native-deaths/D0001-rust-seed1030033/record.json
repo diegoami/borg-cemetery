@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1030033",
+  "run_kind": "harness",
+  "character": "Elf Priest",
+  "raw_cause": "a grey mushroom patch",
+  "terminal": {
+    "cause": "a grey mushroom patch",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 2159,
+    "race_idx": 2,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1030033,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "ceae9d9992df1e14f66ac6e05dd4975b16b562287f599d852ae8e6bbec876beb",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 216
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c3-r2-s1030033",
+      "result_sha256": "013ac39b84932a64ce2864ae839160ff742362ce5615ad481f4d789d0316a8db",
+      "raw_sha256": {
+        "keys.log": "013ac39b84932a64ce2864ae839160ff742362ce5615ad481f4d789d0316a8db",
+        "messages.log": "cbc92d53c9849dd0ec6b68b269ce41b6e8e1f2e5e890861f118d973f97c08262",
+        "state.log": "37bf7833dbceb5bd41fcb96a6a19dc6502049d08e8824fdf5dacf35a71a7b9bf"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-9567bf24897806e52e8c4a1a26eb48d8b1115db00ce8aff80e05480dc350dfba",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "81e6acdb5359fd38e5fe448dd1eb024e2bca44805fcb421b8182dee6353005b2",
+    "depths.json": "891c60496486bf0323db9ed2a27a2a666db361b6f13c1c1e2252366d6ca14e10",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "beca8080a21a500ef50acca9ec73bfc6bf4c61674eac58983bb3857e67b73b07",
+    "trace-tail.jsonl": "9f6137216ede9832e7bf5814421a06abde97d84c63872404bbae06778303cf91"
+  },
+  "investigation": null,
+  "issue": null
+}

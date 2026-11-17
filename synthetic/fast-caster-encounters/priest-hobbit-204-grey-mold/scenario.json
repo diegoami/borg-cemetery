@@ -1,0 +1,60 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 204,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 3,
+    "clevel": 1,
+    "depth": 1,
+    "due_turn": 500,
+    "file": "checkpoint-000005-t0000000501.save",
+    "game_turn": 501,
+    "keys": 157,
+    "max_depth": 1,
+    "race_idx": 3,
+    "seed": 204
+  },
+  "class_idx": 3,
+  "compressed_sha256": "bfbf7692462f6013971e7f9946dd5d6e1c5e4a0fd92294d1100d55a16b29f72e",
+  "event_kind": "surviving_encounter",
+  "id": "priest-hobbit-204-grey-mold",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 10,
+    "max_hp": 10,
+    "max_sp": 2,
+    "sp": 2
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-9e608296574f5441005956e4f1d5f499487d7b32530d0bbad21acabf5d2702a9",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 204,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20003,
+  "race_idx": 3,
+  "save": "start.save.gz",
+  "save_sha256": "fa5b42f67a370a20f754a3d63e5a51d05197481dd9259017a95fb9a1e82cc4b1",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "episode_basis": "latest uninterrupted visibility episode of the attacker before the observed HP minimum; earlier attack message wins",
+    "first_visible_in_episode_turn": 551,
+    "kind": "first_observable_contact_in_selected_fight",
+    "lead_engine_turns": 50,
+    "monster_index": 34,
+    "monster_kind": "grey mold",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "ef87739e65a3cc749d33f53545bea0aa56ec7ee6c0dd5b2847580db70fb87f5b",
+    "observation_source": "/workspace/work/caster-expansion/priest-hobbit-204/observations.jsonl",
+    "trigger_turn": 551
+  },
+  "start_turn": 501,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

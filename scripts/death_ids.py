@@ -13,7 +13,7 @@ from native.death_identity import ensure, RECORD_SCHEMAS, GUIDED_SCHEMA
 
 def inventory(root, check=False):
     rows = []
-    for tree in ('deaths', 'validation', 'runs'):
+    for tree in ('deaths', 'validation', 'runs', 'synthetic'):
         for path in sorted((root / tree).rglob('record.json')):
             record = json.loads(path.read_text())
             if record.get('schema') not in RECORD_SCHEMAS | {GUIDED_SCHEMA}:

@@ -1,0 +1,141 @@
+{
+  "cases": [
+    {
+      "directory": "c2-r5-s1020039-i000",
+      "id": "c2-r5-s1020039-i000",
+      "incident_turn": 2461,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 2301,
+      "save_sha256": "42ced11b6d1f0f4f650c4281c55cac20ff721d544c6b00c0ea9408494d141a16"
+    },
+    {
+      "directory": "c2-r5-s1020039-i001",
+      "id": "c2-r5-s1020039-i001",
+      "incident_turn": 47238,
+      "incident_type": "death",
+      "initial_turn": 46303,
+      "save_sha256": "a1df3e8e0d89cd1cb72feff16e7d934b95c533efd37d63ba48f1eec9d82c80f7"
+    }
+  ],
+  "cls": 2,
+  "elapsed_seconds": 18.683014309000015,
+  "id": "c2-r5-s1020039",
+  "ordinal": 39,
+  "race": 5,
+  "retention": [
+    {
+      "archive": "encounters.jsonl.gz",
+      "archive_sha256": "2e1017c1a87db0270874999a6a617c6c1febb3fa293fedf9e4c60ab86e6ebf30",
+      "path": "encounters.jsonl",
+      "sha256": "b0f4423e0d1e3e19225932396c1e105ff6fe7cf853c39f7ed116d52dddf76ad7"
+    },
+    {
+      "archive": "trace.jsonl.gz",
+      "archive_sha256": "8d66ca9dc3177d4c6c5e9cd715e237c649568e751657717e636881be12f08d39",
+      "path": "trace.jsonl",
+      "sha256": "72b2cd5167c3269d01c444d2485d5036716c502321fda3d592513478b4c8bfdb"
+    },
+    {
+      "archive": "keys.log.gz",
+      "archive_sha256": "5cab9be8dc745ef7cda308b90a4c3427cd1eaf1091046672a0a7c101c9e7c38e",
+      "path": "keys.log",
+      "sha256": "551f918636dfec3c5524223455d7a7cf9c0f7a5c0a0d569f1ca0fa55241dc96e"
+    },
+    {
+      "archive": "messages.log.gz",
+      "archive_sha256": "338d1e7a016e496fdf23d79efddd450d13ed9cfa5b8556c0546ba954f9ef9c8a",
+      "path": "messages.log",
+      "sha256": "5b32d0ccd72ad29b3ba3eb90a1f85cc211680bd26ab470424835d122ed282687"
+    },
+    {
+      "archive": "state.log.gz",
+      "archive_sha256": "f50d9380c691c6d2cec1684d0a2ce4006c48380813039a31d4a857804ed0293d",
+      "path": "state.log",
+      "sha256": "b15863aa97255b9723086d7200ae50efecb2d35e28c209fdcecaa05920beb468"
+    }
+  ],
+  "seed": 1020039,
+  "status": "death",
+  "summary": {
+    "borg_decisions": 4396,
+    "borg_rng": 2135587861,
+    "calendar": "fixed",
+    "class": "Druid",
+    "class_idx": 2,
+    "clevel": 4,
+    "dead": true,
+    "death_cause": "a white worm mass",
+    "depth": 1,
+    "effective_settings": {},
+    "exact_turns": false,
+    "game_options": {
+      "animate_flicker": false,
+      "auto_more": true,
+      "autoexplore_commands": false,
+      "birth_ai_learn": true,
+      "birth_connect_stairs": true,
+      "birth_feelings": true,
+      "birth_force_descend": false,
+      "birth_know_flavors": false,
+      "birth_know_runes": false,
+      "birth_levels_persist": false,
+      "birth_lose_arts": false,
+      "birth_no_artifacts": false,
+      "birth_no_recall": false,
+      "birth_no_selling": true,
+      "birth_percent_damage": false,
+      "birth_randarts": false,
+      "birth_stacking": true,
+      "birth_start_kit": true,
+      "center_player": false,
+      "cheat_hear": false,
+      "cheat_live": false,
+      "cheat_room": false,
+      "cheat_xtra": false,
+      "disturb_near": true,
+      "effective_speed": false,
+      "highlight_player": false,
+      "hp_changes_color": true,
+      "hybrid_walls": false,
+      "mouse_movement": true,
+      "notify_recharge": false,
+      "pickup_always": false,
+      "pickup_inven": true,
+      "purple_uniques": false,
+      "rogue_like_commands": false,
+      "score_hear": false,
+      "score_live": false,
+      "score_room": false,
+      "score_xtra": false,
+      "show_damage": false,
+      "show_flavors": false,
+      "show_target": true,
+      "solid_walls": false,
+      "use_old_target": false,
+      "use_sound": false,
+      "view_yellow_light": false
+    },
+    "game_rng": {
+      "quick": false,
+      "quick_rng": 315899647,
+      "rng": "e4caf3bbcdcd12c6bed91ff348ba45724873076e9e6619d13cc67fd089d8c9dfa55886410c685f03d082bfb8da3b5e0e221c92959a8fab5ea05c9ba032103e5e765be5b75cbb935aacc9bd3839ffaaf9b67d8fe1dc4aab54b7f9cc7981275393f616c25532b6d2ca74a51b091a449a12ac9ac5e29889861182809f18c856aaaf",
+      "rng_index": 9
+    },
+    "game_turns": 47238,
+    "hp": -2,
+    "keys": 9247,
+    "loaded": false,
+    "max_clevel": 4,
+    "max_depth": 1,
+    "max_hp": 49,
+    "menu_letters": true,
+    "player_energy": 473190,
+    "player_turns": 4731,
+    "race": "Dwarf",
+    "race_idx": 5,
+    "resting_turns": 351,
+    "seed": 1020039,
+    "stop_reason": "death",
+    "wall_seconds": 15.162
+  }
+}

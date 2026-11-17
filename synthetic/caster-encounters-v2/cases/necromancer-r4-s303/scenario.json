@@ -1,0 +1,99 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 303,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 4,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 11600,
+    "file": "checkpoint-000102-t0000011608.save",
+    "game_turn": 11608,
+    "keys": 2240,
+    "max_depth": 1,
+    "race_idx": 4,
+    "seed": 303
+  },
+  "class_idx": 4,
+  "compressed_sha256": "ddd92bba0b0106d0202d84e2eb40962b7bee81d9ba8beede2e0e0c9a8586a3e6",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Main Gauche (1d5) (+0,+0)",
+        "kind": 34,
+        "slot": 1
+      }
+    ],
+    "equipment_kind_signature": "cb1d5ab23bfa7af3cc87d35f1c55db19f8488c3ed2a2a4e41f5dae982745bfea",
+    "hp": 12,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Necromantic Tome [Into the Shadows]",
+        "kind": 391
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Pink Potion",
+        "kind": 250
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "empty",
+    "max_hp": 12,
+    "max_sp": 4,
+    "sp": 0
+  },
+  "event_kind": "death_encounter",
+  "id": "necromancer-r4-s303",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 12,
+    "max_hp": 12,
+    "max_sp": 4,
+    "sp": 0
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-53382ea8da25ff98fbb9b1af5b3f93e9b1c720583fe92850f1430a22cd22fc84",
+    "parent_death_id": "D-adf7df4b70afefd6d2758ec20a98a5ea57b114a91edac75f7fd4604b2e7ee359",
+    "program": "borg-reborn-rs",
+    "seed": 303,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 11710,
+  "race_idx": 4,
+  "save": "start.save.gz",
+  "save_sha256": "1c3fefeed538603516d0856a56ebd53aa0a9e14bf86447c592b76a4b54165a0b",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_visible_turn": 11638,
+    "kind": "first_visible_kind_in_selected_episode",
+    "lead_engine_turns": 30,
+    "monster_index": 9,
+    "monster_kind": "soldier",
+    "no_omniscient_trigger": true,
+    "observation_line": 1037,
+    "observation_sha256": "0ec2e783d50a3a4bf063b86d9b5b3a1edc29ac443b16b955d128a77784108ca6",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 11638
+  },
+  "start_turn": 11608,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

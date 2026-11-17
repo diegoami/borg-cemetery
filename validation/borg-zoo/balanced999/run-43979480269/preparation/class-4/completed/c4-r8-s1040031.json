@@ -1,0 +1,141 @@
+{
+  "cases": [
+    {
+      "directory": "c4-r8-s1040031-i000",
+      "id": "c4-r8-s1040031-i000",
+      "incident_turn": 16852,
+      "incident_type": "observed_critical_recovery",
+      "initial_turn": 16802,
+      "save_sha256": "468b39079dcd5050898000fe2624a3af713cea42aa3368991990ab71e5d00400"
+    },
+    {
+      "directory": "c4-r8-s1040031-i001",
+      "id": "c4-r8-s1040031-i001",
+      "incident_turn": 64687,
+      "incident_type": "death",
+      "initial_turn": 64509,
+      "save_sha256": "7be19482a06fddf07e1a94b77dd8df8ba9e0bde5f4c01d961c41e6da5c9f7c49"
+    }
+  ],
+  "cls": 4,
+  "elapsed_seconds": 36.587040454999965,
+  "id": "c4-r8-s1040031",
+  "ordinal": 31,
+  "race": 8,
+  "retention": [
+    {
+      "archive": "encounters.jsonl.gz",
+      "archive_sha256": "f0886abc26b6519d27a6787932cd431acc1ba8dd585700fc27e371991b770ead",
+      "path": "encounters.jsonl",
+      "sha256": "2e68cf7cd243b7609c5c727f9d08a92827e8c15a464a44f1b4bab8aef52765ae"
+    },
+    {
+      "archive": "trace.jsonl.gz",
+      "archive_sha256": "d104519995fd42e8aba1d83853072d64351a2aa04a590e9a71efd8028107b594",
+      "path": "trace.jsonl",
+      "sha256": "bcaf4e374e8d03690dcb75032d559987bdb9688f5be735ca99d82c480e2f5204"
+    },
+    {
+      "archive": "keys.log.gz",
+      "archive_sha256": "e8df636d561c4634d3f724664da24073cdc6cd60622409e8eb40f519abbd6081",
+      "path": "keys.log",
+      "sha256": "9ef39d5c2c3353d9723722c72e4bf5133829df3c4327769af6ac22b6066dae63"
+    },
+    {
+      "archive": "messages.log.gz",
+      "archive_sha256": "d99b9033d85a429c48b409af992ead89f24ffa866541fd292ebd3693f917c00c",
+      "path": "messages.log",
+      "sha256": "51ef0f1af86795b0d1ca3462e6e446be13d30945feef5c001bfb6dad1ab532ed"
+    },
+    {
+      "archive": "state.log.gz",
+      "archive_sha256": "6ef9f6b2a57c79b1846ba2001a7d246d127a8683ebb3ed4aba1261d662ed1aab",
+      "path": "state.log",
+      "sha256": "ea0db8412bd115c620321142140bed34d5af9b589884bd29e9b910531a708979"
+    }
+  ],
+  "seed": 1040031,
+  "status": "death",
+  "summary": {
+    "borg_decisions": 5813,
+    "borg_rng": 2135587861,
+    "calendar": "fixed",
+    "class": "Necromancer",
+    "class_idx": 4,
+    "clevel": 4,
+    "dead": true,
+    "death_cause": "a soldier ant",
+    "depth": 1,
+    "effective_settings": {},
+    "exact_turns": false,
+    "game_options": {
+      "animate_flicker": false,
+      "auto_more": true,
+      "autoexplore_commands": false,
+      "birth_ai_learn": true,
+      "birth_connect_stairs": true,
+      "birth_feelings": true,
+      "birth_force_descend": false,
+      "birth_know_flavors": false,
+      "birth_know_runes": false,
+      "birth_levels_persist": false,
+      "birth_lose_arts": false,
+      "birth_no_artifacts": false,
+      "birth_no_recall": false,
+      "birth_no_selling": true,
+      "birth_percent_damage": false,
+      "birth_randarts": false,
+      "birth_stacking": true,
+      "birth_start_kit": true,
+      "center_player": false,
+      "cheat_hear": false,
+      "cheat_live": false,
+      "cheat_room": false,
+      "cheat_xtra": false,
+      "disturb_near": true,
+      "effective_speed": false,
+      "highlight_player": false,
+      "hp_changes_color": true,
+      "hybrid_walls": false,
+      "mouse_movement": true,
+      "notify_recharge": false,
+      "pickup_always": false,
+      "pickup_inven": true,
+      "purple_uniques": false,
+      "rogue_like_commands": false,
+      "score_hear": false,
+      "score_live": false,
+      "score_room": false,
+      "score_xtra": false,
+      "show_damage": false,
+      "show_flavors": false,
+      "show_target": true,
+      "solid_walls": false,
+      "use_old_target": false,
+      "use_sound": false,
+      "view_yellow_light": false
+    },
+    "game_rng": {
+      "quick": false,
+      "quick_rng": 4134461201,
+      "rng": "d6fa9555026e78c2b3f585628e1141a438b92783c494a6cafff1b72e42b193d12d6f7919ce4d0c49d183bb038b513227c92f29bfd2fba759610fe17a75e7cfb2827811024e854c58278b586fa9e269b35f5ee6d1c1d39739c1ee5cce22af37182aa94434e7fe754513f914ceed75ca2abf20b8e9c595486a5c70ccf011b2c06f",
+      "rng_index": 28
+    },
+    "game_turns": 64687,
+    "hp": -1,
+    "keys": 12153,
+    "loaded": false,
+    "max_clevel": 4,
+    "max_depth": 1,
+    "max_hp": 37,
+    "menu_letters": true,
+    "player_energy": 647465,
+    "player_turns": 6474,
+    "race": "Dunadan",
+    "race_idx": 8,
+    "resting_turns": 594,
+    "seed": 1040031,
+    "stop_reason": "death",
+    "wall_seconds": 32.636
+  }
+}

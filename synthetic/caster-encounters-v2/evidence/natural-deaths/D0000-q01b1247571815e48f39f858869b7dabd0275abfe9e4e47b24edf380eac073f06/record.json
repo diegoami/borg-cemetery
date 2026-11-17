@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/caster-harvest-v2/druid-r2-s303",
+      "raw_sha256": {
+        "keys.log": "b58289122ec24a69deb59551b25bd127062074fe1f85bb5aa461a2ab80e09c6e",
+        "messages.log": "bd1066e7d8304740932ef17b54c61e1b28c980c3030041f98a7858aa0895d423",
+        "state.log": "092b9722c51f31980baece594e471d517be5dcb658b0f46dbb131e598ae709c7"
+      },
+      "result_sha256": "b58289122ec24a69deb59551b25bd127062074fe1f85bb5aa461a2ab80e09c6e",
+      "role": "original",
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069"
+    }
+  ],
+  "character": "Elf Druid",
+  "core_decision_trace": null,
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 89,
+    "of": 89
+  },
+  "encounter_family": "start-c604740cbd72766a5d73997b849097e3755194cbce57f46b6e528eca3943f455",
+  "files_sha256": {
+    "build.json": "af1908cfd4704a8239c105282649f32256a91fc9e7459dd369b9606ef1c557a5",
+    "config.txt": "079f2addccca0cfd515dee4de88bd06f300d4c9c6c561708a6e7ea1245510bb8",
+    "depths.json": "aafca5079a87b526fbb2845669ee72c28e844ae6a4c46282365c65955c3183a7",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "84de358b53cc65a34f0702b9ee646b38d9f2c6303d0f85fd4bbfc5c4662f6f4f",
+    "trace-tail.jsonl": "e63de8b991b5f0ed7ed19f9cbb5913fd0f5730ad5349bd92557128d1de20ce4f"
+  },
+  "id": "D0000-q01b1247571815e48f39f858869b7dabd0275abfe9e4e47b24edf380eac073f06",
+  "identity": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "borg_txt_sha256": "761cdd15caa7baf58d226006449221d9f3f7de4f5df5a79f483f8e121f8e1e77",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "impl": "rust",
+    "params_core_sha256": null,
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 303,
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a battle-scarred veteran",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a battle-scarred veteran",
+    "class_idx": 2,
+    "dead": true,
+    "depth": 0,
+    "level": 1,
+    "max_depth": 0,
+    "race_idx": 2,
+    "turn": 864
+  }
+}

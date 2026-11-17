@@ -1,0 +1,62 @@
+{
+  "incoming_messages": [
+    "1516 7671 49 The grey mold releases spores at you.",
+    "1516 7671 49 The grey mold releases spores at you.",
+    "1518 7671 2 You hit the grey mold.",
+    "1518 7671 6 You have destroyed the grey mold."
+  ],
+  "selection": {
+    "checkpoint": {
+      "capture_method": "fork_private_engine",
+      "class_idx": 3,
+      "clevel": 1,
+      "depth": 1,
+      "due_turn": 7600,
+      "file": "checkpoint-000074-t0000007601.save",
+      "game_turn": 7601,
+      "keys": 1502,
+      "max_depth": 1,
+      "race_idx": 0,
+      "seed": 203
+    },
+    "id": "priest-human-203",
+    "monster_index": 10,
+    "monster_kind": "grey mold",
+    "race": 17,
+    "trigger": {
+      "depth": 1,
+      "hp": 10,
+      "line": 715,
+      "max_hp": 13,
+      "max_sp": 2,
+      "monsters": [
+        {
+          "attr": 2,
+          "hp": 2,
+          "index": 10,
+          "max_hp": 2,
+          "mimicking": false,
+          "race": 17,
+          "speed": 110,
+          "timed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "x": 97,
+          "y": 26
+        }
+      ],
+      "sp": 2,
+      "turn": 7671
+    },
+    "worst_turn": 7681
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 8600,
+        "file": "checkpoint-000079-t0000008602.save",
+        "game_turn": 8602,
+        "keys": 1632,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1030101
+      },
+      "selection": {
+        "first_visible_turn": 8602,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "grey mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 793,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 8602
+      },
+      "status": "candidate",
+      "turn": 8693,
+      "type": "death",
+      "witness": {
+        "cause": "a grey mushroom patch"
+      }
+    }
+  ]
+}

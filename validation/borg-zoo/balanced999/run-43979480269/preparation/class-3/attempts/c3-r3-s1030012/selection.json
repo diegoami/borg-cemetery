@@ -1,0 +1,103 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 14300,
+        "file": "checkpoint-000142-t0000014301.save",
+        "game_turn": 14301,
+        "keys": 3049,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1030012
+      },
+      "selection": {
+        "first_visible_turn": 14331,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 20,
+        "monster_kind": "grey mold",
+        "no_omniscient_trigger": true,
+        "observation_line": 1434,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 14323
+      },
+      "status": "candidate",
+      "turn": 14341,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 1434,
+          "max_hp": 10,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 20,
+              "race": 17
+            }
+          ],
+          "sp": 2,
+          "turn": 14331
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 2,
+          "line": 1435,
+          "max_hp": 18,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 2,
+          "turn": 14341
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 18,
+          "level": 2,
+          "line": 1436,
+          "max_hp": 18,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 2,
+          "turn": 14351
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 62300,
+        "file": "checkpoint-000615-t0000062304.save",
+        "game_turn": 62304,
+        "keys": 12850,
+        "max_depth": 1,
+        "race_idx": 3,
+        "seed": 1030012
+      },
+      "selection": {
+        "first_visible_turn": 62374,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "black naga",
+        "no_omniscient_trigger": true,
+        "observation_line": 6249,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 62374
+      },
+      "status": "candidate",
+      "turn": 62604,
+      "type": "death",
+      "witness": {
+        "cause": "a black naga"
+      }
+    }
+  ]
+}

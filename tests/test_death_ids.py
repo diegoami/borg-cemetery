@@ -53,6 +53,17 @@ class DeathIdentityTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 refresh(root, check=True)
 
+    def test_natural_deaths_retained_with_scenario_banks_are_indexed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'deaths').mkdir()
+            path = root / 'synthetic/caster-bank/evidence/natural-deaths/D0001'
+            path.mkdir(parents=True)
+            (path / 'record.json').write_text(json.dumps(record()))
+            rows = refresh(root)['records']
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(resolve(root, rows[0]['id']), path)
+
     def test_bad_sidecar_or_incomplete_original_cannot_be_accepted(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp)

@@ -1,0 +1,113 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 1200,
+        "file": "checkpoint-000012-t0000001201.save",
+        "game_turn": 1201,
+        "keys": 325,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1020017
+      },
+      "selection": {
+        "first_visible_turn": 1291,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 21,
+        "monster_kind": "grey mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 140,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 1291
+      },
+      "status": "candidate",
+      "turn": 1371,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 148,
+          "max_hp": 14,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 21,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 1371
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 148,
+          "max_hp": 14,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 21,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 1371
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 13,
+          "level": 1,
+          "line": 149,
+          "max_hp": 14,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 21,
+              "race": 18
+            }
+          ],
+          "sp": 2,
+          "turn": 1381
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 10900,
+        "file": "checkpoint-000108-t0000010902.save",
+        "game_turn": 10902,
+        "keys": 2366,
+        "max_depth": 1,
+        "race_idx": 5,
+        "seed": 1020017
+      },
+      "selection": {
+        "first_visible_turn": 10982,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 9,
+        "monster_kind": "giant white centipede",
+        "no_omniscient_trigger": true,
+        "observation_line": 1101,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 10982
+      },
+      "status": "candidate",
+      "turn": 11019,
+      "type": "death",
+      "witness": {
+        "cause": "a giant white centipede"
+      }
+    }
+  ]
+}

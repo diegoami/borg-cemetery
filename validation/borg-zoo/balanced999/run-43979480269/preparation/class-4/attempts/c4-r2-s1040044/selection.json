@@ -1,0 +1,108 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 4600,
+        "file": "checkpoint-000046-t0000004601.save",
+        "game_turn": 4601,
+        "keys": 1028,
+        "max_depth": 1,
+        "race_idx": 2,
+        "seed": 1040044
+      },
+      "selection": {
+        "first_visible_turn": 4601,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "small kobold",
+        "no_omniscient_trigger": true,
+        "observation_line": 466,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 4601
+      },
+      "status": "candidate",
+      "turn": 4631,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 1,
+          "level": 1,
+          "line": 469,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 25
+            }
+          ],
+          "sp": 0,
+          "turn": 4631
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 1,
+          "level": 1,
+          "line": 469,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 25
+            }
+          ],
+          "sp": 0,
+          "turn": 4631
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 9,
+          "level": 1,
+          "line": 471,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 1,
+          "turn": 5391
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 13100,
+        "file": "checkpoint-000112-t0000013105.save",
+        "game_turn": 13105,
+        "keys": 2332,
+        "max_depth": 1,
+        "race_idx": 2,
+        "seed": 1040044
+      },
+      "selection": {
+        "first_visible_turn": 13185,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "small kobold",
+        "no_omniscient_trigger": true,
+        "observation_line": 1101,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 13185
+      },
+      "status": "candidate",
+      "turn": 13212,
+      "type": "death",
+      "witness": {
+        "cause": "a small kobold"
+      }
+    }
+  ]
+}

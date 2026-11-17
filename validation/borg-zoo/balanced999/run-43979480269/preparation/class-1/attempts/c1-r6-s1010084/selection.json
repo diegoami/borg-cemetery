@@ -1,0 +1,86 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 25500,
+        "file": "checkpoint-000243-t0000025503.save",
+        "game_turn": 25503,
+        "keys": 5167,
+        "max_depth": 1,
+        "race_idx": 6,
+        "seed": 1010084
+      },
+      "selection": {
+        "first_visible_turn": 25513,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 4,
+        "monster_kind": "crow",
+        "no_omniscient_trigger": true,
+        "observation_line": 2407,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 25513
+      },
+      "status": "candidate",
+      "turn": 25543,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 3,
+          "level": 3,
+          "line": 2409,
+          "max_hp": 23,
+          "max_sp": 5,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 52
+            }
+          ],
+          "sp": 0,
+          "turn": 25533
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 3,
+          "line": 2410,
+          "max_hp": 23,
+          "max_sp": 5,
+          "monsters": [
+            {
+              "index": 4,
+              "race": 52
+            }
+          ],
+          "sp": 0,
+          "turn": 25543
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 15,
+          "level": 3,
+          "line": 2443,
+          "max_hp": 23,
+          "max_sp": 5,
+          "monsters": [],
+          "sp": 2,
+          "turn": 26673
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 40761,
+      "type": "death",
+      "witness": {
+        "cause": "a kobold shaman"
+      }
+    }
+  ]
+}

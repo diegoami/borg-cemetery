@@ -15,13 +15,21 @@ limitations. It is not yet an accepted milestone.
 
 ## Proposed redesign
 
-The [controlled-experiment redesign](docs/cemetery-redesign.md) proposes a fixed
-seed suite, a small set of exact build/configuration variants, database-backed
-run tracking and bounded external artifact storage. It defines independent
-near-death qualification, on-demand reconstruction and analysis, and a feedback
-loop through saved scenarios and cohort validation. This is a design proposal;
-the collection and Git archive behavior described below is still the current
-implementation.
+The [battle-scenario architecture proposal](docs/cemetery-redesign.md) studies
+how Borgs survive or die in reproducible encounters. It uses thousands of fixed
+source cases, exact build/configuration evidence, portable scenario packages and
+bounded external storage. New-build checks retire obsolete investigations while
+preserving selected regression situations. Borg-zoo keeps population comparisons;
+parameter optimization is outside this proposal. Other projects/users can supply
+adapters and maintain their own scenario assessments. See the
+[integration contract](docs/architecture/scenario-contract.md) and
+[architecture review prompt](docs/architecture/review-prompt.md).
+The proposed managed backend is [Firebase](docs/architecture/firebase-backend.md):
+Firestore documents, Cloud Storage artifacts and Auth, with a small API/coordinator.
+The [review response](docs/architecture/review-response.md) records corrections
+to study identity, relevance, source imports, qualification and recovery.
+This is proposed behavior; the collection and Git archive behavior below is
+still the current implementation.
 
 ## Statistics by build
 

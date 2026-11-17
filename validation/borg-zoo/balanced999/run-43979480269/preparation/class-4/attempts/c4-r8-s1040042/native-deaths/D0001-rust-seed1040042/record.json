@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040042",
+  "run_kind": "harness",
+  "character": "Dunadan Necromancer",
+  "raw_cause": "a floating eye",
+  "terminal": {
+    "cause": "a floating eye",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 27721,
+    "race_idx": 8,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040042,
+    "flags": "menu",
+    "git_rev": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+    "git_dirty": "no",
+    "source_sha256": "a03559030fc961b718b1bbcb510376954e90299a08c3cd70f79004d5f7ba974e",
+    "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0",
+    "borg_txt_sha256": "52bb03f757fec695a9fc2d4a66b28eedfed0dc165e0794727f79824a64d20c19",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 200,
+    "of": 2295
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/harvest/attempts/c4-r8-s1040042",
+      "result_sha256": "2c0ba7a2ec964218ee05a8052ca325e88af06659d78313ca76af8f26eb39c2ff",
+      "raw_sha256": {
+        "keys.log": "2c0ba7a2ec964218ee05a8052ca325e88af06659d78313ca76af8f26eb39c2ff",
+        "messages.log": "884001246408f7850030a81ec3857b60d68d5a474813dc6ddef416afd67613b2",
+        "state.log": "52a738c48e74fb1630bef2bcb12c92caf96ee139a82478a9e49e7dd468b59b94"
+      },
+      "source_commit": "a83551378e22a4930b1a4d8d78d7d465465b0a25",
+      "binary_sha256": "8f11804fabf5c5b195f470b54e00978da404d0e1865b75b9390248c1de2ea5b0"
+    }
+  ],
+  "encounter_family": "start-d8bfc07de9703c688da77101e90a3e8b2444003cb32d45421b84a6b593a3abe9",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "640e447f800b38312715c79e671720589d9d766c68874463517070631051f10f",
+    "config.txt": "b93612025893038d83a489a3938063df1a7c4383fac6a5df34b8b5aa7a389e6a",
+    "depths.json": "be203e8b78b3bb513369c2c1ee93e9ef828e92d69ab187bca03679a0c6b90cbf",
+    "params.json": "f61afc24dfd2efeb782d3725890cd562bcfc61a762d8b55483fbf7f93299d76f",
+    "summary.json": "5ea8f51deb57a3a13fa865c93ccacb32a84200392369753acdcfa6d990924d6a",
+    "trace-tail.jsonl": "3b20efe0303bf9f469b3705e0cb610d878bfdf74b3bcdd2d3754ffbf1dcbc6fa"
+  },
+  "investigation": null,
+  "issue": null
+}

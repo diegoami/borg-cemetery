@@ -1,0 +1,368 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 2600,
+        "file": "checkpoint-000026-t0000002603.save",
+        "game_turn": 2603,
+        "keys": 566,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1030046
+      },
+      "selection": {
+        "first_visible_turn": 2633,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 39,
+        "monster_kind": "giant white mouse",
+        "no_omniscient_trigger": true,
+        "observation_line": 263,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 2633
+      },
+      "status": "candidate",
+      "turn": 2753,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 5,
+          "level": 2,
+          "line": 275,
+          "max_hp": 23,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 54,
+              "race": 23
+            },
+            {
+              "index": 55,
+              "race": 23
+            },
+            {
+              "index": 39,
+              "race": 23
+            },
+            {
+              "index": 36,
+              "race": 23
+            },
+            {
+              "index": 46,
+              "race": 23
+            },
+            {
+              "index": 52,
+              "race": 23
+            }
+          ],
+          "sp": 2,
+          "turn": 2753
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 5,
+          "level": 2,
+          "line": 275,
+          "max_hp": 23,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 54,
+              "race": 23
+            },
+            {
+              "index": 55,
+              "race": 23
+            },
+            {
+              "index": 39,
+              "race": 23
+            },
+            {
+              "index": 36,
+              "race": 23
+            },
+            {
+              "index": 46,
+              "race": 23
+            },
+            {
+              "index": 52,
+              "race": 23
+            }
+          ],
+          "sp": 2,
+          "turn": 2753
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 20,
+          "level": 2,
+          "line": 276,
+          "max_hp": 23,
+          "max_sp": 4,
+          "monsters": [
+            {
+              "index": 55,
+              "race": 23
+            },
+            {
+              "index": 39,
+              "race": 23
+            },
+            {
+              "index": 36,
+              "race": 23
+            },
+            {
+              "index": 54,
+              "race": 23
+            },
+            {
+              "index": 46,
+              "race": 23
+            },
+            {
+              "index": 52,
+              "race": 23
+            },
+            {
+              "index": 41,
+              "race": 23
+            }
+          ],
+          "sp": 2,
+          "turn": 2763
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 2600,
+        "file": "checkpoint-000026-t0000002603.save",
+        "game_turn": 2603,
+        "keys": 566,
+        "max_depth": 1,
+        "race_idx": 4,
+        "seed": 1030046
+      },
+      "selection": {
+        "first_visible_turn": 2633,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 39,
+        "monster_kind": "giant white mouse",
+        "no_omniscient_trigger": true,
+        "observation_line": 263,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 2633
+      },
+      "status": "duplicate_saved_start",
+      "turn": 2871,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 0,
+          "hp": 5,
+          "level": 2,
+          "line": 287,
+          "max_hp": 23,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 2,
+          "turn": 2871
+        },
+        "minimum": {
+          "depth": 0,
+          "hp": 5,
+          "level": 2,
+          "line": 287,
+          "max_hp": 23,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 2,
+          "turn": 2871
+        },
+        "recovery": {
+          "depth": 0,
+          "hp": 20,
+          "level": 2,
+          "line": 289,
+          "max_hp": 23,
+          "max_sp": 4,
+          "monsters": [],
+          "sp": 4,
+          "turn": 3631
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 25247,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 4,
+          "level": 4,
+          "line": 2389,
+          "max_hp": 30,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 22,
+              "race": 48
+            }
+          ],
+          "sp": 7,
+          "turn": 25247
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 4,
+          "level": 4,
+          "line": 2389,
+          "max_hp": 30,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 22,
+              "race": 48
+            }
+          ],
+          "sp": 7,
+          "turn": 25247
+        },
+        "recovery": {
+          "depth": 2,
+          "hp": 28,
+          "level": 5,
+          "line": 2398,
+          "max_hp": 37,
+          "max_sp": 9,
+          "monsters": [],
+          "sp": 9,
+          "turn": 26167
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 5,
+        "depth": 2,
+        "due_turn": 26600,
+        "file": "checkpoint-000248-t0000026607.save",
+        "game_turn": 26607,
+        "keys": 4999,
+        "max_depth": 2,
+        "race_idx": 4,
+        "seed": 1030046
+      },
+      "selection": {
+        "first_visible_turn": 26667,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 21,
+        "monster_kind": "large white snake",
+        "no_omniscient_trigger": true,
+        "observation_line": 2448,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 26667
+      },
+      "status": "candidate",
+      "turn": 27217,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 6,
+          "level": 5,
+          "line": 2498,
+          "max_hp": 37,
+          "max_sp": 9,
+          "monsters": [
+            {
+              "index": 8,
+              "race": 36
+            },
+            {
+              "index": 21,
+              "race": 24
+            }
+          ],
+          "sp": 9,
+          "turn": 27167
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 2,
+          "level": 5,
+          "line": 2503,
+          "max_hp": 37,
+          "max_sp": 9,
+          "monsters": [
+            {
+              "index": 21,
+              "race": 24
+            }
+          ],
+          "sp": 9,
+          "turn": 27217
+        },
+        "recovery": {
+          "depth": 2,
+          "hp": 24,
+          "level": 5,
+          "line": 2509,
+          "max_hp": 37,
+          "max_sp": 9,
+          "monsters": [],
+          "sp": 9,
+          "turn": 28017
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 5,
+        "depth": 2,
+        "due_turn": 50700,
+        "file": "checkpoint-000476-t0000050702.save",
+        "game_turn": 50702,
+        "keys": 9543,
+        "max_depth": 3,
+        "race_idx": 4,
+        "seed": 1030046
+      },
+      "selection": {
+        "first_visible_turn": 50752,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 9,
+        "monster_kind": "cave spider",
+        "no_omniscient_trigger": true,
+        "observation_line": 4710,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 50752
+      },
+      "status": "candidate",
+      "turn": 50780,
+      "type": "death",
+      "witness": {
+        "cause": "a cave spider"
+      }
+    }
+  ]
+}

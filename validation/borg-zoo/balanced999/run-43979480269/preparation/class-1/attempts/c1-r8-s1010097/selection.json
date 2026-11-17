@@ -1,0 +1,112 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 53600,
+        "file": "checkpoint-000501-t0000053603.save",
+        "game_turn": 53603,
+        "keys": 10235,
+        "max_depth": 2,
+        "race_idx": 8,
+        "seed": 1010097
+      },
+      "selection": {
+        "first_visible_turn": 53663,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 22,
+        "monster_kind": "wild cat",
+        "no_omniscient_trigger": true,
+        "observation_line": 4882,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 53663
+      },
+      "status": "candidate",
+      "turn": 54033,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 6,
+          "level": 4,
+          "line": 4917,
+          "max_hp": 32,
+          "max_sp": 8,
+          "monsters": [
+            {
+              "index": 32,
+              "race": 48
+            },
+            {
+              "index": 18,
+              "race": 39
+            }
+          ],
+          "sp": 2,
+          "turn": 54013
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 2,
+          "level": 5,
+          "line": 4919,
+          "max_hp": 35,
+          "max_sp": 10,
+          "monsters": [
+            {
+              "index": 18,
+              "race": 39
+            }
+          ],
+          "sp": 2,
+          "turn": 54033
+        },
+        "recovery": {
+          "depth": 3,
+          "hp": 22,
+          "level": 5,
+          "line": 4925,
+          "max_hp": 35,
+          "max_sp": 10,
+          "monsters": [],
+          "sp": 6,
+          "turn": 54823
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 1,
+        "clevel": 6,
+        "depth": 3,
+        "due_turn": 81100,
+        "file": "checkpoint-000724-t0000081102.save",
+        "game_turn": 81102,
+        "keys": 14747,
+        "max_depth": 3,
+        "race_idx": 8,
+        "seed": 1010097
+      },
+      "selection": {
+        "first_visible_turn": 81152,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 35,
+        "monster_kind": "kobold shaman",
+        "no_omniscient_trigger": true,
+        "observation_line": 7039,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 81152
+      },
+      "status": "candidate",
+      "turn": 81252,
+      "type": "death",
+      "witness": {
+        "cause": "a kobold shaman"
+      }
+    }
+  ]
+}

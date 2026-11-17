@@ -1,0 +1,134 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 308,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 1,
+    "clevel": 3,
+    "depth": 1,
+    "due_turn": 7500,
+    "file": "checkpoint-000068-t0000007508.save",
+    "game_turn": 7508,
+    "keys": 1454,
+    "max_depth": 1,
+    "race_idx": 1,
+    "seed": 308
+  },
+  "class_idx": 1,
+  "compressed_sha256": "33c192b55588256fd5e97fbc68469cb8ebea5670a71782cd234ec363a5f240fe",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Dagger (1d4) (+4,+4)",
+        "kind": 33,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (4273 turns)",
+        "kind": 4,
+        "slot": 5
+      },
+      {
+        "description": "Robe [2,+0]",
+        "kind": 106,
+        "slot": 6
+      }
+    ],
+    "equipment_kind_signature": "a37ca14d67d7fa42c205d083c82b181744ec20264ddc8a3ac13d2fe01d99bba6",
+    "hp": 22,
+    "inventory": [
+      {
+        "count": 1,
+        "description": "Book of Magic Spells [First Spells]",
+        "kind": 376
+      },
+      {
+        "count": 2,
+        "description": "Apples",
+        "kind": 8
+      },
+      {
+        "count": 3,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 1,
+        "description": "Ultramarine Potion",
+        "kind": 258
+      },
+      {
+        "count": 1,
+        "description": "Lavender Potion",
+        "kind": 250
+      },
+      {
+        "count": 1,
+        "description": "Scroll of Word of Recall",
+        "kind": 208
+      },
+      {
+        "count": 2,
+        "description": "Scrolls titled \"igo nit atunim\"",
+        "kind": 211
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      },
+      {
+        "count": 1,
+        "description": "Rapier (1d6) (+0,+0)",
+        "kind": 35
+      }
+    ],
+    "level": 3,
+    "mana_state": "partial",
+    "max_hp": 22,
+    "max_sp": 6,
+    "sp": 4
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "mage-r1-s308-t0007508-m22",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 22,
+    "max_hp": 22,
+    "max_sp": 6,
+    "sp": 4
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-0e193e2df00dc0615f6ed8bf410d82984a33fd9566d923567f233e248e40c652",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 308,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20001,
+  "race_idx": 1,
+  "save": "start.save.gz",
+  "save_sha256": "ec3e23132e1059fb132a05dda6e2dcd6f45ade8977505a9030e6645c2be9d187",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 7508,
+    "first_visible_turn": 7508,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 0,
+    "monster_index": 22,
+    "monster_kind": "wild dog",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "49f16227cf2188e199d56378346909edbbc09604c291b7a5438704a8e20a8b82",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 7508
+  },
+  "start_turn": 7508,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

@@ -1,0 +1,108 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 1,
+        "depth": 1,
+        "due_turn": 1500,
+        "file": "checkpoint-000015-t0000001501.save",
+        "game_turn": 1501,
+        "keys": 397,
+        "max_depth": 1,
+        "race_idx": 2,
+        "seed": 1040077
+      },
+      "selection": {
+        "first_visible_turn": 1551,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 7,
+        "monster_kind": "yellow mushroom patch",
+        "no_omniscient_trigger": true,
+        "observation_line": 168,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 1551
+      },
+      "status": "candidate",
+      "turn": 2381,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 175,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 40
+            }
+          ],
+          "sp": 2,
+          "turn": 2381
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 2,
+          "level": 1,
+          "line": 175,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [
+            {
+              "index": 7,
+              "race": 40
+            }
+          ],
+          "sp": 2,
+          "turn": 2381
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 11,
+          "level": 1,
+          "line": 177,
+          "max_hp": 11,
+          "max_sp": 2,
+          "monsters": [],
+          "sp": 2,
+          "turn": 2400
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 4,
+        "clevel": 2,
+        "depth": 1,
+        "due_turn": 13100,
+        "file": "checkpoint-000125-t0000013101.save",
+        "game_turn": 13101,
+        "keys": 2590,
+        "max_depth": 1,
+        "race_idx": 2,
+        "seed": 1040077
+      },
+      "selection": {
+        "first_visible_turn": 13141,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 14,
+        "monster_kind": "kobold shaman",
+        "no_omniscient_trigger": true,
+        "observation_line": 1252,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 13141
+      },
+      "status": "candidate",
+      "turn": 13169,
+      "type": "death",
+      "witness": {
+        "cause": "a kobold shaman"
+      }
+    }
+  ]
+}

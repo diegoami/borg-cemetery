@@ -1,0 +1,114 @@
+{
+  "baseline_profile": "profile.txt",
+  "baseline_profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+  "birth_seed": 305,
+  "borg_memory_restored": false,
+  "checkpoint": {
+    "capture_method": "fork_private_engine",
+    "class_idx": 3,
+    "clevel": 2,
+    "depth": 1,
+    "due_turn": 8300,
+    "file": "checkpoint-000083-t0000008301.save",
+    "game_turn": 8301,
+    "keys": 1742,
+    "max_depth": 2,
+    "race_idx": 5,
+    "seed": 305
+  },
+  "class_idx": 3,
+  "compressed_sha256": "497bfd115fa6f88b033422373f468e62b5b00099578d6096480322a6311f619c",
+  "coverage": {
+    "depth": 1,
+    "equipment": [
+      {
+        "description": "Mace (2d4) (+0,+0)",
+        "kind": 52,
+        "slot": 1
+      },
+      {
+        "description": "Wooden Torch (4237 turns)",
+        "kind": 4,
+        "slot": 5
+      },
+      {
+        "description": "Cloak [1,+0]",
+        "kind": 123,
+        "slot": 7
+      },
+      {
+        "description": "Wicker Shield [2,+6] {??}",
+        "kind": 132,
+        "slot": 8
+      }
+    ],
+    "equipment_kind_signature": "a14cc4dc7eb14156baa5d5999a4b112ab6a6cde113b13fef3da8828b661c7696",
+    "hp": 18,
+    "inventory": [
+      {
+        "count": 2,
+        "description": "Holy Books of Prayers [Novice's Handbook]",
+        "kind": 386
+      },
+      {
+        "count": 5,
+        "description": "Rations of Food",
+        "kind": 11
+      },
+      {
+        "count": 2,
+        "description": "Potions of Cure Serious Wounds",
+        "kind": 232
+      },
+      {
+        "count": 2,
+        "description": "Wooden Torches (5000 turns)",
+        "kind": 4
+      }
+    ],
+    "level": 2,
+    "mana_state": "partial",
+    "max_hp": 18,
+    "max_sp": 4,
+    "sp": 3
+  },
+  "event_kind": "observed_combat_encounter",
+  "id": "priest-r5-s305-t0008311-m24",
+  "independent_life": false,
+  "initial_observed": {
+    "hp": 18,
+    "max_hp": 18,
+    "max_sp": 4,
+    "sp": 3
+  },
+  "origin": {
+    "binary_sha256": "afc233212a09a61625120c54d71e2f147f614f61a5ffd0d4140c274e5fb6a776",
+    "encounter_family": "start-a86c87e76e0cc9cbacc1f091c6b92285303b39a0228a0568f49113f69f0c864d",
+    "parent_death_id": null,
+    "program": "borg-reborn-rs",
+    "seed": 305,
+    "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3"
+  },
+  "original_continuation_verified": false,
+  "original_endpoint_turn": 20004,
+  "race_idx": 5,
+  "save": "start.save.gz",
+  "save_sha256": "d343ff2030be6fef5acaa22fac692222096f39d2544a717e9cb92e5f8c3322ed",
+  "schema": "borg-cemetery/save-scenario@1",
+  "selection": {
+    "first_contact_turn": 8311,
+    "first_visible_turn": 8311,
+    "kind": "first_visible_kind_in_combat_associated_episode",
+    "lead_engine_turns": 10,
+    "monster_index": 24,
+    "monster_kind": "clear icky thing",
+    "no_omniscient_trigger": true,
+    "observation_sha256": "1b73faf43412595e3eac9e54a98dfad6ea4986421ec37cc45335cf1f7a3c273b",
+    "terminal_individual_identity": "unavailable; kind association only",
+    "trigger_turn": 8311
+  },
+  "start_turn": 8301,
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "status": "ready_for_restart_trials"
+}

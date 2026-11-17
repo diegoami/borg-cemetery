@@ -1,0 +1,207 @@
+{
+  "incidents": [
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 3,
+        "clevel": 3,
+        "depth": 1,
+        "due_turn": 56700,
+        "file": "checkpoint-000567-t0000056709.save",
+        "game_turn": 56709,
+        "keys": 11567,
+        "max_depth": 1,
+        "race_idx": 9,
+        "seed": 1030032
+      },
+      "selection": {
+        "first_visible_turn": 56709,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 63,
+        "monster_kind": "giant white mouse",
+        "no_omniscient_trigger": true,
+        "observation_line": 5697,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 56709
+      },
+      "status": "candidate",
+      "turn": 57119,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 1,
+          "hp": 9,
+          "level": 4,
+          "line": 5725,
+          "max_hp": 42,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 64,
+              "race": 26
+            },
+            {
+              "index": 71,
+              "race": 26
+            },
+            {
+              "index": 70,
+              "race": 26
+            },
+            {
+              "index": 75,
+              "race": 26
+            },
+            {
+              "index": 52,
+              "race": 26
+            },
+            {
+              "index": 77,
+              "race": 26
+            },
+            {
+              "index": 33,
+              "race": 26
+            },
+            {
+              "index": 72,
+              "race": 26
+            },
+            {
+              "index": 59,
+              "race": 26
+            },
+            {
+              "index": 78,
+              "race": 26
+            },
+            {
+              "index": 76,
+              "race": 26
+            },
+            {
+              "index": 73,
+              "race": 26
+            }
+          ],
+          "sp": 5,
+          "turn": 56989
+        },
+        "minimum": {
+          "depth": 1,
+          "hp": 0,
+          "level": 4,
+          "line": 5738,
+          "max_hp": 42,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 47,
+              "race": 26
+            },
+            {
+              "index": 25,
+              "race": 26
+            },
+            {
+              "index": 45,
+              "race": 26
+            },
+            {
+              "index": 27,
+              "race": 26
+            },
+            {
+              "index": 41,
+              "race": 26
+            },
+            {
+              "index": 44,
+              "race": 26
+            },
+            {
+              "index": 49,
+              "race": 26
+            },
+            {
+              "index": 39,
+              "race": 26
+            },
+            {
+              "index": 46,
+              "race": 26
+            }
+          ],
+          "sp": 5,
+          "turn": 57119
+        },
+        "recovery": {
+          "depth": 1,
+          "hp": 39,
+          "level": 4,
+          "line": 5739,
+          "max_hp": 42,
+          "max_sp": 7,
+          "monsters": [
+            {
+              "index": 52,
+              "race": 26
+            },
+            {
+              "index": 47,
+              "race": 26
+            },
+            {
+              "index": 45,
+              "race": 26
+            },
+            {
+              "index": 27,
+              "race": 26
+            },
+            {
+              "index": 25,
+              "race": 26
+            },
+            {
+              "index": 41,
+              "race": 26
+            },
+            {
+              "index": 39,
+              "race": 26
+            },
+            {
+              "index": 51,
+              "race": 26
+            },
+            {
+              "index": 46,
+              "race": 26
+            },
+            {
+              "index": 44,
+              "race": 26
+            },
+            {
+              "index": 49,
+              "race": 26
+            }
+          ],
+          "sp": 5,
+          "turn": 57129
+        }
+      }
+    },
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 58180,
+      "type": "death",
+      "witness": {
+        "cause": "poison"
+      }
+    }
+  ]
+}

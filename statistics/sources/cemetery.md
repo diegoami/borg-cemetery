@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `291d4780947710c199a3a1a967d133a4e943b8c0600e67339603795a914b2b9b`.
+Input inventory SHA-256: `369331f6715081eefc1639c361b1e7de2c59bdf53ba6430010eaf1b0ef4f08fc`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
@@ -16,12 +16,13 @@ The companion snapshot for an external source retains normalized statistical fie
 | a wild cat | 6 |
 | a grey mushroom patch | 6 |
 | a cutpurse | 4 |
+| a crow | 3 |
 | a giant yellow centipede | 3 |
 | a grey mold | 3 |
 | Grip, Farmer Maggot's Dog | 3 |
+| a giant white mouse | 2 |
 | starvation | 2 |
 | a small kobold | 2 |
-| a crow | 2 |
 | a fatal wound | 2 |
 | a snaga | 2 |
 | a blue yeek | 2 |
@@ -42,7 +43,6 @@ The companion snapshot for an external source retains normalized statistical fie
 | a black naga | 1 |
 | a brown mold | 1 |
 | a baby black dragon | 1 |
-| a giant white mouse | 1 |
 | a radiation eye | 1 |
 | a wild dog | 1 |
 
@@ -52,15 +52,15 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 88 | 2626 | 28706.5 | 75884.25 | 1094860 |
-| depth | 63 | 0 | 1 | 1.89 | 18 |
-| level | 63 | 1 | 2 | 2.98 | 8 |
+| turn | 90 | 2626 | 28706.5 | 75141.50 | 1094860 |
+| depth | 65 | 0 | 1 | 1.86 | 18 |
+| level | 65 | 1 | 2 | 2.98 | 8 |
 
 ## Characters
 
 | Character | Dossiers |
 | --- | --- |
-| Half-Elf Druid | 3 |
+| Half-Elf Druid | 4 |
 | Dwarf Necromancer | 3 |
 | Elf Rogue | 3 |
 | Human Ranger | 3 |
@@ -81,6 +81,7 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Hobbit Druid | 2 |
 | Human Druid | 2 |
 | Elf Ranger | 2 |
+| Half-Elf Blackguard | 1 |
 | Human Warrior | 1 |
 | Hobbit Rogue | 1 |
 | Gnome Blackguard | 1 |

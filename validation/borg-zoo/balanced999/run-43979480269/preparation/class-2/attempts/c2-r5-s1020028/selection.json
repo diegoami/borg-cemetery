@@ -1,0 +1,86 @@
+{
+  "incidents": [
+    {
+      "reason": "no observable incident threat association",
+      "status": "excluded",
+      "turn": 58456,
+      "type": "observed_critical_recovery",
+      "witness": {
+        "first": {
+          "depth": 2,
+          "hp": 10,
+          "level": 4,
+          "line": 5776,
+          "max_hp": 40,
+          "max_sp": 8,
+          "monsters": [
+            {
+              "index": 1,
+              "race": 48
+            }
+          ],
+          "sp": 0,
+          "turn": 58456
+        },
+        "minimum": {
+          "depth": 2,
+          "hp": 10,
+          "level": 4,
+          "line": 5776,
+          "max_hp": 40,
+          "max_sp": 8,
+          "monsters": [
+            {
+              "index": 1,
+              "race": 48
+            }
+          ],
+          "sp": 0,
+          "turn": 58456
+        },
+        "recovery": {
+          "depth": 2,
+          "hp": 20,
+          "level": 4,
+          "line": 5804,
+          "max_hp": 40,
+          "max_sp": 8,
+          "monsters": [],
+          "sp": 0,
+          "turn": 58926
+        }
+      }
+    },
+    {
+      "checkpoint": {
+        "capture_method": "fork_private_engine",
+        "class_idx": 2,
+        "clevel": 4,
+        "depth": 2,
+        "due_turn": 64700,
+        "file": "checkpoint-000632-t0000064706.save",
+        "game_turn": 64706,
+        "keys": 12870,
+        "max_depth": 2,
+        "race_idx": 5,
+        "seed": 1020028
+      },
+      "selection": {
+        "first_visible_turn": 64786,
+        "kind": "first_visible_kind_in_incident_episode",
+        "monster_index": 21,
+        "monster_kind": "apprentice",
+        "no_omniscient_trigger": true,
+        "observation_line": 6316,
+        "terminal_individual_identity": "unavailable; kind association only",
+        "trigger_turn": 64786
+      },
+      "status": "candidate",
+      "turn": 64810,
+      "type": "death",
+      "witness": {
+        "cause": "an apprentice"
+      }
+    }
+  ]
+}
