@@ -43,6 +43,6 @@ BORG_IMPL=rust bash /tmp/cemetery-D0079-rust-seed1356248624-4ecb93d7/harness/bui
 This starts a new process from the original birth. It does not verify a missing recorder bundle.
 
 ```bash
-BORG_IMPL=rust BORG_DEATH_RECORDS_DIR=/tmp/D0079-rust-seed1356248624-diagnostic-deaths \
+BORG_CEMETERY_DIR="$PWD" BORG_IMPL=rust BORG_DEATH_RECORDS_DIR=/tmp/D0079-rust-seed1356248624-diagnostic-deaths \
   bash /tmp/cemetery-D0079-rust-seed1356248624-4ecb93d7/harness/run.sh /tmp/D0079-rust-seed1356248624-seed-rerun 1356248624 2 0 44418 menu
 ```
