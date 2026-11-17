@@ -36,6 +36,8 @@ class CaseLauncherTest(unittest.TestCase):
         self.assertEqual(plan(root / 'deaths/D0007')['scenario'], root / 'scenarios/S0003')
         self.assertEqual(plan(root / 'deaths/D0005-recorded')['kind'], 'legacy')
         self.assertEqual(plan(root / 'deaths/D0001-seed8400-warrior')['kind'], 'seed')
+        # Records without 'program' take the source project from their schema.
+        self.assertEqual(plan(root / 'deaths/D0086-rust-seed2109297965')['program'], 'borg-reborn-rs')
 
     def test_human_recording_is_attached_and_mixed_play_is_labelled(self):
         with tempfile.TemporaryDirectory() as tmp:
