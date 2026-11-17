@@ -4,25 +4,26 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `369331f6715081eefc1639c361b1e7de2c59bdf53ba6430010eaf1b0ef4f08fc`.
+Input inventory SHA-256: `261bba29a09fdf1d18d96289c9ec966bb6db6a21f13084c59650d9e992a4277c`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
 | Cause | Dossiers |
 | --- | --- |
 | poison | 10 |
-| a soldier | 8 |
+| a soldier | 9 |
+| a wild cat | 9 |
 | Fang, Farmer Maggot's Dog | 7 |
-| a wild cat | 6 |
+| a crow | 6 |
 | a grey mushroom patch | 6 |
 | a cutpurse | 4 |
-| a crow | 3 |
+| a small kobold | 3 |
+| a giant white mouse | 3 |
 | a giant yellow centipede | 3 |
 | a grey mold | 3 |
 | Grip, Farmer Maggot's Dog | 3 |
-| a giant white mouse | 2 |
+| a rock lizard | 2 |
 | starvation | 2 |
-| a small kobold | 2 |
 | a fatal wound | 2 |
 | a snaga | 2 |
 | a blue yeek | 2 |
@@ -52,18 +53,21 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 90 | 2626 | 28706.5 | 75141.50 | 1094860 |
-| depth | 65 | 0 | 1 | 1.86 | 18 |
-| level | 65 | 1 | 2 | 2.98 | 8 |
+| turn | 101 | 2626 | 31855 | 70919.13 | 1094860 |
+| depth | 76 | 0 | 1 | 1.79 | 18 |
+| level | 76 | 1 | 2 | 2.92 | 8 |
 
 ## Characters
 
 | Character | Dossiers |
 | --- | --- |
+| Human Druid | 5 |
+| Human Necromancer | 5 |
+| Half-Elf Blackguard | 4 |
+| Human Ranger | 4 |
 | Half-Elf Druid | 4 |
 | Dwarf Necromancer | 3 |
 | Elf Rogue | 3 |
-| Human Ranger | 3 |
 | Half-Elf Mage | 3 |
 | Half-Troll Priest | 3 |
 | Human Mage | 3 |
@@ -74,14 +78,12 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Measure Dunadan Druid | 2 |
 | Measure Human Necromancer | 2 |
 | Measure Elf Necromancer | 2 |
-| Human Necromancer | 2 |
 | Half-Orc Rogue | 2 |
 | Dunadan Druid | 2 |
 | Elf Druid | 2 |
 | Hobbit Druid | 2 |
-| Human Druid | 2 |
 | Elf Ranger | 2 |
-| Half-Elf Blackguard | 1 |
+| Human Rogue | 1 |
 | Human Warrior | 1 |
 | Hobbit Rogue | 1 |
 | Gnome Blackguard | 1 |

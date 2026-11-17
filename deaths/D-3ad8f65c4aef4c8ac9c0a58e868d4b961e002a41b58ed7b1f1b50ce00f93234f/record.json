@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-3ad8f65c4aef4c8ac9c0a58e868d4b961e002a41b58ed7b1f1b50ce00f93234f",
+  "run_kind": "harness",
+  "character": "Human Rogue",
+  "raw_cause": "a giant white mouse",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 9976,
+    "race_idx": 0,
+    "class_idx": 6
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1502695781,
+    "flags": "-",
+    "git_rev": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2",
+    "borg_txt_sha256": "751953eddc5dd2c9bad5ac629537c12b3d01ea74abbfece6b4ff410f3522cf34",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1070
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 44098927907-local-replay, artifact deaths-4.2.6-reborn-rust-main-4d83dd26-local, classes-18/4.2.6-reborn-rust-main-4d83dd26/reborn-main-pbd1/1502695781",
+      "result_sha256": "a2d723597e9e0a9ae7a51a82ae6d8efa9b89e547c78b03e75e4374e1165f33e8",
+      "raw_sha256": {
+        "keys.log": "a2d723597e9e0a9ae7a51a82ae6d8efa9b89e547c78b03e75e4374e1165f33e8",
+        "messages.log": "1a803f5df8223285187107e8c9a41bed959c20756d751f895fb0457ca17a8add",
+        "state.log": "07b7ad9a51dcbbafe6ad75b24e4a1150a16fe88394b7b1eca5feedd4a1f168a6"
+      },
+      "source_commit": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+      "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2"
+    }
+  ],
+  "encounter_family": "start-aa86b875889342f78cb632f646b44e949a872e68dccc700c2a7b4e71e403d141",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ba2f2fc4b2618443443c25bfa635b71728b9eed12e423ca60719c87f246b1e82",
+    "config.txt": "81aa5b5fe0b0b135a27b518ee7e589f21c73377072b64d69514d3937e3b7c841",
+    "params-core.json": "562738e606406804c42b04192e067e02bb736b4439d49022b9e0165751dcea6a",
+    "summary.json": "957198cc3bcb3b958082282e4198eaf2b338d50c15ab189b5629727b279a5257",
+    "trace-core-tail.jsonl": "7c5738eff5ecaa772c721b7cd3996f91b20ee852d021f9ef0110b71739e03418"
+  },
+  "investigation": null,
+  "issue": null
+}
