@@ -97,7 +97,10 @@ python3 scripts/import_zoo_deaths.py --bundles DIR --run-id ID
 Each reproduced bundle becomes a `D-<sha256>` dossier, registered with its
 README, REPLAY and launchers. The run page `runs/zoo-<experiment>-<run>/`
 (README.md, deaths.json) lists every death with its dossier, or with the reason
-it has none (not reproduced, failed replay, unsupported harness kind). A death
+it has none: not reproduced, failed replay, unsupported harness kind, or a
+bundle that no index line names (the zoo shard stopped before indexing it).
+Listed bundles are never imported, because the index line carries their
+reproduction status and build identity. A death
 already in the registry is a repeat. Raw logs stay in the zoo artifact, which
 the dossier's `raw_directory` names. Exact reruns of zoo dossiers use the zoo
 path of `rerun-death.py` (#59).

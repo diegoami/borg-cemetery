@@ -64,6 +64,37 @@ def entries(root):
                 yield artifact, index.parent, json.loads(line)
 
 
+def unindexed(root, found):
+    """Rows for bundle directories no index line names: a shard cut short
+    while the bundle was being written or indexed. Listed, never imported:
+    the index line carries the reproduction status and build identity."""
+    named = {(base.resolve() / e['bundle']) for _, base, e in found if e.get('bundle')}
+    rows = []
+    # Every bundle has user/borg.txt from the moment it starts, even one
+    # whose replay was cut short before writing anything else.
+    for marker in sorted(Path(root).rglob('user/borg.txt')):
+        bundle = marker.parent.parent
+        if bundle.resolve() in named:
+            continue
+        manifest = {}
+        if (bundle / 'zoo-death.json').exists():
+            try:
+                manifest = json.loads((bundle / 'zoo-death.json').read_text())
+            except ValueError:
+                pass
+        rel = bundle.relative_to(root).parts
+        cell = manifest.get('cell') or '/'.join(rel[-4:])
+        row = {k: manifest.get(k) for k in ('seed', 'specimen', 'profile', 'character', 'cause', 'status', 'experiment')}
+        row.update(cell=cell, artifact=rel[0], imported='skipped',
+                   final={k: (manifest.get('final') or {}).get(k) for k in ('turn', 'level', 'depth', 'max_depth')},
+                   reason='not imported: no index entry (the shard stopped before indexing this bundle)')
+        if row['seed'] is None and rel[-1].isdigit():
+            row['seed'] = int(rel[-1])
+        row['profile'] = row['profile'] or (rel[-2] if len(rel) >= 2 else None)
+        rows.append(row)
+    return rows
+
+
 def import_one(export, artifact, base, entry, run_id, repo):
     """Export one bundle; a row for the run page."""
     row = {k: entry.get(k) for k in ('cell', 'seed', 'specimen', 'profile', 'character', 'cause', 'status')}
@@ -73,6 +104,10 @@ def import_one(export, artifact, base, entry, run_id, repo):
         row['imported'] = 'skipped'
         row['reason'] = entry.get('error') or entry.get('status')
         return row
+    impl = (entry.get('build') or {}).get('impl')
+    if not entry.get('bundle') or not impl:
+        row.update(imported='skipped', reason='index entry has no bundle or build identity')
+        return row
     bundle = base / entry['bundle']
     keys = bundle / 'keys.log'
     if not keys.is_file() or sha256(keys) != entry.get('play_sha256'):
@@ -81,7 +116,7 @@ def import_one(export, artifact, base, entry, run_id, repo):
     location = (f'borg-zoo run {run_id}, artifact {artifact}, {entry["bundle"]}'
                 + (f' (https://github.com/{repo}/actions/runs/{run_id}, 90-day retention)'
                    if str(run_id).isdigit() else ''))
-    case, what = export.export(bundle, entry['build']['impl'], bundle / 'BUILD_ID', raw_location=location)
+    case, what = export.export(bundle, impl, bundle / 'BUILD_ID', raw_location=location)
     row['case'], row['imported'] = case, what
     if case is None:
         row['reason'] = what
@@ -124,17 +159,22 @@ def main(argv=None):
     ap.add_argument('--repo', default=ZOO)
     ap.add_argument('--runs-dir', type=Path, help='where the run page goes (default runs/, or beside a temporary registry)')
     a = ap.parse_args(argv)
+    if a.run and a.run_id:
+        ap.error('--run-id is for --bundles; --run already names the run')
     run_id = a.run or a.run_id or 'local'
     export = exporter()
     registry = export.registry_dir().resolve()
     with tempfile.TemporaryDirectory(prefix='zoo-deaths-') as tmp:
         root = download(a.run, a.repo, Path(tmp)) if a.run else a.bundles
         found = list(entries(root))
-        if not found:
+        orphans = unindexed(root, found)
+        if not found and not orphans:
             print(f'import_zoo_deaths: no death bundles in run {run_id}', file=sys.stderr)
             return 1
-        rows = [import_one(export, *item, run_id, a.repo) for item in found]
+        rows = [import_one(export, *item, run_id, a.repo) for item in found] + orphans
     experiments = sorted({e.get('experiment') for _, _, e in found if e.get('experiment')})
+    if not experiments:
+        experiments = sorted({r.get('experiment') for r in orphans if r.get('experiment')})
     experiment = experiments[0] if len(experiments) == 1 else '+'.join(experiments) or 'unknown'
     if any(r.get('case') for r in rows):
         export.aggregate(registry)

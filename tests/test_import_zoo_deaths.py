@@ -18,6 +18,7 @@ KEYS_SHA = hashlib.sha256(KEYS).hexdigest()
 def bundle(base, cell, seed, status='reproduced', keys=KEYS, trace_total=None):
     out = base / cell
     (out / 'user').mkdir(parents=True)
+    (out / 'user/borg.txt').write_text('borg_cheat_death = FALSE\n')
     (out / 'keys.log').write_bytes(keys)
     (out / 'summary.json').write_text(json.dumps({
         'seed': seed, 'race': 'Human', 'race_idx': 0, 'class': 'Druid', 'class_idx': 2, 'dead': True,
@@ -72,6 +73,48 @@ class ImportZooDeathsTest(unittest.TestCase):
         self.assertEqual(record['core_decision_trace'], {'file': 'trace-core-tail.jsonl', 'lines': 5, 'of': 4000})
         self.assertIn(rows[1]['case'][:14], readme)
         self.assertIn('1 of 3 deaths have a dossier', readme)
+
+    def test_bundles_without_an_index_line_are_listed_not_imported(self):
+        def build(base):
+            bundle(base, 'suite/s/p/1', 1)
+            bundle(base, 'suite/s/p/2', 2)
+            lines = (base / 'index.jsonl').read_text().splitlines()
+            (base / 'index.jsonl').write_text(lines[0] + '\n')  # the shard stopped before indexing seed 2
+            (base / 'suite/s/p/3/user').mkdir(parents=True)  # a replay cut short at its start
+            (base / 'suite/s/p/3/user/borg.txt').write_text('x\n')
+        code, deaths, readme, records = self.run_import(build)
+        self.assertEqual(code, 0)
+        rows = {r['seed']: r for r in deaths['deaths']}
+        self.assertEqual(rows[1]['imported'], 'exported')
+        self.assertEqual(rows[2]['imported'], 'skipped')
+        self.assertIn('no index entry', rows[2]['reason'])
+        self.assertEqual(rows[3]['imported'], 'skipped')
+        self.assertEqual(len(records), 1)
+        self.assertIn('1 of 3 deaths have a dossier', readme)
+
+    def test_one_bad_index_line_does_not_stop_the_run(self):
+        def build(base):
+            bundle(base, 'suite/s/p/1', 1)
+            bundle(base, 'suite/s/p/2', 2)
+            lines = [json.loads(line) for line in (base / 'index.jsonl').read_text().splitlines()]
+            del lines[1]['build']
+            (base / 'index.jsonl').write_text(''.join(json.dumps(line) + '\n' for line in lines))
+        _, deaths, _, records = self.run_import(build)
+        rows = {r['seed']: r for r in deaths['deaths']}
+        self.assertEqual(rows[1]['imported'], 'exported')
+        self.assertIn('no bundle or build identity', rows[2]['reason'])
+
+    def test_an_unreadable_trace_count_falls_back_to_the_kept_lines(self):
+        def build(base):
+            bundle(base, 'suite/s/p/1', 1, trace_total=4000)
+            (base / 'suite/s/p/1/trace-core.lines').write_text('lots\n')
+        _, _, _, records = self.run_import(build)
+        (record,) = records.values()
+        self.assertEqual(record['core_decision_trace']['of'], 5)
+
+    def test_run_and_run_id_together_are_refused(self):
+        with self.assertRaises(SystemExit):
+            importer.main(['--run', '1', '--run-id', '2'])
 
     def test_the_same_death_twice_is_a_repeat(self):
         def build(base):

@@ -123,7 +123,10 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
         # A zoo death bundle (borg-zoo#176) keeps only the trace's tail and
         # writes the full count beside it.
         if (run_dir / 'trace-core.lines').exists():
-            core_trace_lines = int((run_dir / 'trace-core.lines').read_text().strip())
+            try:
+                core_trace_lines = max(int((run_dir / 'trace-core.lines').read_text().strip()), core_trace_lines)
+            except ValueError:
+                pass  # unreadable count: the kept file's own length, as before
         files['trace-core-tail.jsonl'] = b''.join(lines[-TRACE_TAIL:])
     files['build.json'] = (json.dumps(build, indent=2, sort_keys=True) + '\n').encode()
     raw = {n: sha256_file(run_dir / n) for n in ('keys.log', 'messages.log', 'state.log')
