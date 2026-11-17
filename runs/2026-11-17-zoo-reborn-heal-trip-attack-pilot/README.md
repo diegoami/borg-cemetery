@@ -9,7 +9,7 @@ Report with the 72-cell table: borg-zoo `reports/reborn-heal-trip-attack-pilot-d
 - **Source:** borg-reborn-rs `f02cd2940a7439a8965b3883270a9a73df7e0bf5`, source-hash rust `bb27c7c3740aacdd…`, zoo specimen `4.2.6-reborn-rust-heal`.
 - **The arm ("the bundle"):** `borg_reborn_core = borg-rs`, `borg_reborn_errand = none`, `borg_town_plan = 1`,
   `borg_trip_policy = 1` (`unknown_stacks` 5, `pack_slack` 1), `borg_param_caution_heal_when_outmatched = 1`,
-  the 15 class `borg_param_attack_preference_*_permille` values of the owner's preferences, and `borg_plan = errands_plan.txt`.
+  the 16 class `borg_param_attack_preference_*_permille` values of the owner's preferences, and `borg_plan = errands_plan.txt`.
   Each dossier's `config.txt` lists them and the written `borg.txt` hash (`03e46521…`).
 - **Replay:** replayed locally through the zoo adapter with evidence kept; both replays' `keys.log` SHA-256 equal the CI run's
   `play_sha256`. CI used binary `6abfdf38…`, the local build of the same source is `9728702e…`.
