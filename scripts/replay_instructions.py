@@ -81,7 +81,7 @@ def instructions(directory, program, source, seed, race, cls, endpoint, scenario
                       '[Run the same comparison through GitHub Actions](https://github.com/diegoami/borg-cemetery/actions/workflows/try-scenario.yml). '
                       f'The scenario path is `{path}`. Choose the cemetery branch containing it and the alternative Borg version.', '']
         lines += ['## Rerun the birth seed', '', 'This starts a new process from the original birth. It does not verify a missing recorder bundle.', '',
-                  '```bash', f'BORG_IMPL=rust BORG_DEATH_RECORDS_DIR=/tmp/{directory.name}-diagnostic-deaths \\',
+                  '```bash', f'BORG_CEMETERY_DIR="$PWD" BORG_IMPL=rust BORG_DEATH_RECORDS_DIR=/tmp/{directory.name}-diagnostic-deaths \\',
                   f'  bash {work}/harness/run.sh /tmp/{directory.name}-seed-rerun {seed} {race} {cls} {endpoint + 1000} menu', '```', '']
     (directory / 'REPLAY.md').write_text('\n'.join(lines))
     return lines
