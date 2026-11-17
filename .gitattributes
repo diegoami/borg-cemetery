@@ -9,3 +9,6 @@ studies/fast-caster-config/evidence/**/run/messages.log -whitespace
 synthetic/caster-encounters-v2/evidence/**/borg.txt -whitespace
 # Native death screens in literal harvest stderr retain rectangular padding.
 synthetic/caster-encounters-v2/evidence/harvest*/**/stderr.log -whitespace
+# Exact balanced-harvest configuration bytes keep source whitespace for hashing.
+validation/borg-zoo/balanced999/**/reproduction-inputs/*.txt -whitespace
+validation/borg-zoo/balanced999/**/reproduction-inputs/borg-configs/*.txt -whitespace
