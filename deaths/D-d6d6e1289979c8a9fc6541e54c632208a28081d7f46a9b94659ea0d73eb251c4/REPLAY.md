@@ -38,9 +38,18 @@ git -C /tmp/cemetery-D-d6d6e1289979c8a9fc6541e54c632208a28081d7f46a9b94659ea0d73
 BORG_IMPL=rust bash /tmp/cemetery-D-d6d6e1289979c8a9fc6541e54c632208a28081d7f46a9b94659ea0d73eb251c4-f02cd294/harness/build.sh
 ```
 
+## Rerun the original death
+
+Zoo ran this game with its own `borg.txt` settings (and errands plan, if any), not through `harness/run.sh`. This rebuilds that `borg.txt` from `config.txt`, refuses it unless its sha256 matches the recorded one, runs the game as Zoo did and checks that the key stream equals the recorded one.
+
+```bash
+python3 scripts/native/rerun-death.py deaths/D-d6d6e1289979c8a9fc6541e54c632208a28081d7f46a9b94659ea0d73eb251c4 /tmp/D-d6d6e1289979c8a9fc6541e54c632208a28081d7f46a9b94659ea0d73eb251c4-original-rerun \
+  --source-root /tmp/cemetery-D-d6d6e1289979c8a9fc6541e54c632208a28081d7f46a9b94659ea0d73eb251c4-f02cd294
+```
+
 ## Rerun the birth seed
 
-This starts a new process from the original birth. It does not verify a missing recorder bundle.
+This starts the same birth with the default harness profile and no Zoo settings or plan, so the Borg does not play the original game.
 
 ```bash
 BORG_CEMETERY_DIR="$PWD" BORG_IMPL=rust BORG_DEATH_RECORDS_DIR=/tmp/D-d6d6e1289979c8a9fc6541e54c632208a28081d7f46a9b94659ea0d73eb251c4-diagnostic-deaths \
