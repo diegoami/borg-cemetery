@@ -9,7 +9,7 @@ Every confirmed natural death gets an immutable source/build/input identity, ori
 > validation evidence. See [POINTER.md](POINTER.md) for the seam
 > (`BORG_DEATH_RECORDS_DIR`) and storage ownership.
 
-Dossiers: 117; distinct starting conditions: 101; retained process attempts: 101 (including repeats). This registry is not a survival-rate estimate.
+Dossiers: 118; distinct starting conditions: 102; retained process attempts: 102 (including repeats). This registry is not a survival-rate estimate.
 
 | Case | Discussion | Actual source | Seed | Raw cause | Death turn | Diagnosis |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -128,6 +128,7 @@ Dossiers: 117; distinct starting conditions: 101; retained process attempts: 101
 | [D-147fdce46acb38af6bea100915e0673287559e96645c530926ae484af2a01e8f](D0000-qf6e7799eb58ec87218c80ca67c2d7a1a45aac6e414c0cef924bb0e91df451c86/report.md) | unassigned | `07f59a6e0957` | 1011 | a fruit bat | 1979 | unassessed |
 | [D-d82021733db4836ee8884be476e8c3e012962b47915c44c826a401365468743d](D0000-qf8e5f38c81807b1e3478514e57af3d1ce1179a79969d222fb06626e99552b0d2/report.md) | unassigned | `5584d0cbfe91` | 1011 | a fruit bat | 1979 | unassessed |
 | [D-3ad9755864396365576ddb456bcf6e784fe750f5c2e7c72c33f448bd4f6a5840](D0000-qf92035df260ac7f893b3d35aa51c8b8baef5bf375e06748530181feae628bcb3/report.md) | unassigned | `cd411e551fa8` | 1062 | a soldier | 49147 | unassessed |
+| [D-accebf166ff8a2f666cd3409f9e5d65c92dd298ab439ffa618de7e20d295628f](D0000-qfcc490e5b2784118515343227276d2382564dbddd07850b5570c6f8d8ca969c3/report.md) | unassigned | `a4fbda882093` | 1011 | a fruit bat | 1979 | unassessed |
 | [D-f4a5edaf6b5645f9d9045f5b5598f1d96fd63746a4c69da265c23fd72dece0f6](D0000-qfe540acf2d799c9e17d3a42688948109ed2b1b5187e8f9afec9c08a048948260/report.md) | unassigned | `cd411e551fa8` | 1074 | poison | 22250 | unassessed |
 | [D-a22af4911c5f922e4dd735d5652c1c493218f8052991b84d9b1d80d495e36102](D0000-qfeeb1befa3a01dc1586d5eaf54e42eb8c5139f9be9b0febcddf4c07e9fa0425d/report.md) | unassigned | `cac37f5901c9` | 1020 | a small kobold | 9547 | unassessed |
 
