@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `261bba29a09fdf1d18d96289c9ec966bb6db6a21f13084c59650d9e992a4277c`.
+Input inventory SHA-256: `12f681758a4d5c68fb718d706637f1ab7889da43f0c110921695bfe178254ce9`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
@@ -16,9 +16,9 @@ The companion snapshot for an external source retains normalized statistical fie
 | Fang, Farmer Maggot's Dog | 7 |
 | a crow | 6 |
 | a grey mushroom patch | 6 |
+| a giant white mouse | 4 |
 | a cutpurse | 4 |
 | a small kobold | 3 |
-| a giant white mouse | 3 |
 | a giant yellow centipede | 3 |
 | a grey mold | 3 |
 | Grip, Farmer Maggot's Dog | 3 |
@@ -53,9 +53,9 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 101 | 2626 | 31855 | 70919.13 | 1094860 |
-| depth | 76 | 0 | 1 | 1.79 | 18 |
-| level | 76 | 1 | 2 | 2.92 | 8 |
+| turn | 102 | 2626 | 32184 | 71069.18 | 1094860 |
+| depth | 77 | 0 | 1 | 1.78 | 18 |
+| level | 77 | 1 | 2 | 2.96 | 8 |
 
 ## Characters
 
@@ -84,6 +84,7 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Hobbit Druid | 2 |
 | Elf Ranger | 2 |
 | Human Rogue | 1 |
+| Half-Elf Priest | 1 |
 | Human Warrior | 1 |
 | Hobbit Rogue | 1 |
 | Gnome Blackguard | 1 |
