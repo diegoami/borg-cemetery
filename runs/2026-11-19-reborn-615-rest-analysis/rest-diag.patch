@@ -1,0 +1,64 @@
+diff --git a/borg-core/src/borg_io.rs b/borg-core/src/borg_io.rs
+index 9d0d96d7..7fc2e843 100644
+--- a/borg-core/src/borg_io.rs
++++ b/borg-core/src/borg_io.rs
+@@ -223,6 +223,13 @@ pub fn borg_keypress(st: &mut BorgState, k: keycode_t) -> i32 {
+         borg_note(st, " & Key * *BAD KEY * *");
+         return -1;
+     }
++    // LOCAL DIAGNOSTIC (#615 analysis, never committed): a rest starts.
++    if k == keycode_t::from(b'R') {
++        let prev = if st.io.key_head == st.io.key_tail { 0 } else { st.io.key_queue[((st.io.key_head as usize) + KEY_SIZE - 1) % KEY_SIZE] };
++        if st.io.key_head == st.io.key_tail || prev == ESCAPE {
++            rest_diag(st);
++        }
++    }
+     let io = &mut st.io;
+     io.key_queue[io.key_head as usize] = k;
+     io.key_head += 1;
+@@ -390,3 +397,45 @@ pub fn borg_free_io(st: &mut BorgState) {
+     st.io.key_history = Vec::new();
+     st.io.key_queue = Vec::new();
+ }
++
++
++/// LOCAL DIAGNOSTIC (#615 analysis, never committed).
++fn rest_diag(st: &BorgState) {
++    use crate::headers::list_terrain_h::*;
++    let Ok(path) = std::env::var("REST615_DIAG") else { return };
++    let (x, y) = (st.borg.c.x, st.borg.c.y);
++    let here = st.cave.grid(x, y);
++    let (mut pass, mut unknown, mut closed, mut open) = (0, 0, 0, 0);
++    for dy in -1..=1 {
++        for dx in -1..=1 {
++            if dx == 0 && dy == 0 { continue; }
++            let (gx, gy) = (x + dx, y + dy);
++            if !crate::engine::square_in_bounds_fully(gx, gy) { continue; }
++            let f = u32::from(st.cave.grid(gx, gy).feat);
++            if f == FEAT_NONE { unknown += 1; }
++            if f == FEAT_CLOSED { closed += 1; }
++            if f == FEAT_OPEN || f == FEAT_BROKEN { open += 1; }
++            if f != FEAT_NONE && crate::borg_cave_util::borg_cave_floor_grid(st.cave.grid(gx, gy)) { pass += 1; }
++        }
++    }
++    let now = st.borg.time.now;
++    let (mut known, mut near_awake, mut age_awake) = (0, 999, 99999i64);
++    for i in 1..(st.kills.nxt.max(1) as usize) {
++        let k = &st.kills.kills[i];
++        if k.r_idx == 0 { continue; }
++        known += 1;
++        let d = (k.pos.x - x).abs().max((k.pos.y - y).abs());
++        let age = i64::from(now) - i64::from(k.when);
++        if k.awake && age <= 50 && d < near_awake { near_awake = d; }
++        if k.awake && age < age_awake { age_awake = age; }
++    }
++    let line = format!(
++        "{} feat={} glow={} pass={} unknown={} closed={} open={} hp={}/{} sp={}/{} depth={} scary={} fleeing={} recall={} known={} near_awake={} age_awake={} now={}\n",
++        crate::engine::game_turn(), here.feat, here.info & 0x02 != 0, pass, unknown, closed, open,
++        st.borg.tr(crate::borg_headers::borg_trait_h::BI_CURHP), st.borg.tr(crate::borg_headers::borg_trait_h::BI_MAXHP),
++        st.borg.tr(crate::borg_headers::borg_trait_h::BI_CURSP), st.borg.tr(crate::borg_headers::borg_trait_h::BI_MAXSP),
++        crate::engine::player_depth(), st.borg.mon.scary, st.borg.goal.fleeing, st.borg.goal.recalling != 0,
++        known, near_awake, age_awake, now);
++    use std::io::Write;
++    if let Ok(mut f) = std::fs::OpenOptions::new().create(true).append(true).open(path) { let _ = f.write_all(line.as_bytes()); }
++}
