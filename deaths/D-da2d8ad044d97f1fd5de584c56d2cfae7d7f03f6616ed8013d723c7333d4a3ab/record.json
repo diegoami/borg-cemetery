@@ -1,0 +1,63 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-da2d8ad044d97f1fd5de584c56d2cfae7d7f03f6616ed8013d723c7333d4a3ab",
+  "run_kind": "harness",
+  "character": "Human Druid",
+  "raw_cause": "a giant white mouse",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 11412,
+    "race_idx": 0,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 102023799,
+    "flags": "exact,menu",
+    "git_rev": "cfd011a6b2ff41385c0b6445b26f55132d0a53dd",
+    "git_dirty": "no",
+    "source_sha256": "1f41b6136eebcb6a5e036d31c30bc74cc9d2a575861fc47651856fa2725905fa",
+    "binary_sha256": "94e912c0de13cd640466142f30eeb45508aaae8bb3048809db47e6532130a36e",
+    "borg_txt_sha256": "e80c913e813993104d693265b3dfd9d539175aa07b90ee6774c60b80c6260fec",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "3dd9393e06e277ec5c4bb71a1a09ba7e63a9f36ab55556953dc545cc6003e01a"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1153
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-angband-borg-reborn-rs/6e8ef2d9-c203-411c-bb01-ef7fef1978e5/scratchpad/t556/druid-run2",
+      "result_sha256": "60f587f9d828a555ac9d686751716d518813341d3229a4493a6dacede39e0420",
+      "raw_sha256": {
+        "keys.log": "60f587f9d828a555ac9d686751716d518813341d3229a4493a6dacede39e0420",
+        "messages.log": "b4dfbc8096078dc9c49344cb95a2852818c6983d082b4b9d8dffc2639a0d9d05",
+        "state.log": "98d8b930573fe16bfd41ca1071e63914dc9078e0b7589e4b410c9129f9ff0215"
+      },
+      "source_commit": "cfd011a6b2ff41385c0b6445b26f55132d0a53dd",
+      "binary_sha256": "94e912c0de13cd640466142f30eeb45508aaae8bb3048809db47e6532130a36e"
+    }
+  ],
+  "encounter_family": "start-aaef8e618efe74a7ced1b298c2aa40f1a8787232f238668d366195b372607ed7",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "c235fd234173a4966972d3686f65c49c9af1171d1947474b3695fc1b3226c0ba",
+    "config.txt": "738f12f1a410585bde37e07d3a116d1a42dbccba569bcc1f49504fcd06c5cb93",
+    "depths.json": "320f1e77bf47dd375229bc17659bb7f8ebd3a16c3e2c45a2d71f0abdd40a26e1",
+    "params-core.json": "3dd9393e06e277ec5c4bb71a1a09ba7e63a9f36ab55556953dc545cc6003e01a",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "3b1601030ad550f99cddc077a7b84b348126da3a623fdabc87b3f7e24dd36f6e",
+    "trace-core-tail.jsonl": "c064210eb5e2c6fb5892381ca02b7adef7588432c494204f44bdba3725e9d17c"
+  },
+  "investigation": null,
+  "issue": null
+}
