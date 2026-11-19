@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-b442f698797d568fd386bf61edea8cb45b95d21fbe0f605251d3a7b76b90275e",
+  "run_kind": "harness",
+  "character": "Gnome Necromancer",
+  "raw_cause": "a salamander",
+  "terminal": {
+    "cause": "a salamander",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 4816,
+    "race_idx": 4,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040,
+    "flags": "menu",
+    "git_rev": "e6446749f1e58367101f4b7b806319b465f68b89",
+    "git_dirty": "no",
+    "source_sha256": "9bc92dbf216e33f8950970cf161b0fbc34d01643bf5a02640bf5536245039b97",
+    "binary_sha256": "700541f5d1ebe268b3d794ddf4d248be11d9e7b972552788e8f6e3c602f37af4",
+    "borg_txt_sha256": "f8df2fc0bcdaf6e044a2d414e0e3546ba43bfaad91e4d92bdddcd4a46690ff56",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "a955ec3a1d262bca0505f107439a71b9665b8781b1a7a72f904693d5c8560b12"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 444
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/t433-candidate-full/full-4-necro-0",
+      "result_sha256": "d417f08b10fd81aeed1fd4a05112393ac1b4a7bc277173556ea99d31599d376e",
+      "raw_sha256": {
+        "keys.log": "d417f08b10fd81aeed1fd4a05112393ac1b4a7bc277173556ea99d31599d376e",
+        "messages.log": "fc48f2e30a560b8817b3fe032ef9cc489f9ecf1b13432ee4d8914737ef3de14f",
+        "state.log": "2eff6653fbb8051bf222ca633a0cbbc06b00ec8141e75297153d554e1db19ab2"
+      },
+      "source_commit": "e6446749f1e58367101f4b7b806319b465f68b89",
+      "binary_sha256": "700541f5d1ebe268b3d794ddf4d248be11d9e7b972552788e8f6e3c602f37af4"
+    }
+  ],
+  "encounter_family": "start-39574ff80a58e855e19355080eeaf14d6bef811993468622f241050ae5dd4143",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "5838ee928c6ca37479283ffff70ee4799982ef7dba88cb27c05c084c30baea34",
+    "config.txt": "3728e16c46ecbd0bb8240b5a463496d52cf6e0a4485bf7b17d1e1d046b0db78d",
+    "depths.json": "66c211673bedf8e78bb4aa2138c9853f9a494291a1e0045b6cca163aeba3c712",
+    "params-core.json": "a955ec3a1d262bca0505f107439a71b9665b8781b1a7a72f904693d5c8560b12",
+    "summary.json": "800a0dfef1bbe80c51dfdddc19211ee827e4547daa8aae01ab8aa7638ef465f5",
+    "trace-core-tail.jsonl": "0632e38255ad3be7944819a65e26df36002e3795006ad01d8a107c563f3c5939"
+  },
+  "investigation": null,
+  "issue": null
+}

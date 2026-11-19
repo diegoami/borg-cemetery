@@ -1,0 +1,57 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "6aff60e170a990c74f6ca7210ef07778bb771e1dfea5f52f83a88e05f22c07a7",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/403-candidate-full/full-2-druid-2",
+      "raw_sha256": {
+        "keys.log": "5d143d91fc928bb44171ce27e2846cd22d84cce3164e91686a0481acd4ed9f94",
+        "messages.log": "aa4bf9d500633b218ab722007177f53c379e514213f8aef11ebd74a46e137590",
+        "state.log": "e8699cec479acd7785cad91a2fd411c7be494007617f4826666b138b2cb01405"
+      },
+      "result_sha256": "5d143d91fc928bb44171ce27e2846cd22d84cce3164e91686a0481acd4ed9f94",
+      "role": "original",
+      "source_commit": "cd411e551fa8d84b00d1db12e28c8f7cbcf36376"
+    }
+  ],
+  "character": "Gnome Druid",
+  "core_decision_trace": null,
+  "decision_trace": null,
+  "encounter_family": "start-f5eb19b43df8675df371a620545592b9451574c1d72650f679d7761674ba3552",
+  "files_sha256": {
+    "build.json": "efdc69cff0417bd2fdb70e54d47fa6777128ab8e8f9d5309d7c344911cdd0d65",
+    "config.txt": "866fbb0853b477c019a2e2432540fd944f626eb9cbf1d0a20fa5ffb8617bc7a3",
+    "depths.json": "e08a161f441fb8738064b99c9eb583209f26136cf54b5bb226e58500ee8f9ead",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "4684f48f6c5bb426fc812fa444bd3702455fd63f7254d49c05759f5e210f509a"
+  },
+  "id": "D0000-qb86fb9c67d06b5e46d1e9e05b19745faa295f5f74fa9ce4fc7166d6bcd90c540",
+  "identity": {
+    "binary_sha256": "6aff60e170a990c74f6ca7210ef07778bb771e1dfea5f52f83a88e05f22c07a7",
+    "borg_txt_sha256": "41baeab598a35735abbb446aa6a8b7e52442055cdd8b2a93c155a96aeedf8f56",
+    "flags": "menu",
+    "git_dirty": "yes",
+    "git_rev": "cd411e551fa8d84b00d1db12e28c8f7cbcf36376",
+    "impl": "rust",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1022,
+    "source_sha256": "42614e8485c224e5d92251eb41526e4c0f60fa8ffb7c7b065185690dc78b95a0"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a giant yellow centipede",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "class_idx": 2,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 4,
+    "turn": 14120
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "borg-cemetery/native-validation-controls@1",
+  "purpose": "CI identity and export checks, not zoo comparison",
+  "source": {
+    "repository": "diegoami/borg-reborn-rs",
+    "change": "#470: never use unidentified items, sell one of each unknown kind, discard Deep Descent; CI core death control moved from seed 1011 (now alive at the turn cap) to 1016",
+    "source_sha256": "ec83c11beb4d3048dd2ff5d89cba5d46b4ee55bbc0bebd7965583161dfd80420"
+  },
+  "runs": [
+    {
+      "run": "core",
+      "case": "D0000-q17f7c0d03052c1509c6f2d789dad862c0884548b314340374c950ab8f21d4350",
+      "seed": 1016,
+      "class": "Mage",
+      "death_cause": "an apprentice",
+      "game_turns": 23211
+    }
+  ],
+  "known_by_game": [
+    "smoke-mage-2 seed 102 (keys 50491fa13924)",
+    "reborn-1020 (keys c542b7d80373)"
+  ]
+}

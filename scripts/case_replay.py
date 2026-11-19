@@ -123,7 +123,13 @@ def plan(case):
             return dict(kind='scenario', case=case_id, scenario=candidate.parent)
     identity = record.get('identity', record)
     return dict(kind='seed', case=case_id, source=identity.get('source', identity.get('git_rev', identity.get('source_commit'))),
-                program=record.get('program', 'borg-rs'))
+                program=record.get('program') or record_program(record))
+
+
+def record_program(record):
+    # Older records omit 'program'; their schema prefix names the source project.
+    prefix = str(record.get('schema', '')).split('/', 1)[0]
+    return prefix if prefix in ('borg-rs', 'borg-reborn-rs') else 'borg-rs'
 
 
 def checkout(cache, program, commit):

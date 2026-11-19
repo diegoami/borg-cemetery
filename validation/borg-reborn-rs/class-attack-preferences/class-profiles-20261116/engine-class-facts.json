@@ -1,0 +1,387 @@
+{
+  "engine_pin": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+  "path": "lib/gamedata/class.txt",
+  "file_sha256": "0609a33563907258db391c2aa9f6504b92b493c67898044739d1fd609e88b89c",
+  "growth_formula": "class component = base + floor(growth * character_level / 10), before race/stat/equipment changes",
+  "classes": [
+    {
+      "name": "Warrior",
+      "line": 136,
+      "skills": {
+        "device": {
+          "base": 18,
+          "growth": 7,
+          "class_component_cl10": 25,
+          "line": 140
+        },
+        "melee": {
+          "base": 70,
+          "growth": 45,
+          "class_component_cl10": 115,
+          "line": 144
+        },
+        "shoot": {
+          "base": 55,
+          "growth": 45,
+          "class_component_cl10": 100,
+          "line": 145
+        },
+        "throw": {
+          "base": 55,
+          "growth": 45,
+          "class_component_cl10": 100,
+          "line": 146
+        }
+      },
+      "flags": [
+        "BRAVERY_30",
+        "NO_MANA",
+        "SHIELD_BASH"
+      ],
+      "max-attacks": 6,
+      "min-weight": 30,
+      "strength-multiplier": 5
+    },
+    {
+      "name": "Mage",
+      "line": 172,
+      "skills": {
+        "device": {
+          "base": 36,
+          "growth": 13,
+          "class_component_cl10": 49,
+          "line": 176
+        },
+        "melee": {
+          "base": 35,
+          "growth": 15,
+          "class_component_cl10": 50,
+          "line": 180
+        },
+        "shoot": {
+          "base": 20,
+          "growth": 15,
+          "class_component_cl10": 35,
+          "line": 181
+        },
+        "throw": {
+          "base": 20,
+          "growth": 15,
+          "class_component_cl10": 35,
+          "line": 182
+        }
+      },
+      "flags": [
+        "ZERO_FAIL",
+        "BEAM",
+        "CHOOSE_SPELLS"
+      ],
+      "max-attacks": 4,
+      "min-weight": 40,
+      "strength-multiplier": 2,
+      "magic": {
+        "first_level": 1,
+        "armor_tenths_lb": 300,
+        "books": 5
+      }
+    },
+    {
+      "name": "Druid",
+      "line": 449,
+      "skills": {
+        "device": {
+          "base": 24,
+          "growth": 10,
+          "class_component_cl10": 34,
+          "line": 453
+        },
+        "melee": {
+          "base": 45,
+          "growth": 20,
+          "class_component_cl10": 65,
+          "line": 457
+        },
+        "shoot": {
+          "base": 40,
+          "growth": 30,
+          "class_component_cl10": 70,
+          "line": 458
+        },
+        "throw": {
+          "base": 40,
+          "growth": 30,
+          "class_component_cl10": 70,
+          "line": 459
+        }
+      },
+      "flags": [
+        "ZERO_FAIL",
+        "CHOOSE_SPELLS",
+        "CHARM"
+      ],
+      "max-attacks": 4,
+      "min-weight": 35,
+      "strength-multiplier": 3,
+      "magic": {
+        "first_level": 1,
+        "armor_tenths_lb": 350,
+        "books": 5
+      }
+    },
+    {
+      "name": "Priest",
+      "line": 687,
+      "skills": {
+        "device": {
+          "base": 30,
+          "growth": 10,
+          "class_component_cl10": 40,
+          "line": 691
+        },
+        "melee": {
+          "base": 45,
+          "growth": 20,
+          "class_component_cl10": 65,
+          "line": 695
+        },
+        "shoot": {
+          "base": 35,
+          "growth": 20,
+          "class_component_cl10": 55,
+          "line": 696
+        },
+        "throw": {
+          "base": 35,
+          "growth": 20,
+          "class_component_cl10": 55,
+          "line": 697
+        }
+      },
+      "flags": [
+        "BLESS_WEAPON",
+        "ZERO_FAIL"
+      ],
+      "max-attacks": 4,
+      "min-weight": 35,
+      "strength-multiplier": 3,
+      "magic": {
+        "first_level": 1,
+        "armor_tenths_lb": 350,
+        "books": 5
+      }
+    },
+    {
+      "name": "Necromancer",
+      "line": 956,
+      "skills": {
+        "device": {
+          "base": 36,
+          "growth": 13,
+          "class_component_cl10": 49,
+          "line": 960
+        },
+        "melee": {
+          "base": 35,
+          "growth": 25,
+          "class_component_cl10": 60,
+          "line": 964
+        },
+        "shoot": {
+          "base": 20,
+          "growth": 15,
+          "class_component_cl10": 35,
+          "line": 965
+        },
+        "throw": {
+          "base": 20,
+          "growth": 15,
+          "class_component_cl10": 35,
+          "line": 966
+        }
+      },
+      "flags": [
+        "ZERO_FAIL",
+        "CHOOSE_SPELLS",
+        "UNLIGHT",
+        "EVIL"
+      ],
+      "max-attacks": 4,
+      "min-weight": 35,
+      "strength-multiplier": 3,
+      "magic": {
+        "first_level": 1,
+        "armor_tenths_lb": 300,
+        "books": 5
+      }
+    },
+    {
+      "name": "Paladin",
+      "line": 1215,
+      "skills": {
+        "device": {
+          "base": 24,
+          "growth": 10,
+          "class_component_cl10": 34,
+          "line": 1219
+        },
+        "melee": {
+          "base": 65,
+          "growth": 40,
+          "class_component_cl10": 105,
+          "line": 1223
+        },
+        "shoot": {
+          "base": 50,
+          "growth": 30,
+          "class_component_cl10": 80,
+          "line": 1224
+        },
+        "throw": {
+          "base": 50,
+          "growth": 30,
+          "class_component_cl10": 80,
+          "line": 1225
+        }
+      },
+      "flags": [
+        "BLESS_WEAPON",
+        "SHIELD_BASH"
+      ],
+      "max-attacks": 5,
+      "min-weight": 30,
+      "strength-multiplier": 5,
+      "magic": {
+        "first_level": 1,
+        "armor_tenths_lb": 400,
+        "books": 3
+      }
+    },
+    {
+      "name": "Rogue",
+      "line": 1377,
+      "skills": {
+        "device": {
+          "base": 32,
+          "growth": 10,
+          "class_component_cl10": 42,
+          "line": 1381
+        },
+        "melee": {
+          "base": 35,
+          "growth": 45,
+          "class_component_cl10": 80,
+          "line": 1385
+        },
+        "shoot": {
+          "base": 66,
+          "growth": 30,
+          "class_component_cl10": 96,
+          "line": 1386
+        },
+        "throw": {
+          "base": 72,
+          "growth": 45,
+          "class_component_cl10": 117,
+          "line": 1387
+        }
+      },
+      "flags": [
+        "CHOOSE_SPELLS",
+        "STEAL"
+      ],
+      "max-attacks": 5,
+      "min-weight": 20,
+      "strength-multiplier": 4,
+      "magic": {
+        "first_level": 5,
+        "armor_tenths_lb": 350,
+        "books": 2
+      }
+    },
+    {
+      "name": "Ranger",
+      "line": 1483,
+      "skills": {
+        "device": {
+          "base": 28,
+          "growth": 10,
+          "class_component_cl10": 38,
+          "line": 1487
+        },
+        "melee": {
+          "base": 60,
+          "growth": 40,
+          "class_component_cl10": 100,
+          "line": 1491
+        },
+        "shoot": {
+          "base": 72,
+          "growth": 45,
+          "class_component_cl10": 117,
+          "line": 1492
+        },
+        "throw": {
+          "base": 66,
+          "growth": 30,
+          "class_component_cl10": 96,
+          "line": 1493
+        }
+      },
+      "flags": [
+        "FAST_SHOT",
+        "CHOOSE_SPELLS"
+      ],
+      "max-attacks": 5,
+      "min-weight": 35,
+      "strength-multiplier": 4,
+      "magic": {
+        "first_level": 3,
+        "armor_tenths_lb": 400,
+        "books": 2
+      }
+    },
+    {
+      "name": "Blackguard",
+      "line": 1593,
+      "skills": {
+        "device": {
+          "base": 24,
+          "growth": 10,
+          "class_component_cl10": 34,
+          "line": 1597
+        },
+        "melee": {
+          "base": 65,
+          "growth": 40,
+          "class_component_cl10": 105,
+          "line": 1601
+        },
+        "shoot": {
+          "base": 35,
+          "growth": 15,
+          "class_component_cl10": 50,
+          "line": 1602
+        },
+        "throw": {
+          "base": 40,
+          "growth": 30,
+          "class_component_cl10": 70,
+          "line": 1603
+        }
+      },
+      "flags": [
+        "CHOOSE_SPELLS",
+        "SHIELD_BASH",
+        "COMBAT_REGEN"
+      ],
+      "max-attacks": 5,
+      "min-weight": 100,
+      "strength-multiplier": 5,
+      "magic": {
+        "first_level": 1,
+        "armor_tenths_lb": 600,
+        "books": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-37b25776841057313c8ec4f03c2121a1a1be2b24485ec25702207ae7328349ef",
+  "run_kind": "harness",
+  "character": "Human Ranger",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 5,
+    "turn": 76788,
+    "race_idx": 0,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 226104090,
+    "flags": "-",
+    "git_rev": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2",
+    "borg_txt_sha256": "3b8cd8aa963790659f764074e35434e7328cc14291f875876e095f1baf31335e",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 7480
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 44098927907-local-replay, artifact deaths-4.2.6-reborn-rust-main-4d83dd26-local, classes-18/4.2.6-reborn-rust-main-4d83dd26/reborn-main-pbd2/226104090",
+      "result_sha256": "a418bd60bcb1612ced4cb1a35b22c8618240e11f314eab2c5bfd58dc660193cc",
+      "raw_sha256": {
+        "keys.log": "a418bd60bcb1612ced4cb1a35b22c8618240e11f314eab2c5bfd58dc660193cc",
+        "messages.log": "d03ff00b6f8545c87bf538179c6ea19343d8d8e13fcb9c4f5b0907eb48b18ab9",
+        "state.log": "43438034f017567b30bda342ea915098a58f4a1a915a37d25bcdba427130bf45"
+      },
+      "source_commit": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+      "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2"
+    }
+  ],
+  "encounter_family": "start-3a27fd69b2f242f016f2819d8535700f3db9723497a314df455edd1fc50d67db",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ba2f2fc4b2618443443c25bfa635b71728b9eed12e423ca60719c87f246b1e82",
+    "config.txt": "73d11ea40ae5cbbdfa7cdbaed8c53164d233b7e8fb85551a6dbcb65bc1a448d3",
+    "params-core.json": "d80b7d62924d23943cb503b46eafe2c9835b3a976f24de4f69c181b2348bab10",
+    "summary.json": "1e95320f7559fa54b99883c0d8d0bc27a27bc18e2ce633db04ca5908da68f93e",
+    "trace-core-tail.jsonl": "231769e0355705b56255749754a027dabebc969d7d6404ecbce367891565c925"
+  },
+  "investigation": null,
+  "issue": null
+}

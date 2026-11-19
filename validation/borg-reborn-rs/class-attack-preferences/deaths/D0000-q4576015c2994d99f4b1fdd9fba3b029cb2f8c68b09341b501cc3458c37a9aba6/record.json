@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "29936aa54c24f930b06a433ca84ba525efed198e4405348955daf83db54cde2c",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/453-candidate-full/full-4-necro-3",
+      "raw_sha256": {
+        "keys.log": "78e5f37abb84cd98e8f9635efcc3eaafe4e451ce884f06dd3e3a24b87bef1ce5",
+        "messages.log": "aeb7a42d3629db8c52ca015b9fb0925ae106a8c51f758a51f53f3260accbe93e",
+        "state.log": "2f654bf87e8d7e2c1437398e357afbd47f1da2b06520a6a40e41f55a5c775936"
+      },
+      "result_sha256": "78e5f37abb84cd98e8f9635efcc3eaafe4e451ce884f06dd3e3a24b87bef1ce5",
+      "role": "original",
+      "source_commit": "8e007cddc1b0c0fb9f97319f8a8128b88680bf97"
+    }
+  ],
+  "character": "Half-Troll Necromancer",
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 2073
+  },
+  "decision_trace": null,
+  "encounter_family": "start-3146c452879ee5eefd02c53515c584a44731bcde9ce543db7778fba83d8f56bb",
+  "files_sha256": {
+    "build.json": "2807fdfcd01d854a94895e0f76b7d87e25dcae338d7d2f6a692ae2bafa3e640d",
+    "config.txt": "b9e18861d991c784299d9e8ced3886cf5e7befc52482ed4d090e9c78d14e5b17",
+    "depths.json": "a97d94f1ae145e5f8ab107ca225e17617e85fac840c1ca9ae352c3a5002983d6",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "f8434d2a80952dc875fe8d3a1062b901681a8e994b8a8d74ece0764b5bb3927b",
+    "trace-core-tail.jsonl": "d2c2a22fc2a8aa3dab7276dd044a4ca4898047429ac7cc71cc1a4c13c855c7e5"
+  },
+  "id": "D0000-q4576015c2994d99f4b1fdd9fba3b029cb2f8c68b09341b501cc3458c37a9aba6",
+  "identity": {
+    "binary_sha256": "29936aa54c24f930b06a433ca84ba525efed198e4405348955daf83db54cde2c",
+    "borg_txt_sha256": "1f52273258820d87baf8165d4ff9890d9cff84557afedd99b7f0eeb06ae87a92",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "8e007cddc1b0c0fb9f97319f8a8128b88680bf97",
+    "impl": "rust",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1043,
+    "source_sha256": "290fd89ed58c536dd59835d259d85dc1a40cd5dd8b71d1e16f765a268abf71b3"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "Grip, Farmer Maggot's Dog",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "Grip, Farmer Maggot's Dog",
+    "class_idx": 4,
+    "dead": true,
+    "depth": 1,
+    "level": 3,
+    "max_depth": 1,
+    "race_idx": 7,
+    "turn": 23504
+  }
+}

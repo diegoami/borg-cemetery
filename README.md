@@ -15,13 +15,21 @@ limitations. It is not yet an accepted milestone.
 
 ## Proposed redesign
 
-The [controlled-experiment redesign](docs/cemetery-redesign.md) proposes a fixed
-seed suite, a small set of exact build/configuration variants, database-backed
-run tracking and bounded external artifact storage. It defines independent
-near-death qualification, on-demand reconstruction and analysis, and a feedback
-loop through saved scenarios and cohort validation. This is a design proposal;
-the collection and Git archive behavior described below is still the current
-implementation.
+The [battle-scenario architecture proposal](docs/cemetery-redesign.md) studies
+how Borgs survive or die in reproducible encounters. It uses thousands of fixed
+source cases, exact build/configuration evidence, portable scenario packages and
+bounded external storage. New-build checks retire obsolete investigations while
+preserving selected regression situations. Borg-zoo keeps population comparisons;
+parameter optimization is outside this proposal. Other projects/users can supply
+adapters and maintain their own scenario assessments. See the
+[integration contract](docs/architecture/scenario-contract.md) and
+[architecture review prompt](docs/architecture/review-prompt.md).
+The proposed managed backend is [Firebase](docs/architecture/firebase-backend.md):
+Firestore documents, Cloud Storage artifacts and Auth, with a small API/coordinator.
+The [review response](docs/architecture/review-response.md) records corrections
+to study identity, relevance, source imports, qualification and recovery.
+This is proposed behavior; the collection and Git archive behavior below is
+still the current implementation.
 
 ## Statistics by build
 
@@ -170,6 +178,36 @@ explicitly unavailable, and a time budget can produce a partial preview.
 
 See the [Fang landing page with inventory and animation](scenarios/S0003/README.md)
 or open its [GIF](scenarios/S0003/media/episode.gif).
+
+### Animate the last turns of a zoo death
+
+Any death imported from a borg-zoo run can be animated over its last turns.
+By default these are the last 50 turns, every one of them, the death included.
+
+```bash
+python3 -m pip install -r requirements-media.txt
+flock /tmp/angband-validation.lock python3 scripts/animate_death.py D-02cc                      # last 50 turns, all
+flock /tmp/angband-validation.lock python3 scripts/animate_death.py D-02cc --turns 200 --every 4
+```
+
+| Parameter | Default | Meaning |
+| --- | --- | --- |
+| `CASE` | required | dossier directory, case ID or ID prefix |
+| `--turns N` | 50 | the last N turns, the death included; a turn is a game turn at which the Borg pressed keys (one player turn, 10 game turns apart at normal speed) |
+| `--every K` | 1 | draw every K-th of those turns, counted back from the death; 1 draws all of them (at most 300 frames) |
+| `--source-root` | the cache checkout `./build.sh` makes | borg-reborn-rs at the dossier's commit, with `build/rust` built |
+| `--out` | `CASE/media/` | where the GIF and receipt go |
+| `--jobs` | all CPUs | frames replayed in parallel |
+
+The game is rerun from birth and must reproduce the dossier's key stream. Each
+frame is another rerun stopped at that key, and its keys must match the
+original prefix. Beside each screen are the game messages and the Borg's own
+notes up to that moment. The output is the dossier's
+`media/last-50-turns.gif`, with a JSON receipt listing every frame and every
+dropped one. The source build is the one the case's `./build.sh` makes, built
+on first use. `scripts/register_deaths.py` then shows the animation on the
+death's page. In Claude Code, the `/animate-death` skill finds the game from a
+zoo run and seed and does all of this.
 
 For a reborn parameter experiment, commit a candidate profile to this checkout
 and supply its path in the optional `profile` input. Unknown or invalid keys

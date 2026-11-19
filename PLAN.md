@@ -125,3 +125,15 @@ A bounded parallel Zoo harvest supplies the frozen bank, followed by Zoo's
 mixed-class smoke and the explicitly requested full999 execution. Baseline
 builds are reused across execution shards. No policy/main/milestone promotion
 is implied by this owner-directed corpus/execution increment.
+
+
+## Integrated architecture proposal
+
+The [shared scenario architecture](docs/cemetery-redesign.md),
+[scenario contract](docs/architecture/scenario-contract.md) and
+[Firebase backend proposal](docs/architecture/firebase-backend.md) from PR #2
+are retained as design documents. The [six-finding response](docs/architecture/review-response.md)
+and [review prompt](docs/architecture/review-prompt.md) remain available.
+Integration preserves the newer Cemetery-storage/Zoo-reporting ownership above;
+it does not deploy Firebase, select a new implementation milestone or accept
+M1/M2. The historical review pins remain available in their original commits.

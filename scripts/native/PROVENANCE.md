@@ -22,6 +22,12 @@ root; canonical catalogue updates use `scripts/register_deaths.py` instead of
 overwriting the historical README/index; arbitrary temporary registries retain
 their original native index behaviour. No game policy, RNG or engine code moved.
 
+Cemetery addition (2026-11-17): `rerun-death.py` also reruns Zoo cells
+(`config.txt` with `zoo_profile`). It rebuilds their `borg.txt` from the
+recorded `borg_*` settings as borg-zoo's runner wrote it, refuses a
+`borg_txt_sha256` mismatch and starts the game with Zoo's arguments instead
+of `harness/run.sh`. All 58 Zoo dossiers rebuild their recorded `borg.txt`.
+
 `API_VERSION` declares forwarding API 1. borg-reborn-rs keeps thin compatibility
 pointers at its old command paths and pins this toolkit in CI. It continues to
 own game instrumentation, the measured harness and source builds. Normal exports
@@ -54,3 +60,18 @@ identity metadata. This changes storage identity, not family calculation,
 natural-death eligibility, gameplay or independence rules. Original donor
 hashes above remain the historical baseline. See `docs/death-identity.md`
 in the Cemetery repository. Consumer pins must advance explicitly to adopt it.
+
+## Zoo death bundles (2026-11-17, #63)
+
+`export-death.py` takes an optional `raw_location` for the dossier's
+`raw_directory`, so zoo dossiers name the borg-zoo artifact instead of a
+temporary directory. It reads a `trace-core.lines` file, when one is present,
+for the full length of a core trace of which the bundle kept only the tail.
+Identity, eligibility and dossier contents are otherwise unchanged.
+
+## Extra borgh options for zoo reruns (2026-11-17)
+
+`rerun-death.py`'s `run_zoo` takes optional `extra` borgh options appended to
+the zoo command line. `scripts/animate_death.py` uses them for `-keys N
+-screen` frames and checks every frame's keys against the verified original
+prefix. Without `extra` the command is unchanged.

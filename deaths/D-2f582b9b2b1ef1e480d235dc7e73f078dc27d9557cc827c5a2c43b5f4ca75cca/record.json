@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-2f582b9b2b1ef1e480d235dc7e73f078dc27d9557cc827c5a2c43b5f4ca75cca",
+  "run_kind": "harness",
+  "character": "Half-Elf Blackguard",
+  "raw_cause": "a crow",
+  "terminal": {
+    "cause": "a crow",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 3,
+    "turn": 54455,
+    "race_idx": 1,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 888896726,
+    "flags": "-",
+    "git_rev": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2",
+    "borg_txt_sha256": "107a3e2c3b034cc4ebad63a5607481400f7c8755a2c3ad9070829bceee3f3676",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 3541
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 44098927907-local-replay, artifact deaths-4.2.6-reborn-rust-main-4d83dd26-local, classes-18/4.2.6-reborn-rust-main-4d83dd26/reborn-main-pbd2/888896726",
+      "result_sha256": "ce316fc045c41e4e190d6a710cf21d1ba38786303eea57f261be502a00da1982",
+      "raw_sha256": {
+        "keys.log": "ce316fc045c41e4e190d6a710cf21d1ba38786303eea57f261be502a00da1982",
+        "messages.log": "c49a5bb22fbc3144da85da737c8656e2a37de43f4c34aacfedfbce469939a089",
+        "state.log": "75b4d8a6cfbcfcd3b0be0042a4353d9fd1873bdaf583103671ace3f2e545a1de"
+      },
+      "source_commit": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+      "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2"
+    }
+  ],
+  "encounter_family": "start-68a982928edb6eca31c7277b04137b7e8e58dc430836ccf01494365b0e65c155",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ba2f2fc4b2618443443c25bfa635b71728b9eed12e423ca60719c87f246b1e82",
+    "config.txt": "09e8fcd68f7d984104eceedd3bcad5321dd0b5f2c6dbb5cbd5c62496f9494ed3",
+    "params-core.json": "d80b7d62924d23943cb503b46eafe2c9835b3a976f24de4f69c181b2348bab10",
+    "summary.json": "275487993f0fb0daa21a41963a0d5b175db0a759fa892da5207eab212fb64ced",
+    "trace-core-tail.jsonl": "593902a11474440f2c6c150712b489d8142005fb8e7d012277e3cbe68bcd850e"
+  },
+  "investigation": null,
+  "issue": null
+}

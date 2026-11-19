@@ -1,0 +1,36 @@
+{
+  "schema": "borg-cemetery/native-validation-controls@1",
+  "purpose": "CI identity and export checks, not zoo comparison",
+  "source": {
+    "repository": "diegoami/borg-reborn-rs",
+    "change": "#455 (issue #451): Remove Hunger scroll valued, counted as food, read before food; synchronized with main 36f1949e (#461)",
+    "commit": "9b047a7b",
+    "source_sha256": "b77ee77422a4516e8bd04234f006458afc64f1936cab814181b4a4497dd4ab82"
+  },
+  "runs": [
+    {
+      "run": "smoke-mage-2",
+      "case": "D0000-q376ec8e73a282b1483c5970355897341b3c7fd229989d55fc66482f28f323269",
+      "seed": 102,
+      "class": "Mage",
+      "death_cause": "Fang, Farmer Maggot's Dog",
+      "game_turns": 3640
+    },
+    {
+      "run": "core",
+      "case": "D0000-q6067f5da3779641dbac49ad4ed4ba0d09e5a9933b7e92e6090a986121514ca4a",
+      "seed": 1011,
+      "class": "Mage",
+      "death_cause": "a cave spider",
+      "game_turns": 18903
+    },
+    {
+      "run": "reborn-1020",
+      "case": "D0000-qeefe3ff312b58d5d23ec591f5af137da2b779b0288a034cfcac60db5c940ca1e",
+      "seed": 1020,
+      "class": "Druid",
+      "death_cause": "a giant white mouse",
+      "game_turns": 8922
+    }
+  ]
+}
