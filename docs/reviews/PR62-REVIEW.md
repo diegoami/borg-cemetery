@@ -2,24 +2,33 @@
 
 - Repository: `diegoami/borg-cemetery`
 - Branch: `task/paired-exact-saved-execution`
-- Head reviewed: `af7bad6c35a3358e2a42ec19ecd33d8884261b42`
-- Merge base with `main`: `b474ba259f11cbf2e23cdcc1f0d65f4fca2fe095` (112 commits behind `main`)
-- Reviewer model family: MiniMax (M3). Implementer family: MiniMax (M3).
-  **Same family — the owner's "different family" rule for model review is not satisfied here.**
+- First head reviewed: `af7bad6c35a3358e2a42ec19ecd33d8884261b42`
+- Re-review head: `0f500d244bc391c9536f05edad8f88b93a5826f6`
+- Reviewer model family: MiniMax (M3). Implementer family: MiniMax (M3), then Claude Opus 5.5.
+  **Same family as the original implementation — the owner's "different family" rule for model
+  review is not satisfied for the original commits. The re-review fix commit was authored by a
+  different family.**
 - Reviewer-verified environment: borg-reborn-rs `d09c4bc5`, engine upstream `42cd156a`,
   binary `a41f4bde…`, scenario `synthetic/fast-caster-encounters/mage-fang-102`.
 
 ## Verdict
 
-**Do not merge as-is.** Two of the three commits are sound and useful; the middle
-commit implements a mechanism that cannot work in the configuration the PR
+**First review (`af7bad6c`): do not merge as-is.** Two of the three commits are sound and
+useful; the middle commit implements a mechanism that cannot work in the configuration the PR
 itself selects, and its stated purpose is not achieved.
+
+**Re-review (`0f500d24`): the blocker is resolved.** F1, F3 and F5 are addressed and verified.
+F4 remains open by the author's own choice, and is a receipt nit rather than a defect. The
+branch merges cleanly and its full suite passes. The PR is ready for the owner's decision;
+this review does not merge it.
 
 | Commit | Subject | Verdict |
 |---|---|---|
 | `2463b03a` | Allow exact turn bounds for configured saved-state comparisons | **Good.** Works; keep. |
-| `2586b5f6` | Retain explicit initial observation logging in configured trials | **Ineffective.** Keep the code shape, but it does not do what the PR says. |
+| `2586b5f6` | Retain explicit initial observation logging in configured trials | **Ineffective** (superseded — the pass-through was dropped in `0f500d24`). |
 | `af7bad6c` | Keep configured trial input immutable when the engine autosaves | **Good and necessary.** Verified empirically. |
+| `d82b697b` | Merge current `main` into the branch | Neutral. |
+| `0f500d24` | Drop the ineffective observation-log pass-through and test `exact_turns` | **Good.** Resolves F1; adds F3 and F5 coverage. |
 
 ## Findings
 
@@ -188,7 +197,81 @@ co-location looks accidental otherwise.
 
 `2463b03a` and `af7bad6c` are ready to keep as they are.
 
-## Reproduction
+**All of the above are addressed at `0f500d24` except F4, which the author left
+open by choice; see the re-review below.**
+
+---
+
+# Re-review: head `0f500d24`
+
+The author addressed the findings at `0f500d24` ("Drop the ineffective observation-log
+pass-through and test `exact_turns`"), after merging current `main` in at `d82b697b`.
+
+## Disposition of each finding
+
+| Finding | Status | Evidence |
+|---|---|---|
+| **F1** (blocker) — observation log never written | **Resolved** | The pass-through is removed from `scripts/scenario_config.py`, with a comment stating why: "with `BORG_CORE=borg-rs` the reborn shell that writes it never runs, so no log would appear." The new test asserts `BORG_OBSERVATION_LOG` is not in the child env. |
+| **F2** (minor) — stale validation numbers | **Resolved** | `d82b697b` merges current `main`. The branch is now 5 commits behind `main` and 0 ahead, with no conflict. |
+| **F3** (minor) — no test for `exact_turns` | **Resolved** | New `tests/test_configured_exact_turns.py` (62 lines, 3 test methods). |
+| **F4** (nit) — no receipt for the executed save copy | **Open, by choice** | The author states no consumer reads the executed copy's hash. Verified: neither the Zoo (`zoo/paired_incidents.py:154`) nor the death export (`scripts/native/export-death.py:104,139`) reads it. Recorded as a known limitation rather than a defect. |
+| **F5** (nit) — copy sits in the engine's save directory | **Resolved** | A comment now explains that the private `-dsave` directory is never read by `-mborgh` with `-load`, only by the interactive save menu. |
+
+## Verification of the fix commit
+
+**New tests** (`tests/test_configured_exact_turns.py`) mock `scenario_config.command` and
+assert the constructed argv and environment:
+
+- `test_default_has_no_exact_turns` — the default argv has no `-exact-turns`; `-turns 300`
+  is present with the right value; `-load` points at `raw/save/input.save`.
+- `test_exact_turns_reaches_frontend` — with `exact_turns=True`, `-exact-turns` appears
+  exactly once in the argv.
+- `test_environment` — `BORG_CORE` is `borg-rs`, `BORG_CEMETERY_DIR` is passed through, and
+  `BORG_OBSERVATION_LOG` is **not** in the child env.
+
+The harness also simulates the engine's autosave (`(raw / 'save/input.save').write_bytes(b'autosaved')`)
+and asserts the original `save` still reads `b'original save'` — so the F4-adjacent
+immutability property is now regression-tested too, and `config.txt` still records
+`save_sha256=` of the **original**, which is what the Zoo checks at
+`zoo/paired_incidents.py:106`.
+
+**Suite results on `0f500d24`:**
+
+```
+python3 -m unittest discover -s tests                → Ran 125 tests … OK
+python3 -m unittest discover -s scripts/native/tests → Ran 69 tests … OK
+python3 scripts/death_ids.py --check                 → Verified canonical IDs for 853 retained dossiers
+python3 scripts/build_statistics.py --check          → Statistics: 138 reports checked/generated
+```
+
+125 tests (up from 122 on `main`: the 3 new methods). CI is green on the PR.
+
+Note on the dossier count: the author's comment says 844; the reviewer measured **853** on
+current `main` at `a4c76ac5`. The number moves with `main`, so any figure quoted in the PR
+body should be read as "at the time of the run".
+
+## Revised verdict
+
+**The blocker is cleared.** The branch now does exactly what it claims: it adds an opt-in
+exact turn bound, keeps the scenario's input save immutable against the engine's autosave,
+and no longer advertises an observation log it cannot produce. The remaining open item (F4)
+is a receipt nicety with no consumer today, and is disclosed in the author's own reply.
+
+This review does **not** merge the PR, mark any milestone accepted, or advance the
+`reviewed` boundary — those remain the owner's decisions.
+
+## Reproduction (re-review)
+
+```bash
+cd /home/diego/projects/angband/borg-cemetery
+git checkout -B review/pr62-rereview origin/task/paired-exact-saved-execution
+python3 -m unittest discover -s tests                  # Ran 125 tests … OK
+python3 -m unittest discover -s scripts/native/tests   # Ran 69 tests … OK
+python3 scripts/death_ids.py --check                   # 853 retained dossiers
+python3 scripts/build_statistics.py --check            # 138 reports
+```
+
+## Reproduction (original review)
 
 ```bash
 cd /home/diego/projects/angband/borg-cemetery
