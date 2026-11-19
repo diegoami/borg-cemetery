@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1000184",
+  "run_kind": "harness",
+  "character": "Half-Troll Warrior",
+  "raw_cause": "a giant white louse",
+  "terminal": {
+    "cause": "a giant white louse",
+    "dead": true,
+    "depth": 3,
+    "max_depth": 3,
+    "level": 8,
+    "turn": 73425,
+    "race_idx": 7,
+    "class_idx": 0
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1000184,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "2b3daefb39d74f92e9c15932f67e7439f850a747ed8f44eea9a81e084c05565c",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 186,
+    "of": 186
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c0-r7-s1000184-i000/run",
+      "result_sha256": "a986860b96dfca06768209d45ff54235d2a4d9104bcb7c12d57c96624d81ce61",
+      "raw_sha256": {
+        "keys.log": "a986860b96dfca06768209d45ff54235d2a4d9104bcb7c12d57c96624d81ce61",
+        "messages.log": "1bc740c368f2760f23008194b3f570d02063c1d74dba73c168bceefa93832993",
+        "state.log": "df2b824fbb1ca854b5110d6a8512e9279385c1b810f29dc8f35621919dfac165"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-677661300f5b753cac7cdd09eeaca9635a690549c23253cd6ba0dc1822041bae",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "5e2da887a54bc2b2531861d4f7876b77dd82040881116cf9640f958b869763a6",
+    "depths.json": "7a8006b59ba370ab1851044aaf48539542377176ee6e1f7c632f77e499c8c813",
+    "params.json": "5c7edeba10902df59a5e326bd827476e65cfb43c08c05a3cd41b70fa40961cf3",
+    "summary.json": "8f697c391276561e0279ae5802a9e329977cc45cca1471f95d9302b8a1091134",
+    "trace-tail.jsonl": "0e2a1382cf60fa62fb0408a215510bb44e0fe4e7ce073360cde6f90cdfb243c0"
+  },
+  "investigation": null,
+  "issue": null
+}

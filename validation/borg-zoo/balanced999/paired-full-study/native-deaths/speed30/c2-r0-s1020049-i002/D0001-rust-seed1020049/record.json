@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1020049",
+  "run_kind": "harness",
+  "character": "Human Druid",
+  "raw_cause": "a giant yellow centipede",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 12084,
+    "race_idx": 0,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020049,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "1657c0c488e2d559f23868cdaa91e10f34b9c7ce3e59698ba4b7f28e9789a679",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 4,
+    "of": 4
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c2-r0-s1020049-i002/run",
+      "result_sha256": "9a32b9d21a01f11094191b9de2cca9e8d5187076e0cdc51b13a48c7f8fb1b19d",
+      "raw_sha256": {
+        "keys.log": "9a32b9d21a01f11094191b9de2cca9e8d5187076e0cdc51b13a48c7f8fb1b19d",
+        "messages.log": "1e377444cdcaba523eaf0689f08063bd5cf5fb232bc7b70a2dfe278b1d826452",
+        "state.log": "f629c3071762e21b4d60b1f8fd01105f7e6ab30b24646809225c7932c7d1738e"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-971f6584d488f37e3e073f475337d53398042995350539d13ed31e7e290e5c5f",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "5a5f3463285550ae35dfbe126f104efccf1117d8048acb54d2b0fd014b97a2a9",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "fb3d64aa10917e146df65af71db7ab17704d3f6d40925f6c34be806231a82169",
+    "trace-core-tail.jsonl": "48a1e12505b66825727b728b1779aed013b8b9172d76ad28d1d8f328f9478062"
+  },
+  "investigation": null,
+  "issue": null
+}

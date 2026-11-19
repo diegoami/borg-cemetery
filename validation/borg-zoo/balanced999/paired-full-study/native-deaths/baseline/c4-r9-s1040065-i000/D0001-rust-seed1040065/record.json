@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040065",
+  "run_kind": "harness",
+  "character": "High-Elf Necromancer",
+  "raw_cause": "a grey mushroom patch",
+  "terminal": {
+    "cause": "a grey mushroom patch",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 4920,
+    "race_idx": 9,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040065,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "dc3477fc55436dce0c3ee738108751843c4fad36cec3c4542db08a88e76d5a00",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 17,
+    "of": 17
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c4-r9-s1040065-i000/run",
+      "result_sha256": "29b5e80a6a32548c0ca66c75ad3a64e754c6c5a751a12f8587b592b9c1f7f316",
+      "raw_sha256": {
+        "keys.log": "29b5e80a6a32548c0ca66c75ad3a64e754c6c5a751a12f8587b592b9c1f7f316",
+        "messages.log": "a563f816fb8eb762a04e783f7abe842b67fc723efb109ec2c5cdc19703ee1acc",
+        "state.log": "ee9d779da98d777efbfc52222a7d3f30b8f69537f87449038b1d6244068f7695"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-c72622660dfc26e4eebda2f89c3818422e90c29022f34a5a54552f7c4a05d5ec",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "51c969bc7bf37614f08475ad15ba8678d215681483dc9448e7090d028e48a07a",
+    "depths.json": "03630968df573dfae896510bf1beb41159d438e245dc1c95f7209b1b4d1186c0",
+    "params.json": "ad049d7267abc6f0c4805311184aa040e66d9fb385dd65049f0481a4b8a5d1a3",
+    "summary.json": "a13d838a8ade2f476aa1ad7f7a949cb2b6e90ebe0f403190b5e13a1010f1eb08",
+    "trace-tail.jsonl": "664c0174121bdfef7dd68c92106d203832a80a000e6874f8328e63302837ec82"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1050050",
+  "run_kind": "harness",
+  "character": "Dwarf Paladin",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 6,
+    "turn": 41468,
+    "race_idx": 5,
+    "class_idx": 5
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1050050,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "08dee41294ecbd4a1abdd56c9826962cbde15c46571b3667931d8c3151599408",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 9,
+    "of": 9
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c5-r5-s1050050-i001/run",
+      "result_sha256": "66bc2980361562b75c097dd5f782d7b7420ac7a99de2fe561dc0c623f4eb19e8",
+      "raw_sha256": {
+        "keys.log": "66bc2980361562b75c097dd5f782d7b7420ac7a99de2fe561dc0c623f4eb19e8",
+        "messages.log": "44291ffe4beadf770363a30506b583a7cd18c664a2e1cc7fa1174c27aaac0d7d",
+        "state.log": "0fc8413427ca306c07e93f710b17400e3134f2bd3523b39cb20031403ca24ea1"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-0a76aadf5c07334820672918097c9f577b07a22813bca5212633bb4ed8deae51",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "0e33a6e61f426c4c23de6ef9d981a9d94cd2ffb9d8963e1d82ed1bd2cbf49115",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "3b8fc2d6a1166102d44744e94fd26c0372c6b7d78022705427a17a5addee9407",
+    "trace-core-tail.jsonl": "0af4ed493309fa9ad7019a47f7ccb84e9ce598f1af6425cd0e66e181b89ebd7e"
+  },
+  "investigation": null,
+  "issue": null
+}

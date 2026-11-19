@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040068",
+  "run_kind": "harness",
+  "character": "Gnome Necromancer",
+  "raw_cause": "a white worm mass",
+  "terminal": {
+    "cause": "a white worm mass",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 30381,
+    "race_idx": 4,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040068,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "d76b7c9b73fd257fbe1350641b1843278ea7705788ec4d10c4d473c14fc47788",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 19,
+    "of": 19
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c4-r4-s1040068-i000/run",
+      "result_sha256": "c5ec814994cc985b97eae41d1e4c719465ff4154ce264d925ecfb279c5746669",
+      "raw_sha256": {
+        "keys.log": "c5ec814994cc985b97eae41d1e4c719465ff4154ce264d925ecfb279c5746669",
+        "messages.log": "2058bc68b005c10485f11cb67fe7ca42e1e1410ff45f54a4fede63f1f91c7ac5",
+        "state.log": "c563bbfba4cd11ddb3d30f3cd0e306270f7cee3e7f066fef047e621a9414c102"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-0187c947455916fc53c6ca47e82b8f70fa159e828ff1a3e692a415d14f34bc99",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "050e3f808f90f2656dc50c23e384c04c2f8caf8f1bd7ac6f71f71ee13ac62aaa",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "6207038d8ddaff5f4afc3d872575c3c94ba8e3a6e914fabf279be36a747a01c7",
+    "trace-core-tail.jsonl": "d3899bc59c8256740a8d0e4da07f54ac07d5658985c776bbfa16442ee7b7f1a1"
+  },
+  "investigation": null,
+  "issue": null
+}

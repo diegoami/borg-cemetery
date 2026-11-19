@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1030093",
+  "run_kind": "harness",
+  "character": "Human Priest",
+  "raw_cause": "a green worm mass",
+  "terminal": {
+    "cause": "a green worm mass",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 6,
+    "turn": 25037,
+    "race_idx": 0,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1030093,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "68f42f96e9f7fad35032e8cdc6dae0b7226c8d7776cc94a9ce6327eb019704e1",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 14,
+    "of": 14
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c3-r0-s1030093-i001/run",
+      "result_sha256": "a78ffafebbca8aa1fad2cbf2d38717beab6546c0312dbb48f022ab63d83580b9",
+      "raw_sha256": {
+        "keys.log": "a78ffafebbca8aa1fad2cbf2d38717beab6546c0312dbb48f022ab63d83580b9",
+        "messages.log": "0f2524fee0c9fa0b7b5f8fcee6153dcc0ab6bf8f6e0f1a6a9ce5476fcbb2f719",
+        "state.log": "cff9b0258f34275a02363960111ad15b209a3df21b877ad97478d328a8ac5638"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-dcb131382cc5b081498db188482ada908f53abddffec8c4c9461405ccfe2d3a6",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "cced8465cde263d8ec98d41e6aefb78956e46d3329ce6f01270b359d0aa220e1",
+    "depths.json": "6fb091e7d19f1e1f2d3358853e3d7f07d1191a1c3d5b032fddbf9be7c5a0930b",
+    "params.json": "bce132369adc7393e62e01ee91698ac003c45e3e445ddee410a694edd19a7034",
+    "summary.json": "e5c9c105726928f8d5c908f8f3443bdd5c6bca567930f2fdb1d4c2fd17b07c0f",
+    "trace-tail.jsonl": "8fa8c5bc5b53fa348ea208b40dceb241c5015c3d4c363aa170b7c2f20d53c833"
+  },
+  "investigation": null,
+  "issue": null
+}

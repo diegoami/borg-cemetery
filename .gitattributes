@@ -12,3 +12,5 @@ synthetic/caster-encounters-v2/evidence/harvest*/**/stderr.log -whitespace
 # Exact balanced-harvest configuration bytes keep source whitespace for hashing.
 validation/borg-zoo/balanced999/**/reproduction-inputs/*.txt -whitespace
 validation/borg-zoo/balanced999/**/reproduction-inputs/borg-configs/*.txt -whitespace
+# Literal Zoo configuration input retains its hashed source whitespace.
+studies/balanced999-speed30/borg.txt -whitespace

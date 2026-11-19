@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1050120",
+  "run_kind": "harness",
+  "character": "High-Elf Paladin",
+  "raw_cause": "a scout",
+  "terminal": {
+    "cause": "a scout",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 58543,
+    "race_idx": 9,
+    "class_idx": 5
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1050120,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "7a25c9ef7e00108fcf7dda61621c2a7fff1ef212a1f134cae55dcf734386343a",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 25,
+    "of": 25
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c5-r9-s1050120-i000/run",
+      "result_sha256": "3cb64c1aa6bfa0a63bd88a10fa10d5f879c4219d670830a6b12f01c652418350",
+      "raw_sha256": {
+        "keys.log": "3cb64c1aa6bfa0a63bd88a10fa10d5f879c4219d670830a6b12f01c652418350",
+        "messages.log": "9436ca0d81de2872f07c8eca0b72e68cf3fbd3ec1598e168d5cb87a0027c82e3",
+        "state.log": "25921fa765a2a5608c0aa4959232c183e1dbf11bd5b0ecc0f7fddfd3e453585c"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-d5d9fbf8cbe790c084d375670928d8f3e0162519a83fd5848e47fad5d6023df7",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "030e3dbe323dcd1be329b1b3d2ca9c0146def447bfa8bb060789e4309013d7fb",
+    "depths.json": "b7771f5b48cc1f5dbb0c2bb09882f3447dfd7d5311e567cf0decb60da3d7347b",
+    "params.json": "bd23afbfb9d13fc26922317e766bb6e513adcafa3966b8ecb0f1609636970482",
+    "summary.json": "566f73433c85d00c5de277735c89e7597bc077ca09a07c4be18b3eea19546c11",
+    "trace-tail.jsonl": "7ac2e9f180a2888635ad1da5368e44e7a9f3bdd0946f24777a7f6e96bdcf6ced"
+  },
+  "investigation": null,
+  "issue": null
+}

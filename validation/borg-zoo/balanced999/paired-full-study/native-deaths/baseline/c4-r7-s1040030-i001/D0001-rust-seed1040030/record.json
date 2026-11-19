@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040030",
+  "run_kind": "harness",
+  "character": "Half-Troll Necromancer",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 57488,
+    "race_idx": 7,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040030,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "204facff4c131e2014dbe5e1a925459c4fea9c30a3950cd46e7fea143f343c68",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 18,
+    "of": 18
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c4-r7-s1040030-i001/run",
+      "result_sha256": "4348d8690694be95cb04271bbed0e3109a30456983e3375a5d781fe7d88391d4",
+      "raw_sha256": {
+        "keys.log": "4348d8690694be95cb04271bbed0e3109a30456983e3375a5d781fe7d88391d4",
+        "messages.log": "3bb04e9a9b6ab2fd62585818c165e30ab0a12b7051a56c433390741bb46f506f",
+        "state.log": "e30fc851cdb12691cd132d8700d33cb0bb26cb3018ca35bed603518670508391"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-ef3d98217b9955b505f3bd3d48cc98920b00d802fa6bb1b405ec7b9bd4f28cca",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "80d505a3cea571a7417aea487a5a88a1696d9d51c834e0f25c69f61b0fcbd373",
+    "depths.json": "f823f8b946176f0ea50906902daf99597b522fc20eadbd94c3e1b0f1c9b473ed",
+    "params.json": "78871a9759683d53e7d71524ed2341875f91d1cdbc559356afbca38d72b3d800",
+    "summary.json": "25be3d016b9406f94e63a077efdcc19d734957e6ef68ee551ab6e22ccbd67c5a",
+    "trace-tail.jsonl": "f0be1bbf40d0f4d89dfeaa821b1c0d2d357cc3d7f0167b88c1c5058b7ce25547"
+  },
+  "investigation": null,
+  "issue": null
+}

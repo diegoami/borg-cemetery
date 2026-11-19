@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1050113",
+  "run_kind": "harness",
+  "character": "Kobold Paladin",
+  "raw_cause": "a floating eye",
+  "terminal": {
+    "cause": "a floating eye",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 4,
+    "turn": 34919,
+    "race_idx": 10,
+    "class_idx": 5
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1050113,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "9dde8f5cf964ae5a98a73d6fbec7d82a737748fa9fb0d285fc89c5b1e2303f67",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 4,
+    "of": 4
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c5-r10-s1050113-i001/run",
+      "result_sha256": "2b31372a4ccd4ba8487781fbf3fa7e1a0f84e44d23d372ee286682eeb8f7b81d",
+      "raw_sha256": {
+        "keys.log": "2b31372a4ccd4ba8487781fbf3fa7e1a0f84e44d23d372ee286682eeb8f7b81d",
+        "messages.log": "a440ab7f0895a6e323b61d67d4fdb6c8154bde023c6a7249c0ffa85e3e3ced2b",
+        "state.log": "6ec3e81439a91459c8bc9f4411c8aa718c4b83c4ebc7502f1124284796154ebe"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-aa048dc56d27f26024f6e56de3998a43529f0952e4db6682b023f3149d8ae2e7",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "8794cb6acab49a30e7a694cc0b1b1e2da62caecf343474da2a44264b74f63870",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "d5451ada813b7cfe4fe12af7f4f0b4cb38f1675ee3d0c2666f00cb287bd5d785",
+    "trace-core-tail.jsonl": "a54a0ff0c4a8f5952a91e3a3fceee758a1975e14800fa600ba22e078245aaaf3"
+  },
+  "investigation": null,
+  "issue": null
+}

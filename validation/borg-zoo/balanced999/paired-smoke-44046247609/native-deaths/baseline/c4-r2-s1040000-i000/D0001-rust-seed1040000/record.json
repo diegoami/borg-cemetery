@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040000",
+  "run_kind": "harness",
+  "character": "Elf Necromancer",
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 1559,
+    "race_idx": 2,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040000,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "78c41c7c57afcafc61818354a6f1c581c61dec9b0d5dd0107af118453327fe41",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 26,
+    "of": 26
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c4-r2-s1040000-i000/run",
+      "result_sha256": "7b76a2a9d3270208faad9a0ef5f6c76d1855b35b83af33103d55ae682c9a09af",
+      "raw_sha256": {
+        "keys.log": "7b76a2a9d3270208faad9a0ef5f6c76d1855b35b83af33103d55ae682c9a09af",
+        "messages.log": "c08cd079b46b4a72f6ad000c8d99eebb182cdcb170d26a04ed8bfca76654ef3e",
+        "state.log": "8847df41fcb2b740a53f32e728099f6be0f41a91558659f37e4ed26c59664563"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-5e4d4beb6050d81fdee9c64e9a5b1cfef95136b5b490a6c55a28933776821621",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "b18ca5d151878fb79f8805c9c60cc520e36e9cc63b74af9ad997a48bd4a3aa02",
+    "depths.json": "c326f4052b1c8f2c1e88329de45a616b06b40d3896564897ddd035d2430ab798",
+    "params.json": "d9354ec03762de752851c2e1571c814b589ffd5a7c99230dee6ebf44e2f27c5e",
+    "summary.json": "7884883a8aa18bb8462f772e8609a38c750974e907d4b358ad28d134a5bee410",
+    "trace-tail.jsonl": "adcc078e1e3f2d5ccad6e6f3d761f31aed44584152f2f92dc8a929b678fc8502"
+  },
+  "investigation": null,
+  "issue": null
+}

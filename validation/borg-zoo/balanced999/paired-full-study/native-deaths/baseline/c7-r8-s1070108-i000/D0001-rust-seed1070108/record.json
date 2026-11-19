@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1070108",
+  "run_kind": "harness",
+  "character": "Dunadan Ranger",
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 1251,
+    "race_idx": 8,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1070108,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "4b93b5ff25ff075dc203870466eead24fcca93172ccc490010e23047ba636cef",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 6,
+    "of": 6
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c7-r8-s1070108-i000/run",
+      "result_sha256": "37f439048c59e588144ccb586d905bb80d912cb56e172a0b5bcac87da6967000",
+      "raw_sha256": {
+        "keys.log": "37f439048c59e588144ccb586d905bb80d912cb56e172a0b5bcac87da6967000",
+        "messages.log": "40f18c61bc3bf87c611bb2da00811a99545d8109a0c01917d5c4c8e26f1b960a",
+        "state.log": "e6ba89041dd8e29f3b68c777c5cb27a0a0a8850242cd85a72004297d5a1650ba"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-88610a9868e1e2d1150a3129f68c4bf5f192af883a40ab2a1680e1b733d33625",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "1dcc5f2186cbacb59e9e8b61741c4da797c71a18bc8f71541307e1266d4304a2",
+    "depths.json": "37d7556553052c32a1e0f57890a593e49a5d2dce23700de62662452637a48c59",
+    "params.json": "709188e6b2ced587cd5ddf0f7ffeb2e44fcb13fadd330030edc7a74b3702adfb",
+    "summary.json": "39abcb495e5c32873ff3a95993d79be2d5463b3b9eb9bb5bc4f6eb6763600280",
+    "trace-tail.jsonl": "43f464c9b80477475f693482d73081c44a4ee4e5c7441d8677ef82a07e2a9f48"
+  },
+  "investigation": null,
+  "issue": null
+}

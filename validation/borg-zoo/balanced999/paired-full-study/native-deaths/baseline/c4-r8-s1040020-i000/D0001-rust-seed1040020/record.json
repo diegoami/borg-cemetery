@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1040020",
+  "run_kind": "harness",
+  "character": "Dunadan Necromancer",
+  "raw_cause": "an apprentice",
+  "terminal": {
+    "cause": "an apprentice",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 66751,
+    "race_idx": 8,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1040020,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "52bb03f757fec695a9fc2d4a66b28eedfed0dc165e0794727f79824a64d20c19",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 15,
+    "of": 15
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c4-r8-s1040020-i000/run",
+      "result_sha256": "d76524e0c26250a7e08b2fad2d096a772a7d90c76aee8a01b0cd8ddbc7ee9717",
+      "raw_sha256": {
+        "keys.log": "d76524e0c26250a7e08b2fad2d096a772a7d90c76aee8a01b0cd8ddbc7ee9717",
+        "messages.log": "282dc8ad88c12a8a16c70ba20bde4cd9e6ea1abba74f5745c6030f0bd257f95b",
+        "state.log": "191ca92ddccbab261a32cc701b3930cac7cbb6d78966c9018e4fdc164d3648d2"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-5fe2cfe6e7006c17e14661567aab6d95fcff51e15cefcc3c7946d07087dcf1a6",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "905d6626f3ecd769e58c3fa0714bcf5b4139e032d68a06c9ff0215e2ef0c0ba3",
+    "depths.json": "c98869b4a6ee93cf6fe64512845d4f90b0f4aea5f4b60f312e09dbff4facc6f5",
+    "params.json": "1fa795db355414ea78bc05612efff443e4664e8f1bb6707f3a048080fbad26a4",
+    "summary.json": "b6b6a28c43b6de42431a0cc1136255d6f4ff9fa3a97ee4be21c919bf03255c1a",
+    "trace-tail.jsonl": "ef6a983ea7ac0f920137100dbd4ae1ec591e90b3168baf1c8c933769c308e6c7"
+  },
+  "investigation": null,
+  "issue": null
+}

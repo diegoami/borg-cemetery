@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1020078",
+  "run_kind": "harness",
+  "character": "Hobbit Druid",
+  "raw_cause": "a salamander",
+  "terminal": {
+    "cause": "a salamander",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 1,
+    "turn": 5001,
+    "race_idx": 3,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020078,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "baeed91276d40e248ec6004a81cf11ba8720589e585cfe6ca96ccde98a663929",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 188,
+    "of": 188
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c2-r3-s1020078-i000/run",
+      "result_sha256": "73d1e0d4ff8d1dbf84f440867c9ad4f34eccb04894c1a45da7ea5690e6345d69",
+      "raw_sha256": {
+        "keys.log": "73d1e0d4ff8d1dbf84f440867c9ad4f34eccb04894c1a45da7ea5690e6345d69",
+        "messages.log": "8ba8f56d25a5123dcf284d1126c924ceef4ea3ce16a3e1e062e7b4c082598ce0",
+        "state.log": "691662884dc95a03358f6f783536dd683fdae328b60bf93565139c94743b06c7"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-d96682cd0d59e5c39060caa88c5381457b1a5060893818a8db9933801fc543c7",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "3a74f48ca78875bb0fbea27f185b53c14b70ac832340bcd0b4f1b9909c18451a",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "798f9ff150f6e7a0424b99037096bc89264398bbc8dc454b198c4fe2e9635569",
+    "trace-core-tail.jsonl": "8ff93957d6927de438462bb3007138d045576dcc16b9d1e23a7f21d3241f265b"
+  },
+  "investigation": null,
+  "issue": null
+}

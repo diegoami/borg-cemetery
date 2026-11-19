@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1010028",
+  "run_kind": "harness",
+  "character": "Dwarf Mage",
+  "raw_cause": "a wild cat",
+  "terminal": {
+    "cause": "a wild cat",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 3,
+    "level": 4,
+    "turn": 52259,
+    "race_idx": 5,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1010028,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "3e3956a6c6af644ba29176ec02dcc307b6b035ac6bc1a3b96779cb0b11967e16",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 15,
+    "of": 15
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c1-r5-s1010028-i000/run",
+      "result_sha256": "755d86163d6a5109f7a783628b05c086fce1afb01ac859bce4014b94dfebb1e0",
+      "raw_sha256": {
+        "keys.log": "755d86163d6a5109f7a783628b05c086fce1afb01ac859bce4014b94dfebb1e0",
+        "messages.log": "7080469767d5b86c526b15f771b0e55b532207df22f3d459f97dfed8cfd7b0bb",
+        "state.log": "039c0f7a013ada88e4bde6aef349d3703cac271341320623a14be5316b5a2513"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-452db1baf744948bdd5b42c1f640bdd2026b60813fb3f3a18b355659d8d55ef1",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "d24abe3ba46cec49b3c172b27b2f8f9bf736e890ee392c0ee269800719c75209",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "dcd966a1ff0b7b5104ab6b57ad8a8c8542e0d313634c2a9b8d70b0d6cd06c6a6",
+    "trace-core-tail.jsonl": "ea799265ae33de72627f4f1e9cab0c2cb1b1191d2fea7b89659252db1509a295"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1070079",
+  "run_kind": "harness",
+  "character": "Gnome Ranger",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 56767,
+    "race_idx": 4,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1070079,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "f5645ef36e2279ad720b62292eeefa69e45e7b7a03aec3ceb6b13b09e3b05b8a",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 18,
+    "of": 18
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c7-r4-s1070079-i002/run",
+      "result_sha256": "733d59d063b76b523ed30f354ba474aa86e6ee3b784b5a2d4f2fe044fad350bd",
+      "raw_sha256": {
+        "keys.log": "733d59d063b76b523ed30f354ba474aa86e6ee3b784b5a2d4f2fe044fad350bd",
+        "messages.log": "a75e07cc581e5e543ab49025c249fa363f972e19d3869ebb9ecb38eb9a9afbe6",
+        "state.log": "2a409a439d1f913cdd6a8f8e03651fd51308bc77cd6f82375f6e3e06658a4022"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-26439ac88eaba81dc6e15d407a3329a88e70a0a1d94b3f70147f618a33f7d13e",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "1740b2d1912f4508b1dc8ddefea1b0fbfbb3cc05bba150a89ea16982ee14929e",
+    "depths.json": "8407c0851e172380379ce0058594a418bd337df12d5b6bd469ec1fe62d0f2098",
+    "params.json": "48efd57a53a2e0032aec2738f6b07979242f08097003b1eaf35028e431225799",
+    "summary.json": "711ae0823df0aec715acb686ea44eae723ba7ca2c5f1c2238eff829d5fecabb4",
+    "trace-tail.jsonl": "6bc9f050547f14946e516c69e84f104081cc3b3869bc307f132bfc80ef138bfb"
+  },
+  "investigation": null,
+  "issue": null
+}

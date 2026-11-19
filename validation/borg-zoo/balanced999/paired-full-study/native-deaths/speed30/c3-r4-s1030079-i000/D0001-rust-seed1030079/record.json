@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1030079",
+  "run_kind": "harness",
+  "character": "Gnome Priest",
+  "raw_cause": "a black naga",
+  "terminal": {
+    "cause": "a black naga",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 14874,
+    "race_idx": 4,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1030079,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "0929fd7d274ba0afc99f98b56ec759c03b67fe6d25626975683449b8746a7cc9",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 113,
+    "of": 113
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c3-r4-s1030079-i000/run",
+      "result_sha256": "6a896d6fd963b8d2925d99a7105641d7da63758bff5cfa476d490066f7a3dcce",
+      "raw_sha256": {
+        "keys.log": "6a896d6fd963b8d2925d99a7105641d7da63758bff5cfa476d490066f7a3dcce",
+        "messages.log": "1bf97f9ffbe0b4fc52644cdf682eba9dea436f368da7264c5522012b540915ee",
+        "state.log": "b93843c84bd1abdfd8c423165b6942dea52e79c906c09e219d10e67dc862d740"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-cc4a4b398a0c5ef7e3e25d22e2a1247e098010087c2665f69f572d60f6b7e341",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "f783fa4937156459021f9d92588c31c73181869799a9dac837b6491146c91248",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "616691d038b101209e021245e3472468453c09d200f445ab9a90e42a7bca8300",
+    "trace-core-tail.jsonl": "4f5d63d1222b515cbe9ce562f0741c1b32ba113354fbe4b0ac7587066e5b3a54"
+  },
+  "investigation": null,
+  "issue": null
+}

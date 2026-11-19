@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1020018",
+  "run_kind": "harness",
+  "character": "Half-Orc Druid",
+  "raw_cause": "a battle-scarred veteran",
+  "terminal": {
+    "cause": "a battle-scarred veteran",
+    "dead": true,
+    "depth": 0,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 17387,
+    "race_idx": 6,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1020018,
+    "flags": "menu,exact,keep-load-rng,save=input.save",
+    "git_rev": "6d1bca10bc67d02150a1a717f111891976e98069",
+    "git_dirty": "no",
+    "source_sha256": "8646eb9792947ae2908b894ae2fa587891f10d31f2595ad5807dc3a98b11e9a3",
+    "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5",
+    "borg_txt_sha256": "2735dd7e4a03854a099a65b8c9f1d2d52463ea826c0128269624b9c837b2175b",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": null
+  },
+  "decision_trace": {
+    "file": "trace-tail.jsonl",
+    "lines": 29,
+    "of": 29
+  },
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c2-r6-s1020018-i000/run",
+      "result_sha256": "e96aa40d3159f0c1043c133bad8dfdeeb69faa4cb3f5de173cf131137d808184",
+      "raw_sha256": {
+        "keys.log": "e96aa40d3159f0c1043c133bad8dfdeeb69faa4cb3f5de173cf131137d808184",
+        "messages.log": "882324e5574965f02da7acaff8b3f2ddbbe00f003e1b18a95e72cd93846737de",
+        "state.log": "f15be3ac610ec7d8bd402df989e9226db9fe21f529f7f5ee8b238972d6f5b4de"
+      },
+      "source_commit": "6d1bca10bc67d02150a1a717f111891976e98069",
+      "binary_sha256": "4105059208c2aebc4abd7fbe27fd608bca733ecfdec13392423f6e23e5117af5"
+    }
+  ],
+  "encounter_family": "start-542719f28fcba7a80e826491f49919aae8f89be961cdb0e22142cb1923d9561e",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0d3e859850d8f0ff109f8e2c5052b57d87c6b1dbc21052b023ac1b74e0e7d84b",
+    "config.txt": "208bae0fa4b3e9ff19f44ed316245848579ec29ecfe4610efb8e2ea720940869",
+    "depths.json": "db203bb1ae3055d162a20135896e60f3f57002d912d451b4716a1d81583d3cf1",
+    "params.json": "99f6fac184e789f0e43144024e5803aacfeb79029e04fd3328ed84c2f1518d35",
+    "summary.json": "ba853128242bd40c2c6f60eb3a6b87d62067f0e294a4bf919da9db886a3d99ec",
+    "trace-tail.jsonl": "24843248f04381419cc1918aec7731ec75df69c763df9486ffff1844230c8ee7"
+  },
+  "investigation": null,
+  "issue": null
+}

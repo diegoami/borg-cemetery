@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0001-rust-seed1080096",
+  "run_kind": "harness",
+  "character": "Half-Troll Blackguard",
+  "raw_cause": "a kobold shaman",
+  "terminal": {
+    "cause": "a kobold shaman",
+    "dead": true,
+    "depth": 3,
+    "max_depth": 3,
+    "level": 6,
+    "turn": 70024,
+    "race_idx": 7,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1080096,
+    "flags": "menu,keep-load-rng",
+    "git_rev": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+    "git_dirty": "no",
+    "source_sha256": "6448d51d3fa5d880b9ea65858ea622f935cdeed45f04b13d68446b2a40097b7d",
+    "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85",
+    "borg_txt_sha256": "7ba0b2cf27ce8add7370c609baf6d60117df0c3ee431ef0ba23f6e94fef5bcbd",
+    "profile_sha256": null,
+    "params_core_sha256": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 13,
+    "of": 13
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/home/runner/work/borg-zoo/borg-zoo/attempt/native/c8-r7-s1080096-i000/run",
+      "result_sha256": "04e9fd2386afa6a59295a96146f28d406900f9b6fb23c4bcd790c7cb4683eca4",
+      "raw_sha256": {
+        "keys.log": "04e9fd2386afa6a59295a96146f28d406900f9b6fb23c4bcd790c7cb4683eca4",
+        "messages.log": "e7d8e86499468006332e34fe6926b30199676fc08da1237540ba76c72ab6f749",
+        "state.log": "2c3efa4c28dc3ce7265c956d2bd5563dad51317ac2660d0977af7e62d967cbaf"
+      },
+      "source_commit": "193d9076747cd5c52e1fe1f6ea314570d8f3873a",
+      "binary_sha256": "cdfee89a0d85ae1d63abf8e0e6528bd9466b45bb25647517d1037051d9070c85"
+    }
+  ],
+  "encounter_family": "start-18a6a556ac67f0696f1ef5bd83f2a508f64f7df9cbfe3b09431b068b52eb98db",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "4e56437ea6823bb12ea79433902c9c025f94dd9ee51e73634419409b9f1fdf1f",
+    "config.txt": "0ee953968cfc38b7d98e278564d91b0879c5ad22509850eaeeb8bf3002b705d2",
+    "params-core.json": "0331fc3b833095124bd71bf255a8677ccb41916f0c35e7ac3423fc0bcd84eac9",
+    "summary.json": "0dd3fde01db675ecfc597a559d862338fb0147924d047b395337aa64cf4e3542",
+    "trace-core-tail.jsonl": "9d7d4c05551255e3ac56e7d93cd4b65b1ad923da362a07a848cd08b19a3cf04d"
+  },
+  "investigation": null,
+  "issue": null
+}
