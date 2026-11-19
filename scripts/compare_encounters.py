@@ -8,7 +8,7 @@ import subprocess
 import time
 
 from encounter_suite import prepare
-from scenario_config import run_configured, settings
+from scenario_config import parameter_effective, run_configured, settings
 from synthetic_suite import COMMIT, STATE, hashed, local_file, read, sha, write
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -138,8 +138,7 @@ def validate_cell(row, dest, definition_path, definition, manifest, arm, scenari
     actual = {p['name']: p for p in read(raw / 'params-core.json')}
     for name, value in requested.items():
         if name.startswith('borg_param_'):
-            p = actual.get(name.removeprefix('borg_param_'), {})
-            if p.get('value') != value or p.get('origin') != 'borg.txt' or proof['named_parameters'].get(name) != value:
+            if not parameter_effective(name, value, actual) or proof['named_parameters'].get(name) != value:
                 raise ValueError('named parameter not effective: ' + name)
     if plan and (proof.get('plan_sha256') != sha(plan) or proof.get('loaded_plan_sha256') != sha(plan)
                  or sha(raw / 'errands_plan.txt') != sha(plan)):
