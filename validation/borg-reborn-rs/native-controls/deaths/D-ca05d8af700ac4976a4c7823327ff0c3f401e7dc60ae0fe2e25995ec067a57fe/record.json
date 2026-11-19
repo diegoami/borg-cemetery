@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-ca05d8af700ac4976a4c7823327ff0c3f401e7dc60ae0fe2e25995ec067a57fe",
+  "run_kind": "harness",
+  "character": "Dunadan Ranger",
+  "raw_cause": "a gallant",
+  "terminal": {
+    "cause": "a gallant",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 6,
+    "turn": 54788,
+    "race_idx": 8,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1071,
+    "flags": "menu",
+    "git_rev": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754",
+    "borg_txt_sha256": "ccb8ff05030ab0684aedf20aad5ce8f40e31f1448b79a8b9c236169d94af0fdd",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 5204
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-7-ranger-1",
+      "result_sha256": "02c418e5ac98cae1ce2bfc8e66ec4769880c1089fd6d066ca520cafdce4bd531",
+      "raw_sha256": {
+        "keys.log": "02c418e5ac98cae1ce2bfc8e66ec4769880c1089fd6d066ca520cafdce4bd531",
+        "messages.log": "dba73ebb5923748422c363aea847c692c5dc64504ee90b12878af09b64bd0661",
+        "state.log": "ad5c23cd8190a5306d15a2146c56be29f0c2cf7a9070496a74c3e4d36f73b3b1"
+      },
+      "source_commit": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+      "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754"
+    }
+  ],
+  "encounter_family": "start-0a7ba6c71fe4d0ef0828d3a29f7091a929fbf0fe40024a7813bfbbbebe67fc0e",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ef1139f17dd2e346ba14aad23d7f7648327b75ddc4081aeb3c95429f1ed7d18b",
+    "config.txt": "be136253a9b8bfc30a2941b3184898210d7312add0beeaccd43a2760e9fdeacd",
+    "depths.json": "bf1520aaf75353469eb59f1a26c8d957fef7d8589bded4a92810cee86abb9500",
+    "params-core.json": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca",
+    "summary.json": "59902a44a4ac73735a09950748cb8a8ca48a2f9a5688c3b4ee6f8fda5066b2d5",
+    "trace-core-tail.jsonl": "b945137ad7b816faa71d8bdc02a0880493df900f0caef89b541f1b780fef59c3"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -81,3 +81,39 @@ marker parsing cannot silently hide a run.
 This is the natural-registry boundary for cemetery #5 / borg-reborn-rs #371.
 The P1 suite/report layer is documented in [synthetic-suite.md](synthetic-suite.md).
 No existing dossier is rewritten or promoted from a synthetic result.
+
+## Zoo deaths (borg-zoo#176, #63)
+
+borg-zoo replays every natural death of a run once, with full logs. It checks
+the replay's key stream against the cell's and uploads death bundles as the
+run's `deaths-<specimen>-<shard>` artifacts, kept 90 days. A bundle is a run
+directory for `export-death.py`. Import a whole run with:
+
+```bash
+python3 scripts/import_zoo_deaths.py --run RUN_ID        # downloads with gh
+python3 scripts/import_zoo_deaths.py --bundles DIR --run-id ID
+```
+
+Each reproduced bundle becomes a `D-<sha256>` dossier, registered with its
+README, REPLAY and launchers. The run page `runs/zoo-<experiment>-<run>/`
+(README.md, deaths.json) lists every death with its dossier, or with the reason
+it has none: not reproduced, failed replay, unsupported harness kind, or a
+bundle that no index line names (the zoo shard stopped before indexing it).
+Listed bundles are never imported, because the index line carries their
+reproduction status and build identity. A death
+already in the registry is a repeat. Raw logs stay in the zoo artifact, which
+the dossier's `raw_directory` names. Exact reruns of zoo dossiers use the zoo
+path of `rerun-death.py` (#59).
+
+### Animate a zoo death's last turns
+
+`scripts/animate_death.py CASE [--turns N] [--every K]` reruns a zoo dossier the
+way the zoo ran it, through the zoo path of `rerun-death.py` with its `extra`
+borgh options. It refuses to draw unless the rerun reproduces the recorded key
+stream. It then replays to the last key of each of the last N turns (default
+50, every turn; `--every K` thins them), using `-keys K -screen`. A turn is a
+game turn at which the Borg pressed keys. A frame whose keys are not exactly
+the original prefix is dropped and listed in the receipt. The GIF and its
+receipt go to `CASE/media/last-N-turns.{gif,json}`, and the death page embeds
+them. Only zoo
+dossiers are supported. Batch episodes use `capture_episode_media.py`.

@@ -229,7 +229,7 @@ class SuiteTest(unittest.TestCase):
         while True:
             try:
                 state = status.read_text().split(') ', 1)[1][0]
-            except FileNotFoundError:
+            except (FileNotFoundError, ProcessLookupError):
                 break
             if state in ('Z', 'X'):
                 break
@@ -261,7 +261,7 @@ class SuiteTest(unittest.TestCase):
             while True:
                 try:
                     state = status.read_text().split(') ', 1)[1][0]
-                except FileNotFoundError:
+                except (FileNotFoundError, ProcessLookupError):
                     break
                 if state in ('Z', 'X'):
                     break

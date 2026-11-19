@@ -1,0 +1,36 @@
+{
+  "schema": "borg-cemetery/native-validation-controls@1",
+  "purpose": "CI identity and export checks, not zoo comparison",
+  "source": {
+    "repository": "diegoami/borg-reborn-rs",
+    "change": "#459 (issue #458): back away never steps onto lava unless fire-immune, on main 4a2cb910",
+    "commit": "300f4716",
+    "source_sha256": "9bec1ff5eee8cb1683a1e30d4ddba7291af48e58119e582a3d8c9a023a2a92bd"
+  },
+  "runs": [
+    {
+      "run": "reborn-1020",
+      "case": "D0000-q6700c9c556d87dd93be37f594b248fac732ecf690d2f6f1010a40953da76b2ac",
+      "seed": 1020,
+      "class": "Druid",
+      "death_cause": "a giant white mouse",
+      "game_turns": 8922
+    },
+    {
+      "run": "smoke-mage-2",
+      "case": "D0000-q80dc6ee84a2edb2e38c192dcdeb9b95cc65325b77220c84893a6094e23e87429",
+      "seed": 102,
+      "class": "Mage",
+      "death_cause": "Fang, Farmer Maggot's Dog",
+      "game_turns": 3640
+    },
+    {
+      "run": "core",
+      "case": "D0000-qc5ee110e8acb917f85b3bce13be21c86af456b34a384dc5334f319e96d035b60",
+      "seed": 1011,
+      "class": "Mage",
+      "death_cause": "a cave spider",
+      "game_turns": 18903
+    }
+  ]
+}

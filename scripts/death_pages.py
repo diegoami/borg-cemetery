@@ -186,6 +186,17 @@ def dossier_page(directory):
         body = original.read_text().split('\n', 1)[-1].strip()
         body = re.sub(r'\[([^]]+)\]\([^)]*\.jsonl?[^)]*\)', r'\1 (machine evidence retained separately)', body)
         content += [body, '']
+    animations = sorted((directory / 'media').glob('last-*-turns*.gif'),
+                        key=lambda g: int(g.stem.split('-')[1]) if g.stem.split('-')[1].isdigit() else 0)
+    if animations:
+        content += ['## Last turns before the death', '',
+                    'One frame per turn in which the Borg acted, each a rerun from birth stopped there whose keys match '
+                    'the original game (`scripts/animate_death.py`). The receipt beside each animation lists every frame.', '']
+        for gif in animations:
+            turns = gif.stem.split('-')[1]
+            label = f'Last {turns} turns' + (f", every {gif.stem.split('-every-')[1]}" if '-every-' in gif.stem else '')
+            content += [f'**{label}** · [receipt](media/{gif.stem}.json)', '',
+                        f'![{label}](media/{gif.name})', '']
     content += ['## Read and replay', '']
     content += links(directory, [('inventory.md', 'Human-readable inventory'), ('report.md', 'Original written report'),
                                  ('analysis.md', 'Survival analysis, hypotheses and proposed experiments'),

@@ -18,6 +18,7 @@ D-<full SHA-256 of encounter family and original key stream>/ with:
   report.md        one-screen summary
   summary.json, config.txt, build.json   the run's own small files
   errands_plan.txt  the plan a plan run read (BORG_ERRANDS_PLAN runs)
+  scary_list.txt   the named scary list a zoo run read (borg_scary_list)
   trace-tail.jsonl  the last 200 decision thinks (Rust runs)
 Raw logs (keys.log, messages.log, state.log) stay in RUN_DIR, outside Git;
 the record names their SHA-256 (RULES 18). T1.6 upgraded these dossiers to
@@ -107,6 +108,12 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
     # reproduce it after the source checkout's plan is edited (or moved).
     if config.get('borg_errands_plan') and (run_dir / 'user/errands_plan.txt').exists():
         files['errands_plan.txt'] = (run_dir / 'user/errands_plan.txt').read_bytes()
+    # A zoo cell's named scary list (borg-zoo#228, borg-reborn-rs#518): the
+    # dossier keeps the exact bytes the run read, so rerun-death.py can
+    # restore them as user/NAME.
+    scary = config.get('borg_scary_list')
+    if scary and '/' not in scary and (run_dir / 'user' / scary).exists():
+        files['scary_list.txt'] = (run_dir / 'user' / scary).read_bytes()
     # The reborn Borg's decision trace (T2.4): its last TRACE_TAIL lines,
     # the thinks that led to the death.
     trace_lines = 0
@@ -115,10 +122,18 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
         trace_lines = len(lines)
         files['trace-tail.jsonl'] = b''.join(lines[-TRACE_TAIL:])
     # P1.4 (#222): the vendored core has its own named decision stream.
-    core_trace_lines = 0
+    core_trace_lines = core_trace_kept = 0
     if (run_dir / 'trace-core.jsonl').exists():
         lines = (run_dir / 'trace-core.jsonl').read_bytes().splitlines(keepends=True)
         core_trace_lines = len(lines)
+        core_trace_kept = min(core_trace_lines, TRACE_TAIL)
+        # A zoo death bundle (borg-zoo#176) keeps only the trace's tail and
+        # writes the full count beside it.
+        if (run_dir / 'trace-core.lines').exists():
+            try:
+                core_trace_lines = max(int((run_dir / 'trace-core.lines').read_text().strip()), core_trace_lines)
+            except ValueError:
+                pass  # unreadable count: the kept file's own length, as before
         files['trace-core-tail.jsonl'] = b''.join(lines[-TRACE_TAIL:])
     files['build.json'] = (json.dumps(build, indent=2, sort_keys=True) + '\n').encode()
     raw = {n: sha256_file(run_dir / n) for n in ('keys.log', 'messages.log', 'state.log')
@@ -149,7 +164,7 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
         },
         'decision_trace': ({'file': 'trace-tail.jsonl', 'lines': min(trace_lines, TRACE_TAIL), 'of': trace_lines}
                            if 'trace-tail.jsonl' in files else None),
-        'core_decision_trace': ({'file': 'trace-core-tail.jsonl', 'lines': min(core_trace_lines, TRACE_TAIL), 'of': core_trace_lines}
+        'core_decision_trace': ({'file': 'trace-core-tail.jsonl', 'lines': core_trace_kept, 'of': core_trace_lines}
                                 if 'trace-core-tail.jsonl' in files else None),
         'attempts': [{
             'role': 'original', 'outcome': 'death', 'raw_directory': final_dir,
@@ -177,7 +192,7 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
         + (f"Decision trace: the last {min(trace_lines, TRACE_TAIL)} of {trace_lines} thinks in "
            f"`trace-tail.jsonl`; parameters in `params.json` (profile "
            f"`{(config.get('profile_sha256') or 'unknown')[:12]}`).\n\n" if 'trace-tail.jsonl' in files else '')
-        + (f"Core decision trace: the last {min(core_trace_lines, TRACE_TAIL)} of {core_trace_lines} thinks in "
+        + (f"Core decision trace: the last {core_trace_kept} of {core_trace_lines} thinks in "
            f"`trace-core-tail.jsonl`, with selected check, queued keys and `params-core.json`.\n\n"
            if 'trace-core-tail.jsonl' in files else '')
         + "**Unassessed.** Basic dossier written by `tools/export-death.py` at the end of the run "
@@ -258,14 +273,17 @@ def run_family(summary, config, impl, source_sha256, flags='-'):
                      config.get('params_core_sha256'))
 
 
-def export(run_dir, impl, build_id_path, flags='-'):
+def export(run_dir, impl, build_id_path, flags='-', raw_location=None):
     """Returns (case, what): what is 'not dead', 'exported', 'repeat', or
     'repaired: NAMES' when a repeat found its dossier incomplete and wrote
-    the missing files (existing files are never overwritten)."""
+    the missing files (existing files are never overwritten).
+
+    raw_location names where the raw logs are kept when that is not the run
+    directory, e.g. a borg-zoo run artifact (scripts/import_zoo_deaths.py)."""
     run_dir = Path(run_dir).resolve()
     # harness/suite.sh runs into OUTDIR.partial.<pid> and renames it to OUTDIR
     # when the suite ends: record where the logs will be.
-    final_dir = re.sub(r'\.partial\.\d+(?=/|$)', '', str(run_dir))
+    final_dir = raw_location or re.sub(r'\.partial\.\d+(?=/|$)', '', str(run_dir))
     summary = json.loads((run_dir / 'summary.json').read_text())
     config = read_kv(run_dir / 'config.txt')
     why = not_natural(summary, flags, config)

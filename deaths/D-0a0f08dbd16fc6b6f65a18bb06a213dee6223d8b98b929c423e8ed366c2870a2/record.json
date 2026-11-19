@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-0a0f08dbd16fc6b6f65a18bb06a213dee6223d8b98b929c423e8ed366c2870a2",
+  "run_kind": "harness",
+  "character": "Human Druid",
+  "raw_cause": "a small kobold",
+  "terminal": {
+    "cause": "a small kobold",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 45514,
+    "race_idx": 0,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 102023799,
+    "flags": "-",
+    "git_rev": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2",
+    "borg_txt_sha256": "a89f1abe25b6676ff3619c8dbcd5e4ea8389158740cc9e64753f9be172924456",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 3630
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 44098927907-local-replay, artifact deaths-4.2.6-reborn-rust-main-4d83dd26-local, classes-18/4.2.6-reborn-rust-main-4d83dd26/reborn-main-pbd1/102023799",
+      "result_sha256": "f83d7eb49548535d489fc32f71cbf27e3073905da1484df3ce2c82c4d2f898da",
+      "raw_sha256": {
+        "keys.log": "f83d7eb49548535d489fc32f71cbf27e3073905da1484df3ce2c82c4d2f898da",
+        "messages.log": "f7c39daa1f8e408b833728e342f572b18a206b0f80335840673b8d89992b6922",
+        "state.log": "0f411629474dcae963b4d0b9951df5f2e6204d141d6fe241a850ebc297002361"
+      },
+      "source_commit": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+      "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2"
+    }
+  ],
+  "encounter_family": "start-14330edb43f9012dcf175acd0aa25b1a9d1df15f3ef375243f9f08d92a3a34af",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ba2f2fc4b2618443443c25bfa635b71728b9eed12e423ca60719c87f246b1e82",
+    "config.txt": "821f68a36f38a397462eb9cc69894a2a5216b987368987658a2567610d301916",
+    "params-core.json": "562738e606406804c42b04192e067e02bb736b4439d49022b9e0165751dcea6a",
+    "summary.json": "807364379c879794959804e43237810e26b35348e685da11d8afc10eeabd5a57",
+    "trace-core-tail.jsonl": "9b283ae38e29da4d128670c7d227229b78e6442a10ac8002a9c71b599da35d51"
+  },
+  "investigation": null,
+  "issue": null
+}

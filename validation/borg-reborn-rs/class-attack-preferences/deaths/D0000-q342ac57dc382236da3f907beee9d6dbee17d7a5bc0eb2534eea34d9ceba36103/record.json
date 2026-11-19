@@ -1,0 +1,57 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "de7102eeb1e261f4e080ee71487f074ba992fa06a8f5d7c8de05ca43fa669df9",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/403-recorder-base-full/full-7-ranger-3",
+      "raw_sha256": {
+        "keys.log": "6301337fe0b0b2b9c8566e425b1bd29db67809ef17688ab786151cd7c1a89555",
+        "messages.log": "85e3d7dc696f47786af5487551e1598fe900fbea194543d18fa7acc3999568db",
+        "state.log": "6949a36c95e5c39386c550a1472829e00e8eb8ea711ccc7e3977ed28a7178964"
+      },
+      "result_sha256": "6301337fe0b0b2b9c8566e425b1bd29db67809ef17688ab786151cd7c1a89555",
+      "role": "original",
+      "source_commit": "46d5f2ae46c2af743a35ea21165191a0f1cd53f6"
+    }
+  ],
+  "character": "Kobold Ranger",
+  "core_decision_trace": null,
+  "decision_trace": null,
+  "encounter_family": "start-77bf07acf186489faf8383f776e1e602502b3c38ce04c3e6985e4c739e4819da",
+  "files_sha256": {
+    "build.json": "73ce7e8e238851f4df3d648dad5144b38ec0da0f389a507ab372aef51512de40",
+    "config.txt": "576796f79ca152152797fdfd257f4fd3f2534f32c99b009b696f7c31f8bb3476",
+    "depths.json": "fdbcf8993225beb5388c6b2872a75246411f5c72d7f5c44ae867165db7d2e93f",
+    "params-core.json": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "summary.json": "50e0efefa6c69f407deb39e501679eafa7060ad93c0ccd7605a1b8d1d20d6c1d"
+  },
+  "id": "D0000-q342ac57dc382236da3f907beee9d6dbee17d7a5bc0eb2534eea34d9ceba36103",
+  "identity": {
+    "binary_sha256": "de7102eeb1e261f4e080ee71487f074ba992fa06a8f5d7c8de05ca43fa669df9",
+    "borg_txt_sha256": "3d8bb2c9c3efe032ae021976fc30ebc58bad6e8e1cbb911b6d03ef91277a3fdb",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "46d5f2ae46c2af743a35ea21165191a0f1cd53f6",
+    "impl": "rust",
+    "params_core_sha256": "95480c9b2341de4cf61e8ba351a66081772e6f887a6aff7f37beba02c82e54fb",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1073,
+    "source_sha256": "7d2af92011c8d5fa7d73cb2df1e5460048f2dd1f0987cc0143df26406a5a94f7"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a gallant",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a gallant",
+    "class_idx": 7,
+    "dead": true,
+    "depth": 7,
+    "level": 4,
+    "max_depth": 7,
+    "race_idx": 10,
+    "turn": 94857
+  }
+}

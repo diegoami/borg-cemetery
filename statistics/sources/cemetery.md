@@ -4,24 +4,26 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `291d4780947710c199a3a1a967d133a4e943b8c0600e67339603795a914b2b9b`.
+Input inventory SHA-256: `cf59e6c4ee4839496109d67a783572200caa1fd804fb20af6a238c3c1134f5e5`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
 | Cause | Dossiers |
 | --- | --- |
-| poison | 10 |
-| a soldier | 8 |
+| poison | 14 |
+| a soldier | 9 |
+| a wild cat | 9 |
 | Fang, Farmer Maggot's Dog | 7 |
-| a wild cat | 6 |
+| a crow | 6 |
 | a grey mushroom patch | 6 |
+| a giant white mouse | 5 |
 | a cutpurse | 4 |
+| a small kobold | 3 |
 | a giant yellow centipede | 3 |
 | a grey mold | 3 |
 | Grip, Farmer Maggot's Dog | 3 |
+| a rock lizard | 2 |
 | starvation | 2 |
-| a small kobold | 2 |
-| a crow | 2 |
 | a fatal wound | 2 |
 | a snaga | 2 |
 | a blue yeek | 2 |
@@ -42,7 +44,6 @@ The companion snapshot for an external source retains normalized statistical fie
 | a black naga | 1 |
 | a brown mold | 1 |
 | a baby black dragon | 1 |
-| a giant white mouse | 1 |
 | a radiation eye | 1 |
 | a wild dog | 1 |
 
@@ -52,18 +53,22 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 88 | 2626 | 28706.5 | 75884.25 | 1094860 |
-| depth | 63 | 0 | 1 | 1.89 | 18 |
-| level | 63 | 1 | 2 | 2.98 | 8 |
+| turn | 107 | 2626 | 27770 | 68045.50 | 1094860 |
+| depth | 82 | 0 | 1 | 1.68 | 18 |
+| level | 82 | 1 | 3 | 2.96 | 8 |
 
 ## Characters
 
 | Character | Dossiers |
 | --- | --- |
-| Half-Elf Druid | 3 |
+| Human Druid | 6 |
+| Human Necromancer | 5 |
+| Human Paladin | 4 |
+| Half-Elf Blackguard | 4 |
+| Human Ranger | 4 |
+| Half-Elf Druid | 4 |
 | Dwarf Necromancer | 3 |
 | Elf Rogue | 3 |
-| Human Ranger | 3 |
 | Half-Elf Mage | 3 |
 | Half-Troll Priest | 3 |
 | Human Mage | 3 |
@@ -74,13 +79,13 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Measure Dunadan Druid | 2 |
 | Measure Human Necromancer | 2 |
 | Measure Elf Necromancer | 2 |
-| Human Necromancer | 2 |
 | Half-Orc Rogue | 2 |
 | Dunadan Druid | 2 |
 | Elf Druid | 2 |
 | Hobbit Druid | 2 |
-| Human Druid | 2 |
 | Elf Ranger | 2 |
+| Human Rogue | 1 |
+| Half-Elf Priest | 1 |
 | Human Warrior | 1 |
 | Hobbit Rogue | 1 |
 | Gnome Blackguard | 1 |

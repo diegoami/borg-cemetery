@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-bc1b22fc1490a595039e8df87926d78d7b6f752d38ca588737e242f79228eb06",
+  "run_kind": "harness",
+  "character": "Half-Orc Druid",
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 1,
+    "turn": 15673,
+    "race_idx": 6,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1024,
+    "flags": "menu",
+    "git_rev": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754",
+    "borg_txt_sha256": "ae2efccce32fd053ab10a267ef957c9b7b2560e2aa0ae5d6c4aff6b1e31be5eb",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1542
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-2-druid-4",
+      "result_sha256": "13ee209ad5adbc30d773919a30c7002a3557a729cc917efbf51dd79cff5ae220",
+      "raw_sha256": {
+        "keys.log": "13ee209ad5adbc30d773919a30c7002a3557a729cc917efbf51dd79cff5ae220",
+        "messages.log": "498a421a3ac28915c00696727034bc2b17d319ff8da7ca6ed8a0a953a165800f",
+        "state.log": "5e36b29633617b138e06421f43f279f8e112a7cedadbc15a64235d3a1d8d14b7"
+      },
+      "source_commit": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+      "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754"
+    }
+  ],
+  "encounter_family": "start-f99e40abd901f27adf8ab3ebbbeaaeb79db114ed8589e474b6aa08a3f94c3118",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ef1139f17dd2e346ba14aad23d7f7648327b75ddc4081aeb3c95429f1ed7d18b",
+    "config.txt": "4124da1bc12eede993e3434ce774705c586206cf22bd956c4a5edb8e60b18cd3",
+    "depths.json": "f06da3b3cd2ab617d67fe0f3b787e37e282afd3dcd0e411fcd6cbea439588ede",
+    "params-core.json": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca",
+    "summary.json": "2eaa9539d6596d746e10f84f97f3d7de284f46af5bec082ac962237e2c09f30d",
+    "trace-core-tail.jsonl": "63e9a29d0969b5dc5c9cd23e3176765f7b4a993fdc57bb1ccdedae080aca4180"
+  },
+  "investigation": null,
+  "issue": null
+}

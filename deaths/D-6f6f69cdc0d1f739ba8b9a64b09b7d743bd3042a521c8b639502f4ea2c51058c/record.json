@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-6f6f69cdc0d1f739ba8b9a64b09b7d743bd3042a521c8b639502f4ea2c51058c",
+  "run_kind": "harness",
+  "character": "Human Druid",
+  "raw_cause": "a rock lizard",
+  "terminal": {
+    "cause": "a rock lizard",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 33735,
+    "race_idx": 0,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 102023799,
+    "flags": "-",
+    "git_rev": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2",
+    "borg_txt_sha256": "f0ca24bb7d66e2efb80ff668183a40d3fdff158bbfc8f2da0bc4bf7b3e9abe83",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 2869
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 44098927907-local-replay, artifact deaths-4.2.6-reborn-rust-main-4d83dd26-local, classes-18/4.2.6-reborn-rust-main-4d83dd26/reborn-main-pbd2/102023799",
+      "result_sha256": "466c01755aa66df835364d30716f7c7be8f6c933db411fa8291f15399e688389",
+      "raw_sha256": {
+        "keys.log": "466c01755aa66df835364d30716f7c7be8f6c933db411fa8291f15399e688389",
+        "messages.log": "b75c32cbfa420f4fcf5a3c9d5c84c2a64ff78fbd63bb5a0ad4a99171c21fe376",
+        "state.log": "670b05a2ad720b914b17257f2e83577a759113ff9f5f2bb2883cffcd8f1a6815"
+      },
+      "source_commit": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+      "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2"
+    }
+  ],
+  "encounter_family": "start-6b907d03d8846ec73b44965f73b4cc4e468941abbfa8bc9ad178b8794cb5f629",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ba2f2fc4b2618443443c25bfa635b71728b9eed12e423ca60719c87f246b1e82",
+    "config.txt": "c38d8ec68ee8caf530b22a6af29ece36b8fd15cabbf3947bfc2e4a28fb1cfdc7",
+    "params-core.json": "d80b7d62924d23943cb503b46eafe2c9835b3a976f24de4f69c181b2348bab10",
+    "summary.json": "d26bbe0a9026203b5bfc8c75454b29a40a397c01d40af52ccb37e2cd7a47ab3d",
+    "trace-core-tail.jsonl": "37edf49194f9fd858815976cb13c54f6a0987f4e245e394a9e620f5d3e4b8213"
+  },
+  "investigation": null,
+  "issue": null
+}

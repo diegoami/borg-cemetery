@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "4dca3e56f35e6166451d29a4cc006cb620c7b00280cd7240f21125e9be941981",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-1000/-home-diego-projects-borg-reborn-rs/363b8e4f-0f25-42e8-8383-d41ed8b07227/scratchpad/ci470/runs/core-trace-death",
+      "raw_sha256": {
+        "keys.log": "5a41f4f2853a4960698b191194b172d6531c3c11d6af6399918b200065c4bb6e",
+        "messages.log": "c68dc220605e84cf7682400721080fe86438c3fb81e628a02f11a0017538c599",
+        "state.log": "aa0c8aeaf1b6e93c5918be7a0c5f344837abd37f0c400bdbac4937c8e34add6b"
+      },
+      "result_sha256": "5a41f4f2853a4960698b191194b172d6531c3c11d6af6399918b200065c4bb6e",
+      "role": "original",
+      "source_commit": "404e267fab34c62f84e22722b3f3197e9f1bcdd6"
+    }
+  ],
+  "character": "Elf Mage",
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1717
+  },
+  "decision_trace": null,
+  "encounter_family": "start-c7f974361c6f587ca111b7dfdd35fbb24aeb8ba92dc5fbcb0a216b2d71a8d6f1",
+  "files_sha256": {
+    "build.json": "2e34e6d70770d4787fa35df529953511f9ed0f5c284d1d48907a47fc0289f315",
+    "config.txt": "99e75df08551d1425feb5e046ee8a5afd5fa1d5bbc188b7f2fa14c0e1d1c4da3",
+    "depths.json": "af137c45d4fa8cb41e1f50c2dfae371b4c1dca3eda5be9b42f7c55bcbb22eb58",
+    "params-core.json": "06daf36085298921d2344c039481b0e07405ae0674499a4ab2dca60e76dbed61",
+    "summary.json": "c4f8aba049e4eb47f90df63f4e2702fb37ee0a1b7203b6ae856c9aa59c8db06b",
+    "trace-core-tail.jsonl": "5df48a3e37e5bf93cd8e8e18ea7d837a9b46e5441ae866713fdb9fac93485f4c"
+  },
+  "id": "D0000-q17f7c0d03052c1509c6f2d789dad862c0884548b314340374c950ab8f21d4350",
+  "identity": {
+    "binary_sha256": "4dca3e56f35e6166451d29a4cc006cb620c7b00280cd7240f21125e9be941981",
+    "borg_txt_sha256": "3e5f27a2ee1e424776e585af9fd43efe2e427a695fb92b6225832392e3cd801e",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "404e267fab34c62f84e22722b3f3197e9f1bcdd6",
+    "impl": "rust",
+    "params_core_sha256": "06daf36085298921d2344c039481b0e07405ae0674499a4ab2dca60e76dbed61",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1016,
+    "source_sha256": "ec83c11beb4d3048dd2ff5d89cba5d46b4ee55bbc0bebd7965583161dfd80420"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "an apprentice",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "an apprentice",
+    "class_idx": 1,
+    "dead": true,
+    "depth": 1,
+    "level": 4,
+    "max_depth": 2,
+    "race_idx": 2,
+    "turn": 23211
+  }
+}

@@ -23,7 +23,7 @@ def settings(text):
         line = line.split('#', 1)[0].strip()
         if not line or not line.startswith('borg_'):
             continue
-        match = re.fullmatch(r'(borg_[a-z0-9_]+)\s*=\s*(.*?)\s*', line)
+        match = re.fullmatch(r'(borg_[a-z0-9_]+(?:@[a-z]+)?)\s*=\s*(.*?)\s*', line)
         if not match or match[1] in result:
             raise ValueError('malformed/duplicate borg.txt setting: ' + line)
         value = match[2]
@@ -33,6 +33,50 @@ def settings(text):
             value = int(value)
         result[match[1]] = value
     return result
+
+
+# borg-reborn-rs #520: class names in class.txt order, and the families whose
+# legacy `<name>_<class>` alias at its old "use the general value" sentinel sets
+# no class value.
+CLASSES = ('warrior', 'mage', 'druid', 'priest', 'necromancer', 'paladin', 'rogue', 'ranger', 'blackguard')
+ALIAS_SENTINELS = {'attack_arrow_point_blank_divisor': 0, 'town_heal_curve_scale_percent': 0,
+                   'town_heal_reserve_hp_percent': -1}
+
+
+def parameter_target(name, rows):
+    """The params-core.json row a borg_param_ line sets, its class (or None) and
+    the alias sentinel. Since #520 a class line (`<name>@<class>`, or a legacy
+    `attack_preference_<class>_<family>_permille` / `<name>_<class>` alias) is a
+    class value of the common parameter, not a row of its own."""
+    name = name.removeprefix('borg_param_')
+    if '@' in name:
+        base, cls = name.split('@', 1)
+        return rows.get(base), cls if cls in CLASSES else None, None
+    if name in rows:
+        return rows[name], None, None
+    for cls in CLASSES:
+        family = name.removeprefix('attack_preference_' + cls + '_')
+        if family != name and family.endswith('_permille'):
+            return rows.get('attack_preference_' + family), cls, None
+        if name.endswith('_' + cls) and name[:-len(cls) - 1] in ALIAS_SENTINELS:
+            base = name[:-len(cls) - 1]
+            return rows.get(base), cls, ALIAS_SENTINELS[base]
+    return None, None, None
+
+
+def parameter_effective(name, value, rows):
+    """Whether params-core.json shows the borg.txt line `name = value` in effect."""
+    row, cls, sentinel = parameter_target(name, rows)
+    if not row:
+        return False
+    if cls is None:
+        if '@' in name:
+            return False
+        return row.get('value') == value and row.get('origin') == 'borg.txt'
+    own = row.get('class_values', {}).get(cls)
+    if own is None:
+        return sentinel is not None and value == sentinel
+    return own.get('value') == value and own.get('origin') == 'borg.txt'
 
 
 def override(text, name, value):
@@ -61,13 +105,16 @@ def configured_adapter(template, plan=None, exact_turns=False):
             text = override(text, 'borg_plan', 'selected-plan.txt')
         (raw / 'user/borg.txt').write_text(text)
         env = {k: v for k, v in inherited.items() if not k.startswith(('BORG_', 'ANGBAND_'))}
-        for name in ('BORG_CEMETERY_DIR', 'BORG_OBSERVATION_LOG'):
-            if name in inherited:
-                env[name] = inherited[name]
+        # BORG_OBSERVATION_LOG is deliberately not passed: with BORG_CORE=borg-rs
+        # the reborn shell that writes it never runs, so no log would appear.
+        if 'BORG_CEMETERY_DIR' in inherited:
+            env['BORG_CEMETERY_DIR'] = inherited['BORG_CEMETERY_DIR']
         env.update(BORG_CORE='borg-rs', BORG_CORE_OVERRIDES='on', BORG_RUN_DIR=str(raw),
                    TZ='UTC', LANG='C.UTF-8', LC_ALL='C.UTF-8')
         # The engine may autosave the loaded file; preserve the original input
         # for save identity and give execution its own mutable private copy.
+        # It sits in the run's private -dsave directory, which -mborgh with
+        # -load never reads otherwise (only the interactive save menu does).
         execution_save = raw / 'save/input.save'
         shutil.copyfile(save, execution_save)
         argv = [str(binary), '-mborgh']
@@ -92,8 +139,7 @@ def configured_adapter(template, plan=None, exact_turns=False):
             actual = {v['name']: v for v in read(raw / 'params-core.json')}
             for name, value in requested.items():
                 if name.startswith('borg_param_'):
-                    row = actual.get(name.removeprefix('borg_param_'))
-                    if not row or row['value'] != value or row['origin'] != 'borg.txt':
+                    if not parameter_effective(name, value, actual):
                         raise ValueError('parameter not effective: ' + name)
                     proof['named_parameters'][name] = value
         elif not rc:

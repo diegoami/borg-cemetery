@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-931243a2d75b6a83ac62e6e97274bfd941cc1defe59ddf8274012e450fd49b7c",
+  "run_kind": "harness",
+  "character": "Half-Orc Necromancer",
+  "raw_cause": "a cutpurse",
+  "terminal": {
+    "cause": "a cutpurse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 2,
+    "turn": 23577,
+    "race_idx": 6,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1042,
+    "flags": "menu",
+    "git_rev": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754",
+    "borg_txt_sha256": "ea41192cd3e674f332421d741f387ad17702bb99c7954f95911168818ed5e2a0",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 988
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-4-necro-2",
+      "result_sha256": "fb17b18869e7b1878aba82da09b4c00780bbda915a43fbdcf7233a92bff1b6b4",
+      "raw_sha256": {
+        "keys.log": "fb17b18869e7b1878aba82da09b4c00780bbda915a43fbdcf7233a92bff1b6b4",
+        "messages.log": "ca9f102859887ac97e9ad4438195614c913706e01b3cb9e7d5e4b0aee5501ec8",
+        "state.log": "c3f45ed14e8c3e620c6cfce1b71f83a52a1bcde73ffb3ae566a436674d8a0cc1"
+      },
+      "source_commit": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+      "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754"
+    }
+  ],
+  "encounter_family": "start-03e7e3f6e161e710d816bf2989b86d045a1e8b7af403e76b34175d4427f1e50f",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ef1139f17dd2e346ba14aad23d7f7648327b75ddc4081aeb3c95429f1ed7d18b",
+    "config.txt": "1e77f9ff28212956457b5215bc7d4132f5712b8180b74d8af6151c438811d480",
+    "depths.json": "d024379428d60bb43d6173defb0befb66f2e545127f46a0da56787e0e925fe74",
+    "params-core.json": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca",
+    "summary.json": "d1af7dc700b1e1e1aee540ecd77b49185d17e8cf68281889fa0564c92589f33c",
+    "trace-core-tail.jsonl": "1b213cb7ef89568f01f4a6300ad04e9ada6022d72f91ef6e7936ab8a09873cb3"
+  },
+  "investigation": null,
+  "issue": null
+}

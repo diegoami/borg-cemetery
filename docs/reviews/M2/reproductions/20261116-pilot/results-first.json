@@ -1,0 +1,463 @@
+{
+  "aggregates": [
+    {
+      "character_build_id": "birth",
+      "counts": {
+        "survived_to_cap": 1
+      },
+      "denominator": 1,
+      "depth": 5
+    },
+    {
+      "character_build_id": "observed-level5",
+      "counts": {
+        "survived_to_cap": 1
+      },
+      "denominator": 1,
+      "depth": 5
+    },
+    {
+      "character_build_id": "birth",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 10
+    },
+    {
+      "character_build_id": "observed-level5",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 10
+    },
+    {
+      "character_build_id": "birth",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 15
+    },
+    {
+      "character_build_id": "observed-level5",
+      "counts": {
+        "death": 1
+      },
+      "denominator": 1,
+      "depth": 15
+    }
+  ],
+  "attempted_count": 6,
+  "build_identity": {
+    "build": {
+      "binary": "/workspace/work/pilot/borg-reborn-rs/build/rust/game/angband",
+      "binary_sha256": "ba06d6fad667a51a25b644b62687a5b47f17cabe75fecce45638e7f4301b290b",
+      "built_utc": "2026-11-16T09:50:47Z",
+      "cc": "cc (Debian 14.2.0-19) 14.2.0",
+      "engine_upstream": "42cd156ac9f95ddf4311e88dd7ad462292d6d1d6",
+      "git_dirty": "no",
+      "git_rev": "99473510940b8a7bd6e77ad61e3a2b00c72a6e6d",
+      "impl": "rust",
+      "inputs_dirty": "no",
+      "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+      "source_sha256": "bf9a451c46a07142b59525a9c9c581287930e3b333baa4a81dda4816ed2a025a"
+    },
+    "capabilities_sha256": "24e868eba8406ba01df37f4c92ba065ed7f35ad516c59d4af4f64974ec70baed",
+    "commit": "99473510940b8a7bd6e77ad61e3a2b00c72a6e6d",
+    "repository": "diegoami/borg-reborn-rs"
+  },
+  "counts": {
+    "death": 4,
+    "survived_to_cap": 2
+  },
+  "death_causes": {
+    "a wolf": 2,
+    "an ochre jelly": 2
+  },
+  "manifest_sha256": "95395b02abb84c834deeba53d46c162396ffac77aa7e53d4dc8e174f19f1cda3",
+  "minimum_living_hp_distribution": {
+    "0": 2,
+    "5": 2,
+    "54": 1,
+    "9": 1
+  },
+  "missing_evidence": [],
+  "producer": {
+    "runner_sha256": "c3cba4c6e1d2a02e989099a5733f8bb4bf5f15ac05e762c803ac5235435428cf",
+    "workflow_attempt": null,
+    "workflow_run_id": null
+  },
+  "requested_runtime": {
+    "commit": "99473510940b8a7bd6e77ad61e3a2b00c72a6e6d",
+    "repository": "diegoami/borg-reborn-rs"
+  },
+  "results": [
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 0,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "birth",
+      "death_cause": null,
+      "depth": 5,
+      "evidence": {
+        "config.txt": {
+          "bytes": 413,
+          "sha256": "7dcb2a5d96aa6abe978f5a37f8688c2c7a326be7bf0b4b734c1472fa6c90e2f0"
+        },
+        "messages.log": {
+          "bytes": 5047,
+          "sha256": "33e15395b7d56f1e3a7fe2e73ce7e018b45b275b77de2d4f7cd42ac4b64e6170"
+        },
+        "process.json": {
+          "bytes": 1969,
+          "sha256": "3258ed97f2a41e44bf55a835e1f2b3c649cc83908d3f917fcbf052f6c587398f"
+        },
+        "state.log": {
+          "bytes": 85775,
+          "sha256": "c890d7de0b3a1ad654c1ecdeed23b70603d6cc6a04ba2512d7df04a779999029"
+        },
+        "summary.json": {
+          "bytes": 2295,
+          "sha256": "4131a965c5998a6cf8bb9f0cd5bc3625f16e3c444b15e0a82bb023f138cdd6da"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 9,
+      "observed_turns": 5002,
+      "progress": {
+        "borg_decisions": 334,
+        "game_turns": 5002,
+        "keys": 697,
+        "player_turns": 500,
+        "stop_reason": "turns"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "p1-warrior-58049e87970571527e48fe74",
+      "spec_sha256": "58049e87970571527e48fe74adaeeb95844d3b2759d405d83d2b3dc66e8cdf43",
+      "status": "survived_to_cap",
+      "terminal": "alive_at_horizon"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 0,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "observed-level5",
+      "death_cause": null,
+      "depth": 5,
+      "evidence": {
+        "config.txt": {
+          "bytes": 498,
+          "sha256": "1f401cde94ea42cec49f19ce31d34515ffd76bee85683cb64e9f0358ce0bfe02"
+        },
+        "messages.log": {
+          "bytes": 8545,
+          "sha256": "8dcc47901c6c4a9cbaef025b639cfec6774b2b102842b24a5dd0aeb4fc4c0a4a"
+        },
+        "process.json": {
+          "bytes": 2086,
+          "sha256": "1ecfff2f72203288690d22766b6b895258b79d08df2c3524de6fcb28ea983cea"
+        },
+        "state.log": {
+          "bytes": 118188,
+          "sha256": "22259773e5d7ddada69ec98b73e49d33222d54c1381b721a32297501efae108b"
+        },
+        "summary.json": {
+          "bytes": 2386,
+          "sha256": "2c62681ff05aa1f2e398146d9b5abdeb03ff0c7935577aa49de8b058d0ce070e"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 54,
+      "observed_turns": 5008,
+      "progress": {
+        "borg_decisions": 467,
+        "game_turns": 5008,
+        "keys": 961,
+        "player_turns": 500,
+        "stop_reason": "turns"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 0
+      },
+      "scenario_id": "p1-warrior-e13f8633d330da903304278c",
+      "spec_sha256": "e13f8633d330da903304278c16b330d3dcdd3c8b66a33df6edc9d0f93f316e84",
+      "status": "survived_to_cap",
+      "terminal": "alive_at_horizon"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 0,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "birth",
+      "death_cause": "a wolf",
+      "depth": 10,
+      "evidence": {
+        "config.txt": {
+          "bytes": 415,
+          "sha256": "108b7a869e0e58e892344735b6c6306fd13056a9d2f2c29e25720159b553423a"
+        },
+        "messages.log": {
+          "bytes": 1434,
+          "sha256": "4d846fa3f3c34ada6fd0b5b43e132f5d806dfe21f9d50af84c306d592f36d726"
+        },
+        "process.json": {
+          "bytes": 3992,
+          "sha256": "045f1268afa81ce418a179b849501334ac40d81a1aeea137be2d93cc44e22977"
+        },
+        "state.log": {
+          "bytes": 5418,
+          "sha256": "680569c60b2f3f294af4d0a104469c0ea0d20b8155155331f7882abc9f6a5a14"
+        },
+        "summary.json": {
+          "bytes": 2301,
+          "sha256": "768b7496ef3f23ec718db92fa4ec1818ed5b3e74b8325ccb1272bb6cb1747126"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 5,
+      "observed_turns": 186,
+      "progress": {
+        "borg_decisions": 21,
+        "game_turns": 186,
+        "keys": 44,
+        "player_turns": 19,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "p1-warrior-80745bce983fbadfef1163fd",
+      "spec_sha256": "80745bce983fbadfef1163fdd196d5e7b8e42ee5387c6a692a0a8733f8a2a0ca",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 3,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "observed-level5",
+      "death_cause": "a wolf",
+      "depth": 10,
+      "evidence": {
+        "config.txt": {
+          "bytes": 500,
+          "sha256": "1df11becc83e2bdefb55ab4cd055af34b97aacd51a8d32d4d53ce9c3d3eafe0c"
+        },
+        "messages.log": {
+          "bytes": 4426,
+          "sha256": "cfad0bdb0671f289cdd34f0d06952f63fc80536fbb9c6e278badb80a69d44885"
+        },
+        "process.json": {
+          "bytes": 4109,
+          "sha256": "93a46288d3dd5eb8fd1c0c2489653fd7add355cd7753188def14478dd2648102"
+        },
+        "state.log": {
+          "bytes": 28869,
+          "sha256": "224a7ccb3b267a494247f3a740754af61745b01d46d76d004b1c31a2844d54e1"
+        },
+        "summary.json": {
+          "bytes": 2394,
+          "sha256": "2d73845a474e61d6004e9773a7e8bd3d65fccd706651299cd666f6eaa2428bf3"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 0,
+      "observed_turns": 717,
+      "progress": {
+        "borg_decisions": 80,
+        "game_turns": 717,
+        "keys": 233,
+        "player_turns": 72,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 0
+      },
+      "scenario_id": "p1-warrior-227b3d5a4a28b149c71d2599",
+      "spec_sha256": "227b3d5a4a28b149c71d2599fb4bed5a771f5e3733b87370dcb9c9497bcc6100",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 1,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "birth",
+      "death_cause": "an ochre jelly",
+      "depth": 15,
+      "evidence": {
+        "config.txt": {
+          "bytes": 415,
+          "sha256": "57cc578d4486829966fabceea1c0cc1565274fa5ca25b82540c3c2aa6ca326d6"
+        },
+        "messages.log": {
+          "bytes": 674,
+          "sha256": "c715e130f1b585c7f5d8bcf977fe6699739d55dff9b893528e7bb8ecedda8180"
+        },
+        "process.json": {
+          "bytes": 3991,
+          "sha256": "f13b66802ddeb773101b700fabebcb6b37db74543ea914c128bc9208fb537d8e"
+        },
+        "state.log": {
+          "bytes": 11842,
+          "sha256": "21a7cf7872186a290e8b66b8b561b9137e26db44e75de4056526275abcb413ba"
+        },
+        "summary.json": {
+          "bytes": 2305,
+          "sha256": "a0ee16bb7ca34d56e7dbd3f58c427b1b0239ea6c880949aba0a16e72f08f7ac9"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 0,
+      "observed_turns": 461,
+      "progress": {
+        "borg_decisions": 47,
+        "game_turns": 461,
+        "keys": 96,
+        "player_turns": 46,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 1
+      },
+      "scenario_id": "p1-warrior-ca82babc75c232d09ab1512f",
+      "spec_sha256": "ca82babc75c232d09ab1512f3ff9f1709975a078e189d031caec0620e2df687e",
+      "status": "death",
+      "terminal": "dead"
+    },
+    {
+      "attempted": true,
+      "candidate_screen": {
+        "count": 0,
+        "hp_threshold": 2,
+        "kind": "low_hp_candidate",
+        "sampling": "distinct engine turns in pre-key state log; provisional, not qualified exposure"
+      },
+      "character_build_id": "observed-level5",
+      "death_cause": "an ochre jelly",
+      "depth": 15,
+      "evidence": {
+        "config.txt": {
+          "bytes": 500,
+          "sha256": "b43f52d5fcd652de71d5935d46d7c977d7f92559aa01f2d399fc570142aeb0d2"
+        },
+        "messages.log": {
+          "bytes": 1712,
+          "sha256": "5b2f65fd19989ced1491d7c7d7b20aa75750a4218a9acba6638037736b365d6a"
+        },
+        "process.json": {
+          "bytes": 4107,
+          "sha256": "12151c988a8d613a466361e50a2b98624180375ef862d9ad2ed76d21ead4f42c"
+        },
+        "state.log": {
+          "bytes": 11968,
+          "sha256": "4a4a9f73af31d541702f382033f12b010ba6400131a67504772767a133e53b89"
+        },
+        "summary.json": {
+          "bytes": 2399,
+          "sha256": "2a6ec2b39c02ce7c0698e25c95fe1d856843aaf6f16ff3ebd6dd0882a36962af"
+        }
+      },
+      "launcher_returncode": 0,
+      "minimum_observed_living_hp": 5,
+      "observed_turns": 471,
+      "progress": {
+        "borg_decisions": 48,
+        "game_turns": 471,
+        "keys": 97,
+        "player_turns": 47,
+        "stop_reason": "death"
+      },
+      "qualified_near_death": {
+        "count": null,
+        "coverage": "unavailable",
+        "reason": "P1 has no null-move evaluator"
+      },
+      "reason": "",
+      "refusal_messages": {
+        "coverage": "recorded_native_messages",
+        "note": "generic engine messages, not a unique action/cost classifier; inspect adjacent messages for attribution",
+        "nothing_happens_bang": 0,
+        "nothing_happens_dot": 0
+      },
+      "scenario_id": "p1-warrior-6a9113b2647a4fad82a6c205",
+      "spec_sha256": "6a9113b2647a4fad82a6c20586c10206a8a01bd4dc10dac2d0c4435db96a4dfd",
+      "status": "death",
+      "terminal": "dead"
+    }
+  ],
+  "revision": 1,
+  "scenario_count": 6,
+  "schema": "borg-cemetery/synthetic-results@1",
+  "suite_id": "p1-warrior",
+  "suite_spec_sha256": "8030348f3d9a16d7b1cc5ef093806d0fe7934d4cf2b2aa7b0aff700a274031c9"
+}

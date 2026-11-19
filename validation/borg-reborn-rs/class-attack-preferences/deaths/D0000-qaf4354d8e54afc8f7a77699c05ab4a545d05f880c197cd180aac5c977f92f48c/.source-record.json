@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0008-rust-seed1073",
+  "run_kind": "harness",
+  "character": "Kobold Ranger",
+  "raw_cause": "a gallant",
+  "terminal": {
+    "cause": "a gallant",
+    "dead": true,
+    "depth": 7,
+    "max_depth": 7,
+    "level": 4,
+    "turn": 94857,
+    "race_idx": 10,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1073,
+    "flags": "menu",
+    "git_rev": "8e007cddc1b0c0fb9f97319f8a8128b88680bf97",
+    "git_dirty": "no",
+    "source_sha256": "290fd89ed58c536dd59835d259d85dc1a40cd5dd8b71d1e16f765a268abf71b3",
+    "binary_sha256": "29936aa54c24f930b06a433ca84ba525efed198e4405348955daf83db54cde2c",
+    "borg_txt_sha256": "0d05de9fa5366866a3f04f987bdd52cf144ed915bfb3195b8482d30442a564b0",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 9611
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/453-candidate-full/full-7-ranger-3",
+      "result_sha256": "6301337fe0b0b2b9c8566e425b1bd29db67809ef17688ab786151cd7c1a89555",
+      "raw_sha256": {
+        "keys.log": "6301337fe0b0b2b9c8566e425b1bd29db67809ef17688ab786151cd7c1a89555",
+        "messages.log": "32d461333a36cfe49768d96da633081791b27b1bd51723dd2046f7caae81d96c",
+        "state.log": "6949a36c95e5c39386c550a1472829e00e8eb8ea711ccc7e3977ed28a7178964"
+      },
+      "source_commit": "8e007cddc1b0c0fb9f97319f8a8128b88680bf97",
+      "binary_sha256": "29936aa54c24f930b06a433ca84ba525efed198e4405348955daf83db54cde2c"
+    }
+  ],
+  "encounter_family": "start-f2a19b3d36523eefc845b0a1fac3f8b960d15ac8af9fb81e82d4a11853b6385c",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "2807fdfcd01d854a94895e0f76b7d87e25dcae338d7d2f6a692ae2bafa3e640d",
+    "config.txt": "fad192e5094b8c6fec56c0957c57db5caa219626eac8a5e4a99e47933a9edbb3",
+    "depths.json": "fdbcf8993225beb5388c6b2872a75246411f5c72d7f5c44ae867165db7d2e93f",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "66e532364178cd1b63f4ee27630369363a26b184b1e7d74b045c83bbc494527c",
+    "trace-core-tail.jsonl": "7c18ed521f4f4689803476914c811dccce741914dcbbfd829f961a5fcd7b9a0e"
+  },
+  "investigation": null,
+  "issue": null
+}

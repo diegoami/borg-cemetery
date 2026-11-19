@@ -1,0 +1,61 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-d0fb912491ea722a7d9b04e1dad09608c14fac3e3e64e49f36872bc8506a56f4",
+  "run_kind": "harness",
+  "character": "Human Necromancer",
+  "raw_cause": "a wild cat",
+  "terminal": {
+    "cause": "a wild cat",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 12328,
+    "race_idx": 0,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 300036923,
+    "flags": "-",
+    "git_rev": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2",
+    "borg_txt_sha256": "009006533df9886f5ca101dcd72fc5f8e783eb252242b7b22620cc0c919301ae",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 965
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 44098927907-local-replay, artifact deaths-4.2.6-reborn-rust-main-4d83dd26-local, classes-18/4.2.6-reborn-rust-main-4d83dd26/reborn-main-pbd1/300036923",
+      "result_sha256": "00a4c65ba210248c23704c853e671dd6fa0e7467981a1f46a952c0452cf47cdf",
+      "raw_sha256": {
+        "keys.log": "00a4c65ba210248c23704c853e671dd6fa0e7467981a1f46a952c0452cf47cdf",
+        "messages.log": "8ec0b31628fd53708d5a32cd8d4c8edfebf0d30da2f0b3f3cf372e7fa67a06a7",
+        "state.log": "6d457b81d58e159606177aa6b240868cf08c8e8f6a07d464d90f6ddeb42ca6bd"
+      },
+      "source_commit": "4d83dd26ef6b510e80a8ff11464f1e49d02daaaa",
+      "binary_sha256": "e2398aadfa074beb7026f8349657a0ad0b938bed0384096a2c40e4c39354c4c2"
+    }
+  ],
+  "encounter_family": "start-04fed1b2ff8d37be171d2c390a8d6da859ea808b2ea808b428dd2f9c6c336e79",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ba2f2fc4b2618443443c25bfa635b71728b9eed12e423ca60719c87f246b1e82",
+    "config.txt": "bd62086456c7f897f85a4f401ea0512b0714bc1b27337a4d013669f179c87c9c",
+    "params-core.json": "562738e606406804c42b04192e067e02bb736b4439d49022b9e0165751dcea6a",
+    "summary.json": "473e8468983d6fe606d4320b4b7990fd6a37debf186924a5af4b22e2d43f99ca",
+    "trace-core-tail.jsonl": "970deceeffa61bdb6a0b75955bf88bdd77139fd45a9c8954efe3bbc04cb91be2"
+  },
+  "investigation": null,
+  "issue": null
+}

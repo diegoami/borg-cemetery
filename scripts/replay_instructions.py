@@ -80,8 +80,19 @@ def instructions(directory, program, source, seed, race, cls, endpoint, scenario
                       'Use the same scenario and turn budget, with a different output directory. This is a saved-position survival test, not an uninterrupted original-memory replay.', '',
                       '[Run the same comparison through GitHub Actions](https://github.com/diegoami/borg-cemetery/actions/workflows/try-scenario.yml). '
                       f'The scenario path is `{path}`. Choose the cemetery branch containing it and the alternative Borg version.', '']
-        lines += ['## Rerun the birth seed', '', 'This starts a new process from the original birth. It does not verify a missing recorder bundle.', '',
-                  '```bash', f'BORG_IMPL=rust BORG_DEATH_RECORDS_DIR=/tmp/{directory.name}-diagnostic-deaths \\',
+        config = directory / 'config.txt'
+        if program == 'borg-reborn-rs' and config.is_file() and re.search(r'^zoo_profile=', config.read_text(), re.M):
+            lines += ['## Rerun the original death', '',
+                      'Zoo ran this game with its own `borg.txt` settings (and errands plan, if any), not through `harness/run.sh`. '
+                      'This rebuilds that `borg.txt` from `config.txt`, refuses it unless its sha256 matches the recorded one, '
+                      'runs the game as Zoo did and checks that the key stream equals the recorded one.', '',
+                      '```bash', f'python3 scripts/native/rerun-death.py {repository_path(directory)} /tmp/{directory.name}-original-rerun \\',
+                      f'  --source-root {work}', '```', '']
+            seed_note = 'This starts the same birth with the default harness profile and no Zoo settings or plan, so the Borg does not play the original game.'
+        else:
+            seed_note = 'This starts a new process from the original birth. It does not verify a missing recorder bundle.'
+        lines += ['## Rerun the birth seed', '', seed_note, '',
+                  '```bash', f'BORG_CEMETERY_DIR="$PWD" BORG_IMPL=rust BORG_DEATH_RECORDS_DIR=/tmp/{directory.name}-diagnostic-deaths \\',
                   f'  bash {work}/harness/run.sh /tmp/{directory.name}-seed-rerun {seed} {race} {cls} {endpoint + 1000} menu', '```', '']
     (directory / 'REPLAY.md').write_text('\n'.join(lines))
     return lines

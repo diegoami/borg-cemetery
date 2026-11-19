@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-97512514298b2fb40f3ae10eb9728f2fe85ffe2d5eab6d0de38978036a94a94f",
+  "run_kind": "harness",
+  "character": "Gnome Priest",
+  "raw_cause": "a crow",
+  "terminal": {
+    "cause": "a crow",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 3785,
+    "race_idx": 4,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1031,
+    "flags": "menu",
+    "git_rev": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+    "git_dirty": "no",
+    "source_sha256": "258ccc77107e342708ddb626a71f326aa4e5d4207795feaffe9f9293450c30d0",
+    "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754",
+    "borg_txt_sha256": "aedec84e98bb20d97e9bd50f30c484f9559f4ae6cb26f6c9a824572ac5bca536",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 255
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/t433-baseline-full/full-3-priest-1",
+      "result_sha256": "610f97f19274f51760a0ae13c7350aab9330835c64fc554210be297b40cf4e9a",
+      "raw_sha256": {
+        "keys.log": "610f97f19274f51760a0ae13c7350aab9330835c64fc554210be297b40cf4e9a",
+        "messages.log": "1960dca5a495affe5e284169ec5173ad8c56ce4fd367aaece50a392e17f06fcc",
+        "state.log": "1a1eb49e180afef8fa112110b4dabff9cefccfac21d7f6af19380ecb44162e93"
+      },
+      "source_commit": "68e39b7e848017347ed80a9f474d9552ac98de6c",
+      "binary_sha256": "e9dbd88552387b26973fd1f6802681cac273c9261efae2e16770c265d9da4754"
+    }
+  ],
+  "encounter_family": "start-b9f8ee0d7664c1f9f1d11e657482adbee6bc6bef5a1623374366cecc5f3cdab8",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "ef1139f17dd2e346ba14aad23d7f7648327b75ddc4081aeb3c95429f1ed7d18b",
+    "config.txt": "33bdf630998ee43b24eb34b6d1559dfc58a0e063fbed6f6990ab2fc59b5d13d2",
+    "depths.json": "72e3aa7bb1915ec83022c90c96c5b46552b02987d6d426dce3eec9132cd73523",
+    "params-core.json": "1108d1f39f7a07fd98bba19c5d3220889bc571aefa4150aee47328f0b7b96bca",
+    "summary.json": "7a04a0ff1653894b36f36978406856fc5aad1175ff01562ac8b8101d6f4d857d",
+    "trace-core-tail.jsonl": "d25c848c237eecdf50c3e4d7f396d6b8d11424448af562359ee79849886f0fd9"
+  },
+  "investigation": null,
+  "issue": null
+}

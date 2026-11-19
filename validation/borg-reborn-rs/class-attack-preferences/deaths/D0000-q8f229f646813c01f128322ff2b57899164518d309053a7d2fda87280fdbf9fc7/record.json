@@ -1,0 +1,57 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "cd0ba385aa81c2ddacb0d52ce349951fa1b2b1146f3016d4a66e93bb82a661bb",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/403-synced-full/full-2-druid-0",
+      "raw_sha256": {
+        "keys.log": "42c17d0d67dfef1bf3ed2e883005057c182511131437b74fd62b1775ae87d077",
+        "messages.log": "51043424b5c66e32d05b5abc11f2ed5f7521cc7b37231fcb2bf73f70f13071f7",
+        "state.log": "fa5405441cb0acb0c89459f652c633dc96a4b3c756e49eec64d2144f8e11cf8e"
+      },
+      "result_sha256": "42c17d0d67dfef1bf3ed2e883005057c182511131437b74fd62b1775ae87d077",
+      "role": "original",
+      "source_commit": "25e89494413177223935ba3dc12bbf49a7e2e380"
+    }
+  ],
+  "character": "Elf Druid",
+  "core_decision_trace": null,
+  "decision_trace": null,
+  "encounter_family": "start-09acb7b81943f53e0513616fece723d53e2eb693bc369c91b0b826f83267233b",
+  "files_sha256": {
+    "build.json": "c5b84900555940372458d73f3d1d7d75ebf7387b045ec9c56564b7bb79f1241b",
+    "config.txt": "99ac04732971568032b86d5440ed6b844a63e7937b40ae4bef174de20ade1ea6",
+    "depths.json": "0efba100a3804991d86bff8f8205466645a43199a7ce489491c2cad4431d82a4",
+    "params-core.json": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "summary.json": "416d5f89e9e96f513232d9c10b10f8dd91b5bc32812e76839ce7fb5ce3dbabd1"
+  },
+  "id": "D0000-q8f229f646813c01f128322ff2b57899164518d309053a7d2fda87280fdbf9fc7",
+  "identity": {
+    "binary_sha256": "cd0ba385aa81c2ddacb0d52ce349951fa1b2b1146f3016d4a66e93bb82a661bb",
+    "borg_txt_sha256": "cc3d1dc524f04928dfa6fa73d8e8ef7038ec7b36929d7b9c0cf8375adc0ebeff",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "25e89494413177223935ba3dc12bbf49a7e2e380",
+    "impl": "rust",
+    "params_core_sha256": "4f27b6d43769baa99dca74bc57a2dee6682d4800ac9bc2af92d626654c1f1ae3",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1020,
+    "source_sha256": "0d05063ed05226f0a7d1b92c7aad844f1ce73994fd9b1615dda7c44a3aaf46e4"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a small kobold",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a small kobold",
+    "class_idx": 2,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 2,
+    "turn": 9547
+  }
+}
