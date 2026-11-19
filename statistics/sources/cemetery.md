@@ -4,13 +4,13 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `f4af5ce9e9e9c8d95e036d2ce6699108100329025ff1a214ebb5cb22f63613af`.
+Input inventory SHA-256: `cf59e6c4ee4839496109d67a783572200caa1fd804fb20af6a238c3c1134f5e5`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
 | Cause | Dossiers |
 | --- | --- |
-| poison | 10 |
+| poison | 14 |
 | a soldier | 9 |
 | a wild cat | 9 |
 | Fang, Farmer Maggot's Dog | 7 |
@@ -53,9 +53,9 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 103 | 2626 | 31855 | 70489.98 | 1094860 |
-| depth | 78 | 0 | 1 | 1.77 | 18 |
-| level | 78 | 1 | 2 | 2.96 | 8 |
+| turn | 107 | 2626 | 27770 | 68045.50 | 1094860 |
+| depth | 82 | 0 | 1 | 1.68 | 18 |
+| level | 82 | 1 | 3 | 2.96 | 8 |
 
 ## Characters
 
@@ -63,6 +63,7 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | --- | --- |
 | Human Druid | 6 |
 | Human Necromancer | 5 |
+| Human Paladin | 4 |
 | Half-Elf Blackguard | 4 |
 | Human Ranger | 4 |
 | Half-Elf Druid | 4 |
