@@ -61,13 +61,16 @@ def configured_adapter(template, plan=None, exact_turns=False):
             text = override(text, 'borg_plan', 'selected-plan.txt')
         (raw / 'user/borg.txt').write_text(text)
         env = {k: v for k, v in inherited.items() if not k.startswith(('BORG_', 'ANGBAND_'))}
-        for name in ('BORG_CEMETERY_DIR', 'BORG_OBSERVATION_LOG'):
-            if name in inherited:
-                env[name] = inherited[name]
+        # BORG_OBSERVATION_LOG is deliberately not passed: with BORG_CORE=borg-rs
+        # the reborn shell that writes it never runs, so no log would appear.
+        if 'BORG_CEMETERY_DIR' in inherited:
+            env['BORG_CEMETERY_DIR'] = inherited['BORG_CEMETERY_DIR']
         env.update(BORG_CORE='borg-rs', BORG_CORE_OVERRIDES='on', BORG_RUN_DIR=str(raw),
                    TZ='UTC', LANG='C.UTF-8', LC_ALL='C.UTF-8')
         # The engine may autosave the loaded file; preserve the original input
         # for save identity and give execution its own mutable private copy.
+        # It sits in the run's private -dsave directory, which -mborgh with
+        # -load never reads otherwise (only the interactive save menu does).
         execution_save = raw / 'save/input.save'
         shutil.copyfile(save, execution_save)
         argv = [str(binary), '-mborgh']
