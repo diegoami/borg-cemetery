@@ -1,0 +1,9 @@
+# D-e74bce649ff4e7ffa1df68f1c5d10f4185542f23b3eb443ef9a4aede1b6d4dd4: a black naga at turn 1534
+
+Human Ranger, character level 1, depth 1 (max 1), seed 807683971, implementation `rust`, flags `-`.
+
+Build `e8b3acfdcfa5059f0e88b47e5c9a8c9fd1e229fa` (dirty: no), binary `5b46e90988a4`. Keys `4c201fcf5599`; raw logs stay in `borg-zoo run 44738419997, artifact deaths-4.2.6-reborn-rust-flight-e8b3acfd-4, classes-1800-full-rangers/4.2.6-reborn-rust-flight-e8b3acfd/reborn-flight-ctl/807683971 (https://github.com/diegoami/borg-zoo/actions/runs/44738419997, 90-day retention)` (not committed).
+
+Core decision trace: the last 165 of 165 thinks in `trace-core-tail.jsonl`, with selected check, queued keys and `params-core.json`.
+
+**Unassessed.** Basic dossier written by `tools/export-death.py` at the end of the run (RULES 12). Upgrade it with the full death tooling (T1.6) before investigating.
