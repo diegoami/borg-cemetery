@@ -242,6 +242,14 @@ def run(spec_path, source, root, cls, tools, smoke=False, shard=None):
                         else:
                             document['rejected'].append(dict(case,reason='quota_complete'))
                 document['selected'] = selected
+                # borg-zoo#184 (2026-11-20): a yield run lost 2,250 lives to a
+                # native-tools pin mismatch. A job whose first lives are all
+                # harness failures stops instead of spending its block.
+                head = document['attempts'][:8]
+                if len(head) == 8 and all(r['status'] == 'harness_failure' for r in head):
+                    document['stop_reason'] = 'harness_failures'
+                    write(root / 'harvest.json', document)
+                    raise SystemExit('the first 8 lives are harness failures: ' + str(head[0].get('reason')))
                 # Completed attempt journals are immutable; the replaceable
                 # progress pointer is bounded instead of quadratic snapshots.
                 progress = root / 'harvest-progress.json.tmp'
