@@ -45,9 +45,19 @@ race_idx, class_idx and turn_cap (100000). It contains exactly the original
 lists and their hashes remain retained. `controls.json` records supplied
 observations, not a newly played local population arm.
 
-Enabled named cases are pending the shared lock. Population measurement is
-to be requested in borg-zoo with a pinned specimen, shipped control,
-individual-switch arms and all switches together. Only the owner schedules
+The [named before/after checks](local-cases.md) are complete, including the
+owner-approved possible-wake follow-up. After the damage-first selector correction on `5acb8104`, six of seven
+all-switch named lives reach 100k; 1976035382 dies to a large white snake
+at engine turn 17873. Earlier outcomes remain in the ledger. The Rogue
+control was already alive. These
+selected cases are not population evidence. Population measurement is [borg-zoo #511](https://github.com/diegoami/borg-zoo/issues/511),
+with a pinned specimen, shipped control, individual-switch arms and all
+switches together. Only the owner schedules
 that request; this session must not dispatch it. This report currently
 contains completed baseline/category analysis and must not be read as an
 enabled measurement result.
+
+The initial Zoo pilot ran on `78b8f297` and found no survival-leading arm.
+See the [recorded-death investigation](zoo-pilot-investigation.md) for the
+selector defect and the boundary between observed evidence and unmeasured
+corrections. No additional pilot starts were replayed locally.

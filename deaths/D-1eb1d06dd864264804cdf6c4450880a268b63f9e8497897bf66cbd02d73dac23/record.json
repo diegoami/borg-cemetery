@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-1eb1d06dd864264804cdf6c4450880a268b63f9e8497897bf66cbd02d73dac23",
+  "run_kind": "harness",
+  "character": "Dunadan Ranger",
+  "raw_cause": "a large white snake",
+  "terminal": {
+    "cause": "a large white snake",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 2,
+    "turn": 17873,
+    "race_idx": 8,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1976035382,
+    "flags": "exact,menu",
+    "git_rev": "5acb8104115dcd52fd9db8bfb72888cf5ca2fde4",
+    "git_dirty": "no",
+    "source_sha256": "bfad017d80a98d86bece8e26e5a8730081372db097730c61225781f2a4646065",
+    "binary_sha256": "49d517be1d11b86e721964bf0a9367a63945b1001d4abd26647765a16982a754",
+    "borg_txt_sha256": "d419e739ac1460cfbadeda61c5aa8417e8c2c532d459407e26641fd85c223f86",
+    "profile_sha256": null,
+    "params_core_sha256": "27777e9df08554e883bb1bb441f5ad51e6607fc0177326dbf5315d13f45fa058"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1766
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/T760-fight/named-checks-5acb8104/all-1976035382/1976035382-8-7",
+      "result_sha256": "89664e3afe6025c8f1b0e58fb8260a8ec47ee96d374f60718401cc6f13e7fd73",
+      "raw_sha256": {
+        "keys.log": "89664e3afe6025c8f1b0e58fb8260a8ec47ee96d374f60718401cc6f13e7fd73",
+        "messages.log": "412efa01f511c0cfbf72fa2570ca8ffdeec1b1bdf7f0e219ae0e53a07924c259",
+        "state.log": "15f703402510e3a4fa5cc28e53a0cea64a457e55dc0e6fcccaf0472fcfac3967"
+      },
+      "source_commit": "5acb8104115dcd52fd9db8bfb72888cf5ca2fde4",
+      "binary_sha256": "49d517be1d11b86e721964bf0a9367a63945b1001d4abd26647765a16982a754"
+    }
+  ],
+  "encounter_family": "start-2473b9a6c78cdbd739f5baa33ff03e370f2888585196a999a38baa8d9a330360",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "cc8dba298c26bf7ca1ceb9750c06f8e9e01826fc6e5b3964e04ccaf139be252a",
+    "config.txt": "785c9ba78dac260d2448a344923d5899f0689a024a9a675f779de3d35be3bd21",
+    "params-core.json": "27777e9df08554e883bb1bb441f5ad51e6607fc0177326dbf5315d13f45fa058",
+    "scary_list.txt": "94631decb1f1a5d030aff6cca293dbb2a8402518ab811772b8caa7d903f2f049",
+    "summary.json": "0b828b794a8ae424e27226d2837e175ec6b6b274a952b00e40de18c28155f1fd",
+    "trace-core-tail.jsonl": "c6573402591426cefb31d3531f60da051b59a8a4e2498b3b3a80515277d824a4"
+  },
+  "investigation": null,
+  "issue": null
+}

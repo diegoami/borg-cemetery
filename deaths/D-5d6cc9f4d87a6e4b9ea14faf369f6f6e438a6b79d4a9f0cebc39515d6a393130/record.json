@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-5d6cc9f4d87a6e4b9ea14faf369f6f6e438a6b79d4a9f0cebc39515d6a393130",
+  "run_kind": "harness",
+  "character": "Human Paladin",
+  "raw_cause": "poison",
+  "terminal": {
+    "cause": "poison",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 5,
+    "turn": 71840,
+    "race_idx": 0,
+    "class_idx": 5
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 238844665,
+    "flags": "exact,menu",
+    "git_rev": "08f94e1fed0b80fd854584d893209983079157ea",
+    "git_dirty": "no",
+    "source_sha256": "d8857460f7260405a21667bf7dc87250951a85f0c38109836bcfcca1f67d3529",
+    "binary_sha256": "f28558b05425092892e4c04e65317ed571a451e59bfc3b1a5ef17de4299e1a64",
+    "borg_txt_sha256": "048a46b04670a0561bc859d5afc301884370fcf4572a9937b3c9273e310de5db",
+    "profile_sha256": null,
+    "params_core_sha256": "55a7f7fd2386b2e6c044d56188921feb6aa4d537621f3d100a83bf745552cbda"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 5194
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/T760-fight/retained-control-repros/238844665-0-5",
+      "result_sha256": "67def1f2837dc5f76b4f42432bbb2662ad2feb9d0163ec497ac6f003b5b15798",
+      "raw_sha256": {
+        "keys.log": "67def1f2837dc5f76b4f42432bbb2662ad2feb9d0163ec497ac6f003b5b15798",
+        "messages.log": "a79297afd161677f92130c603dd5ef8270bd45814b2854b9c7d11bdbf4d2a5e3",
+        "state.log": "b6f6ecbe4cd00756fe9399913e9b05a48470b7d58ce1974410bfdda9fc3dc0be"
+      },
+      "source_commit": "08f94e1fed0b80fd854584d893209983079157ea",
+      "binary_sha256": "f28558b05425092892e4c04e65317ed571a451e59bfc3b1a5ef17de4299e1a64"
+    }
+  ],
+  "encounter_family": "start-1cbe32784b9abba5ec54c17efb8f5c000eea2d0c0c17d8c2deac3aea68456ff2",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "21b357f25ea51297805db8274378269532ede44266ee42e1108f23786db685e5",
+    "config.txt": "629c0697dbd6cad3bc5024ae8f86860c002e65d5367e2c6a87b155010f5c6cae",
+    "params-core.json": "55a7f7fd2386b2e6c044d56188921feb6aa4d537621f3d100a83bf745552cbda",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "d38fd511ffc38817358ce135fc697c77fd38ad7f14f639b79e2ee8d2415d02f1",
+    "trace-core-tail.jsonl": "5deed00226e562739d33b8a8eb4a3fb470f2b9e9bcb0c68e6aae8a7044c7aa99"
+  },
+  "investigation": null,
+  "issue": null
+}
