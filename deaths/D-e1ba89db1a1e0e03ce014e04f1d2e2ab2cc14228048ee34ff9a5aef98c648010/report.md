@@ -1,0 +1,9 @@
+# D-e1ba89db1a1e0e03ce014e04f1d2e2ab2cc14228048ee34ff9a5aef98c648010: a small kobold at turn 6338
+
+Gnome Ranger, character level 1, depth 1 (max 1), seed 1517990203, implementation `rust`, flags `-`.
+
+Build `fde8025a6dfa97fd5cd7eff817187c550a72f8f9` (dirty: no), binary `4776d7820107`. Keys `e1a15b91ce59`; raw logs stay in `borg-zoo run 44681930409, artifact deaths-4.2.6-reborn-rust-main-fde8025a-12, classes-1800/4.2.6-reborn-rust-main-fde8025a/reborn-main-fde8-shipped/1517990203 (https://github.com/diegoami/borg-zoo/actions/runs/44681930409, 90-day retention)` (not committed).
+
+Core decision trace: the last 200 of 663 thinks in `trace-core-tail.jsonl`, with selected check, queued keys and `params-core.json`.
+
+**Unassessed.** Basic dossier written by `tools/export-death.py` at the end of the run (RULES 12). Upgrade it with the full death tooling (T1.6) before investigating.
