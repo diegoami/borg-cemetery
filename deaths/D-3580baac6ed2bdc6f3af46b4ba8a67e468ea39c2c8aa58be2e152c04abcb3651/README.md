@@ -26,6 +26,8 @@ Core decision trace: the last 200 of 330 thinks in `trace-core-tail.jsonl`, with
 
 **Unassessed.** Basic dossier written by `tools/export-death.py` at the end of the run (RULES 12). Upgrade it with the full death tooling (T1.6) before investigating.
 
+Use the pinned local runner with the weighted profile for an exact seed rerun. The generic birth command uses the source harness profile. [Exact replay settings](../../runs/2026-11-20-reborn-765-weighted-flight/README.md#reproduction) · [Original streams and configuration](../../runs/2026-11-20-reborn-765-weighted-flight/evidence/r200-695838733-10-7)
+
 ## Read and replay
 
 - [Original written report](report.md)
