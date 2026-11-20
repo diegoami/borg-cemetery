@@ -47,10 +47,11 @@ class PlanTest(unittest.TestCase):
         self.assertEqual(p['env'], {'BORG_CORE': 'borg-rs', 'BORG_ERRAND': '/dive 3; /walk-back',
                                     'BORG_STOPSCARED': '50'})
         with tempfile.TemporaryDirectory() as t:
-            self.assertEqual(rd.plan(dossier(t))['env'], {}, 'a run without settings has none')
+            self.assertEqual(rd.plan(dossier(t))['env'], {'BORG_CORE': 'reborn'},
+                             'a historical unset core must not inherit the modern harness default')
         with tempfile.TemporaryDirectory() as t:
             p = rd.plan(dossier(t, config_extra='borg_errand=\n'))
-        self.assertEqual(p['env'], {'BORG_ERRAND': ''}, 'set but empty stays set')
+        self.assertEqual(p['env'], {'BORG_CORE': 'reborn', 'BORG_ERRAND': ''}, 'set but empty stays set')
 
     def test_a_changed_ladders_file_is_refused(self):
         with tempfile.TemporaryDirectory() as t:
@@ -134,14 +135,32 @@ class PlanTest(unittest.TestCase):
             d = dossier(base, keys_sha256=rd.hashlib.sha256(keys).hexdigest(),
                         config_extra=f'borg_errands_plan=harness/plans/p.txt\n'
                                      f'borg_errands_plan_sha256={good}\n')
+            borg = b'fixture borg.txt\n'
+            config = (d / 'config.txt').read_text().replace('borg_txt_sha256=x',
+                       'borg_txt_sha256=' + rd.hashlib.sha256(borg).hexdigest())
+            (d / 'config.txt').write_text(config)
+            record = json.loads((d / 'record.json').read_text())
+            binary = src / 'build/rust/game/angband'
+            binary.parent.mkdir(parents=True)
+            binary.write_bytes(b'fixture executable')
+            record['identity']['binary_sha256'] = rd.hashlib.sha256(binary.read_bytes()).hexdigest()
+            record['attempts'][0]['raw_sha256'] = {
+                name: rd.hashlib.sha256(keys).hexdigest() for name in ('keys.log', 'state.log', 'messages.log')}
+            (d / 'record.json').write_text(json.dumps(record))
             calls = {}
 
             def fake_run(cmd, **kwargs):
                 calls['env'] = kwargs['env']
                 run = Path(cmd[1])
                 run.mkdir()
-                (run / 'keys.log').write_bytes(keys)
-                (run / 'summary.json').write_text('{}')
+                for name in ('keys.log', 'state.log', 'messages.log'):
+                    (run / name).write_bytes(keys)
+                (run / 'user').mkdir()
+                (run / 'user/borg.txt').write_bytes(borg)
+                (run / 'config.txt').write_text(config)
+                (run / 'summary.json').write_text(json.dumps(dict(
+                    seed=102, race_idx=2, class_idx=1, loaded=False,
+                    dead=True, stop_reason='death', game_turns=743)))
                 for name in ('observations.jsonl', 'worlds.txt', 'knowledge.json'):
                     (run.parent / name).write_text('x')
                 return subprocess.CompletedProcess(cmd, 0, '', '')
