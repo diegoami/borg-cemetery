@@ -156,7 +156,26 @@ def require_capture_support(source, spec):
         raise ValueError('preparation source lacks BORG_ENCOUNTER_LOG; cannot qualify observable encounter onset or native coverage for this suite')
 
 
-def run(spec_path, source, root, cls, tools, smoke=False):
+def shard_range(spec, shard):
+    """The seed ordinals one harvest job searches (borg-zoo#184, 2026-11-20).
+
+    Without `shard_size` in the spec, one job searches every ordinal of its
+    class. With it, the class's ordinals 0..max_attempts_per_class-1 split
+    into contiguous blocks of `shard_size`; shard K searches block K in seed
+    order. merge_incident_shards.py joins a class's shards in block order, so
+    the selection equals one sequential search in prespecified seed order."""
+    total = spec['max_attempts_per_class']
+    size = spec.get('shard_size')
+    if size is None:
+        if shard not in (None, 0):
+            raise ValueError('this specification has no shards')
+        return 0, total
+    if shard is None or shard < 0 or shard * size >= total:
+        raise ValueError(f'shard must be 0..{(total - 1) // size} for this specification')
+    return shard * size, min((shard + 1) * size, total)
+
+
+def run(spec_path, source, root, cls, tools, smoke=False, shard=None):
     spec = read(spec_path)
     original_spec_sha256 = sha(spec_path)
     excluded = set()
@@ -177,6 +196,8 @@ def run(spec_path, source, root, cls, tools, smoke=False):
     goal = spec['smoke']['target_per_class'] if smoke else spec['target_per_class']
     if smoke:
         spec.update(seed_base=spec['smoke_seed_base'], max_attempts_per_class=spec['smoke']['max_attempts_per_class'])
+        spec.pop('shard_size', None)
+    first, last = shard_range(spec, None if smoke else shard)
     tools_head = subprocess.check_output(['git', '-C', str(tools), 'rev-parse', 'HEAD'], text=True).strip()
     if tools_head != spec['native_tools_commit']:
         raise ValueError('native tools differ from pin')
@@ -192,12 +213,13 @@ def run(spec_path, source, root, cls, tools, smoke=False):
     write(root / 'spec.json', spec)
     write(root / 'build.json', build)
     document = dict(schema='borg-cemetery/balanced-incident-harvest@1', spec_sha256=original_spec_sha256,
-                    class_idx=cls, target=goal, stage='smoke' if smoke else 'harvest', attempts=[], selected=[], rejected=[], independent_life=False)
+                    class_idx=cls, target=goal, stage='smoke' if smoke else 'harvest', attempts=[], selected=[], rejected=[], independent_life=False,
+                    shard=None if smoke or 'shard_size' not in spec else shard, ordinal_range=[first, last])
     seen, selected = set(excluded), []
     with open('/tmp/angband-validation.lock', 'a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         with ThreadPoolExecutor(max_workers=spec['workers']) as pool:
-            for offset in range(0, spec['max_attempts_per_class'], spec['workers']):
+            for offset in range(first, last, spec['workers']):
                 # Leave room for the final evidence archive on hosted runners.
                 # Stop cleanly with a partial journal instead of losing evidence
                 # to an out-of-space failure during the final upload.
@@ -206,7 +228,7 @@ def run(spec_path, source, root, cls, tools, smoke=False):
                     document['stop_reason'] = 'retained_evidence_budget'
                     break
                 # Selection uses prespecified seed order, never completion speed.
-                futures = [pool.submit(one, source, root, cls, ordinal, spec) for ordinal in range(offset, min(offset + spec['workers'], spec['max_attempts_per_class']))]
+                futures = [pool.submit(one, source, root, cls, ordinal, spec) for ordinal in range(offset, min(offset + spec['workers'], last))]
                 batch = [future.result() for future in futures]
                 for row in batch:
                     document['attempts'].append(row)
@@ -227,7 +249,10 @@ def run(spec_path, source, root, cls, tools, smoke=False):
                 os.replace(progress, root / 'harvest-progress.json')
                 print('class', cls, 'attempts', len(document['attempts']), 'usable', len(selected), '/' + str(goal), flush=True)
                 if len(selected) == goal:
+                    document['stop_reason'] = 'quota_complete'
                     break
+            else:
+                document.setdefault('stop_reason', 'range_exhausted')
     write(root / 'harvest.json', document)
     return document
 
@@ -240,6 +265,10 @@ if __name__ == '__main__':
     parser.add_argument('--class-index', type=int, required=True)
     parser.add_argument('--tools', type=Path, required=True)
     parser.add_argument('--smoke', action='store_true')
+    parser.add_argument('--shard', type=int, help='seed block of a sharded specification (shard_size)')
     args = parser.parse_args()
-    result = run(args.spec.resolve(), args.source.resolve(), args.out.resolve(), args.class_index, args.tools.resolve(), args.smoke)
-    raise SystemExit(int(len(result['selected']) != result['target']))
+    result = run(args.spec.resolve(), args.source.resolve(), args.out.resolve(), args.class_index, args.tools.resolve(), args.smoke, args.shard)
+    # A shard that searched its whole block is complete even short of the
+    # quota: the class's shards are judged together when they are merged.
+    sharded = result.get('shard') is not None
+    raise SystemExit(int(result.get('stop_reason') == 'retained_evidence_budget' if sharded else len(result['selected']) != result['target']))
