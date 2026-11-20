@@ -76,3 +76,6 @@ The initial Zoo pilot ran on `78b8f297` and found no survival-leading arm.
 See the [recorded-death investigation](zoo-pilot-investigation.md) for the
 selector defect and the boundary between observed evidence and unmeasured
 corrections. No additional pilot starts were replayed locally.
+
+
+Latest owner adoption and review follow-up: [adopted-cases.md](adopted-cases.md), specimenf827f844, supersedes earlier current-result wording while preserving all historical evidence. Explicit off1/7 versus all5/7 on the seven named starts; no population claim.

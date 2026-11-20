@@ -1,0 +1,41 @@
+{
+  "source_manifest_sha256": "6ffdd8d6cb693b138782b38b4a6eda10b248d6b96c15489b88a2b14192d1d9c9",
+  "selection": "first min(limit,class_count) rows within each class in original TSV order, then emit selected rows in original global order; TSV header and LF exactly as source",
+  "tiers": [
+    {
+      "suite": "reborn-flight-600-pilot18",
+      "max_per_class": 2,
+      "starts": 18,
+      "cumulative_cells": 36,
+      "manifest_sha256": "aa4f44d56c203c39b41e2928447c15fd740a9a9fc2bfb7eb9bfbaa2fdd48fc69"
+    },
+    {
+      "suite": "reborn-flight-600-small90",
+      "max_per_class": 10,
+      "starts": 90,
+      "cumulative_cells": 180,
+      "manifest_sha256": "5c868f5ba06dede3230b708661d48a05c4dd916ed79378606734bf13f53d400b"
+    },
+    {
+      "suite": "reborn-flight-600-medium360",
+      "max_per_class": 40,
+      "starts": 360,
+      "cumulative_cells": 720,
+      "manifest_sha256": "88b426ab5dbf8035d9f6c55205b1b5a78a7671b938da8c3b753791ecca3ef660"
+    },
+    {
+      "suite": "reborn-flight-600-big500",
+      "max_per_class": 100,
+      "starts": 500,
+      "cumulative_cells": 1000,
+      "manifest_sha256": "3e5b436cf9d4d555898841c1d73b42a12130befa411df62b2f8a6bb0bf72b313"
+    },
+    {
+      "suite": "reborn-flight-600-full600",
+      "max_per_class": 200,
+      "starts": 600,
+      "cumulative_cells": 1200,
+      "manifest_sha256": "6ffdd8d6cb693b138782b38b4a6eda10b248d6b96c15489b88a2b14192d1d9c9"
+    }
+  ]
+}
