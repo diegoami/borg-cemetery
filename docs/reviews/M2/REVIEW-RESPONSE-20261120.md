@@ -1,5 +1,9 @@
 # Response to the independent M2 review (2026-11-20)
 
+Subsequent disposition: the owner [accepted the frozen M2 milestone](../ACCEPTANCE-20261120.md)
+on 2026-11-20, keeping `reviewed` unchanged. The response below retains the
+finding dispositions as presented before that decision.
+
 Status: [PR #83](https://github.com/diegoami/borg-cemetery/pull/83) records the
 owner-selected MiniMax-M3 review and a conditional acceptance recommendation.
 Owner acceptance remains pending. The reviewer independently reproduced the

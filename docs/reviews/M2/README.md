@@ -1,10 +1,15 @@
 # M2 / synthetic P1 milestone packet
 
-Status: independently re-reviewed; owner acceptance pending. M1's review and
-implementation pin remain separate and unchanged. The paired PR bodies pin the
-exact review heads. The [2026-11-20 review response](REVIEW-RESPONSE-20261120.md)
+Status: accepted by the owner on 2026-11-20 at Cemetery
+`ec332c62c82aea3a0a562a59683ec1936f6fff99` (tag `m2`). The
+[acceptance record](../ACCEPTANCE-20261120.md) keeps `reviewed` unchanged and
+preserves the limits below. M1's accepted scope remains separate. The paired
+PR bodies pin the exact review heads. The [2026-11-20 review response](REVIEW-RESPONSE-20261120.md)
 records the reproduced suite and the pinned-engine item-type evidence for
 disposition of the new wording finding.
+
+Pending-acceptance wording in the historical follow-up sections below records
+their state when written; the linked owner decision supersedes that status.
 
 ## Runtime and bank
 

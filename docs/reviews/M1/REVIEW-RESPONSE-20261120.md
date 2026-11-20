@@ -1,5 +1,9 @@
 # Response to the independent M1 review (2026-11-20)
 
+Subsequent disposition: the owner [accepted the frozen M1 publication](../ACCEPTANCE-20261120.md)
+on 2026-11-20, keeping `reviewed` unchanged. The response below retains the
+findings and proposal as presented before that decision.
+
 Status: reviewer recommendation is conditional accept; owner acceptance is pending.
 The [MiniMax-M3 review](https://github.com/diegoami/borg-cemetery/pull/1#issuecomment-7037479075)
 found no defect in the frozen M1 implementation. Its three findings concern the

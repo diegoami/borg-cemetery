@@ -1,5 +1,15 @@
 # Milestones
 
+## Owner acceptance (2026-11-20)
+
+M1 and M2 are **accepted at their frozen review pins**. The owner explicitly
+accepted the proposal to leave `reviewed` unchanged. See the
+[acceptance record](docs/reviews/ACCEPTANCE-20261120.md) for exact identities,
+review findings, receipts and retained limitations. Tags `m1` and `m2` identify
+the accepted M1 publication and M2 Cemetery head respectively. Acceptance does
+not select another milestone or approve later main work. Pending-acceptance
+wording in the dated historical directions below describes its earlier state.
+
 ## Owner-directed caster bank (2026-11-16)
 
 The owner requested continued scenario work, prioritizing low-level casters,
@@ -12,8 +22,8 @@ explicitly untested. No P2/P3 population experiment or acceptance tag is implied
 
 | Milestone | Scope | State |
 | --- | --- | --- |
-| M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | Independent conditional recommendation; review-boundary decision pending; **not accepted** |
-| M2 / synthetic P1. Small generated-depth suite | One class, depths 5/10/15, one seed, birth kit plus one observed level tier; deterministic manifests, bounded execution, independent outcome/failure fields, candidate danger screens and reports; pinned cemetery CI | Independently re-reviewed; finding disposition recorded; not accepted |
+| M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | **Accepted 2026-11-20**, publication `7d5d1422`, tag `m1`; `reviewed` unchanged |
+| M2 / synthetic P1. Small generated-depth suite | One class, depths 5/10/15, one seed, birth kit plus one observed level tier; deterministic manifests, bounded execution, independent outcome/failure fields, candidate danger screens and reports; pinned cemetery CI | **Accepted 2026-11-20**, Cemetery `ec332c62`, tag `m2`; `reviewed` unchanged |
 
 The owner instructed continued implementation with review at the milestone.
 This selects the bounded synthetic P1 work under #5 and reborn #371. It does
@@ -63,13 +73,14 @@ head were documentation-only. PR #1 now follows later `main`, including code and
 data outside M1. Its current diff must not be described as documentation-only
 preparation or accepted in full on the strength of the frozen M1 review.
 The [2026-11-20 response](docs/reviews/M1/REVIEW-RESPONSE-20261120.md) records the
-review findings, dated integration checks and remaining owner decision. M2 has
+review findings and dated integration checks. The owner accepted the scoped
+historical publication on 2026-11-20, leaving `reviewed` unchanged. M2 has
 a [separate review response](docs/reviews/M2/REVIEW-RESPONSE-20261120.md).
 
-The owner decides acceptance and merges the review PR. Only then should the
-reviewed boundary advance and an acceptance tag such as `m1` be recorded.
-Review findings become explicit follow-up work; unresolved blockers do not
-disappear because tests pass.
+The owner's 2026-11-20 scoped acceptance supersedes the earlier expectation of
+acceptance by merging this live PR. Tags record the frozen milestones; neither
+review PR is merged into `reviewed`, because their diffs include broader history.
+The branch boundary remains at the pre-M1 baseline until separately instructed.
 
 ## Owner-requested redesign proposal
 

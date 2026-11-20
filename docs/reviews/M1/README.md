@@ -1,12 +1,16 @@
 # M1 review packet — recorded runs, replay and human alternatives
 
-**Status: independently reviewed; conditional acceptance recommendation.
-Owner acceptance remains pending.**
+**Status: accepted by the owner on 2026-11-20 at historical publication
+`7d5d1422d4429db932c5f3d3b6279a837ec9123b` (tag `m1`).**
+
+The [acceptance record](../ACCEPTANCE-20261120.md) leaves `reviewed` unchanged
+and preserves the limits below. Later main work is outside this acceptance.
 
 Implementer: Codex, OpenAI GPT family. The owner-selected MiniMax-M3 review
 found no M1 implementation defect and raised review-boundary/receipt findings.
-See [the response and remaining acceptance boundary](REVIEW-RESPONSE-20261120.md).
-The owner decides acceptance; no review merge or acceptance tag is implied.
+See [the response](REVIEW-RESPONSE-20261120.md) for the pre-acceptance findings.
+The owner subsequently accepted the frozen milestone without merging the live
+review PR's broader diff.
 
 ## Exact boundary
 
@@ -22,7 +26,7 @@ code, data, M2 and identity work. Those additions are outside this M1 review.
 The PR body records a dated integration snapshot and its checks separately.
 `reviewed` remains at the baseline; merging current main would advance it across
 later work as well, so a scoped M1 recommendation alone is insufficient to merge
-PR #1. See the response before making an acceptance decision.
+PR #1. The owner accepted the frozen scope and kept that branch unchanged.
 
 ## Delivered work and entry points
 
