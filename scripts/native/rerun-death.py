@@ -76,14 +76,33 @@ def checked_hash(case_dir, record, config, name, identity_key=None):
     return expected[0] if expected else None
 
 
-def controller(config, zoo=False):
-    # Before reborn #606/#607, an unset harness BORG_CORE played reborn.
-    # Zoo selects through borg.txt instead, and must not use that fallback.
-    core = config.get('borg_reborn_core', 'borg-rs') if zoo else config.get('borg_core', 'reborn')
+def controller(config, zoo=False, native_receipt=False):
+    """The core that played, from the recorded controller.
+
+    Before borg-reborn-rs #606/#607, an unset harness BORG_CORE played reborn,
+    so a historical harness record without borg_core names the reborn core.
+    Zoo selects through borg.txt instead, and must not use that fallback.
+
+    A native parameter receipt settles it either way: only the native core
+    writes params-core.json (the reborn core writes params.json), and
+    harness/run.sh records params_core_sha256 only when that file exists. A
+    record with such a receipt and no borg_core is a native run, not a
+    historical reborn one, and must not be replayed on the wrong core.
+    """
+    if zoo:
+        core = config.get('borg_reborn_core', 'borg-rs')
+    elif 'borg_core' in config:
+        core = config['borg_core']
+    elif native_receipt:
+        core = 'borg-rs'
+    else:
+        core = 'reborn'
     if core not in ('reborn', 'borg-rs'):
         raise SystemExit(f'rerun-death: unsupported recorded core {core!r}')
     if zoo and 'borg_core' in config and config['borg_core'] != core:
         raise SystemExit('rerun-death: contradictory recorded controller settings')
+    if not zoo and native_receipt and core != 'borg-rs':
+        raise SystemExit('rerun-death: native parameter receipt contradicts the recorded reborn core')
     return core
 
 
@@ -272,10 +291,10 @@ def plan(case_dir):
     race = summary.get('race_idx', term.get('race_idx'))
     cls = summary.get('class_idx', term.get('class_idx'))
     zoo = zoo_plan(config, case_dir, race, cls) if 'zoo_profile' in config else None
-    core = controller(config, zoo is not None)
     overrides, params_hash = parameter_environment(case_dir, record, config)
-    if core != 'borg-rs' and params_hash:
-        raise SystemExit('rerun-death: native parameter receipt contradicts the recorded reborn core')
+    # The native receipt decides a record that names no controller: it is a
+    # native run even when the harness that made it predates #607.
+    core = controller(config, zoo is not None, bool(params_hash))
     original = [attempt for attempt in record['attempts'] if attempt.get('role') == 'original']
     if not original:  # oldest records predate the explicit role field
         original = record['attempts'][:1]
@@ -398,7 +417,10 @@ def verify(p, out):
                 errors.append(f'effective configuration differs: {key}')
             if filename and (not (run / filename).is_file() or sha(run / filename) != expected):
                 errors.append(f'actual {filename} differs or is missing')
-    if controller(actual_config, p['zoo'] is not None) != p['core']:
+    # The effective controller of the replay: the run's own config names it,
+    # and the run's own native receipt settles a config that names none.
+    ran_native = (run / 'params-core.json').is_file()
+    if controller(actual_config, p['zoo'] is not None, ran_native) != p['core']:
         errors.append('effective controller differs')
     if p['core'] == 'borg-rs':
         required = [run / 'params-core.json', run / 'trace-core.jsonl']

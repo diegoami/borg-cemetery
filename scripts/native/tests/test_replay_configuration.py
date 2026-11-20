@@ -71,7 +71,9 @@ class ReplayConfigurationTest(unittest.TestCase):
         for name, data in self.streams.items():
             (run / name).write_bytes(data)
         (run / 'summary.json').write_text(json.dumps(self.summary))
-        if self.config.get('borg_core') == 'borg-rs':
+        # The core the plan resolves, not the config's own borg_core: a
+        # record that names no controller still plays one core or the other.
+        if rd.plan(self.case)['core'] == 'borg-rs':
             (run / 'params-core.json').write_bytes((self.case / 'params-core.json').read_bytes())
             (run / 'trace-core.jsonl').write_text('{"check":"attack"}\n')
         else:
@@ -123,6 +125,26 @@ class ReplayConfigurationTest(unittest.TestCase):
         self.assertEqual(self.env['BORG_CORE'], 'reborn')
         self.assertIn('BORG_OBSERVATION_LOG', self.env)
         self.assertNotIn('BORG_PARAM_AMBIENT', self.env)
+
+    def test_a_native_receipt_without_a_controller_selects_the_native_core(self):
+        # A record from before the harness always recorded borg_core (#607):
+        # it names no controller, but only the native core writes
+        # params-core.json, so the receipt settles which core played.
+        del self.config['borg_core']
+        self.save_record()
+        with mock.patch.dict(os.environ, BORG_CORE='reborn', BORG_PARAM_AMBIENT='99'):
+            rc, receipt = self.execute()
+        self.assertEqual(rc, 0)
+        self.assertEqual(receipt['core'], 'borg-rs')
+        self.assertEqual(self.env['BORG_CORE'], 'borg-rs')
+        self.assertNotIn('BORG_OBSERVATION_LOG', self.env)
+        self.assertNotIn('BORG_PARAM_AMBIENT', self.env)
+
+    def test_an_explicit_reborn_core_with_a_native_receipt_is_refused(self):
+        self.config['borg_core'] = 'reborn'
+        self.save_record()
+        with self.assertRaisesRegex(SystemExit, 'contradicts the recorded reborn core'):
+            rd.plan(self.case)
 
     def test_matching_keys_do_not_hide_a_changed_stream_endpoint_or_policy(self):
         mutations = {

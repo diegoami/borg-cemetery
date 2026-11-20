@@ -78,9 +78,13 @@ prefix. Without `extra` the command is unchanged.
 
 ## Historical controller and parameter replay (2026-11-20, #71 / #13)
 
-Harness dossiers without `borg_core` explicitly select historical `reborn`.
-Explicit controller values win; Zoo selection still comes from its reconstructed
-`borg_reborn_core`. Unknown, empty or contradictory explicit values are refused.
+Harness dossiers without `borg_core` select historical `reborn`, unless they
+carry a native parameter receipt: only the native core writes `params-core.json`
+(the reborn core writes `params.json`), and `harness/run.sh` records
+`params_core_sha256` only when that file exists, so the receipt settles which
+core played even for a record made before #607. Explicit controller values win;
+Zoo selection still comes from its reconstructed `borg_reborn_core`. Unknown,
+empty or contradictory explicit values are refused.
 
 Replay clears ambient `BORG_*`, `ANGBAND_*` and `BORGH_*` settings, retaining
 only the explicit toolkit lookup `BORG_CEMETERY_DIR`. Environment-origin values
