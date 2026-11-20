@@ -14,7 +14,7 @@ Exact primary-case build identity. Counts are death dossiers, not mortality rate
 
 | Registry | Dossiers | Known start families | Missing family | Embedded attempts (all builds) | Embedded repeats (all builds) |
 | --- | --- | --- | --- | --- | --- |
-| cemetery | 28 | 28 | 0 | 28 | 0 |
+| cemetery | 29 | 29 | 0 | 29 | 0 |
 
 ## Causes by registry
 
@@ -37,12 +37,13 @@ Exact primary-case build identity. Counts are death dossiers, not mortality rate
 | a cutpurse | 1 |
 | a black naga | 1 |
 | a kobold shaman | 1 |
+| a clear icky thing | 1 |
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 28 | 1534 | 9596 | 22257.82 | 99599 |
-| depth | 28 | 0 | 1 | 1.14 | 3 |
-| level | 28 | 1 | 2 | 2.61 | 9 |
+| turn | 29 | 1534 | 12281 | 22792.34 | 99599 |
+| depth | 29 | 0 | 1 | 1.14 | 3 |
+| level | 29 | 1 | 2 | 2.66 | 9 |
 
 ## Settings
 
@@ -193,6 +194,21 @@ cemetery: 1 dossiers.
 | borg_core_overrides | Unknown |
 | borg_errand | Unknown |
 | borg_txt_sha256 | 5546d23d44bc607fa310935c489e366f35f2ffb3a4bc6c1e149d414d49dcb061 |
+| params_core_sha256 | Unknown |
+| params_errand_sha256 | Unknown |
+| params_ladders_sha256 | Unknown |
+| profile_sha256 | Unknown |
+
+### Settings cemetery 8e151fbe3e52
+
+cemetery: 1 dossiers.
+
+| Setting / identity | Recorded value |
+| --- | --- |
+| borg_core | Unknown |
+| borg_core_overrides | Unknown |
+| borg_errand | Unknown |
+| borg_txt_sha256 | 742a366ca7cf4e34e8b22bed0f2862c875b6013b747aebcb43ef6787f153bb04 |
 | params_core_sha256 | Unknown |
 | params_errand_sha256 | Unknown |
 | params_ladders_sha256 | Unknown |
@@ -395,5 +411,6 @@ cemetery: 2 dossiers.
 | cemetery | [D-e98ac4d9c56582b53f119875cae932b217877d732e2e5b554758e160f49a4c26](../../../deaths/D-e98ac4d9c56582b53f119875cae932b217877d732e2e5b554758e160f49a4c26/README.md) | 425904011 | recorded input | Elf Ranger | a wild cat | 3660 | 1 | 1 | [settings](#settings-cemetery-d1227be24c3c) | start-e28fad66d2f43a5e147053e2eda4d6dad81a324f1cd8304e3ae0e9289d69f63c |
 | cemetery | [D-ec213c6be10e7ca4cb48d033d6fcccf8cd0c63dcf02f1e1053252d97c5bc59ed](../../../deaths/D-ec213c6be10e7ca4cb48d033d6fcccf8cd0c63dcf02f1e1053252d97c5bc59ed/README.md) | 225452245 | recorded input | Half-Orc Ranger | a kobold shaman | 5647 | 1 | 4 | [settings](#settings-cemetery-c752c205f4b5) | start-a62b08d14f291e54fc99f92e897a8a2a2b40d1d21f71ee6ffa6fa902d2c983e8 |
 | cemetery | [D-ed2689a734c2df78fd6978421ad5574cc13b9d4678cf2e8f29debb015e957d50](../../../deaths/D-ed2689a734c2df78fd6978421ad5574cc13b9d4678cf2e8f29debb015e957d50/README.md) | 1439525086 | recorded input | Half-Orc Ranger | Sméagol | 12281 | 1 | 2 | [settings](#settings-cemetery-f2b801b09f11) | start-148028b3a3502c4ca2a17b9a300ee04b921bc5950a92174f1255b7ad4355b82f |
+| cemetery | [D-f74e3c4476afb6174df9c5f660d206e5864aa1f46d7ec6a8b2a9fe34df195a62](../../../deaths/D-f74e3c4476afb6174df9c5f660d206e5864aa1f46d7ec6a8b2a9fe34df195a62/README.md) | 102023799 | recorded input | Human Druid | a clear icky thing | 37759 | 1 | 4 | [settings](#settings-cemetery-8e151fbe3e52) | start-5c944a99a67d0e17adf4b54bb7bae029932d06d5644432cfa541720915ee9484 |
 
 [Statistics index](../../README.md)

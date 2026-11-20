@@ -10,6 +10,7 @@
   - [44738432656](https://github.com/diegoami/borg-zoo/actions/runs/44738432656): classes-1800-small;
   - [44738444831](https://github.com/diegoami/borg-zoo/actions/runs/44738444831): classes-1800-medium.
 - **Run pages:** `runs/zoo-reborn-flight-fixes-*`.
+- **The pilot** ([44737523620](https://github.com/diegoami/borg-zoo/actions/runs/44737523620), 18 starts) has one death, in ctl only: Human Druid 102023799, CL4 DL1, a clear icky thing at game turn 37,759 ([D-f74e3c4476](../../deaths/D-f74e3c4476afb6174df9c5f660d206e5864aa1f46d7ec6a8b2a9fe34df195a62/)). It is in the second report below, with all four runs: https://claude.ai/artifact/SnqujSa3vHiJUebG9hLu87
 
 ## Deaths
 14 in ctl and 16 in flight. That is 21 different games: 7 the same in both arms, 4 in ctl only, 6 in flight only, and 2 starts that die differently in each arm. Every replay's keys match the zoo cell's.
