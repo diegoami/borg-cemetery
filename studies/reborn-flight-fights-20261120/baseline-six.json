@@ -1,0 +1,143 @@
+{
+  "build": {
+    "impl": "rust",
+    "git_rev": "08f94e1fed0b80fd854584d893209983079157ea",
+    "git_dirty": "no",
+    "inputs_dirty": "no",
+    "source_sha256": "d8857460f7260405a21667bf7dc87250951a85f0c38109836bcfcca1f67d3529",
+    "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+    "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T760-fight/build/rust/game/angband",
+    "binary_sha256": "f28558b05425092892e4c04e65317ed571a451e59bfc3b1a5ef17de4299e1a64",
+    "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "built_utc": "2026-11-20T13:55:40Z"
+  },
+  "cases": [
+    {
+      "seed": 425904011,
+      "race_idx": 2,
+      "class_idx": 7,
+      "case": "D-3299fd20a324cddeb556d39707e3b22e0735fa9666224a1a22fe26b587060911",
+      "cause": "a wild cat",
+      "game_turns": 3660,
+      "max_clevel": 1,
+      "max_depth": 1,
+      "raw_sha256": {
+        "keys.log": "fec8e34184d8f3b7467710630d4ee0ec1e1e79c0388a63473fc3457442842ac4",
+        "state.log": "1dc10523dd21bf15e4f91197fc487d14a3c5efffddf53728dc8f1d3f0a1703f2",
+        "messages.log": "9687a54f48482cf1cd8f69c025282e7adbcfcda655ad9d7a9a77ab82b0ba7503"
+      },
+      "canonical_streams_match": {
+        "keys.log": true,
+        "state.log": true,
+        "messages.log": true
+      },
+      "runner_rc": 0
+    },
+    {
+      "seed": 2095979189,
+      "race_idx": 6,
+      "class_idx": 7,
+      "case": "D-d09b9d357988e5fe2fbcb60d5691ec15d2e9d00a2ceaadf5868c72d4ee2a9124",
+      "cause": "a wild cat",
+      "game_turns": 3345,
+      "max_clevel": 1,
+      "max_depth": 1,
+      "raw_sha256": {
+        "keys.log": "0353d7a7c34dbba809b3027cafaae526ff973efda33eec18fc6ab071006e062f",
+        "state.log": "9db5d962c7cbecec78363ee5ec9b86797142f6786dbf010e1e10bf7a31141ca3",
+        "messages.log": "4ade15531c04ec902d0dbdee267248b39d82c56072576203ae797fe5e489fc01"
+      },
+      "canonical_streams_match": {
+        "keys.log": true,
+        "state.log": true,
+        "messages.log": true
+      },
+      "runner_rc": 0
+    },
+    {
+      "seed": 1976035382,
+      "race_idx": 8,
+      "class_idx": 7,
+      "case": "D-4d01e23a3d529c82e67301b17fbaacf8d6dae8d2265709ff0f255e8a0b241f8a",
+      "cause": "a wild cat",
+      "game_turns": 4248,
+      "max_clevel": 1,
+      "max_depth": 1,
+      "raw_sha256": {
+        "keys.log": "a830c22b36be4679290d62f5c3b3b1cd3702dd0c82756d81472672ba4354a7a0",
+        "state.log": "bc8bf089ce2db07f3bc434ba834191159e96653ee8a324b7a881e8482f9375cd",
+        "messages.log": "5faf3261fadf5f041da70de3826974485ef90ce40eafde8f540839ee55fa0ce7"
+      },
+      "canonical_streams_match": {
+        "keys.log": true,
+        "state.log": true,
+        "messages.log": true
+      },
+      "runner_rc": 0
+    },
+    {
+      "seed": 2049259432,
+      "race_idx": 4,
+      "class_idx": 7,
+      "case": "D-9e526055f043e11781d5ecb1d97e66385be2acd3a5590f775b6145d4fe0720e8",
+      "cause": "Fang, Farmer Maggot's Dog",
+      "game_turns": 4429,
+      "max_clevel": 1,
+      "max_depth": 1,
+      "raw_sha256": {
+        "keys.log": "5f117c1c5d8163816643b60cdc3f451e9e13f2764dbad09e53954d965f6c8f1a",
+        "state.log": "abfda53c72b0e1cc4bcb5b622aed4651b4c9072e26fb85881775dc205a75cac5",
+        "messages.log": "97b40f3878f73c8540a6ac3f8d814ddc69798918cf3c03fc5700f550776c5a26"
+      },
+      "canonical_streams_match": {
+        "keys.log": true,
+        "state.log": true,
+        "messages.log": true
+      },
+      "runner_rc": 0
+    },
+    {
+      "seed": 807683971,
+      "race_idx": 0,
+      "class_idx": 7,
+      "case": "D-7e07cc9e67b6a60f60af54b0b2d449c322d05e6d5f58a855c8972afa8973d29f",
+      "cause": "a black naga",
+      "game_turns": 1534,
+      "max_clevel": 1,
+      "max_depth": 1,
+      "raw_sha256": {
+        "keys.log": "4c201fcf55997b47d6c9b2a89a942c6d3717810f06f80307c9ca4f6aad2c3f69",
+        "state.log": "2fe95d2715a91ef03d60ed0a71955e1f8587d8919fb049a0fc53c40a4b7795b7",
+        "messages.log": "e9431054d9e7a2350f1665c12190be93ee0c89cd8d97f2158eb6e1f326d9980d"
+      },
+      "canonical_streams_match": {
+        "keys.log": true,
+        "state.log": true,
+        "messages.log": true
+      },
+      "runner_rc": 0
+    },
+    {
+      "seed": 1517990203,
+      "race_idx": 4,
+      "class_idx": 7,
+      "case": "D-e1ba89db1a1e0e03ce014e04f1d2e2ab2cc14228048ee34ff9a5aef98c648010",
+      "cause": "a small kobold",
+      "game_turns": 6338,
+      "max_clevel": 1,
+      "max_depth": 1,
+      "raw_sha256": {
+        "keys.log": "e1a15b91ce59526ecd9faa87f5d5ac8a8c06234e359cfb81b41f0e4738a202ea",
+        "state.log": "d525f9b7c3848a33dbce0bf184532d0cd67f6870ddf2fcae07622fda5f253d3d",
+        "messages.log": "78888977a9c7c08e8f527c488b7665437b6083aac6ac4451ae2eee20f620af13"
+      },
+      "canonical_streams_match": {
+        "keys.log": true,
+        "state.log": true,
+        "messages.log": true
+      },
+      "runner_rc": 0
+    }
+  ]
+}
