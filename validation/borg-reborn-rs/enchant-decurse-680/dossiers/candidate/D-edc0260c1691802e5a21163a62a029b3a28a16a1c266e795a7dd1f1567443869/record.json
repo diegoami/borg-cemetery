@@ -1,0 +1,63 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-edc0260c1691802e5a21163a62a029b3a28a16a1c266e795a7dd1f1567443869",
+  "run_kind": "harness",
+  "character": "Dwarf Necromancer",
+  "raw_cause": "a metallic red centipede",
+  "terminal": {
+    "cause": "a metallic red centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 1,
+    "turn": 4681,
+    "race_idx": 5,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1041,
+    "flags": "menu",
+    "git_rev": "710ba18f03a1a6551aaf91c19c15abfd3083c107",
+    "git_dirty": "no",
+    "source_sha256": "9db5c80c6a83d702d8d1c70bcc4b61002166d044042ed129e8e539bf8df034dc",
+    "binary_sha256": "2dc8f78eef497319bb461caf0f68d107edd516c1982e3a4b24ce5a5df3ca9a12",
+    "borg_txt_sha256": "a7112b6212edc0c29a3acc922887c25ee57d15efe7a979d9feec21e0e5787499",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "9b855419106d95370710968110e592b9c52a05c1b743342fb4e417aafebbc78a"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 361
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/t680-validation/candidate-full/full-4-necro-1",
+      "result_sha256": "62138540f783c5c94ff859077d4191cc2f79e044b36c2501ffbc96964e51e662",
+      "raw_sha256": {
+        "keys.log": "62138540f783c5c94ff859077d4191cc2f79e044b36c2501ffbc96964e51e662",
+        "messages.log": "13ad3fd066d8781b3904c90f3730776682169ae2363f61bc6abf1cec3352c9a4",
+        "state.log": "ca3fa27e687b5e35e9d9a1fc26ef0bbd72a40f0adc2440c146a1bc06caa4c0b5"
+      },
+      "source_commit": "710ba18f03a1a6551aaf91c19c15abfd3083c107",
+      "binary_sha256": "2dc8f78eef497319bb461caf0f68d107edd516c1982e3a4b24ce5a5df3ca9a12"
+    }
+  ],
+  "encounter_family": "start-254da01e95d518d8c396da5c29a1e3a92e4a19ee5fb07227b848d266bc51e2d8",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "c9958a25490c440b514ae2a325ce53e215e9f085c471f7eedc7565832d7b9899",
+    "config.txt": "a631bf7eb819e7922777b7bd8acddf4d61dba7d51aa73e296c6ea2cb051cebf7",
+    "depths.json": "90856ad9c036d10287a4fa411cb0e47266ad44305ed6b64460f2fe0a6e1e910b",
+    "params-core.json": "9b855419106d95370710968110e592b9c52a05c1b743342fb4e417aafebbc78a",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "90e877e1c6b7dd7b9c0555aaf8c1c9057d687c80d712fbbd6a43c6cb02807d1b",
+    "trace-core-tail.jsonl": "8e97f69d1d4ae63a6fb0492557e516392bb03bd1e0dca8236124788d294c4884"
+  },
+  "investigation": null,
+  "issue": null
+}
