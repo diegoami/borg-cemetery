@@ -57,3 +57,11 @@ saved-state replay of the pilot's exact encounters.
 - Recall projectability is required for an immobile ranged monster with no walking route. A regression proves that dropping that branch would omit exposure. The code is clarified while retaining that behavior.
 - Native status/spell danger is a conservative risk estimate, not measured literal HP damage. Spell flags remain a coarse ranged proxy. Stun/Slow are not assumed to persist. No result here establishes population improvement.
 - See [Zoo #511](https://github.com/diegoami/borg-zoo/issues/511) for the explicit new measurement pin. The initial pilot remains attached to 78b8f297. The owner alone schedules any new measurement.
+
+
+The three [fresh won-fight examples](review-won-fights.json) refer to
+three distinct kills, not repeated verdicts during one fight. In the new
+425904011 all-switch death, the final verdict at3613 is not-winning
+(4 commands, 4.660 incoming, 2HP); ordinary shooting follows a refused
+Recall and Fang kills it at3621. This is retained as a failure, not a
+winning-fight success. An earlier divergence can still cause later exposure.
