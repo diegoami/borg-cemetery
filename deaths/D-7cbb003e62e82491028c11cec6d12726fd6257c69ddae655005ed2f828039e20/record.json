@@ -1,0 +1,63 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-7cbb003e62e82491028c11cec6d12726fd6257c69ddae655005ed2f828039e20",
+  "run_kind": "harness",
+  "character": "Human Blackguard",
+  "raw_cause": "a giant green frog",
+  "terminal": {
+    "cause": "a giant green frog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 9896,
+    "race_idx": 0,
+    "class_idx": 8
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 9,
+    "flags": "menu",
+    "git_rev": "103b50a4b7f6f8623b9c525478770e1cbb7d9193",
+    "git_dirty": "no",
+    "source_sha256": "dc46fc298fe25f8721a254c6f271a0d493beddf839e7d67c2ed6196f29eb0d70",
+    "binary_sha256": "b2a469fbcd1700259a9305748362b3098b40a93aeaf0308eb6f77ec2f2651e2a",
+    "borg_txt_sha256": "8b4d22fd4231889b7c8e59040be00b5e0137983d58f47749088a8991353f3ea6",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "e4a42ab4d9f942131add44cc4f6a6f3a7659e73942af4fe92dbc6b25af3fc20d"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 908
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/768-runs/change/cap100000-seed09",
+      "result_sha256": "6f1db74b550a8f63930ac2bdd3fe708a0c73b6ec84636e50597fac861b26071e",
+      "raw_sha256": {
+        "keys.log": "6f1db74b550a8f63930ac2bdd3fe708a0c73b6ec84636e50597fac861b26071e",
+        "messages.log": "06012e13c8500544915b67b5812da95191c387f81e082f4bc738d9e427f117a0",
+        "state.log": "2f9aeea0206c94bd3f53f86a451820200c2af551c58ef8e234078302dbc97e32"
+      },
+      "source_commit": "103b50a4b7f6f8623b9c525478770e1cbb7d9193",
+      "binary_sha256": "b2a469fbcd1700259a9305748362b3098b40a93aeaf0308eb6f77ec2f2651e2a"
+    }
+  ],
+  "encounter_family": "start-d018470e1780b482b5199fbaaf4e36a5ea868bbabe0f56d457d7cb88cd3fc14b",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "76eb68f89eb406328a8fcdcdaa3f8ad1d7108b210f7ebc860db5635b0385a880",
+    "config.txt": "45f80bf1951f1b122b3dd3be5593fcce5b1335848b6065b6fb47bd4840255e71",
+    "depths.json": "9bbad3fe22f22d60d556ba9e46037ba1529dc7b70eb6061b48374f616fbcff79",
+    "params-core.json": "e4a42ab4d9f942131add44cc4f6a6f3a7659e73942af4fe92dbc6b25af3fc20d",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "a84768f7dc1544f45eea370c629d9887160b2f7f1f3680a4d41f3ec2bd6e6fc3",
+    "trace-core-tail.jsonl": "3084e547a948ae86ec714dd48da8e62d695a19fa173a64c0d08e1dcf9d9f48ee"
+  },
+  "investigation": null,
+  "issue": null
+}
