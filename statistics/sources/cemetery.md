@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `af66fd3042f0d0a32a37d958f7a89be0a91426fff800092a66c4f439d759418e`.
+Input inventory SHA-256: `1652cffd41a4d038fdb94a8bf539d4eedbf038c7a557902e5468d53cc02772b8`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
@@ -12,7 +12,7 @@ The companion snapshot for an external source retains normalized statistical fie
 | --- | --- |
 | a wild cat | 20 |
 | poison | 16 |
-| Fang, Farmer Maggot's Dog | 11 |
+| Fang, Farmer Maggot's Dog | 12 |
 | a soldier | 9 |
 | a crow | 8 |
 | a small kobold | 6 |
@@ -22,13 +22,13 @@ The companion snapshot for an external source retains normalized statistical fie
 | a giant white mouse | 5 |
 | a kobold shaman | 4 |
 | a fatal wound | 4 |
+| a clear icky thing | 3 |
 | a giant white louse | 3 |
 | a black naga | 3 |
 | a giant yellow centipede | 3 |
 | Grip, Farmer Maggot's Dog | 3 |
 | Sméagol | 2 |
 | a rock lizard | 2 |
-| a clear icky thing | 2 |
 | starvation | 2 |
 | a snaga | 2 |
 | a blue yeek | 2 |
@@ -60,16 +60,16 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 150 | 1528 | 16298 | 54308.96 | 1094860 |
-| depth | 125 | 0 | 1 | 1.50 | 18 |
-| level | 125 | 1 | 2 | 2.83 | 9 |
+| turn | 152 | 1528 | 16298 | 53866.73 | 1094860 |
+| depth | 127 | 0 | 1 | 1.49 | 18 |
+| level | 127 | 1 | 2 | 2.83 | 9 |
 
 ## Characters
 
 | Character | Dossiers |
 | --- | --- |
+| Human Druid | 8 |
 | Human Ranger | 8 |
-| Human Druid | 7 |
 | Gnome Ranger | 7 |
 | Half-Orc Ranger | 7 |
 | Elf Ranger | 6 |
@@ -78,11 +78,11 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Half-Elf Blackguard | 4 |
 | Dunadan Ranger | 4 |
 | Half-Troll Ranger | 4 |
+| Elf Mage | 4 |
 | Half-Elf Mage | 4 |
 | Half-Elf Druid | 4 |
 | Half-Elf Ranger | 3 |
 | Human Priest | 3 |
-| Elf Mage | 3 |
 | Dwarf Necromancer | 3 |
 | Elf Rogue | 3 |
 | Half-Troll Priest | 3 |
