@@ -30,8 +30,24 @@ No duplicate baseline deaths were exported.
 | 1517990203 | 4/7 | a small kobold | 6338 | [D-e1ba89db1a1e](../../deaths/D-e1ba89db1a1e0e03ce014e04f1d2e2ab2cc14228048ee34ff9a5aef98c648010/README.md) |
 
 
-## Validation in progress
+## Owner decision: measurement belongs to borg-zoo
 
-Enabled cases, winning-fight checks and paired cohort results are still
-pending the shared local validation lock. This file currently records only
-the completed baseline reproduction; it must not be read as an enabled result.
+Owner, 2026-11-20: local validation is limited to builds, smoke and named
+case replays. No new local population comparison is authorized. The local
+parent script has only 24 replays of the six named starts across four
+configurations; control-retention work has three games. No 600-start
+candidate cohort has started. The Rogue 390305857 is an additional named
+local case.
+
+The normalized [600-start manifest](starts-600.tsv) has columns seed,
+race_idx, class_idx and turn_cap (100000). It contains exactly the original
+200 Rangers and 50 of every other class, without resampling. The original
+lists and their hashes remain retained. `controls.json` records supplied
+observations, not a newly played local population arm.
+
+Enabled named cases are pending the shared lock. Population measurement is
+to be requested in borg-zoo with a pinned specimen, shipped control,
+individual-switch arms and all switches together. Only the owner schedules
+that request; this session must not dispatch it. This report currently
+contains completed baseline/category analysis and must not be read as an
+enabled measurement result.
