@@ -2,7 +2,8 @@
 
 Source task: [reborn #781](https://github.com/diegoami/borg-reborn-rs/issues/781).
 Implementation: [PR #782](https://github.com/diegoami/borg-reborn-rs/pull/782),
-`155943c0c7a2fbfc7e31662a4fb3f0960c653f71`. Engine: upstream `574b618c`,
+initial head `155943c0c7a2fbfc7e31662a4fb3f0960c653f71`, final delivery
+`f1d3c576d2b92f9dc13656318f92eb51a4f6e2ac`. Engine: upstream `574b618c`,
 unchanged. Default borg-rs core, Human Druid, seed **102023799**.
 
 These are bounded regression checks of one seeded life, with alternative
@@ -126,3 +127,19 @@ OUT harness/reference/smoke-borg-rs`: retained clean-build result is3/3 exact
 keys/messages/states. Workspace fmt/clippy/tests,510 release borg-core tests,
 39 script tests,96 tool tests, vendor/citation checks pass. Reborn-core full
 suites and population comparisons were not run.
+
+
+## Delivery refinement: all engine melee verbs
+
+Final delivery f1d3c576 additionally recognizes every brand/slay/shape melee
+verb at the pinned engine (including smite/burn/freeze), with a corpus test
+against brand.txt, slay.txt and shape.txt. Directional oil also clears an
+unseen nonliving victim on "It is destroyed.". This extends coverage beyond
+the initial hit/miss/fail-to-harm case without changing the switches or shipped
+values. Release tests:511 passed,4 ignored; workspace clippy and parameter
+citations pass. The clean final smoke again matches3/3. Final enabled Druid
+keys are identical to the previous current-main enabled run:
+`949307338b60b03e6df33e25a0a314eeeb8d498a69407b3694d23637bcabf355`.
+The four additional attempts are retained, bringing this case to22 attempts:
+13 plays of the one Druid life and nine repeated smoke identity checks.
+No additional death occurred, and no new runtime detection coverage is claimed.
