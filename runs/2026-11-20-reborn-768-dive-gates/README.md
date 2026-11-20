@@ -29,7 +29,7 @@ cap. The executable digest matched the initial suite manifest.
 - Human Priest, seed 4, was killed by an acolyte at turn 58,147 on DL2 at
   CL7. [Dossier](../../deaths/D-348b5e144f8463a089d02e8c6c07112b5d66b07e6b18ae976fc92e4a8bb0cc3f/)
 - Human Blackguard, seed 9, was killed by a giant green frog at turn
-  9,896 on DL2 at CL4. [Dossier](../../deaths/D-7cbb003e62e82491028c11cec6d12726fd6257c69ddae655005ed2f828039e20/)
+  9,896 on DL1 at CL4. [Dossier](../../deaths/D-7cbb003e62e82491028c11cec6d12726fd6257c69ddae655005ed2f828039e20/)
 
 Both deaths repeated with the same endpoint and identical keys, messages
 and state streams at the two caps. Each pair represents one distinct start.
