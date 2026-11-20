@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-e210e07e5ce7adc0fb35cb9f191c93ce9e78f1f1fbda744cee09541574a58e0d",
+  "run_kind": "harness",
+  "character": "Half-Elf Ranger",
+  "raw_cause": "a crow",
+  "terminal": {
+    "cause": "a crow",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 1,
+    "turn": 2807,
+    "race_idx": 1,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1483603518,
+    "flags": "exact,menu",
+    "git_rev": "d8edf54655d80d29cc645d5a7a1616fab6d0ccac",
+    "git_dirty": "no",
+    "source_sha256": "3f44486a5823e2f97d2039afcfa650c454290bf7c42c43ea494a275ed700f135",
+    "binary_sha256": "11832d55cfd42fe2d5714e802b54537a2ea255d517f15a6caeae5162ff84223c",
+    "borg_txt_sha256": "f01ad866dadd3a1d72e351f8f787ed2551fb4092d88af3ad24e7dbfef7e5cc30",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 267
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "runs/2026-11-20-reborn-765-weighted-flight/evidence/r200-1483603518-1-7",
+      "result_sha256": "b29df180b00453f795dec3adf21249ea588219b649e081e4f5793335c635fe3b",
+      "raw_sha256": {
+        "keys.log": "b29df180b00453f795dec3adf21249ea588219b649e081e4f5793335c635fe3b",
+        "messages.log": "dcad40aeeae8910ea1b9ae512fa0dfe11de59c050f8bd10e8043b974d1d1bd0e",
+        "state.log": "e0713eedd98921c5a76f34b3ce359e62dd11b154429f7096155b911ce785b7dd"
+      },
+      "source_commit": "d8edf54655d80d29cc645d5a7a1616fab6d0ccac",
+      "binary_sha256": "11832d55cfd42fe2d5714e802b54537a2ea255d517f15a6caeae5162ff84223c"
+    }
+  ],
+  "encounter_family": "start-5afe7134956e6a2fbab17bbdeb98c15929157f9eb64c7d43b2e3de5f611c8f21",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "dbdea2687b6353848348a6ea2bfdf38c38507a4401a24d09fe04bfd4c4a7ea25",
+    "config.txt": "c5c01e938add0045da4fcb2e0031845cc685d689f14c17c6903e433ba7cdc77b",
+    "params-core.json": "52836c21480c9906a353f2d563afc1bb6efa810bd73282b913dc4ac523f98f38",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "860762e2bc0d0ea6685447f62d7e276f1764da28376f7db64ee8f9bcfb354dec",
+    "trace-core-tail.jsonl": "a600061e10361c1d972d1b440843769f24dce9eb60c5932574d455d5a4ed77c2"
+  },
+  "investigation": null,
+  "issue": null
+}

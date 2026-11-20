@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-8a6005fa414c20689df70cccd30a396de350713ccd77ce34a3e22b676af8f6cb",
+  "run_kind": "harness",
+  "character": "Human Necromancer",
+  "raw_cause": "a fatal wound",
+  "terminal": {
+    "cause": "a fatal wound",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 2050,
+    "race_idx": 0,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 312789942,
+    "flags": "exact,menu",
+    "git_rev": "d8edf54655d80d29cc645d5a7a1616fab6d0ccac",
+    "git_dirty": "no",
+    "source_sha256": "3f44486a5823e2f97d2039afcfa650c454290bf7c42c43ea494a275ed700f135",
+    "binary_sha256": "11832d55cfd42fe2d5714e802b54537a2ea255d517f15a6caeae5162ff84223c",
+    "borg_txt_sha256": "85317b0a18ce00c109bbf831e7aa93a2dd87652f0f168b70de43bcfae6697f63",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 130,
+    "of": 130
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "runs/2026-11-20-reborn-765-weighted-flight/evidence/c400-312789942-0-4",
+      "result_sha256": "f04ccae9fc807f4f924037ccd623afa37beddf5c86c82e201082ae01a85aba33",
+      "raw_sha256": {
+        "keys.log": "f04ccae9fc807f4f924037ccd623afa37beddf5c86c82e201082ae01a85aba33",
+        "messages.log": "8e15b55876da409977974f64b7b64faddbb70a83b2f4d4716f27619a325f6e16",
+        "state.log": "66be80b57269538ad52442664f6709fd364e161fce21c21431285f0d7a435a88"
+      },
+      "source_commit": "d8edf54655d80d29cc645d5a7a1616fab6d0ccac",
+      "binary_sha256": "11832d55cfd42fe2d5714e802b54537a2ea255d517f15a6caeae5162ff84223c"
+    }
+  ],
+  "encounter_family": "start-69cf0453e94483f9bc3349ab7989df3e7aa83dca92fb864c3ab007ccd8a6eafd",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "dbdea2687b6353848348a6ea2bfdf38c38507a4401a24d09fe04bfd4c4a7ea25",
+    "config.txt": "1db1de0cf10baaba7926624fb30be425980ffb6ead3491334ed0ee810f94f612",
+    "params-core.json": "52836c21480c9906a353f2d563afc1bb6efa810bd73282b913dc4ac523f98f38",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "bfebbd367e2afd2f76a214aa093b29452405fc128ea792a50decd08b8a3a739f",
+    "trace-core-tail.jsonl": "8abb527ee19e9c8c06da27c5f8d1b09d84de65a5d0e130e1bfe4abd613ac1928"
+  },
+  "investigation": null,
+  "issue": null
+}
