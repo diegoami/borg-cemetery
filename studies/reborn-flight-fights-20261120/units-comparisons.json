@@ -1,0 +1,1792 @@
+{
+  "scope": "nine explicit named cases; replays are not independent population samples",
+  "specimen": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+  "rows": [
+    {
+      "start": [
+        "425904011",
+        "2",
+        "7"
+      ],
+      "arms": {
+        "ctl": {
+          "arm": "ctl",
+          "start": [
+            "425904011",
+            "2",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 3660,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a wild cat",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "fec8e34184d8f3b7467710630d4ee0ec1e1e79c0388a63473fc3457442842ac4",
+          "state_sha256": "1dc10523dd21bf15e4f91197fc487d14a3c5efffddf53728dc8f1d3f0a1703f2",
+          "messages_sha256": "b034fc76d483ea011191dff573b9be8ac66328ed85b795840c21b2f2f5c3d66e",
+          "overrides": [],
+          "case": "D-3299fd20a324cddeb556d39707e3b22e0735fa9666224a1a22fe26b587060911",
+          "first_different_key": null
+        },
+        "category": {
+          "arm": "category",
+          "start": [
+            "425904011",
+            "2",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 3,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "08d0e253f56406fe38dd196e49fe4d0a07d73c7c7e3b4704971785c54e40de64",
+          "state_sha256": "4da61b79de5893da27236a5687e038009afac2948e5627f72144dc98ed7d86ac",
+          "messages_sha256": "9c02c9c1687fbdeefe5d94e611a5a126876ec1cefdd17ac54b869125780eb26e",
+          "overrides": [
+            "borg_param_attack_on_sight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 549,
+            "control": "3633 1 2b 0",
+            "after": "3633 1 2a 0"
+          }
+        },
+        "winning": {
+          "arm": "winning",
+          "start": [
+            "425904011",
+            "2",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 3,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "8bcc909d76044fb331084e4987ec7445f149db5677d103f7aca7337817fc639b",
+          "state_sha256": "099d763f56de4bedef5132c4f78be557f460754f8077f49a86d9971839036d1a",
+          "messages_sha256": "764db9406ce25faf7f7f7648e12468dcbf51cdf50a6aa48b27d6e80a4268b26b",
+          "overrides": [
+            "borg_param_caution_winning_fight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 48,
+            "control": "360 1 33 0",
+            "after": "360 1 39 0"
+          }
+        },
+        "recall": {
+          "arm": "recall",
+          "start": [
+            "425904011",
+            "2",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 5,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "7a849248a01adeb1ae246b22a1a58540cf4e5f518db0c097dd9fbe261baf13bf",
+          "state_sha256": "09064a039d75710e88b317bc4d68b94462e6dc9feff7445a21deff4d7d623573",
+          "messages_sha256": "12bbd3993b2315acc0568b27ffba496d5af22d65614c7105ba866f1288f3c126",
+          "overrides": [
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 556,
+            "control": "3650 1 e000 0",
+            "after": "3650 1 71 0"
+          }
+        },
+        "all": {
+          "arm": "all",
+          "start": [
+            "425904011",
+            "2",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 3621,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "Fang, Farmer Maggot's Dog",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "98af8e59eefea7eec5f1b444451f600ffc4f6b6a46558f574ecb708830906c15",
+          "state_sha256": "f258a335d8dcc79bc968034fbf6954d211160d6fd96b511f98a2432354117573",
+          "messages_sha256": "038ee195c344387c268ef0598254dbe2fce578a808109fcf3b86036d4223da93",
+          "overrides": [
+            "borg_param_attack_on_sight=1",
+            "borg_param_caution_winning_fight=1",
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": "D-c473504bf7fe86712d22e8e66dc24b1e16ede1315b36afb453afd3879a1f4297",
+          "first_different_key": {
+            "index": 48,
+            "control": "360 1 33 0",
+            "after": "360 1 39 0"
+          }
+        }
+      }
+    },
+    {
+      "start": [
+        "2095979189",
+        "6",
+        "7"
+      ],
+      "arms": {
+        "ctl": {
+          "arm": "ctl",
+          "start": [
+            "2095979189",
+            "6",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 3345,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a wild cat",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "0353d7a7c34dbba809b3027cafaae526ff973efda33eec18fc6ab071006e062f",
+          "state_sha256": "9db5d962c7cbecec78363ee5ec9b86797142f6786dbf010e1e10bf7a31141ca3",
+          "messages_sha256": "a2022d9a0748ffd7fb55a49e6fac9916df5802a2f85c22254ad049fe7c775118",
+          "overrides": [],
+          "case": "D-d09b9d357988e5fe2fbcb60d5691ec15d2e9d00a2ceaadf5868c72d4ee2a9124",
+          "first_different_key": null
+        },
+        "category": {
+          "arm": "category",
+          "start": [
+            "2095979189",
+            "6",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "bddb0a6542b3deced0ddeea2e39c758a126aff44e028835a43fe08a8d67207eb",
+          "state_sha256": "0c4882a789aa41d59359109a7810997305a6404a4c0fd76fa85039fe6e1a5c9e",
+          "messages_sha256": "efc2dad86a88c4914396c86e501b4466c40cff6abeab66d604acd751cf22e61d",
+          "overrides": [
+            "borg_param_attack_on_sight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 590,
+            "control": "3309 1 71 0",
+            "after": "3309 1 2b 0"
+          }
+        },
+        "winning": {
+          "arm": "winning",
+          "start": [
+            "2095979189",
+            "6",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 7,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "dba15dc409d09e218878ab8abb981dc1b01d3a8bf472ed86f47266d9347119c1",
+          "state_sha256": "e8e66c6a193d5cc5aed3c6e95edb9745a24b9633934720c1fb6f0c1dce8b61b3",
+          "messages_sha256": "f8693d69bf7b25ee90d9fa2ba1e7b0f866b1b12d8ed49928a963c8f6aa912b38",
+          "overrides": [
+            "borg_param_caution_winning_fight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 152,
+            "control": "621 1 2a 0",
+            "after": "621 1 2b 0"
+          }
+        },
+        "recall": {
+          "arm": "recall",
+          "start": [
+            "2095979189",
+            "6",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 3345,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a wild cat",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "0353d7a7c34dbba809b3027cafaae526ff973efda33eec18fc6ab071006e062f",
+          "state_sha256": "9db5d962c7cbecec78363ee5ec9b86797142f6786dbf010e1e10bf7a31141ca3",
+          "messages_sha256": "a2022d9a0748ffd7fb55a49e6fac9916df5802a2f85c22254ad049fe7c775118",
+          "overrides": [
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": "D-d09b9d357988e5fe2fbcb60d5691ec15d2e9d00a2ceaadf5868c72d4ee2a9124",
+          "first_different_key": null
+        },
+        "all": {
+          "arm": "all",
+          "start": [
+            "2095979189",
+            "6",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "451fad92082877c8d12023d2dc1c4e2cc2404025c599eaabbd87d2fe7c37b2ea",
+          "state_sha256": "5dae0007bd0d22e9109395b3f937b802e5d2f67ad608e68235b6072a0748b0b2",
+          "messages_sha256": "6cfcadc37140fcad9a452bc752521d17225c6b1205306f1dbaf19f0eaf4d171f",
+          "overrides": [
+            "borg_param_attack_on_sight=1",
+            "borg_param_caution_winning_fight=1",
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 152,
+            "control": "621 1 2a 0",
+            "after": "621 1 2b 0"
+          }
+        }
+      }
+    },
+    {
+      "start": [
+        "1976035382",
+        "8",
+        "7"
+      ],
+      "arms": {
+        "ctl": {
+          "arm": "ctl",
+          "start": [
+            "1976035382",
+            "8",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 4248,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a wild cat",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "a830c22b36be4679290d62f5c3b3b1cd3702dd0c82756d81472672ba4354a7a0",
+          "state_sha256": "bc8bf089ce2db07f3bc434ba834191159e96653ee8a324b7a881e8482f9375cd",
+          "messages_sha256": "e75b6845cf2373d2a3c9cac8016883206f118862fd2303f88f839426209401b1",
+          "overrides": [],
+          "case": "D-4d01e23a3d529c82e67301b17fbaacf8d6dae8d2265709ff0f255e8a0b241f8a",
+          "first_different_key": null
+        },
+        "category": {
+          "arm": "category",
+          "start": [
+            "1976035382",
+            "8",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 4284,
+          "max_clevel": 2,
+          "max_depth": 1,
+          "cause": "Grip, Farmer Maggot's Dog",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "44057adbc33185d7bff71ca649097e20631287793e7c97fd7e52e3af3ac580af",
+          "state_sha256": "8377a1f015e185e4449a503587a465346f472af3262655e8f4ce01327cc4995b",
+          "messages_sha256": "5290afdf3044c79e77c256491c2e743d10f8ac989fd783d1c279c15924d9c108",
+          "overrides": [
+            "borg_param_attack_on_sight=1"
+          ],
+          "case": "D-4795fc2da53228487204a0c7fe2a1d0ee1024341be52b608b55928a5afc73c90",
+          "first_different_key": {
+            "index": 577,
+            "control": "4194 1 e000 0",
+            "after": "4194 1 2b 0"
+          }
+        },
+        "winning": {
+          "arm": "winning",
+          "start": [
+            "1976035382",
+            "8",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 3,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "10f524c79f21b62a91a19bc47a4d2553463e03822f14729434bef4ce57743957",
+          "state_sha256": "43a149f78033fbfc17e52bdbb1c5839fe328b22e67d0b5e4c480978293d2dfad",
+          "messages_sha256": "75eb82803a9dbf56ea35307102ed075fc89d73897558ab3111901f42780a3cf9",
+          "overrides": [
+            "borg_param_caution_winning_fight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 221,
+            "control": "1707 1 2a 0",
+            "after": "1707 1 2b 0"
+          }
+        },
+        "recall": {
+          "arm": "recall",
+          "start": [
+            "1976035382",
+            "8",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "c68c098e97405eaf18e2f8781392c8536615cb61633a001e64ac43de0c2bc28d",
+          "state_sha256": "29b8bc08c53a553b365d11033d0894818d3095d66901aa1ce935143d0d4b91f4",
+          "messages_sha256": "e18898670935cdd72753a064ff5e788d96c218f3d2b339a90034573b3a35565c",
+          "overrides": [
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 577,
+            "control": "4194 1 e000 0",
+            "after": "4194 1 2b 0"
+          }
+        },
+        "all": {
+          "arm": "all",
+          "start": [
+            "1976035382",
+            "8",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 5,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "31bf37d658574b2fb45e52586737b048dc138b53c98481480f6b8438e0ee61c3",
+          "state_sha256": "df1920db1ffb8d963d7cef8eb51cbd2d4f6dc4768f6d113208388ae362ca8f8b",
+          "messages_sha256": "2fafcae6a80a8357c4f1aff56914860f90a38b11d6eced4e9555aff538d64f28",
+          "overrides": [
+            "borg_param_attack_on_sight=1",
+            "borg_param_caution_winning_fight=1",
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 221,
+            "control": "1707 1 2a 0",
+            "after": "1707 1 2b 0"
+          }
+        }
+      }
+    },
+    {
+      "start": [
+        "2049259432",
+        "4",
+        "7"
+      ],
+      "arms": {
+        "ctl": {
+          "arm": "ctl",
+          "start": [
+            "2049259432",
+            "4",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 4429,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "Fang, Farmer Maggot's Dog",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "5f117c1c5d8163816643b60cdc3f451e9e13f2764dbad09e53954d965f6c8f1a",
+          "state_sha256": "abfda53c72b0e1cc4bcb5b622aed4651b4c9072e26fb85881775dc205a75cac5",
+          "messages_sha256": "0d5e26b0c840dbf7f311d431af1774bbb0334a18381c99e66f2172a97aad9893",
+          "overrides": [],
+          "case": "D-9e526055f043e11781d5ecb1d97e66385be2acd3a5590f775b6145d4fe0720e8",
+          "first_different_key": null
+        },
+        "category": {
+          "arm": "category",
+          "start": [
+            "2049259432",
+            "4",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 4429,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "Fang, Farmer Maggot's Dog",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "5f117c1c5d8163816643b60cdc3f451e9e13f2764dbad09e53954d965f6c8f1a",
+          "state_sha256": "abfda53c72b0e1cc4bcb5b622aed4651b4c9072e26fb85881775dc205a75cac5",
+          "messages_sha256": "66bc95a51a847d85df09b1d0294a07097d97b8dea37ac779a3d23fd60ebd33a8",
+          "overrides": [
+            "borg_param_attack_on_sight=1"
+          ],
+          "case": "D-9e526055f043e11781d5ecb1d97e66385be2acd3a5590f775b6145d4fe0720e8",
+          "first_different_key": null
+        },
+        "winning": {
+          "arm": "winning",
+          "start": [
+            "2049259432",
+            "4",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 1,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "d4b1724cd9061ccd8dc0981d8d3d34aea693c5f83693ac01141dba0dafb39b41",
+          "state_sha256": "cbd0eeedd739cbbf5e4aacb0ee5d9ee2d56cbe056fca04855943d344447b99a0",
+          "messages_sha256": "a9cc2510c7c407e993c0b228d453f9abc3c97392697eca418f777dad68abd6df",
+          "overrides": [
+            "borg_param_caution_winning_fight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 202,
+            "control": "941 1 2a 0",
+            "after": "941 1 2b 0"
+          }
+        },
+        "recall": {
+          "arm": "recall",
+          "start": [
+            "2049259432",
+            "4",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 4454,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "Fang, Farmer Maggot's Dog",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "3b43d2b407d8fe13cd92df3567ad5d23999f626bf639e86be99a2710c3f09d8a",
+          "state_sha256": "047df5b34b415e70a316f239672921c541431f18b191fe6f734f529f7e96a411",
+          "messages_sha256": "672ff26ed770c9bfb7083cefa1dc9d9911868d77ebd01eb168b435bad4a20a8f",
+          "overrides": [
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": "D-46f93a32e763ad5518b1332fec81dfccbad3eec766a78fc8d4f98cf679add52e",
+          "first_different_key": {
+            "index": 858,
+            "control": "4396 1 e000 0",
+            "after": "4396 1 2a 0"
+          }
+        },
+        "all": {
+          "arm": "all",
+          "start": [
+            "2049259432",
+            "4",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 4,
+          "max_depth": 1,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "f5743bd3d15fa158b5d5a765938f7174004d4081f07438c5c4f3c68a3caad044",
+          "state_sha256": "b0598b4252e6a2ae33aad119b950c9c63f1cbb9914c96dc360e0225b64b1d430",
+          "messages_sha256": "c5314706012dcc2eb23a5b5a5bd947f110e4ee8022d7d5715df93573614621ea",
+          "overrides": [
+            "borg_param_attack_on_sight=1",
+            "borg_param_caution_winning_fight=1",
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 202,
+            "control": "941 1 2a 0",
+            "after": "941 1 2b 0"
+          }
+        }
+      }
+    },
+    {
+      "start": [
+        "807683971",
+        "0",
+        "7"
+      ],
+      "arms": {
+        "ctl": {
+          "arm": "ctl",
+          "start": [
+            "807683971",
+            "0",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 1534,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a black naga",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "4c201fcf55997b47d6c9b2a89a942c6d3717810f06f80307c9ca4f6aad2c3f69",
+          "state_sha256": "2fe95d2715a91ef03d60ed0a71955e1f8587d8919fb049a0fc53c40a4b7795b7",
+          "messages_sha256": "97997ec6648eaec2a173eb6f75a9a1b0904b7a15dd491f10b7282eee4aa116e2",
+          "overrides": [],
+          "case": "D-7e07cc9e67b6a60f60af54b0b2d449c322d05e6d5f58a855c8972afa8973d29f",
+          "first_different_key": null
+        },
+        "category": {
+          "arm": "category",
+          "start": [
+            "807683971",
+            "0",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 1534,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a black naga",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "4c201fcf55997b47d6c9b2a89a942c6d3717810f06f80307c9ca4f6aad2c3f69",
+          "state_sha256": "2fe95d2715a91ef03d60ed0a71955e1f8587d8919fb049a0fc53c40a4b7795b7",
+          "messages_sha256": "97997ec6648eaec2a173eb6f75a9a1b0904b7a15dd491f10b7282eee4aa116e2",
+          "overrides": [
+            "borg_param_attack_on_sight=1"
+          ],
+          "case": "D-7e07cc9e67b6a60f60af54b0b2d449c322d05e6d5f58a855c8972afa8973d29f",
+          "first_different_key": null
+        },
+        "winning": {
+          "arm": "winning",
+          "start": [
+            "807683971",
+            "0",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 1534,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a black naga",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "4c201fcf55997b47d6c9b2a89a942c6d3717810f06f80307c9ca4f6aad2c3f69",
+          "state_sha256": "2fe95d2715a91ef03d60ed0a71955e1f8587d8919fb049a0fc53c40a4b7795b7",
+          "messages_sha256": "50cbf9a8391a64b6546ec638c1dfae3fb670e8aa1b0ddd2f9c72245541db1555",
+          "overrides": [
+            "borg_param_caution_winning_fight=1"
+          ],
+          "case": "D-7e07cc9e67b6a60f60af54b0b2d449c322d05e6d5f58a855c8972afa8973d29f",
+          "first_different_key": null
+        },
+        "recall": {
+          "arm": "recall",
+          "start": [
+            "807683971",
+            "0",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "edcfd9c94edad151858f541a6451aa59da518bd7ae40d55563925e31a781d660",
+          "state_sha256": "bff6e1df2b9bad2dcb4b722cd14fa4186527ffa10cb0b031fedec4cdcda10b60",
+          "messages_sha256": "5301307059cebc724c4a89ff5af3937296a49b78a6bb9295ba34f5087d234144",
+          "overrides": [
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 196,
+            "control": "1390 1 e000 0",
+            "after": "1390 1 2a 0"
+          }
+        },
+        "all": {
+          "arm": "all",
+          "start": [
+            "807683971",
+            "0",
+            "7"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 7,
+          "max_depth": 4,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "f55235549c27f384010429bbff43731b4c5914f50ac24efe8aa3b5644f768350",
+          "state_sha256": "ad07590c2056fb1faba6def5d1745e4e483d2e3d8e1cdd236f3207deaf21786e",
+          "messages_sha256": "982cb1cb541b99e4a9d06a57f795567d2e3664d06c02ddae54d9de343148d1af",
+          "overrides": [
+            "borg_param_attack_on_sight=1",
+            "borg_param_caution_winning_fight=1",
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 196,
+            "control": "1390 1 e000 0",
+            "after": "1390 1 2a 0"
+          }
+        }
+      }
+    },
+    {
+      "start": [
+        "1517990203",
+        "4",
+        "7"
+      ],
+      "arms": {
+        "ctl": {
+          "arm": "ctl",
+          "start": [
+            "1517990203",
+            "4",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 6338,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a small kobold",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "e1a15b91ce59526ecd9faa87f5d5ac8a8c06234e359cfb81b41f0e4738a202ea",
+          "state_sha256": "d525f9b7c3848a33dbce0bf184532d0cd67f6870ddf2fcae07622fda5f253d3d",
+          "messages_sha256": "e8bf997430065d1370f0bf22bc89234c603300ac36c19bd6c22abf53b0b8f1e2",
+          "overrides": [],
+          "case": "D-e1ba89db1a1e0e03ce014e04f1d2e2ab2cc14228048ee34ff9a5aef98c648010",
+          "first_different_key": null
+        },
+        "category": {
+          "arm": "category",
+          "start": [
+            "1517990203",
+            "4",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 6338,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a small kobold",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "e1a15b91ce59526ecd9faa87f5d5ac8a8c06234e359cfb81b41f0e4738a202ea",
+          "state_sha256": "d525f9b7c3848a33dbce0bf184532d0cd67f6870ddf2fcae07622fda5f253d3d",
+          "messages_sha256": "e8bf997430065d1370f0bf22bc89234c603300ac36c19bd6c22abf53b0b8f1e2",
+          "overrides": [
+            "borg_param_attack_on_sight=1"
+          ],
+          "case": "D-e1ba89db1a1e0e03ce014e04f1d2e2ab2cc14228048ee34ff9a5aef98c648010",
+          "first_different_key": null
+        },
+        "winning": {
+          "arm": "winning",
+          "start": [
+            "1517990203",
+            "4",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 6299,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a rock lizard",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "d2f586e5cdfb7ab2edcd2074ec4edeb2af721e9526abb537698e2d39331b6ec0",
+          "state_sha256": "df522d20caa576a004bda14b6c11d9e68b95749b44c64821691692733037681c",
+          "messages_sha256": "44adabe75ab7f305aacaec3d16b3ab881065d2904f5221c0714f19112c30a2cc",
+          "overrides": [
+            "borg_param_caution_winning_fight=1"
+          ],
+          "case": "D-8f2f7ca73dfa442b64ae8c284dd501297ef0f4173b5abf1829e400e5858d2f74",
+          "first_different_key": {
+            "index": 867,
+            "control": "6122 1 2a 0",
+            "after": "6122 1 2b 0"
+          }
+        },
+        "recall": {
+          "arm": "recall",
+          "start": [
+            "1517990203",
+            "4",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 6338,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a small kobold",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "e1a15b91ce59526ecd9faa87f5d5ac8a8c06234e359cfb81b41f0e4738a202ea",
+          "state_sha256": "d525f9b7c3848a33dbce0bf184532d0cd67f6870ddf2fcae07622fda5f253d3d",
+          "messages_sha256": "e8bf997430065d1370f0bf22bc89234c603300ac36c19bd6c22abf53b0b8f1e2",
+          "overrides": [
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": "D-e1ba89db1a1e0e03ce014e04f1d2e2ab2cc14228048ee34ff9a5aef98c648010",
+          "first_different_key": null
+        },
+        "all": {
+          "arm": "all",
+          "start": [
+            "1517990203",
+            "4",
+            "7"
+          ],
+          "outcome": "death",
+          "game_turns": 6299,
+          "max_clevel": 1,
+          "max_depth": 1,
+          "cause": "a rock lizard",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "d2f586e5cdfb7ab2edcd2074ec4edeb2af721e9526abb537698e2d39331b6ec0",
+          "state_sha256": "df522d20caa576a004bda14b6c11d9e68b95749b44c64821691692733037681c",
+          "messages_sha256": "44adabe75ab7f305aacaec3d16b3ab881065d2904f5221c0714f19112c30a2cc",
+          "overrides": [
+            "borg_param_attack_on_sight=1",
+            "borg_param_caution_winning_fight=1",
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": "D-8f2f7ca73dfa442b64ae8c284dd501297ef0f4173b5abf1829e400e5858d2f74",
+          "first_different_key": {
+            "index": 867,
+            "control": "6122 1 2a 0",
+            "after": "6122 1 2b 0"
+          }
+        }
+      }
+    },
+    {
+      "start": [
+        "390305857",
+        "4",
+        "6"
+      ],
+      "arms": {
+        "ctl": {
+          "arm": "ctl",
+          "start": [
+            "390305857",
+            "4",
+            "6"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "69c20d9ecc561cba08666aca0bdd118877d8818e2410263e8e7601c59e773930",
+          "state_sha256": "32c201ce6a5051dc7b140a4c1b7dfc525b4a2d8bf5ce4925ca94861aba75671a",
+          "messages_sha256": "397cd907edd773393d7b47a63c1789345d107ff057cbacee3460728c0960a8ec",
+          "overrides": [],
+          "case": null,
+          "first_different_key": null
+        },
+        "category": {
+          "arm": "category",
+          "start": [
+            "390305857",
+            "4",
+            "6"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "3075daabd9624ee7ed78c91e7cc8527943c815ed214652e55443753077b13dd4",
+          "state_sha256": "4ed1cd4ed3fe5b84601de90c8d046bf9efc9f4544517b1e7cf6f784e1c23d366",
+          "messages_sha256": "64dcda1dac8d633349005aa842e7b751f13016b3d11d4b6051ebe23f8a4a497e",
+          "overrides": [
+            "borg_param_attack_on_sight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 2180,
+            "control": "15659 1 36 0",
+            "after": "15659 1 33 0"
+          }
+        },
+        "winning": {
+          "arm": "winning",
+          "start": [
+            "390305857",
+            "4",
+            "6"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "4592aa2590f147f773d25d88cfee91529d7db702a0d239c776d5748bcbd7ab3e",
+          "state_sha256": "b346343f890654b4bf478075a091a6f5c26c0e437a86ae196b809313509c1295",
+          "messages_sha256": "45623aeb59fbff1c5efdfbcaa6da6ee6caff7f1a244793f3f5cb7a7a92d1c495",
+          "overrides": [
+            "borg_param_caution_winning_fight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 235,
+            "control": "1671 1 e000 0",
+            "after": "1671 1 2a 0"
+          }
+        },
+        "recall": {
+          "arm": "recall",
+          "start": [
+            "390305857",
+            "4",
+            "6"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 3,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "f18eae29a4a05e8c1e387e50a171fd4982d27c2b3c74f57ed15802015c98d30b",
+          "state_sha256": "6223fdd2878a32c618e46f0e3883a02b0a53a472331e1a8c2747485ca09e068d",
+          "messages_sha256": "db85498f2a07970a74354abf9d06691764a3085d29b55718c56f7c31c4404176",
+          "overrides": [
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 11300,
+            "control": "84628 1 e000 0",
+            "after": "84628 1 36 0"
+          }
+        },
+        "all": {
+          "arm": "all",
+          "start": [
+            "390305857",
+            "4",
+            "6"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "06dba6fb10a767b7c31aee2020554e63608fe7161a1964a796e23cf5a00bb931",
+          "state_sha256": "0d4653245701ab715ad5e7d3deb40e54b2b477235341838ca64df69b573e3cc9",
+          "messages_sha256": "dfc83eb1cdb069d0a805dce3039e6abb102bdb8c241067c294d1584048ae3344",
+          "overrides": [
+            "borg_param_attack_on_sight=1",
+            "borg_param_caution_winning_fight=1",
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 235,
+            "control": "1671 1 e000 0",
+            "after": "1671 1 2a 0"
+          }
+        }
+      }
+    },
+    {
+      "start": [
+        "1548306106",
+        "0",
+        "1"
+      ],
+      "arms": {
+        "ctl": {
+          "arm": "ctl",
+          "start": [
+            "1548306106",
+            "0",
+            "1"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 8,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "03b1ee2ad97bb8baeb7448a800532bb1c1b5616696ecf573a11af908c9602078",
+          "state_sha256": "c6875973692d30e0c917ae6cccf50d5d551db671ce23b65c0faaf75e804ae2f0",
+          "messages_sha256": "43ea098a6b5b92564a6531d66d18fe80a6f0bb9d304a2e547e6ccaa24c612deb",
+          "overrides": [],
+          "case": null,
+          "first_different_key": null
+        },
+        "category": {
+          "arm": "category",
+          "start": [
+            "1548306106",
+            "0",
+            "1"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 7,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "35885b39b3d8aed3c9d958a6ad3bc5de1787a448efaddf32dcc8f09b79258283",
+          "state_sha256": "bdd6c81185e2636cfec68ddade51751a25eb7e8fd695ada0b2b336b05aace2a5",
+          "messages_sha256": "8323c997a2f5cd21e2f734462257997966b5eedcd6cb7e433b4ff068d05854a8",
+          "overrides": [
+            "borg_param_attack_on_sight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 2828,
+            "control": "26830 1 32 0",
+            "after": "26830 1 31 0"
+          }
+        },
+        "winning": null,
+        "recall": null,
+        "all": {
+          "arm": "all",
+          "start": [
+            "1548306106",
+            "0",
+            "1"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 1,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "27fc406a2ac72b3eeed9adf22c5000cee1f2fd5350f4480f9b3222b07bd32da5",
+          "state_sha256": "0a0df18576dfe46347f6986fdce60aaf2bc2fab189ff75618fd47f856f27c3d3",
+          "messages_sha256": "aa311427a59d516f35fb1a37422cb966629fd0a729fed73f36c783a802893043",
+          "overrides": [
+            "borg_param_attack_on_sight=1",
+            "borg_param_caution_winning_fight=1",
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 18,
+            "control": "71 1 2a 0",
+            "after": "71 1 2b 0"
+          }
+        }
+      }
+    },
+    {
+      "start": [
+        "1381972077",
+        "1",
+        "6"
+      ],
+      "arms": {
+        "ctl": {
+          "arm": "ctl",
+          "start": [
+            "1381972077",
+            "1",
+            "6"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "1220c3c19ac2fa722567a1fbbf8269f1f7b0fee9f3efb11499722279058f522d",
+          "state_sha256": "04a116a4a034d9f926bc9a0c43b0f2131e39da79aa8a844c5d9e6495a2f43d88",
+          "messages_sha256": "c7483b7338f394722aa36dd04cbbeff301fc8868254fb14dbbcca3440a5a431c",
+          "overrides": [],
+          "case": null,
+          "first_different_key": null
+        },
+        "category": {
+          "arm": "category",
+          "start": [
+            "1381972077",
+            "1",
+            "6"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "cdf9b97359a67d25137e23259773b3bd61861ace59604e55202faaaefa157d1d",
+          "state_sha256": "f5d18fa5778ae3c942be2aa0a15e0b120afda15f4490f603c5912cfccd28dfac",
+          "messages_sha256": "b7ee051f5d8c28ae0b53ebf5b6e1f6ecd9c6cd4ac8208ef586649ea9d041c4e7",
+          "overrides": [
+            "borg_param_attack_on_sight=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 1434,
+            "control": "10235 1 3c 0",
+            "after": "10235 1 2b 0"
+          }
+        },
+        "winning": null,
+        "recall": null,
+        "all": {
+          "arm": "all",
+          "start": [
+            "1381972077",
+            "1",
+            "6"
+          ],
+          "outcome": "turns",
+          "game_turns": 100000,
+          "max_clevel": 6,
+          "max_depth": 2,
+          "cause": "",
+          "failure": null,
+          "build": {
+            "impl": "rust",
+            "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+            "git_dirty": "no",
+            "inputs_dirty": "no",
+            "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+            "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+            "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+            "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+            "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+            "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "built_utc": "2026-11-20T20:09:45Z"
+          },
+          "keys_sha256": "998dcce47bf19d916b578a1a89f0c774d72ecf9b735eae1f697e2d4a61ace995",
+          "state_sha256": "e30cfe0f746acc3be72e4b431cc0f496c67b8980f9667cdbf380168403498bce",
+          "messages_sha256": "8063a732fa58356adf8011b4e3bc312de360d964702f544f95e88ce7fc6b4884",
+          "overrides": [
+            "borg_param_attack_on_sight=1",
+            "borg_param_caution_winning_fight=1",
+            "borg_param_caution_recall_survival=1"
+          ],
+          "case": null,
+          "first_different_key": {
+            "index": 117,
+            "control": "681 1 2a 0",
+            "after": "681 1 2b 0"
+          }
+        }
+      }
+    }
+  ],
+  "diagnostic": {
+    "arm": "shadow",
+    "start": [
+      "425904011",
+      "2",
+      "7"
+    ],
+    "outcome": "death",
+    "game_turns": 3660,
+    "max_clevel": 1,
+    "max_depth": 1,
+    "cause": "a wild cat",
+    "failure": null,
+    "build": {
+      "impl": "rust",
+      "git_rev": "a4e4d91546cd9a2e1b43a03c0321feaa14b9893f",
+      "git_dirty": "no",
+      "inputs_dirty": "no",
+      "source_sha256": "2ccaf24ca9779316b8232ee9287fc4165a985f3fcf9bdf23c326b853444eec3b",
+      "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+      "binary": "/home/diego/projects/borg-reborn-rs/.worktrees/T758-recall/build/rust/game/angband",
+      "binary_sha256": "9ed936302196610c90a8ce84faaa53f082e6f0f1bc215d308f30ec9b0ff44f35",
+      "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+      "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+      "built_utc": "2026-11-20T20:09:45Z"
+    },
+    "keys_sha256": "fec8e34184d8f3b7467710630d4ee0ec1e1e79c0388a63473fc3457442842ac4",
+    "state_sha256": "1dc10523dd21bf15e4f91197fc487d14a3c5efffddf53728dc8f1d3f0a1703f2",
+    "messages_sha256": "90cfabe228897c5dffaa1c40e7738e5e781775a0dd29bfd8a94977de37a6ec20",
+    "overrides": [
+      "borg_param_caution_winning_fight=2"
+    ],
+    "case": "D-3299fd20a324cddeb556d39707e3b22e0735fa9666224a1a22fe26b587060911",
+    "first_different_key": null
+  },
+  "original_cat_diagnostic": [
+    "548 3633 0 # Fight race: 1 attackers, 3.000 turns to kill, 6.579 damage/turn, HP 14: not winning (#759)",
+    "548 3633 0 # Fight race targets: wild cat:needs 12 HP, attack 3 4.372 HP/turn",
+    "551 3641 0 # Fight race: 1 attackers, 2.000 turns to kill, 6.579 damage/turn, HP 14: winning (#759)",
+    "551 3641 0 # Fight race targets: wild cat:needs 8 HP, attack 3 4.372 HP/turn",
+    "555 3650 0 # Fight race: 1 attackers, 2.000 turns to kill, 6.579 damage/turn, HP 7: not winning (#759)",
+    "555 3650 0 # Fight race targets: wild cat:needs 4 HP, attack 1 3.931 HP/turn"
+  ],
+  "oil_selection": [
+    {
+      "start": [
+        "1548306106",
+        "0",
+        "1"
+      ],
+      "arm": "category",
+      "fast_fragile_encounters": 1,
+      "first_examples": [
+        {
+          "note": "8943 83143 0 # Attack on sight: crow (fast-fragile), 9 HP, attack 4 (#760)",
+          "execution": [
+            "8943 83143 0 # Casting Magic Missile (0,0)."
+          ]
+        }
+      ]
+    },
+    {
+      "start": [
+        "1548306106",
+        "0",
+        "1"
+      ],
+      "arm": "all",
+      "fast_fragile_encounters": 4,
+      "first_examples": [
+        {
+          "note": "335 1913 0 # Attack on sight: wild cat (fast-fragile), 9 HP, attack 4 (#760)",
+          "execution": [
+            "335 1913 0 # Casting Magic Missile (0,0)."
+          ]
+        },
+        {
+          "note": "6965 65456 0 # Attack on sight: wild cat (fast-fragile), 5 HP, attack 4 (#760)",
+          "execution": [
+            "6965 65456 0 # Casting Magic Missile (0,0).",
+            "7003 66096 0 # Casting Light Room (0,1).",
+            "7048 66516 0 # Casting Light Room (0,1)."
+          ]
+        },
+        {
+          "note": "8301 77121 0 # Attack on sight: crow (fast-fragile), 8 HP, attack 28 (#760)",
+          "execution": [
+            "8301 77121 0 # Casting Electric Arc (0,4).",
+            "8315 77371 0 # Casting Magic Missile (0,0)."
+          ]
+        },
+        {
+          "note": "8315 77371 0 # Attack on sight: crow (fast-fragile), 2 HP, attack 4 (#760)",
+          "execution": [
+            "8315 77371 0 # Casting Magic Missile (0,0)."
+          ]
+        }
+      ]
+    },
+    {
+      "start": [
+        "1381972077",
+        "1",
+        "6"
+      ],
+      "arm": "category",
+      "fast_fragile_encounters": 2,
+      "first_examples": [
+        {
+          "note": "1664 12334 0 # Attack on sight: wild cat (fast-fragile), 8 HP, attack 1 (#760)",
+          "execution": [
+            "1664 12334 0 # Attacking with weapon 'Dagger (1d4) (+0,+0)'"
+          ]
+        },
+        {
+          "note": "9859 79325 0 # Attack on sight: wild cat (fast-fragile), 9 HP, attack 2 (#760)",
+          "execution": [
+            "9859 79325 0 # Throwing painful object 'Flasks of oil'",
+            "9874 79345 0 # Throwing painful object 'Flasks of oil'"
+          ]
+        }
+      ]
+    },
+    {
+      "start": [
+        "1381972077",
+        "1",
+        "6"
+      ],
+      "arm": "all",
+      "fast_fragile_encounters": 7,
+      "first_examples": [
+        {
+          "note": "762 5444 0 # Attack on sight: crow (fast-fragile), 11 HP, attack 2 (#760)",
+          "execution": [
+            "762 5444 0 # Throwing painful object 'Flasks of oil'"
+          ]
+        },
+        {
+          "note": "1903 12391 0 # Attack on sight: wild cat (fast-fragile), 10 HP, attack 3 (#760)",
+          "execution": [
+            "1903 12391 0 # Firing missile 'Rounded Pebbles (1d2) (+0,+0)'",
+            "1916 12401 0 # Attacking with weapon 'Dagger (1d4) (+0,+0)'"
+          ]
+        },
+        {
+          "note": "1916 12401 0 # Attack on sight: wild cat (fast-fragile), 7 HP, attack 1 (#760)",
+          "execution": [
+            "1916 12401 0 # Attacking with weapon 'Dagger (1d4) (+0,+0)'",
+            "1920 12411 0 # Attacking with weapon 'Dagger (1d4) (+0,+0)'"
+          ]
+        },
+        {
+          "note": "1920 12411 0 # Attack on sight: wild cat (fast-fragile), 4 HP, attack 1 (#760)",
+          "execution": [
+            "1920 12411 0 # Attacking with weapon 'Dagger (1d4) (+0,+0)'",
+            "1927 12541 0 # Firing missile 'Rounded Pebbles (1d2) (+0,+0)'"
+          ]
+        }
+      ]
+    }
+  ]
+}

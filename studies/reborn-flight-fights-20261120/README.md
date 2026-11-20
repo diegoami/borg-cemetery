@@ -1,3 +1,11 @@
+Latest unit-separation verification: [units-cases.md](units-cases.md),
+[units-comparisons.json](units-comparisons.json), specimen `a4e4d915`.
+The prior review report below is retained history.42 additional named
+attempts have no harness failures; all-switch reaches100k for five of the
+original seven, and both added review starts. Literal contact HP and
+qualitative unmodelled risks are now separate refusal reasons. No new
+natural stream required a duplicate dossier; all outcomes remain retained.
+
 Latest review correction: [review-cases.md](review-cases.md) and
 [review-comparisons.json](review-comparisons.json), specimen `394f2aea`.
 The earlier matrix below is retained history. New all-switch outcomes are
