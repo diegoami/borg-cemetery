@@ -1,0 +1,28 @@
+.............................check-perception: no runs (directories with summary.json)
+..........export-death: natural death recorded as /tmp/tmp8bybacy3/deaths/D-e4223d59c64aa5703a8d5f6495685de8facf0852a4d96ddc0276aff446db7209
+export-death: repeat of D-e4223d59c64aa5703a8d5f6495685de8facf0852a4d96ddc0276aff446db7209; not a new case
+.........export-death: natural death recorded as /tmp/tmph_ex_thh/deaths/D-e4223d59c64aa5703a8d5f6495685de8facf0852a4d96ddc0276aff446db7209
+................................................
+----------------------------------------------------------------------
+Ran 96 tests in 1.123s
+
+OK
+a: 1 thinks, 0 differences; panel_grids 9, map_compared 5, map_stale_off_panel 0, map_unknown_to_world 1, monsters_compared 2, monsters_off_panel 0, gear_compared 3
+b: 0 thinks, 1 differences; panel_grids 0, map_compared 0, map_stale_off_panel 0, map_unknown_to_world 0, monsters_compared 0, monsters_off_panel 0, gear_compared 0
+  DIFFERENCE no truth.jsonl (not a test-perception build, or the log was lost)
+2 runs, 1 thinks, 1 differences; panel_grids 9, map_compared 5, map_stale_off_panel 0, map_unknown_to_world 1, monsters_compared 2, monsters_off_panel 0, gear_compared 3
+run: 2 thinks, 0 differences; panel_grids 18, map_compared 10, map_stale_off_panel 0, map_unknown_to_world 2, monsters_compared 4, monsters_off_panel 0, gear_compared 6
+1 runs, 2 thinks, 0 differences; panel_grids 18, map_compared 10, map_stale_off_panel 0, map_unknown_to_world 2, monsters_compared 4, monsters_off_panel 0, gear_compared 6
+run: 0 thinks, 1 differences; panel_grids 0, map_compared 0, map_stale_off_panel 0, map_unknown_to_world 0, monsters_compared 0, monsters_off_panel 0, gear_compared 0
+  DIFFERENCE truth.jsonl has no think
+1 runs, 0 thinks, 1 differences; panel_grids 0, map_compared 0, map_stale_off_panel 0, map_unknown_to_world 0, monsters_compared 0, monsters_off_panel 0, gear_compared 0
+run: 1 thinks, 1 differences; panel_grids 9, map_compared 5, map_stale_off_panel 0, map_unknown_to_world 1, monsters_compared 2, monsters_off_panel 0, gear_compared 3
+  DIFFERENCE turn 11: monsters: visible but not seen: index 3
+1 runs, 1 thinks, 1 differences; panel_grids 9, map_compared 5, map_stale_off_panel 0, map_unknown_to_world 1, monsters_compared 2, monsters_off_panel 0, gear_compared 3
+1 natural deaths in the runs; 0 without a dossier in /tmp/tmp7wfzgn83/temp
+1 deaths in /tmp/tmp7wfzgn83/temp; 0 not in /tmp/tmp7wfzgn83/temp
+SKIPPED: /tmp/tmpx7naxgk7/runs/alive: not dead
+SKIPPED: /tmp/tmpx7naxgk7/runs/alive: not dead
+UNEXPORTED: /tmp/tmpx7naxgk7/runs/a: a cave spider at turn 9
+1 natural deaths in the runs; 1 without a dossier in /tmp/tmpx7naxgk7/temp
+0 deaths in /tmp/tmpx7naxgk7/temp; 0 not in /tmp/tmpx7naxgk7/temp

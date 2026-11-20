@@ -1,0 +1,13 @@
+.....................E...........................s.....s..........ss............
+======================================================================
+ERROR: setUpClass (test_core_profile_contract.CoreProfileContractTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/borg-reborn-rs/.worktrees/T774/engine/tests/test_core_profile_contract.py", line 49, in setUpClass
+    raise AssertionError(error)
+AssertionError: vendor/borg-zoo has changes at its pin: D .claude/skills/pilot-deaths/SKILL.md ...
+
+----------------------------------------------------------------------
+Ran 79 tests in 35.909s
+
+FAILED (errors=1, skipped=4)
