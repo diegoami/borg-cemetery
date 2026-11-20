@@ -4,7 +4,8 @@
   - borg-reborn-rs main `fde8025a` with its shipped harness/borg.txt, engine 574b618c, classes-1800, 100,000 turns.
 - **Selection:** at the owner's request (2026-11-20), only the run's 12 Ranger deaths are imported here, not all 33. The run page lists just these.
   - Each dossier was replayed in the zoo with full logs, and its key stream matches the cell's.
-- **Why Rangers:** they're the only class that got worse between main 94032140 and fde8025a, on the same 200 starts: 5 deaths against 12. 11 of these 12 survive on 94032140 (borg-zoo#488).
+- **Why Rangers:** between main 94032140 and fde8025a, on the same 200 starts, Ranger deaths rose from 5 to 12, the largest change of any class (Priests 3 to 5, Warriors 0 to 1; the others fell). 11 of these 12 survive on 94032140 (borg-zoo#488).
+- **Report with the last recorded screens of each death:** https://claude.ai/artifact/9mNNHzbGBFsjUyqaULpzHt
   - Merged in between: borg-reborn-rs #725 (#716, the Ranger arrow cap), #739 (#736, `caution_stairs_clean_path`, `caution_immobile_step_to_exit`) and #738.
 
 | dossier | seed | character | killed by | CL | DL | game turn | arrows at death | last attack |
