@@ -21,3 +21,6 @@ The policy uses existing compiled0/shipped1 `caution_winning_fight`; list member
 Reproduction: build either exact source commit with its default borg-rs harness under the validation lock, then invoke retained `zrun.py GAME HARNESS FRESH_OUT SEED RACE CLASS 100000 borg_param_caution_winning_fight=MODE`. Use a **fresh output directory**: this low-level adapter replaces its output directory; the retained named runner rejects existing trial roots. The shipped profiles/scary lists are those of each exact source commit. Both main changes were integrated before freezing, so comparisons do not substitute the earlier f827 specimen.
 
 The source PR supplies its own handover and reviewer checklist. Existing Zoo#511/#528 remain pinned to their older specimen; this evidence must not be silently folded into those requests. No workflow dispatch or population claim.
+
+
+First visible enabled key differences are retained with state/message context: Warrior101 at54856 onDL2 (cure timing after a pit), Mage102 at76792 in town. The earlier Town refusal notes need not immediately change a key; subsequent internal goals/random flow choices may diverge later. These are full birth trajectories, not saved-state counterfactuals or proven direct effects on the terminal encounter. Ranger807683971 has no key/state/message difference.
