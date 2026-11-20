@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `7364a0774fccc28841e2b45205600de2efca79a0c8360c29bd0550771d626382`.
+Input inventory SHA-256: `215c63a20416141b00f60aede67aa19524442b22bc4f96cc09d3eb9e86b32b43`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
@@ -28,6 +28,7 @@ The companion snapshot for an external source retains normalized statistical fie
 | Grip, Farmer Maggot's Dog | 3 |
 | Sméagol | 2 |
 | a rock lizard | 2 |
+| a clear icky thing | 2 |
 | starvation | 2 |
 | a snaga | 2 |
 | a blue yeek | 2 |
@@ -46,7 +47,6 @@ The companion snapshot for an external source retains normalized statistical fie
 | a blood falcon | 1 |
 | a giant white ant | 1 |
 | an ironfist priest | 1 |
-| a clear icky thing | 1 |
 | a brown mold | 1 |
 | a baby black dragon | 1 |
 | a radiation eye | 1 |
@@ -58,18 +58,18 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 147 | 1528 | 15810 | 54697.56 | 1094860 |
-| depth | 122 | 0 | 1 | 1.50 | 18 |
-| level | 122 | 1 | 2 | 2.78 | 9 |
+| turn | 148 | 1528 | 16298 | 54583.11 | 1094860 |
+| depth | 123 | 0 | 1 | 1.50 | 18 |
+| level | 123 | 1 | 2 | 2.79 | 9 |
 
 ## Characters
 
 | Character | Dossiers |
 | --- | --- |
 | Human Ranger | 8 |
+| Human Druid | 7 |
 | Gnome Ranger | 7 |
 | Half-Orc Ranger | 7 |
-| Human Druid | 6 |
 | Elf Ranger | 6 |
 | Human Necromancer | 5 |
 | Human Paladin | 4 |
