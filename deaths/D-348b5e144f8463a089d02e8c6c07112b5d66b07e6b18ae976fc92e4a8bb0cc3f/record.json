@@ -1,0 +1,63 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-348b5e144f8463a089d02e8c6c07112b5d66b07e6b18ae976fc92e4a8bb0cc3f",
+  "run_kind": "harness",
+  "character": "Human Priest",
+  "raw_cause": "an acolyte",
+  "terminal": {
+    "cause": "an acolyte",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 7,
+    "turn": 58147,
+    "race_idx": 0,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 4,
+    "flags": "menu",
+    "git_rev": "103b50a4b7f6f8623b9c525478770e1cbb7d9193",
+    "git_dirty": "no",
+    "source_sha256": "dc46fc298fe25f8721a254c6f271a0d493beddf839e7d67c2ed6196f29eb0d70",
+    "binary_sha256": "b2a469fbcd1700259a9305748362b3098b40a93aeaf0308eb6f77ec2f2651e2a",
+    "borg_txt_sha256": "ba4b0e35b6cdf0effeeddfc7d48004f47f7a34409bf3975430584d6072f4cfcd",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "e4a42ab4d9f942131add44cc4f6a6f3a7659e73942af4fe92dbc6b25af3fc20d"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 4278
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/768-runs/change/cap100000-seed04",
+      "result_sha256": "06f4dde0db18ba766d00b5939fdcc703bf80b6ee1c5b23b26f16f000e9fd3efe",
+      "raw_sha256": {
+        "keys.log": "06f4dde0db18ba766d00b5939fdcc703bf80b6ee1c5b23b26f16f000e9fd3efe",
+        "messages.log": "ef275091418037078beb20f46a294ef5571423020f19eb98934b4eda1e4d800d",
+        "state.log": "69bbb32bec8d2cc9b2830dd9b6d3cc3b60965ab9c01161a8978a7117a9b458a4"
+      },
+      "source_commit": "103b50a4b7f6f8623b9c525478770e1cbb7d9193",
+      "binary_sha256": "b2a469fbcd1700259a9305748362b3098b40a93aeaf0308eb6f77ec2f2651e2a"
+    }
+  ],
+  "encounter_family": "start-40d92d4e57f67ebb9d3b58fc382a4cc39e320ffcbe2dad5afe822acf4a6b80dd",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "76eb68f89eb406328a8fcdcdaa3f8ad1d7108b210f7ebc860db5635b0385a880",
+    "config.txt": "55180314949e7e4081125e5a1759e8ada0743efbaad04689a01bf2010d253366",
+    "depths.json": "f7c084f4fe1a575eb9e589ae5a697474b9a7cf3c2de025f97028cb380f10b4e8",
+    "params-core.json": "e4a42ab4d9f942131add44cc4f6a6f3a7659e73942af4fe92dbc6b25af3fc20d",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "9ccebe95039d96e64cc224543bde84afb4328645170034eb75c32b9328addea7",
+    "trace-core-tail.jsonl": "dfb59792e83214db1b21c23fc50c3122bf6406aecdc95a73c5d5ef6efb2302cb"
+  },
+  "investigation": null,
+  "issue": null
+}

@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `215c63a20416141b00f60aede67aa19524442b22bc4f96cc09d3eb9e86b32b43`.
+Input inventory SHA-256: `af66fd3042f0d0a32a37d958f7a89be0a91426fff800092a66c4f439d759418e`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
@@ -36,10 +36,12 @@ The companion snapshot for an external source retains normalized statistical fie
 | burning to a cinder in lava | 2 |
 | a blue worm mass | 2 |
 | a fruit bat | 2 |
+| an acolyte | 1 |
 | a white worm mass | 1 |
 | an apprentice | 1 |
 | a large kobold | 1 |
 | a yellow jelly | 1 |
+| a giant green frog | 1 |
 | a pseudo-dragon | 1 |
 | a killer brown beetle | 1 |
 | a kobold | 1 |
@@ -58,9 +60,9 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 148 | 1528 | 16298 | 54583.11 | 1094860 |
-| depth | 123 | 0 | 1 | 1.50 | 18 |
-| level | 123 | 1 | 2 | 2.79 | 9 |
+| turn | 150 | 1528 | 16298 | 54308.96 | 1094860 |
+| depth | 125 | 0 | 1 | 1.50 | 18 |
+| level | 125 | 1 | 2 | 2.83 | 9 |
 
 ## Characters
 
@@ -79,12 +81,13 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Half-Elf Mage | 4 |
 | Half-Elf Druid | 4 |
 | Half-Elf Ranger | 3 |
+| Human Priest | 3 |
 | Elf Mage | 3 |
 | Dwarf Necromancer | 3 |
 | Elf Rogue | 3 |
 | Half-Troll Priest | 3 |
 | Human Mage | 3 |
-| Human Priest | 2 |
+| Human Blackguard | 2 |
 | CollectedBorg | 2 |
 | Measure Human Priest | 2 |
 | Measure Half-Troll Necromancer | 2 |
@@ -133,7 +136,6 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Dwarf Ranger | 1 |
 | Hobbit Ranger | 1 |
 | Elf Priest | 1 |
-| Human Blackguard | 1 |
 | Gnome Priest | 1 |
 | Half-Orc Druid | 1 |
 | Elf Warrior | 1 |
