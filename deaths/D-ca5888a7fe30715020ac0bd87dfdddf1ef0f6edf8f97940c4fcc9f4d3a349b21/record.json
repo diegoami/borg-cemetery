@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-ca5888a7fe30715020ac0bd87dfdddf1ef0f6edf8f97940c4fcc9f4d3a349b21",
+  "run_kind": "harness",
+  "character": "Hobbit Ranger",
+  "raw_cause": "a giant white mouse",
+  "terminal": {
+    "cause": "a giant white mouse",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 6776,
+    "race_idx": 3,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 347186112,
+    "flags": "exact,menu",
+    "git_rev": "d8edf54655d80d29cc645d5a7a1616fab6d0ccac",
+    "git_dirty": "no",
+    "source_sha256": "3f44486a5823e2f97d2039afcfa650c454290bf7c42c43ea494a275ed700f135",
+    "binary_sha256": "11832d55cfd42fe2d5714e802b54537a2ea255d517f15a6caeae5162ff84223c",
+    "borg_txt_sha256": "fe35f53e9fa31f300a1abfd122dc1e96469bd19508c087f388d57c9e0b98b4dc",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 651
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "runs/2026-11-20-reborn-765-weighted-flight/evidence/r200-347186112-3-7",
+      "result_sha256": "33040b2b9a22decbbeca3506c8c121cf046e7b213a22b3d2eb431c48557f295e",
+      "raw_sha256": {
+        "keys.log": "33040b2b9a22decbbeca3506c8c121cf046e7b213a22b3d2eb431c48557f295e",
+        "messages.log": "8a93d57bc5e429b48a7e494ecb0cbee8836fdb9edd054a66a4d354750c15c518",
+        "state.log": "ce3d3536abc19512403adbf23d4d488a695e4ddf036ffe8ac4617e8e6d46fb93"
+      },
+      "source_commit": "d8edf54655d80d29cc645d5a7a1616fab6d0ccac",
+      "binary_sha256": "11832d55cfd42fe2d5714e802b54537a2ea255d517f15a6caeae5162ff84223c"
+    }
+  ],
+  "encounter_family": "start-378c5d012d3687b0e27c529f705ef8d1aed0a05b72a2d631b46cab57bf3acb05",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "dbdea2687b6353848348a6ea2bfdf38c38507a4401a24d09fe04bfd4c4a7ea25",
+    "config.txt": "19b9b5a732d66c7dcbe0ca4ad6ff316cef9d65fde23823b9f76a40e7047a8c22",
+    "params-core.json": "52836c21480c9906a353f2d563afc1bb6efa810bd73282b913dc4ac523f98f38",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "218069889bee2cf93bae287aff02b5bd3a2c97edcf5c76969f5a3ff242040660",
+    "trace-core-tail.jsonl": "614fe320a5324562239db0e566fae17ac1cf31a74474677948faed9818292b58"
+  },
+  "investigation": null,
+  "issue": null
+}
