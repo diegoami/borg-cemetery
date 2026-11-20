@@ -1,0 +1,435 @@
+{
+  "source_head": "5d53f8b571f1b9c96cc73bf3185af5b8d6642b69",
+  "workflow_url": "https://github.com/diegoami/borg-reborn-rs/actions/runs/44826688747",
+  "scope": "Final engine and recorder jobs; Rust job was still running when captured.",
+  "jobs": [
+    {
+      "id": 136600967687,
+      "name": "engine",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 44826688747,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run echo \"BORG_DEATH_RECORDS_DIR=$RUNNER_TEMP/deaths\" >> \"$GITHUB_ENV\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run full=1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run ./.github/actions/cemetery-tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run python3 - <<'PYEVIDENCE'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Run python3 - <<'PYATTACK'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Run python3 - <<'PYREGISTRY'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Run ./.github/actions/apt-install",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Run BORG_IMPL=rust harness/build.sh",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Run harness/identity.sh binary-impl build/rust/game/angband | grep -qx rust",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Run BORG_CORE=borg-rs BORG_CORE_OVERRIDES=off BORG_DEATH_RECORDS_DIR=$RUNNER_TEMP/core-deaths harness/run.sh harness/out/core-params 1010 0 0 3000 menu",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Run python3 - <<'PYCORE'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Run BORG_CORE=borg-rs BORG_CORE_OVERRIDES=off BORG_CORE_TRACE=off BORG_DEATH_RECORDS_DIR=$RUNNER_TEMP/core-deaths harness/run.sh harness/out/core-trace-off 1010 0 0 3000 menu",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Run zoo_pin=$(python3 -c \"import json; print(json.load(open('pins.json'))['pins']['borg-zoo']['commit'])\")",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Run echo \"BORG_ATTACK_PREFERENCE_DEATHS_DIR=$RUNNER_TEMP/attack-preference-deaths\" >> \"$GITHUB_ENV\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Run python3 - <<'PYFIXTURE'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        },
+        {
+          "name": "Run python3 - <<'PYPHASE'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22
+        },
+        {
+          "name": "Run python3 -m unittest discover -s engine/tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24
+        },
+        {
+          "name": "Run python3 tools/reconcile-deaths.py \"$RUNNER_TEMP/attack-preference-deaths\" --registry vendor/attack-preference-evidence/validation/borg-reborn-rs/class-attack-preferences/deaths",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25
+        },
+        {
+          "name": "Run BORG_CORE=reborn BORG_IMPL=rust harness/suite.sh smoke harness/out/smoke-rust-1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26
+        },
+        {
+          "name": "Run BORG_CORE=reborn BORG_IMPL=rust harness/suite.sh smoke harness/out/smoke-rust-2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27
+        },
+        {
+          "name": "Run harness/diff --suite smoke --expect-impl rust harness/out/smoke-rust-1 harness/out/smoke-rust-2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28
+        },
+        {
+          "name": "Run harness/diff --suite smoke --expect-impl rust harness/out/smoke-rust-1 harness/reference/smoke-rust",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29
+        },
+        {
+          "name": "Run BORG_IMPL=rust harness/suite.sh smoke harness/out/smoke-borg-rs-1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30
+        },
+        {
+          "name": "Run BORG_IMPL=rust harness/suite.sh smoke harness/out/smoke-borg-rs-2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31
+        },
+        {
+          "name": "Run harness/diff --suite smoke --expect-impl rust harness/out/smoke-borg-rs-1 harness/out/smoke-borg-rs-2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 32
+        },
+        {
+          "name": "Run harness/diff --suite smoke --expect-impl rust harness/out/smoke-borg-rs-1 harness/reference/smoke-borg-rs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33
+        },
+        {
+          "name": "Run for r in harness/out/smoke-rust-1/*/; do test -s \"$r/trace.jsonl\" && python3 -c \"import json,sys; json.load(open(sys.argv[1]))\" \"$r/params.json\" && grep -q '^profile_sha256=' \"$r/config.txt\" || { echo \"no trace or params in $r\"; exit 1; }; done",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34
+        },
+        {
+          "name": "Run BORG_CORE=reborn BORG_IMPL=rust harness/check-extra-load.sh",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        },
+        {
+          "name": "Run BORG_CORE=reborn BORG_OBSERVATION_LOG=$RUNNER_TEMP/observations.jsonl BORG_WORLD_LOG=$RUNNER_TEMP/worlds.txt BORG_KNOWLEDGE_LOG=$RUNNER_TEMP/knowledge.json BORG_IMPL=rust harness/run.sh harness/out/observations 101 0 0 3000",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36
+        },
+        {
+          "name": "Run BORG_OBSERVATION_LOG_CHECK=$RUNNER_TEMP/observations.jsonl BORG_WORLD_LOG_CHECK=$RUNNER_TEMP/worlds.txt BORG_KNOWLEDGE_LOG_CHECK=$RUNNER_TEMP/knowledge.json cargo test -q -p borg-reborn-rs recorded -- --nocapture",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        },
+        {
+          "name": "Run BORG_IMPL=rust BORG_TEST_FEATURES=test-hallucinate,test-perception harness/build.sh",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 38
+        },
+        {
+          "name": "Run BORG_CORE=reborn BORG_DEATH_RECORDS_DIR=$RUNNER_TEMP/test-deaths ANGBAND_BIN=$PWD/build/rust-test/game/angband BORG_IMPL=rust harness/suite.sh smoke harness/out/smoke-hallucinate",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 39
+        },
+        {
+          "name": "Run BORG_CORE=reborn BORG_DEATH_RECORDS_DIR=$RUNNER_TEMP/test-deaths ANGBAND_BIN=$PWD/build/rust-test/game/angband BORG_IMPL=rust harness/suite.sh full harness/out/full-test",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 40
+        },
+        {
+          "name": "Run harness/diff --suite smoke --expect-impl rust harness/out/smoke-hallucinate harness/reference/smoke-rust",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 41
+        },
+        {
+          "name": "Run harness/diff --suite full --expect-impl rust harness/out/full-test harness/reference/full-rust",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 42
+        },
+        {
+          "name": "Run python3 tools/check-perception.py harness/out/smoke-hallucinate ",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 43
+        },
+        {
+          "name": "Run python3 tools/check-no-time.py harness/out/smoke-rust-1 ",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44
+        },
+        {
+          "name": "Run BORG_CORE=reborn BORG_IMPL=rust harness/suite.sh smoke-exact harness/out/smoke-exact-rust",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45
+        },
+        {
+          "name": "Run harness/check-boundary.py harness/out/smoke-exact-rust harness/out/smoke-rust-1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46
+        },
+        {
+          "name": "Run harness/diff --suite smoke-exact --expect-impl rust harness/out/smoke-exact-rust harness/reference/smoke-exact-rust",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47
+        },
+        {
+          "name": "Run for c in \"1020 2 2\" \"1040 4 4\" \"1012 3 1\"; do",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 48
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49
+        },
+        {
+          "name": "Run python3 tools/reconcile-deaths.py \"$RUNNER_TEMP/deaths\" --registry \"$RUNNER_TEMP/known-deaths\" --runs harness/out/smoke-rust-1 harness/out/smoke-rust-2 harness/out/smoke-borg-rs-1 harness/out/smoke-borg-rs-2 harness/out/observations harness/out/check-extra-load harness/out/smoke-exact-rust harness/out/rerun-source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50
+        },
+        {
+          "name": "Run shopt -s nullglob; for d in \"$RUNNER_TEMP\"/deaths/D-*/; do { test -s \"$d/trace-tail.jsonl\" && test -s \"$d/params.json\"; } || { test -s \"$d/trace-core-tail.jsonl\" && test -s \"$d/params-core.json\"; } || { echo \"no trace or params in $d\"; exit 1; }; done",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51
+        },
+        {
+          "name": "Run python3 tools/rerun-death.py \"$(ls -d \"$RUNNER_TEMP\"/deaths/D-* | head -1)\" \"$RUNNER_TEMP/rerun\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 52
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 101
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 102
+        },
+        {
+          "name": "Post Run ./.github/actions/cemetery-tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 103
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 104
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 105
+        }
+      ]
+    },
+    {
+      "id": 136600967715,
+      "name": "recorder",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 44826688747,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run ./.github/actions/cemetery-tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run ./.github/actions/apt-install",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run cmake -S engine -B build/recorder -DSUPPORT_BORG_RECORDING=ON -DCMAKE_BUILD_TYPE=Release",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run cmake --build build/recorder -j4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run python3 harness/check-recorder.py --binary build/recorder/game/angband --output \"$RUNNER_TEMP/recorder-check\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Post Run ./.github/actions/cemetery-tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        }
+      ]
+    }
+  ]
+}

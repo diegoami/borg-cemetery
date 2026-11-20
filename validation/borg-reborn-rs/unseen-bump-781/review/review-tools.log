@@ -1,0 +1,230 @@
+.............................check-perception: no runs (directories with summary.json)
+.E.....EE.....EE........
+======================================================================
+ERROR: test_death_registry (unittest.loader._FailedTest.test_death_registry)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_death_registry
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 39, in verify_native_pin
+    raise ValueError(f'native file differs from pin: {relative}')
+ValueError: native file differs from pin: PROVENANCE.md
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 81, in forward
+    cemetery = locate(repo)
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 74, in locate
+    verify_native_pin(repo, cemetery)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 49, in verify_native_pin
+    raise RuntimeError(
+    ...<2 lines>...
+        f'({error})') from error
+RuntimeError: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/tests/test_death_registry.py", line 16, in <module>
+    spec.loader.exec_module(dr)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/death_registry.py", line 7, in <module>
+    forward('death_registry.py', globals())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 83, in forward
+    raise SystemExit(str(error))
+SystemExit: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+
+======================================================================
+ERROR: test_export_death (unittest.loader._FailedTest.test_export_death)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_export_death
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 39, in verify_native_pin
+    raise ValueError(f'native file differs from pin: {relative}')
+ValueError: native file differs from pin: PROVENANCE.md
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 81, in forward
+    cemetery = locate(repo)
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 74, in locate
+    verify_native_pin(repo, cemetery)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 49, in verify_native_pin
+    raise RuntimeError(
+    ...<2 lines>...
+        f'({error})') from error
+RuntimeError: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/tests/test_export_death.py", line 16, in <module>
+    spec.loader.exec_module(ed)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/export-death.py", line 7, in <module>
+    forward('export-death.py', globals())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 83, in forward
+    raise SystemExit(str(error))
+SystemExit: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+
+======================================================================
+ERROR: test_import_deaths (unittest.loader._FailedTest.test_import_deaths)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_import_deaths
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 39, in verify_native_pin
+    raise ValueError(f'native file differs from pin: {relative}')
+ValueError: native file differs from pin: PROVENANCE.md
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 81, in forward
+    cemetery = locate(repo)
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 74, in locate
+    verify_native_pin(repo, cemetery)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 49, in verify_native_pin
+    raise RuntimeError(
+    ...<2 lines>...
+        f'({error})') from error
+RuntimeError: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/tests/test_import_deaths.py", line 15, in <module>
+    from test_export_death import ed, make_run
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/tests/test_export_death.py", line 16, in <module>
+    spec.loader.exec_module(ed)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/export-death.py", line 7, in <module>
+    forward('export-death.py', globals())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 83, in forward
+    raise SystemExit(str(error))
+SystemExit: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+
+======================================================================
+ERROR: test_reconcile_deaths (unittest.loader._FailedTest.test_reconcile_deaths)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_reconcile_deaths
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 39, in verify_native_pin
+    raise ValueError(f'native file differs from pin: {relative}')
+ValueError: native file differs from pin: PROVENANCE.md
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 81, in forward
+    cemetery = locate(repo)
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 74, in locate
+    verify_native_pin(repo, cemetery)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 49, in verify_native_pin
+    raise RuntimeError(
+    ...<2 lines>...
+        f'({error})') from error
+RuntimeError: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/tests/test_reconcile_deaths.py", line 13, in <module>
+    spec.loader.exec_module(rc)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/reconcile-deaths.py", line 7, in <module>
+    forward('reconcile-deaths.py', globals())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 83, in forward
+    raise SystemExit(str(error))
+SystemExit: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+
+======================================================================
+ERROR: test_rerun_death (unittest.loader._FailedTest.test_rerun_death)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_rerun_death
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 39, in verify_native_pin
+    raise ValueError(f'native file differs from pin: {relative}')
+ValueError: native file differs from pin: PROVENANCE.md
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 81, in forward
+    cemetery = locate(repo)
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 74, in locate
+    verify_native_pin(repo, cemetery)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 49, in verify_native_pin
+    raise RuntimeError(
+    ...<2 lines>...
+        f'({error})') from error
+RuntimeError: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/tests/test_rerun_death.py", line 12, in <module>
+    spec.loader.exec_module(rd)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/rerun-death.py", line 7, in <module>
+    forward('rerun-death.py', globals())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/angband/borg-reborn-rs/.worktrees/781-unseen-blocker/tools/cemetery_tools.py", line 83, in forward
+    raise SystemExit(str(error))
+SystemExit: Cemetery native tools do not match death-tools-pin.txt; refusing to execute. Fetch/check out the pinned commit or use a checkout with identical native files. (native file differs from pin: PROVENANCE.md)
+
+
+----------------------------------------------------------------------
+Ran 53 tests in 0.339s
+
+FAILED (errors=5)
+a: 1 thinks, 0 differences; panel_grids 9, map_compared 5, map_stale_off_panel 0, map_unknown_to_world 1, monsters_compared 2, monsters_off_panel 0, gear_compared 3
+b: 0 thinks, 1 differences; panel_grids 0, map_compared 0, map_stale_off_panel 0, map_unknown_to_world 0, monsters_compared 0, monsters_off_panel 0, gear_compared 0
+  DIFFERENCE no truth.jsonl (not a test-perception build, or the log was lost)
+2 runs, 1 thinks, 1 differences; panel_grids 9, map_compared 5, map_stale_off_panel 0, map_unknown_to_world 1, monsters_compared 2, monsters_off_panel 0, gear_compared 3
+run: 2 thinks, 0 differences; panel_grids 18, map_compared 10, map_stale_off_panel 0, map_unknown_to_world 2, monsters_compared 4, monsters_off_panel 0, gear_compared 6
+1 runs, 2 thinks, 0 differences; panel_grids 18, map_compared 10, map_stale_off_panel 0, map_unknown_to_world 2, monsters_compared 4, monsters_off_panel 0, gear_compared 6
+run: 0 thinks, 1 differences; panel_grids 0, map_compared 0, map_stale_off_panel 0, map_unknown_to_world 0, monsters_compared 0, monsters_off_panel 0, gear_compared 0
+  DIFFERENCE truth.jsonl has no think
+1 runs, 0 thinks, 1 differences; panel_grids 0, map_compared 0, map_stale_off_panel 0, map_unknown_to_world 0, monsters_compared 0, monsters_off_panel 0, gear_compared 0
+run: 1 thinks, 1 differences; panel_grids 9, map_compared 5, map_stale_off_panel 0, map_unknown_to_world 1, monsters_compared 2, monsters_off_panel 0, gear_compared 3
+  DIFFERENCE turn 11: monsters: visible but not seen: index 3
+1 runs, 1 thinks, 1 differences; panel_grids 9, map_compared 5, map_stale_off_panel 0, map_unknown_to_world 1, monsters_compared 2, monsters_off_panel 0, gear_compared 3
