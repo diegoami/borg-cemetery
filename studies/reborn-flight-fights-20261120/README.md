@@ -1,3 +1,10 @@
+Latest review correction: [review-cases.md](review-cases.md) and
+[review-comparisons.json](review-comparisons.json), specimen `394f2aea`.
+The earlier matrix below is retained history. New all-switch outcomes are
+five of seven alive; Fang425 and rock-lizard151 remain deaths. Both
+reviewer-named oil/pebble starts reach100k, with actual spell/oil choices
+recorded. No population improvement is claimed.
+
 # Ranger flight fights and Recall: #760, #759, #758
 
 Owner-requested local development comparison. The 600 starts and 100,000
