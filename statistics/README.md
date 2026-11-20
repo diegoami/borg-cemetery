@@ -6,7 +6,7 @@ Death-archive statistics, separated by registry and exact retained build. These 
 
 | Registry | Dossiers | Known start families | Missing family | Retained attempts | Explicit repeats | Build groups |
 | --- | --- | --- | --- | --- | --- | --- |
-| [cemetery](sources/cemetery.md) | 148 | 148 | 0 | 156 | 8 | 19 |
+| [cemetery](sources/cemetery.md) | 150 | 150 | 0 | 158 | 8 | 20 |
 | [reborn-historical](sources/reborn-historical.md) | 2378 | 2375 | 0 | 2378 | 0 | 114 |
 
 Shared declared/qualified family keys across registry pairs: **1**. Registry totals are not pooled into an independent-birth count. Different family keys do not prove unrelated births.
@@ -29,9 +29,9 @@ A dossier is one retained case. Start families group declared/qualified starting
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 148 | 1528 | 16298 | 54583.11 | 1094860 |
-| depth | 123 | 0 | 1 | 1.50 | 18 |
-| level | 123 | 1 | 2 | 2.79 | 9 |
+| turn | 150 | 1528 | 16298 | 54308.96 | 1094860 |
+| depth | 125 | 0 | 1 | 1.50 | 18 |
+| level | 125 | 1 | 2 | 2.83 | 9 |
 
 ### reborn-historical
 
@@ -67,6 +67,7 @@ A build group uses project, commit, source-input hash, executable hash, implemen
 | [borg-reborn-rs · e5cc54697cf5 · 91efad63f300e348](builds/borg-reborn-rs-e5cc54697cf5-91efad63f300e348/README.md) | rust | no | 4 | 4 | 5100 | 0 |
 | [borg-rs · f772eb6dcb93 · 4190bcfe4490dd59](builds/borg-rs-f772eb6dcb93-4190bcfe4490dd59/README.md) | rust | yes | 4 | 4 | 5915.5 | 1 |
 | [better-borg-c · 1cd426af4848 · 140e093e023497bc](builds/better-borg-c-1cd426af4848-140e093e023497bc/README.md) | Unknown | Unknown | 2 | 2 | 112464 | Unknown |
+| [borg-reborn-rs · 103b50a4b7f6 · b293e1e65c7f1ae5](builds/borg-reborn-rs-103b50a4b7f6-b293e1e65c7f1ae5/README.md) | rust | no | 2 | 2 | 34021.5 | 1.5 |
 | [borg-reborn-rs · f02cd2940a74 · dd041c611ca31f4a](builds/borg-reborn-rs-f02cd2940a74-dd041c611ca31f4a/README.md) | rust | no | 2 | 2 | 42460.5 | 1 |
 | [better-borg-c · 22f817c96843 · 56d66261cfdedc8a](builds/better-borg-c-22f817c96843-56d66261cfdedc8a/README.md) | Unknown | Unknown | 1 | 1 | 179053 | Unknown |
 | [better-borg-c · 2cebef1b0f39 · ac0538b9d41fc2dd](builds/better-borg-c-2cebef1b0f39-ac0538b9d41fc2dd/README.md) | Unknown | Unknown | 1 | 1 | 73100 | Unknown |
