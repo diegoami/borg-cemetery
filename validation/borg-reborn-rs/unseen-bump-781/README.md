@@ -121,11 +121,14 @@ BORG_DEATH_RECORDS_DIR="$PWD/validation-deaths" \
 The normal exporter needs the Cemetery checkout at `death-tools-pin.txt`
 (or a checkout whose native-tool bytes match). The three historical patch
 files are audit inputs, not an adopted fork or a source pin update.
-To check the shipped identity, build clean delivery commit155943c0 and run
+To check shipped identity for the initial delivery, build clean commit
+`155943c0`. For the melee vocabulary refinement below, build `f1d3c576`.
+With either build, run
 `harness/suite.sh smoke`, then `harness/diff --suite smoke --expect-impl rust
 OUT harness/reference/smoke-borg-rs`: retained clean-build result is3/3 exact
-keys/messages/states. Workspace fmt/clippy/tests,510 release borg-core tests,
-39 script tests,96 tool tests, vendor/citation checks pass. Reborn-core full
+keys/messages/states for both commits. The initial delivery passed workspace
+fmt/clippy/tests, 510 release borg-core tests,
+39 script tests, 96 tool tests, and vendor and citation checks. Reborn-core full
 suites and population comparisons were not run.
 
 
