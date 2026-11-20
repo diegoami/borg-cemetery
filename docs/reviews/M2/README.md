@@ -3,6 +3,12 @@
 Status: prepared for owner-run review, not accepted. M1's review and implementation
 pin remain separate and unchanged. The paired PR bodies pin the exact review heads.
 
+The independent review of this scope is
+[INDEPENDENT-REVIEW.md](INDEPENDENT-REVIEW.md) (reviewer MiniMax-M3, 2026-11-20,
+Cemetery `ec332c62`, paired reborn `2faaadb1`, runtime `99473510`). It
+recommends conditional accept, with one Low-severity wording finding in this
+packet's charged-device statement. It is not owner acceptance.
+
 ## Runtime and bank
 
 - Exact reborn runtime: `99473510940b8a7bd6e77ad61e3a2b00c72a6e6d`.
