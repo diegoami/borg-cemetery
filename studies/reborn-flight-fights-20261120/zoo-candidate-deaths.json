@@ -1,0 +1,125 @@
+{
+  "source": "diegoami/borg-zoo",
+  "commit": "a31a57e985517b6b46e1aeea9e8a29c7b5fb6119",
+  "filter": "specimen starts 4.2.6-reborn OR harness_kind borg-reborn-rs; outcome death; exclude top-level synthetic/start_depth",
+  "recorded_death_rows": 19793,
+  "distinct_recorded_deaths": 8953,
+  "deduplication": "(impl, seed, played_race or race, played_class or class, play_sha256 or trace_sha256); direct causes only; not mortality rates",
+  "candidates": {
+    "wild cat": {
+      "total": 521,
+      "by_class": {
+        "Blackguard": 28,
+        "Druid": 112,
+        "Mage": 73,
+        "Necromancer": 79,
+        "Paladin": 26,
+        "Priest": 56,
+        "Ranger": 94,
+        "Rogue": 44,
+        "Warrior": 9
+      }
+    },
+    "crow": {
+      "total": 427,
+      "by_class": {
+        "Blackguard": 36,
+        "Druid": 87,
+        "Mage": 63,
+        "Necromancer": 54,
+        "Paladin": 32,
+        "Priest": 41,
+        "Ranger": 67,
+        "Rogue": 36,
+        "Warrior": 11
+      }
+    },
+    "cave spider": {
+      "total": 261,
+      "by_class": {
+        "Blackguard": 35,
+        "Druid": 27,
+        "Mage": 28,
+        "Necromancer": 27,
+        "Paladin": 26,
+        "Priest": 46,
+        "Ranger": 42,
+        "Rogue": 19,
+        "Warrior": 11
+      }
+    },
+    "crow of Durthang": {
+      "total": 2,
+      "by_class": {
+        "Druid": 1,
+        "Rogue": 1
+      }
+    },
+    "wood spider": {
+      "total": 0,
+      "by_class": {}
+    },
+    "giant white mouse": {
+      "total": 379,
+      "by_class": {
+        "Blackguard": 37,
+        "Druid": 56,
+        "Mage": 42,
+        "Necromancer": 50,
+        "Paladin": 31,
+        "Priest": 71,
+        "Ranger": 25,
+        "Rogue": 38,
+        "Warrior": 29
+      }
+    },
+    "giant white louse": {
+      "total": 73,
+      "by_class": {
+        "Blackguard": 7,
+        "Druid": 4,
+        "Mage": 1,
+        "Necromancer": 5,
+        "Paladin": 8,
+        "Priest": 11,
+        "Ranger": 12,
+        "Rogue": 4,
+        "Warrior": 21
+      }
+    },
+    "giant fruit fly": {
+      "total": 1,
+      "by_class": {
+        "Blackguard": 1
+      }
+    },
+    "white worm mass": {
+      "total": 147,
+      "by_class": {
+        "Blackguard": 19,
+        "Druid": 32,
+        "Mage": 10,
+        "Necromancer": 23,
+        "Paladin": 13,
+        "Priest": 28,
+        "Ranger": 8,
+        "Rogue": 10,
+        "Warrior": 4
+      }
+    },
+    "green worm mass": {
+      "total": 39,
+      "by_class": {
+        "Blackguard": 8,
+        "Druid": 8,
+        "Mage": 2,
+        "Necromancer": 4,
+        "Paladin": 1,
+        "Priest": 4,
+        "Ranger": 7,
+        "Rogue": 2,
+        "Warrior": 3
+      }
+    }
+  }
+}

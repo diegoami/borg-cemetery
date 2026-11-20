@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-c473504bf7fe86712d22e8e66dc24b1e16ede1315b36afb453afd3879a1f4297",
+  "run_kind": "harness",
+  "character": "Elf Ranger",
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 3621,
+    "race_idx": 2,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 425904011,
+    "flags": "exact,menu",
+    "git_rev": "394f2aea1f7c218359f182b0e55a3f6ae56ddeca",
+    "git_dirty": "no",
+    "source_sha256": "f9e155075b892ccf079812dc8bbb22daeacfc435eb8063ad0749f05a6f3b79a9",
+    "binary_sha256": "64b3bb37ec54b0c2aec9e4514cb67aa5b1f4bcb540f8abd40b94a563deb6f0dd",
+    "borg_txt_sha256": "c2f09003f66ce32739321d1ffd5f2b2f6372d3bd49f2fe7da55cb8b7428c520f",
+    "profile_sha256": null,
+    "params_core_sha256": "cea719191194001963ea4a9df3ab3247c6859e20fda199289228903011742ed6"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 385
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/T760-fight/named-checks-394f2aea/all-425904011/425904011-2-7",
+      "result_sha256": "98af8e59eefea7eec5f1b444451f600ffc4f6b6a46558f574ecb708830906c15",
+      "raw_sha256": {
+        "keys.log": "98af8e59eefea7eec5f1b444451f600ffc4f6b6a46558f574ecb708830906c15",
+        "messages.log": "f0d9d33c0f9bcc2c149d3a04130b3c0b25848af418ed492c4f97b6279d2abe48",
+        "state.log": "f258a335d8dcc79bc968034fbf6954d211160d6fd96b511f98a2432354117573"
+      },
+      "source_commit": "394f2aea1f7c218359f182b0e55a3f6ae56ddeca",
+      "binary_sha256": "64b3bb37ec54b0c2aec9e4514cb67aa5b1f4bcb540f8abd40b94a563deb6f0dd"
+    }
+  ],
+  "encounter_family": "start-16b4b34b651eb48ce1e7e73732ddd5c44a74b3175a279a083fe28bc1154c1c8d",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "f3f631700764b6fcf2e3750a37eca910620eaf8ad116efa885a0ccda9f5c21ca",
+    "config.txt": "0cbd4ed9ba1a8c20c567f0433a3ecd3809d47e3766476e6eb9552a1afb3a8ee8",
+    "params-core.json": "cea719191194001963ea4a9df3ab3247c6859e20fda199289228903011742ed6",
+    "scary_list.txt": "94631decb1f1a5d030aff6cca293dbb2a8402518ab811772b8caa7d903f2f049",
+    "summary.json": "b1bb261ad5913d719a1d1f419e92ce6fb15157a23ed81b54cd067892374d68bc",
+    "trace-core-tail.jsonl": "5232adbbc610b8f0bf3017d320148a811cef9e97006834756c6e3eed9feb43f4"
+  },
+  "investigation": null,
+  "issue": null
+}

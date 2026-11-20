@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-4795fc2da53228487204a0c7fe2a1d0ee1024341be52b608b55928a5afc73c90",
+  "run_kind": "harness",
+  "character": "Dunadan Ranger",
+  "raw_cause": "Grip, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Grip, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 4284,
+    "race_idx": 8,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1976035382,
+    "flags": "exact,menu",
+    "git_rev": "5acb8104115dcd52fd9db8bfb72888cf5ca2fde4",
+    "git_dirty": "no",
+    "source_sha256": "bfad017d80a98d86bece8e26e5a8730081372db097730c61225781f2a4646065",
+    "binary_sha256": "49d517be1d11b86e721964bf0a9367a63945b1001d4abd26647765a16982a754",
+    "borg_txt_sha256": "fafee889ab07f94f6ce596dfb4faf266911698a1a75dbe7efa9765760f0907b1",
+    "profile_sha256": null,
+    "params_core_sha256": "10c6b23698df59bbd24019d7c6df44f98c2790c0a70911898bc456a9a707888f"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 426
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/T760-fight/named-checks-5acb8104/category-1976035382/1976035382-8-7",
+      "result_sha256": "44057adbc33185d7bff71ca649097e20631287793e7c97fd7e52e3af3ac580af",
+      "raw_sha256": {
+        "keys.log": "44057adbc33185d7bff71ca649097e20631287793e7c97fd7e52e3af3ac580af",
+        "messages.log": "23525c6174cb5e802a83dc70e40ba13fda10a5c61efd711268a0a74b729d9eb0",
+        "state.log": "8377a1f015e185e4449a503587a465346f472af3262655e8f4ce01327cc4995b"
+      },
+      "source_commit": "5acb8104115dcd52fd9db8bfb72888cf5ca2fde4",
+      "binary_sha256": "49d517be1d11b86e721964bf0a9367a63945b1001d4abd26647765a16982a754"
+    }
+  ],
+  "encounter_family": "start-7601eb6ef3597c490f07a22ef57e9e1a9baaafa644590acb06dd92d472780686",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "cc8dba298c26bf7ca1ceb9750c06f8e9e01826fc6e5b3964e04ccaf139be252a",
+    "config.txt": "88d8051e79198e1b5bb9ab7ae2bf8b972a6fef07b5ed50329d1d9e0222a5854e",
+    "params-core.json": "10c6b23698df59bbd24019d7c6df44f98c2790c0a70911898bc456a9a707888f",
+    "scary_list.txt": "94631decb1f1a5d030aff6cca293dbb2a8402518ab811772b8caa7d903f2f049",
+    "summary.json": "31fdce9f93b99b74c1ea90bb9c2a642c736e7bf34c15a7adfb83aa18531fb951",
+    "trace-core-tail.jsonl": "71be31dc5861669aa1d2e8781b50025c1d3e78400349830b641f66ae6f033cad"
+  },
+  "investigation": null,
+  "issue": null
+}

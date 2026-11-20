@@ -4,30 +4,30 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `215c63a20416141b00f60aede67aa19524442b22bc4f96cc09d3eb9e86b32b43`.
+Input inventory SHA-256: `d7ea2649636c9e1cd1399bf5a3132732512d20e883c669e135b2d8851001d416`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
 | Cause | Dossiers |
 | --- | --- |
 | a wild cat | 20 |
-| poison | 16 |
-| Fang, Farmer Maggot's Dog | 11 |
-| a soldier | 9 |
+| poison | 17 |
+| Fang, Farmer Maggot's Dog | 13 |
+| a soldier | 10 |
 | a crow | 8 |
 | a small kobold | 6 |
 | a cutpurse | 6 |
+| a giant white mouse | 6 |
 | a grey mold | 6 |
 | a grey mushroom patch | 6 |
-| a giant white mouse | 5 |
+| Grip, Farmer Maggot's Dog | 5 |
 | a kobold shaman | 4 |
 | a fatal wound | 4 |
 | a giant white louse | 3 |
+| a rock lizard | 3 |
 | a black naga | 3 |
 | a giant yellow centipede | 3 |
-| Grip, Farmer Maggot's Dog | 3 |
 | Sméagol | 2 |
-| a rock lizard | 2 |
 | a clear icky thing | 2 |
 | starvation | 2 |
 | a snaga | 2 |
@@ -36,6 +36,7 @@ The companion snapshot for an external source retains normalized statistical fie
 | burning to a cinder in lava | 2 |
 | a blue worm mass | 2 |
 | a fruit bat | 2 |
+| a large white snake | 1 |
 | a white worm mass | 1 |
 | an apprentice | 1 |
 | a large kobold | 1 |
@@ -58,23 +59,23 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 148 | 1528 | 16298 | 54583.11 | 1094860 |
-| depth | 123 | 0 | 1 | 1.50 | 18 |
-| level | 123 | 1 | 2 | 2.79 | 9 |
+| turn | 157 | 1528 | 15810 | 52609.05 | 1094860 |
+| depth | 132 | 0 | 1 | 1.46 | 18 |
+| level | 132 | 1 | 2 | 2.75 | 9 |
 
 ## Characters
 
 | Character | Dossiers |
 | --- | --- |
+| Gnome Ranger | 9 |
 | Human Ranger | 8 |
 | Human Druid | 7 |
-| Gnome Ranger | 7 |
+| Dunadan Ranger | 7 |
+| Elf Ranger | 7 |
 | Half-Orc Ranger | 7 |
-| Elf Ranger | 6 |
+| Human Paladin | 5 |
 | Human Necromancer | 5 |
-| Human Paladin | 4 |
 | Half-Elf Blackguard | 4 |
-| Dunadan Ranger | 4 |
 | Half-Troll Ranger | 4 |
 | Half-Elf Mage | 4 |
 | Half-Elf Druid | 4 |
@@ -85,6 +86,8 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Half-Troll Priest | 3 |
 | Human Mage | 3 |
 | Human Priest | 2 |
+| Elf Necromancer | 2 |
+| Gnome Priest | 2 |
 | CollectedBorg | 2 |
 | Measure Human Priest | 2 |
 | Measure Half-Troll Necromancer | 2 |
@@ -98,7 +101,6 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Hobbit Druid | 2 |
 | Human Rogue | 1 |
 | Half-Elf Priest | 1 |
-| Elf Necromancer | 1 |
 | Half-Orc Warrior | 1 |
 | Half-Elf Paladin | 1 |
 | Hobbit Paladin | 1 |
@@ -134,7 +136,6 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Hobbit Ranger | 1 |
 | Elf Priest | 1 |
 | Human Blackguard | 1 |
-| Gnome Priest | 1 |
 | Half-Orc Druid | 1 |
 | Elf Warrior | 1 |
 | Half-Troll Paladin | 1 |

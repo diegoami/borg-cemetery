@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-cd34285ae0096291db5d954cf7c015c50809cf96536e224be8c403a3203b3123",
+  "run_kind": "harness",
+  "character": "Gnome Priest",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 17229,
+    "race_idx": 4,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 199095980,
+    "flags": "exact,menu",
+    "git_rev": "08f94e1fed0b80fd854584d893209983079157ea",
+    "git_dirty": "no",
+    "source_sha256": "d8857460f7260405a21667bf7dc87250951a85f0c38109836bcfcca1f67d3529",
+    "binary_sha256": "f28558b05425092892e4c04e65317ed571a451e59bfc3b1a5ef17de4299e1a64",
+    "borg_txt_sha256": "6f1595626b0af4f856ec875a2e49447a07ac1b24626fcdd83e008a493f2c215d",
+    "profile_sha256": null,
+    "params_core_sha256": "55a7f7fd2386b2e6c044d56188921feb6aa4d537621f3d100a83bf745552cbda"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1631
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/T760-fight/retained-control-repros/199095980-4-3",
+      "result_sha256": "85f05a4e2b72575b67f36897878e1d95f6a1c32c3a039bad3ff80685e0202d9e",
+      "raw_sha256": {
+        "keys.log": "85f05a4e2b72575b67f36897878e1d95f6a1c32c3a039bad3ff80685e0202d9e",
+        "messages.log": "12aa2f463123c4f244c5a94447f754724d1e313e6b15680b9446ba1052e0bd82",
+        "state.log": "255db9faf6a66cd6ee69ef1f55338a0e6dbf9557680e499a572b2e82bf104162"
+      },
+      "source_commit": "08f94e1fed0b80fd854584d893209983079157ea",
+      "binary_sha256": "f28558b05425092892e4c04e65317ed571a451e59bfc3b1a5ef17de4299e1a64"
+    }
+  ],
+  "encounter_family": "start-335dd9ec8622fb4f0b2edff4a259fc482dc5d0c2f94fd7dc02d7f93e4195102e",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "21b357f25ea51297805db8274378269532ede44266ee42e1108f23786db685e5",
+    "config.txt": "2cff675be198ee029e182bb65aec6af7da771d33dc11499ededb5f8e5e93bc92",
+    "params-core.json": "55a7f7fd2386b2e6c044d56188921feb6aa4d537621f3d100a83bf745552cbda",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "2e30ba14abd41fc5276c97f1b370c1af7f4a23a9b8f0a90d09edcedac3b80455",
+    "trace-core-tail.jsonl": "1d08bf1a58e263c4b272f335c1cba7339c57652a2c318f4e3b34737232ef3e90"
+  },
+  "investigation": null,
+  "issue": null
+}

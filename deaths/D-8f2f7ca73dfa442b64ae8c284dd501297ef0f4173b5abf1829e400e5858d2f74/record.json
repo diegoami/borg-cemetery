@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-8f2f7ca73dfa442b64ae8c284dd501297ef0f4173b5abf1829e400e5858d2f74",
+  "run_kind": "harness",
+  "character": "Gnome Ranger",
+  "raw_cause": "a rock lizard",
+  "terminal": {
+    "cause": "a rock lizard",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 6299,
+    "race_idx": 4,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1517990203,
+    "flags": "exact,menu",
+    "git_rev": "734b7c1ad26f628e367fdc61b03d9e853c3b4fd4",
+    "git_dirty": "no",
+    "source_sha256": "2f43bb116d03d4a7c15cf24ac743af6852302f2296542720108709709b893fdd",
+    "binary_sha256": "3297f25cd3839afe0f65c5e2a4a82db0b79f8423b8b8c6a30e44ab64c2c9f507",
+    "borg_txt_sha256": "6004b4551f6d81f7f67a7603ef8f9e1a8fa751eea46a478f0810b7772b5fd39e",
+    "profile_sha256": null,
+    "params_core_sha256": "0c4ecd22c7d4a9a76c21d388f4210e13677cc36e3045eb55426f9c7ba446b4e3"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 661
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/T760-fight/winning-six/1517990203-4-7",
+      "result_sha256": "d2f586e5cdfb7ab2edcd2074ec4edeb2af721e9526abb537698e2d39331b6ec0",
+      "raw_sha256": {
+        "keys.log": "d2f586e5cdfb7ab2edcd2074ec4edeb2af721e9526abb537698e2d39331b6ec0",
+        "messages.log": "21f0263a41077185285b6df71798c1c3a406c85109a8b292c234dfaa52521bb2",
+        "state.log": "df522d20caa576a004bda14b6c11d9e68b95749b44c64821691692733037681c"
+      },
+      "source_commit": "734b7c1ad26f628e367fdc61b03d9e853c3b4fd4",
+      "binary_sha256": "3297f25cd3839afe0f65c5e2a4a82db0b79f8423b8b8c6a30e44ab64c2c9f507"
+    }
+  ],
+  "encounter_family": "start-2e3b9d5d89e75fe17fc139268ba80a34e4911b7063b9d6a637a06a9cbd3857df",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "59abfb2f88391620abad9a325cb0136d67bf7682583348136bcf47503e805a8b",
+    "config.txt": "279d270c80d57845f6edba35d2327315ee35a690ed2ca077a7d3c4bfebf6ee85",
+    "params-core.json": "0c4ecd22c7d4a9a76c21d388f4210e13677cc36e3045eb55426f9c7ba446b4e3",
+    "scary_list.txt": "94631decb1f1a5d030aff6cca293dbb2a8402518ab811772b8caa7d903f2f049",
+    "summary.json": "7a15fc3c47406415690aafd1e54f074ca0c82e630ea67e10648ba54ec63171b3",
+    "trace-core-tail.jsonl": "44e30e6ca53aa7b276ef6690fcf06a5e3ddb68b4d6c59c1a88cc7a1b26852456"
+  },
+  "investigation": null,
+  "issue": null
+}
