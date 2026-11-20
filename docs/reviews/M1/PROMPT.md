@@ -1,5 +1,10 @@
 # Independent M1 reviewer prompt
 
+For the 2026-11-20 completed review and its finding dispositions, read
+[REVIEW-RESPONSE-20261120.md](REVIEW-RESPONSE-20261120.md). The live `main` PR
+contains later implementation outside the frozen M1 scope. Instructions below
+refer to the historical implementation/publication pins, not all later main work.
+
 Review diegoami/borg-cemetery M1: recorded runs, replay and alternative human play.
 This is a milestone-wide independent review, not a request to implement the next
 stage or to rubber-stamp passing tests. The owner chooses the reviewer and will

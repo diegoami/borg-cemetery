@@ -1,10 +1,12 @@
 # M1 review packet — recorded runs, replay and human alternatives
 
-**Status: awaiting owner-selected independent review. Not an approval.**
+**Status: independently reviewed; conditional acceptance recommendation.
+Owner acceptance remains pending.**
 
-Implementer: Codex, OpenAI GPT family. The owner will choose or run the reviewer;
-a model reviewer should be from a different family. No reviewer has been launched
-by this session. The owner merges the milestone review PR and decides acceptance.
+Implementer: Codex, OpenAI GPT family. The owner-selected MiniMax-M3 review
+found no M1 implementation defect and raised review-boundary/receipt findings.
+See [the response and remaining acceptance boundary](REVIEW-RESPONSE-20261120.md).
+The owner decides acceptance; no review merge or acceptance tag is implied.
 
 ## Exact boundary
 
@@ -13,9 +15,14 @@ Baseline: `44d97669ebdf7390b384656c61365b0ca30f3266`.
 Implementation: `cd562eabc40267a15be3eb7d2036d65e6f0c4a5a`.
 
 Review the complete baseline-to-implementation diff, not only the latest commit.
-The review PR also includes subsequent documentation-only review preparation;
-its body records the exact publication head. `reviewed` starts at the baseline
-only to expose this first review's diff; it does not imply earlier acceptance.
+Historical publication: `7d5d1422d4429db932c5f3d3b6279a837ec9123b`.
+Only the implementation-to-historical-publication interval was documentation-only
+preparation. PR #1 follows moving `main`; its current diff also includes later
+code, data, M2 and identity work. Those additions are outside this M1 review.
+The PR body records a dated integration snapshot and its checks separately.
+`reviewed` remains at the baseline; merging current main would advance it across
+later work as well, so a scoped M1 recommendation alone is insufficient to merge
+PR #1. See the response before making an acceptance decision.
 
 ## Delivered work and entry points
 

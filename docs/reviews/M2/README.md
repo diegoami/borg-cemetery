@@ -1,7 +1,10 @@
 # M2 / synthetic P1 milestone packet
 
-Status: prepared for owner-run review, not accepted. M1's review and implementation
-pin remain separate and unchanged. The paired PR bodies pin the exact review heads.
+Status: independently re-reviewed; owner acceptance pending. M1's review and
+implementation pin remain separate and unchanged. The paired PR bodies pin the
+exact review heads. The [2026-11-20 review response](REVIEW-RESPONSE-20261120.md)
+records the reproduced suite and the pinned-engine item-type evidence for
+disposition of the new wording finding.
 
 ## Runtime and bank
 

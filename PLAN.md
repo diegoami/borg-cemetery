@@ -12,8 +12,8 @@ explicitly untested. No P2/P3 population experiment or acceptance tag is implied
 
 | Milestone | Scope | State |
 | --- | --- | --- |
-| M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | Prepared for owner-run review; **not accepted** |
-| M2 / synthetic P1. Small generated-depth suite | One class, depths 5/10/15, one seed, birth kit plus one observed level tier; deterministic manifests, bounded execution, independent outcome/failure fields, candidate danger screens and reports; pinned cemetery CI | Prepared for owner-run milestone review; not accepted |
+| M1. Recorded runs, replay and human alternatives | Pinned seeded CI; human-readable death and scenario reports; recordings and saved-position trials; case-local launchers; alternative human-play attachment; shared version caches; statistics by build | Independent conditional recommendation; review-boundary decision pending; **not accepted** |
+| M2 / synthetic P1. Small generated-depth suite | One class, depths 5/10/15, one seed, birth kit plus one observed level tier; deterministic manifests, bounded execution, independent outcome/failure fields, candidate danger screens and reports; pinned cemetery CI | Independently re-reviewed; finding disposition recorded; not accepted |
 
 The owner instructed continued implementation with review at the milestone.
 This selects the bounded synthetic P1 work under #5 and reborn #371. It does
@@ -57,9 +57,14 @@ recorder-version qualification remain future work, not M1 completion claims.
 
 `reviewed` is bootstrapped at the pre-M1 baseline so `main` → `reviewed` shows
 the milestone's diff. That bootstrap is **not** a claim that the imported
-historical data or baseline passed a review. The review PR's body pins the
-publication head, which also contains the review/process documents added after
-the implementation head. Those documentation-only additions belong to the PR.
+historical data or baseline passed a review. The historical publication head is
+`7d5d1422d4429db932c5f3d3b6279a837ec9123b`; its additions after the implementation
+head were documentation-only. PR #1 now follows later `main`, including code and
+data outside M1. Its current diff must not be described as documentation-only
+preparation or accepted in full on the strength of the frozen M1 review.
+The [2026-11-20 response](docs/reviews/M1/REVIEW-RESPONSE-20261120.md) records the
+review findings, dated integration checks and remaining owner decision. M2 has
+a [separate review response](docs/reviews/M2/REVIEW-RESPONSE-20261120.md).
 
 The owner decides acceptance and merges the review PR. Only then should the
 reviewed boundary advance and an acceptance tag such as `m1` be recorded.

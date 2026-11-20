@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-4225067b3ed3d3ec77c901b629f3064c94c0ac7c62b534fd206ab176f5d0722f",
+  "run_kind": "harness",
+  "character": "Gnome Ranger",
+  "raw_cause": "Fang, Farmer Maggot's Dog",
+  "terminal": {
+    "cause": "Fang, Farmer Maggot's Dog",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 4429,
+    "race_idx": 4,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 2049259432,
+    "flags": "-",
+    "git_rev": "e8b3acfdcfa5059f0e88b47e5c9a8c9fd1e229fa",
+    "git_dirty": "no",
+    "source_sha256": "00cb51bbf8edc4548295c16ec0d6ca8bf0160c8eaaa8fd6d88cae88e342909a4",
+    "binary_sha256": "5b46e90988a4463d947f3923450141440b0ff59f0a9df28c59a65fa78d0b801c",
+    "borg_txt_sha256": "4babfcbcd1ff8ced3165484ad9b42fec1967ba242b71aacd3d99c4170304507a",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 465
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 44738419997, artifact deaths-4.2.6-reborn-rust-flight-e8b3acfd-4, classes-1800-full-rangers/4.2.6-reborn-rust-flight-e8b3acfd/reborn-flight-flight/2049259432 (https://github.com/diegoami/borg-zoo/actions/runs/44738419997, 90-day retention)",
+      "result_sha256": "5f117c1c5d8163816643b60cdc3f451e9e13f2764dbad09e53954d965f6c8f1a",
+      "raw_sha256": {
+        "keys.log": "5f117c1c5d8163816643b60cdc3f451e9e13f2764dbad09e53954d965f6c8f1a",
+        "messages.log": "97b40f3878f73c8540a6ac3f8d814ddc69798918cf3c03fc5700f550776c5a26",
+        "state.log": "abfda53c72b0e1cc4bcb5b622aed4651b4c9072e26fb85881775dc205a75cac5"
+      },
+      "source_commit": "e8b3acfdcfa5059f0e88b47e5c9a8c9fd1e229fa",
+      "binary_sha256": "5b46e90988a4463d947f3923450141440b0ff59f0a9df28c59a65fa78d0b801c"
+    }
+  ],
+  "encounter_family": "start-62943c3722a7501c2b6e3c53d71e910cdf4b5a85c88a433b6538ffebffd7b38e",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "6027eb792ea6977b1fad8d7ce53c574b384c52be0b3b062fc944eea0be3fb6e3",
+    "config.txt": "703e24afdccd0f4701b1ecb456e5350e9fe70240cff4206959d416aaa235fc30",
+    "params-core.json": "ba6a6692c00bf9f33e7a83e8826d0783560bc6e3cbd4dec9b4ca199cd73b1e96",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "4c4817aad9eb92bae7b902c41bec7079a97b964b630a7ecc604c6aaa951b9c74",
+    "trace-core-tail.jsonl": "2dcb4fee4a6b141a26833cb2b9402a38a007f1c9d13beb17609e0decf44caabe"
+  },
+  "investigation": null,
+  "issue": null
+}
