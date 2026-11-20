@@ -1,0 +1,1503 @@
+{
+  "schema": "borg-reborn-rs/unseen-bump-validation@1",
+  "source_pr": "https://github.com/diegoami/borg-reborn-rs/pull/782",
+  "source_commit": "155943c0c7a2fbfc7e31662a4fb3f0960c653f71",
+  "independent_druid_seeds": 1,
+  "warning": "Replays and alternative plays of one seeded life, not independent samples. Three smoke seeds repeated twice are identity checks.",
+  "attempts": [
+    {
+      "attempt": "base",
+      "build": "current-control-pin-only",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 100000,
+        "clevel": 8,
+        "max_depth": 2
+      },
+      "process_status": "success",
+      "binary_sha256": "0f5b5e79d7f5adde5fbac68c5983b287d6855f14109e99ee981b3015852c75e7",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "eeffda92317cd54e0d1b4f6fac8d2f3260c7970dd696a6710b6ba0d335fc62e7",
+          "bytes": 1984,
+          "stored": "runs/base/summary.json"
+        },
+        "config.txt": {
+          "sha256": "0c051c4a65320afda2e8ffb685a824442371c4cc81e666ceaaa00744424f8fb9",
+          "bytes": 447,
+          "stored": "runs/base/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "28e1ea7733f81e3948c30e910d9b99ab9f21b224fb31ca31cfef90130293fe1e",
+          "bytes": 695161,
+          "stored": "runs/base/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "e2550e965a0b3eed9f22479401f81fb0c57daf288313429e7ff5966afa8d8430",
+          "bytes": 1443,
+          "stored": "runs/base/process.json"
+        },
+        "depths.json": {
+          "sha256": "3e6ebffa2c703a149750fac7e0c6a034386eee1dd9dcb2e191cb808353b37745",
+          "bytes": 350,
+          "stored": "runs/base/depths.json"
+        },
+        "keys.log": {
+          "sha256": "4cb7bb4376932733cbf11100e7a3c60f8694392e43c88c30fb93f1781699cc74",
+          "bytes": 140841,
+          "stored": "runs/base/keys.log.gz"
+        },
+        "messages.log": {
+          "sha256": "e63f29faa6f3ffd5a64a290f04884e9ddaeab1ec860d61ce01eebc1c2bc37689",
+          "bytes": 568262,
+          "stored": "runs/base/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "5c6d8b2b38bd6b6180cc6ae6b321022887e383f6007e76de8e9eed512e9ef778",
+          "bytes": 1387614,
+          "stored": "runs/base/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/base/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "3262c5ddcacab0b5b86f1fb9695fcdacabf50cda4ac94c2f346a4a72c8235d3f",
+          "bytes": 41671497,
+          "stored": "runs/base/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "02cd447553ca8248c6932ac4a61b957d2c9baa3cb0c67a06331b1b94c54fdee7",
+          "bytes": 72461,
+          "stored": "runs/base/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/base/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "historical-off",
+      "build": "historical-control",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": true,
+        "death_cause": "a clear icky thing",
+        "game_turns": 37759,
+        "clevel": 4,
+        "max_depth": 1
+      },
+      "process_status": "success",
+      "binary_sha256": "cfc67e7f0d111abcf00d2aa785916edc63f21c70e9eeb338c0df0abef9844f36",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "8feddcac0986a5ce1bbbd19b083e072fa17d6a3d78f89568f2950a85c05d3740",
+          "bytes": 1998,
+          "stored": "runs/historical-off/summary.json"
+        },
+        "config.txt": {
+          "sha256": "a5f27bb425498c0b8e262c8724ba36aefb3ac2ed3ef8b1c75d48ef8d8c79e232",
+          "bytes": 447,
+          "stored": "runs/historical-off/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "119fa0da19b63c2766cca81b055a8165f5cf827b43fe70467fa2bdc939e91261",
+          "bytes": 687731,
+          "stored": "runs/historical-off/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "bfe3f280f9d100b2a6b80575ad193bad7b31674fec33db920215e3313d639bb5",
+          "bytes": 3484,
+          "stored": "runs/historical-off/process.json"
+        },
+        "depths.json": {
+          "sha256": "0ff41cbfc76c6b37988e952b1d3d231031afe922b75622ce04eb4ee292cfd362",
+          "bytes": 334,
+          "stored": "runs/historical-off/depths.json"
+        },
+        "keys.log": {
+          "sha256": "8b21c6b94e80e9692c45c4dcf88352d351c3f88db19bc11c189a2330cf613124",
+          "bytes": 55243,
+          "stored": "runs/historical-off/keys.log"
+        },
+        "messages.log": {
+          "sha256": "5b32f0ebcfd49c8f548a86f203f838fd7914446bcd36085b8a069f976c52b859",
+          "bytes": 314484,
+          "stored": "runs/historical-off/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "986fc900f7693e908dafaa56f137db25a68882bffdfa539ce59d6913475e8660",
+          "bytes": 545353,
+          "stored": "runs/historical-off/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "580da9f617b51dc8f40940fefde88dba659f38020a1a993051561c3392416d07",
+          "bytes": 1978,
+          "stored": "runs/historical-off/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "4aed4cf4517a87bf71d673c71d5211ca9db1bdb96b066ff4929329188dd5ae4d",
+          "bytes": 18420598,
+          "stored": "runs/historical-off/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "f26e1efdbee55879a363fc425d3ff475f466888b653a9891c0ab49ca5f503e69",
+          "bytes": 70765,
+          "stored": "runs/historical-off/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/historical-off/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "historical-patch-off",
+      "build": "historical-preliminary",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": true,
+        "death_cause": "a clear icky thing",
+        "game_turns": 37759,
+        "clevel": 4,
+        "max_depth": 1
+      },
+      "process_status": "success",
+      "binary_sha256": "6741f73b09fbbbc760166826bf2b3332b97512f714582f837657266ce025719e",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "79dd50e8816684daf3656aeae49d2f9dd0391f6ff1005768b9b761120953264e",
+          "bytes": 1998,
+          "stored": "runs/historical-patch-off/summary.json"
+        },
+        "config.txt": {
+          "sha256": "fdeabcc83229454b0247793805e4fac3560dc1f9f09f9a11f92c462bc3595c42",
+          "bytes": 447,
+          "stored": "runs/historical-patch-off/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "d86637cfb71e8a04dce58f58a111e9f3920b573d3884efc8f9dcdbaca8e9bef0",
+          "bytes": 689360,
+          "stored": "runs/historical-patch-off/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "ea5079a03c7b86f7e7df46e9d3202a3bcbdda422c9031a13e1c4cffbc5413cda",
+          "bytes": 3539,
+          "stored": "runs/historical-patch-off/process.json"
+        },
+        "depths.json": {
+          "sha256": "0ff41cbfc76c6b37988e952b1d3d231031afe922b75622ce04eb4ee292cfd362",
+          "bytes": 334,
+          "stored": "runs/historical-patch-off/depths.json"
+        },
+        "keys.log": {
+          "sha256": "8b21c6b94e80e9692c45c4dcf88352d351c3f88db19bc11c189a2330cf613124",
+          "bytes": 55243,
+          "stored": "runs/historical-patch-off/keys.log"
+        },
+        "messages.log": {
+          "sha256": "5b32f0ebcfd49c8f548a86f203f838fd7914446bcd36085b8a069f976c52b859",
+          "bytes": 314484,
+          "stored": "runs/historical-patch-off/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "986fc900f7693e908dafaa56f137db25a68882bffdfa539ce59d6913475e8660",
+          "bytes": 545353,
+          "stored": "runs/historical-patch-off/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "580da9f617b51dc8f40940fefde88dba659f38020a1a993051561c3392416d07",
+          "bytes": 1978,
+          "stored": "runs/historical-patch-off/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "4aed4cf4517a87bf71d673c71d5211ca9db1bdb96b066ff4929329188dd5ae4d",
+          "bytes": 18420598,
+          "stored": "runs/historical-patch-off/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "674c277ea9a88238b6ec23943e8fbbc6bb13aab1f734691a16e0471d5cb6be29",
+          "bytes": 70949,
+          "stored": "runs/historical-patch-off/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/historical-patch-off/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "historical-on",
+      "build": "historical-preliminary",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 100000,
+        "clevel": 8,
+        "max_depth": 2
+      },
+      "process_status": "success",
+      "binary_sha256": "6741f73b09fbbbc760166826bf2b3332b97512f714582f837657266ce025719e",
+      "events": {
+        "# Unseen bump:": 2,
+        "# Throwing oil at unseen bump": 6,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 2,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "5b5ede7dcfea2539bd26bd211d55c34d6d81ab53dfe882877f7221b992574bd2",
+          "bytes": 1985,
+          "stored": "runs/historical-on/summary.json"
+        },
+        "config.txt": {
+          "sha256": "de9e7e3603817347cc45ebfa6cceb56491df87bd58ffb77344afc310f02c82a2",
+          "bytes": 447,
+          "stored": "runs/historical-on/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "660ea8adb73c64bb16a97b148170f1adc03879c1c0f7af130ff848b5eeea02c7",
+          "bytes": 689363,
+          "stored": "runs/historical-on/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "191eefb1f6005055a5cd02a959f3b54f49d39bfcd004abde1ca9c89075512f2f",
+          "bytes": 1471,
+          "stored": "runs/historical-on/process.json"
+        },
+        "depths.json": {
+          "sha256": "4ecaa14f01b5abdb3425b3c895b10da41d491156d2d58cf158edcb966d0248b2",
+          "bytes": 350,
+          "stored": "runs/historical-on/depths.json"
+        },
+        "keys.log": {
+          "sha256": "ce47149327cf03a9c734c1136c83027913f069ed32dd17a01f1344b12ecdd74b",
+          "bytes": 146523,
+          "stored": "runs/historical-on/keys.log.gz"
+        },
+        "messages.log": {
+          "sha256": "2c7e39db17d8370d0d1eb371e8dd9c4fbd4b902aa069c840f321aeb1803e298b",
+          "bytes": 642952,
+          "stored": "runs/historical-on/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "4bfbe0564d750439b8053bf7569a48d597ceecdf9452d4d44106a9aee4aecdc2",
+          "bytes": 1443084,
+          "stored": "runs/historical-on/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/historical-on/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "2da46b69bff60693174e1429d6d48a0297ecba414d71dd2ee48d9a5385035ad1",
+          "bytes": 38070890,
+          "stored": "runs/historical-on/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "129cc72aecfb7c07d49e1212db9701fc79f61d3551eeaf5beebffb3b2969ac07",
+          "bytes": 70952,
+          "stored": "runs/historical-on/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/historical-on/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "historical-final-on",
+      "build": "historical-final",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 100000,
+        "clevel": 7,
+        "max_depth": 2
+      },
+      "process_status": "success",
+      "binary_sha256": "ab0b1c468b92fea98efb27637e7913d898e5233dd33609ae2ebc1368c6f07a8c",
+      "events": {
+        "# Unseen bump:": 7,
+        "# Throwing oil at unseen bump": 13,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 1,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "2c75437770f3bf5bc1440a89651103acdbbc4c2590421a4c87c218147dcaa728",
+          "bytes": 1985,
+          "stored": "runs/historical-final-on/summary.json"
+        },
+        "config.txt": {
+          "sha256": "de9e7e3603817347cc45ebfa6cceb56491df87bd58ffb77344afc310f02c82a2",
+          "bytes": 447,
+          "stored": "runs/historical-final-on/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "660ea8adb73c64bb16a97b148170f1adc03879c1c0f7af130ff848b5eeea02c7",
+          "bytes": 689363,
+          "stored": "runs/historical-final-on/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "81f56ee28225f44c08426ed6e7c2e972b31594a58fc02851868a4b73c8667ade",
+          "bytes": 1524,
+          "stored": "runs/historical-final-on/process.json"
+        },
+        "depths.json": {
+          "sha256": "2f9d60483b62ed4e5e3b44ac5c25a5acc5a2949f9ed2a2c6462c19bc1ac7b690",
+          "bytes": 350,
+          "stored": "runs/historical-final-on/depths.json"
+        },
+        "keys.log": {
+          "sha256": "076770a7e722bf2629d3fa43556b906280b214c0abe104c046511cf380f8302a",
+          "bytes": 148517,
+          "stored": "runs/historical-final-on/keys.log.gz"
+        },
+        "messages.log": {
+          "sha256": "b075f75dd495576faa8a53dee0d9ac5249350a0762f745fd5ee99aa8ee85004d",
+          "bytes": 685096,
+          "stored": "runs/historical-final-on/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "660e888fefc86df0220b70202e37c50963a2442bc5c3de125f648464c90ab634",
+          "bytes": 1448570,
+          "stored": "runs/historical-final-on/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/historical-final-on/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "04b313b3bc395a9c1544c46eda8f145485edeedee082ad4fe620daaab089151a",
+          "bytes": 53460674,
+          "stored": "runs/historical-final-on/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "129cc72aecfb7c07d49e1212db9701fc79f61d3551eeaf5beebffb3b2969ac07",
+          "bytes": 70952,
+          "stored": "runs/historical-final-on/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/historical-final-on/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "historical-heal",
+      "build": "historical-final",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 100000,
+        "clevel": 7,
+        "max_depth": 2
+      },
+      "process_status": "success",
+      "binary_sha256": "ab0b1c468b92fea98efb27637e7913d898e5233dd33609ae2ebc1368c6f07a8c",
+      "events": {
+        "# Unseen bump:": 1,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "1d17467905f205c409babb1c38f940ca213186006960ce75f1e2e782745ee6dd",
+          "bytes": 1984,
+          "stored": "runs/historical-heal/summary.json"
+        },
+        "config.txt": {
+          "sha256": "02c1ef11a2df3dc9dae198db778cff6fd05383b752381188052108c95349269f",
+          "bytes": 447,
+          "stored": "runs/historical-heal/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "e4640274a6866e5b060ed4058b749f5bc89414bffc49083cc57da0e5a96a300b",
+          "bytes": 689363,
+          "stored": "runs/historical-heal/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "c0ab78f65f0cf43d4f1ecfaa3b10aa3b8cc2e396ee6723bcb3b773ad0b210c4e",
+          "bytes": 1489,
+          "stored": "runs/historical-heal/process.json"
+        },
+        "depths.json": {
+          "sha256": "3ffbb280ef3239e5404f68ea16eae17a8246c4670ba075cd567850d00274da38",
+          "bytes": 350,
+          "stored": "runs/historical-heal/depths.json"
+        },
+        "keys.log": {
+          "sha256": "38c08870b6b58fccb6c5bc04457319dfcb2d5e4705250a9732de351a93c52507",
+          "bytes": 149425,
+          "stored": "runs/historical-heal/keys.log.gz"
+        },
+        "messages.log": {
+          "sha256": "6ebe396826a02a7f957a2b6b11acb6c762c545bb0345813e56c0a444a7ebdf98",
+          "bytes": 607210,
+          "stored": "runs/historical-heal/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "fd2c4113bae49560c2e7714d94fbe1a74566b6d71ac49698022c74615a905f42",
+          "bytes": 1530898,
+          "stored": "runs/historical-heal/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/historical-heal/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "4aa17625213f4c376be7b728db119101f0fc2ae6c4de8b3316e445ae42235a16",
+          "bytes": 42887059,
+          "stored": "runs/historical-heal/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "6582a7a6330fb138dbe1836106d390bc7d5b367a25575b9672781dfa68e246d8",
+          "bytes": 70952,
+          "stored": "runs/historical-heal/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/historical-heal/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "historical-phase",
+      "build": "historical-final",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 100000,
+        "clevel": 6,
+        "max_depth": 1
+      },
+      "process_status": "success",
+      "binary_sha256": "ab0b1c468b92fea98efb27637e7913d898e5233dd33609ae2ebc1368c6f07a8c",
+      "events": {
+        "# Unseen bump:": 5,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 5,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "c84d75125e13cda089736f67b55882c16266c9981d395e53339c0f8589322960",
+          "bytes": 1986,
+          "stored": "runs/historical-phase/summary.json"
+        },
+        "config.txt": {
+          "sha256": "5b23bab045748ab271b86d5ae7a6bf4fd571cc004330c34c82ae3f9a5c52743e",
+          "bytes": 447,
+          "stored": "runs/historical-phase/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "b9813e3f6e4c65fe586d21387e2627690d4cd7964b87d953f407a9ba376b886b",
+          "bytes": 689363,
+          "stored": "runs/historical-phase/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "2210e845e5834884c6e0f36f2450beefe9588b6334a5ee4e5d04fd4b31525664",
+          "bytes": 1499,
+          "stored": "runs/historical-phase/process.json"
+        },
+        "depths.json": {
+          "sha256": "c650fc4d09ab13bf5d3744089a5f29b6d2230a4c8151ca6e7da25756cbc1663c",
+          "bytes": 334,
+          "stored": "runs/historical-phase/depths.json"
+        },
+        "keys.log": {
+          "sha256": "1b714d70785665cb5a08dce78f49417c5b326e9f44d08c9e5c34035a20a7ab0f",
+          "bytes": 143536,
+          "stored": "runs/historical-phase/keys.log.gz"
+        },
+        "messages.log": {
+          "sha256": "eea8c8ce80525275f766efa495988f6f3930d59e848a1a397aea15e824a5e1ea",
+          "bytes": 679361,
+          "stored": "runs/historical-phase/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "76aa4de108007760bd89f9fcfad33d54b4af380e81800b3cd62e1b0b59cb12e9",
+          "bytes": 1436776,
+          "stored": "runs/historical-phase/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/historical-phase/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "f6cf388d05ad3c128da9fcd7aa63634bcef4f8a4c10325625ad2d7c12a2285e3",
+          "bytes": 45344673,
+          "stored": "runs/historical-phase/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "0a3586b80905e1e73f49282b8b04235dad90bb4cb3ecae25dd40b1a6979cad3c",
+          "bytes": 70952,
+          "stored": "runs/historical-phase/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/historical-phase/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "historical-cure-probe",
+      "build": "historical-final",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 100000,
+        "clevel": 5,
+        "max_depth": 2
+      },
+      "process_status": "success",
+      "binary_sha256": "ab0b1c468b92fea98efb27637e7913d898e5233dd33609ae2ebc1368c6f07a8c",
+      "events": {
+        "# Unseen bump:": 8,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 16,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "8aec4fe55ae2898d912777c066bdf552b092b244bf2197c90934fbc4fd406cf5",
+          "bytes": 1985,
+          "stored": "runs/historical-cure-probe/summary.json"
+        },
+        "config.txt": {
+          "sha256": "b34a47518cc2f7bc6c0f19641a90c7ccbbc432c521119d51e6e344c5810f3aab",
+          "bytes": 447,
+          "stored": "runs/historical-cure-probe/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "8afe8914731747517662f6f0cf8ad4bffdc58d2aa09ba812668f7e85dc1963c2",
+          "bytes": 689364,
+          "stored": "runs/historical-cure-probe/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "9722fdfdf9228e8c6e12b27fd2671e59d478ae154c37a29b6ec76fd97600b5e6",
+          "bytes": 1543,
+          "stored": "runs/historical-cure-probe/process.json"
+        },
+        "depths.json": {
+          "sha256": "a27db8bc28c9f364aa9512039b7782143c03cd33758a300755d02ba29954313c",
+          "bytes": 350,
+          "stored": "runs/historical-cure-probe/depths.json"
+        },
+        "keys.log": {
+          "sha256": "c41286027e4243dce6b7e97f4d501355ada45520d8d809637bec25fbe825a43f",
+          "bytes": 136961,
+          "stored": "runs/historical-cure-probe/keys.log.gz"
+        },
+        "messages.log": {
+          "sha256": "784f23b384bde28de11967ffe1b3771f069f779d473a3f31b52f447e3d4cca39",
+          "bytes": 634055,
+          "stored": "runs/historical-cure-probe/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "7b2cf1450dc0b0e5c6c56de95155c6cab3ae3bf49670d4d0e543a56cb7b937a3",
+          "bytes": 1321353,
+          "stored": "runs/historical-cure-probe/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/historical-cure-probe/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "13012bf189c682bddf8ef571d59309d5093f8aa9c1226575a05c4665a1a3a6b8",
+          "bytes": 47853220,
+          "stored": "runs/historical-cure-probe/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "29c60e8e5aed9227ca6dd448d13c6489800cc88695e9e6358e470ea4bd1311be",
+          "bytes": 70953,
+          "stored": "runs/historical-cure-probe/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/historical-cure-probe/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "historical-final-off",
+      "build": "historical-final",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": true,
+        "death_cause": "a clear icky thing",
+        "game_turns": 37759,
+        "clevel": 4,
+        "max_depth": 1
+      },
+      "process_status": "success",
+      "binary_sha256": "ab0b1c468b92fea98efb27637e7913d898e5233dd33609ae2ebc1368c6f07a8c",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "e07e93e7b3897006c49f55d2f2e4fb7dd504c6140e0009e90cc6267ae886b47b",
+          "bytes": 1998,
+          "stored": "runs/historical-final-off/summary.json"
+        },
+        "config.txt": {
+          "sha256": "fdeabcc83229454b0247793805e4fac3560dc1f9f09f9a11f92c462bc3595c42",
+          "bytes": 447,
+          "stored": "runs/historical-final-off/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "d86637cfb71e8a04dce58f58a111e9f3920b573d3884efc8f9dcdbaca8e9bef0",
+          "bytes": 689360,
+          "stored": "runs/historical-final-off/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "b3b751c79b15446b5506c95b0aef9dd1871255fbd7afcd04f69155ed1e384dee",
+          "bytes": 3539,
+          "stored": "runs/historical-final-off/process.json"
+        },
+        "depths.json": {
+          "sha256": "0ff41cbfc76c6b37988e952b1d3d231031afe922b75622ce04eb4ee292cfd362",
+          "bytes": 334,
+          "stored": "runs/historical-final-off/depths.json"
+        },
+        "keys.log": {
+          "sha256": "8b21c6b94e80e9692c45c4dcf88352d351c3f88db19bc11c189a2330cf613124",
+          "bytes": 55243,
+          "stored": "runs/historical-final-off/keys.log"
+        },
+        "messages.log": {
+          "sha256": "5b32f0ebcfd49c8f548a86f203f838fd7914446bcd36085b8a069f976c52b859",
+          "bytes": 314484,
+          "stored": "runs/historical-final-off/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "986fc900f7693e908dafaa56f137db25a68882bffdfa539ce59d6913475e8660",
+          "bytes": 545353,
+          "stored": "runs/historical-final-off/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "580da9f617b51dc8f40940fefde88dba659f38020a1a993051561c3392416d07",
+          "bytes": 1978,
+          "stored": "runs/historical-final-off/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "4aed4cf4517a87bf71d673c71d5211ca9db1bdb96b066ff4929329188dd5ae4d",
+          "bytes": 18420598,
+          "stored": "runs/historical-final-off/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "674c277ea9a88238b6ec23943e8fbbc6bb13aab1f734691a16e0471d5cb6be29",
+          "bytes": 70949,
+          "stored": "runs/historical-final-off/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/historical-final-off/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "current-off",
+      "build": "current-pre-glyph",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 100000,
+        "clevel": 8,
+        "max_depth": 2
+      },
+      "process_status": "success",
+      "binary_sha256": "bf26ec6d10c5340fbee86b38e87ed7e0d32b4990563a3bc663f2e5d93ff03cd9",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "f6999e196013f400a46f7665685437586fcb83d92305b95605bdcf4b6c10ac0d",
+          "bytes": 1984,
+          "stored": "runs/current-off/summary.json"
+        },
+        "config.txt": {
+          "sha256": "b8c30b17b364c733536df55d372428ef49dae21fc1b69ccbb779a722d18397cc",
+          "bytes": 447,
+          "stored": "runs/current-off/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "ca4694f0ae1176b4dcda45f75212e1fb34254f7a5904ec19f8637b30bbb534da",
+          "bytes": 696790,
+          "stored": "runs/current-off/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "11988358fe4ccc7699061434245b929bff5949a7a7d1d8ca453bced125802fcb",
+          "bytes": 1507,
+          "stored": "runs/current-off/process.json"
+        },
+        "depths.json": {
+          "sha256": "3e6ebffa2c703a149750fac7e0c6a034386eee1dd9dcb2e191cb808353b37745",
+          "bytes": 350,
+          "stored": "runs/current-off/depths.json"
+        },
+        "keys.log": {
+          "sha256": "4cb7bb4376932733cbf11100e7a3c60f8694392e43c88c30fb93f1781699cc74",
+          "bytes": 140841,
+          "stored": "runs/current-off/keys.log.gz"
+        },
+        "messages.log": {
+          "sha256": "e63f29faa6f3ffd5a64a290f04884e9ddaeab1ec860d61ce01eebc1c2bc37689",
+          "bytes": 568262,
+          "stored": "runs/current-off/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "5c6d8b2b38bd6b6180cc6ae6b321022887e383f6007e76de8e9eed512e9ef778",
+          "bytes": 1387614,
+          "stored": "runs/current-off/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/current-off/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "3262c5ddcacab0b5b86f1fb9695fcdacabf50cda4ac94c2f346a4a72c8235d3f",
+          "bytes": 41671497,
+          "stored": "runs/current-off/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "e13f2b822dfd5dbe5bb3e48f2bbc1a10124e5ecee5f7279fa5290afdacd0ebdc",
+          "bytes": 72723,
+          "stored": "runs/current-off/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/current-off/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "current-on",
+      "build": "current-pre-glyph",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 100000,
+        "clevel": 8,
+        "max_depth": 3
+      },
+      "process_status": "success",
+      "binary_sha256": "bf26ec6d10c5340fbee86b38e87ed7e0d32b4990563a3bc663f2e5d93ff03cd9",
+      "events": {
+        "# Unseen bump:": 9,
+        "# Throwing oil at unseen bump": 5,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 5,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "432b91db1bcb923964acca8bfd3373e44502b94a5f2b25c4c1b37701bae277e7",
+          "bytes": 1985,
+          "stored": "runs/current-on/summary.json"
+        },
+        "config.txt": {
+          "sha256": "1d89b5aa1513e440d16e702325b4a9e3f7fc5556b85fd0ac31d4d09b9826cca6",
+          "bytes": 447,
+          "stored": "runs/current-on/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "0d4a9c04f450b82751b7e5d3c0dced83959ec0ad6e0f2b3b6f91ea8300804288",
+          "bytes": 696793,
+          "stored": "runs/current-on/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "8843147bcd62ba4eb70433ecd3acbfae6e4cc3a120b35d5b8248869f4728c683",
+          "bytes": 1498,
+          "stored": "runs/current-on/process.json"
+        },
+        "depths.json": {
+          "sha256": "07c7550b86251374356802d88fc391576aa46ba57a1d40e0b58d2ae156825c69",
+          "bytes": 366,
+          "stored": "runs/current-on/depths.json"
+        },
+        "keys.log": {
+          "sha256": "949307338b60b03e6df33e25a0a314eeeb8d498a69407b3694d23637bcabf355",
+          "bytes": 148550,
+          "stored": "runs/current-on/keys.log.gz"
+        },
+        "messages.log": {
+          "sha256": "29f8d4645e3fbb0d674da14ca324ba26c6b9af57b8a316243deb676d0d990255",
+          "bytes": 841857,
+          "stored": "runs/current-on/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "8e5352131c3e263b79b3eb2fc4f1e8722e2b92f4475f78970d94492a05851e25",
+          "bytes": 1450812,
+          "stored": "runs/current-on/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/current-on/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "26517993c5c553f5cd5f1837f7c4702ee9e4c85e49e59f54d6f5314356774bb8",
+          "bytes": 45258428,
+          "stored": "runs/current-on/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "3f59d29d90ea67a5163306350974a23838dfc1bf6080c0d7fa05ce5c407caf9c",
+          "bytes": 72726,
+          "stored": "runs/current-on/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/current-on/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "clean-on",
+      "build": "current-clean",
+      "same_life_group": "human-druid-102023799",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 100000,
+        "clevel": 8,
+        "max_depth": 3
+      },
+      "process_status": "success",
+      "binary_sha256": "1eea240eb148f52dcb16a1de0e75093e11e5ea3fe91b3ae1be4082cc55bf774f",
+      "events": {
+        "# Unseen bump:": 9,
+        "# Throwing oil at unseen bump": 5,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 5,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "b4999c2e3f9773a49773d30f694e2f698ca1973a7e9a4f0d14c12b3e4275ac7b",
+          "bytes": 1985,
+          "stored": "runs/clean-on/summary.json"
+        },
+        "config.txt": {
+          "sha256": "1d89b5aa1513e440d16e702325b4a9e3f7fc5556b85fd0ac31d4d09b9826cca6",
+          "bytes": 447,
+          "stored": "runs/clean-on/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "0d4a9c04f450b82751b7e5d3c0dced83959ec0ad6e0f2b3b6f91ea8300804288",
+          "bytes": 696793,
+          "stored": "runs/clean-on/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "b9b1159956780e9e50ffe836e02a262b627757715dfb8e759d2b19e87b9a7290",
+          "bytes": 1480,
+          "stored": "runs/clean-on/process.json"
+        },
+        "depths.json": {
+          "sha256": "07c7550b86251374356802d88fc391576aa46ba57a1d40e0b58d2ae156825c69",
+          "bytes": 366,
+          "stored": "runs/clean-on/depths.json"
+        },
+        "keys.log": {
+          "sha256": "949307338b60b03e6df33e25a0a314eeeb8d498a69407b3694d23637bcabf355",
+          "bytes": 148550,
+          "stored": "runs/clean-on/keys.log.gz"
+        },
+        "messages.log": {
+          "sha256": "29f8d4645e3fbb0d674da14ca324ba26c6b9af57b8a316243deb676d0d990255",
+          "bytes": 841857,
+          "stored": "runs/clean-on/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "8e5352131c3e263b79b3eb2fc4f1e8722e2b92f4475f78970d94492a05851e25",
+          "bytes": 1450812,
+          "stored": "runs/clean-on/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/clean-on/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "26517993c5c553f5cd5f1837f7c4702ee9e4c85e49e59f54d6f5314356774bb8",
+          "bytes": 45258428,
+          "stored": "runs/clean-on/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "3f59d29d90ea67a5163306350974a23838dfc1bf6080c0d7fa05ce5c407caf9c",
+          "bytes": 72726,
+          "stored": "runs/clean-on/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/clean-on/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "smoke/smoke-mage-2",
+      "build": "current-pre-glyph",
+      "same_life_group": "smoke-mage-2",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 20005,
+        "clevel": 4,
+        "max_depth": 2
+      },
+      "process_status": "success",
+      "binary_sha256": "bf26ec6d10c5340fbee86b38e87ed7e0d32b4990563a3bc663f2e5d93ff03cd9",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "5f5b2de66c1cc926c06820b10788a2ef97d4b7cb64dd929eb6115197d29cc507",
+          "bytes": 1971,
+          "stored": "runs/smoke/smoke-mage-2/summary.json"
+        },
+        "config.txt": {
+          "sha256": "8c2d3e3f408422f291537a415db76d694ee471dcbe5c530cc8cc7331f1b38874",
+          "bytes": 441,
+          "stored": "runs/smoke/smoke-mage-2/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "ca4694f0ae1176b4dcda45f75212e1fb34254f7a5904ec19f8637b30bbb534da",
+          "bytes": 696790,
+          "stored": "runs/smoke/smoke-mage-2/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "487a357e82fdde27be626fdfe2a87254e66db838b221fcf719c9b8cb0b29d0d0",
+          "bytes": 1687,
+          "stored": "runs/smoke/smoke-mage-2/process.json"
+        },
+        "depths.json": {
+          "sha256": "17bea0f5e72452613e9884c2d0232229fd452b485348487ebdfbb34da51932ef",
+          "bytes": 354,
+          "stored": "runs/smoke/smoke-mage-2/depths.json"
+        },
+        "keys.log": {
+          "sha256": "3afcb6bad327f9c6c0beebb4b386972ff217f637a752ea50dd48ae0c62036671",
+          "bytes": 29440,
+          "stored": "runs/smoke/smoke-mage-2/keys.log"
+        },
+        "messages.log": {
+          "sha256": "98204d4b0e9f31744ecd4fce67bdbc517b2873658caea4de638e259302051aed",
+          "bytes": 140530,
+          "stored": "runs/smoke/smoke-mage-2/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "dc4c2fb2fb66cea3cdcb0d2eedad2519e0d0edae19d30a543f7ffb72f939659e",
+          "bytes": 288503,
+          "stored": "runs/smoke/smoke-mage-2/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/smoke/smoke-mage-2/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "a5d577f3b7134c57193ef8d96a069806207f1c3bc153a885067da0a0a39b022a",
+          "bytes": 7065685,
+          "stored": "runs/smoke/smoke-mage-2/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "e27b0e488b716de220cbeead03394f57d71815d51c00cf2e0bc8d342cf5ca431",
+          "bytes": 72723,
+          "stored": "runs/smoke/smoke-mage-2/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/smoke/smoke-mage-2/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "smoke/smoke-priest-3",
+      "build": "current-pre-glyph",
+      "same_life_group": "smoke-priest-3",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 20503,
+        "clevel": 3,
+        "max_depth": 1
+      },
+      "process_status": "success",
+      "binary_sha256": "bf26ec6d10c5340fbee86b38e87ed7e0d32b4990563a3bc663f2e5d93ff03cd9",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "a13a584532bb855885eb5c6bf74b31d17eec750531b51f89b57852f12a69dca2",
+          "bytes": 1976,
+          "stored": "runs/smoke/smoke-priest-3/summary.json"
+        },
+        "config.txt": {
+          "sha256": "0b578c621d3d95b2571031528ec24be4ba854aa7d5f0bec6de5ae67e452b3621",
+          "bytes": 441,
+          "stored": "runs/smoke/smoke-priest-3/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "ca4694f0ae1176b4dcda45f75212e1fb34254f7a5904ec19f8637b30bbb534da",
+          "bytes": 696790,
+          "stored": "runs/smoke/smoke-priest-3/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "152dcd96d725ac8e26e678366f0576000c7311b4659e7fe1677c713d4e72a9fd",
+          "bytes": 1705,
+          "stored": "runs/smoke/smoke-priest-3/process.json"
+        },
+        "depths.json": {
+          "sha256": "b260b6ecd7afbbf8b82b70260a79145594a51d2b0d6847d6ae5ad4dc6ca76e7a",
+          "bytes": 336,
+          "stored": "runs/smoke/smoke-priest-3/depths.json"
+        },
+        "keys.log": {
+          "sha256": "2c21ee5fb6ac08e1ff50d2c2bcc3364812e39282bf2e6be0d6d1183292c69642",
+          "bytes": 31907,
+          "stored": "runs/smoke/smoke-priest-3/keys.log"
+        },
+        "messages.log": {
+          "sha256": "f69e7895d37669a070099fde92403aaaf768695faaaf4334cbe4ed791a64dccc",
+          "bytes": 161573,
+          "stored": "runs/smoke/smoke-priest-3/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "9dd8e23888b39908b2839c988f42e45bfe8ca7860b07e911d834ae5b7d220c63",
+          "bytes": 303878,
+          "stored": "runs/smoke/smoke-priest-3/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/smoke/smoke-priest-3/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "e0d50d0790c470a69a85e3d56318b2f2923e0ea6e8425a9ca4ed84e1dc31c981",
+          "bytes": 11746991,
+          "stored": "runs/smoke/smoke-priest-3/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "d7a0a9cfc84f25997c2cd344743c7e151ea39fc7f063dc103e7bd749d2b5eef3",
+          "bytes": 72723,
+          "stored": "runs/smoke/smoke-priest-3/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/smoke/smoke-priest-3/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "smoke/smoke-warrior-1",
+      "build": "current-pre-glyph",
+      "same_life_group": "smoke-warrior-1",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 20000,
+        "clevel": 3,
+        "max_depth": 1
+      },
+      "process_status": "success",
+      "binary_sha256": "bf26ec6d10c5340fbee86b38e87ed7e0d32b4990563a3bc663f2e5d93ff03cd9",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "b41c7255f9b09bb86d9838c37108a31e0580ff211e41bfd919d07f3f6ec20b25",
+          "bytes": 1976,
+          "stored": "runs/smoke/smoke-warrior-1/summary.json"
+        },
+        "config.txt": {
+          "sha256": "ec02f68d05cb8556cef873af4c1e784eda9fa4d7750b25341c02dc600984c852",
+          "bytes": 441,
+          "stored": "runs/smoke/smoke-warrior-1/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "ca4694f0ae1176b4dcda45f75212e1fb34254f7a5904ec19f8637b30bbb534da",
+          "bytes": 696790,
+          "stored": "runs/smoke/smoke-warrior-1/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "be3876f486f8a2088d9f8827b8346b9956ac478bc7d6fd027acc538a4a4d8ee5",
+          "bytes": 1715,
+          "stored": "runs/smoke/smoke-warrior-1/process.json"
+        },
+        "depths.json": {
+          "sha256": "556ecbf6fabe84a40c3147a1e0f38f3dac6a6e89fc8abcfe442ddb475706739e",
+          "bytes": 338,
+          "stored": "runs/smoke/smoke-warrior-1/depths.json"
+        },
+        "keys.log": {
+          "sha256": "92e2476031eae6e5dbe144c75a147b120e03ead0bf04c2602906b867de1dc6d1",
+          "bytes": 31712,
+          "stored": "runs/smoke/smoke-warrior-1/keys.log"
+        },
+        "messages.log": {
+          "sha256": "9f62b5230537e967e2179467853ad3e5a90aac4bd324b290e4704b2492e99ddd",
+          "bytes": 102699,
+          "stored": "runs/smoke/smoke-warrior-1/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "b23fffce9e8491deb4cef93ba274aec40654a17a073385b1b9c619fbf602998a",
+          "bytes": 309566,
+          "stored": "runs/smoke/smoke-warrior-1/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/smoke/smoke-warrior-1/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "ffc0c3a8d88a5aece130cadae7d86713090d25f36b0da388c88f0b8a813e20fe",
+          "bytes": 5737631,
+          "stored": "runs/smoke/smoke-warrior-1/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "4a7b79976b7d92e2c6c6e6bf6763202c8e50ae392427ee0c7ca0ffceb9d64d6c",
+          "bytes": 72723,
+          "stored": "runs/smoke/smoke-warrior-1/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/smoke/smoke-warrior-1/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "clean-smoke/smoke-mage-2",
+      "build": "current-clean",
+      "same_life_group": "smoke-mage-2",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 20005,
+        "clevel": 4,
+        "max_depth": 2
+      },
+      "process_status": "success",
+      "binary_sha256": "1eea240eb148f52dcb16a1de0e75093e11e5ea3fe91b3ae1be4082cc55bf774f",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "e68014b9c50e799e4060ec8b26874fb321613b1a780a116d31938bbdce5d8374",
+          "bytes": 1971,
+          "stored": "runs/clean-smoke/smoke-mage-2/summary.json"
+        },
+        "config.txt": {
+          "sha256": "8c2d3e3f408422f291537a415db76d694ee471dcbe5c530cc8cc7331f1b38874",
+          "bytes": 441,
+          "stored": "runs/clean-smoke/smoke-mage-2/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "ca4694f0ae1176b4dcda45f75212e1fb34254f7a5904ec19f8637b30bbb534da",
+          "bytes": 696790,
+          "stored": "runs/clean-smoke/smoke-mage-2/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "44449134330f28a24d21ff5f2aead286f4ec346ad780c7a16d2304ea17aef043",
+          "bytes": 1741,
+          "stored": "runs/clean-smoke/smoke-mage-2/process.json"
+        },
+        "depths.json": {
+          "sha256": "17bea0f5e72452613e9884c2d0232229fd452b485348487ebdfbb34da51932ef",
+          "bytes": 354,
+          "stored": "runs/clean-smoke/smoke-mage-2/depths.json"
+        },
+        "keys.log": {
+          "sha256": "3afcb6bad327f9c6c0beebb4b386972ff217f637a752ea50dd48ae0c62036671",
+          "bytes": 29440,
+          "stored": "runs/clean-smoke/smoke-mage-2/keys.log"
+        },
+        "messages.log": {
+          "sha256": "98204d4b0e9f31744ecd4fce67bdbc517b2873658caea4de638e259302051aed",
+          "bytes": 140530,
+          "stored": "runs/clean-smoke/smoke-mage-2/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "dc4c2fb2fb66cea3cdcb0d2eedad2519e0d0edae19d30a543f7ffb72f939659e",
+          "bytes": 288503,
+          "stored": "runs/clean-smoke/smoke-mage-2/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/clean-smoke/smoke-mage-2/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "a5d577f3b7134c57193ef8d96a069806207f1c3bc153a885067da0a0a39b022a",
+          "bytes": 7065685,
+          "stored": "runs/clean-smoke/smoke-mage-2/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "e27b0e488b716de220cbeead03394f57d71815d51c00cf2e0bc8d342cf5ca431",
+          "bytes": 72723,
+          "stored": "runs/clean-smoke/smoke-mage-2/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/clean-smoke/smoke-mage-2/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "clean-smoke/smoke-priest-3",
+      "build": "current-clean",
+      "same_life_group": "smoke-priest-3",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 20503,
+        "clevel": 3,
+        "max_depth": 1
+      },
+      "process_status": "success",
+      "binary_sha256": "1eea240eb148f52dcb16a1de0e75093e11e5ea3fe91b3ae1be4082cc55bf774f",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "7e00b1b42cebc9e579579443dc8511b60e53558b022ade30bdf07fde116f3e77",
+          "bytes": 1976,
+          "stored": "runs/clean-smoke/smoke-priest-3/summary.json"
+        },
+        "config.txt": {
+          "sha256": "0b578c621d3d95b2571031528ec24be4ba854aa7d5f0bec6de5ae67e452b3621",
+          "bytes": 441,
+          "stored": "runs/clean-smoke/smoke-priest-3/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "ca4694f0ae1176b4dcda45f75212e1fb34254f7a5904ec19f8637b30bbb534da",
+          "bytes": 696790,
+          "stored": "runs/clean-smoke/smoke-priest-3/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "126e3363f4d0c95119dec63763560350c851f8f8aa70c02bd876331aa58acff3",
+          "bytes": 1759,
+          "stored": "runs/clean-smoke/smoke-priest-3/process.json"
+        },
+        "depths.json": {
+          "sha256": "b260b6ecd7afbbf8b82b70260a79145594a51d2b0d6847d6ae5ad4dc6ca76e7a",
+          "bytes": 336,
+          "stored": "runs/clean-smoke/smoke-priest-3/depths.json"
+        },
+        "keys.log": {
+          "sha256": "2c21ee5fb6ac08e1ff50d2c2bcc3364812e39282bf2e6be0d6d1183292c69642",
+          "bytes": 31907,
+          "stored": "runs/clean-smoke/smoke-priest-3/keys.log"
+        },
+        "messages.log": {
+          "sha256": "f69e7895d37669a070099fde92403aaaf768695faaaf4334cbe4ed791a64dccc",
+          "bytes": 161573,
+          "stored": "runs/clean-smoke/smoke-priest-3/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "9dd8e23888b39908b2839c988f42e45bfe8ca7860b07e911d834ae5b7d220c63",
+          "bytes": 303878,
+          "stored": "runs/clean-smoke/smoke-priest-3/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/clean-smoke/smoke-priest-3/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "e0d50d0790c470a69a85e3d56318b2f2923e0ea6e8425a9ca4ed84e1dc31c981",
+          "bytes": 11746991,
+          "stored": "runs/clean-smoke/smoke-priest-3/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "d7a0a9cfc84f25997c2cd344743c7e151ea39fc7f063dc103e7bd749d2b5eef3",
+          "bytes": 72723,
+          "stored": "runs/clean-smoke/smoke-priest-3/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/clean-smoke/smoke-priest-3/user/scary_monsters.txt"
+        }
+      }
+    },
+    {
+      "attempt": "clean-smoke/smoke-warrior-1",
+      "build": "current-clean",
+      "same_life_group": "smoke-warrior-1",
+      "outcome": {
+        "dead": false,
+        "death_cause": "",
+        "game_turns": 20000,
+        "clevel": 3,
+        "max_depth": 1
+      },
+      "process_status": "success",
+      "binary_sha256": "1eea240eb148f52dcb16a1de0e75093e11e5ea3fe91b3ae1be4082cc55bf774f",
+      "events": {
+        "# Unseen bump:": 0,
+        "# Throwing oil at unseen bump": 0,
+        "# Healing before stairs:": 0,
+        "# Phase (unseen bump): done": 0,
+        "# Detect Invisible: an unseen monster": 0
+      },
+      "files": {
+        "summary.json": {
+          "sha256": "8dfd3f9f327ad143b435b603a356bc69f6918dea261015f64d97ff423c37bbaa",
+          "bytes": 1976,
+          "stored": "runs/clean-smoke/smoke-warrior-1/summary.json"
+        },
+        "config.txt": {
+          "sha256": "ec02f68d05cb8556cef873af4c1e784eda9fa4d7750b25341c02dc600984c852",
+          "bytes": 441,
+          "stored": "runs/clean-smoke/smoke-warrior-1/config.txt"
+        },
+        "params-core.json": {
+          "sha256": "ca4694f0ae1176b4dcda45f75212e1fb34254f7a5904ec19f8637b30bbb534da",
+          "bytes": 696790,
+          "stored": "runs/clean-smoke/smoke-warrior-1/params-core.json.gz"
+        },
+        "process.json": {
+          "sha256": "97a041a539b8c960f6448e6d7df2c8d1c6386d63476706d5d23cb2d1a97357f4",
+          "bytes": 1769,
+          "stored": "runs/clean-smoke/smoke-warrior-1/process.json"
+        },
+        "depths.json": {
+          "sha256": "556ecbf6fabe84a40c3147a1e0f38f3dac6a6e89fc8abcfe442ddb475706739e",
+          "bytes": 338,
+          "stored": "runs/clean-smoke/smoke-warrior-1/depths.json"
+        },
+        "keys.log": {
+          "sha256": "92e2476031eae6e5dbe144c75a147b120e03ead0bf04c2602906b867de1dc6d1",
+          "bytes": 31712,
+          "stored": "runs/clean-smoke/smoke-warrior-1/keys.log"
+        },
+        "messages.log": {
+          "sha256": "9f62b5230537e967e2179467853ad3e5a90aac4bd324b290e4704b2492e99ddd",
+          "bytes": 102699,
+          "stored": "runs/clean-smoke/smoke-warrior-1/messages.log.gz"
+        },
+        "state.log": {
+          "sha256": "b23fffce9e8491deb4cef93ba274aec40654a17a073385b1b9c619fbf602998a",
+          "bytes": 309566,
+          "stored": "runs/clean-smoke/smoke-warrior-1/state.log.gz"
+        },
+        "stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "stored": "runs/clean-smoke/smoke-warrior-1/stderr.log"
+        },
+        "trace-core.jsonl": {
+          "sha256": "ffc0c3a8d88a5aece130cadae7d86713090d25f36b0da388c88f0b8a813e20fe",
+          "bytes": 5737631,
+          "stored": "runs/clean-smoke/smoke-warrior-1/trace-core.jsonl.gz"
+        },
+        "user/borg.txt": {
+          "sha256": "4a7b79976b7d92e2c6c6e6bf6763202c8e50ae392427ee0c7ca0ffceb9d64d6c",
+          "bytes": 72723,
+          "stored": "runs/clean-smoke/smoke-warrior-1/user/borg.txt"
+        },
+        "user/scary_monsters.txt": {
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+          "bytes": 3975,
+          "stored": "runs/clean-smoke/smoke-warrior-1/user/scary_monsters.txt"
+        }
+      }
+    }
+  ]
+}
