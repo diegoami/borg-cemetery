@@ -66,3 +66,7 @@ ban-only: dead 5/8, to crow/cat 4, heals 7, oil 241, phase 0, stairs 0, ff-notes
 5. **The Dunadan Priest** dies identically in all arms at the default: 7.2 damage a turn against 8 HP is under "the next turn kills" at the mean, so it throws one flask (missed) and the four bites kill it with a Phase Door unread. At `escape_percent=75` it reads Phase and all 8 live.
 6. **Necromancer 1705507033, 34 flasks, melee**: not a bug. Its throwing skill is 20 − 10 = 10 (`class.txt:966`, `p_race.txt:227`) against melee 35 + 20 = 55; against a crow (AC 14) a flask hits 20.3% (1.83 HP a turn) and the Main Gauche about 4.09. The planner's expected-damage ranking is right on these numbers.
 7. **By stats** the rule also marked cave spiders (6 notes, when a group had thinned to one). Its first version marked a small kobold at "speed +1": monsters spread about one speed point around the race's (`mon-make.c:1158-1164`), so the rule has `fast_fragile_speed_margin` (5).
+
+## Check on the merged tree
+
+After merging main (`ed52fec1`, town fuel changes) into the borg-reborn-rs branch (merge commit `536f9336`) the key arms were replayed again on that build: `shipped` 8 dead (7 to crow/cat); policy + `no_heal=1` ("named") 1 dead (the Dunadan Priest); policy + by_stats + `no_heal=1` 1 dead; policy + `no_heal=1` + `escape_percent=75` 0 dead. Same cases, same outcomes as above. The smoke suite at the shipped settings is 3/3 identical to main's re-recorded `smoke-borg-rs`.
