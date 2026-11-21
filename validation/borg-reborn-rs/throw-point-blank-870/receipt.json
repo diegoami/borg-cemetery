@@ -1,0 +1,167 @@
+{
+  "source_repository": "diegoami/borg-reborn-rs",
+  "issue": 870,
+  "source_commit": "e037588b8933a42e577808b5299d5da74e37cef7",
+  "base_main": "f57499d09ba30e84c2e06e5ac08a008c856f9a6d",
+  "base_track_p": "29c44cbcca379a153cc9489055ae45df5f26e612",
+  "binary_sha256": "b7005b7e71e3a00ad069d6a8a104ea0f000c131fb403c83619d0ab797cc868d9",
+  "source_sha256": "29989e77959874f77f613baf909d77351d1d1525881fef274b0c2f888e96789a",
+  "smoke": "3/3 identical keys/messages/states to smoke-borg-rs",
+  "named_start": {
+    "seed": 1705507033,
+    "race": 7,
+    "class": 4,
+    "cap": 100000,
+    "flags": "menu,exact",
+    "core": "borg-rs",
+    "errand": "none",
+    "defaults": "shipped harness/borg.txt",
+    "alternative": "BORG_PARAM_ATTACK_THROW_POINT_BLANK_DIVISOR=1"
+  },
+  "named_streams": {
+    "keys.log": {
+      "default_sha256": "9bdb84bd8d302b7bf90e795af5269aacbd04c57841405acabfc4ca4b9f5f5bf4",
+      "divisor1_sha256": "9bdb84bd8d302b7bf90e795af5269aacbd04c57841405acabfc4ca4b9f5f5bf4",
+      "equal": true
+    },
+    "messages.log": {
+      "default_sha256": "2b3e7efbf10220abaeb14ed26545001c2449eab7ed778a06cbc456eab6f4a720",
+      "divisor1_sha256": "79b8d2d0ed605f0350693a11f5c881f84f1e51537d57031a69c5bffd1a2c5e42",
+      "equal": false
+    },
+    "state.log": {
+      "default_sha256": "7d20517cb012864420422b9c89838d86edacd113d085b065428d548256d3ca58",
+      "divisor1_sha256": "7d20517cb012864420422b9c89838d86edacd113d085b065428d548256d3ca58",
+      "equal": true
+    },
+    "trace-core.jsonl": {
+      "default_sha256": "820d5ae6247d1d02ba885f957d259339cf6f672d50d40e8dc5ee74b076ac858d",
+      "divisor1_sha256": "79da623b45afe1a26cf971783471791506d80cd9ff682c1017e6fae0c6afa9ab",
+      "equal": false
+    }
+  },
+  "attempts": 5,
+  "natural_deaths": 0,
+  "independent_comparison_samples": 0,
+  "limits": [
+    "Smoke and named-case validation only, not population measurement or evidence of improvement.",
+    "Two continuations of the same start are not independent lives.",
+    "The focused crow choice is unchanged; the normal rating rises for two wild-dog oil throws at turns 28035 and 28045 without changing actions.",
+    "Messages and full decision traces differ, despite equal keys and game states.",
+    "No shipped override chosen."
+  ],
+  "decompressed_artifacts": {
+    "runs/crow-default/state.log.gz": {
+      "bytes": 1337083,
+      "sha256": "7d20517cb012864420422b9c89838d86edacd113d085b065428d548256d3ca58"
+    },
+    "runs/crow-default/params-core.json.gz": {
+      "bytes": 739977,
+      "sha256": "157a57f4d367658a648ae943a1c7fcdc3313a2667ac488d084658224d2855fc8"
+    },
+    "runs/crow-default/trace-core.jsonl.gz": {
+      "bytes": 44440616,
+      "sha256": "820d5ae6247d1d02ba885f957d259339cf6f672d50d40e8dc5ee74b076ac858d"
+    },
+    "runs/crow-default/messages.log.gz": {
+      "bytes": 626904,
+      "sha256": "2b3e7efbf10220abaeb14ed26545001c2449eab7ed778a06cbc456eab6f4a720"
+    },
+    "runs/crow-default/keys.log.gz": {
+      "bytes": 152296,
+      "sha256": "9bdb84bd8d302b7bf90e795af5269aacbd04c57841405acabfc4ca4b9f5f5bf4"
+    },
+    "runs/crow-divisor1/state.log.gz": {
+      "bytes": 1337083,
+      "sha256": "7d20517cb012864420422b9c89838d86edacd113d085b065428d548256d3ca58"
+    },
+    "runs/crow-divisor1/params-core.json.gz": {
+      "bytes": 739981,
+      "sha256": "92e86ec7576cae781d9baaf9b30fa11338c42a3bae0da43893f511694232ba5f"
+    },
+    "runs/crow-divisor1/trace-core.jsonl.gz": {
+      "bytes": 44440606,
+      "sha256": "79da623b45afe1a26cf971783471791506d80cd9ff682c1017e6fae0c6afa9ab"
+    },
+    "runs/crow-divisor1/messages.log.gz": {
+      "bytes": 626904,
+      "sha256": "79b8d2d0ed605f0350693a11f5c881f84f1e51537d57031a69c5bffd1a2c5e42"
+    },
+    "runs/crow-divisor1/keys.log.gz": {
+      "bytes": 152296,
+      "sha256": "9bdb84bd8d302b7bf90e795af5269aacbd04c57841405acabfc4ca4b9f5f5bf4"
+    },
+    "runs/crow-default/user/borg.txt.gz": {
+      "bytes": 84526,
+      "sha256": "664d3708ef85610fb47c5c9cac15fa8e16eff50ab87d87e60e9f23d313754209"
+    },
+    "runs/crow-divisor1/user/borg.txt.gz": {
+      "bytes": 84526,
+      "sha256": "664d3708ef85610fb47c5c9cac15fa8e16eff50ab87d87e60e9f23d313754209"
+    },
+    "runs/smoke/smoke-warrior-1/state.log.gz": {
+      "bytes": 356300,
+      "sha256": "0057261675adb3d754cab547186a7804466f832ac4bf41299c550521d44f22e0"
+    },
+    "runs/smoke/smoke-warrior-1/params-core.json.gz": {
+      "bytes": 739977,
+      "sha256": "157a57f4d367658a648ae943a1c7fcdc3313a2667ac488d084658224d2855fc8"
+    },
+    "runs/smoke/smoke-warrior-1/trace-core.jsonl.gz": {
+      "bytes": 9656564,
+      "sha256": "9fce41e6c1a8f67c49d3407a4f33fb89efad9bba7ef2c2e5d68a34142e35d935"
+    },
+    "runs/smoke/smoke-warrior-1/messages.log.gz": {
+      "bytes": 182315,
+      "sha256": "b27728d80b97726bd19d9365316c5723ea7506f7aa8e62ba1e532623d8b4f092"
+    },
+    "runs/smoke/smoke-priest-3/state.log.gz": {
+      "bytes": 213341,
+      "sha256": "06ed0bb4a007a73ae8b0e8b3604a7d9a74079573cb3fe503819f65023ea9d248"
+    },
+    "runs/smoke/smoke-priest-3/params-core.json.gz": {
+      "bytes": 739977,
+      "sha256": "157a57f4d367658a648ae943a1c7fcdc3313a2667ac488d084658224d2855fc8"
+    },
+    "runs/smoke/smoke-priest-3/trace-core.jsonl.gz": {
+      "bytes": 5872786,
+      "sha256": "5f46f5bd7d6c81712a662e77c349b9e69499b3e8dabb74cba6b14ac149635a58"
+    },
+    "runs/smoke/smoke-priest-3/messages.log.gz": {
+      "bytes": 88014,
+      "sha256": "33ecdbbf125363e32f54994c301d72dd0195d45e78566dcc97cdf4911eb716c5"
+    },
+    "runs/smoke/smoke-mage-2/state.log.gz": {
+      "bytes": 246090,
+      "sha256": "d3dda66a7411fa6b2f6d8c820be5091bca45389f1015e4e1343fbfc2591b8020"
+    },
+    "runs/smoke/smoke-mage-2/params-core.json.gz": {
+      "bytes": 739977,
+      "sha256": "157a57f4d367658a648ae943a1c7fcdc3313a2667ac488d084658224d2855fc8"
+    },
+    "runs/smoke/smoke-mage-2/trace-core.jsonl.gz": {
+      "bytes": 8752577,
+      "sha256": "2c66b48b7a25f132c43fee39202c912dfb40826173f86c8a3e0a12e63865c9fc"
+    },
+    "runs/smoke/smoke-mage-2/messages.log.gz": {
+      "bytes": 83908,
+      "sha256": "4bf46ade9fe5cddb3192273c5065a8505ffe2503142ba3c66a43a5c7c5ebb881"
+    },
+    "runs/smoke/smoke-warrior-1/user/borg.txt.gz": {
+      "bytes": 84526,
+      "sha256": "f7db401abed276fa52d77bb6c47ec7bbecc9cade364d01f8f21e58710d57cb4b"
+    },
+    "runs/smoke/smoke-priest-3/user/borg.txt.gz": {
+      "bytes": 84526,
+      "sha256": "42a84f27c7ae4756dbd15f882673e616ab518a1b553ce4dbe44f261ee367f17b"
+    },
+    "runs/smoke/smoke-mage-2/user/borg.txt.gz": {
+      "bytes": 84526,
+      "sha256": "43bf180456d55d2be87c03ee41056d71211a73ed959ca04cbf79848d369dc2f9"
+    },
+    "build/angband.gz": {
+      "bytes": 30643880,
+      "sha256": "b7005b7e71e3a00ad069d6a8a104ea0f000c131fb403c83619d0ab797cc868d9"
+    }
+  }
+}

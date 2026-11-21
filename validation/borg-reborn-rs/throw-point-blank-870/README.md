@@ -1,0 +1,7 @@
+# Reborn #870: separate throw point-blank policy
+
+Source runtime e037588b8933a42e577808b5299d5da74e37cef7, on accepted main f57499d0 after starting from track-p 29c44cbc. Built clean with GCC 14.2, RTL argument order, native borg-rs core and no errand. Binary and complete run evidence retained here; large files are gzip compressed with original-byte identities in receipt.json.
+
+Smoke: 3/3 keys/messages/states identical to current smoke-borg-rs references. Named Half-Troll Necromancer seed 1705507033: inherited divisor and explicit divisor 1 both alive at exactly 100,000 turns, CL6, max DL2. Keys and state bytes equal; messages and full trace differ in utility ratings. At the crow both choose melee at 4442, then Phase Door at 4452. The focused planner bypasses conservation policy. At 28035 and 28045 the native oil-throw ratings rise 12 to 18 and 10 to 16, respectively, but oil was already chosen. This validates parameter plumbing without demonstrating an action change or survival improvement.
+
+Commands: `BORG_CORE=borg-rs BORG_ERRAND=none BORG_IMPL=rust flock /tmp/angband-validation.lock harness/suite.sh smoke OUT`; named: `harness/run.sh OUT 1705507033 7 4 100000 menu,exact` under those same core/errand settings, with `BORG_PARAM_ATTACK_THROW_POINT_BLANK_DIVISOR=1` only for the alternative. Raw configs and resolved parameters are retained per run. No natural deaths in these five attempts. Repeated named start is one life, not independent samples. Population comparisons belong to Zoo.
