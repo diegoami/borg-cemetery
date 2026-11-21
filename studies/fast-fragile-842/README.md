@@ -97,3 +97,16 @@ named-landing: dead 4/8, to crow/cat 3, heals 18, oil 173, phase 6, stairs 0, ff
 stats: dead 1/8, to crow/cat 0, heals 17, oil 410, phase 11, stairs 0, ff-notes 84
 stats-ban: dead 1/8, to crow/cat 0, heals 17, oil 410, phase 11, stairs 0, ff-notes 84
 ban-only: dead 5/8, to crow/cat 4, heals 7, oil 241, phase 0, stairs 0, ff-notes 0
+
+## `fast_fragile_no_walk` (borg-reborn-rs#849)
+
+No desperate walk to the stairs while a faster fast-fragile monster is awake next to the Borg (the issue's item 4; #747's 50% test covers one branch only). The 8 cases on borg-reborn-rs branch `task/849-fast-fragile-no-walk`, 100,000 turns, lines appended to each case's `borg.txt`:
+
+| arm | dead of 8 | to crow/cat |
+|---|---:|---:|
+| `off` (`policy=0`, `no_heal=0`: the play before #847) | 8 | 7 |
+| `off` + `borg_param_fast_fragile_no_walk = 1` | 6 | 5 |
+| shipped (`policy=1`, `no_heal=1`) | 1 | 0 |
+| shipped + `no_walk=1` | 1 | 0 (all 8 key streams identical) |
+
+Without the policy the switch alone rescues Necromancer 1705507033 and Half-Elf Druid 733550937 (both walked from a crow in the issue); 14 walks were refused. With the shipped policy on it changes nothing here: the attack comes before the walk's code. (An arm named `shipped` in these runs, with no lines appended, is the case's own recorded `borg.txt`, that is, the policy off: use `on` for the shipped setting.)
