@@ -11,7 +11,7 @@ a borg-zoo request (borg-zoo run request linked from the PR).
 | --- | --- |
 | Owner's words (2026-11-21) | "avoid cursed objects if possible, and if not when cursed make it a priority to go back to town and buy a remove curse scroll"; and "don't spend a Remove Curse scroll on an item not worth keeping" |
 | Source of the deaths | borg-zoo#566 (main `3b4924ba`, run 44894233710 Ranger, run 44894215287 Priest) and borg-zoo#501 (`e8b3acfd`, run 44738444831 Warrior) |
-| Change under test | PR #832, head `3be3f186`: a worn item known to carry a harmful curse comes off at once (`borg_cursed.rs`); a trip to town for Remove Curse when a removable curse stays worn; a pack item counts for Remove Curse only when it is worth the scroll (100 gold) |
+| Change under test | PR #832, head `7225eb02` (see the regression below for why not `3be3f186`): a worn item known to carry a harmful curse comes off at once (`borg_cursed.rs`); a trip to town for Remove Curse when a removable curse stays worn; a pack item counts for Remove Curse only when it is worth the scroll (100 gold) |
 | Files | [MANIFEST.json](MANIFEST.json) (hashes, builds), `runs/<run>/{excerpt.txt,summary.json,keys.log.gz,messages.log.gz}`, `patches/` |
 
 ## How each run was made
@@ -69,17 +69,65 @@ inference, the Borg learned it only at 83,138 and 93,200).
 The gate was not applied to this game: whether it would have declined the
 scroll on `Robe [2,+3]` at 56,842 is not tested here.
 
-## The PR head on the same starts (shipped settings, main `88d98537` plus the change)
+## The PR head on the same starts (shipped settings, main `88d98537` plus the change, head `7225eb02`)
 
 `head-ranger` and `head-priest` take the same actions as the fixed runs above
 (sandals off at 6,671; cloak off at 53,364) and are alive at 100,000. The
 Warrior start (`head-warrior`) never meets a curse on the head (main has moved
 since `e8b3acfd`), so it shows nothing about this case.
 
+## Regression the pilot starts found: an endless read (3be3f186), fixed in 7225eb02
+
+Four starts of the zoo's `classes-18` pilot were played at the PR's base
+`88d98537` and at its head (`runs/pilot-base-*`, `runs/pilot-head-*`, Human
+Warrior 1085222502, Priest 1569794094, Ranger 226104090, Rogue 1502695781).
+At `3be3f186` the **Human Priest 1569794094 never finished**: the game clock
+stopped at turn 58,971 and the Borg wrote 1.75 million keys in 20 minutes
+(about 1.5 GB of logs before it was stopped). The log shows the loop's start:
+
+```
+6326 58971 0 You bought a Scroll titled "ve via pro tas" for 100 gold.
+6326 58971 0 You have a Scroll of Remove Curse (m).
+6330 58971 0 # Reading Scroll of Remove Curse.
+6336 58971 0 # Reading Scroll of Remove Curse.
+6342 58971 0 # Reading Scroll of Remove Curse.      (and on, every 6 messages, no game time passing)
+```
+
+The Priest wore a `Wooden Torch [+20] {cursed, ??}` (steelskin curse, 57,945)
+and carried a cursed `Wooden Torch {cursed}` (poison curse, 51,274). The
+gate of `3be3f186` stopped counting the pack torch (worth about nothing), and
+with it dropped the inventory bit of `BI_WHERE_CURSED`. The game's "Uncurse
+which item?" prompt still opens on the pack while any pack item qualifies,
+and `borg_decurse_any` presses `/` to reach a worn item only when that bit is
+set; so it typed the equipment letter into the pack list and tried again.
+`7225eb02` keeps the bit for every uncursable pack item and drops only the
+demand (`pack_curse` in `borg-core/src/borg_cursed.rs`, with a test). The
+same start then ends at 100,000 turns in 20 s (11,267 keys): it reads the
+scroll on the worn torch ("The steelskin curse is removed!", 58,971), as the
+base does, and differs from the base only after that, where it does not buy a
+second scroll for the pack torch.
+
+To reproduce the loop: check out `3be3f186`, build, and run
+`RUN_TIMEOUT_SECONDS=120 harness/run.sh OUT 1569794094 0 3 100000 menu,exact`.
+The runaway game's logs were not kept (size).
+
+| start (Human) | base `88d98537` | head `7225eb02` | same key stream |
+| --- | --- | --- | --- |
+| Warrior 1085222502 | 100,000 turns, CL 6, 14,012 keys | the same | yes |
+| Priest 1569794094 | 100,000 turns, CL 7, 10,449 keys | 100,000 turns, CL 6, 11,267 keys | no: from 58,981, the second scroll |
+| Ranger 226104090 | 100,000 turns, CL 6, 17,892 keys | the same | yes |
+| Rogue 1502695781 | 100,000 turns, CL 5, 14,014 keys | the same | yes |
+
+Four starts, all alive at the cap: they show that nothing else loops and that
+the change does not alter the games in which no curse is met. They say
+nothing about survival.
+
 ## Not shown
 
 - **The trip for Remove Curse** ("restock remove curse") was not seen in any
-  game: no run kept a worn item with a mild known curse and enough gold.
+  game: no trace contains it. The Priest 1569794094 above does read a scroll
+  on a worn item with a mild curse (the read path for equipment), but it went
+  to town for other reasons.
   `start-build` rejects curses, so the scenario cannot be built with the
   harness. Its decision is unit-tested in the PR.
 - **Survival**: nothing here estimates it. Three starts, one seed each.

@@ -163,9 +163,9 @@
   "run": "head-ranger",
   "character": "Elf Ranger",
   "seed": 1088421828,
-  "source": "3be3f186 (PR #832 head)",
+  "source": "7225eb02 (PR #832 head)",
   "patch": "the PR",
-  "binary_sha256": "4e9087d992730aa7ef7eb67b96407bd0a5a6bafd42b3845694bbd798a9834ece",
+  "binary_sha256": "4157f1615bf1cf1e1c9d01670487b8e8b2823bb59b2cd29dc415f7a1647228c7",
   "keys_log_sha256": "e82551899edadd0c72572a47a406a300b3dada564d0924de2afd558448d7834e",
   "messages_log_sha256": "e813a95a12081491b74f474050b72a04fc839617a631095e773bc8e55644eeca",
   "summary": {
@@ -185,9 +185,9 @@
   "run": "head-priest",
   "character": "Half-Orc Priest",
   "seed": 354395849,
-  "source": "3be3f186 (PR #832 head)",
+  "source": "7225eb02 (PR #832 head)",
   "patch": "the PR",
-  "binary_sha256": "4e9087d992730aa7ef7eb67b96407bd0a5a6bafd42b3845694bbd798a9834ece",
+  "binary_sha256": "4157f1615bf1cf1e1c9d01670487b8e8b2823bb59b2cd29dc415f7a1647228c7",
   "keys_log_sha256": "12429fb943cbbfb54c2c0b8d186d170da8b797d644dd46d5d0d337d501e8b526",
   "messages_log_sha256": "42b2b61be8350ac71d5a00d21f90af9c9c30231f2409728f146d52628dc66b2f",
   "summary": {
@@ -207,9 +207,9 @@
   "run": "head-warrior",
   "character": "Half-Orc Warrior",
   "seed": 1653223723,
-  "source": "3be3f186 (PR #832 head)",
+  "source": "7225eb02 (PR #832 head)",
   "patch": "the PR",
-  "binary_sha256": "4e9087d992730aa7ef7eb67b96407bd0a5a6bafd42b3845694bbd798a9834ece",
+  "binary_sha256": "4157f1615bf1cf1e1c9d01670487b8e8b2823bb59b2cd29dc415f7a1647228c7",
   "keys_log_sha256": "bceea11a464959ba0d7f42adfba9e6d530a411503ecbc2c8d1bc267759d5b861",
   "messages_log_sha256": "ac983dad617d5c1761a284b9d82642d1e41811dcb6c461124ec5781ea2e6a6a7",
   "summary": {
@@ -223,6 +223,182 @@
    "dead": false,
    "death_cause": "",
    "keys": 12884
+  }
+ },
+ {
+  "run": "pilot-base-warrior",
+  "character": "Human Warrior",
+  "seed": 1085222502,
+  "source": "88d98537 (main, the PR base)",
+  "patch": "none",
+  "binary_sha256": null,
+  "keys_log_sha256": "28e2c11d7a1749d1a390e359c15b61aa25ef6e1f3f11d8c2d5c72e07e66e3750",
+  "messages_log_sha256": "bb623e98fb8d324f94318348220e94d9b683038c5eecc491fc0999c89f0a282d",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10157,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 14012
+  }
+ },
+ {
+  "run": "pilot-head-warrior",
+  "character": "Human Warrior",
+  "seed": 1085222502,
+  "source": "7225eb02 (PR #832 head)",
+  "patch": "the PR",
+  "binary_sha256": "4157f1615bf1cf1e1c9d01670487b8e8b2823bb59b2cd29dc415f7a1647228c7",
+  "keys_log_sha256": "28e2c11d7a1749d1a390e359c15b61aa25ef6e1f3f11d8c2d5c72e07e66e3750",
+  "messages_log_sha256": "bb623e98fb8d324f94318348220e94d9b683038c5eecc491fc0999c89f0a282d",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10157,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 14012
+  }
+ },
+ {
+  "run": "pilot-base-priest",
+  "character": "Human Priest",
+  "seed": 1569794094,
+  "source": "88d98537 (main, the PR base)",
+  "patch": "none",
+  "binary_sha256": null,
+  "keys_log_sha256": "98eb4bd284ef2fba16c8041bb8ebd3e87f31f7f35b1dd783ecf51cb9f9b533ad",
+  "messages_log_sha256": "891024b540f5767140b759670fb7a6c1aa68a759b40bf6aafefc33e267c31cd3",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10130,
+   "clevel": 7,
+   "max_clevel": 7,
+   "max_depth": 3,
+   "depth": 2,
+   "dead": false,
+   "death_cause": "",
+   "keys": 10449
+  }
+ },
+ {
+  "run": "pilot-head-priest",
+  "character": "Human Priest",
+  "seed": 1569794094,
+  "source": "7225eb02 (PR #832 head)",
+  "patch": "the PR",
+  "binary_sha256": "4157f1615bf1cf1e1c9d01670487b8e8b2823bb59b2cd29dc415f7a1647228c7",
+  "keys_log_sha256": "38dd73fd902af2eec2a36caff6ef53fa99929e3098ab1b825b1d893a3931e48a",
+  "messages_log_sha256": "ee7ead32f1d6835df5d273a88de3982b45aed13ee25c4eb2769c7813d1faff3f",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10202,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 11267
+  }
+ },
+ {
+  "run": "pilot-base-ranger",
+  "character": "Human Ranger",
+  "seed": 226104090,
+  "source": "88d98537 (main, the PR base)",
+  "patch": "none",
+  "binary_sha256": null,
+  "keys_log_sha256": "cd2945178bc1d1d907eaa4aff834e0bafbf63becbb4517e40977f7d083795eb6",
+  "messages_log_sha256": "ea7d531edadb570e9795091ec4c03a413812cba2d039af19f4ead38b8dc759f4",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10200,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 17892
+  }
+ },
+ {
+  "run": "pilot-head-ranger",
+  "character": "Human Ranger",
+  "seed": 226104090,
+  "source": "7225eb02 (PR #832 head)",
+  "patch": "the PR",
+  "binary_sha256": "4157f1615bf1cf1e1c9d01670487b8e8b2823bb59b2cd29dc415f7a1647228c7",
+  "keys_log_sha256": "cd2945178bc1d1d907eaa4aff834e0bafbf63becbb4517e40977f7d083795eb6",
+  "messages_log_sha256": "ea7d531edadb570e9795091ec4c03a413812cba2d039af19f4ead38b8dc759f4",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10200,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 17892
+  }
+ },
+ {
+  "run": "pilot-base-rogue",
+  "character": "Human Rogue",
+  "seed": 1502695781,
+  "source": "88d98537 (main, the PR base)",
+  "patch": "none",
+  "binary_sha256": null,
+  "keys_log_sha256": "1de11833834d6c77b323f6272657055f8ba38404ccb6d018ad6ac4db5e26f73c",
+  "messages_log_sha256": "90f658091f5cdb2bc8f584803b655f4796d33d78390aeaeb6cecbebaff531589",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10389,
+   "clevel": 5,
+   "max_clevel": 5,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 14014
+  }
+ },
+ {
+  "run": "pilot-head-rogue",
+  "character": "Human Rogue",
+  "seed": 1502695781,
+  "source": "7225eb02 (PR #832 head)",
+  "patch": "the PR",
+  "binary_sha256": "4157f1615bf1cf1e1c9d01670487b8e8b2823bb59b2cd29dc415f7a1647228c7",
+  "keys_log_sha256": "1de11833834d6c77b323f6272657055f8ba38404ccb6d018ad6ac4db5e26f73c",
+  "messages_log_sha256": "90f658091f5cdb2bc8f584803b655f4796d33d78390aeaeb6cecbebaff531589",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10389,
+   "clevel": 5,
+   "max_clevel": 5,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 14014
   }
  }
 ]
