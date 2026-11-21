@@ -55,3 +55,7 @@
 
 Play them: `~/borg-play/head-3b4924ba` (`./play.sh NAME --to TURN` is the exact game).
 
+
+## Replay inputs
+
+`replay/<SEED>/` holds what replays these deaths exactly without the zoo artifacts: 354395849, 1088421828, 2078477958, 2037495442, 834355294, 2074919561, 470098014, 625213959, 1996566312. Run `runs/replay-zoo-death.sh runs/2026-11-21-reborn-head-3b4924ba/replay/<SEED>`. See `replay/README.md`.
