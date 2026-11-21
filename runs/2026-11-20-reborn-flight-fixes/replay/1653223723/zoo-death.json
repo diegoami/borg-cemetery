@@ -1,0 +1,386 @@
+{
+  "build": {
+    "binary_sha256": "5b46e90988a4463d947f3923450141440b0ff59f0a9df28c59a65fa78d0b801c",
+    "impl": "rust",
+    "ref": "e8b3acfdcfa5059f0e88b47e5c9a8c9fd1e229fa",
+    "replay_keys_sha256": "1981819c14bfa4f7a598fabb52203f8700799ae882d13b535ab313bbadd30859",
+    "repository": "diegoami/borg-reborn-rs",
+    "source_sha256": "00cb51bbf8edc4548295c16ec0d6ca8bf0160c8eaaa8fd6d88cae88e342909a4",
+    "trace_core": {
+      "kept": 200,
+      "lines": 6592,
+      "sha256": "ba55ca88497354b3e0da27479b1b1e544e58c6461889ac904186d57f3411b5e0"
+    }
+  },
+  "bundle": "classes-1800-medium/4.2.6-reborn-rust-flight-e8b3acfd/reborn-flight-flight/1653223723",
+  "cause": "a yellow jelly",
+  "cell": "classes-1800-medium/4.2.6-reborn-rust-flight-e8b3acfd/reborn-flight-flight/1653223723",
+  "character": "Half-Orc Warrior",
+  "error": null,
+  "experiment": "reborn-flight-fixes-medium",
+  "final": {
+    "decisions": null,
+    "depth": 3,
+    "hp": null,
+    "keys": 9248,
+    "kind": "death",
+    "level": 6,
+    "max_depth": 3,
+    "max_level": 6,
+    "turn": 68399
+  },
+  "harness_kind": "borg-rs",
+  "play_sha256": "1981819c14bfa4f7a598fabb52203f8700799ae882d13b535ab313bbadd30859",
+  "profile": "reborn-flight-flight",
+  "record": {
+    "binary_sha256": "5b46e90988a4463d947f3923450141440b0ff59f0a9df28c59a65fa78d0b801c",
+    "birth": "assigned",
+    "boundary": "exact",
+    "cap": 100000,
+    "cause": "a yellow jelly",
+    "character": "Half-Orc Warrior",
+    "class": "Warrior",
+    "compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "config_checked": "written file (effective settings not required for this specimen)",
+    "config_error": null,
+    "config_sha256": "3794a4d03caa350fb9bc871030febd0986b7267568413828f4c7768cc5d9d001",
+    "configuration_file": {
+      "path": "configurations/3794a4d03caa350fb9bc871030febd0986b7267568413828f4c7768cc5d9d001.txt",
+      "sha256": "3794a4d03caa350fb9bc871030febd0986b7267568413828f4c7768cc5d9d001",
+      "source": "Written user/borg.txt from this attempt",
+      "status": "verified"
+    },
+    "effective_settings": null,
+    "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+    "error": null,
+    "evidence": {
+      "cell": "classes-1800-medium/4.2.6-reborn-rust-flight-e8b3acfd/reborn-flight-flight/1653223723",
+      "complete": true,
+      "files": {
+        "archive/Borg.map": {
+          "bytes": 32440,
+          "sha256": "27847770bfff4f45dba39668d5c8d80b32e3432bcc536c069ee48f9b739bc959"
+        },
+        "archive/borg-log.txt": {
+          "bytes": 176,
+          "sha256": "41dbb4c73dc9d4e7d8d98f486d9560762f0d890b511c1e44ea3a87d891fb9dbe"
+        },
+        "archive/borg.dat": {
+          "bytes": 53,
+          "sha256": "886cc56b88df267e0eb24c78883658ff4f650f538bc5d169471685d21ff953e5"
+        },
+        "keys.log": {
+          "bytes": 118895,
+          "sha256": "1981819c14bfa4f7a598fabb52203f8700799ae882d13b535ab313bbadd30859"
+        },
+        "messages.log": {
+          "bytes": 416459,
+          "sha256": "327245a1be0d1b460a16d13c7a9772f07ab2ce4ff3cee5eaf76cae370a6a9bb8"
+        },
+        "params-core.json": {
+          "bytes": 685328,
+          "sha256": "ba6a6692c00bf9f33e7a83e8826d0783560bc6e3cbd4dec9b4ca199cd73b1e96"
+        },
+        "return-events.jsonl": {
+          "bytes": 12206,
+          "sha256": "6e6b4a3e4356dd3113ba304a8fba7142a7dc587bd2304d66af6ba2f642ab644d"
+        },
+        "save/Borg": {
+          "bytes": 63964,
+          "sha256": "b0c648e60834f16862a684b8d02c7f59d4bcfa6d33235d6252e92a3375a69485"
+        },
+        "state.log": {
+          "bytes": 1169147,
+          "sha256": "12c241220ae22fde727978dac042b25e0b41cee3ca448ebded2653109d48b4ef"
+        },
+        "stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "summary.json": {
+          "bytes": 2000,
+          "sha256": "1d420a335d1b13bd8a62d58ed7bd1bc7000e0cd908e8fe378b8e2774ac06bd5f"
+        },
+        "town-recording.json": {
+          "bytes": 1844,
+          "sha256": "2d8e446e152e1361cf40e003a4b9010f7238341ed56d8138e2346d33e003b49a"
+        },
+        "town-transactions.jsonl": {
+          "bytes": 4280,
+          "sha256": "50117977712060910d6d1e1b098299f65db25ee989da2f946e2c9206cdaa6ea5"
+        },
+        "trace-core.jsonl": {
+          "bytes": 23139368,
+          "sha256": "ba55ca88497354b3e0da27479b1b1e544e58c6461889ac904186d57f3411b5e0"
+        },
+        "user/CharOutput.txt": {
+          "bytes": 114,
+          "sha256": "b38a7cd8cef7d248e89ddc246e0bf3be6e29a8124d4131f3756db4883c19347a"
+        },
+        "user/borg.txt": {
+          "bytes": 69520,
+          "sha256": "3794a4d03caa350fb9bc871030febd0986b7267568413828f4c7768cc5d9d001"
+        },
+        "user/lore.txt": {
+          "bytes": 18994,
+          "sha256": "3e900b6b360dcf967a72951dfb2af5f215bb6bb08e679aa6e0bcd59f9bdc89f0"
+        },
+        "user/scary_monsters.txt": {
+          "bytes": 3975,
+          "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d"
+        },
+        "user/window.prf": {
+          "bytes": 393,
+          "sha256": "065d489b097f395404ab33c6c61bbb1013ddbd40269106aaf323d62d76fe80d5"
+        }
+      },
+      "missing_required": [],
+      "schema": "borg-zoo/evidence@1"
+    },
+    "final": {
+      "decisions": null,
+      "depth": 3,
+      "hp": null,
+      "keys": 9248,
+      "kind": "death",
+      "level": 6,
+      "max_depth": 3,
+      "max_level": 6,
+      "turn": 68399
+    },
+    "first_turn_at_depth": {
+      "1": 214,
+      "2": 17590,
+      "3": 67127
+    },
+    "frozen_turn_loop": {
+      "burst_keys": 0,
+      "bursts": 0,
+      "max_keys": 38,
+      "turn": 16150
+    },
+    "harness_kind": "borg-rs",
+    "impl": "rust",
+    "milestones": [
+      {
+        "gold": 95,
+        "level": 3,
+        "max_depth": 2,
+        "turn": 25000
+      },
+      {
+        "gold": 17,
+        "level": 4,
+        "max_depth": 2,
+        "turn": 50000
+      },
+      {
+        "gold": 137,
+        "level": 6,
+        "max_depth": 3,
+        "turn": 75000
+      },
+      {
+        "gold": 137,
+        "level": 6,
+        "max_depth": 3,
+        "turn": 100000
+      }
+    ],
+    "native_reported_settings": null,
+    "observed_outcome": null,
+    "outcome": "death",
+    "plan": null,
+    "platform": "Linux x86_64",
+    "play_sha256": "1981819c14bfa4f7a598fabb52203f8700799ae882d13b535ab313bbadd30859",
+    "played_class": "Warrior",
+    "played_race": "Half-Orc",
+    "profile": "reborn-flight-flight",
+    "profile_applied": "reborn-flight-flight",
+    "profile_sha256": "2af88e09e872131d126d2a3878e92287ebf89a00620ecd10fa6a07af41bb3d0e",
+    "race": "Half-Orc",
+    "requested_profile_settings": {
+      "borg_param_caution_desperate_fast_danger_percent": 50,
+      "borg_param_caution_recall_cure_min_loss_percent": 30,
+      "borg_param_caution_rising_hold_min_hp_percent": 50,
+      "borg_param_caution_stairs_clean_path": 2,
+      "borg_param_caution_stairs_clean_path_flee": 1,
+      "borg_param_caution_stairs_flight_ignore_danger": 1,
+      "borg_reborn_core": "borg-rs",
+      "borg_reborn_errand": "none"
+    },
+    "return_activity": {
+      "already_rising_applications": 0,
+      "application_records": 0,
+      "arrivals_after_custom_goal": 0,
+      "arrivals_with_selling_note": 0,
+      "custom_reasons_by_journey": {},
+      "departures": 49,
+      "general_notes_by_journey": {
+        "scared": 25
+      },
+      "invalid_trip_records": 0,
+      "new_custom_return_goals": 0,
+      "new_return_goals": 0,
+      "qualification": "Actual arrivals use observed depth>0 to depth=0 transitions. Time allocation uses the previous per-key state. Missing state observations are flagged; their zero counts are unavailable observations. Invalid trip lines are counted and retained raw. New goals require v4 application records; older logs cannot establish them. Custom goals exclude co-firing restock. Associations and general notes can overlap; no exclusive counterfactual cause is claimed.",
+      "return_recommendation_records": 0,
+      "sampled_dungeon_turns": 64627,
+      "sampled_town_turns": 3771,
+      "schema": "borg-zoo/return-activity@1",
+      "state_available": true,
+      "town_arrivals": 48,
+      "unfinished_journeys_with_custom_goal": 0
+    },
+    "runner_outcome": "death",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "scary_list": {
+      "base_sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+      "lines": [],
+      "name": "scary_monsters.txt",
+      "sha256": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+      "source": "shipped borg.txt"
+    },
+    "schema": "borg-zoo/cell@1",
+    "seed": 1653223723,
+    "source_sha256": "00cb51bbf8edc4548295c16ec0d6ca8bf0160c8eaaa8fd6d88cae88e342909a4",
+    "specimen": "4.2.6-reborn-rust-flight-e8b3acfd",
+    "specimen_ref": "e8b3acfdcfa5059f0e88b47e5c9a8c9fd1e229fa",
+    "stall": null,
+    "suite": "classes-1800-medium",
+    "town_activity": {
+      "gold_spent": 1044,
+      "items": [
+        {
+          "gold": 12,
+          "item": "4 Rations of Food",
+          "shop_index": 0,
+          "transactions": 1,
+          "units": 4
+        },
+        {
+          "gold": 63,
+          "item": "21 Flasks of oil",
+          "shop_index": 0,
+          "transactions": 1,
+          "units": 21
+        },
+        {
+          "gold": 40,
+          "item": "2 Orange Speckled Potions",
+          "shop_index": 4,
+          "transactions": 1,
+          "units": 2
+        },
+        {
+          "gold": 30,
+          "item": "2 Scrolls titled \"cor illo\"",
+          "shop_index": 4,
+          "transactions": 1,
+          "units": 2
+        },
+        {
+          "gold": 84,
+          "item": "14 Flasks of oil",
+          "shop_index": 0,
+          "transactions": 2,
+          "units": 28
+        },
+        {
+          "gold": 87,
+          "item": "29 Flasks of oil",
+          "shop_index": 0,
+          "transactions": 1,
+          "units": 29
+        },
+        {
+          "gold": 70,
+          "item": "a Metallic Purple Potion",
+          "shop_index": 4,
+          "transactions": 1,
+          "units": 1
+        },
+        {
+          "gold": 99,
+          "item": "33 Flasks of oil",
+          "shop_index": 0,
+          "transactions": 1,
+          "units": 33
+        },
+        {
+          "gold": 50,
+          "item": "a Small Metal Shield [5,+1]",
+          "shop_index": 1,
+          "transactions": 1,
+          "units": 1
+        },
+        {
+          "gold": 66,
+          "item": "an Aquamarine Ring {??}",
+          "shop_index": 5,
+          "transactions": 1,
+          "units": 1
+        },
+        {
+          "gold": 204,
+          "item": "a Dragon Tooth Amulet {??}",
+          "shop_index": 5,
+          "transactions": 1,
+          "units": 1
+        },
+        {
+          "gold": 100,
+          "item": "5 Potions of Cure Light Wounds",
+          "shop_index": 4,
+          "transactions": 1,
+          "units": 5
+        },
+        {
+          "gold": 6,
+          "item": "2 Flasks of oil",
+          "shop_index": 0,
+          "transactions": 1,
+          "units": 2
+        },
+        {
+          "gold": 9,
+          "item": "3 Flasks of oil",
+          "shop_index": 0,
+          "transactions": 1,
+          "units": 3
+        },
+        {
+          "gold": 100,
+          "item": "a Scroll titled \"in pra opor\"",
+          "shop_index": 4,
+          "transactions": 1,
+          "units": 1
+        },
+        {
+          "gold": 24,
+          "item": "8 Flasks of oil",
+          "shop_index": 0,
+          "transactions": 1,
+          "units": 8
+        }
+      ],
+      "purchases": 17,
+      "qualification": "Native retail receipts only. Home transfers require inspection of retained messages; no planned action counts as a completed transaction.",
+      "schema": "borg-zoo/town-activity@1",
+      "wallet_checks": {
+        "True": 17
+      }
+    },
+    "trace_sha256": "1981819c14bfa4f7a598fabb52203f8700799ae882d13b535ab313bbadd30859",
+    "wall_seconds": 15.33539386600006,
+    "world": null
+  },
+  "run_attempt": "1",
+  "run_id": "44738444831",
+  "run_url": "https://github.com/diegoami/borg-zoo/actions/runs/44738444831",
+  "schema": "borg-zoo/death-bundle@1",
+  "seed": 1653223723,
+  "specimen": "4.2.6-reborn-rust-flight-e8b3acfd",
+  "status": "reproduced",
+  "suite": "classes-1800-medium",
+  "zoo_commit": "1fada90d744b223f64f868cc5208520695926427"
+}
