@@ -1,0 +1,228 @@
+[
+ {
+  "run": "warrior-zoo-replay",
+  "character": "Half-Orc Warrior",
+  "seed": 1653223723,
+  "source": "e8b3acfdcfa5059f0e88b47e5c9a8c9fd1e229fa",
+  "patch": "none (the zoo cell replayed)",
+  "binary_sha256": "1e1cd6b412827aff520700b1bab31744c0010e2150485f9ef3d00a2548578def",
+  "keys_log_sha256": "1981819c14bfa4f7a598fabb52203f8700799ae882d13b535ab313bbadd30859",
+  "messages_log_sha256": "327245a1be0d1b460a16d13c7a9772f07ab2ce4ff3cee5eaf76cae370a6a9bb8",
+  "summary": {
+   "stop_reason": "death",
+   "game_turns": 68399,
+   "player_turns": 6951,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 3,
+   "depth": 3,
+   "dead": true,
+   "death_cause": "a yellow jelly",
+   "keys": 9248
+  },
+  "zoo_cell": {
+   "run": 44738444831,
+   "artifact": "deaths-4.2.6-reborn-rust-flight-e8b3acfd-3",
+   "play_sha256": "1981819c14bfa4f7a598fabb52203f8700799ae882d13b535ab313bbadd30859",
+   "binary_sha256": "5b46e90988a4463d947f3923450141440b0ff59f0a9df28c59a65fa78d0b801c"
+  }
+ },
+ {
+  "run": "warrior-take-off",
+  "character": "Half-Orc Warrior",
+  "seed": 1653223723,
+  "source": "e8b3acfdcfa5059f0e88b47e5c9a8c9fd1e229fa",
+  "patch": "e8b3acfd-take-off.patch",
+  "binary_sha256": "cd7eb9f40c14e49914f46493982d42e6f8a03797653b8c38178fd151e408fdf0",
+  "keys_log_sha256": "5b1d9d744ffb540385f7574c6ed795600cade58e2fceb0d3817019a756430bb7",
+  "messages_log_sha256": "703d6fae6cb6765128cbc0aaeff2249b9775b062c33c38f8ecc1e82d772c784c",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10121,
+   "clevel": 7,
+   "max_clevel": 7,
+   "max_depth": 3,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 13943
+  }
+ },
+ {
+  "run": "ranger-base",
+  "character": "Elf Ranger",
+  "seed": 1088421828,
+  "source": "3b4924ba366e7de94c2ded353c705200059b1b90",
+  "patch": "none",
+  "binary_sha256": "703cab0825fbf3bad38b173cddf1cdfa1e4accb28cb6ef87c77d41128870a04e",
+  "keys_log_sha256": "3cbcf8e9a0bc58a483b958042168ba1b189801db8e838b68d20cd151b00c9ea8",
+  "messages_log_sha256": "9dd7d3168b6675d95fb2045deb85d3175d98c2fd6677b18704c96c28e0c97ae7",
+  "summary": {
+   "stop_reason": "death",
+   "game_turns": 6761,
+   "player_turns": 701,
+   "clevel": 2,
+   "max_clevel": 2,
+   "max_depth": 1,
+   "depth": 1,
+   "dead": true,
+   "death_cause": "a giant yellow centipede",
+   "keys": 1643
+  }
+ },
+ {
+  "run": "ranger-take-off-and-gate",
+  "character": "Elf Ranger",
+  "seed": 1088421828,
+  "source": "3b4924ba366e7de94c2ded353c705200059b1b90",
+  "patch": "3b4924ba-take-off-and-gate.patch",
+  "binary_sha256": "27684d9275968099e8bd80f0cfb339605589cfb82e24680c909f11f51c478a4d",
+  "keys_log_sha256": "bbdbc3e297b9c02b57a102ff232b03336286e6cf6d3041da1568c0427da7d92f",
+  "messages_log_sha256": "ac63f433a874701f2b7193dc2520cdd6966e205bcf31082b2c61c2004852a814",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10289,
+   "clevel": 5,
+   "max_clevel": 5,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 20366
+  }
+ },
+ {
+  "run": "priest-base",
+  "character": "Half-Orc Priest",
+  "seed": 354395849,
+  "source": "3b4924ba366e7de94c2ded353c705200059b1b90",
+  "patch": "none",
+  "binary_sha256": "703cab0825fbf3bad38b173cddf1cdfa1e4accb28cb6ef87c77d41128870a04e",
+  "keys_log_sha256": "39b36495405de1bcc95d50fd98477e87f26b77812aaef557d7356cc4e08fbc7c",
+  "messages_log_sha256": "a30ddc53b5a94642aea566c0eb456fe9d4c4b608a6e9d81062029f79b1367114",
+  "summary": {
+   "stop_reason": "death",
+   "game_turns": 93357,
+   "player_turns": 9536,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 3,
+   "depth": 2,
+   "dead": true,
+   "death_cause": "an acolyte",
+   "keys": 11118
+  }
+ },
+ {
+  "run": "priest-take-off-only",
+  "character": "Half-Orc Priest",
+  "seed": 354395849,
+  "source": "3b4924ba366e7de94c2ded353c705200059b1b90",
+  "patch": "3b4924ba-take-off-gate-inert.patch",
+  "binary_sha256": null,
+  "keys_log_sha256": "60390328e493133ab17abc168e4ab6ff02fcaa4cea0556ab60cf1d150a1bf1e5",
+  "messages_log_sha256": "62f6b20f0fdaff5bbadad261385640fa0d3affc60a81ae391e49e6f5b7babd2e",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10152,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 11292
+  }
+ },
+ {
+  "run": "priest-take-off-and-gate",
+  "character": "Half-Orc Priest",
+  "seed": 354395849,
+  "source": "3b4924ba366e7de94c2ded353c705200059b1b90",
+  "patch": "3b4924ba-take-off-and-gate.patch",
+  "binary_sha256": "27684d9275968099e8bd80f0cfb339605589cfb82e24680c909f11f51c478a4d",
+  "keys_log_sha256": "9f66f8963d4f865a61f3f57369849a680a3eea57edf861ad26f210b0ff3eb020",
+  "messages_log_sha256": "ca1aafe7faa02ee3b32973c17afe270f0f6eb313d84ea93f0c1c36963f8c72bd",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10199,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 3,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 11842
+  }
+ },
+ {
+  "run": "head-ranger",
+  "character": "Elf Ranger",
+  "seed": 1088421828,
+  "source": "3be3f186 (PR #832 head)",
+  "patch": "the PR",
+  "binary_sha256": "4e9087d992730aa7ef7eb67b96407bd0a5a6bafd42b3845694bbd798a9834ece",
+  "keys_log_sha256": "e82551899edadd0c72572a47a406a300b3dada564d0924de2afd558448d7834e",
+  "messages_log_sha256": "e813a95a12081491b74f474050b72a04fc839617a631095e773bc8e55644eeca",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10307,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 20500
+  }
+ },
+ {
+  "run": "head-priest",
+  "character": "Half-Orc Priest",
+  "seed": 354395849,
+  "source": "3be3f186 (PR #832 head)",
+  "patch": "the PR",
+  "binary_sha256": "4e9087d992730aa7ef7eb67b96407bd0a5a6bafd42b3845694bbd798a9834ece",
+  "keys_log_sha256": "12429fb943cbbfb54c2c0b8d186d170da8b797d644dd46d5d0d337d501e8b526",
+  "messages_log_sha256": "42b2b61be8350ac71d5a00d21f90af9c9c30231f2409728f146d52628dc66b2f",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10194,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 2,
+   "depth": 1,
+   "dead": false,
+   "death_cause": "",
+   "keys": 11670
+  }
+ },
+ {
+  "run": "head-warrior",
+  "character": "Half-Orc Warrior",
+  "seed": 1653223723,
+  "source": "3be3f186 (PR #832 head)",
+  "patch": "the PR",
+  "binary_sha256": "4e9087d992730aa7ef7eb67b96407bd0a5a6bafd42b3845694bbd798a9834ece",
+  "keys_log_sha256": "bceea11a464959ba0d7f42adfba9e6d530a411503ecbc2c8d1bc267759d5b861",
+  "messages_log_sha256": "ac983dad617d5c1761a284b9d82642d1e41811dcb6c461124ec5781ea2e6a6a7",
+  "summary": {
+   "stop_reason": "turns",
+   "game_turns": 100000,
+   "player_turns": 10121,
+   "clevel": 6,
+   "max_clevel": 6,
+   "max_depth": 2,
+   "depth": 0,
+   "dead": false,
+   "death_cause": "",
+   "keys": 12884
+  }
+ }
+]
