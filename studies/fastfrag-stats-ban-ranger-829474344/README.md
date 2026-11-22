@@ -215,3 +215,32 @@ cures.
   moves. Decisive here, and in the control's code.
 - [borg-reborn-rs#926](https://github.com/diegoami/borg-reborn-rs/issues/926): the Borg's own damage
   over time (the cut there, the poison here) is not in its escape and contact decisions.
+
+## Repeat on borg-reborn-rs `track-p` (`e2d8919e`, 2026-11-22)
+
+The analysis above is of the zoo specimen `7f8c6b80`. `track-p` head `e2d8919e` is 242 commits ahead
+of it (main `b34196c5` is 137 ahead), and it ships `fast_fragile_policy = 1`,
+`fast_fragile_no_heal = 1` and `fast_fragile_by_stats = 0`.
+
+I built `e2d8919e` (`harness/build.sh`) and played the same start from birth, as the zoo writes the
+cell: `track-p`'s `harness/borg.txt` with `borg_respawn_race`/`_class` set. I played it at three
+settings ([data/track-p-e2d8919e.tsv](data/track-p-e2d8919e.tsv)):
+- shipped (1, 0, 1);
+- ctl (0, 0, 0);
+- stats-ban (1, 1, 1).
+
+**Every run lives to the 100,000 cap.** On `track-p` this start plays another game from early on,
+and the fatal situation of this case never arises. In none of the runs is there a "the next turn
+kills" note, a heal-ban note or a white jelly touch.
+
+That is not evidence that the defects are fixed. The code behind them is unchanged on `track-p`:
+- `escape_wanted` counts only the monsters' blows (`borg_fast_fragile.rs:89-91`);
+- the #842 gate is still `hp >= 0` (`borg_caution.rs:2830-2831`);
+- the #760 gate is still the mean damage against HP (`borg_caution.rs:2804-2806`);
+- `fight_before_flight` still comes before `borg_caution` (`borg_think_dungeon.rs:755`, `815`);
+- the wall walk still starts at the Borg's grid (`borg_projection.rs:789`);
+- the stair-flight threat weight is still 5.
+
+The fast-fragile Phase Door now goes through the shared `phase_door` decision, with the landing test
+off by default (`fast_fragile_phase_landing = 0`), so at HP 0 it is still read. With the policy and
+the ban now shipped, borg-reborn-rs#926's path is in the default play of `track-p`.
