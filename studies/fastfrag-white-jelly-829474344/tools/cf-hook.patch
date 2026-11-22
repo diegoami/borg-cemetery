@@ -1,0 +1,79 @@
+diff --git a/borg-core/src/borg.rs b/borg-core/src/borg.rs
+index b57c5209..3812b66e 100644
+--- a/borg-core/src/borg.rs
++++ b/borg-core/src/borg.rs
+@@ -644,6 +644,74 @@ fn generate_keypress(st: &mut BorgState, flush_first: bool) -> keypress {
+ 
+     st.borg.targeting = false;
+ 
++    // SCRATCH (counterfactual, never committed): BORG_CF="TURN:hex hex;..."
++    // queues the scripted keys once, at the first think at or after TURN,
++    // in place of that think.
++    if let Ok(spec) = std::env::var("BORG_CF") {
++        static DONE: std::sync::Mutex<Vec<usize>> = std::sync::Mutex::new(Vec::new());
++        let now = engine::game_turn();
++        for (i, part) in spec.split(';').enumerate() {
++            let Some((t, ks)) = part.split_once(':') else { continue };
++            let Ok(t) = t.trim().parse::<i32>() else { continue };
++            let mut done = DONE.lock().unwrap();
++            if now >= t && !done.contains(&i) {
++                done.push(i);
++                drop(done);
++                borg_note(st, &format!("# CF inject at turn {now}: {ks}"));
++                if ks.contains("DUMP") {
++                    crate::borg_log::borg_write_map(st, false);
++                    let lines: Vec<String> = st.items.items.iter().enumerate().filter(|(_, it)| it.iqty != 0).map(|(n, it)| {
++                        let d: Vec<u8> = it.desc.iter().take_while(|&&c| c != 0).map(|&c| c as u8).collect();
++                        format!("# CF item {n}: {} x{} tval {}", String::from_utf8_lossy(&d), it.iqty, it.tval)
++                    }).collect();
++                    for l in lines { borg_note(st, &l); }
++                    let less: Vec<(i32,i32)> = (0..st.stairs.less.num as usize).map(|i| (st.stairs.less.y[i], st.stairs.less.x[i])).collect();
++                    let more: Vec<(i32,i32)> = (0..st.stairs.more.num as usize).map(|i| (st.stairs.more.y[i], st.stairs.more.x[i])).collect();
++                    for yy in 0..24 {
++                        let row: Vec<String> = (55..100).map(|xx| { let c = st.flow.cost_at(yy, xx); if c >= 250 { " ..".to_string() } else { format!("{:3}", c) } }).collect();
++                        borg_note(st, &format!("# CF cost y{yy:02} {}", row.join("")));
++                    }
++                    for yy in 0..40 {
++                        let row: String = (40..130).map(|xx| {
++                            if !engine::square_in_bounds(xx, yy) { return ' '; }
++                            if engine::square_monster_midx(xx, yy).is_some() { return 'M'; }
++                            match engine::square_feat(xx, yy) { 1 => '.', 2 => '+', 3 | 4 => '\'', 5 => '<', 6 => '>', 15 => 'S', 16 | 24 => ':', 17..=20 => '%', 21 => '#', 22 => 'P', 0 => ' ', _ => '?' }
++                        }).collect();
++                        borg_note(st, &format!("# CF true y{yy:02} {row}"));
++                    }
++                    for yy in 0..40 {
++                        let row: String = (40..130).map(|xx| {
++                            let ag = st.cave.grid(xx, yy);
++                            if ag.kill != 0 { return 'M'; }
++                            match u32::from(ag.feat) { 1 => '.', 2 => '+', 3 | 4 => '\'', 5 => '<', 6 => '>', 15 => 'S', 16 | 24 => ':', 17..=20 => '%', 21 => '#', 22 => 'P', 0 => ' ', _ => '?' }
++                        }).collect();
++                        borg_note(st, &format!("# CF borg y{yy:02} {row}"));
++                    }
++                    for yy in 0..20 {
++                        let row: Vec<String> = (80..100).map(|xx| { let d = crate::borg_danger::borg_danger(st, yy, xx, 1, true, false); format!("{:4}", d.min(9999)) }).collect();
++                        borg_note(st, &format!("# CF danger y{yy:02} x80.. {}", row.join("")));
++                    }
++                    let ks: Vec<String> = (1..st.kills.nxt as usize).filter(|&i| st.kills.kills[i].r_idx != 0).map(|i| { let k = &st.kills.kills[i]; let n = engine::race_name(usize::from(k.r_idx)); format!("{}@({},{}) awake={} when={} speed={}", String::from_utf8_lossy(&n), k.pos.y, k.pos.x, k.awake, k.when, k.speed) }).collect();
++                    borg_note(st, &format!("# CF kills {}", ks.join("; ")));
++                    let mut ms = Vec::new();
++                    for yy in 1..65 { for xx in 1..197 { if let Some(m) = engine::square_monster(xx, yy) { if let Some(r) = m.ridx { let n = engine::race_name(r as usize); ms.push(format!("{}#{}@({},{}) hp {}/{} sleep {}", String::from_utf8_lossy(&n), m.midx, yy, xx, m.hp, m.maxhp, m.m_timed[0])); } } } }
++                    borg_note(st, &format!("# CF engine monsters {}", ms.join("; ")));
++                    borg_note(st, &format!("# CF stairs less(y,x) {:?} more(y,x) {:?} at ({},{})", less, more, st.borg.c.y, st.borg.c.x));
++                }
++                for h in ks.split_whitespace() {
++                    if let Ok(k) = u32::from_str_radix(h, 16) {
++                        crate::borg_io::borg_keypress(st, k as _);
++                    }
++                }
++                let borg_ch = borg_inkey(st, true);
++                if borg_ch != 0 {
++                    key.code = borg_ch;
++                    return key;
++                }
++            }
++        }
++    }
++
+     // Swap in the Borg's own RNG around thinking
+     let (rand_quick, rand_value) = engine::rand_state();
+     engine::set_rand_state(true, st.core.rand_local);
