@@ -1,0 +1,73 @@
+diff --git a/borg-core/src/borg_fast_fragile.rs b/borg-core/src/borg_fast_fragile.rs
+index f0fb2bd0..5aa0c628 100644
+--- a/borg-core/src/borg_fast_fragile.rs
++++ b/borg-core/src/borg_fast_fragile.rs
+@@ -283,6 +283,7 @@ pub(crate) fn escape_instead(st: &mut BorgState, target: usize, f: &Facts) -> bo
+ /// available) is not made: the Borg attacks, as before the potion would
+ /// have been quaffed.
+ pub(crate) fn heal_banned(st: &mut BorgState) -> bool {
++    if crate::cf_hook::unbanned() { return false; }
+     if param(Param::fast_fragile_no_heal) == 0 || param(Param::attack_on_sight) == 0 {
+         return false;
+     }
+diff --git a/borg-core/src/borg_think_dungeon.rs b/borg-core/src/borg_think_dungeon.rs
+index 3f9ca03e..b11a4cb1 100644
+--- a/borg-core/src/borg_think_dungeon.rs
++++ b/borg-core/src/borg_think_dungeon.rs
+@@ -722,6 +722,11 @@ pub fn borg_think_dungeon(st: &mut BorgState) -> bool {
+     /* examine equipment and swaps */
+     borg_notice(st, true);
+ 
++    // LOCAL COUNTERFACTUAL HOOK (not for commit): BORG_CF="T:action,..."
++    if crate::cf_hook::fire(st) {
++        return choice!("cf_hook");
++    }
++
+     let town_hunt = crate::borg_town_hunt::think(st);
+     if town_hunt == crate::borg_town_hunt::Hunt::Retreat {
+         start_leaving_fleeing(st, "town hunt");
+diff --git a/borg-core/src/cf_hook.rs b/borg-core/src/cf_hook.rs
+new file mode 100644
+index 00000000..bff8e448
+--- /dev/null
++++ b/borg-core/src/cf_hook.rs
+@@ -0,0 +1,29 @@
++//! LOCAL COUNTERFACTUAL HOOK, never committed.
++use crate::state::BorgState;
++use std::sync::Mutex;
++static PENDING: Mutex<Option<Vec<(i32, String)>>> = Mutex::new(None);
++fn load() -> Vec<(i32, String)> {
++    std::env::var("BORG_CF").unwrap_or_default().split(',').filter(|s| !s.is_empty())
++        .map(|s| { let (t, a) = s.split_once(':').unwrap(); (t.parse().unwrap(), a.to_string()) }).collect()
++}
++pub(crate) fn unbanned() -> bool {
++    std::env::var("BORG_CF_UNBAN").ok().and_then(|v| v.parse::<i32>().ok()).is_some_and(|t| crate::engine::game_turn() >= t)
++}
++pub(crate) fn fire(st: &mut BorgState) -> bool {
++    let mut g = PENDING.lock().unwrap();
++    if g.is_none() { *g = Some(load()); }
++    let list = g.as_mut().unwrap();
++    let now = crate::engine::game_turn();
++    let Some(pos) = list.iter().position(|(t, _)| now >= *t) else { return false };
++    let (t, a) = list.remove(pos);
++    let v = st.item_val;
++    let ok = match a.as_str() {
++        "speed" => crate::borg_item_use::borg_quaff_potion(st, v.sv_potion_speed),
++        "clw" => crate::borg_item_use::borg_quaff_potion(st, v.sv_potion_cure_light),
++        "csw" => crate::borg_item_use::borg_quaff_potion(st, v.sv_potion_cure_serious),
++        "phase" => crate::borg_item_use::borg_read_scroll(st, v.sv_scroll_phase_door),
++        _ => false,
++    };
++    crate::borg_io::borg_note(st, &format!("# CF hook: {a} at turn {now} (asked {t}): {}", if ok { "done" } else { "FAILED" }));
++    ok
++}
+diff --git a/borg-core/src/lib.rs b/borg-core/src/lib.rs
+index be0d82c2..20a55e44 100644
+--- a/borg-core/src/lib.rs
++++ b/borg-core/src/lib.rs
+@@ -123,4 +123,5 @@ pub fn do_cmd_borg() {
+ pub mod errands_plan;
+ pub mod scary_list;
+ mod borg_fast_fragile;
++mod cf_hook;
+ mod borg_town_hunt;
