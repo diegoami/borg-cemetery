@@ -273,7 +273,9 @@ The arms above ran on 7f8c6b80, the death's build: a main commit, 242 commits be
 - **The switches act.** Every "+all" game splits from its control. #911's take acted 263 times and #908's walk refusal 10 times. The outmatched heal (#909) never acted. #907's and #910's switches leave no note of their own.
 - **Levels.** The total character level is 60 in both `ctl` arms.
 
-These games show that the switches act on `track-p`, with no new death in 18 games. They cannot show a rescue, because nothing died. That is borg-zoo#643's measurement, which runs on `608d9fed`.
+**After merging `track-p` `4b2c2fcf`.** All five branches were then merged with `track-p` `4b2c2fcf` (top `94a3778a`), and the 36 games were played again ([counterfactuals/trackp-94a3778a-named-cases.jsonl](counterfactuals/trackp-94a3778a-named-cases.jsonl)). All 36 key streams are identical to the `608d9fed` runs.
+
+These games show that the switches act on `track-p`, with no new death in 18 games. They cannot show a rescue, because nothing died. That is borg-zoo#643's measurement, now on `94a3778a`.
 
 ## Limits
 
