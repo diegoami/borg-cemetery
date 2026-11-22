@@ -193,7 +193,11 @@ No line mentioning stun changed in those commits. Seed 390305857 on a track-p bu
 
 ## Issues
 
-ISSUES_PLACEHOLDER
+All four are in borg-reborn-rs, labelled `bug`, with no track (the owner chooses). Every threshold in them is a hypothesis (RULES 14).
+- [diegoami/borg-reborn-rs#949](https://github.com/diegoami/borg-reborn-rs/issues/949): stun is not in `BI_TODAM`/`BI_TOHIT`, and the race has no stun gate (§1, §2).
+- [diegoami/borg-reborn-rs#950](https://github.com/diegoami/borg-reborn-rs/issues/950): "You fail to harm" is not parsed, so 28 zero-damage blows never change the estimate (§2).
+- [diegoami/borg-reborn-rs#951](https://github.com/diegoami/borg-reborn-rs/issues/951): "winning" pre-empts every heal, escape and stun cure until HP is inside one maximum blow (§3, §5). Related to #910.
+- [diegoami/borg-reborn-rs#952](https://github.com/diegoami/borg-reborn-rs/issues/952): #483's rising hold keeps the fleeing Borg on the down staircase. It is #753's loop with no exception for this hold (§4).
 
 ## Files
 
