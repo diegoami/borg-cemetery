@@ -12,7 +12,7 @@ A second trial carved a short lane and added a wild dog at (126,54) with the ori
 
 ## Restore Life Levels
 
-Candidate source [61d2b08d](https://github.com/diegoami/borg-reborn-rs/commit/61d2b08d99b2214d5b72e59289eb368bd772c86a). An initial trial added one known potion to the checkpoint, but the unresolved combat from the independent base continued to take priority during the 200-turn window. For the controlled recovery trial, the setup also removed the level's monsters. The Mage started at 711,985/714,369 XP. At turn 10,815,161 the Borg quaffed Restore Life Levels. Angband printed “You feel your life energies returning” and XP reached 714,369. The 713,458 XP figure in the original report was the pre-drain reading, while 714,369 is the saved maximum verified in this trial.
+Candidate source [6a80619a764cecb6f6967c428bb791a2a676dc86](https://github.com/diegoami/borg-reborn-rs/commit/6a80619a764cecb6f6967c428bb791a2a676dc86). An initial trial added one known potion to the checkpoint, but the unresolved combat from the independent base continued to take priority during the 200-turn window. For the controlled recovery trial, the setup also removed the level's monsters. The Mage started at 711,985/714,369 XP. At turn 10,815,161 the Borg quaffed Restore Life Levels. Angband printed “You feel your life energies returning” and XP reached 714,369. The 713,458 XP figure in the original report was the pre-drain reading, while 714,369 is the saved maximum verified in this trial.
 
 The source regression uses the live town decision solver with an Alchemist offer priced at 400. It chooses Buy when drained at both 400 and 787,811 gold, and when healthy with a one-copy reserve enabled. It leaves when the offer is absent or unaffordable. A healthy Mage with one carried copy sells it with the reserve off and keeps it with the reserve on. Dungeon junking covers one-copy drops, whole-stack drops, and the desperate full-pack fallback. These are controlled tests. The original shop visits did not establish offer availability.
 
@@ -33,3 +33,17 @@ BORG_ERRANDS_PLAN="$out/user/errands_plan.txt" \
 ```
 
 Saved message history has turn zero in the exported logs. Assess trial behavior only on messages with turns at or after 10,815,143 and the matching Borg decision trace. All branches share one starting life.
+
+## Validation receipts
+
+The unchanged default borg-rs smoke references matched all three runs for
+each candidate. An intermediate restoration candidate applied split quantities
+to every town drop. The Warrior differed at turn 4,648 when it dropped one
+Potion of Confusion instead of a stack of four. The final candidate limits
+the split to the enabled restoration reserve, and all three logs match again.
+
+| Trial | Isolated binary SHA-256 | State log SHA-256 |
+| --- | --- | --- |
+| Checkpoint with startup acknowledgment | `c06154e92cba8b6362f50fc6e92306d05414791eb3fd8839204d13b42fa541b3` | `4385d75b8d26af80af01d08957ad076053005b98d25adf248c858316383ce711` |
+| Constructed clear dog | `ec2ba70fa7fcbbd94ffd06a8a3240a3c29b9a9644d3bbb1a40628c3e85e4cc74` | `efdf691e64952a6343671652fad7ae40bf2357f4b914cb8b8279081f57518dec` |
+| Constructed carried potion | `e438c85dada0fd147381b1ebdc48b31eb22c800a79ee6ea51fcfce95d0fd7e1d` | `172506a0ec49d2c0dd8075a394962cdba7ab36c3f99db87be63a0b91f2533ca0` |
