@@ -63,7 +63,7 @@ class DeathPagesTest(unittest.TestCase):
                     continue
                 for target in re.findall(r'\]\(([^)]+)\)', content):
                     if not target.startswith(('https://', 'http://', '#')):
-                        self.assertTrue((page.parent / target).exists(), f'{page}: {target}')
+                        self.assertTrue((page.parent / target.split('#')[0]).exists(), f'{page}: {target}')
 
 
 if __name__ == '__main__':
