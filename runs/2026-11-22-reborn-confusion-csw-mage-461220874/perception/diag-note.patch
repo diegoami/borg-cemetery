@@ -1,0 +1,28 @@
+diff --git a/borg-core/src/borg_flow_kill.rs b/borg-core/src/borg_flow_kill.rs
+index 77b04af9..e7b6f168 100644
+--- a/borg-core/src/borg_flow_kill.rs
++++ b/borg-core/src/borg_flow_kill.rs
+@@ -709,6 +709,23 @@ pub fn borg_follow_kill(st: &mut BorgState, i: i32) {
+         return;
+     }
+ 
++    // DIAG (scratch, not for commit): what the game knows about this grid.
++    {
++        let ag = *st.cave.grid(ox, oy);
++        let midx = engine::square_monster_midx(ox, oy);
++        #[allow(unsafe_code)]
++        let (lit, glow, mflag, cur_light) = unsafe {
++            let c = crate::headers::cave_h::cave;
++            let g = loc { x: ox, y: oy };
++            let m = crate::headers::cave_h::square_monster(c, g);
++            let mf = if m.is_null() { -1i64 } else { (*m).mflag[0] as i64 | (((*m).mflag[1] as i64) << 8) };
++            let pl = &*crate::headers::player_h::player;
++            (crate::headers::cave_h::square_islit(c, g), crate::headers::cave_h::square_isglow(c, g), mf, pl.state.cur_light)
++        };
++        let s = format!("# DIAG follow: kill at ({},{}) borg at ({},{}) info {:#x} game midx {:?} islit {} isglow {} mflag {:#x} cur_light {} seen {} when {} now {}",
++            oy, ox, st.borg.c.y, st.borg.c.x, ag.info, midx, lit, glow, mflag, cur_light, kill.seen, kill.when, st.borg.time.now);
++        crate::borg_io::borg_note(st, &s);
++    }
+     // Note
+     note(
+         st,
