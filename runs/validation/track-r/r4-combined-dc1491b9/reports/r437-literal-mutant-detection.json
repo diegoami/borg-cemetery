@@ -1,0 +1,12 @@
+{
+  "source_commit": "af6aa1e0071b9a459301c20429fd11559cdb0007",
+  "mutant": "ported value > cap changed to >= cap",
+  "detected": true,
+  "mismatch_count": 2,
+  "native": 5,
+  "ported": 1,
+  "run_exit": 0,
+  "outcome": "turn-cap; check mode records mismatches without terminating",
+  "driver_expectation_error": "driver expected nonzero harness exit; its own exit1 is not a game failure",
+  "build_id": "/workspace/work/r437-evidence/builds/literal-mutant/BUILD_ID"
+}

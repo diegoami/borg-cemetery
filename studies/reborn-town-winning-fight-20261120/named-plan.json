@@ -1,0 +1,102 @@
+{
+  "scope": "two exact named smoke starts and the previously named naga regression; no population arm",
+  "turn_cap": 100000,
+  "cases": [
+    [
+      101,
+      0,
+      0,
+      "control",
+      0
+    ],
+    [
+      101,
+      0,
+      0,
+      "candidate",
+      0
+    ],
+    [
+      101,
+      0,
+      0,
+      "candidate",
+      2
+    ],
+    [
+      101,
+      0,
+      0,
+      "control",
+      1
+    ],
+    [
+      101,
+      0,
+      0,
+      "candidate",
+      1
+    ],
+    [
+      102,
+      2,
+      1,
+      "control",
+      0
+    ],
+    [
+      102,
+      2,
+      1,
+      "candidate",
+      0
+    ],
+    [
+      102,
+      2,
+      1,
+      "candidate",
+      2
+    ],
+    [
+      102,
+      2,
+      1,
+      "control",
+      1
+    ],
+    [
+      102,
+      2,
+      1,
+      "candidate",
+      1
+    ],
+    [
+      807683971,
+      0,
+      7,
+      "control",
+      1
+    ],
+    [
+      807683971,
+      0,
+      7,
+      "candidate",
+      1
+    ]
+  ],
+  "snapshots": {
+    "control": {
+      "head": "d7e58cdf1d9bc47655d4e476ab452816ff418935",
+      "game": "/tmp/T788-town-fight/control-game-d7e58cdf",
+      "harness": "/tmp/T788-town-fight/control-harness-d7e58cdf"
+    },
+    "candidate": {
+      "head": "5f41b563be3f3e2d10345c255cbd4d208757ac04",
+      "game": "/tmp/T788-town-fight/candidate-game-5f41b563",
+      "harness": "/tmp/T788-town-fight/candidate-harness-5f41b563"
+    }
+  }
+}
