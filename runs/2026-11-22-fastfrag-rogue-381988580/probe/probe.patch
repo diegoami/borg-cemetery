@@ -1,0 +1,197 @@
+diff --git a/engine/frontend/main-borgh.c b/engine/frontend/main-borgh.c
+index 1c7a7d3d..06318166 100644
+--- a/engine/frontend/main-borgh.c
++++ b/engine/frontend/main-borgh.c
+@@ -96,9 +96,13 @@
+ #include "obj-make.h"
+ #include "obj-pile.h"
+ #include "obj-util.h"
++#include "obj-desc.h"
++#include "store.h"
+ #include "mon-util.h"
+ #include "mon-make.h"
+ #include "cave.h"
++#include "obj-util.h"
++#include "player-calcs.h"
+ #include "object.h"
+ #include "player.h"
+ #include "player-calcs.h"
+@@ -593,6 +597,130 @@ static void borgh_state(void)
+ 		(unsigned long long)rh);
+ }
+ 
++
++/* ---- scratch probe (not committed; cemetery case D-d97a18672a49) ---- */
++#include "mon-util.h"
++#include "monster.h"
++#include "cave.h"
++extern bool (*borgh_inject_hook)(struct keypress *k);
++static FILE *probe_mon_fp, *probe_scr_fp;
++static long probe_from, probe_last_turn = -1;
++static long probe_inject_at = -1; static int probe_inj_n, probe_inj_i;
++static keycode_t probe_inj[64];
++static void probe_screen(FILE *fp)
++{
++	int x, y, a; wchar_t c; char buf[8];
++	if (!Term) return;
++	for (y = 0; y < Term->hgt; y++) {
++		for (x = 0; x < Term->wid; x++) {
++			int n; (void)Term_what(x, y, &a, &c);
++			n = wctomb(buf, c); if (n <= 0) { buf[0] = '?'; n = 1; }
++			fwrite(buf, 1, n, fp);
++		}
++		fputc('\n', fp);
++	}
++}
++static void probe_dump(void)
++{
++	int i;
++	if (!player || !cave || !player->timed) return;
++	{
++		static FILE *sfp; static int last_depth = -1; const char *sv = getenv("PROBE_STORES");
++		if (sv && !sfp) { sfp = fopen(sv, "w"); setvbuf(sfp, NULL, _IOLBF, 0); }
++		if (sfp && player->depth == 0 && last_depth != 0 && stores) {
++			int n; struct object *o;
++			fprintf(sfp, "TOWN T%ld K%ld au%ld\n", (long)turn, keys_logged, (long)player->au);
++			for (n = 0; n < z_info->store_max; n++) {
++				if (stores[n].feat != FEAT_STORE_BLACK && stores[n].feat != FEAT_STORE_ALCHEMY) continue;
++				for (o = stores[n].stock; o; o = o->next)
++					fprintf(sfp, "  store%d %s x%d [tval%d sv%d] price%d\n", n, o->kind->name, o->number, o->tval, o->sval,
++						price_item(&stores[n], o, false, 1));
++			}
++		}
++		last_depth = player->depth;
++	}
++	if ((long)turn < probe_from) return;
++	{
++		static bool inv_done; const char *iv = getenv("PROBE_INV");
++		if (iv && !inv_done && probe_mon_fp) {
++			int j; inv_done = true;
++			for (j = 0; j < z_info->pack_size; j++) {
++				struct object *o = player->upkeep->inven[j];
++				if (!o) break;
++				fprintf(probe_mon_fp, "  inv %c %s x%d [tval%d sv%d]\n", 'a' + j, o->kind->name, o->number, o->tval, o->sval);
++			}
++			for (j = 0; j < player->body.count; j++) {
++				struct object *o = slot_object(player, j);
++				if (o) fprintf(probe_mon_fp, "  eq %d %s [tval%d sv%d] (%+d,%+d) [%d,%+d]\n", j, o->kind->name, o->tval, o->sval, o->to_h, o->to_d, o->ac, o->to_a);
++			}
++		}
++	}
++	if (probe_mon_fp) {
++		fprintf(probe_mon_fp, "K%ld T%ld P%d,%d hp%d e%d\n", keys_logged, (long)turn,
++			player->grid.x, player->grid.y, player->chp, player->energy);
++		{
++			struct object *w = equipped_item_by_slot_name(player, "weapon");
++			fprintf(probe_mon_fp, "  S thn%d toh%d tod%d blows%d spd%d ac%d w%s %dd%d (%+d,%+d)\n",
++				player->state.skills[SKILL_TO_HIT_MELEE], player->state.to_h, player->state.to_d,
++				player->state.num_blows, player->state.speed, player->state.ac + player->state.to_a,
++				w ? "+" : "-", w ? w->dd : 0, w ? w->ds : 0, w ? w->to_h : 0, w ? w->to_d : 0);
++		}
++		if (getenv("PROBE_OBJ")) {
++			struct loc g;
++			for (g.y = 0; g.y < cave->height; g.y++) for (g.x = 0; g.x < cave->width; g.x++) {
++				struct object *o;
++				if (distance(player->grid, g) > 30) continue;
++				for (o = square_object(cave, g); o; o = o->next) {
++					fprintf(probe_mon_fp, "  o @%d,%d %s x%d [tval%d sv%d] seen%d\n", g.x, g.y, o->kind->name, o->number, o->tval, o->sval, square_isseen(cave, g) ? 1 : 0);
++				}
++			}
++		}
++		for (i = 1; i < cave_monster_max(cave); i++) {
++			struct monster *mon = cave_monster(cave, i);
++			if (!mon->race) continue;
++			if (distance(player->grid, mon->grid) > 25) continue;
++			fprintf(probe_mon_fp, "  m%d %s @%d,%d d%d hp%d/%d spd%d fast%d slow%d sleep%d en%d vis%d view%d\n",
++				i, mon->race->name, mon->grid.x, mon->grid.y,
++				distance(player->grid, mon->grid), mon->hp, mon->maxhp,
++				mon->mspeed, mon->m_timed[MON_TMD_FAST], mon->m_timed[MON_TMD_SLOW],
++				mon->m_timed[MON_TMD_SLEEP], mon->energy,
++				monster_is_visible(mon) ? 1 : 0,
++				square_isview(cave, mon->grid) ? 1 : 0);
++		}
++	}
++	if (probe_scr_fp && (long)turn != probe_last_turn) {
++		fprintf(probe_scr_fp, "==== K%ld T%ld\n", keys_logged, (long)turn);
++		probe_screen(probe_scr_fp);
++		probe_last_turn = (long)turn;
++	}
++}
++static bool probe_inject(struct keypress *k)
++{
++	if (probe_inject_at < 0 || keys_logged < probe_inject_at || probe_inj_i >= probe_inj_n) return false;
++	memset(k, 0, sizeof(*k));
++	k->type = EVT_KBRD; k->code = probe_inj[probe_inj_i++];
++	return true;
++}
++static void probe_init(void)
++{
++	const char *v;
++	if ((v = getenv("PROBE_FROM"))) probe_from = atol(v);
++	if ((v = getenv("PROBE_MON"))) { probe_mon_fp = fopen(v, "w"); setvbuf(probe_mon_fp, NULL, _IOLBF, 0); }
++	if ((v = getenv("PROBE_SCREENS"))) { probe_scr_fp = fopen(v, "w"); setvbuf(probe_scr_fp, NULL, _IOLBF, 0); }
++	if ((v = getenv("PROBE_INJECT_AT"))) probe_inject_at = atol(v);
++	if ((v = getenv("PROBE_INJECT_KEYS"))) {
++		char tmp[512]; char *tok, *save;
++		my_strcpy(tmp, v, sizeof(tmp));
++		for (tok = strtok_r(tmp, " ", &save); tok && probe_inj_n < 64; tok = strtok_r(NULL, " ", &save)) {
++			if (streq(tok, "ESC")) probe_inj[probe_inj_n++] = ESCAPE;
++			else if (streq(tok, "RET")) probe_inj[probe_inj_n++] = KC_ENTER;
++			else if (tok[0] == '0' && tok[1] == 'x') probe_inj[probe_inj_n++] = (keycode_t)strtol(tok, NULL, 16);
++			else probe_inj[probe_inj_n++] = (keycode_t)(unsigned char)tok[0];
++		}
++	}
++	borgh_inject_hook = probe_inject;
++}
++/* ---- end probe ---- */
+ /**
+  * Observer for every key returned by inkey_hack.
+  */
+@@ -627,6 +755,7 @@ static void borgh_key(struct keypress k)
+ 			(unsigned long)k.code, (unsigned)k.mods);
+ 	}
+ 	borgh_state();
++	probe_dump();
+ 
+ 	/* Stop conditions */
+ 	if (opt_keys > 0 && keys_logged >= opt_keys) borgh_finish("keys");
+@@ -1187,6 +1316,7 @@ errr init_borgh(int argc, char *argv[])
+ 
+ 	borgh_turn_hook = borgh_tick;
+ 	borgh_key_hook = borgh_key;
++	probe_init();
+ 	borgh_message_hook = borgh_message;
+ 	borgh_command_hook = opt_checkpoint_dir ? borgh_checkpoint : NULL;
+ 
+diff --git a/engine/patches/06-key-log.patch b/engine/patches/06-key-log.patch
+index 0a689ddd..d2fce035 100644
+--- a/engine/patches/06-key-log.patch
++++ b/engine/patches/06-key-log.patch
+@@ -6,22 +6,24 @@ USE_BORGH hunks only (docs/PROVENANCE.md). Apply with patch -p1 in the tree.
+ 
+ --- a/src/ui-input.c
+ +++ b/src/ui-input.c
+-@@ -131,6 +131,11 @@
++@@ -131,6 +131,12 @@
+  
+  #endif /* ALLOW_BORG */
+  
+ +#ifdef BORG_HARNESS
+ +/* borg-rs harness: observer for every key returned by inkey_hack */
+ +void (*borgh_key_hook)(struct keypress k) = NULL;
+++bool (*borgh_inject_hook)(struct keypress *k) = NULL;
+ +#endif /* BORG_HARNESS */
+ +
+  /**
+   * Get a keypress from the user.
+   *
+-@@ -225,6 +230,10 @@
++@@ -225,6 +231,10 @@
+  	if (inkey_hack)
+  	{
+- 		ke.key = (*inkey_hack)(inkey_xtra);
++-		ke.key = (*inkey_hack)(inkey_xtra);
+++		if (!(borgh_inject_hook && (*borgh_inject_hook)(&ke.key))) ke.key = (*inkey_hack)(inkey_xtra);
+ +#ifdef BORG_HARNESS
+ +		/* borg-rs harness: log the key (the oracle for C/Rust diffs) */
+ +		if (borgh_key_hook) (*borgh_key_hook)(ke.key);
