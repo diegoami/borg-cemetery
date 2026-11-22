@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `7e6e11b115def06ed4276cdb7afb66062433fa34e7f68058d9eae01ac364d71c`.
+Input inventory SHA-256: `5a0f235a9c24a66485c634ad2c065f7643abc3ed11272a5f6633a9e977553edf`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
@@ -47,6 +47,7 @@ The companion snapshot for an external source retains normalized statistical fie
 | a large kobold | 1 |
 | a yellow jelly | 1 |
 | a giant green frog | 1 |
+| a green worm mass | 1 |
 | a pseudo-dragon | 1 |
 | a killer brown beetle | 1 |
 | a griffon | 1 |
@@ -63,9 +64,9 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 213 | 782 | 13847 | 46469.53 | 1094860 |
-| depth | 188 | 0 | 1 | 1.43 | 18 |
-| level | 188 | 1 | 2 | 2.89 | 12 |
+| turn | 214 | 782 | 13847 | 47068.28 | 1094860 |
+| depth | 189 | 0 | 1 | 1.43 | 18 |
+| level | 189 | 1 | 2 | 2.92 | 12 |
 
 ## Characters
 
@@ -88,10 +89,10 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Dunadan Mage | 4 |
 | Human Mage | 4 |
 | Half-Elf Blackguard | 4 |
+| Human Priest | 4 |
 | Elf Rogue | 4 |
 | Elf Mage | 4 |
 | Half-Elf Ranger | 3 |
-| Human Priest | 3 |
 | Dunadan Blackguard | 3 |
 | Half-Orc Priest | 3 |
 | Half-Orc Necromancer | 3 |
