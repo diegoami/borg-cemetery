@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-9cbd3a86c931760f52151912dae87c6964f506032b7287eae9e76849c75386b0",
+  "run_kind": "harness",
+  "character": "Gnome Priest",
+  "raw_cause": "a grey mushroom patch",
+  "terminal": {
+    "cause": "a grey mushroom patch",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 4712,
+    "race_idx": 4,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 327746368,
+    "flags": "-",
+    "git_rev": "9085c2665c04b9b584dd744e7c23119a1dd5d937",
+    "git_dirty": "no",
+    "source_sha256": "495dc5126994b171a3f3675472c821debf876810103d224b88e2e39190c4c14e",
+    "binary_sha256": "0d119834946bbae27d88e4993f6cd5e71a510568b70869c6a29466257c3b4d1b",
+    "borg_txt_sha256": "9c259f0486bc2be7d7b1929b64ada39a1cb04f3a06cdcb3f63f870e032616708",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 188,
+    "of": 188
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 45028029063, artifact deaths-4.2.6-reborn-rust-trackp-9085c266-10, classes-1800-full/4.2.6-reborn-rust-trackp-9085c266/reborn-head-shipped/327746368 (https://github.com/diegoami/borg-zoo/actions/runs/45028029063, 90-day retention)",
+      "result_sha256": "eea9735d361de8cf6276550f3e05ead4697702aac5e1cad9fb96d118a11074bb",
+      "raw_sha256": {
+        "keys.log": "eea9735d361de8cf6276550f3e05ead4697702aac5e1cad9fb96d118a11074bb",
+        "messages.log": "688d53ca62915ddd4ab78e248a806fe75a1c414f0501ec5c0a023fdcca2f8242",
+        "state.log": "96d97d7996c466f0c8a7cbd786e142d6e17a535fb4af1be131a04993a3219c50"
+      },
+      "source_commit": "9085c2665c04b9b584dd744e7c23119a1dd5d937",
+      "binary_sha256": "0d119834946bbae27d88e4993f6cd5e71a510568b70869c6a29466257c3b4d1b"
+    }
+  ],
+  "encounter_family": "start-869be74797d9fd7c13139e124bda6387e3619f0b7023169e61cffeab54dfd0ef",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "6ef9b26651103853fe560096403a83bfabc76e4cbc14afa2ef28f5c2ee68b4b9",
+    "config.txt": "b8d1d70338ee2a33eb4013f471a1cf04ffcf0df640145810c5df20bc8cc184a7",
+    "params-core.json": "21a3f54b2b66ed61ae5630046933d412ae1aeacb7bdee43f570ef57da8638d31",
+    "scary_list.txt": "ff831d0a309105a114631f1763aeba591c181f54a9d124988f331b7461df7ef1",
+    "summary.json": "4d863cb2c0b0d4ab31682d72921d0a8e67095c359904f966f311224784e5d700",
+    "trace-core-tail.jsonl": "f8e31d7c2af293aa696ba8dede4ad862c7b43ff01c3e963f7dfa2ae97836c915"
+  },
+  "investigation": null,
+  "issue": null
+}
