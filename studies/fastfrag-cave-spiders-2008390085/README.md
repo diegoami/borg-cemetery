@@ -16,8 +16,8 @@ spider at game turn 64,483. Arm settings on top of the shipped `harness/borg.txt
 The control arm (`reborn-fastfrag-ctl`) lives to the 100,000-turn cap.
 
 The owner's view: quaffing a Potion of Speed would have saved him. **It would have, at any
-Borg turn up to 64,454** (table below). The Borg never considered it. All three speed rules in
-borg-core are out of reach in this fight. The fast-fragile policy also took the turn
+Borg turn up to 64,454** (table below). The Borg never considered it: it believed it was still
+hasted from a potion drunk at 56,229 (see the correction below, #941). The fast-fragile policy also took the turn
 at 64,454 that the control spent on the Phase Door that saved it.
 
 **One life, one start.** Every row of the counterfactual table is a continuation of the same
@@ -101,6 +101,40 @@ are lines of `keys.log`; the "check" is the core trace's chosen rung
 | 64,472 | 9270-9272 | (9,112) | 6 | 12 | (8,113) | Attack on sight (fast-fragile, "1 others in view"), 1 hit, 1 miss; the spider flees in terror. |
 | 64,479 | 9274-9276 | (9,112) | 6 | 11 | (8,113) | Attack on sight, two hits, not killed (8 HP, Dagger 1d4). |
 | 64,480-64,483 | | | -3 | | | bitten, grazed, bitten: dead. 3 Potions of Speed, 22 CLW, 4 CSW and 14 Phase Door in the pack. |
+
+## Correction (2026-11-22, later the same day): the speed flag was stuck
+
+Checking the #913 fix on this game found the deeper cause. At 56,229 the rogue
+drank a Potion of Speed. At 56,550 the engine ended it: "You feel yourself slow down."
+(`player_timed.txt:194-198`). The Borg parsed that line as **monster pain**
+("PAIN:You feel yourself", then three "Assuming player ghost (You feel yourself)"),
+because the pain suffix "slow[s] down." (`borg_messages.rs:215`) is tried
+(`borg_messages.rs:818`) before the temporary-effect table (`:967`). The timer
+fallback in `borg_trait.rs` only ever sets `temp.fast`. **From 56,229 to its death the
+Borg believed it was hasted.** All three rules below start with "already fast →
+no", and the danger counted the rogue at +10. The reasons given in Q1 (fleeing,
+the thresholds, Phase Door in the pack) are real, but they were never reached.
+Filed as [borg-reborn-rs#941](https://github.com/diegoami/borg-reborn-rs/issues/941).
+
+Replays of the zoo's game on `7f8c6b80` plus the fix commits (a local branch,
+never pushed). With every switch off it plays the zoo game key for key (keys `1ef12466…`):
+
+| switches on (borg.txt lines added to `borg-stats-ban.txt`) | outcome |
+|---|---|
+| none | dies at 64,483 (the zoo game) |
+| `trait_timed_sync = 1` (#941) | lives to the cap: `borg_defend_aux_speed` drinks Speed at 64,344 (danger 20 at HP 39, against the shrieker) |
+| `caution_emergency_speed_danger_percent = 50` (#913) | same keys as the zoo game: the stuck flag stops it |
+| #941 + #913 | lives to the cap; #913's rule fires later in that game (76,970) |
+| `caution_retreat_from_faster = 1` (#916) | lives to the cap (CL7, max DL3) |
+| `fast_fragile_contact_max = 1` (#914) | lives to the cap |
+| `kill_grouped_names = 1` (#915) | same keys as the zoo game |
+| all five | lives to the cap |
+
+On `track-p` (`86843a79`) this seed no longer dies, switches off or on. The #941 bug
+is there too: in `track-p`'s game the haste of 37,688 ends at 37,930 and is again
+parsed as pain. PRs, all into `track-p` and shipped 0: #943 (#915), #944 (#916),
+#945 (#913), #946 (#914), #947 (#941). Zoo request:
+[borg-zoo#652](https://github.com/diegoami/borg-zoo/issues/652).
 
 ## Q1. Which rule drinks Speed, and why it never fired
 
@@ -292,6 +326,7 @@ What the table says, for this game only:
 - [#914](https://github.com/diegoami/borg-reborn-rs/issues/914): the fast-fragile policy pre-empts the emergency Phase Door against a group. Three spiders pass `group_max` 2 because it counts those "in view", and the heal ban holds with three in contact (Q2, Q3).
 - [#915](https://github.com/diegoami/borg-reborn-rs/issues/915): grouped monster messages are parsed as the player ghost, i.e. Morgoth's race (Q4).
 - [#916](https://github.com/diegoami/borg-reborn-rs/issues/916): the one-grid strategic retreat from faster monsters comes before Phase Door and the outmatched cure (64,444 and 64,462).
+- [#941](https://github.com/diegoami/borg-reborn-rs/issues/941): "You feel yourself slow down." is parsed as monster pain, so the Borg believes it is hasted for the rest of the game (see the correction above). The root cause of Q1.
 - The stair walk from faster monsters (Q5) is already [#849](https://github.com/diegoami/borg-reborn-rs/issues/849); this case is evidence for it.
 - Observation only, not filed: at 64,394 the last Flask of oil was thrown at the remembered square of the spider killed at 64,384.
 
