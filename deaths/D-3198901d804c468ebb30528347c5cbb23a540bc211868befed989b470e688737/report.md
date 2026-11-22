@@ -1,0 +1,9 @@
+# D-3198901d804c468ebb30528347c5cbb23a540bc211868befed989b470e688737: a soldier at turn 21698
+
+Half-Orc Necromancer, character level 4, depth 1 (max 1), seed 2079962982, implementation `rust`, flags `-`.
+
+Build `da097a764239c64cdcdd0fb469d5a05577a6823e` (dirty: no), binary `d6a707629ffc`. Keys `128c7d171ba3`; raw logs stay in `borg-zoo run 44936494812, artifact deaths-4.2.6-reborn-rust-confusion-da097a76-4, classes-1800-medium/4.2.6-reborn-rust-confusion-da097a76/reborn-confusion-csw/2079962982 (https://github.com/diegoami/borg-zoo/actions/runs/44936494812, 90-day retention)` (not committed).
+
+Core decision trace: the last 200 of 1460 thinks in `trace-core-tail.jsonl`, with selected check, queued keys and `params-core.json`.
+
+**Unassessed.** Basic dossier written by `tools/export-death.py` at the end of the run (RULES 12). Upgrade it with the full death tooling (T1.6) before investigating.
