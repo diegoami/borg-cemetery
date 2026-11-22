@@ -34,3 +34,21 @@ until borg-zoo measures it.
 ## Not shown
 - The death rate. The changed game of 1895660873 is one start: the switch keeps the book, which changes
   every later event.
+
+## Added after the review of borg-reborn-rs#1019
+
+The extra runs below were played on `5ad50d96`/`0de39a27`; at today's setting their play is the same as `7b83dd11`. They are local
+direction numbers (RULES 20).
+
+- **`classes-short.tsv`:** the 27 short starts behind "Rogues and Rangers 6 of 6, the other seven classes 0 of 21". Each played 3,000
+  turns at seeds 11, 22 and 33. Race = (seed + class) mod 11, so **each class played one race only** (race = class index). The
+  seven-class row covers only those races.
+- **`maxsp-cl1.tsv`:** Max SP at CL1 (seed 11), every caster class (1 to 8) and every race (0 to 10).
+  - Mage, Druid, Priest and Necromancer: 2.
+  - Blackguard: 1–2, and its first spell costs 1.
+  - Rogue and Ranger: 0.
+  - Paladin: **1** as a Half-Elf, Elf or Half-Troll, and Bless costs 2.
+- **`paladin-half-troll.tsv`:** 4 Half-Troll Paladins, 3,000 turns, at 0 and at 4.
+  - At 0, each heads for the Bookseller 1–4 times: the town plan's sale of its unvalued book. A scary monster in town cut every trip
+    short, so no sale was seen.
+  - At 4, none heads there.
