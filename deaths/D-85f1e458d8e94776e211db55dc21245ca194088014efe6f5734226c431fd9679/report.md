@@ -1,0 +1,9 @@
+# D-85f1e458d8e94776e211db55dc21245ca194088014efe6f5734226c431fd9679: a blue yeek at turn 78878
+
+Gnome Rogue, character level 5, depth 1 (max 2), seed 390305857, implementation `rust`, flags `-`.
+
+Build `7f8c6b80a617eba3a6f2b83e4ba9d45b7b552b73` (dirty: no), binary `6098359c7072`. Keys `07c2fdcc053d`; raw logs stay in `borg-zoo run 44950087466, artifact deaths-4.2.6-reborn-rust-fast-fragile-7f8c6b80-6, classes-1800-big/4.2.6-reborn-rust-fast-fragile-7f8c6b80/reborn-fastfrag-stats-ban/390305857 (https://github.com/diegoami/borg-zoo/actions/runs/44950087466, 90-day retention)` (not committed).
+
+Core decision trace: the last 200 of 7805 thinks in `trace-core-tail.jsonl`, with selected check, queued keys and `params-core.json`.
+
+**Unassessed.** Basic dossier written by `tools/export-death.py` at the end of the run (RULES 12). Upgrade it with the full death tooling (T1.6) before investigating.
