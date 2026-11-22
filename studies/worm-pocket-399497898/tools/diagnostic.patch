@@ -1,0 +1,183 @@
+--- a/engine/frontend/main-borgh.c
++++ b/engine/frontend/main-borgh.c
+@@ -93,6 +93,7 @@
+ #include "init.h"
+ #include "obj-knowledge.h"
+ #include "obj-gear.h"
++#include "obj-desc.h"
+ #include "obj-make.h"
+ #include "obj-pile.h"
+ #include "obj-util.h"
+@@ -180,6 +181,11 @@
+ static FILE *msglog_fp = NULL;
+ static FILE *statelog_fp = NULL;
+ static unsigned long keys_logged = 0;
++static void diag_map_dump(void);
++/* DIAGNOSTIC ONLY: hand over from the Borg to a key file after N Borg keys. */
++static long human_keys[100000];
++static int human_len = 0, human_pos = 0;
++static bool human_active = false;
+ static struct timeval start_tv;
+ static bool finished = false;
+ static bool borg_started = false;
+@@ -233,6 +239,60 @@
+ }
+ 
+ 
++/* DIAGNOSTIC ONLY (cemetery analysis, not a measured build): full map at stop. */
++static void diag_map_dump(void)
++{
++	const char *path = getenv("BORGH_MAPDUMP");
++	FILE *fp;
++	int x, y;
++	if (!path || !cave || !player) return;
++	fp = fopen(path, "w");
++	if (!fp) return;
++	fprintf(fp, "turn %ld depth %d player %d,%d hp %d/%d num_repro %d max %d poison %d sp %d dead %d\n",
++		(long)turn, player->depth, player->grid.y, player->grid.x,
++		player->chp, player->mhp, cave->num_repro, z_info->repro_monster_max,
++		player->timed[TMD_POISONED], player->csp, player->is_dead ? 1 : 0);
++	for (int pass = 0; pass < 2; pass++) {
++		fprintf(fp, pass ? "KNOWN\n" : "TRUTH\n");
++		for (y = 0; y < cave->height; y++) {
++			for (x = 0; x < cave->width; x++) {
++				struct loc g = loc(x, y);
++				struct chunk *c = pass ? player->cave : cave;
++				char ch = ' ';
++				struct monster *m = square_monster(cave, g);
++				if (pass && !square_isknown(cave, g)) { fputc(' ', fp); continue; }
++				if (square_isupstairs(c, g)) ch = '<';
++				else if (square_isdownstairs(c, g)) ch = '>';
++				else if (square_iscloseddoor(c, g)) ch = '+';
++				else if (square_isopendoor(c, g)) ch = '\'';
++				else if (square_isrubble(c, g)) ch = ':';
++				else if (square_ispassable(c, g)) ch = square_isroom(cave, g) ? ',' : '.';
++				else ch = '#';
++				if (m && m->race && (!pass || monster_is_visible(m))) {
++					ch = strstr(m->race->name, "worm") ? 'w' : 'M';
++				}
++				if (loc_eq(g, player->grid)) ch = '@';
++				fputc(ch, fp);
++			}
++			fputc('\n', fp);
++		}
++	}
++	{
++		struct object *obj;
++		char ob[160];
++		for (obj = player->gear; obj; obj = obj->next) {
++			object_desc(ob, sizeof(ob), obj, ODESC_PREFIX | ODESC_FULL, player);
++			fprintf(fp, "GEAR %c %s [%s]\n", object_is_equipped(player->body, obj) ? '=' : gear_to_label(player, obj), ob, obj->kind ? obj->kind->name : "?");
++		}
++	}
++	for (int i = 1; i < cave_monster_max(cave); i++) {
++		struct monster *m = cave_monster(cave, i);
++		if (!m || !m->race) continue;
++		fprintf(fp, "MON %d,%d %s hp %d\n", m->grid.y, m->grid.x, m->race->name, m->hp);
++	}
++	fclose(fp);
++}
++
+ /**
+  * Write the summary and exit the process without saving.
+  */
+@@ -249,6 +309,7 @@
+     memcpy(stop_rng, STATE, sizeof(stop_rng));
+ 
+ 	if (finished) return;
++	diag_map_dump();
+ 	if (opt_start_depth && !initial_depth) {
+ 		dump_screen();
+ 		quit_fmt("borgh: synthetic start was not verified before stop (%s)", reason);
+@@ -628,6 +689,20 @@
+ 	}
+ 	borgh_state();
+ 
++	if (getenv("BORGH_HANDOVER") && !human_active
++		&& keys_logged >= (unsigned long)atol(getenv("BORGH_HANDOVER"))) {
++		FILE *hk = getenv("BORGH_HANDOVER_KEYS") ? fopen(getenv("BORGH_HANDOVER_KEYS"), "r") : NULL;
++		long kv;
++		if (hk) {
++			while (human_len < 100000 && fscanf(hk, "%ld", &kv) == 1) human_keys[human_len++] = kv;
++			fclose(hk);
++		}
++		human_active = true;
++		inkey_hack = NULL;
++		if (player && player->opts.opt) player->opts.opt[OPT_auto_more] = true;
++		return;
++	}
++
+ 	/* Stop conditions */
+ 	if (opt_keys > 0 && keys_logged >= opt_keys) borgh_finish("keys");
+ 	if (opt_turns > 0 && turn >= opt_turns) borgh_finish("turns");
+@@ -870,6 +945,35 @@
+ 		 * for a key (polls, e.g. during level generation, would eat
+ 		 * them).
+ 		 */
++		if (human_active) {
++			if (!v) return 0;
++			if (player && player->is_dead) { borgh_finish("death"); return 0; }
++			if (getenv("BORGH_IN") && getenv("BORGH_OUT")) {
++				static FILE *hin = NULL, *hout = NULL;
++				long kv;
++				if (!hout) hout = fopen(getenv("BORGH_OUT"), "w");
++				diag_map_dump();
++				fprintf(hout, "READY\n"); fflush(hout);
++				if (!hin) hin = fopen(getenv("BORGH_IN"), "r");
++				if (!hin || fscanf(hin, "%ld", &kv) != 1 || kv < 0) { borgh_finish("human_done"); return 0; }
++				if (player && player->opts.opt) player->opts.opt[OPT_auto_more] = true;
++				if (keylog_fp) fprintf(keylog_fp, "%ld H %lx 0\n", (long)turn, (unsigned long)kv);
++				borgh_state();
++				Term_keypress((keycode_t)kv, 0);
++				return 0;
++			}
++			if (human_pos < human_len) {
++				if (player && player->opts.opt) player->opts.opt[OPT_auto_more] = true;
++				if (keylog_fp) fprintf(keylog_fp, "%ld H %lx 0\n", (long)turn, (unsigned long)human_keys[human_pos]);
++				borgh_state();
++				Term_keypress((keycode_t)human_keys[human_pos++], 0);
++				return 0;
++			}
++			borgh_finish("human_done");
++			return 0;
++		}
++		if (getenv("BORGH_HUMAN_KEYS") && player && player->opts.opt)
++			player->opts.opt[OPT_auto_more] = true;
+ 		if (script_pos < script_len) {
+ 			if (!v) return 0;
+ 			keycode_t k = script[script_pos++];
+@@ -1182,8 +1286,17 @@
+ 	script_add('y');                          /* accept history */
+ 	script_add(KC_ENTER);                     /* final confirm */
+ 	}
++	if (getenv("BORGH_HUMAN_KEYS") && opt_load) {
++		/* DIAGNOSTIC ONLY: play a key file instead of starting the Borg. */
++		FILE *hk = fopen(getenv("BORGH_HUMAN_KEYS"), "r");
++		long kv;
++		if (!hk) quit("borgh: cannot open BORGH_HUMAN_KEYS");
++		while (fscanf(hk, "%ld", &kv) == 1) script_add((keycode_t)kv);
++		fclose(hk);
++	} else {
+ 	script_add(SCRIPT_START_BORG);            /* ^Z */
+ 	script_add('z');                          /* activate borg */
++	}
+ 
+ 	borgh_turn_hook = borgh_tick;
+ 	borgh_key_hook = borgh_key;
+--- a/borg-core/src/borg_flow.rs
++++ b/borg-core/src/borg_flow.rs
+@@ -998,6 +998,14 @@
+     path: &[loc],
+ ) -> bool {
+     let Some(&next) = path.get(1) else { return false };
++    if std::env::var_os("BORG_DIAG_PATH").is_some() {
++        let mut s = format!("DIAGPATH t={} who={:?} from={},{} n={} :", st.borg.time.now, who, st.borg.c.y, st.borg.c.x, path.len());
++        for g in path.iter().take(40) {
++            let f = st.cave.grid(g.x, g.y).feat;
++            s.push_str(&format!(" {},{}{}", g.y, g.x, if u32::from(f) == FEAT_NONE { "?" } else { "" }));
++        }
++        eprintln!("{s}");
++    }
+     copy_data(&mut st.flow.data_cost, &st.flow.data_hard);
+     for (steps, grid) in path.iter().rev().enumerate() {
+         st.flow.data_cost[grid.y as usize][grid.x as usize] = steps as u8;

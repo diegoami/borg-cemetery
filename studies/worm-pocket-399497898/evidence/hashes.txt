@@ -1,0 +1,34 @@
+# sha256 of the streams compared (all from game birth)
+zoo clw_walk keys.log  dde95ceb4cce4cb57309baa4c1aea2281d496c9f78b06b76a5c9c6169d17a4e9
+local reproduction keys.log  dde95ceb4cce4cb57309baa4c1aea2281d496c9f78b06b76a5c9c6169d17a4e9
+zoo messages.log  6cf01c5e1c47cadb04c91a6a1842e1dd4528e516b5cd26178b2af3ea3b3d5695
+local messages.log  6cf01c5e1c47cadb04c91a6a1842e1dd4528e516b5cd26178b2af3ea3b3d5695
+zoo state.log  e0684fd608791293657b1c5fa5bb78e78f2674c4e1e846f9609b254a8ca9d880
+local state.log  e0684fd608791293657b1c5fa5bb78e78f2674c4e1e846f9609b254a8ca9d880
+diagnostic build keys.log (map dump on)  dde95ceb4cce4cb57309baa4c1aea2281d496c9f78b06b76a5c9c6169d17a4e9
+diagnostic build keys.log (path print on)  dde95ceb4cce4cb57309baa4c1aea2281d496c9f78b06b76a5c9c6169d17a4e9
+local ctl arm replay keys.log (zoo ctl play_sha256 f9374a2b0bae3817...)  f9374a2b0bae381733507fefaff5bd4cb169c6134f3b19629f7ae532d1db6332
+local build BUILD_ID:
+  impl=rust
+  git_rev=da097a764239c64cdcdd0fb469d5a05577a6823e
+  git_dirty=no
+  inputs_dirty=no
+  source_sha256=cba81bd0217b3e6c887051f389d7958d78ee4ed756494762ee87d7f9ff29bbcb
+  engine_upstream=574b618c3bfec595f3503a58f8e488b1c4ae3a46
+  binary=/home/user/borg-reborn-rs/.worktrees/specimen-da097a76/build/rust/game/angband
+  binary_sha256=b5dade666c3eeaff699cb48f2a95d630b3b5c986805def2a96f3278f5c9e4061
+  cc=cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+  rustc=rustc 1.97.0 (2d8144b78 2026-07-07)
+  built_utc=2026-11-22T00:02:34Z
+zoo BUILD_ID:
+  binary=/home/runner/work/borg-zoo/borg-zoo/source/build/rust/game/angband
+  binary_sha256=d6a707629ffca6bf5dac65b94a59bf8e5236b31bbb8cef8c2ca6fe0cd9810c3f
+  built_utc=2026-11-21T16:26:36Z
+  cc=cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+  engine_upstream=574b618c3bfec595f3503a58f8e488b1c4ae3a46
+  git_dirty=no
+  git_rev=da097a764239c64cdcdd0fb469d5a05577a6823e
+  impl=rust
+  inputs_dirty=no
+  rustc=rustc 1.100.0 (0ef1bc386 2026-11-09)
+  source_sha256=cba81bd0217b3e6c887051f389d7958d78ee4ed756494762ee87d7f9ff29bbcb
