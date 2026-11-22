@@ -236,4 +236,9 @@ Fix 4 is a perception fix that every core build shares.
 - [perception/](perception/): the diagnostic patch (scratch only, never for commit) and its notes for both lives.
 - [related/399497898/](related/399497898/): the priest's csw borg.txt and replay key hash.
 
-Issues: see the links added below once filed.
+## Issues
+
+- borg-reborn-rs#877: the perception defect, light radius one too large (question 4).
+- borg-reborn-rs#878: attack on sight for a caster; the Phase rule and the reserve spell decided on damage, not fear (questions 1–3, 5).
+- borg-reborn-rs#879: shoot along a corridor at a believed monster position (the owner's idea).
+- borg-reborn-rs#880: the flight-Recall forecast vetoes Recall for any POISON blow.
