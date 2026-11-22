@@ -220,8 +220,11 @@ twice per player turn: two touches a turn, as the log shows.
 - **Why it never breaks.** Each rule decides afresh; nothing remembers the other. The retreat
   resets the flow goal, and the flow re-plans the same route next think. `bouncing()`
   (`borg_caution.rs:104-113`) looks at the last two flow steps and only at ≥ 70% HP
-  (`caution_bounce_healthy_tenths` 7). The anti-loop counter `antibounce_count` is bumped only
-  by equipment swaps (`borg_io.rs:150-153`). `caution_immobile_step_to_exit` (`:1749-1752`)
+  (`caution_bounce_healthy_tenths` 7), or once `antibounce_count` reaches 300
+  (`caution_bounce_limit`). That counter rises by 1 every think (`borg_think.rs:270`) and is
+  reset only when the Borg rests (`borg_recover.rs:547`, `608`). The last rest was at 94,109,
+  about 270 thinks before the death, so the limit was close but never reached. Nothing counts
+  the oscillation itself. `caution_immobile_step_to_exit` (`:1749-1752`)
   belongs to `immobile_step_away`, off here (`caution_ranged_vs_immobile` 0). The retreat
   always finds its safe square, so `borg_escape` (`:2920`) is never reached. Nothing in the
   loop changes the inputs: the ghost stays, the danger stays 36, and HP only grows its weight.
@@ -323,6 +326,43 @@ The nearest non-immobile case: Human Ranger 526144893
 loop against white worm masses (breeders that move; compare borg-reborn-rs#876, borg-reborn-rs#882). These
 are leads from trace signatures, not a count: repeats of one start are not independent, and
 the seed 1050/1074 monsters are not confirmed.
+
+## On track-p
+
+Everything above ran on `7f8c6b80`, the build the zoo cell played. `track-p` at
+[`e2d8919e`](https://github.com/diegoami/borg-reborn-rs/commit/e2d8919e8aa314b8a3622b90bf0b1be7958bdfd4)
+(2026-11-22, 242 commits after `7f8c6b80`; it contains all of `main` at `b34196c5`, which is
+137 commits after it) was built (`BORG_IMPL=rust harness/build.sh`, source sha256
+`453451d4…`) and the start replayed from birth the same way. The borg.txt is `track-p`'s
+`harness/borg.txt` with the zoo's three edits (respawn race/class 7, `borg_world = none`
+removed) and its own scary list (`ff831d0a…`).
+
+| settings | outcome | keys | keys.log sha256 |
+|---|---|---:|---|
+| the arm's (`fast_fragile_policy`, `_by_stats`, `_no_heal` = 1; borg.txt `dfebbea7c7b4…`) | alive at the cap, CL7, DL3 (max 3) | 18,160 | `6fc4433d6c65152e…` |
+| `track-p`'s shipped (`policy` 1, `by_stats` 0, `no_heal` 1; borg.txt `eb45e7260c26…`) | the same game | 18,160 | `6fc4433d6c65152e…` |
+
+The `track-p` game parts from the original at keys.log line 60 (game turn 261), so it is a
+different game, not a test of this death. It meets five white jellies and is never touched by one.
+This start no longer dies; that does not show the defects are fixed. In the code, each
+mechanism is unchanged at `e2d8919e`, only moved:
+
+| mechanism | `7f8c6b80` | `track-p` `e2d8919e` |
+|---|---|---|
+| blocker danger at the Borg's own square (`dangerous_path_blocker`) | `borg_flow_stairs.rs:620-624` | `:698-702` |
+| weighted flight cost per square entered | `borg_flow.rs:590-629` | `:598-639` |
+| unknown squares are floor for a flight (#881, still open) | `borg_flow.rs:442` | `:445` |
+| retreat before `borg_escape` | `borg_caution.rs:2912`, `2920` | `:3357`, `3365` |
+| `borg_caution` before `borg_attack` | `borg_think_dungeon.rs:796`, `889` | `:815`, `908` |
+| flight to any stair while scary | `borg_think_dungeon.rs:1101` | `:1120` |
+| `bouncing()`, the anti-bounce counter | `borg_caution.rs:104-113`, `borg_think.rs:270` | the same lines |
+| unknown wands never aimed | `borg_fight_attack.rs:4511` | `:4651` |
+| poison not "nasty" | `borg_caution.rs:2426-2438` | `:2867` |
+
+The poison change on `track-p` (#880, "price poison and status blows as HP") is in the flight
+Recall forecast, not in the retreat, escape or heal choice. Placing the `track-p` Borg in this
+exact situation would need the 95,170 save loaded into a fresh Borg. That Borg would not carry
+the ghost record, so it was not run.
 
 ## Defects filed in borg-reborn-rs
 
