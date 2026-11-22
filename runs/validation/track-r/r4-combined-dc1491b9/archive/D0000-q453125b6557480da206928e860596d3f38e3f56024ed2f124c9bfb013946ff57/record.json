@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "bc78e00b9ca062579180ef7f5bd4309e6d515afd71a16bd0d8fffc32c8636a31",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/r434-review-evidence/full-off/full-2-druid-3",
+      "raw_sha256": {
+        "keys.log": "a842a5177954184a1cf9706a0cc0c35e2c3421b830bacb05f42c9a339091220f",
+        "messages.log": "773e8d04dec1f5dec7b3c546c921bc0bf57004a6cf32ee3abe565028b5f6f306",
+        "state.log": "917208c762248a29dddc26c30de61b6bdfaf93bd95f08ff78c81c2404db7a7b2"
+      },
+      "result_sha256": "a842a5177954184a1cf9706a0cc0c35e2c3421b830bacb05f42c9a339091220f",
+      "role": "original",
+      "source_commit": "6163704dd9f5abca9e2277fd65bf17ad8312d349"
+    }
+  ],
+  "character": "Dwarf Druid",
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1199
+  },
+  "decision_trace": null,
+  "encounter_family": "start-96a0fb7fcb1e4973e69bc4b6bb73e45c696c720dcc678ac2b58cd1546067237d",
+  "files_sha256": {
+    "build.json": "78fbbe98acc01f776f1519e5c6422eee830d40a993b3bed7e8e9e81af9289d7e",
+    "config.txt": "82d68a56c64f8eb6088c8e2b37a8b57c54e6330994868ac1d9933cf29623c96f",
+    "depths.json": "fd215581c63e7c4edd41b68dae16c0c81ba6abd728a74379ecf172baafc34eba",
+    "params-core.json": "688bda6d3de5bcb915a33b37440eed7e314999361ccdf4577d0878481cec8499",
+    "summary.json": "04783ecd7facbb01ace4214bc29beba0985ee756f9cdc153f88b17b11dce9b7e",
+    "trace-core-tail.jsonl": "5ddcb75127573d1d349957085a3199cee8477b37eccedcf517570cb51d67120a"
+  },
+  "id": "D0000-q453125b6557480da206928e860596d3f38e3f56024ed2f124c9bfb013946ff57",
+  "identity": {
+    "binary_sha256": "bc78e00b9ca062579180ef7f5bd4309e6d515afd71a16bd0d8fffc32c8636a31",
+    "borg_txt_sha256": "1543138167cf7a1649af41edb1990bb60c0c1886b0703ed0cab4ee190bfed8a4",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "6163704dd9f5abca9e2277fd65bf17ad8312d349",
+    "impl": "rust",
+    "params_core_sha256": "688bda6d3de5bcb915a33b37440eed7e314999361ccdf4577d0878481cec8499",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1023,
+    "source_sha256": "13435ec6a26d6176a06d4c6a9b229e1708c728575811247b35fed642e8faea54"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "a metallic red centipede",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "a metallic red centipede",
+    "class_idx": 2,
+    "dead": true,
+    "depth": 1,
+    "level": 1,
+    "max_depth": 1,
+    "race_idx": 5,
+    "turn": 13184
+  }
+}
