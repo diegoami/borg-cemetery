@@ -415,6 +415,53 @@ attacker, most with 10–24 "Retreating to"/"Backing up" notes.
 - paired rescued and newly-killed counts against control (exact McNemar), and a confirmation tier;
 - Priests, Mages, Necromancers and Druids reported separately: low melee, low CL, DL1.
 
+## Repeated on track-p (e2d8919e, 2026-11-22)
+
+Everything above ran on the specimen's own commit, da097a76 (main `12c4ce7c` plus #837). It ran
+on neither main nor `track-p`. `track-p` at `e2d8919e` contains da097a76 and is 260 commits ahead
+(main `b34196c5` is 155 ahead). It was built here (`harness/build.sh`, clean) and checked three ways.
+
+1. **From birth, the same start.** Track-p's shipped `harness/borg.txt` was used with the zoo's
+   changes (respawn race 8, class 3; `borg_world` line dropped) and its own scary list
+   (`ff831d0a…`).
+   - The shipped settings, `clw_walk` and `csw` all reach the 100,000-turn cap alive (CL 7, 6, 7;
+     max depth 3, 2, 3).
+   - All three split from the zoo's death at **key 29, turn 261**, in town. Track-p therefore plays
+     a different game from the start; this says nothing about the pocket.
+2. **The same pocket, a fresh Borg.** The da097a76 game's own checkpoints (62502…66502, every 500
+   turns) were loaded with the saved game RNG kept, each into a fresh Borg of da097a76 and of
+   track-p ([evidence/fresh-borg-loads-da097a76-vs-track-p.txt](evidence/fresh-borg-loads-da097a76-vs-track-p.txt)).
+   - **Track-p's shipped Borg plays the same keys as da097a76's from 7 of the 9 saves**, with the
+     same deaths from every save from 64002 on (death turns 66560–67400).
+   - It survives from 63002 and 63502 like da097a76. Its keys differ only at 66093 and 66943,
+     after it had left the room.
+   - Both die from 62502: the priest is still in the corridor there and walks into the room.
+   - `caution_breeder_policy 4` on track-p also dies from every save from 64002 on. But a loaded
+     Borg starts with empty memory and never learned the down stair at 17,98 (no "Flowing toward
+     down-stairs" note; "no up stairs found, exploring"), so "fight through to the stairs" had no
+     target.
+
+     This is the stair-forgetting caveat of #544. These loads understate policy 4; the
+     from-birth policy-4 run of section 5 is the fair test of it.
+3. **The code.** Compared function by function, da097a76 to track-p:
+   - unchanged: `retreat`, `back_away`, `borg_happy_grid_bold`, `cornered_boost`,
+     `breeder_fight_hard`, `weighted_stair_path`, and `stair_more`'s `avoid: false`;
+   - `spread_blocked` changed only in an unrelated #837 clause (immobile reach); its unknown-grid
+     rule is the same, now at borg_flow.rs:445;
+   - `borg_recall_for_flight` still forecasts before it looks for a scroll (borg_escape.rs:106).
+   - **Changed: #880 landed.** `caution_recall_blow_model 1` (shipped) prices poison as HP, caps
+     the adjacent attackers, models erratic movers and drops the breeder veto. The section 4
+     critique of the model is fixed on track-p. The refusal was moot here anyway: no scroll.
+
+   Line numbers on track-p: `weighted_stair_path` borg_flow.rs:598; `retreat`
+   borg_caution.rs:1154; `back_away` :1375; `flight_recall_survivable` :2335; `modelled_blow`
+   :2501; `breeder_fight_hard` :5153; `cornered_boost` :5223 (Heroism :5253).
+
+The scripted counterfactuals of section 5 do not use the Borg after the handover, and the engine
+is 574b618c on both commits. Their results are a property of this game state, not of a Borg
+build. **Every finding except the #758 model holds on track-p**: the flight's route through unknown
+grids (#881), exit-blind retreat and back-up (#881, #882), and the Heroism recast (#883).
+
 ## Files
 
 | path | what |
@@ -425,6 +472,7 @@ attacker, most with 10–24 "Retreating to"/"Backing up" notes.
 | [evidence/flight-paths-in-pocket.tsv](evidence/flight-paths-in-pocket.tsv) | the 68 stair-flight paths committed in the room, `?` = unknown in the Borg's map |
 | [evidence/moves-after-62900.tsv](evidence/moves-after-62900.tsv) | every move and the note that decided it |
 | [evidence/counterfactual-fight-out.tsv](evidence/counterfactual-fight-out.tsv), [evidence/counterfactual-stand.tsv](evidence/counterfactual-stand.tsv) | the two counterfactual sweeps |
+| [evidence/fresh-borg-loads-da097a76-vs-track-p.txt](evidence/fresh-borg-loads-da097a76-vs-track-p.txt) | fresh-Borg loads of the pocket saves into da097a76, track-p and track-p policy 4 |
 | [evidence/hashes.txt](evidence/hashes.txt) | stream hashes of the zoo cell, the local reproduction, the diagnostic runs and the `ctl` replay; both BUILD_IDs |
 | [tools/](tools/) | `diagnostic.patch` (applies to da097a76), `play.sh` (the zoo invocation), `hand.sh`, `fightout2.py`, `paths.py`, `showmap.py`. The scripts expect `SCRATCH` (a work directory holding `env.sh` with `B=<zoo bundle dir>` and the diagnostic build under `diag/`). |
 
