@@ -1,0 +1,63 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-30366e42d0d92607ff975d79c385edcb1806bf32c17bd14b58ecbb818841a827",
+  "run_kind": "harness",
+  "character": "Human Druid",
+  "raw_cause": "a clear icky thing",
+  "terminal": {
+    "cause": "a clear icky thing",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 4,
+    "turn": 37759,
+    "race_idx": 0,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 102023799,
+    "flags": "exact,menu",
+    "git_rev": "09a7090650bf837702d5ab3345a7401532114cf8",
+    "git_dirty": "yes",
+    "source_sha256": "2e28b05f451fa7c181161374506f731f8a0779b5975c8b93f4a15aa3b9431425",
+    "binary_sha256": "ab0b1c468b92fea98efb27637e7913d898e5233dd33609ae2ebc1368c6f07a8c",
+    "borg_txt_sha256": "674c277ea9a88238b6ec23943e8fbbc6bb13aab1f734691a16e0471d5cb6be29",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "d86637cfb71e8a04dce58f58a111e9f3920b573d3884efc8f9dcdbaca8e9bef0"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 2911
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/781-historical-final-off",
+      "result_sha256": "8b21c6b94e80e9692c45c4dcf88352d351c3f88db19bc11c189a2330cf613124",
+      "raw_sha256": {
+        "keys.log": "8b21c6b94e80e9692c45c4dcf88352d351c3f88db19bc11c189a2330cf613124",
+        "messages.log": "5b32f0ebcfd49c8f548a86f203f838fd7914446bcd36085b8a069f976c52b859",
+        "state.log": "986fc900f7693e908dafaa56f137db25a68882bffdfa539ce59d6913475e8660"
+      },
+      "source_commit": "09a7090650bf837702d5ab3345a7401532114cf8",
+      "binary_sha256": "ab0b1c468b92fea98efb27637e7913d898e5233dd33609ae2ebc1368c6f07a8c"
+    }
+  ],
+  "encounter_family": "start-1102a8a23262e4b0998e46f9851fbf9bcbbafb33f63a31581d7094eb96883eea",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "631dfc3a245db430d73d21e90b40380ac6130ef832c04454c94463c73489d7eb",
+    "config.txt": "fdeabcc83229454b0247793805e4fac3560dc1f9f09f9a11f92c462bc3595c42",
+    "depths.json": "0ff41cbfc76c6b37988e952b1d3d231031afe922b75622ce04eb4ee292cfd362",
+    "params-core.json": "d86637cfb71e8a04dce58f58a111e9f3920b573d3884efc8f9dcdbaca8e9bef0",
+    "scary_list.txt": "6ed446867c02c7dda00cfd79147e433a8810212eeb8dc129e608c4f3211c666d",
+    "summary.json": "e07e93e7b3897006c49f55d2f2e4fb7dd504c6140e0009e90cc6267ae886b47b",
+    "trace-core-tail.jsonl": "4d82b65205034250b86e8ad25781335224c489ae93f05e4eb6ec27170337f79b"
+  },
+  "investigation": null,
+  "issue": null
+}

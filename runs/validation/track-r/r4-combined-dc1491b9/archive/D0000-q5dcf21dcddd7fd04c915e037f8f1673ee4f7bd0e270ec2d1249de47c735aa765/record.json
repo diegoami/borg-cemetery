@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "binary_sha256": "a4b08df9f210327267ae33255a1e363c8d7d75b30fcb09d111105667a899a5cb",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/r436-review-evidence/full-off/full-7-ranger-4",
+      "raw_sha256": {
+        "keys.log": "adf910ee154722cb124c4e7b1c4e016aacc61a05d5847459eecf9058c7a172fe",
+        "messages.log": "342b55931eb619d14999ca410324a61d17333d7111e10b37fc5d6dd5f61b0bf5",
+        "state.log": "a5e3a7b7af2bb038bce9e01143105587d5850dd32031b304f1a2c44b95694b55"
+      },
+      "result_sha256": "adf910ee154722cb124c4e7b1c4e016aacc61a05d5847459eecf9058c7a172fe",
+      "role": "original",
+      "source_commit": "3d4784f9c81ad9dcd4bab27edf0f2c94221ec6d8"
+    }
+  ],
+  "character": "Human Ranger",
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 2164
+  },
+  "decision_trace": null,
+  "encounter_family": "start-e8402089751b16f90487de591d41d5777725114619154048c995489cbe696b91",
+  "files_sha256": {
+    "build.json": "e95e1560b7c4d7187ba5e548c70932978ff1e893f03205b34250abbda7073afe",
+    "config.txt": "2816be2568469c59b7fbcd26f4415d9ed5d6b34c68fa6507c507e043977ae689",
+    "depths.json": "f138b4ee7f4eb0ca76270753a81151b62974673ab92483b988da0a0606a85f3c",
+    "params-core.json": "688bda6d3de5bcb915a33b37440eed7e314999361ccdf4577d0878481cec8499",
+    "summary.json": "3076ab1199ad6f1879a7ff5e43e449f092d008b69373f8f30c488845c0855a06",
+    "trace-core-tail.jsonl": "88c75d199784c8199f18809f3ca58a5bd82aa3f4151849c11f1bbb5499bc1e82"
+  },
+  "id": "D0000-q5dcf21dcddd7fd04c915e037f8f1673ee4f7bd0e270ec2d1249de47c735aa765",
+  "identity": {
+    "binary_sha256": "a4b08df9f210327267ae33255a1e363c8d7d75b30fcb09d111105667a899a5cb",
+    "borg_txt_sha256": "08be84d92d5d554b5669e456087a7a9984fcee628af35287fc28672b7a1386a0",
+    "flags": "menu",
+    "git_dirty": "no",
+    "git_rev": "3d4784f9c81ad9dcd4bab27edf0f2c94221ec6d8",
+    "impl": "rust",
+    "params_core_sha256": "688bda6d3de5bcb915a33b37440eed7e314999361ccdf4577d0878481cec8499",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "seed": 1074,
+    "source_sha256": "252160a6393ce4d1ddb7beea1f5d641f7be08381f7679a5568da725f2d280333"
+  },
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "investigation": null,
+  "issue": null,
+  "raw_cause": "poison",
+  "run_kind": "harness",
+  "schema": "borg-reborn-rs/death-record@1",
+  "terminal": {
+    "cause": "poison",
+    "class_idx": 7,
+    "dead": true,
+    "depth": 1,
+    "level": 3,
+    "max_depth": 2,
+    "race_idx": 0,
+    "turn": 22250
+  }
+}

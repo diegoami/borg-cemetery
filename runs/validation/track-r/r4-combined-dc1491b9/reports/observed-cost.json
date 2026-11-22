@@ -1,0 +1,28 @@
+{
+  "schema": "borg-reborn-rs/r438-observed-cost@1",
+  "workers": 5,
+  "rows": [
+    {
+      "mode": "off",
+      "cases": 45,
+      "sum_process_wall_seconds": 1647.103,
+      "min_process_wall_seconds": 4.548,
+      "max_process_wall_seconds": 167.207
+    },
+    {
+      "mode": "check",
+      "cases": 45,
+      "sum_process_wall_seconds": 98931.571,
+      "min_process_wall_seconds": 400.387,
+      "max_process_wall_seconds": 5244.705
+    },
+    {
+      "mode": "switch",
+      "cases": 45,
+      "sum_process_wall_seconds": 89788.211,
+      "min_process_wall_seconds": 202.714,
+      "max_process_wall_seconds": 5170.812
+    }
+  ],
+  "limitation": "Overlapping per-process elapsed values; not CPU time, exclusive engineering effort or controlled performance comparison."
+}

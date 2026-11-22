@@ -1,0 +1,10 @@
+name	BORG_CF (turn:hex keys)	intervention	first differing keys.log line	outcome	end turn	CL	DL at end
+factual	-	none (the zoo cell, replayed)	-	dies of poison	96820	8	2
+A1-west-route	95170:34 37 37 34 34 34 34 34 34 34 34 37 37 34 34 34 34 34 37 34 34 34 34 34 34 34 34 37 38 38 38 37 37 34 3e	walk the true route north-west (34 steps, never next to the jelly) and take the down staircase at (2,64)	16285	alive at the cap (DL3 reached at 95510)	100000	8	1
+A2-step-out-resume	95170:34 37	two steps out of reach, to (12,93), then the Borg resumes	16285	the stair flow walks back east; the same loop; dies of poison	96870	8	2
+B1-wand-once	95190:61 71 33	aim the Rusty Wand (q) once at the jelly (direction 3); the Borg resumes	16288	the wand is learnt (Magic Missile, 8 charges); the Borg zaps it 3 more times itself, the jelly is destroyed at 95230, poison cured at 95250	100000	8	2
+D1-melee	95190..95300 (12 entries):33	move into the jelly (melee) at each think from 95190	16288	the jelly is destroyed at 95200 (4 hits in 2 player turns); poison cured at 95230	100000	8	2
+C1-phase-96000	96000:72 69	read Phase Door (i) at 96000 (HP 76, poison 239, 5 CLW left)	16472	lands at (11,85); lives on CLW until the poison ends (~97200)	100000	8	2
+C4-phase-96100	96100:72 69	read Phase Door (i) at 96100	16496	alive at the cap	100000	8	2
+C3-phase-96200	96200:72 69	read Phase Door (i) at 96200 (HP 72, poison 313, 3 CLW left)	16518	dies of poison	97240	8	2
+C2-phase-96500	96500:72 67	read Phase Door (g) at 96500 (HP 66, poison 424, no CLW left)	16588	dies of poison	97180	8	2

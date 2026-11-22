@@ -1,0 +1,113 @@
+{
+  "attempts": 8,
+  "broader_comparison": "pending Zoo pilot and owner-gated follow-up; no local full45 cohort",
+  "build": {
+    "binary": "/workspace/borg-reborn-rs/.worktrees/T814/build/rust/game/angband",
+    "binary_sha256": "02e8e08d82aa459303fbafd892dee8da5b8313286594f3759f9ee45fbc65eeda",
+    "built_utc": "2026-11-21T10:42:45Z",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+    "git_dirty": "no",
+    "git_rev": "a3635ad80ceb04165aa1d465acd908c158e50478",
+    "impl": "rust",
+    "inputs_dirty": "no",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "source_sha256": "159f62e72c283d6f221f13c8e973038023e0549b76c16f20a980836868e13bbc"
+  },
+  "failures": [
+    {
+      "cause": "Unbounded Zoo remote fetch stopped to prevent disk exhaustion; incomplete compiler/source cache removed",
+      "kind": "source refresh fetch",
+      "resolution": "retained Zoo contract pin7b373a70; direct upstream HEAD observation in checks/t814-zoo-head.txt, no new Zoo pin adopted",
+      "scope": "metadata refresh only, no gameplay interruption or source/pin edits"
+    }
+  ],
+  "independent_life_claim": false,
+  "limits": [
+    "Local smoke is3 cases, not a broad build comparison; Zoo571 is pending",
+    "Named town-limit trials at100k and300k show no key/trace effect; preserved as negative coverage",
+    "Same recorded start extended to300k before identifying a dungeon curse-removal action; dungeon-limit0 at100k changes real command",
+    "Eight local attempts reuse one named start plus3 smoke starts; no independent-life or survival claim",
+    "All eight runs stop alive; no new natural packages/aliases",
+    "Old #520 full45 applies only to4e9af99e/d0657712, not this receiving main07aa4b1e"
+  ],
+  "main_baseline": "07aa4b1e92642b615e162773800979a97baf0dd6",
+  "named_case": {
+    "character_class": 0,
+    "default": 5500,
+    "first_key_difference": {
+      "default": "19991 1 e000 0",
+      "index": 2711,
+      "override": "19991 1 32 0"
+    },
+    "first_trace_difference": {
+      "default": {
+        "check": "borg_enchanting",
+        "keys": [
+          57344,
+          57344,
+          114,
+          102,
+          111,
+          156
+        ],
+        "think": 1944,
+        "turn": 19991
+      },
+      "line": 1944,
+      "override": {
+        "check": "borg_flow_dark",
+        "keys": [
+          50
+        ],
+        "think": 1944,
+        "turn": 19991
+      }
+    },
+    "flags": "menu",
+    "origin": "environment",
+    "override": 0,
+    "parameter": "enchant_dungeon_max_turns",
+    "race": 1,
+    "seed": 1001,
+    "turn_cap": 100000
+  },
+  "natural_deaths": 0,
+  "published_candidate": "a3635ad80ceb04165aa1d465acd908c158e50478",
+  "schema": "borg-reborn-rs/validation-receipt@1",
+  "smoke": {
+    "comparisons": [
+      {
+        "case": "smoke-warrior-1",
+        "sha256": {
+          "keys.log": "3693925090388ed34443b2d604b7a33fb21341e3ca0a1b3e2c99312cb5a3ff1f",
+          "messages.log": "82a259f37ed2db91b6e2b3349d68c8144fbee92a358eada16953daeba75a70af",
+          "state.log": "de11fc595b7e65d696da8cbf83c69b783ba18b5a124da84728b8b9ddbfd0cf7d"
+        }
+      },
+      {
+        "case": "smoke-mage-2",
+        "sha256": {
+          "keys.log": "57c5a80292b0af53ffdcafdd8013a4edf940b1cc9da1c5eeb62d7c1eaebd0533",
+          "messages.log": "4371db1c5415d96af2ece8328ca10ae12a79f22f61217af0267ec64bf3be71e8",
+          "state.log": "387eeef32a33efe7b3a58ffbd3e992aa8fe298026bfa8e33d8b298f31e1a1923"
+        }
+      },
+      {
+        "case": "smoke-priest-3",
+        "sha256": {
+          "keys.log": "69f61b6fa074c27d09f459976c89605fa702fe3691f5441d4c97edc552266aee",
+          "messages.log": "baa01833e9cc9f7786ecc28be681c3d0ce2776aedbfd44d392524d7a86e0b945",
+          "state.log": "5fbecb2476d8733efa6235b0285a7e426a1fe711bf53eae0bfd867315da70e96"
+        }
+      }
+    ],
+    "exit": 0,
+    "scope": "three receiving smoke references, not full-suite parity"
+  },
+  "source_pr": null,
+  "task": 814,
+  "tested_merge": "a3635ad80ceb04165aa1d465acd908c158e50478",
+  "track_parent": "221a2504779d6b5fb449dbf01907aeef1a505b10",
+  "zoo_request": "https://github.com/diegoami/borg-zoo/issues/571"
+}

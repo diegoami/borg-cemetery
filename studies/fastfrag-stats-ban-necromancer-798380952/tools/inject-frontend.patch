@@ -1,0 +1,80 @@
+diff --git a/engine/frontend/main-borgh.c b/engine/frontend/main-borgh.c
+index 1c7a7d3d..7eacb649 100644
+--- a/engine/frontend/main-borgh.c
++++ b/engine/frontend/main-borgh.c
+@@ -596,6 +596,67 @@ static void borgh_state(void)
+ /**
+  * Observer for every key returned by inkey_hack.
+  */
++
++/* SCRATCH COUNTERFACTUAL HOOK (not for commit): BORGH_INJECT_AT=N makes the
++ * keys after the Nth logged key come from BORGH_INJECT ("keys:71,69" decimal
++ * codes, or "melee:RACE" = attack an adjacent RACE until none is adjacent),
++ * then hands inkey_hack back to the same Borg (its memory kept). */
++static struct keypress (*inject_saved)(int) = NULL;
++static long inject_at = -1;
++static int inject_keys[512], inject_len = 0, inject_pos = 0;
++static char inject_race[80];
++static int inject_cycle = 0;
++static struct keypress inject_hook(int flush_first)
++{
++	struct keypress k = { EVT_KBRD, 0, 0 };
++	if (inject_pos < inject_len) {
++		k.code = inject_keys[inject_pos++];
++		fprintf(stderr, "inject: turn %ld hp %d key %lu\n", (long)turn, player->chp, (unsigned long)k.code);
++		return k;
++	}
++	if (inject_race[0] && player && !player->is_dead) {
++		int d, dir = 0;
++		for (d = 0; d < 8; d++) {
++			struct loc g = loc_sum(player->grid, ddgrid_ddd[d]);
++			struct monster *m = square_in_bounds(cave, g) ? square_monster(cave, g) : NULL;
++			if (m && m->race && streq(m->race->name, inject_race)) {
++				dir = ddd[d];
++				break;
++			}
++		}
++		if (dir) {
++			inject_cycle = (inject_cycle + 1) % 4;
++			k.code = inject_cycle ? ESCAPE : (keycode_t)('0' + dir);
++			fprintf(stderr, "inject: turn %ld hp %d melee key %lu\n", (long)turn, player->chp, (unsigned long)k.code);
++			return k;
++		}
++	}
++	fprintf(stderr, "inject: turn %ld hp %d handing back to the Borg\n", (long)turn, player ? player->chp : -1);
++	inkey_hack = inject_saved;
++	return inkey_hack(flush_first);
++}
++static void inject_arm(void)
++{
++	const char *at = getenv("BORGH_INJECT_AT"), *what = getenv("BORGH_INJECT");
++	if (!at || !what || inject_at == -2) return;
++	if (inject_at == -1) {
++		inject_at = atol(at);
++		if (!strncmp(what, "melee:", 6)) my_strcpy(inject_race, what + 6, sizeof(inject_race));
++		else if (!strncmp(what, "keys:", 5)) {
++			const char *c = what + 5;
++			while (*c && inject_len < 512) { inject_keys[inject_len++] = atoi(c); c = strchr(c, ','); if (!c) break; c++; }
++		}
++		const char *melee = getenv("BORGH_INJECT_THEN_MELEE");
++		if (melee) my_strcpy(inject_race, melee, sizeof(inject_race));
++	}
++	if (keys_logged == inject_at && inkey_hack && inkey_hack != inject_hook) {
++		inject_saved = inkey_hack;
++		inkey_hack = inject_hook;
++		inject_at = -2;
++		fprintf(stderr, "inject: armed after key %lu at turn %ld hp %d\n", (unsigned long)keys_logged, (long)turn, player->chp);
++	}
++}
++
+ static void borgh_key(struct keypress k)
+ {
+ 	if (opt_start_depth && !initial_depth) {
+@@ -627,6 +688,7 @@ static void borgh_key(struct keypress k)
+ 			(unsigned long)k.code, (unsigned)k.mods);
+ 	}
+ 	borgh_state();
++	inject_arm();
+ 
+ 	/* Stop conditions */
+ 	if (opt_keys > 0 && keys_logged >= opt_keys) borgh_finish("keys");

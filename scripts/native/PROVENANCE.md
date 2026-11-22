@@ -75,3 +75,37 @@ Identity, eligibility and dossier contents are otherwise unchanged.
 the zoo command line. `scripts/animate_death.py` uses them for `-keys N
 -screen` frames and checks every frame's keys against the verified original
 prefix. Without `extra` the command is unchanged.
+
+## Historical controller and parameter replay (2026-11-20, #71 / #13)
+
+Harness dossiers without `borg_core` select historical `reborn`, unless they
+carry a native parameter receipt: only the native core writes `params-core.json`
+(the reborn core writes `params.json`), and `harness/run.sh` records
+`params_core_sha256` only when that file exists, so the receipt settles which
+core played even for a record made before #607. Explicit controller values win;
+Zoo selection still comes from its reconstructed `borg_reborn_core`. Unknown,
+empty or contradictory explicit values are refused.
+
+Replay clears ambient `BORG_*`, `ANGBAND_*` and `BORGH_*` settings, retaining
+only the explicit toolkit lookup `BORG_CEMETERY_DIR`. Environment-origin values
+in hash-verified `params-core.json` become `BORG_PARAM_*` overrides, including
+class values. File origins stay in borg.txt. The exact source/harness must
+reconstruct its original bytes; unavailable custom file configurations fail
+verification rather than silently becoming defaults or environment overrides.
+
+`OUT/reproduction.json` distinguishes verified reproduction, mismatch, failure
+and `--any-build` diagnostic. Verification requires the recorded executable
+before/after, source identity in BUILD_ID, effective configuration and parameter
+receipts, death endpoint and all three original key/state/message hashes.
+Legacy evidence missing executable or stream receipts cannot be marked verified.
+Loaded-save records still require a separate saved-start reconstruction recipe.
+
+Reborn requires observation/world/knowledge logs; borg-rs requires its native
+parameter receipt and decision trace. Native parameter bytes include origins
+and class maps. A launcher failure cannot become a verified replay even when
+keys match. Partial output and failure reasons are retained.
+
+Forwarding API remains 1; arguments are unchanged. Consumer adoption uses a
+separate exact death-tools-pin.txt update without a game-policy change. See
+`validation/borg-reborn-rs/historical-replay-settings/README.md` for real checks
+and immutable source/configuration/raw evidence for both controllers.

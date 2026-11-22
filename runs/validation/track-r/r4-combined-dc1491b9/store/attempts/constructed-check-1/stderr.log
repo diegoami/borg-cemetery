@@ -1,0 +1,52 @@
+
+thread '<unnamed>' (404928) panicked at borg-next/src/store_fixture.rs:35:13:
+assertion `left == right` failed
+  left: 1
+ right: 0
+stack backtrace:
+   0: __rustc::rust_begin_unwind
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/panicking.rs:676:5
+   1: core::panicking::panic_fmt
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/panicking.rs:80:14
+   2: core::panicking::assert_failed_inner
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/panicking.rs:452:17
+   3: core::panicking::assert_failed::<i32, i32>
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/panicking.rs:407:5
+   4: borg_next::store_fixture::run::<borg_next::shadow::Next>::{closure#0}::{closure#0}
+   5: borg_rs::decision_api::item_use_fixture::with_stubbed_messages::<(), borg_next::store_fixture::run<borg_next::shadow::Next>::{closure#0}::{closure#0}>
+             at /workspace/work/r437-store-home/borg-core/src/decision_api.rs:1041:9
+   6: borg_next::store_fixture::run::<borg_next::shadow::Next>::{closure#0}
+             at /workspace/work/r437-store-home/borg-next/src/store_fixture.rs:27:9
+   7: <std::sync::once::Once>::call_once::<borg_next::store_fixture::run<borg_next::shadow::Next>::{closure#0}>::{closure#0}
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/sync/once.rs:167:41
+   8: <std::sys::sync::once::futex::Once>::call
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/sys/sync/once/futex.rs:183:21
+   9: <std::sync::once::Once>::call_once::<borg_next::store_fixture::run<borg_next::shadow::Next>::{closure#0}>
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/std/src/sync/once.rs:167:20
+  10: borg_next::store_fixture::run::<borg_next::shadow::Next>
+             at /workspace/work/r437-store-home/borg-next/src/store_fixture.rs:26:10
+  11: <borg_next::shadow::Next as borg_rs::shadow::Shadow>::after_think
+             at /workspace/work/r437-store-home/borg-next/src/shadow.rs:443:9
+  12: borg_rs::shadow::after_think
+             at /workspace/work/r437-store-home/borg-core/src/shadow.rs:49:39
+  13: borg_rs::borg_think::borg_think
+             at /workspace/work/r437-store-home/borg-core/src/borg_think.rs:171:5
+  14: borg_rs::borg::generate_keypress
+             at /workspace/work/r437-store-home/borg-core/src/borg.rs:538:12
+  15: borg_rs::borg::borg_entry_point::{closure#0}
+             at /workspace/work/r437-store-home/borg-core/src/borg.rs:311:17
+  16: borg_rs::engine::enter::<borg_rs::headers::ui_event_h::keypress, borg_rs::borg::borg_entry_point::{closure#0}>
+             at /workspace/work/r437-store-home/borg-core/src/engine.rs:111:13
+  17: borg_rs::borg::borg_entry_point
+             at /workspace/work/r437-store-home/borg-core/src/borg.rs:310:5
+  18: inkey_ex
+  19: textui_get_command
+  20: textui_process_command
+  21: textui_get_cmd
+  22: play_game
+  23: main
+  24: <unknown>
+  25: __libc_start_main
+  26: _start
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+/workspace/work/r437-store-home/build/rust-test/game/angband: Exiting on signal 6!

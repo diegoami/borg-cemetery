@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-b259d40a71939f3ecc121928c40b91e5dcceba5a1b567ebe1f3ba661c9f26edc",
+  "run_kind": "harness",
+  "character": "Dunadan Mage",
+  "raw_cause": "a soldier",
+  "terminal": {
+    "cause": "a soldier",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 5,
+    "turn": 95866,
+    "race_idx": 8,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 2017596150,
+    "flags": "-",
+    "git_rev": "ab775d488a979bd11ed68079d28132bc046b8c0d",
+    "git_dirty": "no",
+    "source_sha256": "57f7f003c5e3e107854789752d79b9c4e24137f079baa91499fae513ebd7691d",
+    "binary_sha256": "0ee6af91f55c041772a6a86e795f6e97047d9d5d3105fb1eaf3dc2baf957915e",
+    "borg_txt_sha256": "00124160519474601915a9d5856f2fb0080b17d756b82158ee4fd0c8c03f5a0f",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 7130
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 44944038357, artifact deaths-4.2.6-reborn-rust-main-ab775d48-2, classes-1800-medium/4.2.6-reborn-rust-main-ab775d48/reborn-tonight-shipped/2017596150 (https://github.com/diegoami/borg-zoo/actions/runs/44944038357, 90-day retention)",
+      "result_sha256": "7384bc8d57276e6131b8ab292efc4d3f5c5905b4abb4f2b640e766ca6dabd3e0",
+      "raw_sha256": {
+        "keys.log": "7384bc8d57276e6131b8ab292efc4d3f5c5905b4abb4f2b640e766ca6dabd3e0",
+        "messages.log": "5b600c04dc287869be6f817cd77cd953ae9d1038bde173c6200ca60153dc3a5e",
+        "state.log": "051bd6ef2db6e06c14da5c5d3ba59266937fa5c22f2bacf937a81ab28efefed7"
+      },
+      "source_commit": "ab775d488a979bd11ed68079d28132bc046b8c0d",
+      "binary_sha256": "0ee6af91f55c041772a6a86e795f6e97047d9d5d3105fb1eaf3dc2baf957915e"
+    }
+  ],
+  "encounter_family": "start-e487f0f96d405b24a998e3ae5bb9d60b0bf86546c70574f1a289e9ba032cbc7e",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "21a90f8722d902f53ee60daa883de682cfb8e51f788ce2d20744ec8081a42a49",
+    "config.txt": "f9955697091d6234b9c3de31dfcd2d665b3db035e2441a42bcfbb8c13a524f79",
+    "params-core.json": "2edd86bc0ce387fdfc8f7447e711867338e7a56fc7bf0218a08a4fc8436ab647",
+    "scary_list.txt": "e0e293814e8ed9c2f3a5f0af809f479e854878e5d0eaedea37b671dd1b20f5a8",
+    "summary.json": "9efb70ba12dcf1dd196592d730fcd737cca5f10963ad49242c453e99a2433dbd",
+    "trace-core-tail.jsonl": "3239750ddd02dfb436bc528056a44c3d0d4eccca8a96eb9e63455e6f7d58b7c7"
+  },
+  "investigation": null,
+  "issue": null
+}

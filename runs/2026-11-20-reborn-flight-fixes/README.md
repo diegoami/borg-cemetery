@@ -50,3 +50,7 @@
 
 Play them: `~/borg-play/flight-fixes` (`./play.sh NAME --to TURN` is the exact game).
 
+
+## Replay inputs
+
+`replay/1653223723/` (the Warrior with the anti-teleportation robe, borg-reborn-rs#829) replays exactly without the zoo artifacts: `runs/replay-zoo-death.sh runs/2026-11-20-reborn-flight-fixes/replay/1653223723`.
