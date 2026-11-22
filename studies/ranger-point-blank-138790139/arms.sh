@@ -24,4 +24,10 @@ run "$OLD" old-ctl X=1
 run "$OLD" old-ctl-div1 $PB=1
 run "$OLD" old-ban $FF
 run "$OLD" old-ban-div1 $FF $PB=1
+# track-p e2d8919e (added after the owner's follow-up): TRACKP=<checkout at e2d8919e>
+if [ -n "${TRACKP:-}" ]; then
+    run "$TRACKP" tpA X=1
+    run "$TRACKP" tpB $PB=1
+    run "$TRACKP" tpC $PB=1 BORG_PARAM_FAST_FRAGILE_BY_STATS=1
+fi
 # tables: python3 fights.py OUT/<arm> ; python3 crow.py OUT/<arm>

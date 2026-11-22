@@ -36,6 +36,12 @@ dies to the crow at game turn 42,507, CL3, as the zoo recorded. The keys' sha256
 The divisor changes the game at turn 45,482 through the native planner. There an adjacent
 apprentice gets an arrow instead of a stab. Crows are not involved.
 
+**On track-p (e2d8919e, 105 commits ahead of main, which it contains):** neither game meets
+a crow at all. All three arms live to the cap. The divisor changes the game at turn 46,028,
+inside a wild-dog pack, where the Borg shoots a different dog (see *Track-p*). Track-p
+keeps the same code path: the focused planner returns at `borg_fight_attack.rs:1069-1070`,
+before the arrow divisor at line 1137.
+
 ## Settings checked (main 47b9bbb6)
 
 - `attack_arrow_point_blank_divisor`: default 5, range 1..=1000 (`params.rs:933`).
@@ -178,6 +184,57 @@ The `dist` column comes from `state.log` positions. About 13-15 melee rows show 
 distance above 1; they are town urchins whose logged coordinates do not match. This was
 not investigated.
 
+## Track-p (e2d8919e)
+
+Added after the owner's follow-up ("Main was many commits behind ... repeat on
+track-p"). The build is borg-reborn-rs `e2d8919e8aa314b8a3622b90bf0b1be7958bdfd4`, source
+hash `453451d4b8a44259…`. `harness/borg.txt` sha256 is `e4bd2b87…`; its run copy hashes
+`3c0c9d8b…`. Smoke is 3/3 identical to `smoke-borg-rs`.
+
+What track-p ships that matters here:
+- the same arrow divisors (5, Rogue 3, Ranger 2; `borg.txt:634`, `1783`);
+- `fast_fragile_policy = 1`, `by_stats = 0`, `no_heal = 1` (`1405-1407`);
+- #870's `attack_throw_point_blank_divisor = 1` (`715`), which no arm changes.
+
+| arm | overrides | outcome | CL | max DL (first turn) | keys | params_core_sha256 | keys sha256 |
+|---|---|---|---|---|---|---|---|
+| tp-A | none | alive at the cap | 8 | 5 (DL3 63,987; DL5 67,322) | 20,433 | `21a3f54b2b66ed61ae5630046933d412ae1aeacb7bdee43f570ef57da8638d31` | `f01f7fdf4521ccfcb3333f4f1ba79fe081e60a2eacc23a31b90f2b35e7e06816` |
+| tp-B | Ranger divisor 1 | alive at the cap | 7 | 4 (DL3 72,456; DL4 73,640) | 19,438 | `06a17b7ec16562775e4121e236332e6df222680636c6635a5838b5b90165078c` | `0ac863bf4405915577bc2f79bbeed8072000d13da2f9ce650bd10fc003cf0556` |
+| tp-C | B + `by_stats=1` | identical to B | 7 | 4 | 19,438 | `3d75da444dec80f1bdcc45a9b9ce89e7c8be18d29d770a401de4a0860df9a072` | = B |
+
+**Crows:** none in either game. No crow is created in view, so the owner's question has no
+crow fight to answer on this head.
+
+**First difference:** `keys.log` line 8,416, game turn 46,028, DL2, a pack of wild dogs at
+3 HP each.
+
+| arm | melee | launch, as chosen | target |
+|---|---|---|---|
+| tp-A | 6 / 6 | 8 / 16 | the dog at distance 2, (43,40) |
+| tp-B | 6 / 6 | 10 / 20 | the adjacent dog, (43,42) |
+
+Both arms shoot. The divisor raised the adjacent dog's value until it became the best
+target. One turn earlier (46,019) both arms had already shot an adjacent dog: at divisor 2
+the arrow, 4/8, beat the stab, 6/6, because of the projectile weight 2000‰.
+
+**Over the game:**
+
+| | tp-A | tp-B |
+|---|---|---|
+| shots (distance 1 / farther) | 298 (85 / 213) | 308 (80 / 228) |
+| melee attacks | 81 | 66 |
+| arrow hit messages / broken | 250 / 91 | 250 / 84 |
+| kill messages | 143 | 153 |
+| Cure Light Wounds / Phase Door | 10 / 3 | 7 / 3 |
+| lowest HP after the split | 12/48 (51,984) | 39/52 (68,329) |
+| arrows bought after the split / at the end | 87 / 110 | 76 / 64 |
+| CL, max DL | 8, DL5 | 7, DL4 |
+
+The lowest HP of the game, 3/22 at 31,794, comes before the split and is the same in both
+arms. Here divisor 1 ends a level lower and a level shallower; on main it ended a level
+higher. Per-attack rows: [data/attacks-trackp-A.tsv](data/attacks-trackp-A.tsv),
+[data/attacks-trackp-B.tsv](data/attacks-trackp-B.tsv).
+
 ## Hypotheses for a borg-zoo request (RULES 14, 20)
 
 1. **H1: on the shipped settings, the Ranger's point-blank divisor does not affect fights
@@ -186,18 +243,26 @@ not investigated.
    measurement. A zoo arm is needed only to size the indirect effect (H2).
 2. **H2: Ranger divisor 1 against the shipped 2** changes Ranger games through the native
    planner. On this start that meant more adjacent shots, more arrows used and bought, and
-   a higher CL. Whether it changes Ranger deaths or depth is unmeasured.
-   - Suggested arm: `borg_param_attack_arrow_point_blank_divisor__ranger = 1` against the
-     shipped `harness/borg.txt`, Rangers only, the classes-1800 suites.
+   a higher CL; on track-p, a different target and a lower CL. The zoo has measured this
+   before.
+   - [borg-zoo#290](https://github.com/diegoami/borg-zoo/issues/290), on main f660aecc:
+     development 11 against 18 deaths over the 200 classes-1800 Rangers (p 0.12), then
+     confirmation 12 against 15 over the 200 classes-1800-b Rangers (p 0.58, not
+     confirmed). Binned neutral.
+   - Re-measure on track-p e2d8919e:
+     [borg-zoo#651](https://github.com/diegoami/borg-zoo/issues/651). Arm `lo`:
+     `borg_param_attack_arrow_point_blank_divisor__ranger = 1` against the shipped
+     `harness/borg.txt`, on the 200 classes-1800 Ranger starts. Any confirmation goes to the
+     Ranger starts of classes-1800-fresh.
    - Endpoints: deaths, max CL, max DL, arrows fired and bought.
 3. To make a *crow* fight use arrows, the lever is the focused planner's comparison
    (melee against arrows by HP per turn), not this divisor. On the death game the planner
    rated the Main Gauche at 5.0 HP per turn against a 10-11 HP crow. Any such change is
    code, not a setting, and is outside this study.
    - [borg-reborn-rs#870](https://github.com/diegoami/borg-reborn-rs/issues/870) (a
-     separate point-blank divisor for thrown oil, track P, in progress) applies to the
-     native planner too. On this reading it would not reach fast-fragile throws either,
-     but that is not checked here.
+     separate point-blank divisor for thrown oil) is merged on track-p and shipped at 1.
+     Its `borg.txt` comment says "Attack on sight already bypasses it", the same as
+     the arrow divisor.
 
 ## Hashes
 
@@ -219,4 +284,4 @@ scary list e0e293814e8ed9c2f3a5f0af809f479e854878e5d0eaedea37b671dd1b20f5a8. On 
 
 The four 7f8c6b80 runs play the same start with the same keys as D-c4a44a562f58 (sha256
 `b9e7f2f8…`). They are that death, KNOWN, and need no new record (RULES 12, owner #464).
-The main arms did not die. The raw run directories are not committed.
+The main and track-p arms did not die. The raw run directories are not committed.
