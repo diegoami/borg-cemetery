@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-9a6d5f6caf5501925a9dd2bb59df2997447a4fb1485629e63c4998f4bae38c52",
+  "run_kind": "harness",
+  "character": "Half-Troll Ranger",
+  "raw_cause": "poison",
+  "terminal": {
+    "cause": "poison",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 4,
+    "level": 8,
+    "turn": 96820,
+    "race_idx": 7,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 829474344,
+    "flags": "menu,exact",
+    "git_rev": "7f8c6b80a617eba3a6f2b83e4ba9d45b7b552b73",
+    "git_dirty": "yes",
+    "source_sha256": "c9f0165f2591cd90a00708359bfedfe264820e16d11a792522752b97f46923bb",
+    "binary_sha256": "3479bd4c2a5daa11a4c7ca9c1a23b8beebf3f73e881aac6add14b719e59edfa8",
+    "borg_txt_sha256": "3c4a9d7daaea51388c336296df7843d75dc81a5b96bb7226d3bae056d0c47431",
+    "profile_sha256": null,
+    "params_core_sha256": "49899f21e1ceb38abe451453877bec0400e3a7f3bb0b32f4bfd08e06cca09519"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 9402
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/borg-932-ranger-incident",
+      "result_sha256": "473c74e55448c02b51a48bfaee66ebecd712cd996e221a91cc5f7674698bd2da",
+      "raw_sha256": {
+        "keys.log": "473c74e55448c02b51a48bfaee66ebecd712cd996e221a91cc5f7674698bd2da",
+        "messages.log": "bd7d3eead3047cd35e7c60cfd995c1bfaa2150b924053ec79e396d560d7f3fc3",
+        "state.log": "c84b316abb491217d1db9977df696082978c955e87a8b6edf6878eb2dbcfdc6a"
+      },
+      "source_commit": "7f8c6b80a617eba3a6f2b83e4ba9d45b7b552b73",
+      "binary_sha256": "3479bd4c2a5daa11a4c7ca9c1a23b8beebf3f73e881aac6add14b719e59edfa8"
+    }
+  ],
+  "encounter_family": "start-cb8606dc2717849e2c6f3ef73a3d9e4f95624e14383a6991d12650d0ece19377",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "cc148ed57326e3dff5b03d5c23343a504b494e380e49ea76b482871a227ff835",
+    "config.txt": "1d98a18afccc365fca5f5ad0cd214ad5210c057588ebcb5e34d6ad63ac6c02c8",
+    "params-core.json": "49899f21e1ceb38abe451453877bec0400e3a7f3bb0b32f4bfd08e06cca09519",
+    "scary_list.txt": "9766d882edd205e416a716a9031284dd87de6f369a7ba13b6dc248f849473f7f",
+    "summary.json": "33e6ce808dc0a299600bd040ed37dcb2a28528ce8ad79b575efdb12d22f9c66c",
+    "trace-core-tail.jsonl": "13e4a777e7359c517ab7aac7219b5c70a851581d98d6ab3a6ffe4d15496b7aaa"
+  },
+  "investigation": null,
+  "issue": null
+}
