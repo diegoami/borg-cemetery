@@ -1,0 +1,62 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D0005-rust-seed1022",
+  "run_kind": "harness",
+  "character": "Gnome Druid",
+  "raw_cause": "a giant yellow centipede",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 14120,
+    "race_idx": 4,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 1022,
+    "flags": "menu",
+    "git_rev": "6163704dd9f5abca9e2277fd65bf17ad8312d349",
+    "git_dirty": "no",
+    "source_sha256": "13435ec6a26d6176a06d4c6a9b229e1708c728575811247b35fed642e8faea54",
+    "binary_sha256": "bc78e00b9ca062579180ef7f5bd4309e6d515afd71a16bd0d8fffc32c8636a31",
+    "borg_txt_sha256": "41baeab598a35735abbb446aa6a8b7e52442055cdd8b2a93c155a96aeedf8f56",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "688bda6d3de5bcb915a33b37440eed7e314999361ccdf4577d0878481cec8499"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 1248
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/r434-review-evidence/full-off/full-2-druid-2",
+      "result_sha256": "5d143d91fc928bb44171ce27e2846cd22d84cce3164e91686a0481acd4ed9f94",
+      "raw_sha256": {
+        "keys.log": "5d143d91fc928bb44171ce27e2846cd22d84cce3164e91686a0481acd4ed9f94",
+        "messages.log": "aa4bf9d500633b218ab722007177f53c379e514213f8aef11ebd74a46e137590",
+        "state.log": "e8699cec479acd7785cad91a2fd411c7be494007617f4826666b138b2cb01405"
+      },
+      "source_commit": "6163704dd9f5abca9e2277fd65bf17ad8312d349",
+      "binary_sha256": "bc78e00b9ca062579180ef7f5bd4309e6d515afd71a16bd0d8fffc32c8636a31"
+    }
+  ],
+  "encounter_family": "start-e097d1c18c4460e849b9ff684e388b2dfa789739a5f8aac833af36a70249a342",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "78fbbe98acc01f776f1519e5c6422eee830d40a993b3bed7e8e9e81af9289d7e",
+    "config.txt": "2d06f75d249fc93042266b37796e690940c54cb46648b824ebc66b877f2b9ca9",
+    "depths.json": "e08a161f441fb8738064b99c9eb583209f26136cf54b5bb226e58500ee8f9ead",
+    "params-core.json": "688bda6d3de5bcb915a33b37440eed7e314999361ccdf4577d0878481cec8499",
+    "summary.json": "3d9d66725da108f13fea6bb1644d958605ea4a76d8b21dc42a032dedf67627c3",
+    "trace-core-tail.jsonl": "23cd369d44d4dc648ae4974de620001648922f1e767a5e1a8b44249306909a3f"
+  },
+  "investigation": null,
+  "issue": null
+}
