@@ -259,6 +259,22 @@ Every death after an escape in these branches comes back to the walk to the stai
 - **908 with 907b.** The danger is 84 at 62,899: no retreat, a Phase Door at once at HP 23, then a CLW.
 - **910 alone** does not attack at 62,892. It then walks to the stairs and dies, as the original did one turn later. With 908 as well, it lives.
 
+## The same switches on track-p (borg-reborn-rs 608d9fed)
+
+The arms above ran on 7f8c6b80, the death's build: a main commit, 242 commits behind `track-p` on 2026-11-22. So this section repeats the check on the stack's top, `608d9fed` (`track-p` `9085c266` plus borg-reborn-rs#920–#924).
+
+**Setup.**
+- **The seeds.** The 9 deaths of #596's `reborn-fastfrag-stats-ban` arm.
+- **The arms.** #596's `ctl` and `stats-ban` profiles, each with and without every new switch. That is 36 named-case games, 100,000 turns, on `classes-1800-big`'s characters.
+- **How they ran.** Built and played by borg-zoo's own adapter ([probe/trackp_arms.py](probe/trackp_arms.py); the specimen pins `track-p`'s own `scary_monsters.txt`, `ff831d0a…`). Results: [counterfactuals/trackp-608d9fed-named-cases.jsonl](counterfactuals/trackp-608d9fed-named-cases.jsonl).
+
+**Results.**
+- **No deaths.** None of the 9 starts dies on `track-p`, with or without the switches. All 36 games reach the cap. On `track-p`, 381988580 is a CL7 Rogue that reached DL3, and CL6/DL4 with the switches.
+- **The switches act.** Every "+all" game splits from its control. #911's take acted 263 times and #908's walk refusal 10 times. The outmatched heal (#909) never acted. #907's and #910's switches leave no note of their own.
+- **Levels.** The total character level is 60 in both `ctl` arms.
+
+These games show that the switches act on `track-p`, with no new death in 18 games. They cannot show a rescue, because nothing died. That is borg-zoo#643's measurement, which runs on `608d9fed`.
+
 ## Limits
 
 - The zoo bundle itself was not downloaded: the artifact host is blocked here. The logs were regenerated, and their hashes equal the dossier's.
