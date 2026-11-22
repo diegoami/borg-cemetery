@@ -1,0 +1,30 @@
+diff --git a/borg-core/src/borg_caution.rs b/borg-core/src/borg_caution.rs
+index 55565252..1069e0df 100644
+--- a/borg-core/src/borg_caution.rs
++++ b/borg-core/src/borg_caution.rs
+@@ -2210,8 +2210,23 @@ pub(crate) fn flight_recall_survivable(st: &mut BorgState) -> bool {
+         if forecast.unknown_damage && recall_exposure(1.0, player_energy, monster_energy, ticks, risk_steps) > 0.0 {
+             unknown_risks += 1;
+         }
+-        if let Some(contact_steps) = steps {
+-            exposure += recall_exposure(forecast.hp_per_turn, player_energy, monster_energy, ticks, contact_steps);
++        let contrib = steps.map(|c| recall_exposure(forecast.hp_per_turn, player_energy, monster_energy, ticks, c)).unwrap_or(0.0);
++        if std::env::var_os("BORG_CF_DEBUG").is_some() {
++            let d = (kill.pos.x - st.borg.c.x).abs().max((kill.pos.y - st.borg.c.y).abs());
++            eprintln!("CFMON turn={} i={} race={} pos={},{} dist={} awake={} speed={} steps={:?} risk_steps={} unknown_damage={} ranged_risk={} unknown_fight={} multiply={} hp_per_turn={:.3} contrib={:.2}",
++                engine::game_turn(), i, String::from_utf8_lossy(engine::race_name(r)), kill.pos.y, kill.pos.x, d, kill.awake, forecast_monster_speed(&kill), steps, risk_steps,
++                forecast.unknown_damage, forecast.ranged_risk, forecast.unknown_fight, flag(crate::headers::list_mon_race_flags_h::RF_MULTIPLY), forecast.hp_per_turn, contrib);
++        }
++        exposure += contrib;
++    }
++    if std::env::var_os("BORG_CF_DEBUG").is_some() {
++        eprintln!("CFSUM turn={} hp={}/{} recall_sources={} player_energy={} exposure={:.2} unknown={} reachable={} awake={} asleep={} pos={},{}",
++            engine::game_turn(), st.borg.tr(BI_CURHP), st.borg.tr(BI_MAXHP), st.borg.tr(crate::borg_headers::borg_trait_h::BI_RECALL), player_energy, exposure, unknown_risks, reachable, awake, asleep, st.borg.c.y, st.borg.c.x);
++    }
++    if let Some(n) = std::env::var("BORG_CF_ALLOW_FROM_TURN").ok().and_then(|v| v.parse::<i32>().ok()) {
++        if engine::game_turn() >= n {
++            eprintln!("CFALLOW turn={} hp={} (forced allow, counterfactual)", engine::game_turn(), st.borg.tr(BI_CURHP));
++            return true;
+         }
+     }
+     let allowed = recall_forecast_allows(exposure, unknown_risks, st.borg.tr(BI_CURHP));
