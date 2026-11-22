@@ -27,6 +27,13 @@ the owner's policy as a rule.
 5. The #758 Recall refusal was moot: the priest **had no Word of Recall** after turn 45022.
    The forecast does mis-model slow poison-biting breeders (borg-reborn-rs #876, #880).
 
+**Issues.** borg-reborn-rs [#882](https://github.com/diegoami/borg-reborn-rs/issues/882)
+(the policy, below), [#881](https://github.com/diegoami/borg-reborn-rs/issues/881) (the flight
+plans through unknown grids), [#883](https://github.com/diegoami/borg-reborn-rs/issues/883)
+(Heroism recast below CL20). The Recall forecast is already
+[#876](https://github.com/diegoami/borg-reborn-rs/issues/876) and
+[#880](https://github.com/diegoami/borg-reborn-rs/issues/880).
+
 ## The case
 
 | | |
