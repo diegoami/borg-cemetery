@@ -14,6 +14,9 @@ and `reborn-fastfrag-stats-ban` at 28,549, CL2, DL1
 
 ## The short answer
 
+Played on main `47b9bbb6`. The same arms on track-p `e2d8919e`, with a `town_hunt`-only arm, are in
+[`trackp/`](trackp/README.md): no arm dies there either, and the leash acts from turn 13,476.
+
 1. **On current main (`47b9bbb6`) this druid no longer dies**, with or without the kit leash.
    Main's control (shipped settings, every kit switch 0) is alive at the cap, CL8, max DL2.
    It is a different game from the zoo's from **game turn 3,140**, before any kit setting can
@@ -201,7 +204,9 @@ CL3 (25 XP), so no Stinking Cloud.
 ## Files
 
 - `arms.json`: per arm, overrides, outcome, full hashes, first divergence, counts.
-- `arms.sh`: reproduces every arm (A–F, S0/S1 on main; Z0/Z1 on the specimen).
+- `arms.sh`: reproduces every arm (A–F, S0/S1 on main; Z0/Z1 on the specimen; with a track-p
+  worktree as SRC_MAIN, the track-p arms).
+- `trackp/`: the arms on track-p `e2d8919e`, with the town-hunt arm H.
 - `extracts/`: purchases, flask throws with targets, kit notes, gold/depth/CL changes, and the
   last 50 messages of each death. The raw run directories are not kept (they replay from
   `arms.sh` key for key).
