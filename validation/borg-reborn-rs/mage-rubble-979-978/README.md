@@ -47,3 +47,34 @@ the split to the enabled restoration reserve, and all three logs match again.
 | Checkpoint with startup acknowledgment | `c06154e92cba8b6362f50fc6e92306d05414791eb3fd8839204d13b42fa541b3` | `4385d75b8d26af80af01d08957ad076053005b98d25adf248c858316383ce711` |
 | Constructed clear dog | `ec2ba70fa7fcbbd94ffd06a8a3240a3c29b9a9644d3bbb1a40628c3e85e4cc74` | `efdf691e64952a6343671652fad7ae40bf2357f4b914cb8b8279081f57518dec` |
 | Constructed carried potion | `e438c85dada0fd147381b1ebdc48b31eb22c800a79ee6ea51fcfce95d0fd7e1d` | `172506a0ec49d2c0dd8075a394962cdba7ab36c3f99db87be63a0b91f2533ca0` |
+
+## P8 re-review live Alchemist trial
+
+Source [f2177abb37f5e8b52c1fbd4cb6961219131be61c](https://github.com/diegoami/borg-reborn-rs/commit/f2177abb37f5e8b52c1fbd4cb6961219131be61c).
+The isolated binary SHA-256 was `3f57929d7ce45f0791d5f2b9b509b173b638397c95bac2f3ebcab489d74cebb0`.
+Use the same launch recipe above, with `stocked-alchemist.c.inc`, turn cap
+10,817,143, and `BORG_TOWN_CAPABILITY_AUDIT="$out/audit.jsonl"` and
+`BORG_TOWN_PLAN_RECORD="$out/town.jsonl"`. The setup enters town, sets
+base Strength to 18/100 and removes heavy unequipped stacks until weight
+is at most 1200 or no unequipped stack remains. It injects one known
+Restore Life Levels into the live Alchemist stock. The saved gold and
+maximum depth are preserved. Use `BORGH_TRIAL_HEALTHY=1` to set current XP
+to the saved maximum. Set `BORG_PARAM_TOWN_RESTORE_LIFE_RESERVE` to 0 or 1
+for the indicated case.
+
+The native observer identifies Restore Life Levels as kind 239, tval 26,
+sval 16. In the drained arm with reserve 0 it populated experience row 24
+at weight 100,000. The Borg bought one potion for 400 gold at 10,815,607,
+quaffed it at 10,815,611 and reached 714,369 XP from 711,985. With a
+healthy Mage and reserve 1, the observer installed reserve row 76 at
+weight 25,000. The Borg bought one potion for 400 gold at 10,815,602
+and carried it through the trial without quaffing. The healthy reserve-zero
+audit had zero weight on the experience row and omitted the reserve row.
+
+The first town attempt retained the overweight saved pack and observed
+the eligible curves without purchasing. A second setup variant crashed
+before Borg activation after altering the monsters and forcing an immediate
+bonus update. Removing those calls allowed town observation. A weight-trim
+trial without the final message flush stopped at startup with zero keys.
+The recorded variant above uses the final message flush. These are
+constructed decisions from the same checkpoint.
