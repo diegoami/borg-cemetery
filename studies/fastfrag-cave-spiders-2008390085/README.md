@@ -288,7 +288,12 @@ What the table says, for this game only:
 
 ## Defects filed in borg-reborn-rs
 
-(filled in below once filed)
+- [#913](https://github.com/diegoami/borg-reborn-rs/issues/913): Speed is never drunk while fleeing from monsters faster than the Borg (Q1, Q5, Q6).
+- [#914](https://github.com/diegoami/borg-reborn-rs/issues/914): the fast-fragile policy pre-empts the emergency Phase Door against a group. Three spiders pass `group_max` 2 because it counts those "in view", and the heal ban holds with three in contact (Q2, Q3).
+- [#915](https://github.com/diegoami/borg-reborn-rs/issues/915): grouped monster messages are parsed as the player ghost, i.e. Morgoth's race (Q4).
+- [#916](https://github.com/diegoami/borg-reborn-rs/issues/916): the one-grid strategic retreat from faster monsters comes before Phase Door and the outmatched cure (64,444 and 64,462).
+- The stair walk from faster monsters (Q5) is already [#849](https://github.com/diegoami/borg-reborn-rs/issues/849); this case is evidence for it.
+- Observation only, not filed: at 64,394 the last Flask of oil was thrown at the remembered square of the spider killed at 64,384.
 
 All thresholds above are hypotheses (borg-reborn-rs RULES 14). The track is the owner's choice.
 
