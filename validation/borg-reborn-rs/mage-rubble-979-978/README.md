@@ -70,6 +70,7 @@ healthy Mage and reserve 1, the observer installed reserve row 76 at
 weight 25,000. The Borg bought one potion for 400 gold at 10,815,602
 and carried it through the trial without quaffing. The healthy reserve-zero
 audit had zero weight on the experience row and omitted the reserve row.
+That Mage bought no Restore Life Levels before the 1,000-key cap.
 
 The first town attempt retained the overweight saved pack and observed
 the eligible curves without purchasing. A second setup variant crashed
