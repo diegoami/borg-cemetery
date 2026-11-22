@@ -1,0 +1,19 @@
+Counterfactual for borg-reborn-rs#929 (applied to borg-core at 4b2c2fcf, built, never committed).
+With CF929 set in the environment, borg_target_unknown_wall never writes the guessed wall on the
+Borg's own grid: the walk skips that grid, and the "pathway found the target" branch returns false
+(no guess, successful_target stays negative) when the step back lands on the Borg.
+--- a/borg-core/src/borg_projection.rs
++++ b/borg-core/src/borg_projection.rs
+@@
+-        if feat_is(st.cave.grid(n_x, n_y), FEAT_NONE)
++        if std::env::var_os("CF929").is_some() && n_x == st.borg.c.x && n_y == st.borg.c.y && !(n_x == x && n_y == y) {
++            // counterfactual (#929): skip the Borg's own grid
++        } else if feat_is(st.cave.grid(n_x, n_y), FEAT_NONE)
+             && (n_y != st.borg.c.y || !y_hall)
+@@
+             borg_inc_motion(&mut n_y, &mut n_x, y, x, cy, cx);
++            if std::env::var_os("CF929").is_some() && n_x == cx && n_y == cy {
++                borg_note(st, "# CF929: no wall guess on the Borg's own grid");
++                return false;
++            }
+             borg_note(
