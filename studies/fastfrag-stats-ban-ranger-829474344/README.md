@@ -210,8 +210,8 @@ cures.
 
 ## Defects (borg-reborn-rs; each a lead until the zoo measures it)
 
-The issue numbers are filled in below once they are opened:
-- the retreat / stair-flight loop beside a monster that never moves (decisive here, and in the
-  control's code);
-- the Borg's own damage over time (poison here, the cut in the other case) missing from its contact
-  and escape decisions.
+- [borg-reborn-rs#928](https://github.com/diegoami/borg-reborn-rs/issues/928): the strategic
+  retreat and the threat-weighted stair flight (#765) undo each other beside a monster that never
+  moves. Decisive here, and in the control's code.
+- [borg-reborn-rs#926](https://github.com/diegoami/borg-reborn-rs/issues/926): the Borg's own damage
+  over time (the cut there, the poison here) is not in its escape and contact decisions.

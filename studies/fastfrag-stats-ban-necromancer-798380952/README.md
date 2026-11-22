@@ -267,12 +267,14 @@ same Borg that died. So the death is the single choice at 93,906, made by either
 
 ## Defects (borg-reborn-rs; each a lead until the zoo measures it)
 
-The issue numbers are filled in below once they are opened:
-- the Phase Door / heal ban at HP 0 while bleeding, and the cut missing from "the next turn kills"
-  (decisive here);
-- attack on sight ahead of every cure, from HP 33 to 10 (both arms);
-- the wall guessed under the Borg's own grid after a missed throw (inherited from the C Borg; no
-  effect on this death established).
+- [borg-reborn-rs#926](https://github.com/diegoami/borg-reborn-rs/issues/926): at HP 0 and bleeding,
+  Phase Door (`escape_instead`) or the heal ban replaces the cure that saves; "the next turn kills"
+  counts neither the cut nor poison. Decisive here.
+- [borg-reborn-rs#927](https://github.com/diegoami/borg-reborn-rs/issues/927): attack on sight
+  comes before every cure; the #760 gate uses the mean target damage. Both arms.
+- [borg-reborn-rs#929](https://github.com/diegoami/borg-reborn-rs/issues/929): a missed throw is
+  read as a shot into an unknown wall, and the guessed wall is the Borg's own grid (as in C). No effect
+  on this death established.
 
 Not confirmed: "thrown oil targets the wrong square" (it did not: the engine rolled and missed),
 and "attack on sight repeats a failing attack" (the throw is a 79% kill each turn; its estimate
