@@ -1,0 +1,9 @@
+# D-9c429943b1530142b64716476b717c57dc929607c5e1ab75d2bce7ada89d2eba: a crow at turn 6297
+
+Hobbit Warrior, character level 4, depth 2 (max 2), seed 1972332898, implementation `rust`, flags `-`.
+
+Build `ab775d488a979bd11ed68079d28132bc046b8c0d` (dirty: no), binary `0ee6af91f55c`. Keys `d3835db6f7cc`; raw logs stay in `borg-zoo run 44944061084, artifact deaths-4.2.6-reborn-rust-main-ab775d48-0, classes-1800-big/4.2.6-reborn-rust-main-ab775d48/reborn-tonight-shipped/1972332898 (https://github.com/diegoami/borg-zoo/actions/runs/44944061084, 90-day retention)` (not committed).
+
+Core decision trace: the last 200 of 621 thinks in `trace-core-tail.jsonl`, with selected check, queued keys and `params-core.json`.
+
+**Unassessed.** Basic dossier written by `tools/export-death.py` at the end of the run (RULES 12). Upgrade it with the full death tooling (T1.6) before investigating.
