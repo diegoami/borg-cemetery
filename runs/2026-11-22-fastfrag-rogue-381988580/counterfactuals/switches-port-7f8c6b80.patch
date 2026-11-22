@@ -1,0 +1,335 @@
+diff --git a/borg-core/src/borg_caution.rs b/borg-core/src/borg_caution.rs
+index 8e20385b..681dfdc2 100644
+--- a/borg-core/src/borg_caution.rs
++++ b/borg-core/src/borg_caution.rs
+@@ -204,6 +204,64 @@ fn stats_needing_fix(st: &BorgState) -> i32 {
+ /// hurt by at least `min_loss` percent of its maximum HP, and the danger
+ /// estimate reaches its current HP (so the ordinary `borg_heal` tiers, which
+ /// need `danger < curhp + heal`, cannot have fired).
++/// borg-reborn-rs (#909): `borg_heal`'s "if danger is close to the hp and
++/// healing will help, do it" bonus. C applies it only while the danger is
++/// below the max HP, so a non-priest in more danger gets the -25 penalty and
++/// band 3's skip (chance < 80) becomes certain (Rogue 381988580 at HP 23/35,
++/// danger 41). `over_max` drops the upper bound.
++fn lethal_heal_bonus_applies(danger: i32, curhp: i32, maxhp: i32, over_max: bool) -> bool {
++    danger >= curhp && (over_max || danger < maxhp)
++}
++
++#[cfg(test)]
++mod lethal_heal_bonus_tests {
++    #[test]
++    fn danger_above_the_max_hp_keeps_the_bonus_only_with_the_switch() {
++        assert!(!super::lethal_heal_bonus_applies(41, 23, 35, false), "C: 41 >= 35, no bonus");
++        assert!(super::lethal_heal_bonus_applies(41, 23, 35, true));
++        assert!(super::lethal_heal_bonus_applies(30, 23, 35, false));
++        assert!(!super::lethal_heal_bonus_applies(20, 23, 35, true), "danger below the HP");
++    }
++}
++
++/// borg-reborn-rs (#911): with `caution_scary_take_distance` above 0, on a
++/// level made scary while the danger here is 0, the Borg first takes an item
++/// it wants within that many flow steps (`borg_flow_take`, viewable). Asked
++/// every think, so a danger that rises ends it. Rogue 381988580 left a Potion
++/// of Speed two squares away for a sleeping small kobold four squares off.
++fn scary_take_first(st: &mut BorgState, pos_danger: i32) -> bool {
++    let reach = p(Param::caution_scary_take_distance);
++    if !scary_take_allowed(reach, st.borg.mon.scary, pos_danger, st.borg.tr(BI_CDEPTH)) {
++        return false;
++    }
++    // `take_select` refuses every item on a scary level ("If ScaryGuy, no
++    // chasing down items"): lifted for this one bounded call only.
++    let scary = st.borg.mon.scary;
++    st.borg.mon.scary = false;
++    let took = crate::borg_flow_take::borg_flow_take(st, true, reach);
++    st.borg.mon.scary = scary;
++    if took {
++        borg_note(st, &format!("# Taking an item before leaving a scary level (danger 0, within {reach}) (#911)"));
++    }
++    took
++}
++
++fn scary_take_allowed(reach: i32, scary: bool, pos_danger: i32, depth: i32) -> bool {
++    reach > 0 && scary && pos_danger == 0 && depth > 0
++}
++
++#[cfg(test)]
++mod scary_take_tests {
++    #[test]
++    fn only_a_scare_at_no_danger_in_the_dungeon_waits_for_an_item() {
++        assert!(super::scary_take_allowed(5, true, 0, 1), "36,256: danger 0 on DL1");
++        assert!(!super::scary_take_allowed(0, true, 0, 1), "0 = C");
++        assert!(!super::scary_take_allowed(5, true, 1, 1), "any danger: flee");
++        assert!(!super::scary_take_allowed(5, false, 0, 1));
++        assert!(!super::scary_take_allowed(5, true, 0, 0), "not in town");
++    }
++}
++
+ fn outmatched_heal_applies(
+     enabled: i32,
+     curhp: i32,
+@@ -518,7 +576,9 @@ fn borg_heal(st: &mut BorgState, danger: i32) -> bool {
+     }
+ 
+     // if danger is close to the hp and healing will help, do it
+-    if danger >= st.borg.tr(BI_CURHP) && danger < st.borg.tr(BI_MAXHP) {
++    // borg-reborn-rs (#909): with caution_heal_lethal_over_max, a danger at or
++    // above the max HP is still "close to the hp" (0 = C: below the max HP only).
++    if lethal_heal_bonus_applies(danger, st.borg.tr(BI_CURHP), st.borg.tr(BI_MAXHP), p(Param::caution_heal_lethal_over_max) != 0) {
+         chance += p(Param::caution_heal_lethal_chance_bonus);
+     } else if st.borg.tr(BI_CLASS) != CLASS_PRIEST && st.borg.tr(BI_CLASS) != CLASS_PALADIN {
+         chance -= p(Param::caution_heal_nonpriest_chance_penalty);
+@@ -1084,13 +1144,18 @@ fn desperate_for_stairs(st: &mut BorgState, pos_danger: i32) -> bool {
+             // borg-reborn-rs (#747): with caution_desperate_fast_danger_percent,
+             // only a faster monster that is also dangerous (a fruit bat
+             // next to the Borg is not a reason to stay).
+-            if i32::from(st.kills.kills[usize::from(kill)].speed) > st.borg.tr(BI_SPEED)
++            if desperate_neighbour_speed(&st.kills.kills[usize::from(kill)]) > st.borg.tr(BI_SPEED)
+                 && fast_neighbour_counts(st, usize::from(kill))
+             {
+                 safe = false;
+             }
+         }
+ 
++        // borg-reborn-rs (#908): a walk the faster neighbours make cost the HP.
++        if safe && desperate_walk_refused(st, b_j) {
++            safe = false;
++        }
++
+         // Don't run from Grip or Fang
+         if (st.borg.tr(BI_CDEPTH) <= p(Param::caution_desperate_unique_depth)
+             && st.borg.tr(BI_CDEPTH) != 0
+@@ -1929,6 +1994,40 @@ pub(crate) fn race_turns(hp: i32, hp_per_turn: f64, uses: Option<i32>, duration:
+     Some((primary_time + complete_attack_commands(remaining / fallback_hp_per_turn), uses))
+ }
+ 
++/// borg-reborn-rs (#910): `wins_race` with a margin. The race wins only when
++/// the expected damage taken stays below (100 - margin) percent of the HP;
++/// 0 = `wins_race` (Rogue 381988580: 28.5 against 31 was "winning", a
++/// one-on-one an engine-rule simulation wins 82% of the time).
++pub(crate) fn wins_race_margin(turns: f64, incoming: f64, hp: i32, margin_percent: i32) -> bool {
++    if margin_percent <= 0 {
++        return wins_race(turns, incoming, hp);
++    }
++    wins_race(turns, incoming, hp)
++        && turns * incoming * 100.0 < f64::from(hp) * f64::from(100 - margin_percent.min(100))
++}
++
++/// borg-reborn-rs (#910): a monster generated with a group (friends lines)
++/// counts `100 + percent` percent of its incoming damage, for the members not
++/// yet seen. 0 = unchanged.
++pub(crate) fn group_scaled_incoming(hp_per_turn: f64, has_friends: bool, percent: i32) -> f64 {
++    if !has_friends || percent <= 0 {
++        return hp_per_turn;
++    }
++    hp_per_turn * f64::from(100 + percent) / 100.0
++}
++
++#[cfg(test)]
++mod race_margin_tests {
++    #[test]
++    fn the_soldier_race_is_not_won_with_a_margin_or_a_group() {
++        assert!(super::wins_race_margin(3.0, 9.502, 31, 0), "today: 28.5 < 31");
++        assert!(!super::wins_race_margin(3.0, 9.502, 31, 20), "28.5 >= 80% of 31");
++        let grouped = super::group_scaled_incoming(9.502, true, 100);
++        assert!(!super::wins_race_margin(3.0, grouped, 31, 0));
++        assert_eq!(super::group_scaled_incoming(9.502, false, 100), 9.502);
++    }
++}
++
+ pub(crate) fn wins_race(turns: f64, incoming: f64, hp: i32) -> bool {
+     turns.is_finite() && turns > 0.0 && incoming.is_finite() && incoming >= 0.0
+         && hp > 0 && turns * incoming < f64::from(hp)
+@@ -2303,7 +2402,9 @@ fn winning_fight(st: &mut BorgState) -> bool {
+         }
+         let forecast = fight_incoming(st, i);
+         if forecast.unknown_fight || forecast.unknown_damage { return false; }
+-        let danger = forecast.hp_per_turn;
++        // borg-reborn-rs (#910): the rest of a group the Borg has not seen
++        // (caution_winning_fight_group_percent; 0 = only what it sees).
++        let danger = group_scaled_incoming(forecast.hp_per_turn, engine::race_has_friends(usize::from(kill.r_idx)), p(Param::caution_winning_fight_group_percent));
+         if danger <= 0.0 { continue; }
+         in_contact |= d <= 1 || kill.ranged_attack != 0;
+         incoming += danger;
+@@ -2348,7 +2449,7 @@ fn winning_fight(st: &mut BorgState) -> bool {
+         }
+     }
+     let hp = st.borg.tr(BI_CURHP);
+-    let won = wins_race(turns, incoming, hp);
++    let won = wins_race_margin(turns, incoming, hp, p(Param::caution_winning_fight_margin_percent));
+     let foes: Vec<String> = plans.iter().map(|&(i, needed, a)| format!("{}:needs {needed} HP, attack {} {:.3} HP/turn",
+         String::from_utf8_lossy(engine::race_name(usize::from(st.kills.kills[i].r_idx))), a.kind, f64::from(a.hp_per_turn_milli) / 1000.0)).collect();
+     borg_note(st, &format!("# Fight race: {} attackers, {turns:.3} turns to kill, {incoming:.3} damage/turn, HP {hp}: {} (#759)",
+@@ -2856,6 +2957,22 @@ pub fn borg_caution(st: &mut BorgState) -> bool {
+ 
+     /*** Flee on foot ***/
+ 
++    // borg-reborn-rs (#911): a scare at danger 0 (a sleeping named monster in
++    // view) does not leave an item within caution_scary_take_distance flow
++    // steps behind (0 = C: the flight goes first).
++    if scary_take_first(st, pos_danger) {
++        return true;
++    }
++
++    // borg-reborn-rs (#909): #457's outmatched heal before the flight on foot,
++    // not only after it (0 = C order: at the end of borg_caution).
++    if p(Param::caution_heal_outmatched_before_walk) != 0
++        && (st.borg.goal.fleeing || st.borg.mon.scary)
++        && borg_heal_outmatched(st, pos_danger)
++    {
++        return true;
++    }
++
+     // Desperation Head for stairs
+     if (st.stairs.less.num != 0 || st.stairs.more.num != 0)
+         && (st.borg.goal.fleeing
+@@ -4911,6 +5028,95 @@ pub(crate) fn stairs_clean_path_mode() -> i32 {
+ /// `caution_desperate_fast_danger_percent` above 0, a faster adjacent
+ /// monster stops the desperate walk only when its danger is at least that
+ /// percent of the HP; 0 = C (any faster monster).
++/// borg-reborn-rs (#907): the speed "Desperate for Stairs (three)" compares
++/// with the Borg's. `kill.speed` is the monster's base `mspeed`; a timed
++/// haste adds ten (mon-move.c:1929-1931, 574b618c). With
++/// `caution_desperate_fast_haste`, the observed haste counts
++/// (`forecast_monster_speed`); 0 = C (base speed only).
++fn desperate_neighbour_speed(kill: &crate::borg_flow_kill::BorgKill) -> i32 {
++    desperate_speed_with(kill, p(Param::caution_desperate_fast_haste) != 0)
++}
++
++fn desperate_speed_with(kill: &crate::borg_flow_kill::BorgKill, haste: bool) -> i32 {
++    if haste { forecast_monster_speed(kill) } else { i32::from(kill.speed) }
++}
++
++#[cfg(test)]
++mod desperate_haste_tests {
++    #[test]
++    fn a_hasted_soldier_is_faster_than_a_normal_rogue_only_with_the_switch() {
++        let mut kill = crate::borg_flow_kill::BorgKill::default();
++        kill.speed = 109;
++        kill.observed_fast = true;
++        assert_eq!(super::desperate_speed_with(&kill, false), 109, "0 = C: base speed, the 381988580 walk");
++        assert_eq!(super::desperate_speed_with(&kill, true), 119);
++        kill.observed_fast = false;
++        assert_eq!(super::desperate_speed_with(&kill, true), 109, "no haste observed: unchanged");
++    }
++}
++
++/// borg-reborn-rs (#908): the expected HP a walk of `steps` costs. Each awake
++/// mobile monster next to the Borg follows it. Per Borg step it gets
++/// `ratio` actions (its energy per game turn over the Borg's,
++/// game-world.c:136-139): one closes the gap again, the rest attack. So it
++/// costs `max(0, ratio - 1)` times its damage per action
++/// (`fight_incoming`: blows by dice and to-hit, haste included). A pursuer
++/// at the Borg's speed or slower costs nothing. With
++/// `caution_desperate_walk_cost_percent` above 0, "Desperate for Stairs
++/// (three)" is refused when `steps` x that sum reaches that percent of the
++/// HP; the escapes and the heals decide instead. It is asked again every
++/// think, so a walk that starts cheap stops when it no longer is.
++fn desperate_walk_refused(st: &mut BorgState, steps: i32) -> bool {
++    let percent = p(Param::caution_desperate_walk_cost_percent);
++    if percent <= 0 || steps <= 0 {
++        return false;
++    }
++    let energy = |s: i32| f64::from(engine::extract_energy(s.clamp(0, 199) as usize)).max(1.0);
++    let mine = energy(engine::player_combat_speed());
++    let mut per_step = 0.0;
++    for i in 1..st.kills.nxt.max(0) as usize {
++        let kill = st.kills.kills[i];
++        if kill.r_idx == 0 || !kill.awake || engine::distance(st.borg.c, kill.pos) > 1
++            || engine::race_flag_has(usize::from(kill.r_idx), RF_NEVER_MOVE)
++        {
++            continue;
++        }
++        let ratio = energy(forecast_monster_speed(&kill)) / mine;
++        let per_action = fight_incoming(st, i).hp_per_turn / ratio;
++        per_step += pursuit_step_damage(per_action, ratio);
++    }
++    let cost = per_step * f64::from(steps);
++    let hp = st.borg.tr(BI_CURHP);
++    if !walk_cost_reaches(cost, hp, percent) {
++        return false;
++    }
++    borg_note(st, &format!("# Desperate walk refused: {steps} steps x {per_step:.2} HP/step = {cost:.1} >= {percent}% of HP {hp} (#908)"));
++    true
++}
++
++fn pursuit_step_damage(per_action: f64, ratio: f64) -> f64 {
++    if !per_action.is_finite() || !ratio.is_finite() { return 0.0; }
++    per_action.max(0.0) * (ratio - 1.0).max(0.0)
++}
++
++fn walk_cost_reaches(cost: f64, hp: i32, percent: i32) -> bool {
++    cost * 100.0 >= f64::from(hp.max(1)) * f64::from(percent)
++}
++
++#[cfg(test)]
++mod desperate_walk_cost_tests {
++    #[test]
++    fn a_hasted_pursuer_makes_the_walk_cost_the_hp_and_an_even_one_does_not() {
++        // Rogue 381988580: 5.0 HP per soldier action, 1.9 actions per step, 13 steps, HP 23.
++        let step = super::pursuit_step_damage(5.0, 1.9);
++        assert!((step - 4.5).abs() < 1e-9);
++        assert!(super::walk_cost_reaches(step * 13.0, 23, 100));
++        assert_eq!(super::pursuit_step_damage(5.0, 0.9), 0.0, "an unhasted soldier only follows");
++        assert_eq!(super::pursuit_step_damage(5.0, 1.0), 0.0, "even speed: every action closes the gap");
++        assert!(!super::walk_cost_reaches(step * 2.0, 23, 100), "two steps left: 9 HP");
++    }
++}
++
+ fn fast_neighbour_counts(st: &mut BorgState, kill: usize) -> bool {
+     let percent = p(Param::caution_desperate_fast_danger_percent);
+     if percent <= 0 {
+diff --git a/borg-core/src/borg_danger.rs b/borg-core/src/borg_danger.rs
+index ece8a289..2b0622b5 100644
+--- a/borg-core/src/borg_danger.rs
++++ b/borg-core/src/borg_danger.rs
+@@ -2095,6 +2095,11 @@ pub(crate) fn danger_one_kill(
+ 
+     let mut fake_speed: i32 = st.borg.tr(BI_SPEED);
+     let mut monster_speed: i32 = i32::from(kill.speed);
++    // borg-reborn-rs (#907): `kill.speed` is the base `mspeed`; a timed haste
++    // adds ten (mon-move.c:1929-1931, 574b618c). 0 = C (base speed).
++    if param(Param::danger_observed_haste) != 0 && kill.observed_fast {
++        monster_speed += 10;
++    }
+ 
+     // Paranoia
+     if kill.r_idx == 0 {
+diff --git a/borg-core/src/engine.rs b/borg-core/src/engine.rs
+index 139075dc..c2ab5fc8 100644
+--- a/borg-core/src/engine.rs
++++ b/borg-core/src/engine.rs
+@@ -844,6 +844,15 @@ pub fn race_flag_has(r_idx: usize, flag: u32) -> bool {
+     flag_has(&race(r_idx).flags, flag as i32)
+ }
+ 
++/// borg-reborn-rs (#910): whether `r_info[r_idx]` is generated with a group:
++/// any `friends:` or `friends-base:` line in monster.txt (mon-make.c places
++/// them with the monster). Game data, as `r_info`'s other fields; no
++/// monster's state is read.
++pub fn race_has_friends(r_idx: usize) -> bool {
++    let r = race(r_idx);
++    !r.friends.is_null() || !r.friends_base.is_null()
++}
++
+ // ---------------------------------------------------------------------------
+ // Player class magic (books and spells)
+ 
+diff --git a/borg-core/src/params.rs b/borg-core/src/params.rs
+index d970be6f..ab682b4c 100644
+--- a/borg-core/src/params.rs
++++ b/borg-core/src/params.rs
+@@ -202,6 +202,14 @@ parameters! {
+     caution_stairs_clean_path_flee => (0, "flag", 0, 1, "borg_caution.rs:959", "#743 (owner, the follow-up of #736): 1 = every flight to the stairs (GOAL_FLEE: a scary level, too much danger, 'Looking for any stair') takes a staircase only by a clean path: the flight's own flow is walked before it is committed (#736's path_blocker), and an awake monster on, or next to, the path whose danger is at least caution_stairs_block_danger_percent of the HP refuses it; a flight to any stairs then tries each kind on its own; with none clean the flight does not start and the escapes and the attack decide (#736's 'Stairs not reachable', noted once per level). The desperate walk keeps its own check (caution_stairs_clean_path). 0 = C."),
+     caution_desperate_ranged_first_reach => (0, "grids", 0, 10, "borg_caution.rs:981", "#751 (owner on 247597266: the Mage walked toward a cutpurse and an apprentice between it and the stairs, with 22 Flasks of oil and Magic Missile): above 0, while the Borg has a ranged attack (a bow with ammunition or something to throw; spells are not counted) and no awake monster is adjacent, the desperate walk to the stairs does not start toward an awake monster within this many grids of its path and nearer the stairs than the Borg, whose danger is at least caution_stairs_block_danger_percent of the HP; the attack at range decides. 0 = C."),
+     caution_desperate_fast_danger_percent => (0, "percent of HP", 0, 10_000, "borg_caution.rs:4914", "#747: 'Desperate for Stairs (three)' does not walk when an adjacent monster is faster than the Borg; above 0, only when that monster's danger is also at least this percent of the current HP (a harmless fruit bat no longer cancels the walk). 0 = C (any faster monster)."),
++    caution_winning_fight_margin_percent => (0, "percent of HP", 0, 100, "borg_caution.rs:2847", "#910: the fight race wins only when turns x incoming damage stays below (100 - this) percent of the HP; at 0 below the HP (Rogue 381988580: 28.5 against HP 31 was winning, about an 82% one-on-one in an engine-rule simulation, 1.4% with the unseen second soldier). A hypothesis."),
++    caution_winning_fight_group_percent => (0, "percent", 0, 1000, "borg_caution.rs:2835", "#910: in the fight race, a monster generated with a group (any friends or friends-base line in monster.txt) counts 100 + this percent of its incoming damage, for group members the Borg has not seen (Rogue 381988580: a second hasted soldier 2 squares behind, unseen). A hypothesis. 0 = only what it sees."),
++    caution_desperate_fast_haste => (0, "flag", 0, 1, "borg_caution.rs:5481", "#907: 'Desperate for Stairs (three)''s faster-neighbour test counts an observed timed haste (+10, mon-move.c:1929-1931): a shrieker-hasted soldier at base speed 109 is 119, faster than a normal-speed Borg (Rogue 381988580 walked 13 squares with it adjacent and died). 0 = C (base mspeed only)."),
++    caution_desperate_walk_cost_percent => (0, "percent of HP", 0, 10_000, "borg_caution.rs:5514", "#908: 'Desperate for Stairs (three)' is refused when the steps to the stairs x the expected HP per step of the faster awake monsters next to the Borg (their damage per action x (actions per Borg step - 1), haste counted) reach this percent of the HP; asked every think. Rogue 381988580: 13 steps x 4.5 HP against HP 23. A hypothesis. 0 = C (no cost test)."),
++    caution_scary_take_distance => (0, "flow steps", 0, 50, "borg_caution.rs:233", "#911: on a level made scary while the danger at the Borg is 0 (a sleeping named scare in view), the Borg first takes an item it wants within this many flow steps (borg_flow_take, viewable), then flees; asked every think. Rogue 381988580 left a Potion of Speed two squares away for a sleeping small kobold at 36,256. A hypothesis. 0 = C (the flight goes first)."),
++    caution_heal_lethal_over_max => (0, "flag", 0, 1, "borg_caution.rs:550", "#909: borg_heal's lethal bonus (caution_heal_lethal_chance_bonus) also when the danger is at or above the max HP; in C it needs danger < max HP, so a non-priest in more danger takes the penalty and band 3's skip is certain (Rogue 381988580: HP 23/35, danger 41, 21 CLW unused). 0 = C."),
++    caution_heal_outmatched_before_walk => (0, "flag", 0, 1, "borg_caution.rs:3333", "#909: while fleeing or on a scary level, #457's outmatched heal (caution_heal_when_outmatched) is tried before the flight on foot (Desperate for Stairs), not only at the end of borg_caution, where a walk that acts every turn never lets it run (Rogue 381988580). 0 = C order."),
++    danger_observed_haste => (0, "flag", 0, 1, "borg_danger.rs:2100", "#907: borg_danger counts an observed timed haste (+10 speed, mon-move.c:1929-1931) in the monster's moves per Borg turn; with base speed a hasted soldier counted 0.9 moves per turn instead of 1.9 (Rogue 381988580). Moves many decisions. 0 = C (base mspeed only)."),
+     caution_stairs_flight_ignore_danger => (0, "flag", 0, 1, "borg_caution.rs:4892", "#750: 1 = a flight's stair flow (GOAL_FLEE, or any GOAL_BORE stair flow while fleeing or leaving: the bored walk up, the bored walks down and the powerdive) refuses no grid for its danger, as the desperate walk; a monster near a clear corridor no longer closes it (807683971: a black naga two grids beside the corridor). Whether a monster stands on the path is caution_stairs_clean_path's test. 0 = C (grids above the flow's fear are refused)."),
+     caution_stairs_flight_threat_weight => (0, "extra steps at current HP", 0, 100, "borg_caution.rs:5273", "#765: stair flights (GOAL_FLEE, including desperate walks, or a bored ascent while fleeing or leaving) price each entered grid at one step plus this weight times danger divided by current HP. Awake monster grids are blocked. A clean-path veto can trigger a search for a clean detour. 0 = existing stair flows."),
+     caution_immobile_step_to_exit => (0, "flag", 0, 1, "borg_caution.rs:1729", "#736 (owner): 1 = the step away from an immobile attacker (caution_ranged_vs_immobile 1-3) takes, among the grids it may step to, the one with the fewest steps to a staircase, then the least danger. 0 = the least danger only."),

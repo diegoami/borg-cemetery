@@ -229,10 +229,40 @@ Every death after an escape in these branches comes back to the walk to the stai
 - borg-reborn-rs#911: a sleeping named scare at danger 0 makes the Borg leave a Potion of Speed two squares away.
 - Gold and oil: existing borg-reborn-rs#840 (kit restock, remedy a) and #810 (surplus gold). No new issue.
 
+## The new switches on the exact game (borg-reborn-rs#907–#911)
+
+**Setup.**
+- The code of the five task branches (`task/T907-haste-speed` … `task/T911-scary-pickup`, track P) was ported onto 7f8c6b80 in a scratch tree: [counterfactuals/switches-port-7f8c6b80.patch](counterfactuals/switches-port-7f8c6b80.patch).
+- Each arm sets its switches through `BORG_PARAM_*` on the zoo cell's `borg.txt`, and plays from birth ([probe/port-arm.sh](probe/port-arm.sh)).
+- With every switch at 0 the port replays the death's keys exactly (`1e1abd52…`).
+- With a switch on, the game is the death's game until that rule first acts.
+- One life per arm, not a measurement ([counterfactuals/switches-on-7f8c6b80.json](counterfactuals/switches-on-7f8c6b80.json)).
+
+| arm | settings | splits from the death at | outcome |
+|---|---|---|---|
+| off | all 0 | – | dies 62,965 (the original) |
+| 907a | `caution_desperate_fast_haste` 1 | 62,929 | lives to the 100,000-turn cap |
+| 907b | `danger_observed_haste` 1 | – | dies 62,965 |
+| 908 | `caution_desperate_walk_cost_percent` 100 | 62,929 | lives to the cap |
+| 908+907b | both | 62,899 | lives to the cap |
+| 909a | `caution_heal_lethal_over_max` 1 | 62,899 (drinks CLW) | lives to the cap |
+| 909b | `caution_heal_outmatched_before_walk` 1 | 62,909 | lives to the cap |
+| 910a | `caution_winning_fight_margin_percent` 20 | 62,892 (no attack) | dies 62,991 |
+| 910b | `caution_winning_fight_group_percent` 100 | 62,892 | dies 62,991 |
+| 910+908 | margin 20, walk cost 100 | 62,892 | lives to the cap |
+| 911 | `caution_scary_take_distance` 5 | 13,982 (an earlier scare) | lives to the cap at CL7, and later drinks a Potion of Speed |
+| all but 911 | every switch above except 911 | 62,892 | lives to the cap |
+| all | every switch | 13,982 | lives to the cap (the same game as 911) |
+
+**What the arms show.**
+- **908 alone.** The walk is refused from 62,899 ("13 steps x 4.50 HP/step = 58.5 >= 100% of HP 23 (#908)"). But "Strategic retreat" steps away instead for three turns, because `borg_danger` prices the next grid at the soldier's base speed ("41 > 0"). The Phase Door comes at HP 7.
+- **908 with 907b.** The danger is 84 at 62,899: no retreat, a Phase Door at once at HP 23, then a CLW.
+- **910 alone** does not attack at 62,892. It then walks to the stairs and dies, as the original did one turn later. With 908 as well, it lives.
+
 ## Limits
 
 - The zoo bundle itself was not downloaded: the artifact host is blocked here. The logs were regenerated, and their hashes equal the dossier's.
 - The binary bytes differ from the zoo's (build environment); the streams match.
 - The probe patch is a diagnostic only, applied to a copy of the generated engine. Without injection it replays the same hashes.
-- The counterfactuals are single branches with the unchanged Borg after one action. They show what one action does in this life, not how often it works.
+- The counterfactuals are single branches: one action and then the unchanged Borg, or one setting per arm. They show what one action does in this life, not how often it works.
 - The simulations are approximate (no cures, escapes or criticals) and are hypotheses.

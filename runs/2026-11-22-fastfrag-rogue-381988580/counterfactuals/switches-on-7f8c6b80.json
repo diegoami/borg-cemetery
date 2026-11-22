@@ -1,0 +1,206 @@
+{
+ "schema": "borg-cemetery/switch-arms@1",
+ "case": "D-d97a18672a492587c9acbfede7f83106d2dbf6bca390faa93200127d89e4f46d",
+ "build": "borg-reborn-rs 7f8c6b80 + switches-port-7f8c6b80.patch (the code of task/T907..T911, borg-reborn-rs#907-#911)",
+ "note": "settings set through BORG_PARAM_* on the zoo cell borg.txt; one life per arm, not a measurement",
+ "arms": [
+  {
+   "arm": "off",
+   "settings": {},
+   "outcome": "death",
+   "game_turns": 62965,
+   "death_cause": "a soldier",
+   "clevel": 4,
+   "split_from_death_at": null,
+   "keys_sha256": "1e1abd52b9dda3b2d92f26dc9817e06b6f697f8ae0bd676ccaa7f4f5e9fae3ff",
+   "messages_sha256": "2ee52cfa54c96ab36cb92d313a73f78a2cdc122e258c07692ddb3b20a92ccad4"
+  },
+  {
+   "arm": "907a",
+   "settings": {
+    "caution_desperate_fast_haste": 1
+   },
+   "outcome": "turns",
+   "game_turns": 100000,
+   "death_cause": "",
+   "clevel": 5,
+   "split_from_death_at": {
+    "key": 8490,
+    "game_turn": 62929
+   },
+   "keys_sha256": "55c5786c34109bed1fb2a3f0a339823edd56962f41dddb67ce7403b07f1d76de",
+   "messages_sha256": "e3420d5c8c2f859c517ad35a15cb59ceb19a4738b0f514fc1d50ef3530323ee6"
+  },
+  {
+   "arm": "907b",
+   "settings": {
+    "danger_observed_haste": 1
+   },
+   "outcome": "death",
+   "game_turns": 62965,
+   "death_cause": "a soldier",
+   "clevel": 4,
+   "split_from_death_at": null,
+   "keys_sha256": "1e1abd52b9dda3b2d92f26dc9817e06b6f697f8ae0bd676ccaa7f4f5e9fae3ff",
+   "messages_sha256": "745bd357ce14a5f6dcc7cd498a5facb6c50072c62720f3a5b7576890538a4f31"
+  },
+  {
+   "arm": "908",
+   "settings": {
+    "caution_desperate_walk_cost_percent": 100
+   },
+   "outcome": "turns",
+   "game_turns": 100000,
+   "death_cause": "",
+   "clevel": 6,
+   "split_from_death_at": {
+    "key": 8490,
+    "game_turn": 62929
+   },
+   "keys_sha256": "564e51a680780dbfd19ad6a6af6a056f95731a7dfd602ca9bdea0a9c4aaf3334",
+   "messages_sha256": "a464cf413ed60af29639b6e8d405206bdbc9cb2d55a7ba1861a0ba1589a11a0a"
+  },
+  {
+   "arm": "908+907b",
+   "settings": {
+    "caution_desperate_walk_cost_percent": 100,
+    "danger_observed_haste": 1
+   },
+   "outcome": "turns",
+   "game_turns": 100000,
+   "death_cause": "",
+   "clevel": 6,
+   "split_from_death_at": {
+    "key": 8484,
+    "game_turn": 62899
+   },
+   "keys_sha256": "81026479a8151185c07db561c45d17b14c820f754a8504505a64a0a8e45c517b",
+   "messages_sha256": "abb5cc4bfb84d637a58498d52538fd326de60927665911ed55407a8acba44f43"
+  },
+  {
+   "arm": "909a",
+   "settings": {
+    "caution_heal_lethal_over_max": 1
+   },
+   "outcome": "turns",
+   "game_turns": 100000,
+   "death_cause": "",
+   "clevel": 6,
+   "split_from_death_at": {
+    "key": 8484,
+    "game_turn": 62899
+   },
+   "keys_sha256": "6ce88daf2122029e01d703124d16e80c8b10713ce68537be10d098b248583344",
+   "messages_sha256": "aafe8243943d1eac729f7cf34981e10304a4766cc331588b1cb7d2910219eb6d"
+  },
+  {
+   "arm": "909b",
+   "settings": {
+    "caution_heal_outmatched_before_walk": 1
+   },
+   "outcome": "turns",
+   "game_turns": 100000,
+   "death_cause": "",
+   "clevel": 6,
+   "split_from_death_at": {
+    "key": 8486,
+    "game_turn": 62909
+   },
+   "keys_sha256": "39561705dc7dd83de297216d08e86d6234e7463fb5cf8cd1ef26f889ee898c91",
+   "messages_sha256": "f0e6ef857c9dfc8f52fadea278f014e1b66cc446779e0c93f1a92278ea48bd27"
+  },
+  {
+   "arm": "910a",
+   "settings": {
+    "caution_winning_fight_margin_percent": 20
+   },
+   "outcome": "death",
+   "game_turns": 62991,
+   "death_cause": "a soldier",
+   "clevel": 4,
+   "split_from_death_at": {
+    "key": 8480,
+    "game_turn": 62892
+   },
+   "keys_sha256": "e03e7e79217d7b6e42b9e36b995c6209b4e775a8242fb416f7b34dbdbe5bad15",
+   "messages_sha256": "5294e381b2d5bf6b0a7e493aef0b58fc65a1e04fad72573f6586bd063fb1ab0a"
+  },
+  {
+   "arm": "910b",
+   "settings": {
+    "caution_winning_fight_group_percent": 100
+   },
+   "outcome": "death",
+   "game_turns": 62991,
+   "death_cause": "a soldier",
+   "clevel": 4,
+   "split_from_death_at": {
+    "key": 8480,
+    "game_turn": 62892
+   },
+   "keys_sha256": "e03e7e79217d7b6e42b9e36b995c6209b4e775a8242fb416f7b34dbdbe5bad15",
+   "messages_sha256": "f57a30c76c1a79d9925f9cec55546636d983b78ec28ddfd26ebd3dd288402a34"
+  },
+  {
+   "arm": "910+908",
+   "settings": {
+    "caution_winning_fight_margin_percent": 20,
+    "caution_desperate_walk_cost_percent": 100
+   },
+   "outcome": "turns",
+   "game_turns": 100000,
+   "death_cause": "",
+   "clevel": 5,
+   "split_from_death_at": {
+    "key": 8480,
+    "game_turn": 62892
+   },
+   "keys_sha256": "a2d3310ebb8ab5ea45bd32ba4f736007f76e84aeb664300f5017347e80bde11e",
+   "messages_sha256": "963dd1f7db66be7c719a5224714c6efbb2dc8abd20ef3d9c013d9be2b5fddcf3"
+  },
+  {
+   "arm": "911",
+   "settings": {
+    "caution_scary_take_distance": 5
+   },
+   "outcome": "turns",
+   "game_turns": 100000,
+   "death_cause": "",
+   "clevel": 7,
+   "split_from_death_at": {
+    "key": 2009,
+    "game_turn": 13982
+   },
+   "keys_sha256": "8900096abe075f1b5b5a896ee080f225fbc8e37a18bf666162e111faa5599fb2",
+   "messages_sha256": "710607b53dd9a76275b04d96290945095ee47c6bfe8dfdecefb150d7b4bf4521"
+  },
+  {
+   "arm": "all-but-911",
+   "settings": "every switch above except caution_scary_take_distance",
+   "outcome": "turns",
+   "game_turns": 100000,
+   "death_cause": "",
+   "clevel": 6,
+   "split_from_death_at": {
+    "key": 8480,
+    "game_turn": 62892
+   },
+   "keys_sha256": "2c4ffcb6ff26195c6b0508ab087025d6302eb9a6e58fc4a110ae7fc81c99ff44",
+   "messages_sha256": "3c160abec429c065b3060410ff8e65e611e3821e01956253d4425abcdaff653e"
+  },
+  {
+   "arm": "all",
+   "settings": "every switch above",
+   "outcome": "turns",
+   "game_turns": 100000,
+   "death_cause": "",
+   "clevel": 7,
+   "split_from_death_at": {
+    "key": 2009,
+    "game_turn": 13982
+   },
+   "keys_sha256": "8900096abe075f1b5b5a896ee080f225fbc8e37a18bf666162e111faa5599fb2",
+   "messages_sha256": "3d83b987c623c36579a327ec46bb72fd72f2ffa1158769ba18db53b1b5fe5c5b"
+  }
+ ]
+}
