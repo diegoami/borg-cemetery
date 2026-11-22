@@ -44,7 +44,7 @@ plans through unknown grids), [#883](https://github.com/diegoami/borg-reborn-rs/
 | arms that died | `reborn-confusion-clw_walk` and `reborn-confusion-csw`, with the same play hash `dde95ceb…`: one game. `ctl` (`f9374a2b…`) and `stuck` (`a9c8f917…`) reached the cap alive. |
 | character | Dunadan Priest (race 8, class 3), seed 399497898, cap 100,000 game turns, exact turns, menu letters |
 | death | game turn 66588, key 6212, CL6, HP 1/59 before the last bite, DL1 (max 2), "a white worm mass" |
-| dossier | [`deaths/D-3b3bfb975c2d…`](../../deaths/D-3b3bfb975c2d4a54df938a40fb243446467febad7c205154d3648d81cadae96f/README.md) (csw arm, imported by cemetery PR #104, not yet merged: the link resolves once it is). The clw_walk bundle is the same life and gets no separate analysis here. |
+| dossier | [`deaths/D-3b3bfb975c2d…`](../../deaths/D-3b3bfb975c2d4a54df938a40fb243446467febad7c205154d3648d81cadae96f/README.md) (csw arm, imported by cemetery PR #104). The clw_walk bundle is the same life and gets no separate analysis here. |
 
 **Why the arms split.** Replaying `ctl` locally from birth reproduces the zoo's `ctl` cell key for
 key (`f9374a2b…`, [evidence/hashes.txt](evidence/hashes.txt)). The first difference is at key
