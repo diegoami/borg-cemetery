@@ -1,0 +1,70 @@
+diff --git a/borg-core/src/borg_caution.rs b/borg-core/src/borg_caution.rs
+index 8e20385b..c237f255 100644
+--- a/borg-core/src/borg_caution.rs
++++ b/borg-core/src/borg_caution.rs
+@@ -2277,6 +2277,7 @@ mod incoming_units_tests {
+ fn winning_fight(st: &mut BorgState) -> bool {
+     let mode = p(Param::caution_winning_fight);
+     if mode == 0 { return false; }
++    if crate::borg_think::CF_RACE_OFF.load(std::sync::atomic::Ordering::SeqCst) { return false; } // SCRATCH
+     // The direct-damage race does not model random confused commands or
+     // ongoing poison/bleeding damage. Let the ordinary cures act first.
+     if [BI_ISCONFUSED, BI_ISBLIND, BI_ISIMAGE, BI_ISCUT, BI_ISPOISONED].iter().any(|&t| st.borg.tr(t) != 0) { return false; }
+diff --git a/borg-core/src/borg_think.rs b/borg-core/src/borg_think.rs
+index d7a0691c..c1926a9a 100644
+--- a/borg-core/src/borg_think.rs
++++ b/borg-core/src/borg_think.rs
+@@ -163,7 +163,36 @@ fn cstr(buf: &[u8]) -> &[u8] {
+ ///
+ /// Check inventory/equipment/spells/panel once per "turn"; process the
+ /// store and the dungeon when necessary.
++// SCRATCH (yeek counterfactual, not for commit): env-gated probe and one-shot action.
++static CF_DONE: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
++pub(crate) static CF_RACE_OFF: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
++fn cf_scratch(st: &mut BorgState) -> Option<bool> {
++    use crate::borg_headers::borg_trait_h::*;
++    if std::env::var_os("CF_PROBE").is_some() {
++        eprintln!("BORG {} hp={} todam={} tohit={} thn={} blows={} isstun={} isheavystun={}", engine::game_turn(),
++            st.borg.tr(BI_CURHP), st.borg.tr(BI_TODAM), st.borg.tr(BI_TOHIT), st.borg.tr(BI_THN), st.borg.tr(BI_BLOWS),
++            st.borg.tr(BI_ISSTUN), st.borg.tr(BI_ISHEAVYSTUN));
++    }
++    let t: i32 = std::env::var("CF_TURN").ok()?.parse().ok()?;
++    if engine::game_turn() < t || CF_DONE.load(std::sync::atomic::Ordering::SeqCst) { return None; }
++    CF_DONE.store(true, std::sync::atomic::Ordering::SeqCst);
++    let act = std::env::var("CF_ACTION").ok()?;
++    let ok = match act.as_str() {
++        "stairs_down" => { borg_keypress(st, crate::headers::ui_event_h::keycode_t::from(b'>')); true }
++        "stairs_up" => { borg_keypress(st, crate::headers::ui_event_h::keycode_t::from(b'<')); true }
++        "quaff_csw" => crate::borg_item_use::borg_quaff_potion(st, st.item_val.sv_potion_cure_serious),
++        "quaff_clw" => crate::borg_item_use::borg_quaff_potion(st, st.item_val.sv_potion_cure_light),
++        "race_off" => { CF_RACE_OFF.store(true, std::sync::atomic::Ordering::SeqCst); false }
++        "phase" => crate::borg_item_use::borg_read_scroll(st, st.item_val.sv_scroll_phase_door),
++        _ => false,
++    };
++    eprintln!("CF {act} at turn {} -> {ok}", engine::game_turn());
++    borg_note(st, &format!("# COUNTERFACTUAL (scratch build): {act} -> {ok}"));
++    if ok { Some(true) } else { None }
++}
++
+ pub fn borg_think(st: &mut BorgState) -> bool {
++    if let Some(done) = cf_scratch(st) { return done; }
+     // borg-reborn-rs (#222): includes early saves, stores and errand handoffs.
+     let tracing = crate::core_trace::begin();
+     let done = borg_think_inner(st);
+diff --git a/engine/frontend/main-borgh.c b/engine/frontend/main-borgh.c
+index 1c7a7d3d..9ccc8fa9 100644
+--- a/engine/frontend/main-borgh.c
++++ b/engine/frontend/main-borgh.c
+@@ -567,6 +567,12 @@ static void borgh_state(void)
+ 		fprintf(statelog_fp, "%ld -\n", (long)turn);
+ 		return;
+ 	}
++	/* SCRATCH (yeek counterfactual, not for commit): read-only probe */
++	if (getenv("CF_PROBE"))
++		fprintf(stderr, "PROBE %ld hp=%d to_h=%d to_d=%d thn=%d blows=%d str_ind=%d stun=%d\n",
++			(long)turn, player->chp, player->state.to_h, player->state.to_d,
++			player->state.skills[SKILL_TO_HIT_MELEE], player->state.num_blows,
++			player->state.stat_ind[STAT_STR], player->timed[TMD_STUN]);
+ 	gear_hashes(&ph, &eh, &rh);
+ 	fprintf(statelog_fp, "%ld %d,%d d%d/%d hp%d/%d sp%d/%d f%d au%ld xp%ld"
+ 		" lv%d t", (long)turn, player->grid.x, player->grid.y,
