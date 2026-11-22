@@ -235,6 +235,52 @@ arms. Here divisor 1 ends a level lower and a level shallower; on main it ended 
 higher. Per-attack rows: [data/attacks-trackp-A.tsv](data/attacks-trackp-A.tsv),
 [data/attacks-trackp-B.tsv](data/attacks-trackp-B.tsv).
 
+## Would shooting the crow have saved it? (7f8c6b80, a scratch probe)
+
+Added at the owner's request. The probe lives in a scratch build of 7f8c6b80 and is not
+committed to borg-reborn-rs: [probe-7f8c6b80.diff](probe-7f8c6b80.diff). It adds two
+things to `focused_attack_ranked`:
+- a note with each focused candidate's rating, which does not change play: with the probe
+  built and its switch unset, the keys are the death's, `b9e7f2f8…`;
+- a switch, `PROBE_FAVOR_LAUNCH_FROM=<game turn>`, that multiplies the arrows' rating by 1.1
+  from that game turn on.
+
+**The planner's ratings** (HP per Borg turn, from the death game, stats-ban settings):
+
+| turn | melee, Main Gauche | arrows, Short Bow (1.1 shots per turn, quiver 117) | chosen |
+|---|---|---|---|
+| 42,492 | **4.997** | 4.768 | melee |
+| 42,501 | **4.997** | 4.768 | melee |
+
+The arrows lose by 4.6%. The divisor is not in either number.
+
+**The counterfactual:**
+- **Arrows favoured from turn 42,490.** The game is the death game key for key up to
+  `keys.log` line 6,444, the first crow decision. From there:
+  - 42,492: the shot hits (crow 10 → 3 HP); "The crow flees in terror!";
+  - 42,501 to 42,519: three more shots at the fleeing crow at distance 3-7, two hits;
+    "The crow dies.";
+  - the Borg takes no damage after the first decision (HP 16/22 throughout);
+  - **alive at the cap: CL7, max DL4** (DL3 at 90,639).
+  - The stats-ban and control settings give the same keys (`d346bcba…`;
+    params_core `0cc8a206…` and `1c544a18…`).
+- **Arrows favoured from turn 0** (control for the gate). The game splits at 29,588, long
+  before the crow, and never meets it. It lives (CL6, DL3, keys `553520d6…`), but that is
+  another game and is not evidence about the crow.
+
+**Reading (one start, one roll of the dice):**
+- The melee hit did 3 damage, and the crow kept biting.
+- The arrow (1d4 × 2) did 7, and the crow fled. A fleeing crow can still be shot; it
+  cannot be stabbed.
+- On this start the choice of arrows decides the game. That is partly the roll: the fear
+  came from the bigger first hit.
+
+**Hypothesis H3, for a zoo request:** at early CL, against a fast-fragile monster the
+focused planner's near-tie between melee and arrows should go to the arrows (or to a
+ranged attack in general). That would take a code change: a preference or tie margin in
+the focused planner. It is not a setting today, and the point-blank divisor does not reach
+it. Not measured.
+
 ## Hypotheses for a borg-zoo request (RULES 14, 20)
 
 1. **H1: on the shipped settings, the Ranger's point-blank divisor does not affect fights

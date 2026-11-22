@@ -1,0 +1,21 @@
+diff --git a/borg-core/src/borg_fight_attack.rs b/borg-core/src/borg_fight_attack.rs
+index d149b1b4..51195deb 100644
+--- a/borg-core/src/borg_fight_attack.rs
++++ b/borg-core/src/borg_fight_attack.rs
+@@ -5408,11 +5408,16 @@ fn focused_attack_ranked(
+         } else if focused_priority(kind) != 1 && cost.is_none() {
+             cost = Some(AttackCost { fail_pct: 0, uses: Some(1), spell: false });
+         }
++        if kind <= 3 && st.fight_attack.focused_target.is_some() {
++            let shots = engine::player_attack_rates().1;
++            borg_note(st, &format!("# PROBE focused kind {} utility {} hp_per_turn_milli {} shots {} uses {:?}", kind, utility, damage, shots, cost.and_then(|c| c.uses)));
++        }
+         if utility <= 0 || damage <= 0 || focused_priority(kind) == 0 {
+             continue;
+         }
+         if cost.is_none() { fallback = fallback.max(damage); }
+         let duration = if kind == BF_LAUNCH as i32 { 10.0 / f64::from(engine::player_attack_rates().1.max(1)) } else { 1.0 };
++        let damage = if kind == BF_LAUNCH as i32 && std::env::var("PROBE_FAVOR_LAUNCH_FROM").ok().and_then(|v| v.parse::<i32>().ok()).is_some_and(|t| engine::game_turn() >= t) { damage * 11 / 10 } else { damage };
+         let candidate = FocusedAttack { kind, hp_per_turn_milli: damage, cost, fallback: 0, duration };
+         if let Some(score) = rank(candidate).filter(|&score| best.is_none_or(|b| score > b.0)) {
+             best = Some((score, candidate));
