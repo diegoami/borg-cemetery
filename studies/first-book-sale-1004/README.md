@@ -37,8 +37,8 @@ until borg-zoo measures it.
 
 ## Added after the review of borg-reborn-rs#1019
 
-The extra runs below were played on `5ad50d96`/`0de39a27`; at today's setting their play is the same as `7b83dd11`. They are local
-direction numbers (RULES 20).
+The 27 short starts were played on track-p `6bc4de1d`, before the switch existed. The Paladin and Max SP runs were played on borg-reborn-rs
+`0de39a27`, which plays the same game as track-p at 0. All are local direction numbers (RULES 20).
 
 - **`classes-short.tsv`:** the 27 short starts behind "Rogues and Rangers 6 of 6, the other seven classes 0 of 21". Each played 3,000
   turns at seeds 11, 22 and 33. Race = (seed + class) mod 11, so **each class played one race only** (race = class index). The
