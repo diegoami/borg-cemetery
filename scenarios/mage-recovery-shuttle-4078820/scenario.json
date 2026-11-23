@@ -1,0 +1,43 @@
+{
+  "schema": "borg-cemetery/save-scenario@1",
+  "id": "mage-recovery-shuttle-4078820",
+  "status": "save_load_verified_loop_not_reproduced",
+  "event_kind": "observed_stall",
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "borg_memory_restored": false,
+  "birth_seed": null,
+  "load_request_seed": 1,
+  "race_idx": 4,
+  "class_idx": 1,
+  "depth": 1,
+  "level": 11,
+  "initial_hp": 47,
+  "max_hp": 47,
+  "sp": 2,
+  "start_turn": 4078820,
+  "original_endpoint_turn": 4078820,
+  "save": "start.save.gz",
+  "save_sha256": "54f747c59f4160cc5d3ec6071f5d2c5065a846d81e844967aeb1e96ae8379bd0",
+  "compressed_sha256": "208a713d05abd829642fa950a659b1cc8b7cd289a58c20272143fdac112a3e82",
+  "original_recording": "20261123-060720-9.F43YWO/native",
+  "recorded_frame": 476568,
+  "earlier_autosave": {
+    "save": "earlier-autosave.save.gz",
+    "start_turn": 4074710,
+    "save_sha256": "90cbbee3244891fa49d54a3ef4d748a716059094980492fa9dc61c54d6b864cd",
+    "compressed_sha256": "6bdb2ae5f0f52022e3f52e9d7536c6d0856d6b92e9011190b4308338d025b143"
+  },
+  "origin": {
+    "program": "borg-reborn-rs",
+    "source_commit": "a82d704295dd21668add1782bba2125165b956c4",
+    "binary_sha256": "d25e23ad9545e1c12a15bbaeaf64afdea6b6799610d19a4596468961db8ccf27"
+  },
+  "runtime_config": {
+    "borg_txt": "borg.txt",
+    "borg_txt_sha256": "ae4af39d438819dda026c9b2298bf5dfa1d301e847c481cc2e6ccce904cdbda8",
+    "plan": "errands_plan.txt",
+    "plan_sha256": "084bc3e8999697bd8edf7fd302ea75d65b50ef2714afdd3a47354a1f24137e87",
+    "scary_list": "scary_monsters.txt",
+    "scary_list_sha256": "5a4ec4b6221f2487d19bd3146c9c36ed7e3a619b1bf9d14dbd9a8f14ba187690"
+  }
+}
