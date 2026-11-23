@@ -6,7 +6,7 @@ Death-archive statistics, separated by registry and exact retained build. These 
 
 | Registry | Dossiers | Known start families | Missing family | Retained attempts | Explicit repeats | Build groups |
 | --- | --- | --- | --- | --- | --- | --- |
-| [cemetery](sources/cemetery.md) | 274 | 274 | 0 | 282 | 8 | 31 |
+| [cemetery](sources/cemetery.md) | 294 | 294 | 0 | 302 | 8 | 32 |
 | [reborn-historical](sources/reborn-historical.md) | 2378 | 2375 | 0 | 2378 | 0 | 114 |
 
 Shared declared/qualified family keys across registry pairs: **1**. Registry totals are not pooled into an independent-birth count. Different family keys do not prove unrelated births.
@@ -21,17 +21,17 @@ A dossier is one retained case. Start families group declared/qualified starting
 
 | Cause | Dossiers |
 | --- | --- |
-| a crow | 31 |
-| a wild cat | 24 |
-| poison | 23 |
-| a grey mushroom patch | 23 |
-| Fang, Farmer Maggot's Dog | 19 |
+| a crow | 34 |
+| a wild cat | 26 |
+| poison | 25 |
+| a grey mushroom patch | 24 |
+| Fang, Farmer Maggot's Dog | 20 |
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 274 | 160 | 13230.5 | 42142.27 | 1094860 |
-| depth | 249 | 0 | 1 | 1.36 | 18 |
-| level | 249 | 1 | 2 | 2.90 | 12 |
+| turn | 294 | 160 | 13078.5 | 40635.30 | 1094860 |
+| depth | 269 | 0 | 1 | 1.35 | 18 |
+| level | 269 | 1 | 2 | 2.87 | 12 |
 
 ### reborn-historical
 
@@ -62,6 +62,7 @@ A build group uses project, commit, source-input hash, executable hash, implemen
 | [borg-reborn-rs · e8b3acfdcfa5 · 08b47ead74bfc439](builds/borg-reborn-rs-e8b3acfdcfa5-08b47ead74bfc439/README.md) | rust | no | 29 | 29 | 12281 | 1 |
 | [borg-reborn-rs · 9085c2665c04 · c27d9368e102ea5b](builds/borg-reborn-rs-9085c2665c04-c27d9368e102ea5b/README.md) | rust | no | 28 | 28 | 8687 | 1 |
 | [borg-reborn-rs · ab775d488a97 · be7c6e4509e4e065](builds/borg-reborn-rs-ab775d488a97-be7c6e4509e4e065/README.md) | rust | no | 22 | 22 | 48935.5 | 1 |
+| [borg-reborn-rs · 206cf4e76908 · 37c190b80bf501a1](builds/borg-reborn-rs-206cf4e76908-37c190b80bf501a1/README.md) | rust | no | 20 | 20 | 9793 | 1 |
 | [borg-reborn-rs · 4ecb93d77c62 · b6a5b2d5ad3988b9](builds/borg-reborn-rs-4ecb93d77c62-b6a5b2d5ad3988b9/README.md) | rust | no | 18 | 18 | 19566 | 1 |
 | [better-borg-c · 5cd2258dd78d · 5cfaf4ffdf517310](builds/better-borg-c-5cd2258dd78d-5cfaf4ffdf517310/README.md) | Unknown | Unknown | 15 | 15 | 46642 | Unknown |
 | [borg-reborn-rs · fde8025a6dfa · f49bf965f68090f5](builds/borg-reborn-rs-fde8025a6dfa-f49bf965f68090f5/README.md) | rust | no | 12 | 12 | 4996 | 1 |
