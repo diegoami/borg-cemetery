@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `ba7a6fe70e69778c3208d2cd2fedd85cc876cbaa50e4b864ef7e9c7e2fe72644`.
+Input inventory SHA-256: `c9edca6c38c350706a8d7ad8f943728a59cc3b97ba1dfed81bf6c185a1f83393`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
@@ -19,9 +19,9 @@ The companion snapshot for an external source retains normalized statistical fie
 | a fatal wound | 12 |
 | a grey mold | 12 |
 | Grip, Farmer Maggot's Dog | 11 |
+| a floating eye | 9 |
 | a cave spider | 8 |
 | a small kobold | 8 |
-| a floating eye | 8 |
 | a giant white louse | 6 |
 | a cutpurse | 6 |
 | a giant white mouse | 6 |
@@ -68,9 +68,9 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 296 | 160 | 13210.5 | 40468.34 | 1094860 |
-| depth | 271 | 0 | 1 | 1.35 | 18 |
-| level | 271 | 1 | 2 | 2.87 | 12 |
+| turn | 297 | 160 | 13333 | 40594.45 | 1094860 |
+| depth | 272 | 0 | 1 | 1.35 | 18 |
+| level | 272 | 1 | 2 | 2.87 | 12 |
 
 ## Characters
 
@@ -102,13 +102,13 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Dunadan Mage | 4 |
 | Half-Elf Ranger | 4 |
 | Half-Troll Necromancer | 4 |
+| Half-Elf Necromancer | 4 |
 | Dunadan Druid | 4 |
 | Elf Mage | 4 |
 | Hobbit Priest | 3 |
 | Elf Priest | 3 |
 | Dwarf Mage | 3 |
 | Kobold Mage | 3 |
-| Half-Elf Necromancer | 3 |
 | Kobold Ranger | 3 |
 | Dunadan Blackguard | 3 |
 | Dunadan Priest | 3 |

@@ -6,7 +6,7 @@ Death-archive statistics, separated by registry and exact retained build. These 
 
 | Registry | Dossiers | Known start families | Missing family | Retained attempts | Explicit repeats | Build groups |
 | --- | --- | --- | --- | --- | --- | --- |
-| [cemetery](sources/cemetery.md) | 296 | 296 | 0 | 304 | 8 | 33 |
+| [cemetery](sources/cemetery.md) | 297 | 297 | 0 | 305 | 8 | 34 |
 | [reborn-historical](sources/reborn-historical.md) | 2378 | 2375 | 0 | 2378 | 0 | 114 |
 
 Shared declared/qualified family keys across registry pairs: **1**. Registry totals are not pooled into an independent-birth count. Different family keys do not prove unrelated births.
@@ -29,9 +29,9 @@ A dossier is one retained case. Start families group declared/qualified starting
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 296 | 160 | 13210.5 | 40468.34 | 1094860 |
-| depth | 271 | 0 | 1 | 1.35 | 18 |
-| level | 271 | 1 | 2 | 2.87 | 12 |
+| turn | 297 | 160 | 13333 | 40594.45 | 1094860 |
+| depth | 272 | 0 | 1 | 1.35 | 18 |
+| level | 272 | 1 | 2 | 2.87 | 12 |
 
 ### reborn-historical
 
@@ -87,6 +87,7 @@ A build group uses project, commit, source-input hash, executable hash, implemen
 | [borg-reborn-rs · 8a427494fa3c · 2188d039a471e09c](builds/borg-reborn-rs-8a427494fa3c-2188d039a471e09c/README.md) | rust | no | 1 | 1 | 86224 | 1 |
 | [borg-reborn-rs · c7ea18dff9f1 · 56f2830db3f69485](builds/borg-reborn-rs-c7ea18dff9f1-56f2830db3f69485/README.md) | rust | no | 1 | 1 | 174601 | 2 |
 | [borg-reborn-rs · cfd011a6b2ff · 2b9ae8beec943964](builds/borg-reborn-rs-cfd011a6b2ff-2b9ae8beec943964/README.md) | rust | no | 1 | 1 | 11412 | 1 |
+| [borg-reborn-rs · d8b55d647ec9 · ea2900d6330878e8](builds/borg-reborn-rs-d8b55d647ec9-ea2900d6330878e8/README.md) | rust | no | 1 | 1 | 77923 | 1 |
 | [borg-reborn-rs · e9a6a521f3ac · 4cc9e5cf7c6e07ad](builds/borg-reborn-rs-e9a6a521f3ac-4cc9e5cf7c6e07ad/README.md) | rust | no | 1 | 1 | 3640 | 1 |
 | [borg-rs · 9881301ceaad · 1948f6a957e27770](builds/borg-rs-9881301ceaad-1948f6a957e27770/README.md) | rust | no | 1 | 1 | 36289 | 1 |
 | [borg-rs · aa4ad6cfeea2 · 24bf8fb260989224](builds/borg-rs-aa4ad6cfeea2-24bf8fb260989224/README.md) | rust | no | 1 | 1 | 22841 | 1 |

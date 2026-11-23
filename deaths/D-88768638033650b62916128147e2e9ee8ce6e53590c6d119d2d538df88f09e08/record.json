@@ -1,0 +1,63 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-88768638033650b62916128147e2e9ee8ce6e53590c6d119d2d538df88f09e08",
+  "run_kind": "harness",
+  "character": "Half-Elf Necromancer",
+  "raw_cause": "a floating eye",
+  "terminal": {
+    "cause": "a floating eye",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 3,
+    "turn": 77923,
+    "race_idx": 1,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 453254028,
+    "flags": "menu,exact",
+    "git_rev": "d8b55d647ec941676ac2449ad97a786ecf8f235f",
+    "git_dirty": "no",
+    "source_sha256": "994844f497b6e49b5f95e3bc0d1d743e6bdcf210c4389092753c7a26f06cb316",
+    "binary_sha256": "db9520de03aa778c01e83f89a5c699385832ae5acc8039b467b6b29513b1e8ce",
+    "borg_txt_sha256": "39b2d503f192982d3664492f529f4bfc40326545f4ed3bc74c100c7ff87f00e8",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "f13c345d0b87e9e129d2fc08ef9a96112192d3098a46654528391ac85f4d0afb"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 7247
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/claude-0/-home-user/8462b544-b5b5-5865-8ae0-b834c0936b5b/scratchpad/rep5/control/453254028",
+      "result_sha256": "9fb2a2318e93b8b54eae4af09080670c2b16509397a62a5394b85141be1b61c5",
+      "raw_sha256": {
+        "keys.log": "9fb2a2318e93b8b54eae4af09080670c2b16509397a62a5394b85141be1b61c5",
+        "messages.log": "44f90ad285bc75d7509e32a555cad36b53aeeec02453ac596a6a06ae62790905",
+        "state.log": "25772eb7143ff89c3623152f7d351d0785429b12c0401a81a9ad18cbc9b7407e"
+      },
+      "source_commit": "d8b55d647ec941676ac2449ad97a786ecf8f235f",
+      "binary_sha256": "db9520de03aa778c01e83f89a5c699385832ae5acc8039b467b6b29513b1e8ce"
+    }
+  ],
+  "encounter_family": "start-e02fcd27f754096af3f5ecd87ed037ce4daf152c63ad17cdb5be5823da0cdbee",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "1bbf4dcd6267e3db2a0aedcd6364b88d90d86b5eb04a6bb933c72c83f3b4915e",
+    "config.txt": "3e5feb9ed3022b957e1075bed5fafd1c9d2e30456dbc5ef4116fcf305711bd68",
+    "depths.json": "dd40da51637793cbe63474fefe90606f841f63de8fa7c45ea31edfb08aee9a02",
+    "params-core.json": "f13c345d0b87e9e129d2fc08ef9a96112192d3098a46654528391ac85f4d0afb",
+    "scary_list.txt": "5a4ec4b6221f2487d19bd3146c9c36ed7e3a619b1bf9d14dbd9a8f14ba187690",
+    "summary.json": "0ab4083e344bcec1996c42b41a81b5c1c1638d288624f0bc04e8b6f23f1826ab",
+    "trace-core-tail.jsonl": "024cc7bfeb0508ff29ee5ba2421d446eb009b176bcb84c3198eadbc1de1a895e"
+  },
+  "investigation": null,
+  "issue": null
+}
