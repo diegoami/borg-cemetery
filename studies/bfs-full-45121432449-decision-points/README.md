@@ -12,6 +12,8 @@
 - Engine facts from `engine/angband` at 1c071812, cited by file and line.
 - Counterfactual replays: [tools/](tools/), results in [evidence/](evidence/).
 
+Follow-ups: the proposals are borg-reborn-rs#1134; a zoo pilot for the three settings is proposed as borg-zoo#738 / borg-zoo#739 (not dispatched).
+
 Inferences are marked *inference*. Every number here was recounted against `state.log`, `messages.log` or the result files.
 
 ## Findings in short
