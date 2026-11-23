@@ -20,6 +20,7 @@ All four are compiled and shipped 0 in #1129, and each acts only without Free Ac
 ## Reproduction
 - **Build.** borg-reborn-rs [`d8b55d64`](https://github.com/diegoami/borg-reborn-rs/commit/d8b55d647ec941676ac2449ad97a786ecf8f235f) (the case's build) plus `tools/1125-on-d8b55d64.patch`. The patch is #1129's code on that base, with its params entries placed by hand; it was never committed to borg-reborn-rs. Build with `BORG_IMPL=rust harness/build.sh`, using GCC 13.3, rtl argument order and rustc 1.97. The binary's sha256 is `1c0d856bc6c8…`.
 - **Command.** `tools/run-arm.sh OUTDIR "<overrides>"`: seed 453254028, menu letters race 1 class 4, 100,000 turns, exact turns, played from birth.
+- **The review fixes of borg-reborn-rs `01055045` change no arm.** The patch now carries them: no flow destination in a paralyser's reach, and no early fight beside an awake paralyser. Every arm replayed with them plays the same keys as before.
 - **The off arm is the case.** Its `keys.log` is `9fb2a2318e93…`, the dossier's `result_sha256`. Its messages and state logs equal the dossier's as well. The switches at 0 change nothing.
 
 ## Arms
