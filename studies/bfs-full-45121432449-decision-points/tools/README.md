@@ -20,5 +20,5 @@ Inputs used are in `../evidence/`:
 
 Results:
 
-- `cf-deaths.jsonl` (9 arms × 25 deaths);
-- `cf-survivors.jsonl` (6 arms × 18 survivors, including the unchanged `base`).
+- `cf-deaths.jsonl` (9 arms × 25 deaths) and `cf-prep-deaths.jsonl` (`town_prepared_percent` 25 and 50 × 25 deaths);
+- `cf-survivors.jsonl` (6 arms × 18 survivors, including the unchanged `base`) and `cf-prep-survivors.jsonl` (2 arms × 18 survivors).

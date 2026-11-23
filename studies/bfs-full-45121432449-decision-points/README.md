@@ -258,6 +258,63 @@ Each would sit behind a switch shipped 0 (house practice).
 | C9 | **No long walks while Recall counts down** past known never-moving attackers; rest or Phase instead. | 1308765461 bfs0 (grey mold: Recall read at t9758 acts 15–34 player turns later, t9908 at the soonest; it died at t9907) | Low | borg-reborn-rs#582, borg-reborn-rs#583 |
 | C10 | **No study or pickups at low HP with an enemy adjacent.** | 1896645817 (studied at HP 4/26 surrounded), 389489263 (picked up copper at HP 1 and 0) | Low | — |
 
+## Follow-up (owner): buy more poison cures? Why melee?
+
+### Buying more Neutralize Poison and Cure Critical Wounds
+
+**Purchases in the 25 games:** Neutralize Poison once (75 gold), Cure Critical Wounds never.
+
+**Gold on returning to town** (437 returns from the dungeon to depth 0, counted in `state.log`, so DL1–town stair bounces count too):
+- median 7 gold;
+- ≥ 75 (Neutralize Poison) on 100 returns, in 19 games;
+- ≥ 200 (Cure Critical Wounds) on 35 returns, in 9 games;
+- ≥ 400 never.
+
+**The setting.** The planner's "be prepared" weight (`town_prepared_percent = 8`, `town_prepared_poison = 3` copies, borg-reborn-rs#863) has never been measured in the zoo (harness/borg.txt). Two arms were replayed, same method as above:
+
+| | 8 (shipped) | `town_prepared_percent = 25` | `town_prepared_percent = 50` |
+|---|---|---|---|
+| death games whose play changed (of 25) | — | 3 (all early: 1004587769, 1200156945, 1902932078; all live) | the same 3 |
+| poison death games changed (of 7) | — | 2 (1200156945, 1902932078; early) | the same 2 |
+| survivors: plays changed / killed (of 18) | — | 12 / 0 | 13 / 0 |
+| survivors: Neutralize Poison potions bought (18 games) | 2 | 5 | 14 |
+| survivors: Cure Critical Wounds potions bought | 0 | 1 | 1 |
+| survivors: Neutralize Poison quaffed | 6 | 3 | 8 |
+
+Results: `evidence/cf-prep-deaths.jsonl`, `evidence/cf-prep-survivors.jsonl`.
+
+**What changed in the three death games.** All three departed at a town visit:
+- 1200156945 and 1004587769 bought Neutralize Poison (2, and 1);
+- 1902932078 bought Detect Invisible.
+
+**What it means.**
+- Richer Borgs stock up at 50%. The poor ones that died mostly cannot.
+- A cure in the pack is not drunk in a fight: every cure in `borg_heal` is skipped while danger > avoidance × 2/10 (borg_caution.rs:721). The Paladin 1200156945 died holding 2 Neutralize Poison.
+- So the buying change needs C2 (a real cure beats the danger gate when pending poison ≥ HP) to matter.
+- Cure Critical Wounds at 200 gold is out of reach for most of these characters.
+- `town_prepared_percent = 50` is proposed as a zoo arm (borg-zoo#739).
+
+### Why they melee
+
+- **The "never melee" list is off.**
+  - The scary list has `white jelly | 50 | | ranged | poison-touch` and `floating eye | 50 | | ranged | paralysing-gaze` (borg-reborn-rs#838, the owner's "a list of monsters to never melee ... and only attack from afar").
+  - They are read only with `caution_ranged_only = 1`, which ships 0.
+  - It was measured on borg-reborn-rs 5887c29b: `reborn-ranged-only` small + medium + big, 14 deaths against 11 shipped.
+  - The owner kept it off and asked for borg-reborn-rs#852: no melee, no hunt, ranged attacks, *without* the reach block in the flows, and only while the character is not protected from the blow's effect. Open, not built.
+- **Melee was the only positive attack.**
+  - During 727698927's jelly fight (t61544–t61940) the trace's candidates are melee (utility 50, once 98) and Slow Monster (12–32) only.
+  - Its last Flask of oil went at t19769.
+  - Stinking Cloud does nothing to a poison-immune jelly: "The white jelly resists a lot" (799968561, t21877).
+  - 956247604's only positive candidate was melee.
+- **The jelly looks harmless.** Its blow is `TOUCH:POISON:1d2`, danger 4–6. The danger the Phase rule reads leaves out the poison price (`escape_phase_lost_damage_only = 1`). So the fight is never "lost": no Phase Door and no retreat.
+- **Nothing steps away.** That was `caution_ranged_vs_immobile = 2`, rejected by the owner on 2026-11-20.
+- **Floating eyes.**
+  - 1315192163 and 1575424768 rated melee at 604 and 601 against an 11–12 HP eye.
+  - *Inference*: the attack's value grows with the target's danger (400 with fear), and nothing checks Free Action before a blow (borg-reborn-rs#1125, open).
+- **White worm masses.** Breeders adjacent to the Borg; melee is the default target.
+
+**The most direct fix for the melee** is borg-reborn-rs#852's version of the never-melee rule (keep no-melee and no-hunt, drop the reach block, take resistances into account), with C1 (pending poison counted in the escape tests).
+
 ## Investigations still open
 
 1. **Why the Paladin 1200156945 drank nothing.** It had 10 CLW and 2 Neutralize Poison, and fell HP 19 → 10 → 8 at danger 89/46/32 against avoidance 19/10/8. The trace shows only attack candidates. *Inference*: `borg_heal` skips cures above 20% of avoidance (borg_caution.rs:721), and no heal level fired with danger far above HP. Needs a decision trace of `borg_heal` per think. Related borg-reborn-rs#985 (the bravery boost overrides every cure; 1575381233 logs "Boosting bravery (2) from 1 to 220!" at HP 1).
