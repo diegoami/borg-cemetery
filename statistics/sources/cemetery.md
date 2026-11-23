@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `946588c70b290d2d141c5a6ce3c2afdf0d6aff47ad699ea5b00033fd666ded9c`.
+Input inventory SHA-256: `ba7a6fe70e69778c3208d2cd2fedd85cc876cbaa50e4b864ef7e9c7e2fe72644`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
@@ -21,7 +21,7 @@ The companion snapshot for an external source retains normalized statistical fie
 | Grip, Farmer Maggot's Dog | 11 |
 | a cave spider | 8 |
 | a small kobold | 8 |
-| a floating eye | 7 |
+| a floating eye | 8 |
 | a giant white louse | 6 |
 | a cutpurse | 6 |
 | a giant white mouse | 6 |
@@ -42,6 +42,7 @@ The companion snapshot for an external source retains normalized statistical fie
 | burning to a cinder in lava | 2 |
 | a blue worm mass | 2 |
 | a fruit bat | 2 |
+| a soldier ant | 1 |
 | a Quarterstaff | 1 |
 | an apprentice | 1 |
 | a kobold archer | 1 |
@@ -67,15 +68,15 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 294 | 160 | 13078.5 | 40635.30 | 1094860 |
-| depth | 269 | 0 | 1 | 1.35 | 18 |
-| level | 269 | 1 | 2 | 2.87 | 12 |
+| turn | 296 | 160 | 13210.5 | 40468.34 | 1094860 |
+| depth | 271 | 0 | 1 | 1.35 | 18 |
+| level | 271 | 1 | 2 | 2.87 | 12 |
 
 ## Characters
 
 | Character | Dossiers |
 | --- | --- |
-| Human Ranger | 16 |
+| Human Ranger | 17 |
 | Human Druid | 13 |
 | Elf Ranger | 9 |
 | Half-Troll Ranger | 9 |
@@ -84,6 +85,7 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Dwarf Necromancer | 7 |
 | Half-Orc Ranger | 7 |
 | Half-Elf Mage | 6 |
+| Human Mage | 6 |
 | Dunadan Necromancer | 6 |
 | Human Priest | 6 |
 | Dunadan Ranger | 6 |
@@ -91,7 +93,6 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Human Paladin | 5 |
 | Kobold Druid | 5 |
 | Half-Troll Priest | 5 |
-| Human Mage | 5 |
 | Half-Elf Blackguard | 5 |
 | Half-Orc Necromancer | 5 |
 | Hobbit Ranger | 5 |
