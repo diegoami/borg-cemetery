@@ -275,7 +275,13 @@ The arms above ran on 7f8c6b80, the death's build: a main commit, 242 commits be
 
 **After merging `track-p` `4b2c2fcf`.** All five branches were then merged with `track-p` `4b2c2fcf` (top `94a3778a`), and the 36 games were played again ([counterfactuals/trackp-94a3778a-named-cases.jsonl](counterfactuals/trackp-94a3778a-named-cases.jsonl)). All 36 key streams are identical to the `608d9fed` runs.
 
-These games show that the switches act on `track-p`, with no new death in 18 games. They cannot show a rescue, because nothing died. That is borg-zoo#643's measurement, now on `94a3778a`.
+**After merging `track-p` `bf8d2604` (2026-11-23).** All five branches were merged with `track-p` `bf8d2604` (top `61cf744c`), and the 36 games were played again ([counterfactuals/trackp-61cf744c-named-cases.jsonl](counterfactuals/trackp-61cf744c-named-cases.jsonl)). `track-p` now plays differently: none of the 36 key streams equals the earlier runs.
+- **The controls.** No deaths in either control arm. Total character level: 61 in `ctl`, 62 in `ctl+all`.
+- **One death with the switches.** `ctl+all` has one: Human Priest 1512540769, killed by a soldier with cave spiders at 42,355. Its control lives at the cap. The game splits from the control at turn 873 (a #911 take), so it is another life.
+- **The last fight.** It held 17 Phase Door and read none. "Healing (outmatched)" drank a CLW at HP 18/62 and again at HP 8. With `caution_heal_outmatched_before_walk` (#909) that heal runs before `borg_escape`, so it can pre-empt the Phase Door. This is a lead for that switch from one game, not a measurement.
+- **Rule counts.** #911's take acted 275 and 302 times in the two "+all" arms; the outmatched heal 6 and 4.
+
+On `608d9fed` and `94a3778a`, the games showed that the switches act on `track-p`, with no new death in 18 games. They cannot show a rescue, because nothing died. That is borg-zoo#643's measurement, now on `94a3778a`.
 
 ## Limits
 
