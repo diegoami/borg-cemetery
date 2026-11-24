@@ -7,10 +7,13 @@ Both starts used the default `borg-rs` core from Track P
 The [override arm](loop-off/summary.json) used only
 `BORG_TXT_SET=borg_param_loop_breaker=0` and resolved `loop_breaker=0`.
 
-| Arm | `borg_txt_sha256` |
+The configurations below are the exact `user/borg.txt` files from the
+two runs. They differ only in `borg_param_loop_breaker`.
+
+| Run configuration | `borg_txt_sha256` |
 |---|---|
-| Shipped | `0cac99702aea4f46a3555b710bfcb4cacf7319203f862f6557704c04607272db` |
-| Override | `94b1d1c8b9ac8eda427b008ea87a9e258ff7e867f3cbc3b86d8fb861d302b8b6` |
+| [Shipped `borg.txt`](loop-on/borg.txt) | `0cac99702aea4f46a3555b710bfcb4cacf7319203f862f6557704c04607272db` |
+| [Override `borg.txt`](loop-off/borg.txt) | `94b1d1c8b9ac8eda427b008ea87a9e258ff7e867f3cbc3b86d8fb861d302b8b6` |
 
 Both reached the 100,000-game-turn cap at CL5, DL2. The two runs have
 the same SHA-256 for each game stream.
