@@ -1,0 +1,437 @@
+{
+  "build": {
+    "impl": "rust",
+    "git_rev": "e34d04b788a5f6a9b600268231cfe6c4e260e820",
+    "git_dirty": "no",
+    "inputs_dirty": "no",
+    "source_sha256": "695e7a05e385aaec891a9355492066cf06f383cbf065f4553c9c877bc7fa5f76",
+    "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+    "binary_sha256": "04143c939900b0ad4e6b48c939072f44d1635bf64cd2737f14e81704baf5b2b1",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "arg_order": "rtl",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-24T17:48:10Z"
+  },
+  "core": "borg-rs",
+  "vendored_core_base": "8c5d000a58e9ddca1f1954ab9552e505856b313f",
+  "overrides": {},
+  "inputs": {
+    "mage-original": {
+      "path": "../mage-overweight-cursed-kit-9221204/start.save.gz",
+      "sha256": "236b0cf1c376a47788489e3acb92d5870c84ec8fde7af4c7721c2a7de66b2255",
+      "compressed_sha256": "10d5827a003a254a4da97f730fc81f476ab3af086bd2e1c65a5b720058795962"
+    },
+    "mage-book": {
+      "path": "mage-book.save.gz",
+      "sha256": "35ae98bb00a63993a0e85fe72c8ec04b5b9b19a967bf043636989c34d5983a2d",
+      "compressed_sha256": "c298fc9d71224b35037dbba66bdc4910b1d1f1fef22b403686d2bf0dce53aa5b"
+    },
+    "priest-original": {
+      "path": "priest-original.save.gz",
+      "sha256": "3ee39d3a3d107e45efd1faa10b8a8754411ef293127ce2a9da2c246d8802a8c1",
+      "compressed_sha256": "bbb3f6b69e2da9a4ad33caa8c79abe3048df6e7544182d1c12898f0045f274ef"
+    },
+    "priest-control": {
+      "path": "priest-control.save.gz",
+      "sha256": "3585d4ed3a7100dedb6e863d9fbbcd1c9e024c3658460c465aec6c8a386811ce",
+      "compressed_sha256": "3e6e0a93b0d76b98fd2721026652aa1226144a43dfe04bc5b28922cbc754065e"
+    },
+    "priest-scroll": {
+      "path": "priest-scroll.save.gz",
+      "sha256": "3ec5499a5c7cc21c63dee38cde4c3ed9cea5a0144cec5a30b5f1c9490b6c0fe8",
+      "compressed_sha256": "47fb6646317e6d9bfdc7b8049c288449654e60d5f54594d3850e71c6c6e60887"
+    },
+    "mage-book-departed": {
+      "path": "mage-book-departed.save.gz",
+      "sha256": "78073fae5dec38ad56e6bbdb9b697da6646bc476ec72f50d0c8088c1760812a4",
+      "compressed_sha256": "5b65775610124f7ede4234a15e51e2ff3c35395f1cd53192b71bb378a9129038"
+    }
+  },
+  "replays": {
+    "mage-original": {
+      "seed": 1,
+      "race_idx": 4,
+      "class_idx": 1,
+      "loaded_turn": 9221204,
+      "game_turns": 9242417,
+      "clevel": 17,
+      "depth": 5,
+      "max_depth": 5,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,finalsave,keep-load-rng,save=mage-original.save",
+        "borg_txt_sha256=9650a911065f586af6b544fd531d9d7ee8b8e7fc543418118bfde2997ac7f0d1",
+        "save_sha256=236b0cf1c376a47788489e3acb92d5870c84ec8fde7af4c7721c2a7de66b2255",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "fb222af9492f4d0a867a872df30aa581c90daa398e3e9ed3ea02dce473ba5eb2",
+        "messages.log": "8cd87e1d4d11b98a9ed5e9f2cdadeb809597641f84db6bc5f2f0d029848ebadc",
+        "state.log": "054c309dc49c153495bdb3ce1cd8099c36f394b1d2770a73567a5f24f8d1669a",
+        "summary.json": "8b23803d6043ba96d1e9e46bbada530f4dc5615439e2690fb55c1ea7677777be",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "b2c4036dc995dba92fc4bdddc0173931676b6fdfd97158217858e76d869868b3",
+        "town-plan.jsonl": "6fbfe9a89fc6bf368cb7170100cd38e48a2a0b69beb7c425d354c376e97aa00a"
+      }
+    },
+    "mage-book-departure": {
+      "seed": 1,
+      "race_idx": 4,
+      "class_idx": 1,
+      "loaded_turn": 9221204,
+      "game_turns": 9340443,
+      "clevel": 17,
+      "depth": 1,
+      "max_depth": 5,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=mage-book.save",
+        "borg_txt_sha256=9650a911065f586af6b544fd531d9d7ee8b8e7fc543418118bfde2997ac7f0d1",
+        "save_sha256=35ae98bb00a63993a0e85fe72c8ec04b5b9b19a967bf043636989c34d5983a2d",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "checkpoint_every=9340423",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "dad419de0a1f127b624908afae20959a0bc9a242f4368f3a67c5667287d0bbc5",
+        "messages.log": "c24f1d88d7f876b3afe3b2174066d999ca8bf3e4caad73113bff67269f3262e4",
+        "state.log": "3e97a1bf36c0a5f71e14f1385c3a405eb4fc95dd01324070bfe72bf26a838ae3",
+        "summary.json": "edb8a256481bc159ce8b4b38d986d21528e65baff5c5a85d9545d9a666e28328",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "b2c4036dc995dba92fc4bdddc0173931676b6fdfd97158217858e76d869868b3",
+        "town-plan.jsonl": "afc77a7498ace41e75f4ea14368e3a77394f8948bee7915d1c2ff57f24500b05"
+      }
+    },
+    "priest-control": {
+      "seed": 399497898,
+      "race_idx": 8,
+      "class_idx": 3,
+      "loaded_turn": 600016,
+      "game_turns": 605006,
+      "clevel": 10,
+      "depth": 1,
+      "max_depth": 3,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=priest-control.save",
+        "borg_txt_sha256=b30948373520b90c23c5e711a651ee4f150343fad08f7c926d5364b6218f69ce",
+        "save_sha256=3585d4ed3a7100dedb6e863d9fbbcd1c9e024c3658460c465aec6c8a386811ce",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "4c26deedcf437aa07f728513293b88f319374c13ea74cd7f59b40ef355dcc7f0",
+        "messages.log": "969e8ef40eec1572317007cdf82f28e2ff2b03f58f0f72b51262ff2edea841b3",
+        "state.log": "00214601e9243b1300e07eab70b80de551e6ea0128136470ec61f8e7fd0a1853",
+        "summary.json": "6cd8ce02949454348c47cf48c65c1e0f9eb6ef070f07e546ddf9c4ec35ae70ea",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "2ea3bb5a30b7c8b034f8114be9e46a0a6fc31eb464f361f7b4640bc67535f361",
+        "town-plan.jsonl": "9e4e943ce7e2f73620737acb695db41357372823b56ae87848cf630892dc5689"
+      }
+    },
+    "priest-scroll": {
+      "seed": 399497898,
+      "race_idx": 8,
+      "class_idx": 3,
+      "loaded_turn": 600016,
+      "game_turns": 606105,
+      "clevel": 10,
+      "depth": 1,
+      "max_depth": 3,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=priest-scroll.save",
+        "borg_txt_sha256=b30948373520b90c23c5e711a651ee4f150343fad08f7c926d5364b6218f69ce",
+        "save_sha256=3ec5499a5c7cc21c63dee38cde4c3ed9cea5a0144cec5a30b5f1c9490b6c0fe8",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "c1b5cac6aaad6057df3726dd85552d1a71a933160c1c2b9e36dee77a4c24f382",
+        "messages.log": "50c8f96831ac8eef0bf4e555b47b8b971bf0954127ca067902605afc9e9ce19c",
+        "state.log": "90f5732b2d966ef5bcf1606415dbaefe3c3ce836108fe8d510aef4c96d333bac",
+        "summary.json": "e7b90477467eb92ef6fe99035b9efb2ba664f22ae85e15f3842ed752b2919237",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "2ea3bb5a30b7c8b034f8114be9e46a0a6fc31eb464f361f7b4640bc67535f361",
+        "town-plan.jsonl": "f5e74a66447cc7888e28d58ca573ed64d3bf7cc037e0cee3d50d8ba5634da1f0"
+      }
+    }
+  },
+  "additional_runs": {
+    "mage-book": {
+      "seed": 1,
+      "race_idx": 4,
+      "class_idx": 1,
+      "loaded_turn": 9221204,
+      "game_turns": 9241208,
+      "clevel": 17,
+      "depth": 3,
+      "max_depth": 5,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=mage-book.save",
+        "borg_txt_sha256=9650a911065f586af6b544fd531d9d7ee8b8e7fc543418118bfde2997ac7f0d1",
+        "save_sha256=35ae98bb00a63993a0e85fe72c8ec04b5b9b19a967bf043636989c34d5983a2d",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "03e7bb4d492f68561bbb83d3935a22be2c4fc660c23d4358581af24185987b21",
+        "messages.log": "da3747dba0f6a851611bc53c33a34dcb5421425815cf98e9d83d0c40a4ee0a6b",
+        "state.log": "530da5ebb4d8bf1793aa8517a6bb651f84057316fa351e1768ddb55aa6e1681c",
+        "summary.json": "734d353e051ae13cc5457dc6bbc6050df02bb96ca634fca910649c08f35fd9f7",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "b2c4036dc995dba92fc4bdddc0173931676b6fdfd97158217858e76d869868b3"
+      }
+    },
+    "mage-checkpoint": {
+      "seed": 1,
+      "race_idx": 4,
+      "class_idx": 1,
+      "loaded_turn": 9221204,
+      "game_turns": 9230503,
+      "clevel": 17,
+      "depth": 0,
+      "max_depth": 5,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,keep-load-rng,save=mage-original.save",
+        "borg_txt_sha256=9650a911065f586af6b544fd531d9d7ee8b8e7fc543418118bfde2997ac7f0d1",
+        "save_sha256=236b0cf1c376a47788489e3acb92d5870c84ec8fde7af4c7721c2a7de66b2255",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "checkpoint_every=9230469",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "d0c69ff38b27ef281d1d580aa8765e60cb9e59d9712fbd3616103218c5593bb0",
+        "messages.log": "728a7c9bab3cf67d9967250c3497bdb03d55d4fd697fd78ccdba80caa82da599",
+        "state.log": "016619063eee9ec8ab144b73ad35f295e4939626bd1f926d86406fe4c36eba0d",
+        "summary.json": "a008591a28c43a82e051fdb751f026862f0b9ca05fda0a0e245b4211445b0326",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "b2c4036dc995dba92fc4bdddc0173931676b6fdfd97158217858e76d869868b3",
+        "town-plan.jsonl": "99f97552b77346a16455f841a4b6dff2a30cf9f56aa2bb8c5826a2727adccbdc"
+      }
+    },
+    "mage-town-control": {
+      "seed": 1,
+      "race_idx": 4,
+      "class_idx": 1,
+      "loaded_turn": 9230469,
+      "game_turns": 9232504,
+      "clevel": 17,
+      "depth": 1,
+      "max_depth": 5,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=mage-town-control.save",
+        "borg_txt_sha256=9650a911065f586af6b544fd531d9d7ee8b8e7fc543418118bfde2997ac7f0d1",
+        "save_sha256=08b8de15c2b094a4c0a2a329192f68755496411c0bc3105d9edc6b3b1f68dd2d",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "e23c628bb5d00fbe654d530bcd948c1c5a09dcc611b5cf67077543563c757bc2",
+        "messages.log": "5bde2f153ecadd5943726afdcd359e2f0767c5099044e6feeb9b43423df6eb08",
+        "state.log": "66e655e71088a824a2d789687fcc83477315861bb102e89ef655dec8706956d0",
+        "summary.json": "a59e20fdc6eb01f3c5a1fc907dfe583cd26bd902afaf171e69e98e37638c015b",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "b2c4036dc995dba92fc4bdddc0173931676b6fdfd97158217858e76d869868b3",
+        "town-plan.jsonl": "fcdcd1a1a46b078ddc4be8c6a49d813f21fe07248e0855efec078bdbae97addd"
+      }
+    },
+    "mage-town-book": {
+      "seed": 1,
+      "race_idx": 4,
+      "class_idx": 1,
+      "loaded_turn": 9230469,
+      "game_turns": 9232886,
+      "clevel": 17,
+      "depth": 1,
+      "max_depth": 5,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=mage-town-book.save",
+        "borg_txt_sha256=9650a911065f586af6b544fd531d9d7ee8b8e7fc543418118bfde2997ac7f0d1",
+        "save_sha256=fffb75c90519337c02ba91e27ee54584d356ce6fba4b893024d0cf0ebb1aca47",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "2df4b3774cbe874ee4c7b4f6f581d1df040576cf62e00023469fe5549eb051b6",
+        "messages.log": "e641797e4256da9ae589a200c403fd968c0760666d02f1ec2adab8ab8d8fbc71",
+        "state.log": "eca71af442f998c3eb6c3b2d5c8ef5d1293dcad2832ed5a08a74ca04fc13a6de",
+        "summary.json": "7e215fc3768881617702dabe4f692f7f5170b3fce3721562b49503f712ebcbb2",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "b2c4036dc995dba92fc4bdddc0173931676b6fdfd97158217858e76d869868b3"
+      }
+    },
+    "mage-book-extended": {
+      "seed": 1,
+      "race_idx": 4,
+      "class_idx": 1,
+      "loaded_turn": 9221204,
+      "game_turns": 9301716,
+      "clevel": 17,
+      "depth": 3,
+      "max_depth": 5,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=mage-book.save",
+        "borg_txt_sha256=9650a911065f586af6b544fd531d9d7ee8b8e7fc543418118bfde2997ac7f0d1",
+        "save_sha256=35ae98bb00a63993a0e85fe72c8ec04b5b9b19a967bf043636989c34d5983a2d",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "accbfd90c7e28112913eb0065f4317f9ff0b0352dcf0957b5eebcfed11ac5824",
+        "messages.log": "c711edacaab4972b8b7d462cc939759f38e3f24b43963c8e90a9865db51db8a2",
+        "state.log": "e39bc9fbe1f5974329c085c55f9b92be0684de11d9b8278b58ef21713aee7beb",
+        "summary.json": "e93df44636e81e1accc3ccf65bbbe21cdcdd23cb36e872cb0448688e863eb01a",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "b2c4036dc995dba92fc4bdddc0173931676b6fdfd97158217858e76d869868b3"
+      }
+    },
+    "mage-book-long": {
+      "seed": 1,
+      "race_idx": 4,
+      "class_idx": 1,
+      "loaded_turn": 9221204,
+      "game_turns": 9461212,
+      "clevel": 18,
+      "depth": 6,
+      "max_depth": 7,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=mage-book.save",
+        "borg_txt_sha256=9650a911065f586af6b544fd531d9d7ee8b8e7fc543418118bfde2997ac7f0d1",
+        "save_sha256=35ae98bb00a63993a0e85fe72c8ec04b5b9b19a967bf043636989c34d5983a2d",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "135e7d813993192aeb08eda8835aaeba8492d6590a1fce125807352775782588",
+        "messages.log": "8f29eb188f521bee0a95142acbc4ddb756d66aa47377944d56541b6058de539f",
+        "state.log": "7d4b34f6e53980896f65fa671e50eba337c8fa33786cb21a9eb53c20469d8da9",
+        "summary.json": "dd4f71790199e7dc4111cc93d48d567d6b398e5e4a358ccc037ea9a278b4d972",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "b2c4036dc995dba92fc4bdddc0173931676b6fdfd97158217858e76d869868b3",
+        "town-plan.jsonl": "bee67d3b0a48d30ae0d8443576747ac3aaa73d43d651b4803a5f83293b6fd5b7"
+      }
+    },
+    "priest-natural": {
+      "seed": 399497898,
+      "race_idx": 8,
+      "class_idx": 3,
+      "loaded_turn": null,
+      "game_turns": 600016,
+      "clevel": 10,
+      "depth": 1,
+      "max_depth": 3,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save",
+        "borg_txt_sha256=b30948373520b90c23c5e711a651ee4f150343fad08f7c926d5364b6218f69ce",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "checkpoint_every=50000",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "348164ec7399e551b87ebfaee0c48920b3f615c8c16201df6342e3b3fa0df82f",
+        "messages.log": "c8ef59961c0cb0bc6310e0a7d77bf9708a9ab3a6e68e36f1d03feb473194b0a7",
+        "state.log": "dbe5d12634df6935b7288571370a9f299ebb144f4db8069df40a9d5bc8a1851e",
+        "summary.json": "5a5b663dc86e8bf1f8f263bf9cac9778c565a09eadf7b86cba7936a84ed9c6d4",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "2ea3bb5a30b7c8b034f8114be9e46a0a6fc31eb464f361f7b4640bc67535f361",
+        "town-plan.jsonl": "5323afd9d5858e25e4f6b44ed37e78e405e3c8d84a69ded752737128b7427a9a"
+      }
+    },
+    "priest-later": {
+      "seed": 399497898,
+      "race_idx": 8,
+      "class_idx": 3,
+      "loaded_turn": null,
+      "game_turns": 1600605,
+      "clevel": 13,
+      "depth": 2,
+      "max_depth": 4,
+      "dead": false,
+      "stop_reason": "turns",
+      "config": [
+        "flags=menu,living-save",
+        "borg_txt_sha256=b30948373520b90c23c5e711a651ee4f150343fad08f7c926d5364b6218f69ce",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "checkpoint_every=100000",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "sha256": {
+        "keys.log": "cbd12109b4f07b8935a6ccf530b64f40394a7324b463064e74718f8162136b31",
+        "messages.log": "175da32fae5929595021422646da32d01b7ee8f782b4f2f21007e4a7434fcb96",
+        "state.log": "98c0c99fe25221df0d6ee1b4c7f4f35f3e7c8ad7c071a985df422a847d4ecf91",
+        "summary.json": "f91e1156f9966bb7b1ea530ff1b0bd4839f14ae056356c2b23d0df2766c45a8e",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "settings-resolved.json": "2ea3bb5a30b7c8b034f8114be9e46a0a6fc31eb464f361f7b4640bc67535f361",
+        "town-plan.jsonl": "700d92918aff445aa09b5c76a9b32d6f9f96854a8896a543cadcb223ec8d998a"
+      }
+    }
+  }
+}
