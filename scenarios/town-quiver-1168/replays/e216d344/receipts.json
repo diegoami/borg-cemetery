@@ -1,0 +1,276 @@
+{
+  "core": "borg-rs",
+  "base": "37b501043b5fe741b1085e6bb73833c107632a36",
+  "build": {
+    "impl": "rust",
+    "git_rev": "e216d344140f6d46d561df7d5aaadaf879dd23c8",
+    "git_dirty": "no",
+    "inputs_dirty": "no",
+    "source_sha256": "da7ddf718cadac3e8ce166d7c83b8e5b1f5d74f8d9fccc3ba9440c973d1ee713",
+    "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+    "binary_sha256": "3cbe625880f4090b4c3880b24df01f542ff8ee356a6906db6317120326966129",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "arg_order": "rtl",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-24T15:06:05Z"
+  },
+  "previous_receipt": "../../receipts.json",
+  "previous_receipt_commit": "9d4a9796e89175b40a0eff2687456a55ee598d29",
+  "arms": {
+    "300-reserve0": {
+      "save": "mage-quiver-300-town.save.gz",
+      "save_sha256": "cec9db7bc3088f05ab3c62857da985d524a18d49958b9a3495548fc5ef820ae3",
+      "effective_borg_txt_sha256": "83552c289388aef61af025c05e9863d6fb75a01379ca0e479804c806a6c20f5c",
+      "override": {
+        "borg_param_town_quiver_trim_reserve": 0
+      },
+      "starting_auto_more": 0,
+      "seed": 1,
+      "turn_cap": 10818143,
+      "first_departure": {
+        "game_turn": 10815783,
+        "allowance_free_tenths_lb": -1312,
+        "free_slots": 3
+      },
+      "drops": [],
+      "stop": {
+        "game_turns": 10818150,
+        "stop_reason": "turns",
+        "dead": false,
+        "depth": 1,
+        "max_depth": 29,
+        "clevel": 37
+      },
+      "sha256": {
+        "keys.log": "ff285ccda6cdf047a884d33248c8e291c426e9c87b353a8fdfdeea67c456756f",
+        "messages.log": "4fe7e4de38c40ba0734e7315fe4aa6a34cd07e3e8689d716366192fb785f42e7",
+        "state.log": "881a48c43e9692b98222ff18ce0f58af16421c39e66a756aa27df80007eea34e",
+        "summary.json": "d0eea619e67d7631202d500c5660e716312794abdf4c936d71d8d19ea430d81d",
+        "town-plan.jsonl": "45847ff05e5d4a0e0265e9d3548a9e6077730bdccda766e4b7678e0cf0d44205"
+      },
+      "effective_params_sha256": "3bbba041e1d7c84af89813de1cab12c06d1a2dd980224176941fbbf583006b0b",
+      "same_as_previous": [
+        "keys.log",
+        "messages.log",
+        "state.log",
+        "town-plan.jsonl"
+      ]
+    },
+    "300-reserve40": {
+      "save": "mage-quiver-300-town.save.gz",
+      "save_sha256": "cec9db7bc3088f05ab3c62857da985d524a18d49958b9a3495548fc5ef820ae3",
+      "effective_borg_txt_sha256": "4baf618fd137835b5197639c60269af656892a7e97ccfd8dab2d3013991783f0",
+      "override": {
+        "borg_param_town_quiver_trim_reserve": 40
+      },
+      "starting_auto_more": 0,
+      "seed": 1,
+      "turn_cap": 10818143,
+      "first_departure": {
+        "game_turn": 10815732,
+        "allowance_free_tenths_lb": -632,
+        "free_slots": 7
+      },
+      "drops": [
+        {
+          "game_turn": 10815506,
+          "count": 40
+        },
+        {
+          "game_turn": 10815511,
+          "count": 40
+        },
+        {
+          "game_turn": 10815514,
+          "count": 40
+        },
+        {
+          "game_turn": 10815518,
+          "count": 40
+        },
+        {
+          "game_turn": 10815521,
+          "count": 10
+        }
+      ],
+      "stop": {
+        "game_turns": 10818148,
+        "stop_reason": "turns",
+        "dead": false,
+        "depth": 2,
+        "max_depth": 29,
+        "clevel": 37
+      },
+      "sha256": {
+        "keys.log": "850b9ad5b209e97ddbeab6580e565d788c59488b13988c0dbaa471694f84df39",
+        "messages.log": "c5d995e468fdf73ab395ef9e40113a2f1c8ff698bedd25c3d90af9465aade488",
+        "state.log": "e2ef858be2e2492ff20c72f94ebdc7c88a12b29aec7444a1a19dc4ec402ebddc",
+        "summary.json": "8a26d1d9658c1eba1bec656d15e5c8b2e38a3dc0231b582a1a99f13aa9fc6de1",
+        "town-plan.jsonl": "368b8d34ff6a3a11128c779bec9fd0cc22f1c5852892f2aa9a4fd469b4bfc683"
+      },
+      "effective_params_sha256": "88cfe4ccb2a1b03c2aaa5c1007c6bd3c69c7528fe23ff0e707cd8f3a481e88c6",
+      "same_as_previous": [
+        "keys.log",
+        "messages.log",
+        "state.log",
+        "town-plan.jsonl"
+      ]
+    },
+    "40-reserve0": {
+      "save": "mage-quiver-40-town.save.gz",
+      "save_sha256": "766b67c9fb814159ac38fcd9a452ec0dcb19d582f9792656f189c0b178b73db3",
+      "effective_borg_txt_sha256": "83552c289388aef61af025c05e9863d6fb75a01379ca0e479804c806a6c20f5c",
+      "override": {
+        "borg_param_town_quiver_trim_reserve": 0
+      },
+      "starting_auto_more": 0,
+      "seed": 1,
+      "turn_cap": 10818143,
+      "first_departure": {
+        "game_turn": 10815548,
+        "allowance_free_tenths_lb": -272,
+        "free_slots": 10
+      },
+      "drops": [],
+      "stop": {
+        "game_turns": 10818143,
+        "stop_reason": "turns",
+        "dead": false,
+        "depth": 2,
+        "max_depth": 29,
+        "clevel": 37
+      },
+      "sha256": {
+        "keys.log": "787770e461d5d24d2ba1b105d8ae99f33632af553b9205de89e918cf6a312355",
+        "messages.log": "070c388f17536667769e080333f51466787e9a94fd1bac7b3dc22c7cdd05c070",
+        "state.log": "104b3cafb48f3e5ef4ae53101f3e1e1625c034f9a7a0bf39220561bec9e684ae",
+        "summary.json": "fe6417db5b0d1bbfd95fd8140402e2531978a388f13d24e3edb3882de6f73b02",
+        "town-plan.jsonl": "048d3c214863b1cf1f6ffa25f5a4e446e1df245f2f6c33a5a5da17a9ba74af7b"
+      },
+      "effective_params_sha256": "3bbba041e1d7c84af89813de1cab12c06d1a2dd980224176941fbbf583006b0b",
+      "same_as_previous": [
+        "keys.log",
+        "messages.log",
+        "state.log",
+        "town-plan.jsonl"
+      ]
+    },
+    "40-reserve40": {
+      "save": "mage-quiver-40-town.save.gz",
+      "save_sha256": "766b67c9fb814159ac38fcd9a452ec0dcb19d582f9792656f189c0b178b73db3",
+      "effective_borg_txt_sha256": "4baf618fd137835b5197639c60269af656892a7e97ccfd8dab2d3013991783f0",
+      "override": {
+        "borg_param_town_quiver_trim_reserve": 40
+      },
+      "starting_auto_more": 0,
+      "seed": 1,
+      "turn_cap": 10818143,
+      "first_departure": {
+        "game_turn": 10815548,
+        "allowance_free_tenths_lb": -272,
+        "free_slots": 10
+      },
+      "drops": [],
+      "stop": {
+        "game_turns": 10818143,
+        "stop_reason": "turns",
+        "dead": false,
+        "depth": 2,
+        "max_depth": 29,
+        "clevel": 37
+      },
+      "sha256": {
+        "keys.log": "787770e461d5d24d2ba1b105d8ae99f33632af553b9205de89e918cf6a312355",
+        "messages.log": "070c388f17536667769e080333f51466787e9a94fd1bac7b3dc22c7cdd05c070",
+        "state.log": "104b3cafb48f3e5ef4ae53101f3e1e1625c034f9a7a0bf39220561bec9e684ae",
+        "summary.json": "421fde8aca2a59840ce2c8d4dca825cab00b78708e190776e4133facc68de116",
+        "town-plan.jsonl": "048d3c214863b1cf1f6ffa25f5a4e446e1df245f2f6c33a5a5da17a9ba74af7b"
+      },
+      "effective_params_sha256": "88cfe4ccb2a1b03c2aaa5c1007c6bd3c69c7528fe23ff0e707cd8f3a481e88c6",
+      "same_as_previous": [
+        "keys.log",
+        "messages.log",
+        "state.log",
+        "town-plan.jsonl"
+      ]
+    },
+    "fit-reserve0": {
+      "save": "late-mage-town-fit.save.gz",
+      "save_sha256": "96fb1e6039fb3549edbf672d2c547ac22fa31074a673cdfec524778f285e1768",
+      "effective_borg_txt_sha256": "83552c289388aef61af025c05e9863d6fb75a01379ca0e479804c806a6c20f5c",
+      "override": {
+        "borg_param_town_quiver_trim_reserve": 0
+      },
+      "starting_auto_more": 0,
+      "seed": 1,
+      "turn_cap": 10816143,
+      "first_departure": {
+        "game_turn": 10815832,
+        "allowance_free_tenths_lb": 50,
+        "free_slots": 2
+      },
+      "drops": [],
+      "stop": {
+        "game_turns": 10816145,
+        "stop_reason": "turns",
+        "dead": false,
+        "depth": 45,
+        "max_depth": 45,
+        "clevel": 45
+      },
+      "sha256": {
+        "keys.log": "fb1bacbfa04f83848321cd7508cd0dd8e8d053115b635aaf1950bc4050f15826",
+        "messages.log": "4bfaef8af7d7cf124888adb310b6a70e0e87be7f2f8126b6acc598230a9f5530",
+        "state.log": "e81fd6dc120db0968e83a851a66497a90371c6e9943dca639fa260bec1ce1737",
+        "summary.json": "1329e9c7cf7c06b36f01f19b16c295dfa0c64707765561e6643754954ffe5191",
+        "town-plan.jsonl": "699ad6fb7a5022f99beaa6c85a9437c23eb8b5bab3e13cfa3ac65b53498591a5"
+      },
+      "effective_params_sha256": "3bbba041e1d7c84af89813de1cab12c06d1a2dd980224176941fbbf583006b0b",
+      "same_as_previous": [
+        "keys.log",
+        "messages.log",
+        "state.log",
+        "town-plan.jsonl"
+      ]
+    },
+    "fit-reserve40": {
+      "save": "late-mage-town-fit.save.gz",
+      "save_sha256": "96fb1e6039fb3549edbf672d2c547ac22fa31074a673cdfec524778f285e1768",
+      "effective_borg_txt_sha256": "4baf618fd137835b5197639c60269af656892a7e97ccfd8dab2d3013991783f0",
+      "override": {
+        "borg_param_town_quiver_trim_reserve": 40
+      },
+      "starting_auto_more": 0,
+      "seed": 1,
+      "turn_cap": 10816143,
+      "first_departure": {
+        "game_turn": 10815832,
+        "allowance_free_tenths_lb": 50,
+        "free_slots": 2
+      },
+      "drops": [],
+      "stop": {
+        "game_turns": 10816145,
+        "stop_reason": "turns",
+        "dead": false,
+        "depth": 45,
+        "max_depth": 45,
+        "clevel": 45
+      },
+      "sha256": {
+        "keys.log": "fb1bacbfa04f83848321cd7508cd0dd8e8d053115b635aaf1950bc4050f15826",
+        "messages.log": "4bfaef8af7d7cf124888adb310b6a70e0e87be7f2f8126b6acc598230a9f5530",
+        "state.log": "e81fd6dc120db0968e83a851a66497a90371c6e9943dca639fa260bec1ce1737",
+        "summary.json": "d7dc5348290a8800ed9e140a010932633c59e110fe95f627fa9cf9b629d0efb0",
+        "town-plan.jsonl": "699ad6fb7a5022f99beaa6c85a9437c23eb8b5bab3e13cfa3ac65b53498591a5"
+      },
+      "effective_params_sha256": "88cfe4ccb2a1b03c2aaa5c1007c6bd3c69c7528fe23ff0e707cd8f3a481e88c6",
+      "same_as_previous": [
+        "keys.log",
+        "messages.log",
+        "state.log",
+        "town-plan.jsonl"
+      ]
+    }
+  }
+}
