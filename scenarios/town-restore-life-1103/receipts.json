@@ -1,0 +1,285 @@
+{
+  "core": "borg-rs",
+  "base": "3c46575d166426074d128653e6c4f861997e6f02",
+  "build": {
+    "impl": "rust",
+    "git_rev": "270177ba1822cde9027434b03aed826510b5cb4c",
+    "git_dirty": "no",
+    "inputs_dirty": "no",
+    "source_sha256": "6e466eed0f11c4598f4a74b2e4bd014e58958099bfbdda959ff2177a66eaba72",
+    "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+    "binary_sha256": "14557e030310d87617674fcf3b203a85acee93670c3e2a31003fd7b584478a27",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "arg_order": "rtl",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-24T12:15:35Z"
+  },
+  "parent": {
+    "path": "late-inventory-mage-10815143/late-mage-town-fit.save.gz",
+    "sha256": "ca5c11c48cd87a9c9958e380ec99436f95997dc8c9e0e45cbef90cbb4fd3f0b9",
+    "construction_commit": "c5501d3c5aeac2449fc47ed6ca6efe2fbafdd894"
+  },
+  "flags": [
+    "menu",
+    "finalsave",
+    "keep-load-rng"
+  ],
+  "turn_cap": 10815543,
+  "arms": {
+    "healthy-floor0": {
+      "save": "healthy-999.save.gz",
+      "save_sha256": "b42724550d00e492489ebd652264cbbd16c1ec3274a38c369e2f4c09cac59db5",
+      "start_gold": 999,
+      "drained": false,
+      "seed": 1,
+      "loaded_turn": 10815143,
+      "race": "Gnome",
+      "cls": "Mage",
+      "ending_turn": 10815616,
+      "ending_depth": 0,
+      "stop_reason": "turns",
+      "dead": false,
+      "settings_overrides": {
+        "town_restore_life_reserve": 1,
+        "town_restore_life_min_gold": 0,
+        "town_black_market_min_gold": 0,
+        "town_black_market_level_delta": 0
+      },
+      "effective_borg_txt_sha256": "0f75b348e38971283b271eb0bba837d71f18a31b05e98aba47fe4b1a9ef25c1a",
+      "effective_parameter_sha256": "742cf102aac9eb02fe55ec71e917b2cfb90cfc744cb8949f4b1ef863d541505d",
+      "first_plan": {
+        "turn": 10815189,
+        "purchase_code": 1,
+        "action": [
+          4,
+          0,
+          1,
+          400
+        ],
+        "black_market_share": 60
+      },
+      "purchase_price": 400,
+      "message_evidence": [
+        "85 10815330 0 You bought a Potion of Restore Life Levels for 400 gold."
+      ],
+      "sha256": {
+        "messages.log": "bdf3a0716568cb5c69a839b33401085ccc183fa9e390bedc328e82b57b826f44",
+        "keys.log": "aa3b3b0f9a5bc1927bba57846797eb61d04f62ec49ac88e228579729900f1911",
+        "state.log": "24d0c6c92e826726dac5609f477fc42fd940312fe78f04cb2c265ae1eb89fc79",
+        "town-plan.jsonl": "c62e19a9451a5d2b4d840e4b17530548cd0174444cd1bba7c850ab1a3428adb9"
+      }
+    },
+    "healthy-below-floor": {
+      "save": "healthy-999.save.gz",
+      "save_sha256": "b42724550d00e492489ebd652264cbbd16c1ec3274a38c369e2f4c09cac59db5",
+      "start_gold": 999,
+      "drained": false,
+      "seed": 1,
+      "loaded_turn": 10815143,
+      "race": "Gnome",
+      "cls": "Mage",
+      "ending_turn": 10815616,
+      "ending_depth": 0,
+      "stop_reason": "turns",
+      "dead": false,
+      "settings_overrides": {
+        "town_restore_life_reserve": 1,
+        "town_restore_life_min_gold": 1000,
+        "town_black_market_min_gold": 0,
+        "town_black_market_level_delta": 0
+      },
+      "effective_borg_txt_sha256": "1758894594bc3d81cca4e7df063bb7143bf40928aa3dce5e377f4eae9524cb43",
+      "effective_parameter_sha256": "34f6cfc47d79dab7ab4214a066e2d6b49481df0c1aef3d814f25577af154fc3a",
+      "first_plan": {
+        "turn": 10815189,
+        "purchase_code": 7,
+        "action": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "black_market_share": 60
+      },
+      "purchase_price": null,
+      "message_evidence": [],
+      "sha256": {
+        "messages.log": "5421b82c3ded3797d4d6ce1be81e45c8a842e46c9330fafcc06ba16d3976849a",
+        "keys.log": "84b6cae0e25a6a2de483bd438e8d0d71a17573a7d19c4bf08fe7575103354892",
+        "state.log": "d6b606d9775f9686d3179b5860b11c0ad9886a96b2af8d2f0bfb10cb193f0f7f",
+        "town-plan.jsonl": "20a21f0e30c23f309ec38da1e047dbe483cbd26cd74d1f4a01ebaa47e799dd0b"
+      }
+    },
+    "healthy-at-floor": {
+      "save": "healthy-1000.save.gz",
+      "save_sha256": "ee6f024fc309fb71e750f29f4191f6adee5e919d7394be289782ffb2fa808142",
+      "start_gold": 1000,
+      "drained": false,
+      "seed": 1,
+      "loaded_turn": 10815143,
+      "race": "Gnome",
+      "cls": "Mage",
+      "ending_turn": 10815616,
+      "ending_depth": 0,
+      "stop_reason": "turns",
+      "dead": false,
+      "settings_overrides": {
+        "town_restore_life_reserve": 1,
+        "town_restore_life_min_gold": 1000,
+        "town_black_market_min_gold": 0,
+        "town_black_market_level_delta": 0
+      },
+      "effective_borg_txt_sha256": "1758894594bc3d81cca4e7df063bb7143bf40928aa3dce5e377f4eae9524cb43",
+      "effective_parameter_sha256": "34f6cfc47d79dab7ab4214a066e2d6b49481df0c1aef3d814f25577af154fc3a",
+      "first_plan": {
+        "turn": 10815189,
+        "purchase_code": 1,
+        "action": [
+          4,
+          0,
+          1,
+          400
+        ],
+        "black_market_share": 60
+      },
+      "purchase_price": 400,
+      "message_evidence": [
+        "85 10815330 0 You bought a Potion of Restore Life Levels for 400 gold."
+      ],
+      "sha256": {
+        "messages.log": "89d26df6b7003e2fe7350c19838ee0e87b88e594cda3e458be3e2e3b395fdc2d",
+        "keys.log": "64f5f628326d2595b20e032c0c9d0859a5337327957fa141cff05a8179740f45",
+        "state.log": "6eea0bdb49e950ce4837602e5e455e7ccaa5447b0d76cdf86c5ff53abd09f089",
+        "town-plan.jsonl": "4ad5d5435d523175e88152363d575033f6eed738626dfbce35f30ebebbf1b403"
+      }
+    },
+    "drained-below-floor": {
+      "save": "drained-999.save.gz",
+      "save_sha256": "c554ab2ee7e4ec8df4b7382a53c7bd32e2d7789aa149ae1307abb1ad4cedfc1c",
+      "start_gold": 999,
+      "drained": true,
+      "seed": 1,
+      "loaded_turn": 10815143,
+      "race": "Gnome",
+      "cls": "Mage",
+      "ending_turn": 10815616,
+      "ending_depth": 0,
+      "stop_reason": "turns",
+      "dead": false,
+      "settings_overrides": {
+        "town_restore_life_reserve": 1,
+        "town_restore_life_min_gold": 1000,
+        "town_black_market_min_gold": 0,
+        "town_black_market_level_delta": 0
+      },
+      "effective_borg_txt_sha256": "1758894594bc3d81cca4e7df063bb7143bf40928aa3dce5e377f4eae9524cb43",
+      "effective_parameter_sha256": "34f6cfc47d79dab7ab4214a066e2d6b49481df0c1aef3d814f25577af154fc3a",
+      "first_plan": {
+        "turn": 10815189,
+        "purchase_code": 1,
+        "action": [
+          4,
+          0,
+          1,
+          400
+        ],
+        "black_market_share": 60
+      },
+      "purchase_price": 400,
+      "message_evidence": [
+        "85 10815330 0 You bought a Potion of Restore Life Levels for 400 gold.",
+        "94 10815334 0 You have no more Potions of Restore Life Levels (i)."
+      ],
+      "sha256": {
+        "messages.log": "d334fdc1ac08cad57c7efb623dfd4031e01d0610ec858caf3388975332e11911",
+        "keys.log": "f6e559479a30f9d29636d6ecea689c8eb7547fae9d66bb309d19cb33b52131ca",
+        "state.log": "b4ef63dd00524811f05404f15a1ec118c7d6eb1ae41f3dce1fb8321685711377",
+        "town-plan.jsonl": "5e556636681e9e6b59218d6454610b87567faded1c5d61039060cca6a19cf9a0"
+      }
+    },
+    "market-below-floor": {
+      "save": "market-2999.save.gz",
+      "save_sha256": "acaf7391b7c0c5f86aea5c683d69fa7743ead192db7f7a9e2479627fd3c781a9",
+      "start_gold": 2999,
+      "drained": false,
+      "seed": 1,
+      "loaded_turn": 10815143,
+      "race": "Gnome",
+      "cls": "Mage",
+      "ending_turn": 10815616,
+      "ending_depth": 0,
+      "stop_reason": "turns",
+      "dead": false,
+      "settings_overrides": {
+        "town_restore_life_reserve": 1,
+        "town_restore_life_min_gold": 1000,
+        "town_black_market_min_gold": 7500,
+        "town_black_market_level_delta": 100
+      },
+      "effective_borg_txt_sha256": "010e09036da69ced0f5aac0f588bd5c169172e89d61454dfb53987d4781a3bcc",
+      "effective_parameter_sha256": "e712445154f04a20b5bf4f0cec290114e4c9b1969b3932981290f68024d2a52e",
+      "first_plan": {
+        "turn": 10815189,
+        "purchase_code": 7,
+        "action": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "black_market_share": 0
+      },
+      "purchase_price": null,
+      "message_evidence": [],
+      "sha256": {
+        "messages.log": "5421b82c3ded3797d4d6ce1be81e45c8a842e46c9330fafcc06ba16d3976849a",
+        "keys.log": "84b6cae0e25a6a2de483bd438e8d0d71a17573a7d19c4bf08fe7575103354892",
+        "state.log": "8b18a9397048d4a087d4dfc631eed08c7de172eebb4dccbd5bb48483645698cf",
+        "town-plan.jsonl": "26b7aa0ca3b9cdd334efd7a633e76771f0edb7c8e44961b71a3ca743c3c992b8"
+      }
+    },
+    "market-at-floor": {
+      "save": "market-3000.save.gz",
+      "save_sha256": "18be344d0d05b34039338b36b9c18e834de6555565d484afe5d24fc1cc69055b",
+      "start_gold": 3000,
+      "drained": false,
+      "seed": 1,
+      "loaded_turn": 10815143,
+      "race": "Gnome",
+      "cls": "Mage",
+      "ending_turn": 10815616,
+      "ending_depth": 0,
+      "stop_reason": "turns",
+      "dead": false,
+      "settings_overrides": {
+        "town_restore_life_reserve": 1,
+        "town_restore_life_min_gold": 1000,
+        "town_black_market_min_gold": 7500,
+        "town_black_market_level_delta": 100
+      },
+      "effective_borg_txt_sha256": "010e09036da69ced0f5aac0f588bd5c169172e89d61454dfb53987d4781a3bcc",
+      "effective_parameter_sha256": "e712445154f04a20b5bf4f0cec290114e4c9b1969b3932981290f68024d2a52e",
+      "first_plan": {
+        "turn": 10815189,
+        "purchase_code": 1,
+        "action": [
+          6,
+          0,
+          1,
+          1200
+        ],
+        "black_market_share": 60
+      },
+      "purchase_price": 1200,
+      "message_evidence": [
+        "115 10815444 0 You bought a Potion of Restore Life Levels for 1200 gold."
+      ],
+      "sha256": {
+        "messages.log": "4715f48d582ddea7402209a587ea62c16c641ca7f38e9cbb01e363ae65b214fe",
+        "keys.log": "c61f8c85fea65fe0b90093e5f2c252c098ace2d7b5af61fc0ac58ee410d0dd4f",
+        "state.log": "41b1b492b9441a5b6082975e52a5c0571911fd3b0076f19e1954740480dc909b",
+        "town-plan.jsonl": "3862486f2e070d718d78a9dbbdef4e74d4bc640d6caa85e6a86962740f662b8f"
+      }
+    }
+  }
+}
