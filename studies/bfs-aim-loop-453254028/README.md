@@ -11,8 +11,8 @@ reproduced the death at turn 77,923. Its keys, messages and states matched
 the dossier. The diagnostic build added only the stderr observations in
 [trace.patch](trace.patch). It ended at turn 77,500, with its three game
 streams byte-for-byte prefixes of the unmodified run. Both builds used
-Angband `574b618c`, GCC 14.2 on x86-64 (right-to-left argument evaluation),
-and rustc 1.100.0.
+Angband `574b618c3bfec595f3503a58f8e488b1c4ae3a46`, GCC 14.2 on x86-64
+(right-to-left argument evaluation), and rustc 1.100.0.
 
 | Turn | Borg grid | Decision |
 |---:|---|---|
@@ -26,21 +26,34 @@ The granite aim destination and the lack of a target on arrival at the
 second destination give exploration its turn back. The same pattern is
 visible forty game turns later in [trace.txt](trace.txt). It eventually
 raises the bounce count to the reset that forgets the eye. This is one
-historical start. At shipped Track P `c5501d3c` this seed reached the cap
-with the loop breaker on and off, so the exact historical handoff did not
-recur there.
+historical start. At shipped Track P `c5501d3c` the same seed reached the
+100,000-turn cap with the loop breaker [on](evidence/loop-on/summary.json)
+and [off](evidence/loop-off/summary.json). The calls and outcomes are
+recorded in the [paired receipts](evidence/README.md). These two runs had
+identical game streams and neither reproduced the historical death.
 
 ### Replay
 
-In a scratch checkout of `borg-reborn-rs` at the commit above, apply
-`trace.patch` with `git apply --unidiff-zero` and use that checkout's pinned native
-Cemetery tools.
+Use a clean scratch checkout of `borg-reborn-rs` at the commit above.
+Install CMake, GCC on x86-64, Rust, Python 3 and `flock`. Run the checkout's
+`scripts/setup.sh` to fetch its pinned vendor sources and native Cemetery
+tools (`death-tools-pin.txt` at `4697893660942ed142744306c634583ec630f88a`).
+Use unused output directories for the two runs.
 
 ```sh
+study=/path/to/borg-cemetery/studies/bfs-aim-loop-453254028
+bash scripts/setup.sh
+CC=gcc BORG_IMPL=rust flock /tmp/angband-validation.lock harness/build.sh
+flock /tmp/angband-validation.lock harness/run.sh /tmp/aim-loop-original 453254028 1 4 100000 menu,exact
+git apply --unidiff-zero "$study/trace.patch"
 CC=gcc BORG_IMPL=rust flock /tmp/angband-validation.lock harness/build.sh
 flock /tmp/angband-validation.lock harness/run.sh /tmp/aim-loop-probe 453254028 1 4 77500 menu,exact
-python3 /path/to/borg-cemetery/studies/bfs-aim-loop-453254028/check.py /tmp/aim-loop-probe
+python3 "$study/check.py" /tmp/aim-loop-original /tmp/aim-loop-probe
 ```
+
+The verifier checks the unmodified death against the dossier's three
+full stream hashes. It then checks the bounded hashes, byte prefixes and
+aim trace against the diagnostic run.
 
 The next production test should require a walkable aim destination and a
 target that the normal attack evaluator can see on arrival. The diagnostic
