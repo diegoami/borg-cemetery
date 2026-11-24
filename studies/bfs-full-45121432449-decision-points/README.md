@@ -12,7 +12,7 @@
 - Engine facts from `engine/angband` at 1c071812, cited by file and line.
 - Counterfactual replays: [tools/](tools/), results in [evidence/](evidence/).
 
-Follow-ups: the proposals are borg-reborn-rs#1134; a zoo pilot for the three settings is proposed as borg-zoo#738 / borg-zoo#739 (not dispatched).
+The proposals are tracked in [borg-reborn-rs #1134](https://github.com/diegoami/borg-reborn-rs/issues/1134). A later [Zoo comparison](https://github.com/diegoami/borg-zoo/issues/738#issuecomment-7111965982) found 25 deaths at Phase threshold 50 versus 26 at 100 across 1,800 paired starts. Seven starts were rescued and six were newly killed (exact McNemar p = 1). Deaths at CL ≤ 2 were 22 versus 18. The paired comparison gives no evidence for lowering the shipped threshold.
 
 Inferences are marked *inference*. Every number here was recounted against `state.log`, `messages.log` or the result files.
 
@@ -24,7 +24,7 @@ Inferences are marked *inference*. Every number here was recounted against `stat
 - **None of the 7 drank a poison cure.** Only one carried one (the Paladin: 2 Neutralize Poison and 10 CLW, unused). Four of the 7 are Druids at CL4–7, who could cast Cure Poison from [Gifts of Nature] (CL4, base cost 400); none owned it, and none was ever in town at CL ≥ 4 with 400 gold.
 - **20 of the 25 died holding a Phase Door or a cure potion** (17 Phase Door, 12 CLW/CSW, 4 Neutralize Poison). The common blocker is the owner's Phase rule (borg-reborn-rs#584). It allows Phase only when the danger without fear reaches 100% of HP, and that danger leaves out poison and paralysis. It logged a refusal ("the fight is not lost") at some point in 18 of the 25 games (whole-game count), and at the fatal episode in several of the deaths below.
 - **Counterfactuals:**
-  - `escape_phase_lost_danger_percent = 50` rescues 5 deaths at the fatal point, 2 of them poison;
+  - `escape_phase_lost_danger_percent = 50` reaches the cap in 5 selected games that diverged late, 2 of them poison deaths;
   - `caution_confused_clw_cure = 1` rescues 2;
   - the borg-reborn-rs#932 / borg-reborn-rs#1023 oscillation breaker rescues 1;
   - none of them killed any of the 18 sampled survivors.
@@ -153,9 +153,9 @@ Two different deaths share the cause "poison":
 - Each of the 25 deaths was replayed from birth at 1c071812 with the recorder build: same seed, same race and class, the bundle's own `user/` files, and only the named `borg_param_*` lines changed.
 - Without changes, all 25 deaths and an 18-game survivor sample reproduce the zoo's `play_sha256` exactly.
 - A changed game is classed by where its key stream first departs from the original:
-  - **near** = within 2,000 game turns of the original death, i.e. at the fatal episode;
+  - **near** = within 2,000 game turns of the last logged original key, used as a proxy for proximity to death;
   - **early** = before that.
-- An early divergence that lives is a *different game*, not a rescue of this death. It counts only as noise in both directions.
+- A near divergence is a timing classification. Establishing that a particular decision prevented a death requires inspecting the episode. Report early divergences separately.
 - A death bank is a chosen sample: the zoo already found that rescues on chosen death starts did not carry over to fresh starts (borg-zoo#429, borg-zoo#501).
 
 | arm | settings |
@@ -197,13 +197,13 @@ Two different deaths share the cause "poison":
 | 1397430180 | ctl | a cutpurse | = | = | = | = | = | = | = | = | = |
 | 1520819173 | ctl | a crow | = | = | = | = | = | **L** | = | = | = |
 | 1896645817 | ctl | a giant white mouse | = | = | = | = | = | = | D | **L** | = |
-| **L** | | lives, diverged ≤ 2,000 game turns before the death | 0 | 0 | 0 | 1 | 1 | 2 | 5 | 2 | 3 |
+| **L** | | reached cap, diverged ≤ 2,000 game turns before the last original key | 0 | 0 | 0 | 1 | 1 | 2 | 5 | 2 | 3 |
 | D | | still dies, diverged near | 0 | 2 | 3 | 0 | 1 | 0 | 3 | 2 | 0 |
 | l | | lives, diverged earlier | 0 | 0 | 4 | 1 | 1 | 4 | 4 | 10 | 7 |
 | d | | dies, diverged earlier | 0 | 0 | 0 | 1 | 1 | 0 | 2 | 0 | 0 |
 | = | | identical play | 25 | 23 | 18 | 22 | 21 | 19 | 11 | 11 | 15 |
 
-**Survivor sample.** 18 games that lived to the cap: one per class per arm-of-origin, the lowest seed that died in neither arm. Each was replayed with the arms above.
+**Survivor sample.** 18 games that lived to the cap: one per class per arm-of-origin, the lowest seed that died in neither arm. The table lists the settings replayed on those games.
 
 | arm | plays changed (of 18) | deaths (of 18) |
 |---|---:|---:|
@@ -214,17 +214,17 @@ Two different deaths share the cause "poison":
 | recall0 | 9 | 0 |
 | phasefear | 11 | 0 |
 
-Zero deaths in 18 games bounds nothing tight: at a 1.4% base death rate, 18 games would show about 0.25 deaths. The sample only shows that no arm is grossly harmful; the zoo measures the rest. The p934, flee100, flee1 and bundle arms were not run on survivors.
+Each tested arm recorded zero deaths in these 18 selected games. The small, selected sample has limited ability to detect harm. The survivor sample did not include p934, flee100, flee1 or bundle.
 
 ## Proposals
 
-Ranked by deaths addressed **at the fatal point**, then by risk. A setting is a candidate for a zoo arm, not for shipping: nothing here is a claim until the zoo measures it (RULES 14).
+The historical ranking uses the number of selected death games that diverged near the last original key and reached the cap, followed by the assessed risk. See the paired Zoo result above for the later Phase threshold comparison.
 
 ### Settings (harness/borg.txt)
 
-| rank | change | deaths addressed at the fatal point (counterfactual **L**) | near, still dies | survivors changed / killed | risk |
+| rank | change | selected death games reaching the cap after near divergence (**L**) | near, still dies | survivors changed / killed | risk |
 |---:|---|---|---|---|---|
-| 1 | `borg_param_escape_phase_lost_danger_percent = 50` (from 100) | 5: 626789725 (poison), 1200156945 (poison), 344339521, 389489263, 1741676259 | 3: 1575381233 (lives 6,000 turns longer), 1896645817 (dies earlier), 1902932078 (dies later) | 1 / 0 | **Medium.** The owner's borg-reborn-rs#584 rule stays; only its threshold moves. The rule was confirmed at 100 (borg-zoo#347: 89 against 128 deaths), and 150 was worse than 100 (medium: 12 against 8). Below 100 was never measured. Since then `escape_phase_lost_damage_only = 1` (borg-reborn-rs#878) shrank the danger the gate reads (for a worm mass 2 instead of 32), which made the same 100 much stricter. Costs Phase Doors. |
+| 1 | `borg_param_escape_phase_lost_danger_percent = 50` (from 100) | 5: 626789725 (poison), 1200156945 (poison), 344339521, 389489263, 1741676259 | 3: 1575381233 (lives 6,000 turns longer), 1896645817 (dies earlier), 1902932078 (dies later) | 1 / 0 | **Medium.** The owner's borg-reborn-rs#584 rule stays; only its threshold moves. The rule was confirmed at 100 (borg-zoo#347: 89 against 128 deaths), and 150 was worse than 100 (medium: 12 against 8). The later Zoo comparison of 50 versus 100 is linked above. Since then `escape_phase_lost_damage_only = 1` (borg-reborn-rs#878) shrank the danger the gate reads (for a worm mass 2 instead of 32), which made the same 100 much stricter. Costs Phase Doors. |
 | 2 | `borg_param_caution_confused_clw_cure = 1` (from 0) | 2: 1520819173 ("Fixing Confusion. Level 2" at t1431, where the original rested confused), 251498236 | 0 | 8 / 0 | **Low–medium.** The trigger is narrow (confused, with CLW in the pack), but it changed 8 of 18 survivor plays. The engine fact is direct: CLW `TIMED_DEC:CONFUSED` 20, and confusion blocks reading (player-util.c:1182). |
 | 3 | `borg_param_caution_retreat_oscillation_limit = 3` + `borg_param_caution_retreat_oscillation_backaway = 1` | 1: 2063715385 | 0 near; 1902932078 diverged earlier and still dies. There the breaker fired, then the Phase rule refused Phase ("danger 2 without fear") and the worms killed it. | 5 / 0 | **Low.** Already in borg-zoo#712's jelly worlds. On its own it does not fix the worm pocket; with rank 1 it might. |
 | — | `borg_param_caution_recall_survival = 0` (from 1) | 3: 1308765461 ctl, 1575424768, 1741676259 | 0 | 9 / 0 | **High: not proposed as a setting.** It reverts the owner's borg-reborn-rs#758 decision ("It really reads recall too often"), and borg-reborn-rs#758's own deaths (Recall read beside a killer) would come back. Use the code change C4 instead. A zoo arm only if the owner wants the number. |
@@ -355,7 +355,7 @@ Results: `evidence/cf-prep-deaths.jsonl`, `evidence/cf-prep-survivors.jsonl`.
      - 453254028 (borg-reborn-rs#1125).
    - Play each from birth at the candidate commit, once per arm, with the scripts in this study's `tools/`.
    - Report:
-     - rescues at the fatal point (divergence ≤ 2,000 game turns before the death) apart from early divergence;
+     - games reaching the cap after divergence ≤ 2,000 game turns before the last original key, separately from early divergence;
      - an 18-game survivor sample for deaths introduced (on chosen starts, harm shows only weakly).
    - This is a mechanism check, not a measurement.
 3. **Worlds (zoo, pilot):** the existing jellies-x4/x8, white-worm-mass-x4 and breeders-x4 worlds (borg-zoo#712, borg-zoo#692), for C1/C2/C5 and the poison-specific arms, where poisoners are dense enough to see an effect.

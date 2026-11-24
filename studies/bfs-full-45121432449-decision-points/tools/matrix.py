@@ -1,30 +1,78 @@
-import json,collections
-NEAR=2000
-arms=['p934','flee100','flee1','osc','bundle','conf','phase50','phasefear','recall0']
-cells=[json.loads(l) for l in open('cells.jsonl')]
-deaths=[r for r in cells if r['outcome']=='death']
-deaths.sort(key=lambda r:(r['cause']!='poison',r['profile'],r['seed']))
-res={}
-for f in ['cf-deaths.jsonl','cf-deaths2.jsonl']:
-    for l in open(f):
-        r=json.loads(l); res.setdefault((r['arm'],r['profile'],r['seed']),r)
-def code(arm,d):
-    r=res.get((arm,d['profile'],d['seed']))
-    if r is None: return '?'
-    if r['same_play']: return '='
-    tag='ctl' if d['profile'].endswith('ctl') else 'bfs0'
-    bk=open(f"D/{d['seed']}_{tag}/keys.log").read().splitlines()
-    ck=open(f"cfw/{arm}/{d['profile']}-{d['seed']}/keys.log").read().splitlines()
-    i=next((k for k,(a,b) in enumerate(zip(bk,ck)) if a!=b),min(len(bk),len(ck)))
-    dt=int(bk[min(i,len(bk)-1)].split()[0]); death=int(bk[-1].split()[0])
-    near=death-dt<=NEAR; lives=r['summary'].get('stop_reason')!='death'
-    return ('**L**' if lives else 'D') if near else ('l' if lives else 'd')
-print('| seed | arm | killer | '+' | '.join(arms)+' |')
-print('|---:|---|---|'+'|'.join(':-:' for _ in arms)+'|')
-tot=collections.Counter()
-for d in deaths:
-    cs=[code(a,d) for a in arms]
-    for a,c in zip(arms,cs): tot[(a,c)]+=1
-    print(f"| {d['seed']} | {d['profile'][11:]} | {d['cause']} | "+' | '.join(cs)+' |')
-for c,name in [('**L**','lives, diverged ≤ 2,000 game turns before the death'),('D','still dies, diverged near'),('l','lives, diverged earlier'),('d','dies, diverged earlier'),('=','identical play')]:
-    print(f"| {c} | | {name} | "+' | '.join(str(tot[(a,c)]) for a in arms)+' |')
+"""Render the per-death matrix from the Zoo cells and replay results."""
+
+import argparse
+from collections import Counter
+import json
+from pathlib import Path
+
+from div2 import divergence
+
+ARM_NAMES = ("p934", "flee100", "flee1", "osc", "bundle", "conf", "phase50", "phasefear", "recall0")
+OUTCOME_CODES = {
+    "near lives": "**L**",
+    "near dies": "D",
+    "early lives": "l",
+    "early dies": "d",
+    "identical": "=",
+    "failed": "!",
+}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--cells", type=Path, default=Path("cells.jsonl"))
+    parser.add_argument("--results", type=Path,
+                        default=Path(__file__).resolve().parents[1] / "evidence" / "cf-deaths.jsonl")
+    parser.add_argument("--deaths", type=Path, default=Path("D"))
+    parser.add_argument("--work", type=Path, default=Path("cfw"))
+    args = parser.parse_args()
+
+    cells = (json.loads(line) for line in args.cells.read_text().splitlines())
+    deaths = sorted(
+        (cell for cell in cells if cell["outcome"] == "death"),
+        key=lambda cell: (cell["cause"] != "poison", cell["profile"], cell["seed"]),
+    )
+    results = {}
+    for line in args.results.read_text().splitlines():
+        row = json.loads(line)
+        key = (row["arm"], row["profile"], row["seed"])
+        if key in results:
+            parser.error(f"duplicate result for {key}")
+        results[key] = row
+
+    print("| seed | arm | killer | " + " | ".join(ARM_NAMES) + " |")
+    print("|---:|---|---|" + "|".join(":-:" for _ in ARM_NAMES) + "|")
+    totals = Counter()
+    for death in deaths:
+        seed, profile = death["seed"], death["profile"]
+        codes = []
+        for arm in ARM_NAMES:
+            row = results.get((arm, profile, seed))
+            if row is None:
+                code = "?"
+            else:
+                outcome, _, _ = divergence(row, args.deaths, args.work)
+                code = OUTCOME_CODES[outcome]
+            codes.append(code)
+            totals[arm, code] += 1
+        tag = profile.removeprefix("reborn-bfs-")
+        print(f"| {seed} | {tag} | {death['cause']} | " + " | ".join(codes) + " |")
+
+    legend = (
+        ("**L**", "lives, diverged ≤ 2,000 game turns before the last original key"),
+        ("D", "still dies, diverged near"),
+        ("l", "lives, diverged earlier"),
+        ("d", "dies, diverged earlier"),
+        ("=", "identical play"),
+        ("!", "failed replay or missing/invalid key evidence"),
+        ("?", "missing replay result"),
+    )
+    for code, label in legend:
+        counts = [totals[arm, code] for arm in ARM_NAMES]
+        if code in {"!", "?"} and not any(counts):
+            continue
+        print(f"| {code} | | {label} | " + " | ".join(map(str, counts)) + " |")
+
+
+if __name__ == "__main__":
+    main()
