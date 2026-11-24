@@ -15,6 +15,8 @@ Using the pinned engine's native level transition, move a private copy of the ob
 
 Both runs reached their 3,000-turn cap alive. Removing 260 shots recovered exactly 104 lb. Both first visits sold Restore Mana and bought no devices. This is a named headroom test. Store observations after divergence may differ.
 
+The [#1168 candidate receipt](quiver-candidate.json) reuses the 300-shot save with reserve 40. The candidate discarded 170 pebbles and reached its cap alive, with 63.2 lb still above the allowance and seven free pack slots at first departure. The option is shipped off in [the draft](https://github.com/diegoami/borg-reborn-rs/pull/1171).
+
 ## Equipped CL45 starts
 
 In the private engine before Borg activation, advance the observed Mage to CL45 by engine experience gain, set base/current STR to 18/100 and max and Recall depth to DL45, clear a pending Recall, and restore HP and SP. Keep the original full Home and wearable equipment. Trim only the ordinary shots to 40, then add a Healing rod, six-charge Teleport Other wand, five-charge Teleportation staff, one-charge Speed staff, empty Annihilation wand, unaware Drain Life rod and two each of Vigor and Emergency. Put four Recharging scrolls in the Alchemist and eligible offers of a charged Speed staff and three Restore Mana potions in the Black Market using the native stocking function. Save in town. Use the native level transition to generate the separate DL45 start from that kit. Both start with 21 of 23 pack slots occupied. Ascent and Recall remain available.
