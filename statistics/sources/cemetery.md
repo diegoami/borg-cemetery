@@ -4,7 +4,7 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `c9edca6c38c350706a8d7ad8f943728a59cc3b97ba1dfed81bf6c185a1f83393`.
+Input inventory SHA-256: `a3207ce5355d1235a2573c0e4155fea1904174165e1471f6b68540ce68237d6e`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
@@ -14,7 +14,7 @@ The companion snapshot for an external source retains normalized statistical fie
 | a wild cat | 26 |
 | poison | 25 |
 | a grey mushroom patch | 24 |
-| Fang, Farmer Maggot's Dog | 20 |
+| Fang, Farmer Maggot's Dog | 21 |
 | a soldier | 20 |
 | a fatal wound | 12 |
 | a grey mold | 12 |
@@ -23,11 +23,11 @@ The companion snapshot for an external source retains normalized statistical fie
 | a cave spider | 8 |
 | a small kobold | 8 |
 | a giant white louse | 6 |
+| a giant yellow centipede | 6 |
 | a cutpurse | 6 |
 | a giant white mouse | 6 |
 | a clear icky thing | 6 |
 | a kobold shaman | 5 |
-| a giant yellow centipede | 5 |
 | an acolyte | 3 |
 | a scrawny cat | 3 |
 | a white worm mass | 3 |
@@ -68,9 +68,9 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 297 | 160 | 13333 | 40594.45 | 1094860 |
-| depth | 272 | 0 | 1 | 1.35 | 18 |
-| level | 272 | 1 | 2 | 2.87 | 12 |
+| turn | 299 | 160 | 13088 | 40380.22 | 1094860 |
+| depth | 274 | 0 | 1 | 1.35 | 18 |
+| level | 274 | 1 | 2 | 2.86 | 12 |
 
 ## Characters
 
@@ -113,13 +113,13 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Dunadan Blackguard | 3 |
 | Dunadan Priest | 3 |
 | Dwarf Ranger | 3 |
+| Kobold Priest | 3 |
 | Half-Orc Priest | 3 |
 | Elf Necromancer | 3 |
 | Hobbit Paladin | 3 |
 | Elf Druid | 3 |
 | Gnome Necromancer | 3 |
 | Human Rogue | 2 |
-| Kobold Priest | 2 |
 | Elf Blackguard | 2 |
 | Half-Troll Druid | 2 |
 | Gnome Druid | 2 |
@@ -148,6 +148,7 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Hobbit Warrior | 1 |
 | High-Elf Necromancer | 1 |
 | High-Elf Rogue | 1 |
+| Gnome Mage | 1 |
 | Dunadan Rogue | 1 |
 | High-Elf Blackguard | 1 |
 | Half-Elf Warrior | 1 |
