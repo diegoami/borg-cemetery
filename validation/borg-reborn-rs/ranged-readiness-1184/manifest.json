@@ -1,0 +1,233 @@
+{
+  "source_commit": "ddc1c35aeb95d1e20809eb2ffb8f5a64d4a12b1c",
+  "source_sha256": "74c613a2c34df56b0dc3e7d6daec0f5e565b0dcdc63b1a46a58c7b3a9e48b83e",
+  "angband_engine": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+  "binary_sha256": "3d045cd21e26e40741f2b79bab3c3f2569c48f8da48c55fcd43cf6fe295c839f",
+  "binary_core": "borg-rs",
+  "scary_list_sha256": "f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+  "reproduced_streams": [
+    "keys.log",
+    "messages.log",
+    "state.log",
+    "ranged-readiness.jsonl"
+  ],
+  "cases": [
+    {
+      "name": "bow-shopping",
+      "start": "seeded birth",
+      "target_game_turn": 3500,
+      "birth_data_patch": "bow.patch",
+      "data_patch_sha256": "ce6278e169a0186de468a07aba0adb586e48f7372117dc13bddbfc26df41c526",
+      "overrides": {
+        "borg_param_town_ranged_readiness": 1,
+        "borg_param_trip_ranged_readiness": 0,
+        "borg_param_ranged_readiness_trace": 1
+      },
+      "resolved_core_parameters_sha256": "ed1416b44fc4014320d2ef7cf877dfb2c10c0fe8f7bf9e550c3c2b58e7f90059",
+      "stream_sha256": {
+        "keys.log": "0501f325172df417747085ab120627bfc7ddc2c8a618b37b1c761c3aa36330ea",
+        "messages.log": "f38e2f1529da97d79ee68a48b2cf5b156ac4f3f123ffff7036bd66f745e23dcd",
+        "state.log": "45370a1bae8db30cb9488db6d626b3befd6fc282358294c36baa506fa11cdb04",
+        "ranged-readiness.jsonl": "81e87c1ecf2372af0f9627df883f13b50cb2c5c109359c7efaeb7be2b43929de"
+      },
+      "endpoint": {
+        "seed": 1184,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "game_turns": 3597,
+        "max_depth": 1,
+        "clevel": 1,
+        "stop_reason": "turns",
+        "dead": false
+      }
+    },
+    {
+      "name": "lantern-shopping",
+      "start": "seeded birth",
+      "target_game_turn": 3000,
+      "birth_data_patch": "lantern.patch",
+      "data_patch_sha256": "19dd4a125a84d175191fb51709ee9a9700f535f04588877a2610662319b07b3d",
+      "overrides": {
+        "borg_param_town_ranged_readiness": 1,
+        "borg_param_trip_ranged_readiness": 0,
+        "borg_param_ranged_readiness_trace": 1
+      },
+      "resolved_core_parameters_sha256": "ed1416b44fc4014320d2ef7cf877dfb2c10c0fe8f7bf9e550c3c2b58e7f90059",
+      "stream_sha256": {
+        "keys.log": "f43b004bbbd0c16bcf2e95c9d3e4677d80cc97806834e845599048541bd91140",
+        "messages.log": "1701bba6bd7767c91a36315f3fcfa3d1bf53a82eac83325ff9e04ab122db6ac1",
+        "state.log": "180405e4398b6952fea5a17524035ec0d37d900cb7fc1aa918a6d0857bf43808",
+        "ranged-readiness.jsonl": "abcc8e29c4f137865cf1933818a5b115acea6dafd4999e71ee07ab4064aa7d33"
+      },
+      "endpoint": {
+        "seed": 1184,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "game_turns": 3001,
+        "max_depth": 1,
+        "clevel": 1,
+        "stop_reason": "turns",
+        "dead": false
+      }
+    },
+    {
+      "name": "ranger-both",
+      "start": "seeded birth",
+      "target_game_turn": 15000,
+      "birth_data_patch": null,
+      "data_patch_sha256": null,
+      "overrides": {
+        "borg_param_town_ranged_readiness": 1,
+        "borg_param_trip_ranged_readiness": 1,
+        "borg_param_ranged_readiness_trace": 1
+      },
+      "resolved_core_parameters_sha256": "89ec8fdc515f68632d69792bdeb6fee60a624f85c743d16ab35a7ecf58335a8b",
+      "stream_sha256": {
+        "keys.log": "6f84d6092a08d021363720a1d7d61b5440611beb447353147693b7ac6abb80e7",
+        "messages.log": "308b67f6f721f21a624f8e291694258d7386df8e941830d5adcccbfc57f03c87",
+        "state.log": "a5d276c7952acf3335ce8b6c173b4883e1ef91c976f65266c7ac64594295432a",
+        "ranged-readiness.jsonl": "58277805670ec52c44160259f6224407d24058b9a640fbb06593180e6c85d600"
+      },
+      "endpoint": {
+        "seed": 1184,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Ranger",
+        "class_idx": 7,
+        "game_turns": 15002,
+        "max_depth": 1,
+        "clevel": 2,
+        "stop_reason": "turns",
+        "dead": false
+      }
+    },
+    {
+      "name": "paladin-control",
+      "start": "seeded birth",
+      "target_game_turn": 100000,
+      "birth_data_patch": null,
+      "data_patch_sha256": null,
+      "overrides": {
+        "borg_param_town_ranged_readiness": 0,
+        "borg_param_trip_ranged_readiness": 0,
+        "borg_param_ranged_readiness_trace": 1
+      },
+      "resolved_core_parameters_sha256": "608b970605b40e24e3f4cb14e1e5a411012dc9d9a62982ad6e00d2b6ca5a10df",
+      "stream_sha256": {
+        "keys.log": "a9d133b4e4aba6d79bcdc3348c9d6c32876ce4eff408c583459240bc16017805",
+        "messages.log": "d4ec09bc99a60e9ed5c25e0ba402eee04f9fbf0a4892c007de34d6436d461c68",
+        "state.log": "482049b6653206b66b6572e0b331bf5fc5f4b0fad172683fe39c7e039b8822e6",
+        "ranged-readiness.jsonl": "4ffb982fcb6b668db528d654f182cd5dfd090eb7f2d80c663bbb60931022d729"
+      },
+      "endpoint": {
+        "seed": 302,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "game_turns": 100515,
+        "max_depth": 2,
+        "clevel": 5,
+        "stop_reason": "turns",
+        "dead": false
+      }
+    },
+    {
+      "name": "paladin-shopping",
+      "start": "seeded birth",
+      "target_game_turn": 100000,
+      "birth_data_patch": null,
+      "data_patch_sha256": null,
+      "overrides": {
+        "borg_param_town_ranged_readiness": 1,
+        "borg_param_trip_ranged_readiness": 0,
+        "borg_param_ranged_readiness_trace": 1
+      },
+      "resolved_core_parameters_sha256": "ed1416b44fc4014320d2ef7cf877dfb2c10c0fe8f7bf9e550c3c2b58e7f90059",
+      "stream_sha256": {
+        "keys.log": "abb31108631faeb8cf9647393a6d5f42b1fa820278cba8641db32895ad466a03",
+        "messages.log": "a32311e3ea7adef9c31691df9285d7e7cf0cfa7f86c1d75cb79e610f93694be9",
+        "state.log": "f2bde1cda996495e7c35f152fed1bb538391632a842441b3e80bf1c74cefefee",
+        "ranged-readiness.jsonl": "8b248a3c54d5d7857155afe13626bbc924f05dc927dcd165eb760897b5841fae"
+      },
+      "endpoint": {
+        "seed": 302,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "game_turns": 100096,
+        "max_depth": 2,
+        "clevel": 6,
+        "stop_reason": "turns",
+        "dead": false
+      }
+    },
+    {
+      "name": "paladin-recovery",
+      "start": "seeded birth",
+      "target_game_turn": 100000,
+      "birth_data_patch": null,
+      "data_patch_sha256": null,
+      "overrides": {
+        "borg_param_town_ranged_readiness": 0,
+        "borg_param_trip_ranged_readiness": 1,
+        "borg_param_ranged_readiness_trace": 1
+      },
+      "resolved_core_parameters_sha256": "e76ee79bb05e0f10968cdfbec9e16e862876a783896ff8324c3ec27c06d2387f",
+      "stream_sha256": {
+        "keys.log": "00e659020e70975d13302e1e8165cdc4354755c25a9b5bcbaeb3f0ec0e46a49d",
+        "messages.log": "cb04c969a07fd48f6c18033acf08cee1f3465e9fc65bbd99d1f4f0992a01b0c0",
+        "state.log": "7f6abba46419121deaae19ad216169a3ba0162f0181bf82a6d3245d541cf1a03",
+        "ranged-readiness.jsonl": "a49228a75bae28b8eb0134a9138b718ddaea72517fe9ffcc8537a7d14613940e"
+      },
+      "endpoint": {
+        "seed": 302,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "game_turns": 100007,
+        "max_depth": 2,
+        "clevel": 4,
+        "stop_reason": "turns",
+        "dead": false
+      }
+    },
+    {
+      "name": "paladin-both",
+      "start": "seeded birth",
+      "target_game_turn": 100000,
+      "birth_data_patch": null,
+      "data_patch_sha256": null,
+      "overrides": {
+        "borg_param_town_ranged_readiness": 1,
+        "borg_param_trip_ranged_readiness": 1,
+        "borg_param_ranged_readiness_trace": 1
+      },
+      "resolved_core_parameters_sha256": "89ec8fdc515f68632d69792bdeb6fee60a624f85c743d16ab35a7ecf58335a8b",
+      "stream_sha256": {
+        "keys.log": "36d49cbad566662c0c4a5f697971f2fe7a3469d6e04d8b37926bf4851af20e4d",
+        "messages.log": "97b0644852bd589de3032b7f4d1c0fa1f9b988f91619f2ecb0a231233003be71",
+        "state.log": "bb7e0a1810e51dfa99de54f1c5b2d014a7a5935ae3ab3d7207ab64e54544a3e4",
+        "ranged-readiness.jsonl": "5cbb1b28af058d87ef97ebfe6772968c066e79cf5bdfc673224489d0f6baf745"
+      },
+      "endpoint": {
+        "seed": 302,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "game_turns": 100174,
+        "max_depth": 2,
+        "clevel": 5,
+        "stop_reason": "turns",
+        "dead": false
+      }
+    }
+  ]
+}
