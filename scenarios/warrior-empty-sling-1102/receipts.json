@@ -1,0 +1,158 @@
+{
+  "build": {
+    "impl": "rust",
+    "git_rev": "e34d04b788a5f6a9b600268231cfe6c4e260e820",
+    "git_dirty": "no",
+    "inputs_dirty": "no",
+    "source_sha256": "695e7a05e385aaec891a9355492066cf06f383cbf065f4553c9c877bc7fa5f76",
+    "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+    "binary_sha256": "04143c939900b0ad4e6b48c939072f44d1635bf64cd2737f14e81704baf5b2b1",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "arg_order": "rtl",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-24T17:48:10Z"
+  },
+  "core": "borg-rs",
+  "inputs": {
+    "warrior-original": {
+      "file": "warrior-original.save.gz",
+      "native_sha256": "c20ec179eb5c30433f2456e89f3aa4389cd4526217e405f04e7273c9df757319",
+      "gzip_sha256": "bca86a351c2ff77479cc784667096d31c5f2f19076f0d4fa6371d6d1508f0c6a"
+    },
+    "warrior-165": {
+      "file": "warrior-165.save.gz",
+      "native_sha256": "0adb97a132ca031dfb3789cf3ee0b0e6910f864e63cf0e78f921ba1f08ac21fd",
+      "gzip_sha256": "8b1df05b72b3dcad7d18516f3cd800c00af3cb1c1665e6ec60b262d0b5850f1a"
+    },
+    "warrior-2": {
+      "file": "warrior-2.save.gz",
+      "native_sha256": "96552cbb4e9134c8000161e871755d6542264b607cf00c414c65253e514d1cf3",
+      "gzip_sha256": "d670845e3305d9725616d9da1dad89dd7bb70ec809333587513240fa52848998"
+    }
+  },
+  "replays": {
+    "warrior-165-1": {
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=warrior-165.save",
+        "borg_txt_sha256=be15957b6243743a699aa281378ebc763aa24be7029d482e01a0732f21ecabaf",
+        "save_sha256=0adb97a132ca031dfb3789cf3ee0b0e6910f864e63cf0e78f921ba1f08ac21fd",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "first_dungeon": {
+        "coverage": {
+          "activation_ready": 0,
+          "can_aim": true,
+          "device": 0,
+          "missile": 3,
+          "recharging": false,
+          "spell_ready": false,
+          "spell_recoverable": false,
+          "thrown": 19
+        },
+        "depth": 1,
+        "game_turn": 1173,
+        "min_damage": 1,
+        "ready": true,
+        "schema": "borg-ranged-readiness@1",
+        "target": 6
+      },
+      "sha256": {
+        "keys.log": "a37062916a8686438ed78bde4b074789e28f85858fd9ea83f07d39dd479e337a",
+        "messages.log": "7a9b44ec15cb4a1e42ec81cbf701009fbe47984de624a18c606512f5258332b0",
+        "state.log": "183c8727b2be9ab6f0eb9ee457ba085223cbb14066b766ccf11c91f7305bd9b3",
+        "ranged-readiness.jsonl": "2315c157ba2df8e345e686ac0ed943e6f78371c24bc5faa3b55f74279a0c2d4a",
+        "settings-resolved.json": "1bb372627ad2264ab75cf1b1fe277fa61776b224b81210fe1f924892e1768de8",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "summary.json": "ca061a80f1ce4c7f3dac251eaf0a8b0a057a82189894fe1fdd312fc044acf4c7",
+        "town-plan.jsonl": "45ca3d75cc2674ae20957766a6b200521b13bb5399d34189cadab114da519380"
+      }
+    },
+    "warrior-165-0": {
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=warrior-165.save",
+        "borg_txt_sha256=d5bd4ce82e7052a2d90e09ce7c366727b108837592c08e9a7a0cb08e1c0b4bb0",
+        "save_sha256=0adb97a132ca031dfb3789cf3ee0b0e6910f864e63cf0e78f921ba1f08ac21fd",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=9c150e5f16ad42458c2e4caf3b0496f5b0590135ad459e0a4bf8f53f73096ab0"
+      ],
+      "first_dungeon": {
+        "coverage": {
+          "activation_ready": 0,
+          "can_aim": true,
+          "device": 0,
+          "missile": 0,
+          "recharging": false,
+          "spell_ready": false,
+          "spell_recoverable": false,
+          "thrown": 20
+        },
+        "depth": 1,
+        "game_turn": 1174,
+        "min_damage": 1,
+        "ready": true,
+        "schema": "borg-ranged-readiness@1",
+        "target": 6
+      },
+      "sha256": {
+        "keys.log": "b4464693efdf034d7cb661c3c36ae7184b9952b3a4e1fa93eb1c6845051533fb",
+        "messages.log": "69bf4baaf81ab7c5300eb4d274ce00a8538a77be11aaaae4d772d521829c3479",
+        "state.log": "26878d7f78c94e5732b2ac78190998a5f9de143fa212c1bdcd2226dbca2c53b9",
+        "ranged-readiness.jsonl": "5df50eaf79c7e1019edb0e9e0be09d0d67780d7fa12c17286199c5722c9fe5de",
+        "settings-resolved.json": "1081531f232dc9e838550528f92cbb82c7f00670983682f98c8da5415cc64367",
+        "params-core.json": "9c150e5f16ad42458c2e4caf3b0496f5b0590135ad459e0a4bf8f53f73096ab0",
+        "summary.json": "b8000905ee69f11d698d4b463e0e7fbded4a054eb4558612fe26acb1ae9a3706",
+        "town-plan.jsonl": "65139aec2ad16b97453949e3534b04022919d40d25858cd3ecaa63450f725657"
+      }
+    },
+    "warrior-2-1": {
+      "config": [
+        "flags=menu,living-save,keep-load-rng,save=warrior-2.save",
+        "borg_txt_sha256=be15957b6243743a699aa281378ebc763aa24be7029d482e01a0732f21ecabaf",
+        "save_sha256=96552cbb4e9134c8000161e871755d6542264b607cf00c414c65253e514d1cf3",
+        "profile=harness/profiles/reborn-default.txt",
+        "profile_sha256=372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+        "borg_core=borg-rs",
+        "borg_scary_list=scary_monsters.txt",
+        "borg_scary_list_sha256=f35bfc49af22ee19a1ea0270d2ed471595bf3104813fc69891312d0fccece75c",
+        "params_core_sha256=296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286"
+      ],
+      "first_dungeon": {
+        "coverage": {
+          "activation_ready": 0,
+          "can_aim": true,
+          "device": 0,
+          "missile": 0,
+          "recharging": false,
+          "spell_ready": false,
+          "spell_recoverable": false,
+          "thrown": 0
+        },
+        "depth": 1,
+        "game_turn": 265,
+        "min_damage": 1,
+        "ready": false,
+        "schema": "borg-ranged-readiness@1",
+        "target": 6
+      },
+      "sha256": {
+        "keys.log": "7b4798e70cb369ef7d53735d36a0ac59ae7877a40319ee94a0a3fb8fd3c1a29f",
+        "messages.log": "98c6edaaa816b7d58e9f3c04284e03ada89fbbdc2979f370e212eb7517bfa5ec",
+        "state.log": "9ebaa70474e76303c664ab378cb0ba8cb2c0e0d4d10972df0329f5d2148c0ab4",
+        "ranged-readiness.jsonl": "05f3b76d7f36404e84df1ec86d95fb95b18b095356f997051b208acdc51d61c2",
+        "settings-resolved.json": "1bb372627ad2264ab75cf1b1fe277fa61776b224b81210fe1f924892e1768de8",
+        "params-core.json": "296c94c13f89e74883e5936a0d321e5eaef28ba9691ac22c938ff242fe991286",
+        "summary.json": "921b144c603a93fb0936e23a06498626bbae832e2475357b3f50c0089cf614af",
+        "town-plan.jsonl": "a9e65494ae40f2cdb39475836264754e1798d7f4674780490e8e874739018ac6"
+      }
+    }
+  }
+}
