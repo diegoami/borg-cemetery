@@ -4,33 +4,33 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `a3207ce5355d1235a2573c0e4155fea1904174165e1471f6b68540ce68237d6e`.
+Input inventory SHA-256: `0b789afce20f79a1ad9db7370f57ff32f9c411c880d9358b3504b6fa00f18491`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
 | Cause | Dossiers |
 | --- | --- |
-| a crow | 34 |
-| a wild cat | 26 |
-| poison | 25 |
+| a crow | 36 |
+| poison | 32 |
+| a wild cat | 27 |
 | a grey mushroom patch | 24 |
-| Fang, Farmer Maggot's Dog | 21 |
-| a soldier | 20 |
-| a fatal wound | 12 |
-| a grey mold | 12 |
-| Grip, Farmer Maggot's Dog | 11 |
-| a floating eye | 9 |
+| Fang, Farmer Maggot's Dog | 23 |
+| a soldier | 22 |
+| a grey mold | 13 |
+| Grip, Farmer Maggot's Dog | 13 |
+| a fatal wound | 13 |
+| a floating eye | 11 |
 | a cave spider | 8 |
 | a small kobold | 8 |
+| a giant white mouse | 8 |
+| a cutpurse | 7 |
 | a giant white louse | 6 |
 | a giant yellow centipede | 6 |
-| a cutpurse | 6 |
-| a giant white mouse | 6 |
 | a clear icky thing | 6 |
 | a kobold shaman | 5 |
+| a white worm mass | 4 |
 | an acolyte | 3 |
 | a scrawny cat | 3 |
-| a white worm mass | 3 |
 | a rock lizard | 3 |
 | a wild dog | 3 |
 | a black naga | 3 |
@@ -44,6 +44,7 @@ The companion snapshot for an external source retains normalized statistical fie
 | a fruit bat | 2 |
 | a soldier ant | 1 |
 | a Quarterstaff | 1 |
+| a gallant | 1 |
 | an apprentice | 1 |
 | a kobold archer | 1 |
 | a large kobold | 1 |
@@ -68,62 +69,67 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 299 | 160 | 13088 | 40380.22 | 1094860 |
-| depth | 274 | 0 | 1 | 1.35 | 18 |
-| level | 274 | 1 | 2 | 2.86 | 12 |
+| turn | 324 | 160 | 13394.5 | 39693.29 | 1094860 |
+| depth | 299 | 0 | 1 | 1.33 | 18 |
+| level | 299 | 1 | 2 | 2.90 | 12 |
 
 ## Characters
 
 | Character | Dossiers |
 | --- | --- |
 | Human Ranger | 17 |
-| Human Druid | 13 |
-| Elf Ranger | 9 |
+| Human Druid | 14 |
+| Elf Ranger | 10 |
 | Half-Troll Ranger | 9 |
 | Human Necromancer | 9 |
 | Gnome Ranger | 8 |
+| Human Priest | 8 |
 | Dwarf Necromancer | 7 |
 | Half-Orc Ranger | 7 |
+| Gnome Priest | 6 |
 | Half-Elf Mage | 6 |
+| Human Paladin | 6 |
+| Half-Troll Priest | 6 |
 | Human Mage | 6 |
 | Dunadan Necromancer | 6 |
-| Human Priest | 6 |
 | Dunadan Ranger | 6 |
+| Hobbit Priest | 5 |
+| Dunadan Mage | 5 |
+| Elf Druid | 5 |
 | Elf Rogue | 5 |
-| Human Paladin | 5 |
 | Kobold Druid | 5 |
-| Half-Troll Priest | 5 |
 | Half-Elf Blackguard | 5 |
 | Half-Orc Necromancer | 5 |
 | Hobbit Ranger | 5 |
 | Human Blackguard | 5 |
-| Gnome Priest | 5 |
+| Dunadan Druid | 5 |
 | Half-Elf Druid | 5 |
-| Dunadan Mage | 4 |
+| Dwarf Mage | 4 |
+| Kobold Priest | 4 |
 | Half-Elf Ranger | 4 |
 | Half-Troll Necromancer | 4 |
 | Half-Elf Necromancer | 4 |
-| Dunadan Druid | 4 |
+| Dunadan Priest | 4 |
+| Hobbit Druid | 4 |
 | Elf Mage | 4 |
-| Hobbit Priest | 3 |
 | Elf Priest | 3 |
-| Dwarf Mage | 3 |
 | Kobold Mage | 3 |
 | Kobold Ranger | 3 |
 | Dunadan Blackguard | 3 |
-| Dunadan Priest | 3 |
 | Dwarf Ranger | 3 |
-| Kobold Priest | 3 |
 | Half-Orc Priest | 3 |
+| Half-Troll Druid | 3 |
+| Half-Elf Priest | 3 |
 | Elf Necromancer | 3 |
 | Hobbit Paladin | 3 |
-| Elf Druid | 3 |
 | Gnome Necromancer | 3 |
 | Human Rogue | 2 |
+| Gnome Mage | 2 |
+| High-Elf Necromancer | 2 |
 | Elf Blackguard | 2 |
-| Half-Troll Druid | 2 |
+| Half-Elf Paladin | 2 |
 | Gnome Druid | 2 |
-| Half-Elf Priest | 2 |
+| Half-Elf Rogue | 2 |
 | Elf Paladin | 2 |
 | Elf Warrior | 2 |
 | Half-Troll Blackguard | 2 |
@@ -137,18 +143,14 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Measure Human Necromancer | 2 |
 | Measure Elf Necromancer | 2 |
 | Half-Orc Rogue | 2 |
-| Hobbit Druid | 2 |
 | Hobbit Necromancer | 1 |
-| Half-Elf Rogue | 1 |
+| High-Elf Priest | 1 |
 | Kobold Paladin | 1 |
 | Kobold Blackguard | 1 |
 | Half-Orc Warrior | 1 |
 | Gnome Rogue | 1 |
-| Half-Elf Paladin | 1 |
 | Hobbit Warrior | 1 |
-| High-Elf Necromancer | 1 |
 | High-Elf Rogue | 1 |
-| Gnome Mage | 1 |
 | Dunadan Rogue | 1 |
 | High-Elf Blackguard | 1 |
 | Half-Elf Warrior | 1 |
