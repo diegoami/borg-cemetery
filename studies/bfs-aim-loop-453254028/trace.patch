@@ -1,0 +1,24 @@
+diff --git a/borg-core/src/borg_flow.rs b/borg-core/src/borg_flow.rs
+index 034d0511..d3379574 100644
+--- a/borg-core/src/borg_flow.rs
++++ b/borg-core/src/borg_flow.rs
+@@ -1656,0 +1657,3 @@ fn borg_play_step(st: &mut BorgState, y2: i32, x2: i32) -> bool {
++            if (77019..=77110).contains(&engine::game_turn()) {
++                eprintln!("aim wall refusal t={} grid=({x},{y}) feat={feat} granite={} need_dig=true", engine::game_turn(), FEAT_GRANITE);
++            }
+@@ -1747,0 +1751,2 @@ pub fn borg_flow_old(st: &mut BorgState, why: i32) -> bool {
++    let probe = why == 1 && (77019..=77110).contains(&engine::game_turn());
++    if probe { eprintln!("old aim t={} at={:?} goal={} here_cost={}", engine::game_turn(), st.borg.c, st.borg.goal.type_0, st.flow.data_flow[st.borg.c.y as usize][st.borg.c.x as usize]); }
+@@ -1799,0 +1805 @@ pub fn borg_flow_old(st: &mut BorgState, why: i32) -> bool {
++    if probe { eprintln!("old aim next t={} grid={next:?}", engine::game_turn()); }
+diff --git a/borg-core/src/borg_flow_kill.rs b/borg-core/src/borg_flow_kill.rs
+index 23c9e8a3..4e8558b0 100644
+--- a/borg-core/src/borg_flow_kill.rs
++++ b/borg-core/src/borg_flow_kill.rs
+@@ -2339,0 +2340,2 @@ pub fn borg_flow_kill_aim(st: &mut BorgState, viewable: bool) -> bool {
++    let probe = (77019..=77110).contains(&engine::game_turn());
++    if probe { eprintln!("aim entry t={} at={:?} goal={} targets={}", engine::game_turn(), st.borg.c, st.borg.goal.type_0, st.flow.temp_n); }
+@@ -2401,0 +2404 @@ pub fn borg_flow_kill_aim(st: &mut BorgState, viewable: bool) -> bool {
++                if probe { eprintln!("aim candidate t={} from=({s_c_x},{s_c_y}) end={:?} feat={} targets={}", engine::game_turn(), st.borg.c, st.cave.grid(st.borg.c.x, st.borg.c.y).feat, st.flow.temp_n); }
+@@ -2425,0 +2429 @@ pub fn borg_flow_kill_aim(st: &mut BorgState, viewable: bool) -> bool {
++                if probe { eprintln!("aim first step t={} keys={:?}", engine::game_turn(), st.io.queued_keys()); }
