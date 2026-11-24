@@ -1,6 +1,6 @@
 # Restore Life Levels checkout at the purse floor
 
-These six native runs check [#1112](https://github.com/diegoami/borg-reborn-rs/pull/1112) with the shipped borg-rs core at `270177ba1822cde9027434b03aed826510b5cb4c`. The Gnome Mage is CL45 with max DL45. All arms are counterfactuals from one constructed start, using fresh Borg memory and the saved engine RNG.
+These six native runs check [#1112](https://github.com/diegoami/borg-reborn-rs/pull/1112) with the shipped borg-rs core at `270177ba1822cde9027434b03aed826510b5cb4c`. The Gnome Mage has max CL45 and max DL45. The drained arm begins live play at CL44 and restores CL45. All arms are counterfactuals from one constructed start, using fresh Borg memory and the saved engine RNG.
 
 | Shop | XP | Starting gold | Purchase floor | Engine checkout |
 | --- | --- | ---: | ---: | --- |
