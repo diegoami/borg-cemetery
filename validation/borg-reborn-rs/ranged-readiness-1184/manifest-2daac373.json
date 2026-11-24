@@ -1,0 +1,227 @@
+{
+  "source_commit": "2daac373fa49b50804d03b4d0bd35069cf4b8df5",
+  "binary_built_at": "d7a05b2e84afd0c8e6cf4b74c3c05b1b222fbc4f",
+  "source_sha256": "5def843295a66319197b063f9c3c90152b2b6391dc198bc891cb4ce02f300d39",
+  "binary_sha256": "a989e7e97b626a1ea5ca20521d96e361842565a5efc38e3166d4bac4547264d4",
+  "shipped_borg_txt_sha256": "600b2ef00d5fa0e2981d7828a4a8c430a0d0e44fc0e358fd4b84dc41df2a89f0",
+  "angband_engine": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+  "ci_run": "https://github.com/diegoami/borg-reborn-rs/actions/runs/45431479703",
+  "cases": [
+    {
+      "name": "paladin-control",
+      "flags": "menu",
+      "target_game_turn": 100000,
+      "town_ranged_readiness": 0,
+      "trip_ranged_readiness": 0,
+      "endpoint": {
+        "seed": 302,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "loaded": false,
+        "game_turns": 100485,
+        "max_depth": 2,
+        "clevel": 5,
+        "stop_reason": "turns",
+        "dead": false
+      },
+      "dungeon_turns": 91568,
+      "dungeon_turns_without_range": 47015,
+      "resolved_core_parameters_sha256": "c830e33f19f1f586fd2ce334f5a87cd5a65d7c9245fc31c9a8642cd5a307ca51",
+      "stream_sha256": {
+        "keys.log": "11bcc12cda41135a0dcf13f4225f646c9daa1f3e0125709220d359b596913171",
+        "messages.log": "62aacc16c3b93714239b7ddc4b573f46124f75771bb04be0fda561d896063e20",
+        "state.log": "f10ab1ceebf5e939b196996e9b16285861c304b70a63852f48eeb2bb2599dc81",
+        "ranged-readiness.jsonl": "815fd4ac25ffadfbe88950d1d6a809b7e49aa073ad8ea0c909846e7dc98ca263"
+      }
+    },
+    {
+      "name": "paladin-shopping",
+      "flags": "menu",
+      "target_game_turn": 100000,
+      "town_ranged_readiness": 1,
+      "trip_ranged_readiness": 0,
+      "endpoint": {
+        "seed": 302,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "loaded": false,
+        "game_turns": 100288,
+        "max_depth": 2,
+        "clevel": 5,
+        "stop_reason": "turns",
+        "dead": false
+      },
+      "dungeon_turns": 89433,
+      "dungeon_turns_without_range": 12312,
+      "resolved_core_parameters_sha256": "2b3090272bd65e4df4bfc7347cf793cd220ce594b975acf4894658896692ae1b",
+      "stream_sha256": {
+        "keys.log": "00f6d77b47f5ecb7da4e5283d3cb75e09947d9e2066451a3f2f5a05ac3d7702c",
+        "messages.log": "30884090a0d63d17ab401bc57c22bd6c1e606c333b18db5b2d549a1c75efc0fc",
+        "state.log": "9028589276c42a062aedf7e358736952f31681166f6e56c7a6a73b939cbbd5db",
+        "ranged-readiness.jsonl": "ece2b662050e72359726150076bbc0a01b91faa70c8f3be955afec91cb8180c3"
+      }
+    },
+    {
+      "name": "paladin-recovery",
+      "flags": "menu",
+      "target_game_turn": 100000,
+      "town_ranged_readiness": 0,
+      "trip_ranged_readiness": 1,
+      "endpoint": {
+        "seed": 302,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "loaded": false,
+        "game_turns": 100547,
+        "max_depth": 1,
+        "clevel": 5,
+        "stop_reason": "turns",
+        "dead": false
+      },
+      "dungeon_turns": 87922,
+      "dungeon_turns_without_range": 19132,
+      "resolved_core_parameters_sha256": "cdcda2e6177402b11b501f52b78becc024a4e45306b56e0d7a32a474ec2b747a",
+      "stream_sha256": {
+        "keys.log": "7b76b6150de5af0a9b6440712cb2a91a10fdf540282c7d40606531ce1e48f1df",
+        "messages.log": "de593a893cce1fae1ba13429d8532cac8d7921e1364f44eff3079751d692d6f7",
+        "state.log": "2a473496d640779ba2d3b57ba437239a39e7850cb2d7c2a2d3a26a2c10e38d62",
+        "ranged-readiness.jsonl": "11a5bcce09990ff76f1216e2bfa91025200450db4d72844834d12a31d706d05d"
+      }
+    },
+    {
+      "name": "paladin-both",
+      "flags": "menu",
+      "target_game_turn": 100000,
+      "town_ranged_readiness": 1,
+      "trip_ranged_readiness": 1,
+      "endpoint": {
+        "seed": 302,
+        "race": "Human",
+        "race_idx": 0,
+        "class": "Paladin",
+        "class_idx": 5,
+        "loaded": false,
+        "game_turns": 100003,
+        "max_depth": 2,
+        "clevel": 5,
+        "stop_reason": "turns",
+        "dead": false
+      },
+      "dungeon_turns": 85474,
+      "dungeon_turns_without_range": 9335,
+      "resolved_core_parameters_sha256": "4484e9c8589aa42b3bb03ed67954dcbb7106e88bf0adce1c40350c0fc9e001c1",
+      "stream_sha256": {
+        "keys.log": "a7bdc2b377ce1ddd937c3685b48f817876e5c512318f2529479e1fa448aa652b",
+        "messages.log": "591856670e23b5ec4b6582101ccb4612dfaae4cec91c2e0f16e3b8393b231e26",
+        "state.log": "2140abd23641da41a775a77aea6f2d768902ab36c27200addf4c2723de16a4b1",
+        "ranged-readiness.jsonl": "d9d38b28ae908c22592b18c8cab9ea46c17b8bd18fa1ffba2ac692c23af7c0e1"
+      }
+    },
+    {
+      "name": "mage-dl6",
+      "flags": "save=start.save,keep-load-rng",
+      "target_game_turn": 9426204,
+      "town_ranged_readiness": 1,
+      "trip_ranged_readiness": 1,
+      "endpoint": {
+        "seed": 1,
+        "race": "Gnome",
+        "race_idx": 4,
+        "class": "Mage",
+        "class_idx": 1,
+        "loaded": true,
+        "game_turns": 9426211,
+        "max_depth": 9,
+        "clevel": 19,
+        "stop_reason": "turns",
+        "dead": false,
+        "loaded_turn": 9421204
+      },
+      "dungeon_turns": 4967,
+      "dungeon_turns_without_range": 0,
+      "resolved_core_parameters_sha256": "4484e9c8589aa42b3bb03ed67954dcbb7106e88bf0adce1c40350c0fc9e001c1",
+      "stream_sha256": {
+        "keys.log": "044b4797c5f7b48e1abcce0ccecefbf8dd731b68e23af80b852eb28f14ac26c1",
+        "messages.log": "58aa607df125b2ade9c1cb186dacf40121a1cba50961ece476c712dc8fc739de",
+        "state.log": "17c5c983fcd38176f3d6b732a7c17aac801fb6f153eaa283a9cfdad8ca3928d5",
+        "ranged-readiness.jsonl": "3b333e0203b35c8c29ffcd80bb25a286aca5c321c4495621cb14ea8ea21cac6e"
+      },
+      "save_artifact": "https://github.com/diegoami/borg-cemetery/blob/9715e9569eed252fda7cb9f93fc46e1a57492802/scenarios/middle-inventory-mage-9421204/mage-before-continuation.save.gz",
+      "save_sha256": "451fea591d99bcd93cfba0bda121cadadece61be4ec4764a427806c74ba3f3ab"
+    },
+    {
+      "name": "mage-dl45",
+      "flags": "save=start.save,keep-load-rng",
+      "target_game_turn": 10835143,
+      "town_ranged_readiness": 1,
+      "trip_ranged_readiness": 1,
+      "endpoint": {
+        "seed": 1,
+        "race": "Gnome",
+        "race_idx": 4,
+        "class": "Mage",
+        "class_idx": 1,
+        "loaded": true,
+        "game_turns": 10835144,
+        "max_depth": 46,
+        "clevel": 45,
+        "stop_reason": "turns",
+        "dead": false,
+        "loaded_turn": 10815143
+      },
+      "dungeon_turns": 20001,
+      "dungeon_turns_without_range": 55,
+      "resolved_core_parameters_sha256": "4484e9c8589aa42b3bb03ed67954dcbb7106e88bf0adce1c40350c0fc9e001c1",
+      "stream_sha256": {
+        "keys.log": "0f02207b6e929e58065469ffa562d77cbf966057b63b9bc2903a6fe2ee0b1af2",
+        "messages.log": "ec35c390de1a59d6d0f698e8e048566348b25839c189bda183aa60399e745753",
+        "state.log": "97891fa1952963bf50dc95b348aaba7b41e4ffaa6aabc0a23a4fbda8a1907d21",
+        "ranged-readiness.jsonl": "d71c61a9e02ff1b7461241d2a699c92daaa5ea7093c6430be92aae42eca871e7"
+      },
+      "save_artifact": "https://github.com/diegoami/borg-cemetery/blob/9715e9569eed252fda7cb9f93fc46e1a57492802/scenarios/late-inventory-mage-10815143/late-mage-deep-fit.save.gz",
+      "save_sha256": "c48a14f9c57648d3f93490dda735af809c4b2aa3cd925487320326c9f82a0f22"
+    },
+    {
+      "name": "druid-stair-scum",
+      "flags": "menu,exact",
+      "target_game_turn": 100000,
+      "town_ranged_readiness": 1,
+      "trip_ranged_readiness": 1,
+      "endpoint": {
+        "seed": 934061548,
+        "race": "Half-Elf",
+        "race_idx": 1,
+        "class": "Druid",
+        "class_idx": 2,
+        "loaded": false,
+        "game_turns": 100000,
+        "max_depth": 2,
+        "clevel": 5,
+        "stop_reason": "turns",
+        "dead": false
+      },
+      "dungeon_turns": 76695,
+      "dungeon_turns_without_range": 0,
+      "resolved_core_parameters_sha256": "4484e9c8589aa42b3bb03ed67954dcbb7106e88bf0adce1c40350c0fc9e001c1",
+      "stream_sha256": {
+        "keys.log": "c6d7f433d303b7783eb7fb3e1af85b22015b91c01d4323e8a5b0d8d2e333e2a2",
+        "messages.log": "494d75e5efd1671614965ab13afc63f138ac6c951f7bf791b059005f2b36fed1",
+        "state.log": "a6b5551b65e7c36e7cfc5578add036d0e56adb67c073828ffeeb06baada16a21",
+        "ranged-readiness.jsonl": "8590476b90377b6149fb3f379580e3429d03a964fea48fca02d6d29adc3f2b40"
+      },
+      "maximum_keys_on_one_turn": 30,
+      "original_game_turn_5981_keys": 1290,
+      "additional_settings": {
+        "caution_stairs_flight_ignore_danger": 1,
+        "borg_respawn_winners": false,
+        "borg_reborn_errand": "none"
+      }
+    }
+  ]
+}

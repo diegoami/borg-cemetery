@@ -66,3 +66,22 @@ repository with an empty index skips the tracked
 `engine/angband/lib/user/save/Makefile` because its directory is ignored
 for untracked files. With that file indexed, the archive reproduces the
 checkout hash.
+
+### Candidate with the enabled settings
+
+The [enabled-profile manifest](manifest-2daac373.json) records the four
+Paladin arms, both Mage continuations, and the Druid regression at PR
+head `2daac373`. This build includes the same-turn stair-scumming guard
+triggered by the enabled profile. The original Druid run reached 1,290
+queued keys on turn 5,981. The guarded run reached its 100,000-turn cap
+alive and peaked at 30 keys on one turn.
+
+| Paladin arm | Turns without range | Dungeon turns | Share |
+| --- | ---: | ---: | ---: |
+| Control | 47,015 | 91,568 | 51.3% |
+| Shopping | 12,312 | 89,433 | 13.8% |
+| Recovery | 19,132 | 87,922 | 21.8% |
+| Both | 9,335 | 85,474 | 10.9% |
+
+All four lived. The guard changed the seed's path and hence the local
+comparison. The four runs still represent one Human Paladin start.
