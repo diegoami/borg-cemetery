@@ -17,7 +17,7 @@ On `ced0152d`, the zero-copy arm buys six Phase Doors and no healing potion at t
 
 Both arms carry one Recall scroll in these plan snapshots. At turn 661, the one-copy snapshot shows 1 CLW and 3 Phase Doors, and the two-copy snapshot shows 2 CLW and 2 Phase Doors. The net trade across the two purchase decisions is one extra CLW for one fewer Phase Door.
 
-[Zoo #753](https://github.com/diegoami/borg-zoo/issues/753) compares global zero against one in classes that ship zero, with the Ranger fixed at two. Only three of 18 paired starts changed. In the resolved-kind purchase read, Druid seed 934061548 bought eight versus six Phase Doors. Mage seed 1548306106 bought twelve versus six Phase Doors and three versus zero Recall scrolls. These are whole-run purchase counts. The pilot gives no basis to raise the global setting or to change the Ranger setting.
+[Zoo #753](https://github.com/diegoami/borg-zoo/issues/753) compares global zero against one in classes that ship zero, with the Ranger fixed at two. Only three of 18 paired starts changed. In the [raw pilot receipts](https://github.com/diegoami/borg-zoo/actions/runs/45361762326), Druid seed 934061548 bought eight versus six Phase Doors. Mage seed 1548306106 bought eleven versus six Phase Doors and three versus zero Recall scrolls. These whole-run totals include the initial purchase of six unidentified scrolls in each arm, confirmed as Phase Door by the inventory message immediately following each sale. The pilot gives no basis to raise the global setting or to change the Ranger setting.
 
 ## Reproduce
 
