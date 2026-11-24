@@ -21,7 +21,7 @@ build plays each input with fresh Borg memory.
 | Mage with a castable book | Electric Arc | 93% cast success, roughly 19.5 expected HP | Spell did 22. The dagger stayed in the pack |
 | Mage with an Acid Bolts wand | Wand | 97.3% activation success, roughly 43.8 expected HP | One charge did 70. The dagger stayed in the pack |
 | Mage with Sling and Iron Shots | Launcher shot | 83.83% hit at four tiles, roughly 34.4 expected HP per shot | An Iron Shot hit for 40. The dagger stayed in the pack |
-| Priest already adjacent | Mace melee | 81.84% hit per swing with the equipped weapon | Missed once, then hit for 12. The spare stayed in the pack |
+| Priest already adjacent | Mace melee | 81.84% hit per swing, roughly 11.5 expected HP | Missed once, then hit for 12. The spare stayed in the pack |
 | Mage with an unknown resist-nexus Dagger | No throw | Throw utility 0 | Wielded as gear with its rune still unknown |
 | Mage with a Dagger (+0,+8) | No throw | Throw utility 0 | Kept in the pack |
 

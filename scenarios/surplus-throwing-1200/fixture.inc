@@ -155,6 +155,7 @@ static void fixture_attack_probabilities(void)
 	random_chance chance;
 	hit_chance(&chance, chance_of_melee_hit_base(player, worn), ac);
 	fprintf(stderr, "native-melee\t%d/%d\n", chance.numerator, chance.denominator);
+	fprintf(stderr, "native-melee-to-dam\t%d\n", player->state.to_d);
 	for (struct object *item = player->gear; item; item = item->next) {
 		if (item->tval == TV_SHOT && bow) {
 			int to_h = player->state.to_h + object_to_hit(item) + object_to_hit(bow);
