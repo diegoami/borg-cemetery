@@ -1,0 +1,155 @@
+{
+  "core": "borg-rs",
+  "build": {
+    "impl": "rust",
+    "git_rev": "11214501638b3d172113d41c10a304932c925f51",
+    "git_dirty": "no",
+    "inputs_dirty": "no",
+    "source_sha256": "71f8c78d9cf26b5f9099c1d64a729dec740bc0bb4aca40d72ce2e7c8934e5d32",
+    "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+    "binary_sha256": "ecce361f936d727c320da872b2a1a59e265d9a83dbbdf5fb4473087e89707b5a",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "arg_order": "rtl",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "built_utc": "2026-11-24T17:38:11Z"
+  },
+  "overrides": {},
+  "settings_sha256": "476c12e4ea498fd39de7b7c901217c5f4e1f02289276b7a8a4338df6b6b3158b",
+  "save": "../../start.save.gz",
+  "save_sha256": "236b0cf1c376a47788489e3acb92d5870c84ec8fde7af4c7721c2a7de66b2255",
+  "seed": 1,
+  "race_index": 4,
+  "class_index": 1,
+  "turn_cap": 9241204,
+  "first_town_plan": {
+    "game_turn": 9230469,
+    "purse": 89404,
+    "free_weight_tenths_lb": -1008,
+    "free_slots": 1,
+    "daggers": [
+      {
+        "slot": 11,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": -40,
+        "unknown_runes": true,
+        "cursed": true,
+        "disposition": "drop"
+      },
+      {
+        "slot": 12,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": -40,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      },
+      {
+        "slot": 13,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": -40,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      },
+      {
+        "slot": 14,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": -40,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      },
+      {
+        "slot": 15,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": -40,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      },
+      {
+        "slot": 16,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": -40,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      }
+    ]
+  },
+  "first_town_departure": {
+    "game_turn": 9231544,
+    "purse": 89404,
+    "free_weight_tenths_lb": 18,
+    "free_slots": 6,
+    "daggers": [
+      {
+        "slot": 10,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": 0,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      },
+      {
+        "slot": 11,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": 0,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      },
+      {
+        "slot": 12,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": 0,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      },
+      {
+        "slot": 13,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": 0,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      },
+      {
+        "slot": 14,
+        "copies": 1,
+        "weight_tenths_lb": 12,
+        "power_delta": 0,
+        "unknown_runes": true,
+        "cursed": false,
+        "disposition": "keep"
+      }
+    ]
+  },
+  "stop": {
+    "loaded_turn": 9221204,
+    "game_turns": 9242417,
+    "clevel": 17,
+    "depth": 5,
+    "max_depth": 5,
+    "dead": false,
+    "stop_reason": "turns"
+  },
+  "sha256": {
+    "keys.log": "fb222af9492f4d0a867a872df30aa581c90daa398e3e9ed3ea02dce473ba5eb2",
+    "state.log": "054c309dc49c153495bdb3ce1cd8099c36f394b1d2770a73567a5f24f8d1669a",
+    "messages.log": "8cd87e1d4d11b98a9ed5e9f2cdadeb809597641f84db6bc5f2f0d029848ebadc",
+    "summary.json": "9b127310f08a771aae42e38a17e740f8405fcea78be87b6fab4d3fa5bc0fe4da",
+    "town-plan.jsonl": "6fbfe9a89fc6bf368cb7170100cd38e48a2a0b69beb7c425d354c376e97aa00a"
+  }
+}
