@@ -1,0 +1,63 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-ef9134d01a5b1175a66478c33cc0239369dc554a2c1a17cd09b040dff7bb0d54",
+  "run_kind": "harness",
+  "character": "Kobold Priest",
+  "raw_cause": "a giant yellow centipede",
+  "terminal": {
+    "cause": "a giant yellow centipede",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 2,
+    "turn": 12722,
+    "race_idx": 10,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "rust",
+    "seed": 30279795,
+    "flags": "menu,exact",
+    "git_rev": "6cd5c8bf82459dc60328d1eb426eb9614385a19c",
+    "git_dirty": "no",
+    "source_sha256": "d22d9c69a0862249e473a4dae1bbd7de8f479558b3309b8fc557da1ad371c5e8",
+    "binary_sha256": "9c8e21e75c05926fb828a99a63b8e5b88848eb4a99ad17f824602becf2c6c6ee",
+    "borg_txt_sha256": "211bd7de17bb0c16e69a30047c473a1b9f882cf2761a4fd329a7d64d410d0983",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "e694c365fbdbefe4c040c559433f750e0b333c9890ac5082d129dd6407304877"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 794
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/workspace/work/phase-731-runs/30279795-shipped",
+      "result_sha256": "e856687f1647d2ea7cc88d5b8d7018ae8bcd2c412d90bcd6e2393cec2e08b5d0",
+      "raw_sha256": {
+        "keys.log": "e856687f1647d2ea7cc88d5b8d7018ae8bcd2c412d90bcd6e2393cec2e08b5d0",
+        "messages.log": "edec2a5646f31bc91f9a0cd540265c23886d52862f024b283a59b3a646bf8c42",
+        "state.log": "368495d7dabfad5bd0a3b943687d69ded109bd8fb8c73cacd36ec9460231f6db"
+      },
+      "source_commit": "6cd5c8bf82459dc60328d1eb426eb9614385a19c",
+      "binary_sha256": "9c8e21e75c05926fb828a99a63b8e5b88848eb4a99ad17f824602becf2c6c6ee"
+    }
+  ],
+  "encounter_family": "start-9760629174d1b4d1f8402dfa430f136a2c3f2b6ea649644ae5400c483e754265",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "6e3ed7483a0f632bba1821e4052d5a850f3d054fd5d515f1ca242b8a93feb5b0",
+    "config.txt": "7f8cb5f99683726f5333ed935d7c1a37af794490254508003751a988571284b2",
+    "depths.json": "4f977162ee5f47c923c58f79636ee398e4f5fbf688aa4a22030b8a741aaa9990",
+    "params-core.json": "e694c365fbdbefe4c040c559433f750e0b333c9890ac5082d129dd6407304877",
+    "scary_list.txt": "5a4ec4b6221f2487d19bd3146c9c36ed7e3a619b1bf9d14dbd9a8f14ba187690",
+    "summary.json": "1269a53d8586cdfe47145fa8c6654368cd5592d457aff2144372cb6c0b6a1e58",
+    "trace-core-tail.jsonl": "26238fde0c3b45652add65eb6ef8a8b5772438253d1f293833dc2851bb8869e7"
+  },
+  "investigation": null,
+  "issue": null
+}
