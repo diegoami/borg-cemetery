@@ -22,7 +22,7 @@ In the private engine before Borg activation, advance the observed Mage to CL45 
 - **Town, first 10,000 turns.** Both device settings sold the unaware rod and the mushrooms. Shipped kept the recharged Annihilation wand, attempted 17 shots and bought three Black Market Restore Mana at 1,050 gold each. Rows off sold the three-charge wand and attempted four shots before sale. Both reached their cap alive. The town fixtures share one lineage with the deep fixture.
 - **DL45, first 20,000 turns.** Shipped used both staves, attempted 21 Annihilation shots and recharged by spell. The Healing rod raised HP from 214 to 461. The Mage reached DL46 and ended on DL43 alive.
 
-The two `after` files are living saves from the shipped CL45 runs. The town continuation is at CL45/DL0, turn 10825146. The deep continuation is at CL45/DL43, turn 10835144, with max DL46. Restart them with a turn cap greater than their saved turn. They provide later checkpoints of the same constructed life.
+The two `after` files are living saves from the shipped CL45 runs. The town continuation is at CL45/DL0, turn 10825146. The deep continuation is at CL45/DL43, turn 10835144, with max DL46. Restart them with a turn cap greater than their saved turn. The Borg can reset `auto_more` during play. On builds with #1154, use [prepare-resume.py](prepare-resume.py) to enable it in a new private copy if startup stops at a pending message. They provide later checkpoints of the same constructed life.
 
 ## Run a private copy
 

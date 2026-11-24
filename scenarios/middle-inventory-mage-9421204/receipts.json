@@ -1,0 +1,80 @@
+{
+  "binary_sha256": "b1d6be56dcb195a4e892595b5923dad6b71b4df424df9cba75719a9dd1ed8d61",
+  "case": "middle-inventory-mage-9421204",
+  "checkpoint_every": 10000,
+  "class_idx": 1,
+  "core": "borg-rs",
+  "engine": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+  "hashes": {
+    "config.txt": "eb06c6f744e69b7719ae9deff1f88db06ffcc5d16112cf409cf6ca5c8c689c00",
+    "keys.log": "50030c89cf493e9f480942fc5fd96e393417bacc3352ae2841b4718bdd1e4ba3",
+    "messages.log": "282c3bcd32bd618bbdbbfda88ee891b67a85089cd28b72f12544bb4daeb32c4c",
+    "settings-resolved.json": "dff7dd39516c8d57207e2d4073cab499a7a6d5128e93c85891487324cd64ea36",
+    "state.log": "b95149ffa38bbf1ba8aa6552fc43286e00cc544329cf4b239baf3f78d9b9ff60",
+    "summary.json": "2f670969a5d00aab984b75847a85c4a753341beab6a805e9d2b294b02580f6ae"
+  },
+  "independent_lives": 1,
+  "load_request_seed": 1,
+  "observed_parent": {
+    "commit": "0cca725f4f59bd70f91467ba6af6c6fa8604a1e6",
+    "path": "scenarios/mage-overweight-cursed-kit-9221204",
+    "turn": 9221204
+  },
+  "race_idx": 4,
+  "replay_input_sha256": "62b7459626f3d1e79b324a92a34ba6d07e63b962d624695dc4fa4dc80285f207",
+  "requested_cap": 9471204,
+  "saves": {
+    "mage-after-wand-use": {
+      "depth": 1,
+      "file": "mage-after-wand-use.save.gz",
+      "gzip_sha256": "38281e01a8afbd3f1759f352d6a7a9487f314717b340b2eaf4720a48b8024d46",
+      "level": 19,
+      "max_depth": 9,
+      "raw_sha256": "31c3eb0d7724ae05e457b5d0d721d74a54cb8e68d70f73c92ecd4c4a133a370e",
+      "role": "checkpoint",
+      "turn": 9440009
+    },
+    "mage-before-continuation": {
+      "depth": 6,
+      "file": "mage-before-continuation.save.gz",
+      "gzip_sha256": "c5cb80e62e7f5d2948e1711b055721380db0a465111016c660112c36e3aa684f",
+      "level": 18,
+      "max_depth": 9,
+      "raw_sha256": "451fea591d99bcd93cfba0bda121cadadece61be4ec4764a427806c74ba3f3ab",
+      "role": "start",
+      "turn": 9421204
+    },
+    "mage-before-wand-use": {
+      "depth": 5,
+      "file": "mage-before-wand-use.save.gz",
+      "gzip_sha256": "e6eb2ebbb9d1f85532388a511e6560680f5faf55e2c977e24c9913797aa47891",
+      "level": 19,
+      "max_depth": 9,
+      "raw_sha256": "c6107e02826468eb5c027a7f9f138426a4d7109a45a1fa279b5cb7d1613a9b2b",
+      "role": "checkpoint",
+      "turn": 9430001
+    },
+    "mage-living-after-50k": {
+      "depth": 2,
+      "file": "mage-living-after-50k.save.gz",
+      "gzip_sha256": "66a2033247d2020e8369368344d44d0504751bc32748d396864e8472a920f3d8",
+      "level": 19,
+      "max_depth": 9,
+      "raw_sha256": "251f252113b662b200ad25497a792165b54ae18b2560b8ec44bf0a4939eecff2",
+      "role": "continuation",
+      "turn": 9471205
+    }
+  },
+  "source_commit": "c5501d3c5aeac2449fc47ed6ca6efe2fbafdd894",
+  "source_sha256": "9518020cac20ecd4c9175d7d8edfdf464655fa5e9cef4cef58bc95bc4087e187",
+  "startup_contract": "fresh_borg_saved_engine_rng",
+  "stop": {
+    "clevel": 19,
+    "dead": false,
+    "depth": 2,
+    "game_turns": 9471205,
+    "keys": 7939,
+    "max_depth": 9,
+    "stop_reason": "turns"
+  }
+}
