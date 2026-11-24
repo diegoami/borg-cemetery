@@ -49,3 +49,20 @@ The shopping rule no longer makes the first cure or Phase Door urgent. Shopping 
 ## Reproduction
 
 Build the pinned repository with `BORG_IMPL=rust harness/build.sh`. From that source checkout, run [reproduce.sh](reproduce.sh) with a new output directory. The script uses the shipped profile and scary list, records the explicit parameter overrides, and stages the two data patches in isolated directories. These deterministic birth definitions supply the start state. The [trial manifest](manifest.json) and [purchase receipts](receipts.json) contain build and setting identities, endpoints, stream digests, and purchase receipts.
+
+### Verified Track P merge
+
+The [merged-candidate manifest](manifest-fa3f8590.json) records the runs at
+`fa3f859041674028c0415b849577154e4f1fc9a9`, the commit pinned in the
+Zoo request. The seven seeded cases and both Mage continuations reproduced
+keys, messages, state, and readiness traces. The original manifest remains
+the receipt for `ddc1c35a` and the new manifest records the new binary and
+resolved parameter digests. For each Mage continuation it also gives the
+exact save artifact, uncompressed hash, load mode, and turn cap.
+
+Use a clean Git checkout of the candidate to verify its source hash with
+`harness/identity.sh source-hash rust`. An archive initialized as a new
+repository with an empty index skips the tracked
+`engine/angband/lib/user/save/Makefile` because its directory is ignored
+for untracked files. With that file indexed, the archive reproduces the
+checkout hash.
