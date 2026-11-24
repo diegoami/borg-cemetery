@@ -1,0 +1,50 @@
+{
+  "applied_borg_txt_sha256": "329a4c24f6d965558e8735b6a50e108d6c1cdd7f061c6ba7e5fb6f57cc2d1839",
+  "baseline_first_departure": {
+    "allowance_free_tenths_lb": -1312,
+    "free_slots": 3,
+    "game_turn": 10815783,
+    "plain_shots_dropped": 0
+  },
+  "baseline_source": "c5501d3c5aeac2449fc47ed6ca6efe2fbafdd894",
+  "build": {
+    "arg_order": "rtl",
+    "binary_sha256": "e35dda3453d1526be21765137e1de58ea2a2bf78cb29337a2970b6f4c4868e11",
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "engine_upstream": "574b618c3bfec595f3503a58f8e488b1c4ae3a46",
+    "impl": "rust",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "source_sha256": "19ac825abc312d3f2f13506eeb96f0d937d78d6d4b8d5f4339a4de56636a623a"
+  },
+  "candidate_source": "79021fcd99c3b29ce53d19462360bb336c8a526e",
+  "first_departure": {
+    "allowance_free_tenths_lb": -632,
+    "free_slots": 7,
+    "game_turn": 10815732,
+    "plain_shots_dropped": 170
+  },
+  "hashes": {
+    "keys.log": "850b9ad5b209e97ddbeab6580e565d788c59488b13988c0dbaa471694f84df39",
+    "messages.log": "c5d995e468fdf73ab395ef9e40113a2f1c8ff698bedd25c3d90af9465aade488",
+    "params-core.json": "38c75514f2f6838684e0567bb5a09dd84a076280c2360f77bd87cac557da5b09",
+    "state.log": "e2ef858be2e2492ff20c72f94ebdc7c88a12b29aec7444a1a19dc4ec402ebddc",
+    "summary.json": "cf9a9ea90fbda2d085ebcc9d3a88b309460e50d5e03c5c9675913785b3a867c8"
+  },
+  "override": {
+    "borg_param_town_quiver_trim_reserve": 40
+  },
+  "save": "mage-quiver-300-town.save.gz",
+  "save_sha256": "31dff8dc0846ce24c465157ed157ba3dfb9674af0c2643463e9985a7388c2235",
+  "seed": 1,
+  "stop": {
+    "clevel": 37,
+    "dead": false,
+    "depth": 2,
+    "game_turns": 10818148,
+    "hp": 386,
+    "keys": 1229,
+    "max_depth": 29,
+    "stop_reason": "turns"
+  },
+  "turn_cap": 10818143
+}
