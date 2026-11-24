@@ -1,0 +1,50 @@
+old aim t=77019 at=loc { x: 90, y: 40 } goal=1 here_cost=1
+old aim next t=77019 grid=Some(loc { x: 90, y: 39 })
+old aim t=77029 at=loc { x: 90, y: 39 } goal=1 here_cost=0
+old aim next t=77029 grid=None
+old aim t=77029 at=loc { x: 90, y: 39 } goal=0 here_cost=0
+aim entry t=77029 at=loc { x: 90, y: 39 } goal=0 targets=0
+old aim t=77039 at=loc { x: 90, y: 40 } goal=4 here_cost=13
+old aim t=77039 at=loc { x: 90, y: 40 } goal=4 here_cost=13
+aim entry t=77039 at=loc { x: 90, y: 40 } goal=4 targets=1
+aim candidate t=77039 from=(90,40) end=loc { x: 88, y: 40 } feat=21 targets=1
+old aim t=77039 at=loc { x: 90, y: 40 } goal=1 here_cost=2
+old aim next t=77039 grid=Some(loc { x: 89, y: 41 })
+aim first step t=77039 keys=[49]
+old aim t=77049 at=loc { x: 89, y: 41 } goal=1 here_cost=1
+old aim next t=77049 grid=Some(loc { x: 88, y: 40 })
+aim wall refusal t=77049 grid=(88,40) feat=21 granite=21 need_dig=true
+old aim t=77049 at=loc { x: 89, y: 41 } goal=0 here_cost=1
+aim entry t=77049 at=loc { x: 89, y: 41 } goal=0 targets=1
+aim candidate t=77049 from=(89,41) end=loc { x: 90, y: 39 } feat=1 targets=1
+old aim t=77049 at=loc { x: 89, y: 41 } goal=1 here_cost=2
+old aim next t=77049 grid=Some(loc { x: 90, y: 40 })
+aim first step t=77049 keys=[57]
+old aim t=77059 at=loc { x: 90, y: 40 } goal=1 here_cost=1
+old aim next t=77059 grid=Some(loc { x: 90, y: 39 })
+old aim t=77069 at=loc { x: 90, y: 39 } goal=1 here_cost=0
+old aim next t=77069 grid=None
+old aim t=77069 at=loc { x: 90, y: 39 } goal=0 here_cost=0
+aim entry t=77069 at=loc { x: 90, y: 39 } goal=0 targets=0
+old aim t=77079 at=loc { x: 90, y: 40 } goal=4 here_cost=13
+old aim t=77079 at=loc { x: 90, y: 40 } goal=4 here_cost=13
+aim entry t=77079 at=loc { x: 90, y: 40 } goal=4 targets=1
+aim candidate t=77079 from=(90,40) end=loc { x: 88, y: 40 } feat=21 targets=1
+old aim t=77079 at=loc { x: 90, y: 40 } goal=1 here_cost=2
+old aim next t=77079 grid=Some(loc { x: 89, y: 41 })
+aim first step t=77079 keys=[49]
+old aim t=77089 at=loc { x: 89, y: 41 } goal=1 here_cost=1
+old aim next t=77089 grid=Some(loc { x: 88, y: 40 })
+aim wall refusal t=77089 grid=(88,40) feat=21 granite=21 need_dig=true
+old aim t=77089 at=loc { x: 89, y: 41 } goal=0 here_cost=1
+aim entry t=77089 at=loc { x: 89, y: 41 } goal=0 targets=1
+aim candidate t=77089 from=(89,41) end=loc { x: 90, y: 39 } feat=1 targets=1
+old aim t=77089 at=loc { x: 89, y: 41 } goal=1 here_cost=2
+old aim next t=77089 grid=Some(loc { x: 90, y: 40 })
+aim first step t=77089 keys=[57]
+old aim t=77099 at=loc { x: 90, y: 40 } goal=1 here_cost=1
+old aim next t=77099 grid=Some(loc { x: 90, y: 39 })
+old aim t=77109 at=loc { x: 90, y: 39 } goal=1 here_cost=0
+old aim next t=77109 grid=None
+old aim t=77109 at=loc { x: 90, y: 39 } goal=0 here_cost=0
+aim entry t=77109 at=loc { x: 90, y: 39 } goal=0 targets=0
