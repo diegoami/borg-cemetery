@@ -4,13 +4,13 @@ Curated dossiers retained in this checkout.
 
 Recomputed from `deaths/D*/record.json` and accompanying identity/summary/assessment files in this checkout.
 
-Input inventory SHA-256: `b81858c4182f8ca7b8174cc6a664f9cb36720fa5eee81f383c20f3128091b249`.
+Input inventory SHA-256: `433b0d9972e57a77db7bada858e49c0ce8645fbf92cc1bdabb1f48fa93a701b9`.
 
 The companion snapshot for an external source retains normalized statistical fields and per-file hashes, not raw logs, saves or executables. Unknown seeds are not replaced by requested seed values.
 
 | Cause | Dossiers |
 | --- | --- |
-| a crow | 36 |
+| a crow | 38 |
 | poison | 32 |
 | a wild cat | 27 |
 | a grey mushroom patch | 25 |
@@ -70,9 +70,9 @@ Among retained death dossiers only; no comparison of survival performance is imp
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 332 | 160 | 13471 | 39373.60 | 1094860 |
-| depth | 307 | 0 | 1 | 1.32 | 18 |
-| level | 307 | 1 | 2 | 2.91 | 12 |
+| turn | 334 | 160 | 13471 | 39213.44 | 1094860 |
+| depth | 309 | 0 | 1 | 1.32 | 18 |
+| level | 309 | 1 | 2 | 2.90 | 12 |
 
 ## Characters
 
@@ -89,6 +89,7 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Dwarf Necromancer | 7 |
 | Half-Orc Ranger | 7 |
 | Gnome Priest | 6 |
+| Half-Troll Necromancer | 6 |
 | Half-Elf Mage | 6 |
 | Human Paladin | 6 |
 | Half-Troll Priest | 6 |
@@ -98,7 +99,6 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Dunadan Ranger | 6 |
 | Hobbit Priest | 5 |
 | Dunadan Mage | 5 |
-| Half-Troll Necromancer | 5 |
 | Elf Druid | 5 |
 | Kobold Druid | 5 |
 | Half-Elf Blackguard | 5 |
@@ -117,6 +117,7 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Elf Priest | 3 |
 | High-Elf Ranger | 3 |
 | Kobold Mage | 3 |
+| Elf Warrior | 3 |
 | Kobold Ranger | 3 |
 | Dunadan Blackguard | 3 |
 | Dwarf Ranger | 3 |
@@ -134,7 +135,6 @@ Among retained death dossiers only; no comparison of survival performance is imp
 | Half-Elf Rogue | 2 |
 | Elf Paladin | 2 |
 | Dunadan Warrior | 2 |
-| Elf Warrior | 2 |
 | Half-Troll Blackguard | 2 |
 | Gnome Blackguard | 2 |
 | CollectedBorg | 2 |
