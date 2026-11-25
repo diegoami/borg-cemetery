@@ -6,7 +6,7 @@ Death-archive statistics, separated by registry and exact retained build. These 
 
 | Registry | Dossiers | Known start families | Missing family | Retained attempts | Explicit repeats | Build groups |
 | --- | --- | --- | --- | --- | --- | --- |
-| [cemetery](sources/cemetery.md) | 324 | 324 | 0 | 332 | 8 | 35 |
+| [cemetery](sources/cemetery.md) | 332 | 332 | 0 | 340 | 8 | 36 |
 | [reborn-historical](sources/reborn-historical.md) | 2378 | 2375 | 0 | 2378 | 0 | 114 |
 
 Shared declared/qualified family keys across registry pairs: **1**. Registry totals are not pooled into an independent-birth count. Different family keys do not prove unrelated births.
@@ -24,14 +24,14 @@ A dossier is one retained case. Start families group declared/qualified starting
 | a crow | 36 |
 | poison | 32 |
 | a wild cat | 27 |
-| a grey mushroom patch | 24 |
-| Fang, Farmer Maggot's Dog | 23 |
+| a grey mushroom patch | 25 |
+| a soldier | 25 |
 
 | Metric | Known records | Minimum | Median | Mean | Maximum |
 | --- | --- | --- | --- | --- | --- |
-| turn | 324 | 160 | 13394.5 | 39693.29 | 1094860 |
-| depth | 299 | 0 | 1 | 1.33 | 18 |
-| level | 299 | 1 | 2 | 2.90 | 12 |
+| turn | 332 | 160 | 13471 | 39373.60 | 1094860 |
+| depth | 307 | 0 | 1 | 1.32 | 18 |
+| level | 307 | 1 | 2 | 2.91 | 12 |
 
 ### reborn-historical
 
@@ -71,6 +71,7 @@ A build group uses project, commit, source-input hash, executable hash, implemen
 | [borg-reborn-rs · da097a764239 · a8672f2a76a8563b](builds/borg-reborn-rs-da097a764239-a8672f2a76a8563b/README.md) | rust | no | 11 | 11 | 5297 | 1 |
 | [borg-reborn-rs · d8edf54655d8 · 275d43770144db32](builds/borg-reborn-rs-d8edf54655d8-275d43770144db32/README.md) | rust | no | 10 | 10 | 7188 | 1 |
 | [borg-reborn-rs · 7f8c6b80a617 · a8e5190bb68504b0](builds/borg-reborn-rs-7f8c6b80a617-a8e5190bb68504b0/README.md) | rust | no | 9 | 9 | 62965 | 1 |
+| [borg-reborn-rs · c5501d3c5aea · 7fc47e9c207b95b1](builds/borg-reborn-rs-c5501d3c5aea-7fc47e9c207b95b1/README.md) | rust | no | 8 | 8 | 24261.5 | 1 |
 | [better-borg-c · 867c777845fd · 53cf9896b1c37b5e](builds/better-borg-c-867c777845fd-53cf9896b1c37b5e/README.md) | Unknown | Unknown | 5 | 5 | 27770 | Unknown |
 | [borg-reborn-rs · e5cc54697cf5 · 91efad63f300e348](builds/borg-reborn-rs-e5cc54697cf5-91efad63f300e348/README.md) | rust | no | 4 | 4 | 5100 | 0 |
 | [borg-rs · f772eb6dcb93 · 4190bcfe4490dd59](builds/borg-rs-f772eb6dcb93-4190bcfe4490dd59/README.md) | rust | yes | 4 | 4 | 5915.5 | 1 |
