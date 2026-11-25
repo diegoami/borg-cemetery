@@ -51,3 +51,5 @@ All six paths replayed from birth with the original Actions binary (SHA-256 `587
 | 1125613689 | bfs0 | death | `511bd6ce18c4337e8fc333e71971d25aa1048e4025b37c7956ea4d3eb66fd8d1` |
 | 480049625 | nomixed | turn_cap | `37766e5a84b158c89c9c63bc1c6ddde343a6e80ee821b05a34f4ed93c77dc397` |
 | 1125613689 | nomixed | turn_cap | `46b101de811a68fb91f3cb5a3572a17dc482e4197eaa1603c4ed0939aa99bf2a` |
+
+[The full P8 exploration death report](../2026-11-25-p8-exploration/README.md) covers both tiers and links the six interactive replays.
