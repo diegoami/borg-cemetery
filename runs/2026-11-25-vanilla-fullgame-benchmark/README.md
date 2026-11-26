@@ -19,3 +19,5 @@
 **Replay:** the zoo evidence-retained re-run keeps each game's key stream; the death report (viewer + play pack) lives beside the zoo issue — `~/borg-play/vanilla-fullgame/` on the zoo machine, and the report is linked from zoo #805.
 
 Context: zoo [805](https://github.com/diegoami/borg-zoo/issues/805) · zoo [792](https://github.com/diegoami/borg-zoo/issues/792) (the R4.5 receiving benchmark that shares this program).
+
+**Death report:** published beside the zoo play pack — `~/borg-play/vanilla-fullgame/report.html` on the zoo machine (viewer: each death's last 100 screens, the gear at death, attack counts; `play.sh` replays the exact game from birth to any turn, or drops you at one of four staged saves before the death). All seven replays verified: keys hash to the zoo cells' play_sha256.
