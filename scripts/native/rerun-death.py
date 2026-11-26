@@ -16,10 +16,11 @@ the dossier's, else the tool says which commit to check out and build.
 --any-build reruns anyway; the result is then not a reproduction.
 
 A Zoo cell (config.txt has zoo_profile) did not go through harness/run.sh:
-Zoo wrote user/borg.txt from the source's harness/borg.txt with the
-profile's settings and started the game directly. Its rerun rebuilds that
-borg.txt from config.txt's borg_* settings, refuses it unless its sha256 is
-the recorded borg_txt_sha256, and starts the game with Zoo's arguments.
+Zoo applied the profile's settings to the source's harness/borg.txt and
+started the game directly. Its rerun rebuilds that text from config.txt's
+borg_* settings, strips Zoo's adapter-only world setting and checks the
+recorded borg_txt_sha256. For PBorg it converts the text and checks
+pborg_yaml_sha256 before starting the game with Zoo's arguments.
 
 The run's recorded settings are restored too, including an errands plan:
 the dossier's own copy when export-death.py kept one, else the file
@@ -192,6 +193,8 @@ def settings(config, case_dir=None):
 # borg-zoo's runner (zoo/borgrs.py config_text/command): the settings it
 # forces before the profile's, and the argument form of a value.
 ZOO_FORCED = ('borg_respawn_race', 'borg_respawn_class', 'borg_cheat_death', 'borg_respawn_winners')
+# Match borg-zoo's WORLD_LINE. The Zoo adapter consumes this setting.
+ZOO_WORLD_LINE = re.compile(r'^[ \t]*borg_world[ \t]*=[ \t]*\S*[ \t]*\n?', re.M)
 # Observation-only record paths a retained-evidence or town-shadow Zoo cell
 # set (zoo/borgrs.py run_cell); config.txt names them in zoo_record_streams.
 ZOO_RECORD_STREAMS = {'BORG_TOWN_PLAN_RECORD': 'town-plan.jsonl', 'BORG_TRIP_RECORD': 'trip.jsonl'}
@@ -211,9 +214,12 @@ def zoo_override(text, name, value):
 
 def zoo_plan(config, case_dir, race, cls):
     """A Zoo cell's borg.txt settings and plan, from its config.txt."""
+    if config.get('borg_world') not in (None, '', 'none'):
+        raise SystemExit('rerun-death: Zoo replay cannot restore the recorded custom world '
+                         f'{config["borg_world"]}')
     settings, plan_file, scary_file = {}, None, None
     for name, value in config.items():
-        if not name.startswith('borg_') or name.endswith('_sha256'):
+        if not name.startswith('borg_') or name.endswith('_sha256') or name == 'borg_world':
             continue
         if name == 'borg_scary_list' and value in ('', 'none'):
             settings[name] = value  # the compiled C list: no file (borg-zoo#228)
@@ -262,6 +268,7 @@ def zoo_borg_txt(zoo, source):
     text = (source / 'harness/borg.txt').read_text()
     for name, value in list(zoo['forced'].items()) + sorted(zoo['settings'].items()):
         text = zoo_override(text, name, value)
+    text = ZOO_WORLD_LINE.sub('', text)
     have = hashlib.sha256(text.encode()).hexdigest()
     if have != zoo['borg_txt_sha256']:
         raise SystemExit(f"rerun-death: rebuilt borg.txt is {have[:12]}, the Zoo cell's was "
