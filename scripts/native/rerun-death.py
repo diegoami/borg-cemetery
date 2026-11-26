@@ -327,14 +327,20 @@ def plan(case_dir):
     }
 
 
-def stage_zoo_config(run, text, yaml_sha):
+def stage_zoo_config(run, text, yaml_sha, revision=None):
     if not yaml_sha:
         (run / 'user/borg.txt').write_text(text)
         return
-    yaml = subprocess.check_output(
-        [sys.executable, str(ROOT / 'harness/pborg-config.py'), '-'], input=text.encode('utf-8'))
+    converter = ROOT / 'harness/pborg-config.py'
+    repair = f"check out {revision or 'the death’s revision'} in {ROOT} and run harness/build.sh"
+    if not converter.is_file():
+        raise SystemExit(f'rerun-death: missing {converter}. {repair}.')
+    try:
+        yaml = subprocess.check_output([sys.executable, str(converter), '-'], input=text.encode('utf-8'))
+    except (OSError, subprocess.CalledProcessError) as error:
+        raise SystemExit(f'rerun-death: failed to convert PBorg settings. {repair}.') from error
     if hashlib.sha256(yaml).hexdigest() != yaml_sha:
-        raise SystemExit('rerun-death: rebuilt pborg.yaml differs from the recorded configuration')
+        raise SystemExit(f'rerun-death: rebuilt pborg.yaml differs from the recorded configuration. {repair}.')
     (run / 'pborg-legacy.txt').write_bytes(text.encode('utf-8'))
     (run / 'user/pborg.yaml').write_bytes(yaml)
 
@@ -347,7 +353,7 @@ def run_zoo(p, out, logs_env, checkpoint_every, extra=()):
     text = zoo_borg_txt(zoo, ROOT)
     for d in ('user', 'save', 'archive', 'panic', 'scores'):
         (run / d).mkdir(parents=True)
-    stage_zoo_config(run, text, p['config'].get('pborg_yaml_sha256'))
+    stage_zoo_config(run, text, p['config'].get('pborg_yaml_sha256'), p.get('git_rev'))
     # Input configuration is retained; effective parameters are independently
     # checked from the controller's newly written params-core.json below.
     (run / 'config.txt').write_text(''.join(f'{k}={v}\n' for k, v in p['config'].items()))

@@ -96,7 +96,14 @@ class ReplayConfigurationTest(unittest.TestCase):
         run = self.root / 'run'
         (run / 'user').mkdir(parents=True)
         yaml = b'borg_param_file_setting: 17\n'
-        with mock.patch.object(rd.subprocess, 'check_output', return_value=yaml) as convert:
+        with mock.patch.object(rd, 'ROOT', self.source), \
+                mock.patch.object(rd.subprocess, 'check_output', return_value=yaml) as convert:
+            with self.assertRaisesRegex(SystemExit, 'missing .*pborg-config.py'):
+                rd.stage_zoo_config(run, self.borg.decode(), self.digest(yaml), 'abc')
+            convert.assert_not_called()
+            converter = self.source / 'harness/pborg-config.py'
+            converter.parent.mkdir()
+            converter.touch()
             with self.assertRaisesRegex(SystemExit, 'pborg.yaml differs'):
                 rd.stage_zoo_config(run, self.borg.decode(), 'wrong-hash')
             self.assertEqual(list((run / 'user').iterdir()), [])
