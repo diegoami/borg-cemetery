@@ -45,6 +45,25 @@ class ExportTest(unittest.TestCase):
         os.environ.pop('BORG_DEATH_RECORDS_DIR', None)
         self.tmp.cleanup()
 
+    def test_yaml_settings_define_the_family_and_are_retained(self):
+        run = make_run(self.base, 'yaml')
+        user = run / 'user'
+        user.mkdir()
+        yaml = user / 'pborg.yaml'
+        yaml.write_text('borg_reborn_core: borg-rs\n')
+        digest = ed.sha256_file(yaml)
+        (run / 'config.txt').write_text(f'pborg_yaml_sha256={digest}\n')
+        case, status = ed.export(run, 'rust', self.build)
+        self.assertEqual(status, 'exported')
+        dossier = self.reg / case
+        record = json.loads((dossier / 'record.json').read_text())
+        self.assertEqual(record['identity']['pborg_yaml_sha256'], digest)
+        self.assertEqual(record['encounter_family'], ed.family_of('rust', 101, 0, 0, 'cafe', digest))
+        self.assertEqual((dossier / 'pborg.yaml').read_bytes(), yaml.read_bytes())
+        yaml.write_text('borg_reborn_core: reborn\n')
+        with self.assertRaisesRegex(SystemExit, 'pborg.yaml differs'):
+            ed.export(run, 'rust', self.build)
+
     def test_alive_run_writes_nothing(self):
         run = make_run(self.base, 'alive', dead=False)
         self.assertEqual(ed.export(run, 'c', self.build), (None, 'not dead'))

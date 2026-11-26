@@ -151,6 +151,25 @@ class ReplayConfigurationTest(unittest.TestCase):
                     self.assertEqual(receipt['errors'], [f'actual {name} differs or is missing'])
                     out.rename(self.root / f'tampered-{Path(name).name}')
 
+    def test_yaml_only_zoo_replay_uses_the_retained_settings(self):
+        yaml = self.case / 'pborg.yaml'
+        yaml.write_text('borg_reborn_core: borg-rs\n')
+        del self.config['borg_txt_sha256']
+        del self.config['borg_core']
+        self.config.update(zoo_profile='test', turns='1000', borg_reborn_core='borg-rs',
+                           pborg_yaml_sha256=rd.sha(yaml))
+        self.record['identity']['pborg_yaml_sha256'] = rd.sha(yaml)
+        self.save_record()
+        rc, receipt = self.execute()
+        self.assertEqual(rc, 0, receipt)
+        self.assertTrue(receipt['reproduction_verified'])
+        run = self.root / 'out/run'
+        self.assertEqual((run / 'user/pborg.yaml').read_bytes(), yaml.read_bytes())
+        self.assertFalse((run / 'pborg-legacy.txt').exists())
+        yaml.write_text('borg_reborn_core: reborn\n')
+        with self.assertRaisesRegex(SystemExit, 'retained pborg.yaml differs'):
+            rd.plan(self.case)
+
     def test_native_replay_restores_environment_and_class_origins_only(self):
         with mock.patch.dict(os.environ, BORG_PARAM_AMBIENT='99', BORG_CORE='reborn',
                              BORG_TXT_SET='bad=1', BORG_SCARY_LIST='/unrelated',
