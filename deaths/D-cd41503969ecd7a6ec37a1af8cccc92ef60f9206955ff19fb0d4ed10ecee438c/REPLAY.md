@@ -43,8 +43,6 @@ BORG_IMPL=rust bash /tmp/cemetery-D-cd41503969ecd7a6ec37a1af8cccc92ef60f9206955f
 This starts a new process from the original birth. It does not verify a missing recorder bundle.
 
 ```bash
-env -u BORG_SHADOW BORG_CORE_OVERRIDES=on BORG_CEMETERY_DIR="$PWD" BORG_IMPL=rust BORG_DEATH_RECORDS_DIR=/tmp/D-cd41503969ecd7a6ec37a1af8cccc92ef60f9206955ff19fb0d4ed10ecee438c-diagnostic-deaths \
-  bash /tmp/cemetery-D-cd41503969ecd7a6ec37a1af8cccc92ef60f9206955ff19fb0d4ed10ecee438c-24be9873/harness/run.sh /tmp/D-cd41503969ecd7a6ec37a1af8cccc92ef60f9206955ff19fb0d4ed10ecee438c-seed-rerun 1043 7 4 100000 menu
+BORG_CEMETERY_DIR="$PWD" BORG_IMPL=rust BORG_DEATH_RECORDS_DIR=/tmp/D-cd41503969ecd7a6ec37a1af8cccc92ef60f9206955ff19fb0d4ed10ecee438c-diagnostic-deaths \
+  bash /tmp/cemetery-D-cd41503969ecd7a6ec37a1af8cccc92ef60f9206955ff19fb0d4ed10ecee438c-24be9873/harness/run.sh /tmp/D-cd41503969ecd7a6ec37a1af8cccc92ef60f9206955ff19fb0d4ed10ecee438c-seed-rerun 1043 7 4 3041 menu
 ```
-
-The command uses the original suite cap and shipped settings from the pinned checkout. A fresh rerun is verified only when the death endpoint and the keys, messages and state hashes match [record.json](record.json). The [original run evidence](report.md#original-run-evidence) remains available independently of the rerun.

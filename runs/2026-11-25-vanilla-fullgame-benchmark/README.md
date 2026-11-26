@@ -21,3 +21,5 @@
 Context: zoo [805](https://github.com/diegoami/borg-zoo/issues/805) · zoo [792](https://github.com/diegoami/borg-zoo/issues/792) (the R4.5 receiving benchmark that shares this program).
 
 **Death report:** published beside the zoo play pack — `~/borg-play/vanilla-fullgame/report.html` on the zoo machine (viewer: each death's last 100 screens, the gear at death, attack counts; `play.sh` replays the exact game from birth to any turn, or drops you at one of four staged saves before the death). All seven replays verified: keys hash to the zoo cells' play_sha256.
+
+**R4.5 receiving reconciliation (zoo #792 sign-off, 2026-11-26):** the 45-start × 3-arm parity exit slice's natural deaths are reconciled as dossiers `D-002808c1…` (Human Warrior, a crow, CL4/DL2, turn ~86k... seed 212818316-era family: full-0-warrior-2) and `D-007d0f7f…` (Human Necromancer, a crow, CL1/DL1, full-4-necro-3) — the only two natural deaths in the 135 parity games (native arm; check and switch replayed the same deaths identically, verified by the parity gate). Exported from the staged evidence with `scripts/native/export-death.py` and the reconstructed native BUILD_ID.

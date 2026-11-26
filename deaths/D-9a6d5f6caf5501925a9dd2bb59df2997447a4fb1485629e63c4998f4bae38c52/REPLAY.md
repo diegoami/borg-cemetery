@@ -28,8 +28,6 @@ The first displays an actual recorded frame; the second reexecutes and verifies 
 
 [Recorder installation and supported format](https://github.com/diegoami/angband-recorder#readme).
 
-This death is a historical counterfactual recorded from the original birth. Apply the [one-grid overlay](../../validation/borg-reborn-rs/retreat-flight-932/overlays/one-grid.patch.gz) and use the archived configuration plus the 8-think guard as documented in the [validation replay recipe](../../validation/borg-reborn-rs/retreat-flight-932/README.md).
-
 ## Build the original version
 
 Install Git, Rust/Cargo, a C compiler, Make, CMake and the X11 development headers. Run from the cemetery checkout; use new output directories.

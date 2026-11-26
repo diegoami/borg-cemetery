@@ -1,0 +1,55 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-e8ba6b9316f801b6b2ccbe6e192b8777966989230705f9688aa7f9a9ba122e35",
+  "run_kind": "harness",
+  "character": "Human Paladin",
+  "raw_cause": "a kobold shaman",
+  "terminal": {
+    "cause": "a kobold shaman",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 26788,
+    "race_idx": 0,
+    "class_idx": 5
+  },
+  "identity": {
+    "impl": "c-pristine",
+    "seed": 388458606,
+    "flags": "-",
+    "git_rev": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+    "git_dirty": "no",
+    "source_sha256": "9ba58e647f580819fbedb7fd254ec57244d2721c4085aeaf9764af7518d2fafc",
+    "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee",
+    "borg_txt_sha256": "9f0f118e5e79ce7be9c795c7d0f0d73fae80b551097697953e6af63c8e606b5e",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 45711540187, artifact deaths-4.2.6-reborn-c-pristine-5, classes-9-full/4.2.6-reborn-c-pristine/reborn-fullgame-vanilla-evidence-ship/388458606 (https://github.com/diegoami/borg-zoo/actions/runs/45711540187, 90-day retention)",
+      "result_sha256": "377896ac0f2e79046ac3966afe9560c4e6460bc05a8f5c33fe137637627ada25",
+      "raw_sha256": {
+        "keys.log": "377896ac0f2e79046ac3966afe9560c4e6460bc05a8f5c33fe137637627ada25",
+        "messages.log": "bfa95699992081a6919e26559deee9598965d0a4a01e42d3656c84c4de79c340",
+        "state.log": "eb027614ae97a527da30e2f87a7a84b3f4a23f6239eb9fb2f7220c20db394046"
+      },
+      "source_commit": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+      "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee"
+    }
+  ],
+  "encounter_family": "start-e1d85018eb8a1ca1f3cfd0161f49c91a743406293057e17f2d60125aa520092d",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0a98043c2153c015be372fb1cd83beb18cc7adee07f2e5ddf4862fd1d2d32c0c",
+    "config.txt": "be097fbd65ce431fa5ff373ebf1eebeda675c6e90458ded076309b42b88c5eb8",
+    "summary.json": "53d6fd93aeedb14aa1ea3cf5b1f342732d5b77c7ad31a9287f5dde954a891339"
+  },
+  "investigation": null,
+  "issue": null
+}

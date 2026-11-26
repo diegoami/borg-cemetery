@@ -1,0 +1,55 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-579043167cdcc1613c9e2bf71b4d59e48d9d3ccfa5c1a12c2c9abf576597f13a",
+  "run_kind": "harness",
+  "character": "Human Mage",
+  "raw_cause": "a kobold",
+  "terminal": {
+    "cause": "a kobold",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 9802,
+    "race_idx": 0,
+    "class_idx": 1
+  },
+  "identity": {
+    "impl": "c-pristine",
+    "seed": 1009999184,
+    "flags": "-",
+    "git_rev": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+    "git_dirty": "no",
+    "source_sha256": "9ba58e647f580819fbedb7fd254ec57244d2721c4085aeaf9764af7518d2fafc",
+    "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee",
+    "borg_txt_sha256": "75e88fd4beb275299025bc141e0ee41d54d235f29aa594d2ef67548af1d638c5",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 45711540187, artifact deaths-4.2.6-reborn-c-pristine-1, classes-9-full/4.2.6-reborn-c-pristine/reborn-fullgame-vanilla-evidence-ship/1009999184 (https://github.com/diegoami/borg-zoo/actions/runs/45711540187, 90-day retention)",
+      "result_sha256": "349370da16c6ab042750f2aeffe960066d2276f1e4aa297e6094d24950bacd6c",
+      "raw_sha256": {
+        "keys.log": "349370da16c6ab042750f2aeffe960066d2276f1e4aa297e6094d24950bacd6c",
+        "messages.log": "8743dcbfa4ed38ec5f0e239a95c0fc20cb7f6f384c7d50d390e6a4473348f9cf",
+        "state.log": "a402a07b30c1960026c7b1fc20f87969d5f3dcd1c53f36ee303fd7a5506e8de2"
+      },
+      "source_commit": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+      "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee"
+    }
+  ],
+  "encounter_family": "start-413997afe52c39e05de11d160dea5fb639f1a70fe34fddb38f650c094ca6a0be",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0a98043c2153c015be372fb1cd83beb18cc7adee07f2e5ddf4862fd1d2d32c0c",
+    "config.txt": "b81cf1badb9739e7057d23f4c9a33496925c32a91a4a89d97825874b550788fc",
+    "summary.json": "a9e641a0f019b607d20b7a4556d3474aa77486d4a6c33f62a6746f00d7447323"
+  },
+  "investigation": null,
+  "issue": null
+}

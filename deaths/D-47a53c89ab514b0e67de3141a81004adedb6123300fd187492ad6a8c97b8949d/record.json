@@ -1,0 +1,63 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-47a53c89ab514b0e67de3141a81004adedb6123300fd187492ad6a8c97b8949d",
+  "run_kind": "harness",
+  "character": "Elf Warrior",
+  "raw_cause": "a crow",
+  "terminal": {
+    "cause": "a crow",
+    "dead": true,
+    "depth": 2,
+    "max_depth": 2,
+    "level": 4,
+    "turn": 23212,
+    "race_idx": 2,
+    "class_idx": 0
+  },
+  "identity": {
+    "impl": "c-pristine",
+    "seed": 1002,
+    "flags": "menu",
+    "git_rev": "24be98732748230062882fe2b7d9601dba5e2cc0",
+    "git_dirty": "no",
+    "source_sha256": "a0258bb741d10e01340177dfe2a6165f750a7ce0f506a2fd50cd4ca36379deda",
+    "binary_sha256": "e58e7d19006823f4c9c08fd73c41ca78059bc133ed3906b77a7effa5f838a1b3",
+    "borg_txt_sha256": "008405f8a189badcf62bf1b1ecbdf8a5a7cc8c0dd0a55b84e1e48ed3f99483ec",
+    "profile_sha256": "372785a3dfab6020d2e0881a0be7a8db42d70c39ad6db40f9599d3a6d1c2fc91",
+    "params_core_sha256": "7a28710cefa4ba0ab384479441fc3186770cb1c8489e9d8a4de929aa51396fb7"
+  },
+  "decision_trace": null,
+  "core_decision_trace": {
+    "file": "trace-core-tail.jsonl",
+    "lines": 200,
+    "of": 2273
+  },
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "/tmp/opencode/deathreport-vanilla/retained/native/full-0-warrior-2",
+      "result_sha256": "65a8b32c9f03fa93b1032d633854a3b62b6d3ffc83e88d93968508a3a46f2302",
+      "raw_sha256": {
+        "keys.log": "65a8b32c9f03fa93b1032d633854a3b62b6d3ffc83e88d93968508a3a46f2302",
+        "messages.log": "dec6f0060f70da257f1a013173f6b881416581e7f13e53adba63d11c5e718b9e",
+        "state.log": "e4484645f99e592e750d317dfd28096eefbcc5ba9e19bce1e951a6e78b7bc3c0"
+      },
+      "source_commit": "24be98732748230062882fe2b7d9601dba5e2cc0",
+      "binary_sha256": "e58e7d19006823f4c9c08fd73c41ca78059bc133ed3906b77a7effa5f838a1b3"
+    }
+  ],
+  "encounter_family": "start-47261455cfd6b488ac915fd1062ffc81bea224675d0540a88651ae28e5002c1c",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "c5942ecd512c11005c90f9c48a626f6081ed0b87df1558aed5b6acc844024124",
+    "config.txt": "31a057b38d18baf2cd18b5d19d4d515f3e16b0ae5af7f3e9766ef88776359b07",
+    "depths.json": "816f3ab07a7cb9dbe623556ddb04819bfababea7e3ac849d6b8befdfd0f2764c",
+    "params-core.json": "7a28710cefa4ba0ab384479441fc3186770cb1c8489e9d8a4de929aa51396fb7",
+    "scary_list.txt": "e0e293814e8ed9c2f3a5f0af809f479e854878e5d0eaedea37b671dd1b20f5a8",
+    "summary.json": "7dee31649005cb41167c3bf78fcf196253f53dd0135271cf6fb4a50b59cfb7a6",
+    "trace-core-tail.jsonl": "daf938196e0bee0547fed598c0db49ae299cd17a2fce7eb3f5d2ccc3dfdf4e8c"
+  },
+  "investigation": null,
+  "issue": null
+}

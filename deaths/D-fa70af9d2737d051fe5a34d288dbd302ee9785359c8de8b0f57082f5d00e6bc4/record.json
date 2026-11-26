@@ -1,0 +1,55 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-fa70af9d2737d051fe5a34d288dbd302ee9785359c8de8b0f57082f5d00e6bc4",
+  "run_kind": "harness",
+  "character": "Human Druid",
+  "raw_cause": "a rock lizard",
+  "terminal": {
+    "cause": "a rock lizard",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 1,
+    "turn": 8149,
+    "race_idx": 0,
+    "class_idx": 2
+  },
+  "identity": {
+    "impl": "c-pristine",
+    "seed": 1759985081,
+    "flags": "-",
+    "git_rev": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+    "git_dirty": "no",
+    "source_sha256": "9ba58e647f580819fbedb7fd254ec57244d2721c4085aeaf9764af7518d2fafc",
+    "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee",
+    "borg_txt_sha256": "7f2692ac442146a2e6b44112d322c1b8ec7de98ad85e30df59ac25041d3a433a",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 45711540187, artifact deaths-4.2.6-reborn-c-pristine-2, classes-9-full/4.2.6-reborn-c-pristine/reborn-fullgame-vanilla-evidence-ship/1759985081 (https://github.com/diegoami/borg-zoo/actions/runs/45711540187, 90-day retention)",
+      "result_sha256": "f84e5fc6e14f45d28816161dc09a51473866fd3d4dd388503ad9caee70a18d59",
+      "raw_sha256": {
+        "keys.log": "f84e5fc6e14f45d28816161dc09a51473866fd3d4dd388503ad9caee70a18d59",
+        "messages.log": "412dd7bb15b31d74ef8b50cecc2b683cf5b4a61360fac92beb056a21b624c295",
+        "state.log": "b4e0157323a709c35d62d86cbd4b7334e09f7e6c5b158ff647c1502c46269d40"
+      },
+      "source_commit": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+      "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee"
+    }
+  ],
+  "encounter_family": "start-54ebf244f3dda5e19aa2499c4cee0b68ab7c859dcbdcbd98080f42d69e5aa050",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0a98043c2153c015be372fb1cd83beb18cc7adee07f2e5ddf4862fd1d2d32c0c",
+    "config.txt": "095ca34ccb4e304057ad2c1b0b7888d2eb42cd1eafe1bd4994d5240ea6a61e26",
+    "summary.json": "1237874ebfbf6ddfd2e3a816fb675af0a470714415515706a2d98833d26bf2ca"
+  },
+  "investigation": null,
+  "issue": null
+}
