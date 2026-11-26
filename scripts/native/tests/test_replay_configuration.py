@@ -92,6 +92,20 @@ class ReplayConfigurationTest(unittest.TestCase):
             rc = rd.main([str(self.case), str(out), *extra])
         return rc, json.loads((out / 'reproduction.json').read_text())
 
+    def test_zoo_pborg_config_must_match_recorded_yaml_before_staging(self):
+        run = self.root / 'run'
+        (run / 'user').mkdir(parents=True)
+        yaml = b'borg_param_file_setting: 17\n'
+        with mock.patch.object(rd.subprocess, 'check_output', return_value=yaml) as convert:
+            with self.assertRaisesRegex(SystemExit, 'pborg.yaml differs'):
+                rd.stage_zoo_config(run, self.borg.decode(), 'wrong-hash')
+            self.assertEqual(list((run / 'user').iterdir()), [])
+            rd.stage_zoo_config(run, self.borg.decode(), self.digest(yaml))
+        self.assertEqual(convert.call_args.kwargs['input'], self.borg)
+        self.assertEqual((run / 'user/pborg.yaml').read_bytes(), yaml)
+        self.assertEqual((run / 'pborg-legacy.txt').read_bytes(), self.borg)
+        self.assertFalse((run / 'user/borg.txt').exists())
+
     def test_native_replay_restores_environment_and_class_origins_only(self):
         with mock.patch.dict(os.environ, BORG_PARAM_AMBIENT='99', BORG_CORE='reborn',
                              BORG_TXT_SET='bad=1', BORG_SCARY_LIST='/unrelated',
