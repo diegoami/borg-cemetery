@@ -327,6 +327,18 @@ def plan(case_dir):
     }
 
 
+def stage_zoo_config(run, text, yaml_sha):
+    if not yaml_sha:
+        (run / 'user/borg.txt').write_text(text)
+        return
+    yaml = subprocess.check_output(
+        [sys.executable, str(ROOT / 'harness/pborg-config.py'), '-'], input=text.encode('utf-8'))
+    if hashlib.sha256(yaml).hexdigest() != yaml_sha:
+        raise SystemExit('rerun-death: rebuilt pborg.yaml differs from the recorded configuration')
+    (run / 'pborg-legacy.txt').write_bytes(text.encode('utf-8'))
+    (run / 'user/pborg.yaml').write_bytes(yaml)
+
+
 def run_zoo(p, out, logs_env, checkpoint_every, extra=()):
     """Start the game as borg-zoo's runner did (zoo/borgrs.py run_cell/command).
     EXTRA borgh options (e.g. -keys N -screen, scripts/animate_death.py) are
@@ -335,7 +347,7 @@ def run_zoo(p, out, logs_env, checkpoint_every, extra=()):
     text = zoo_borg_txt(zoo, ROOT)
     for d in ('user', 'save', 'archive', 'panic', 'scores'):
         (run / d).mkdir(parents=True)
-    (run / 'user/borg.txt').write_text(text)
+    stage_zoo_config(run, text, p['config'].get('pborg_yaml_sha256'))
     # Input configuration is retained; effective parameters are independently
     # checked from the controller's newly written params-core.json below.
     (run / 'config.txt').write_text(''.join(f'{k}={v}\n' for k, v in p['config'].items()))
@@ -410,7 +422,9 @@ def verify(p, out):
     actual_config = read_kv(run / 'config.txt')
     if not actual_config:
         errors.append('missing run/config.txt')
-    for key, filename in (('borg_txt_sha256', 'user/borg.txt'), ('profile_sha256', None)):
+    legacy_path = 'pborg-legacy.txt' if actual_config.get('pborg_yaml_sha256') else 'user/borg.txt'
+    for key, filename in (('borg_txt_sha256', legacy_path), ('pborg_yaml_sha256', 'user/pborg.yaml'),
+                          ('profile_sha256', None)):
         expected = configuration_hash(p, key)
         if expected:
             if actual_config.get(key) != expected:
