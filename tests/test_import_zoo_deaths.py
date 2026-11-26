@@ -81,7 +81,7 @@ class ImportZooDeathsTest(unittest.TestCase):
             lines = (base / 'index.jsonl').read_text().splitlines()
             (base / 'index.jsonl').write_text(lines[0] + '\n')  # the shard stopped before indexing seed 2
             (base / 'suite/s/p/3/user').mkdir(parents=True)  # a replay cut short at its start
-            (base / 'suite/s/p/3/user/borg.txt').write_text('x\n')
+            (base / 'suite/s/p/3/user/pborg.yaml').write_text('borg_cheat_death: false\n')
         code, deaths, readme, records = self.run_import(build)
         self.assertEqual(code, 0)
         rows = {r['seed']: r for r in deaths['deaths']}

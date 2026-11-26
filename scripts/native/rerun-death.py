@@ -15,11 +15,10 @@ The build must be the death's: build/rust/BUILD_ID's source_sha256 equals
 the dossier's, else the tool says which commit to check out and build.
 --any-build reruns anyway; the result is then not a reproduction.
 
-A Zoo cell (config.txt has zoo_profile) did not go through harness/run.sh:
-Zoo wrote user/borg.txt from the source's harness/borg.txt with the
-profile's settings and started the game directly. Its rerun rebuilds that
-borg.txt from config.txt's borg_* settings, refuses it unless its sha256 is
-the recorded borg_txt_sha256, and starts the game with Zoo's arguments.
+Zoo cells rerun with Zoo's arguments and their retained pborg.yaml.
+Historical Zoo cells rebuild borg.txt from the pinned template and the
+recorded settings, check borg_txt_sha256, then convert and check the YAML
+hash for releases that still used a text template.
 
 The run's recorded settings are restored too, including an errands plan:
 the dossier's own copy when export-death.py kept one, else the file
@@ -57,7 +56,7 @@ def read_kv(path):
 # The settings harness/run.sh records when the environment gives them
 # (review #227, finding 8): the core, the errand and its options, the plan.
 SETTINGS = ('BORG_CORE', 'BORG_CORE_OVERRIDES', 'BORG_ERRAND', 'BORG_STOPSCARED', 'BORG_ERRAND_BUDGET',
-            'BORG_LADDERS', 'BORG_ERRANDS_PLAN')
+            'BORG_LADDERS', 'BORG_ERRANDS_PLAN', 'PBORG_SET')
 
 
 def sha(path):
@@ -154,7 +153,7 @@ def clean_environment():
     # lookup, not gameplay. Runtime paths and instrumentation are set below.
     return {k: v for k, v in os.environ.items()
             if (not k.startswith(('BORG_', 'ANGBAND_', 'BORGH_')) or k == 'BORG_CEMETERY_DIR')
-            and k not in ('SAVE_ROOT', 'CHECKPOINT_EVERY', 'STALL_TIMEOUT_SECONDS')}
+            and k not in ('SAVE_ROOT', 'CHECKPOINT_EVERY', 'STALL_TIMEOUT_SECONDS', 'PBORG_SET')}
 
 
 def settings(config, case_dir=None):
@@ -192,6 +191,8 @@ def settings(config, case_dir=None):
 # borg-zoo's runner (zoo/borgrs.py config_text/command): the settings it
 # forces before the profile's, and the argument form of a value.
 ZOO_FORCED = ('borg_respawn_race', 'borg_respawn_class', 'borg_cheat_death', 'borg_respawn_winners')
+# Match borg-zoo's WORLD_LINE. The Zoo adapter consumes this setting.
+ZOO_WORLD_LINE = re.compile(r'^[ \t]*borg_world[ \t]*=[ \t]*\S*[ \t]*\n?', re.M)
 # Observation-only record paths a retained-evidence or town-shadow Zoo cell
 # set (zoo/borgrs.py run_cell); config.txt names them in zoo_record_streams.
 ZOO_RECORD_STREAMS = {'BORG_TOWN_PLAN_RECORD': 'town-plan.jsonl', 'BORG_TRIP_RECORD': 'trip.jsonl'}
@@ -211,9 +212,12 @@ def zoo_override(text, name, value):
 
 def zoo_plan(config, case_dir, race, cls):
     """A Zoo cell's borg.txt settings and plan, from its config.txt."""
+    if config.get('borg_world') not in (None, '', 'none'):
+        raise SystemExit('rerun-death: Zoo replay cannot restore the recorded custom world '
+                         f'{config["borg_world"]}')
     settings, plan_file, scary_file = {}, None, None
     for name, value in config.items():
-        if not name.startswith('borg_') or name.endswith('_sha256'):
+        if not name.startswith('borg_') or name.endswith('_sha256') or name == 'borg_world':
             continue
         if name == 'borg_scary_list' and value in ('', 'none'):
             settings[name] = value  # the compiled C list: no file (borg-zoo#228)
@@ -262,6 +266,7 @@ def zoo_borg_txt(zoo, source):
     text = (source / 'harness/borg.txt').read_text()
     for name, value in list(zoo['forced'].items()) + sorted(zoo['settings'].items()):
         text = zoo_override(text, name, value)
+    text = ZOO_WORLD_LINE.sub('', text)
     have = hashlib.sha256(text.encode()).hexdigest()
     if have != zoo['borg_txt_sha256']:
         raise SystemExit(f"rerun-death: rebuilt borg.txt is {have[:12]}, the Zoo cell's was "
@@ -281,6 +286,10 @@ def plan(case_dir):
     config = read_kv(case_dir / 'config.txt')
     for name in ('config.txt', 'summary.json', 'params.json'):
         checked_hash(case_dir, record, config, name)
+    yaml_config = None
+    if config.get('pborg_yaml_sha256') and not config.get('borg_txt_sha256'):
+        checked_hash(case_dir, record, config, 'pborg.yaml', 'pborg_yaml_sha256')
+        yaml_config = case_dir / 'pborg.yaml'
     flags = config.get('flags', ident.get('flags') or '-')
     # Requested indices: the run's own (summary.json), not the played ones.
     summary = json.loads((case_dir / 'summary.json').read_text())
@@ -318,6 +327,7 @@ def plan(case_dir):
         'core': core,
         'params_core_sha256': params_hash,
         'config': config,
+        'yaml_config': yaml_config,
         'terminal': term,
         'record': record,
         'env': overrides if zoo else dict(settings(config, case_dir), BORG_CORE=core, **overrides),
@@ -327,15 +337,36 @@ def plan(case_dir):
     }
 
 
+def stage_zoo_config(run, text, yaml_sha, revision=None):
+    if not yaml_sha:
+        (run / 'user/borg.txt').write_text(text)
+        return
+    converter = ROOT / 'harness/pborg-config.py'
+    repair = f"check out {revision or 'the death’s revision'} in {ROOT} and run harness/build.sh"
+    if not converter.is_file():
+        raise SystemExit(f'rerun-death: missing {converter}. {repair}.')
+    try:
+        yaml = subprocess.check_output([sys.executable, str(converter), '-'], input=text.encode('utf-8'))
+    except (OSError, subprocess.CalledProcessError) as error:
+        raise SystemExit(f'rerun-death: failed to convert PBorg settings. {repair}.') from error
+    if hashlib.sha256(yaml).hexdigest() != yaml_sha:
+        raise SystemExit(f'rerun-death: rebuilt pborg.yaml differs from the recorded configuration. {repair}.')
+    (run / 'pborg-legacy.txt').write_bytes(text.encode('utf-8'))
+    (run / 'user/pborg.yaml').write_bytes(yaml)
+
+
 def run_zoo(p, out, logs_env, checkpoint_every, extra=()):
     """Start the game as borg-zoo's runner did (zoo/borgrs.py run_cell/command).
     EXTRA borgh options (e.g. -keys N -screen, scripts/animate_death.py) are
     appended; the caller checks that they leave the key stream unchanged."""
     zoo, run = p['zoo'], out / 'run'
-    text = zoo_borg_txt(zoo, ROOT)
     for d in ('user', 'save', 'archive', 'panic', 'scores'):
         (run / d).mkdir(parents=True)
-    (run / 'user/borg.txt').write_text(text)
+    if p['yaml_config']:
+        shutil.copyfile(p['yaml_config'], run / 'user/pborg.yaml')
+    else:
+        text = zoo_borg_txt(zoo, ROOT)
+        stage_zoo_config(run, text, p['config'].get('pborg_yaml_sha256'), p.get('git_rev'))
     # Input configuration is retained; effective parameters are independently
     # checked from the controller's newly written params-core.json below.
     (run / 'config.txt').write_text(''.join(f'{k}={v}\n' for k, v in p['config'].items()))
@@ -410,7 +441,9 @@ def verify(p, out):
     actual_config = read_kv(run / 'config.txt')
     if not actual_config:
         errors.append('missing run/config.txt')
-    for key, filename in (('borg_txt_sha256', 'user/borg.txt'), ('profile_sha256', None)):
+    legacy_path = 'pborg-legacy.txt' if actual_config.get('pborg_yaml_sha256') else 'user/borg.txt'
+    for key, filename in (('borg_txt_sha256', legacy_path), ('pborg_yaml_sha256', 'user/pborg.yaml'),
+                          ('profile_sha256', None)):
         expected = configuration_hash(p, key)
         if expected:
             if actual_config.get(key) != expected:

@@ -76,10 +76,11 @@ def unindexed(root, found):
     the index line carries the reproduction status and build identity."""
     named = {(base.resolve() / e['bundle']) for _, base, e in found if e.get('bundle')}
     rows = []
-    # Every bundle has user/borg.txt from the moment it starts, even one
-    # whose replay was cut short before writing anything else.
-    for marker in sorted(Path(root).rglob('user/borg.txt')):
-        bundle = marker.parent.parent
+    # A replay starts with pborg.yaml on combined builds, or borg.txt on
+    # historical builds. Combined builds add the legacy text receipt at exit.
+    markers = (marker.parent.parent for name in ('borg.txt', 'pborg.yaml')
+               for marker in Path(root).rglob(f'user/{name}'))
+    for bundle in sorted(set(markers)):
         if bundle.resolve() in named:
             continue
         manifest = {}

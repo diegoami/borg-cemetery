@@ -249,6 +249,12 @@ class ZooTest(unittest.TestCase):
                 rd.zoo_borg_txt(rd.plan(d)['zoo'], src)
         self.assertIn('cannot be restored', str(e.exception))
 
+    def test_a_zoo_cell_with_a_custom_world_is_refused(self):
+        with tempfile.TemporaryDirectory() as t:
+            _, d = self.cell(t, 'f' * 64, extra_config='borg_world=town-only.yaml\n')
+            with self.assertRaisesRegex(SystemExit, 'cannot restore the recorded custom world town-only.yaml'):
+                rd.plan(d)
+
     def test_both_plan_hash_keys_are_read(self):
         want = self.expected()
         for key in ('errands_plan_sha256', 'borg_errands_plan_sha256'):

@@ -98,12 +98,14 @@ def existing(reg):
     return cases, seen
 
 
-def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_sha, family):
+def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_sha, family, yaml_payload):
     """The files of a basic dossier, {name: bytes}."""
     files = {}
     for name in ('summary.json', 'config.txt', 'depths.json', 'params.json', 'params-core.json'):
         if (run_dir / name).exists():
             files[name] = (run_dir / name).read_bytes()
+    if yaml_payload is not None:
+        files['pborg.yaml'] = yaml_payload
     # A plan run's dossier keeps the plan itself, so rerun-death.py can
     # reproduce it after the source checkout's plan is edited (or moved).
     if config.get('borg_errands_plan') and (run_dir / 'user/errands_plan.txt').exists():
@@ -159,6 +161,7 @@ def dossier(case, run_dir, final_dir, impl, flags, summary, build, config, keys_
             'git_rev': build.get('git_rev'), 'git_dirty': build.get('git_dirty'),
             'source_sha256': build.get('source_sha256'), 'binary_sha256': build.get('binary_sha256'),
             'borg_txt_sha256': config.get('borg_txt_sha256'),
+            'pborg_yaml_sha256': config.get('pborg_yaml_sha256'),
             'profile_sha256': config.get('profile_sha256'),
             'params_core_sha256': config.get('params_core_sha256'),
         },
@@ -269,7 +272,8 @@ def run_family(summary, config, impl, source_sha256, flags='-'):
     seed = None if summary.get('loaded') and keeps_rng else summary.get('seed')
     race = summary.get('played_race_idx', summary.get('race_idx'))
     cls = summary.get('played_class_idx', summary.get('class_idx'))
-    return family_of(impl, seed, race, cls, source_sha256, config.get('borg_txt_sha256'), config.get('save_sha256'),
+    settings_sha = config.get('borg_txt_sha256') or config.get('pborg_yaml_sha256')
+    return family_of(impl, seed, race, cls, source_sha256, settings_sha, config.get('save_sha256'),
                      config.get('params_core_sha256'))
 
 
@@ -292,6 +296,15 @@ def export(run_dir, impl, build_id_path, flags='-', raw_location=None):
     keys = run_dir / 'keys.log'
     if not keys.exists():
         raise SystemExit(f'export-death: {keys} missing; cannot identify the run')
+    yaml_sha = config.get('pborg_yaml_sha256')
+    yaml_payload = None
+    if yaml_sha and not config.get('borg_txt_sha256'):
+        try:
+            yaml_payload = (run_dir / 'user/pborg.yaml').read_bytes()
+        except OSError as error:
+            raise SystemExit(f'export-death: cannot read pborg.yaml: {error}') from error
+        if hashlib.sha256(yaml_payload).hexdigest() != yaml_sha:
+            raise SystemExit('export-death: pborg.yaml differs from the recorded hash or is missing')
     build = read_kv(build_id_path)
     keys_sha = sha256_file(keys)
     family = run_family(summary, config, impl, build.get('source_sha256'), flags)
@@ -303,7 +316,7 @@ def export(run_dir, impl, build_id_path, flags='-', raw_location=None):
         for stale in reg.glob('.tmp-*'):
             shutil.rmtree(stale)
         cases, seen = existing(reg)
-        args = (run_dir, final_dir, impl, flags, summary, build, config, keys_sha, family)
+        args = (run_dir, final_dir, impl, flags, summary, build, config, keys_sha, family, yaml_payload)
         if (family, keys_sha) in seen:
             case = seen[(family, keys_sha)]
             out = reg / case
