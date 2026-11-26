@@ -1,0 +1,55 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-0389a80bf48a68e9e6edb58ae31897f11b0ee1af5e1a87bd6c1780397c4e44b1",
+  "run_kind": "harness",
+  "character": "Human Priest",
+  "raw_cause": "burning to a cinder in lava",
+  "terminal": {
+    "cause": "burning to a cinder in lava",
+    "dead": true,
+    "depth": 0,
+    "max_depth": 3,
+    "level": 8,
+    "turn": 357982,
+    "race_idx": 0,
+    "class_idx": 3
+  },
+  "identity": {
+    "impl": "c-pristine",
+    "seed": 129481348,
+    "flags": "-",
+    "git_rev": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+    "git_dirty": "no",
+    "source_sha256": "9ba58e647f580819fbedb7fd254ec57244d2721c4085aeaf9764af7518d2fafc",
+    "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee",
+    "borg_txt_sha256": "2c7ec62d1b8e16ebda2fc1ae76bf598549dd8df3b47d6bae7a2e26d2af68a455",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 45711540187, artifact deaths-4.2.6-reborn-c-pristine-3, classes-9-full/4.2.6-reborn-c-pristine/reborn-fullgame-vanilla-evidence-ship/129481348 (https://github.com/diegoami/borg-zoo/actions/runs/45711540187, 90-day retention)",
+      "result_sha256": "4b7d339c1d835e75d6857a4233ace33c48add103b6362ba547e78df3048ddbed",
+      "raw_sha256": {
+        "keys.log": "4b7d339c1d835e75d6857a4233ace33c48add103b6362ba547e78df3048ddbed",
+        "messages.log": "2d551355c444482e51cbbfdce34b8cc3bcf0b18fc5201c694236827f9c99a5c1",
+        "state.log": "4397797f48b039df9729191345c42549e0f687938f6b0d77e06e816a7c4b9f3b"
+      },
+      "source_commit": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+      "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee"
+    }
+  ],
+  "encounter_family": "start-8e1827bfb913db1949978644fa432c08e88c17e885988d15613750f6d5f35141",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0a98043c2153c015be372fb1cd83beb18cc7adee07f2e5ddf4862fd1d2d32c0c",
+    "config.txt": "36234dd8a92c0ab4908727514e17087a32028d7289dc7dcd90dd427594a2a790",
+    "summary.json": "06465dd510df176e7d12635a498cf12bf213d11c6731df0a7ff84b05b28d15ea"
+  },
+  "investigation": null,
+  "issue": null
+}

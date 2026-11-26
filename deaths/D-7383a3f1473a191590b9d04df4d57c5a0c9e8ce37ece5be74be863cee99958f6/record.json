@@ -1,0 +1,55 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-7383a3f1473a191590b9d04df4d57c5a0c9e8ce37ece5be74be863cee99958f6",
+  "run_kind": "harness",
+  "character": "Human Necromancer",
+  "raw_cause": "a kobold shaman",
+  "terminal": {
+    "cause": "a kobold shaman",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 2,
+    "level": 3,
+    "turn": 63582,
+    "race_idx": 0,
+    "class_idx": 4
+  },
+  "identity": {
+    "impl": "c-pristine",
+    "seed": 2110310600,
+    "flags": "-",
+    "git_rev": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+    "git_dirty": "no",
+    "source_sha256": "9ba58e647f580819fbedb7fd254ec57244d2721c4085aeaf9764af7518d2fafc",
+    "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee",
+    "borg_txt_sha256": "9800c87c472dd354f713776e92ab30f7e07dd561db9675aa471a5a66f9d136b5",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 45711540187, artifact deaths-4.2.6-reborn-c-pristine-4, classes-9-full/4.2.6-reborn-c-pristine/reborn-fullgame-vanilla-evidence-ship/2110310600 (https://github.com/diegoami/borg-zoo/actions/runs/45711540187, 90-day retention)",
+      "result_sha256": "02d43716dc39dd85083adeeca86d1a53f5337cbf0d6bc2ea24539cb427c23808",
+      "raw_sha256": {
+        "keys.log": "02d43716dc39dd85083adeeca86d1a53f5337cbf0d6bc2ea24539cb427c23808",
+        "messages.log": "8906f73b7f10d2a2119a0a4d43b5f4586a1531343aa2275fb107843212fe433e",
+        "state.log": "45edfb39a9d62c4d626031b61ee1859fd47ef20a20ecfdd28144058515d25795"
+      },
+      "source_commit": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+      "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee"
+    }
+  ],
+  "encounter_family": "start-fdd6769097fd24ef7f853b8d511cd57607a0a0e898c10f97dc600a6b751c0033",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0a98043c2153c015be372fb1cd83beb18cc7adee07f2e5ddf4862fd1d2d32c0c",
+    "config.txt": "229102d3d8dc075e43c124fe3d38a6e78e40ddda59222d950703901ac5865b2c",
+    "summary.json": "c66986134a1d7fde95818d907cffff3f102730e1dac144c5f032575c95f2be5b"
+  },
+  "investigation": null,
+  "issue": null
+}

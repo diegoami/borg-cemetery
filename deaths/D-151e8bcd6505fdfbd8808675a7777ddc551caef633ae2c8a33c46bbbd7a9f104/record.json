@@ -1,0 +1,55 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-151e8bcd6505fdfbd8808675a7777ddc551caef633ae2c8a33c46bbbd7a9f104",
+  "run_kind": "harness",
+  "character": "Human Warrior",
+  "raw_cause": "a priest",
+  "terminal": {
+    "cause": "a priest",
+    "dead": true,
+    "depth": 14,
+    "max_depth": 15,
+    "level": 10,
+    "turn": 86481,
+    "race_idx": 0,
+    "class_idx": 0
+  },
+  "identity": {
+    "impl": "c-pristine",
+    "seed": 212818316,
+    "flags": "-",
+    "git_rev": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+    "git_dirty": "no",
+    "source_sha256": "9ba58e647f580819fbedb7fd254ec57244d2721c4085aeaf9764af7518d2fafc",
+    "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee",
+    "borg_txt_sha256": "c61e012ef5162ed085473aa2cea199289a2db351fc4989588ad34bd38d7bf72f",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 45711540187, artifact deaths-4.2.6-reborn-c-pristine-0, classes-9-full/4.2.6-reborn-c-pristine/reborn-fullgame-vanilla-evidence-ship/212818316 (https://github.com/diegoami/borg-zoo/actions/runs/45711540187, 90-day retention)",
+      "result_sha256": "bb5b66026188bb567885764b5b33bb179e8b2ca8a792cba2671d31ad0d440f16",
+      "raw_sha256": {
+        "keys.log": "bb5b66026188bb567885764b5b33bb179e8b2ca8a792cba2671d31ad0d440f16",
+        "messages.log": "48f94d94566b5d50101dbc8453356822df0aa99efc44c0b4118282ad1f923ec3",
+        "state.log": "9bf8339389af81f34a4a73743918fd1c4cfb46bd9d7503a9783b7365158d2f5d"
+      },
+      "source_commit": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+      "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee"
+    }
+  ],
+  "encounter_family": "start-85195391c0fefe5356627fab1aa112cae1b3fbf39a1fa737c70cb1b96345ae8f",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0a98043c2153c015be372fb1cd83beb18cc7adee07f2e5ddf4862fd1d2d32c0c",
+    "config.txt": "b385238048af5fe1adfc4a4be5580ab28afd7c3b8eb015e8c6e8d727201743cb",
+    "summary.json": "b647303f29793d717fa9e6e5c4dfdffadcaf6c16b3fe097848c4949e87b6c6e6"
+  },
+  "investigation": null,
+  "issue": null
+}

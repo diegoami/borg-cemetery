@@ -1,0 +1,55 @@
+{
+  "schema": "borg-reborn-rs/death-record@1",
+  "id": "D-87ab81ded64d073faf119fd6183b306b6ed455220e991f8ea98347dc3d11338e",
+  "run_kind": "harness",
+  "character": "Human Ranger",
+  "raw_cause": "a crow",
+  "terminal": {
+    "cause": "a crow",
+    "dead": true,
+    "depth": 1,
+    "max_depth": 1,
+    "level": 2,
+    "turn": 13833,
+    "race_idx": 0,
+    "class_idx": 7
+  },
+  "identity": {
+    "impl": "c-pristine",
+    "seed": 962733507,
+    "flags": "-",
+    "git_rev": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+    "git_dirty": "no",
+    "source_sha256": "9ba58e647f580819fbedb7fd254ec57244d2721c4085aeaf9764af7518d2fafc",
+    "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee",
+    "borg_txt_sha256": "5ba4176238d7833b115b80be5179e45a950837eb966019f9173adf1fd9bd4658",
+    "profile_sha256": null,
+    "params_core_sha256": null
+  },
+  "decision_trace": null,
+  "core_decision_trace": null,
+  "attempts": [
+    {
+      "role": "original",
+      "outcome": "death",
+      "raw_directory": "borg-zoo run 45711540187, artifact deaths-4.2.6-reborn-c-pristine-7, classes-9-full/4.2.6-reborn-c-pristine/reborn-fullgame-vanilla-evidence-ship/962733507 (https://github.com/diegoami/borg-zoo/actions/runs/45711540187, 90-day retention)",
+      "result_sha256": "6925e8e21527a6a05ced3df7e5302e79e4a9aa1cfa26ba7ddd99f139af1e6767",
+      "raw_sha256": {
+        "keys.log": "6925e8e21527a6a05ced3df7e5302e79e4a9aa1cfa26ba7ddd99f139af1e6767",
+        "messages.log": "418fceac4fa016826b51de34ce2d9c2adb2427b1b97bdbed304aab673718a697",
+        "state.log": "0ae6805b0a540b04ccdf3f6a531b1ccd53eb6ece8c5f173abb821fab59643cfb"
+      },
+      "source_commit": "fab71554fd32e3dbcbcf3b12daac29a02806fb13",
+      "binary_sha256": "0f7f71f661cb1eb1e3057e4195e3fd112fe76ea216d91de0fc7ec270e9aea7ee"
+    }
+  ],
+  "encounter_family": "start-00eee8509f2de2bbd4e46adcda75f29431d996a6348bda41b43f8353c65b3b72",
+  "independence_note": "One independent death per encounter family; repeats of the same run are not new cases.",
+  "files_sha256": {
+    "build.json": "0a98043c2153c015be372fb1cd83beb18cc7adee07f2e5ddf4862fd1d2d32c0c",
+    "config.txt": "b45a6850fa036f4db1a4203ed13fcbc2ef81e14bcdf4ed8697ce0ff3a8bb0727",
+    "summary.json": "4e6f38ca880aeb74c4164240e4389c707e96f9974175b22229f154bce8d83a1c"
+  },
+  "investigation": null,
+  "issue": null
+}
