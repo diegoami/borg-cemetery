@@ -185,6 +185,8 @@ class ReplayConfigurationTest(unittest.TestCase):
         self.save_record()
 
         def harness_output(out):
+            # harness/run.sh's #518 block uses the basename from BORG_SCARY_LIST
+            # in pborg.yaml and records the SHA-256 of the copied list.
             staged = Path(self.env['BORG_SCARY_LIST'])
             self.assertEqual(staged, out / 'inputs' / name)
             self.assertEqual(staged.read_bytes(), list_bytes)
@@ -195,6 +197,7 @@ class ReplayConfigurationTest(unittest.TestCase):
         rc, receipt = self.execute(harness_output)
         self.assertEqual(rc, 0, receipt)
         self.assertTrue(receipt['reproduction_verified'])
+        self.assertEqual(receipt['scary_list'], {'name': name, 'sha256': digest})
 
         for missing in (False, True):
             with self.subTest(missing=missing):

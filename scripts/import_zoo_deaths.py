@@ -125,7 +125,7 @@ def import_one(export, artifact, base, entry, run_id, repo):
                    if str(run_id).isdigit() else ''))
     try:
         case, what = export.export(bundle, impl, bundle / 'BUILD_ID', raw_location=location)
-    except export.InvalidPborgYaml as error:
+    except export.InvalidDeathBundle as error:
         row.update(imported='skipped', reason=str(error))
         return row
     row['case'], row['imported'] = case, what
@@ -187,11 +187,11 @@ def main(argv=None):
     if not experiments:
         experiments = sorted({r.get('experiment') for r in orphans if r.get('experiment')})
     experiment = experiments[0] if len(experiments) == 1 else '+'.join(experiments) or 'unknown'
-    if any(r.get('case') for r in rows):
-        export.aggregate(registry)
     runs = a.runs_dir or (ROOT / 'runs' if registry == (ROOT / 'deaths').resolve() else registry.parent / 'runs')
     out = runs / f'zoo-{experiment}-{run_id}'
     page(rows, run_id, a.repo, experiment, registry, out)
+    if any(r.get('case') for r in rows):
+        export.aggregate(registry)
     counts = {}
     for r in rows:
         key = r['imported'].split(':')[0]

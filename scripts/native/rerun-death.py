@@ -544,6 +544,7 @@ def main(argv=None):
                 if sha(staged) != p['config']['borg_scary_list_sha256']:
                     raise SystemExit('rerun-death: staged scary list differs from the recorded hash')
                 env['BORG_SCARY_LIST'] = str(staged)
+                receipt['scary_list'] = {'name': staged.name, 'sha256': p['config']['borg_scary_list_sha256']}
             cmd = [str(ROOT / 'harness/run.sh'), str(a.out / 'run'), str(p['seed']), str(p['race']), str(p['class']),
                    str(p['cap']), p['flags']]
             r = subprocess.run(cmd, env=env, capture_output=True, text=True)
