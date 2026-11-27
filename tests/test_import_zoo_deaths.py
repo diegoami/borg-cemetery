@@ -74,6 +74,70 @@ class ImportZooDeathsTest(unittest.TestCase):
         self.assertIn(rows[1]['case'][:14], readme)
         self.assertIn('1 of 3 deaths have a dossier', readme)
 
+    def test_invalid_pborg_yaml_does_not_stop_the_import(self):
+        yaml = b'borg_cheat_death: false\n'
+        digest = hashlib.sha256(yaml).hexdigest()
+
+        def build(base):
+            for seed in range(1, 5):
+                cell = f'suite/s/p/{seed}'
+                bundle(base, cell, seed)
+                config = base / cell / 'config.txt'
+                config.write_text(config.read_text().replace(
+                    'borg_txt_sha256=feed', f'pborg_yaml_sha256={digest}'))
+                if seed != 2:
+                    (base / cell / 'user/pborg.yaml').write_bytes(yaml if seed != 3 else b'changed\n')
+
+        code, deaths, readme, records = self.run_import(build)
+        self.assertEqual(code, 0)
+        rows = {row['seed']: row for row in deaths['deaths']}
+        for seed in (1, 4):
+            self.assertEqual(rows[seed]['imported'], 'exported')
+            self.assertEqual(records[rows[seed]['case']]['identity']['pborg_yaml_sha256'], digest)
+        for seed, reason in ((2, 'cannot read pborg.yaml'), (3, 'pborg.yaml differs')):
+            self.assertEqual(rows[seed]['imported'], 'skipped')
+            self.assertIn(reason, rows[seed]['reason'])
+        self.assertIn('2 of 4 deaths have a dossier', readme)
+
+    def test_invalid_summary_or_build_does_not_stop_the_import(self):
+        def build(base):
+            for seed in range(1, 7):
+                bundle(base, f'suite/s/p/{seed}', seed)
+            (base / 'suite/s/p/2/summary.json').unlink()
+            (base / 'suite/s/p/3/summary.json').write_text('{')
+            (base / 'suite/s/p/4/BUILD_ID').unlink()
+            (base / 'suite/s/p/5/BUILD_ID').write_text('source_sha256=src\n')
+
+        code, deaths, readme, records = self.run_import(build)
+        self.assertEqual(code, 0)
+        rows = {row['seed']: row for row in deaths['deaths']}
+        for seed in (1, 6):
+            self.assertEqual(rows[seed]['imported'], 'exported')
+        for seed, name in ((2, 'summary.json'), (3, 'summary.json'), (4, 'BUILD_ID'), (5, 'BUILD_ID')):
+            self.assertEqual(rows[seed]['imported'], 'skipped')
+            self.assertIn(name, rows[seed]['reason'])
+        self.assertEqual(len(records), 2)
+        self.assertIn('2 of 6 deaths have a dossier', readme)
+
+    def test_run_ledger_survives_a_registry_aggregation_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            bundles = root / 'bundles'
+            bundle(bundles, 'suite/s/p/1', 1)
+            registry = root / 'registry' / 'deaths'
+            runs = root / 'runs'
+            export = importer.exporter()
+            with patch.dict(os.environ, {'BORG_DEATH_RECORDS_DIR': str(registry)}), \
+                    patch.object(importer, 'exporter', return_value=export), \
+                    patch.object(export, 'aggregate', side_effect=OSError('index write failed')):
+                with self.assertRaisesRegex(OSError, 'index write failed'):
+                    importer.main(['--bundles', str(bundles), '--run-id', '777', '--runs-dir', str(runs)])
+            page = runs / 'zoo-exp-777'
+            row, = json.loads((page / 'deaths.json').read_text())['deaths']
+            self.assertEqual(row['imported'], 'exported')
+            self.assertTrue((registry / row['case'] / 'record.json').is_file())
+            self.assertTrue((page / 'README.md').is_file())
+
     def test_bundles_without_an_index_line_are_listed_not_imported(self):
         def build(base):
             bundle(base, 'suite/s/p/1', 1)

@@ -44,6 +44,10 @@ from death_identity import death_id, metadata, ensure
 SCHEMA = 'borg-reborn-rs/death-record@1'
 
 
+class InvalidDeathBundle(SystemExit):
+    """An input bundle cannot be exported with its recorded provenance."""
+
+
 def sha256_file(path):
     h = hashlib.sha256()
     with open(path, 'rb') as f:
@@ -288,7 +292,12 @@ def export(run_dir, impl, build_id_path, flags='-', raw_location=None):
     # harness/suite.sh runs into OUTDIR.partial.<pid> and renames it to OUTDIR
     # when the suite ends: record where the logs will be.
     final_dir = raw_location or re.sub(r'\.partial\.\d+(?=/|$)', '', str(run_dir))
-    summary = json.loads((run_dir / 'summary.json').read_text())
+    try:
+        summary = json.loads((run_dir / 'summary.json').read_text())
+    except (OSError, ValueError) as error:
+        raise InvalidDeathBundle(f'export-death: cannot read summary.json: {error}') from error
+    if not isinstance(summary, dict):
+        raise InvalidDeathBundle('export-death: summary.json must contain an object')
     config = read_kv(run_dir / 'config.txt')
     why = not_natural(summary, flags, config)
     if why:
@@ -302,10 +311,15 @@ def export(run_dir, impl, build_id_path, flags='-', raw_location=None):
         try:
             yaml_payload = (run_dir / 'user/pborg.yaml').read_bytes()
         except OSError as error:
-            raise SystemExit(f'export-death: cannot read pborg.yaml: {error}') from error
+            raise InvalidDeathBundle(f'export-death: cannot read pborg.yaml: {error}') from error
         if hashlib.sha256(yaml_payload).hexdigest() != yaml_sha:
-            raise SystemExit('export-death: pborg.yaml differs from the recorded hash or is missing')
-    build = read_kv(build_id_path)
+            raise InvalidDeathBundle('export-death: pborg.yaml differs from the recorded hash')
+    try:
+        build = read_kv(build_id_path)
+    except (OSError, UnicodeError) as error:
+        raise InvalidDeathBundle(f'export-death: cannot read BUILD_ID: {error}') from error
+    if not build.get('git_rev', '').strip():
+        raise InvalidDeathBundle('export-death: BUILD_ID is missing or has no git_rev')
     keys_sha = sha256_file(keys)
     family = run_family(summary, config, impl, build.get('source_sha256'), flags)
     reg = registry_dir()

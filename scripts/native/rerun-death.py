@@ -300,6 +300,16 @@ def plan(case_dir):
     race = summary.get('race_idx', term.get('race_idx'))
     cls = summary.get('class_idx', term.get('class_idx'))
     zoo = zoo_plan(config, case_dir, race, cls) if 'zoo_profile' in config else None
+    scary_list = None
+    scary_name = config.get('borg_scary_list')
+    if zoo is None and yaml_config and scary_name not in (None, '', 'none'):
+        if (not re.fullmatch(r'[A-Za-z0-9_.-]+', scary_name)
+                or scary_name in ('.', '..', 'borg.txt', 'pborg.yaml', 'errands_plan.txt')):
+            raise SystemExit(f'rerun-death: invalid recorded scary list filename {scary_name!r}')
+        if not config.get('borg_scary_list_sha256'):
+            raise SystemExit('rerun-death: no recorded hash for the scary list')
+        checked_hash(case_dir, record, config, 'scary_list.txt', 'borg_scary_list_sha256')
+        scary_list = case_dir / 'scary_list.txt'
     overrides, params_hash = parameter_environment(case_dir, record, config)
     # The native receipt decides a record that names no controller: it is a
     # native run even when the harness that made it predates #607.
@@ -328,6 +338,7 @@ def plan(case_dir):
         'params_core_sha256': params_hash,
         'config': config,
         'yaml_config': yaml_config,
+        'scary_list': scary_list,
         'terminal': term,
         'record': record,
         'env': overrides if zoo else dict(settings(config, case_dir), BORG_CORE=core, **overrides),
@@ -525,6 +536,15 @@ def main(argv=None):
         else:
             if p['profile']:
                 env['BORG_PROFILE'] = str(ROOT / p['profile'])
+            if p['scary_list']:
+                # run.sh uses the basename in the effective YAML receipt.
+                staged = a.out / 'inputs' / p['config']['borg_scary_list']
+                staged.parent.mkdir()
+                shutil.copyfile(p['scary_list'], staged)
+                if sha(staged) != p['config']['borg_scary_list_sha256']:
+                    raise SystemExit('rerun-death: staged scary list differs from the recorded hash')
+                env['BORG_SCARY_LIST'] = str(staged)
+                receipt['scary_list'] = {'name': staged.name, 'sha256': p['config']['borg_scary_list_sha256']}
             cmd = [str(ROOT / 'harness/run.sh'), str(a.out / 'run'), str(p['seed']), str(p['race']), str(p['class']),
                    str(p['cap']), p['flags']]
             r = subprocess.run(cmd, env=env, capture_output=True, text=True)
