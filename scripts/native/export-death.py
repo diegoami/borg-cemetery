@@ -44,6 +44,10 @@ from death_identity import death_id, metadata, ensure
 SCHEMA = 'borg-reborn-rs/death-record@1'
 
 
+class InvalidPborgYaml(SystemExit):
+    """A YAML-only run lacks the configuration bytes declared in its receipt."""
+
+
 def sha256_file(path):
     h = hashlib.sha256()
     with open(path, 'rb') as f:
@@ -302,9 +306,9 @@ def export(run_dir, impl, build_id_path, flags='-', raw_location=None):
         try:
             yaml_payload = (run_dir / 'user/pborg.yaml').read_bytes()
         except OSError as error:
-            raise SystemExit(f'export-death: cannot read pborg.yaml: {error}') from error
+            raise InvalidPborgYaml(f'export-death: cannot read pborg.yaml: {error}') from error
         if hashlib.sha256(yaml_payload).hexdigest() != yaml_sha:
-            raise SystemExit('export-death: pborg.yaml differs from the recorded hash or is missing')
+            raise InvalidPborgYaml('export-death: pborg.yaml differs from the recorded hash')
     build = read_kv(build_id_path)
     keys_sha = sha256_file(keys)
     family = run_family(summary, config, impl, build.get('source_sha256'), flags)

@@ -74,6 +74,31 @@ class ImportZooDeathsTest(unittest.TestCase):
         self.assertIn(rows[1]['case'][:14], readme)
         self.assertIn('1 of 3 deaths have a dossier', readme)
 
+    def test_invalid_pborg_yaml_does_not_stop_the_import(self):
+        yaml = b'borg_cheat_death: false\n'
+        digest = hashlib.sha256(yaml).hexdigest()
+
+        def build(base):
+            for seed in range(1, 5):
+                cell = f'suite/s/p/{seed}'
+                bundle(base, cell, seed)
+                config = base / cell / 'config.txt'
+                config.write_text(config.read_text().replace(
+                    'borg_txt_sha256=feed', f'pborg_yaml_sha256={digest}'))
+                if seed != 2:
+                    (base / cell / 'user/pborg.yaml').write_bytes(yaml if seed != 3 else b'changed\n')
+
+        code, deaths, readme, records = self.run_import(build)
+        self.assertEqual(code, 0)
+        rows = {row['seed']: row for row in deaths['deaths']}
+        for seed in (1, 4):
+            self.assertEqual(rows[seed]['imported'], 'exported')
+            self.assertEqual(records[rows[seed]['case']]['identity']['pborg_yaml_sha256'], digest)
+        for seed, reason in ((2, 'cannot read pborg.yaml'), (3, 'pborg.yaml differs')):
+            self.assertEqual(rows[seed]['imported'], 'skipped')
+            self.assertIn(reason, rows[seed]['reason'])
+        self.assertIn('2 of 4 deaths have a dossier', readme)
+
     def test_bundles_without_an_index_line_are_listed_not_imported(self):
         def build(base):
             bundle(base, 'suite/s/p/1', 1)

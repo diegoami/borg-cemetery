@@ -170,6 +170,41 @@ class ReplayConfigurationTest(unittest.TestCase):
         with self.assertRaisesRegex(SystemExit, 'retained pborg.yaml differs'):
             rd.plan(self.case)
 
+    def test_yaml_harness_replay_uses_the_retained_scary_list_with_its_original_name(self):
+        scary = self.case / 'scary_list.txt'
+        list_bytes = b'custom scary list\n'
+        scary.write_bytes(list_bytes)
+        digest = self.digest(list_bytes)
+        name = 'custom-monsters.txt'
+        yaml = (f'borg_scary_list: {name}\n'
+                f'# harness/run.sh (#518): scary list sha256 {digest}\n').encode()
+        (self.case / 'pborg.yaml').write_bytes(yaml)
+        del self.config['borg_txt_sha256']
+        self.config.update(pborg_yaml_sha256=self.digest(yaml), borg_scary_list=name,
+                           borg_scary_list_sha256=digest)
+        self.save_record()
+
+        def harness_output(out):
+            staged = Path(self.env['BORG_SCARY_LIST'])
+            self.assertEqual(staged, out / 'inputs' / name)
+            self.assertEqual(staged.read_bytes(), list_bytes)
+            user = out / 'run/user'
+            (user / 'borg.txt').unlink()
+            (user / 'pborg.yaml').write_bytes(yaml)
+
+        rc, receipt = self.execute(harness_output)
+        self.assertEqual(rc, 0, receipt)
+        self.assertTrue(receipt['reproduction_verified'])
+
+        for missing in (False, True):
+            with self.subTest(missing=missing):
+                if missing:
+                    scary.unlink()
+                else:
+                    scary.write_bytes(b'changed\n')
+                with self.assertRaisesRegex(SystemExit, 'retained scary_list.txt differs'):
+                    rd.plan(self.case)
+
     def test_native_replay_restores_environment_and_class_origins_only(self):
         with mock.patch.dict(os.environ, BORG_PARAM_AMBIENT='99', BORG_CORE='reborn',
                              BORG_TXT_SET='bad=1', BORG_SCARY_LIST='/unrelated',

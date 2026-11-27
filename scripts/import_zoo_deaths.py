@@ -123,7 +123,11 @@ def import_one(export, artifact, base, entry, run_id, repo):
     location = (f'borg-zoo run {run_id}, artifact {artifact}, {entry["bundle"]}'
                 + (f' (https://github.com/{repo}/actions/runs/{run_id}, 90-day retention)'
                    if str(run_id).isdigit() else ''))
-    case, what = export.export(bundle, impl, bundle / 'BUILD_ID', raw_location=location)
+    try:
+        case, what = export.export(bundle, impl, bundle / 'BUILD_ID', raw_location=location)
+    except export.InvalidPborgYaml as error:
+        row.update(imported='skipped', reason=str(error))
+        return row
     row['case'], row['imported'] = case, what
     if case is None:
         row['reason'] = what
